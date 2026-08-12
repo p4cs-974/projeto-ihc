@@ -16,7 +16,7 @@
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal no projeto |
 |---|---:|---|---|
-| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](github.com/p4cs-974) | {{...}} |
+| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | {{...}} |
 | Lucas Roberto Boccia dos Santos | {{matrícula}} | {{@usuario}} | {{...}} |
 | Giovanni Chahin Morassi | | | | 
 
