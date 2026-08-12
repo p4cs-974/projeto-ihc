@@ -5,19 +5,20 @@
 
 ## Identificação
 
-**Título do projeto:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC, SE HOUVER}}  
-**Orientador(a):** {{NOME}}  
+**Título do projeto:** Identificação de melhores momentos em partidas de futebol utilizando sistemas híbridos de visão computacional  
+**TCC/projeto de origem:** Identificação de melhores momentos em partidas de futebol utilizando sistemas híbridos de visão computacional
+**Orientador(a):** Murillo Freitas Bouzon  
 **Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Instituição:** Centro Universitário FEI  
+**Semestre:** 2026 / 8o semestre
 
 ### Equipe
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal no projeto |
 |---|---:|---|---|
-| {{Nome 1}} | {{matrícula}} | {{@usuario}} | {{...}} |
-| {{Nome 2}} | {{matrícula}} | {{@usuario}} | {{...}} |
+| Pedro Alexandre Custodio Silva | 22.123.049-3 | ![p4cs-974](github.com/p4cs-974) | {{...}} |
+| Lucas Roberto Boccia dos Santos | {{matrícula}} | {{@usuario}} | {{...}} |
+| Giovanni Chahin Morassi | | | | 
 
 ## Resumo do produto
 
