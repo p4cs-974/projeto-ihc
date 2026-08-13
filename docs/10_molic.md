@@ -10,6 +10,19 @@ Modelar a interação como uma **conversa entre usuário e preposto do designer*
 
 > Use a **notação MoLIC ensinada na disciplina**. Este template foca critérios de qualidade e não substitui a legenda/notação apresentada em aula.
 
+## Atenção a TCCs sem interface original
+
+O MoLIC não modela o algoritmo por dentro. Ele modela a **conversa de interação necessária para que uma pessoa use a contribuição**.
+
+Exemplos de conversas:
+
+- usuário escolhe dados/parâmetros → sistema valida → usuário inicia análise → sistema comunica processamento → usuário interpreta resultado;
+- usuário consulta histórico → refina filtros → abre execução → compara com outra;
+- administrador seleciona perfil → altera permissão → sistema comunica consequências → administrador confirma/cancela;
+- analista recebe alerta → examina evidências → classifica ocorrência → registra decisão.
+
+Modele também rupturas plausíveis: entrada inválida, falha de processamento, ausência de resultado, permissão insuficiente, filtro sem resultados, conflito de alteração, cancelamento ou necessidade de recuperação.
+
 ## M01 — {{nome do cenário/objetivo}}
 
 **Autor(a):** {{nome — matrícula}}  
@@ -22,7 +35,7 @@ Modelar a interação como uma **conversa entre usuário e preposto do designer*
 
 ![MoLIC M01](../assets/10_molic/molic_m01.svg)
 
-**Fonte editável:** [`molic_m01.drawio`](../assets/10_molic/molic_m01.drawio) *(ajuste o link ao formato usado)*
+**Fonte editável:** {{adicione aqui o link para o arquivo `.drawio`, `.svg` editável ou outro formato utilizado pela equipe}}
 
 ### Leitura do diagrama
 
@@ -51,6 +64,8 @@ Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupt
 - [ ] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”.
 - [ ] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
 - [ ] O diagrama é legível em tamanho normal no GitHub.
+- [ ] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
+- [ ] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
 
 > Repita M02, M03... para todos os integrantes.
 

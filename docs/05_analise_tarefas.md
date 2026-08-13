@@ -8,13 +8,30 @@
 
 Modelar tarefas importantes sob perspectivas complementares: decomposição hierárquica (HTA), estrutura de metas/métodos/operações (GOMS) e relações temporais entre tarefas (CTT). O diagrama deve ser acompanhado de interpretação textual.
 
+## Para projetos cujo TCC não previa interface
+
+Modele **tarefas humanas relacionadas ao uso da contribuição técnica**, e não a implementação interna do algoritmo. Exemplos de boas tarefas para análise:
+
+- investigar uma consulta de baixo desempenho;
+- configurar uma análise e selecionar parâmetros;
+- submeter um dataset e verificar sua validade;
+- acompanhar uma execução demorada;
+- comparar dois resultados/modelos;
+- interpretar uma recomendação e decidir se a aceita;
+- localizar uma execução anterior usando busca/filtros;
+- gerar e compartilhar um relatório;
+- administrar papéis/permissões quando isso for parte do trabalho real;
+- revisar um alerta e registrar uma decisão.
+
+Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece modelagem se tiver significado no domínio (papéis, validações, riscos, permissões, dependências).
+
 ## Seleção das tarefas
 
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
 |---|---|---|---|---|
 | T01 | {{...}} | {{P01/C01}} | {{...}} | {{...}} |
 
-> Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior.
+> Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
 ---
 
@@ -101,3 +118,5 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 - [ ] CTT usa operadores temporais e tipos de tarefa coerentes.
 - [ ] Há texto explicando cada diagrama.
 - [ ] Tarefas estão ligadas a cenários/personas na rastreabilidade.
+- [ ] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
+- [ ] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.

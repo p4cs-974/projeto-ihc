@@ -7,7 +7,8 @@
 - abrir formulários/planilhas;
 - limpar dados de sessão/conta de teste;
 - separar instruções das tarefas;
-- confirmar consentimento e duração.
+- confirmar consentimento e duração;
+- quando o protótipo usar resultados/processamentos simulados, preparar dados realistas e manter a simulação consistente entre participantes.
 
 ## 2. Abertura padronizada
 
@@ -18,9 +19,17 @@
 - obter consentimento;
 - explicar *think aloud* apenas se essa técnica for usada.
 
+### Quando a interface é um protótipo de aplicação do tema do TCC
+
+Explique de forma simples que a sessão avalia **como a pessoa interage com o protótipo**, e não a precisão/desempenho científico do algoritmo, modelo ou estudo do TCC.
+
+Se algum resultado técnico estiver simulado, não engane o participante sobre o nível de implementação. Use uma explicação compatível com o objetivo do teste, sem antecipar o caminho da tarefa.
+
 ## 3. Perfil pré-teste
 
-Colete somente informações relevantes à interpretação dos resultados: experiência com domínio, frequência de uso de soluções similares, necessidades de acessibilidade pertinentes etc.
+Colete somente informações relevantes à interpretação dos resultados: experiência com domínio, frequência de uso de soluções similares, familiaridade com ferramentas profissionais, necessidades de acessibilidade pertinentes etc.
+
+Para perfis especializados (DBA, analista, pesquisador, administrador, técnico), registre os critérios usados para considerar o participante representativo. Se for participante proxy, registre essa condição e a limitação.
 
 ## 4. Tarefas
 
@@ -28,9 +37,23 @@ Colete somente informações relevantes à interpretação dos resultados: exper
 |---|---|---|---|
 | UT01 | {{...}} | {{termos do cenário}} | {{nome/local do botão}} |
 
+Tarefas podem envolver, conforme o escopo: localizar informação em dashboard; filtrar histórico; configurar análise; comparar resultados; gerar relatório; revisar alerta; editar permissão; recuperar-se de falha.
+
+A tarefa deve expressar **objetivo do usuário**, e não “clique no filtro”, “abra o CRUD” ou “vá ao dashboard”.
+
 ## 5. Durante a tarefa
 
 Registrar início/fim, sucesso, erros, hesitações, comentários, pedidos de ajuda e intervenções do moderador. Não transformar silêncio do participante em “problema” sem evidência adicional.
+
+Observe também, quando pertinente:
+
+- compreensão de métricas/termos técnicos;
+- percepção de status de processamento;
+- escolha e remoção de filtros;
+- interpretação de estados vazios/erro;
+- prevenção de ações destrutivas;
+- entendimento de papéis/permissões;
+- confiança ao interpretar resultados/recomendações.
 
 ## 6. Pós-tarefa
 
@@ -39,6 +62,7 @@ Aplicar a escala definida no plano (por exemplo 1–7) e registrar comentário c
 ## 7. Encerramento
 
 - perguntas gerais;
-- agradecimento;
-- confirmar como dados serão usados;
-- salvar registros com ID anônimo.
+- agradecer;
+- confirmar como os dados serão usados;
+- salvar registros com ID anônimo;
+- registrar limitações de perfil, ambiente ou simulação que afetem a interpretação.

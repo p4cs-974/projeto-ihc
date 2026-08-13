@@ -1,4 +1,4 @@
-# Entrega 1 — Conhecendo o problema
+# Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
 **Data:** {{dd/mm/aaaa}}  
 **Status:** ⬜ não iniciada  
@@ -6,106 +6,476 @@
 
 ## Objetivo da atividade
 
-Delimitar o produto, os usuários, os benefícios, as funcionalidades e o **contexto de uso** antes de iniciar decisões de interface. Esta entrega funciona como contrato de escopo para as demais.
+Reinterpretar o tema do TCC sob a perspectiva de Interação Humano-Computador e construir um **entendimento comum entre os integrantes da equipe**.
 
-## 1.1 Membros da equipe
+A disciplina utiliza preferencialmente o tema do TCC para os exercícios de IHC. Isso vale tanto para TCCs que já preveem uma interface quanto para trabalhos cujo resultado principal é algoritmo, modelo, API, biblioteca, análise de dados, infraestrutura, estudo experimental ou outro artefato técnico.
+
+> **Importante:** a interface projetada na disciplina é um artefato de aprendizagem de IHC. Ela **não se torna automaticamente uma obrigação do TCC**. Sua incorporação ao trabalho de conclusão depende de decisão da equipe e do orientador.
+
+Antes de preencher, leia [`../GUIA_ESCOPO_IHC.md`](../GUIA_ESCOPO_IHC.md).
+
+Nesta primeira semana a equipe **não deve começar desenhando telas**. Primeiro deverá compreender:
+
+- o que o TCC realmente produz;
+- quem poderia obter valor dessa contribuição;
+- quais pessoas interagem, administram, configuram, interpretam ou são afetadas;
+- o que essas pessoas precisam alcançar;
+- como atividades relacionadas acontecem hoje;
+- problemas, limitações e contexto;
+- alternativas existentes;
+- qual recorte de interação fará sentido para a disciplina.
+
+Ao final desta entrega, a equipe deve diferenciar:
+
+- **tema do TCC** × **escopo formal do TCC** × **escopo de IHC da disciplina**;
+- **objetivo do projeto** × **objetivo do usuário**;
+- **problema do usuário** × **solução tecnológica**;
+- **fato conhecido** × **hipótese** × **lacuna de conhecimento**;
+- **capacidade técnica** × **forma de uso dessa capacidade**;
+- **funcionalidade** × **atividade/resultado que o usuário precisa alcançar**;
+- **usuário direto** × **stakeholders**.
+
+---
+
+## Como classificar as respostas
+
+Sempre que a resposta fizer uma afirmação sobre usuários, problemas, atividades, necessidades, contexto ou mercado, use:
+
+- **[F] Fato conhecido** — existe evidência/fonte.
+- **[H] Hipótese** — afirmação plausível que ainda precisa ser investigada.
+- **[?] Não sabemos ainda** — lacuna relevante.
+
+Quando usar `[F]`, informe a origem. Hipóteses prioritárias devem receber IDs (`H01`, `H02`...) e também ser registradas em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
+
+> **Exemplo:** `[H] H01 — DBAs considerariam útil comparar automaticamente o plano atual de execução com uma recomendação produzida pelo algoritmo.`
+
+Uma hipótese explicitada é melhor do que uma suposição escondida.
+
+---
+
+# 0. Identificação do TCC e da equipe
+
+## 0.1 Membros
 
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
-| {{...}} | {{...}} | {{...}} |
+| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) |
+| Lucas Roberto Boccia dos Santos | {{matrícula}} | [uniflusantos](https://github.com/uniflusantos) |
+| Giovanni Chahin Morassi | {{matrícula}} | [giovanni1351](https://github.com/giovanni1351) |
 
-## 1.2 Título original do TCC/projeto
+## 0.2 Título atual do TCC
+
+Identificação de melhores momentos em partidas de futebol utilizando sistemas híbridos de visão computacional
+
+## 0.3 Orientador(a)
+
+Murillo Freitas Bouzon
+
+## 0.4 Qual é o resultado principal atualmente previsto no TCC?
+
+Marque e descreva:
+
+- [ ] sistema/aplicação interativa;
+- [ ] algoritmo;
+- [ ] modelo de IA/ML/LLM;
+- [ ] biblioteca/API/framework;
+- [ ] análise de dataset;
+- [ ] estudo/benchmark/avaliação experimental;
+- [ ] infraestrutura/backend;
+- [ ] componente embarcado/IoT;
+- [ ] outro: {{...}}.
+
+**Descrição:** {{...}}
+
+## 0.5 O TCC já previa desenvolvimento de interface com usuário?
+
+- [ ] Sim, a interface já faz parte do TCC.
+- [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
+- [ ] Não. O TCC é predominantemente técnico e não previa interface.
+
+**Explique o que está formalmente previsto no TCC:** {{...}}
+
+> Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
+
+---
+
+# 1. Entendendo a contribuição do projeto
+
+## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
 {{...}}
 
-## 1.3 Orientador(a)
+## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
+
+{{[F/H/?] ...}}
+
+## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
+
+Complete, se ajudar:
+
+> “Nosso TCC produz, melhora, analisa ou permite `{{capacidade}}`.”
+
+Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
 
 {{...}}
 
-## 1.4 Está previsto desenvolver interface?
+## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-- [ ] Sim
-- [ ] Não
+{{[F/H/?] ...}}
 
-**Justificativa:** {{...}}
+## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
-## 1.5 Objetivo do trabalho
+| Mérito/contribuição técnica | Possível aplicação/valor em uso |
+|---|---|
+| {{...}} | {{...}} |
 
-Descreva o **resultado que o projeto pretende alcançar**, não apenas a tecnologia a utilizar.
+---
 
-{{...}}
+# 2. Entendendo as pessoas envolvidas
 
-## 1.6 Produto final
+## 2.1 Quem interage diretamente com o produto, se já existe interface prevista?
 
-O que será efetivamente entregue? Ex.: aplicação Web, aplicativo móvel, dashboard, dispositivo interativo, serviço com interface, ferramenta de apoio etc.
+Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
 
-{{...}}
+{{[F/H/?] ...}}
 
-## 1.7 Usuário final
+## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
-Quem interage diretamente com o produto? Diferencie usuário final, cliente, administrador, especialista e demais stakeholders quando necessário.
+Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
-{{...}}
+| Perfil | Relação com a contribuição | O que faria | Status/evidência |
+|---|---|---|---|
+| {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
 
-## 1.8 Benefícios para o usuário
+## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
-| Benefício esperado | Problema/necessidade associada | Para qual usuário |
+| Stakeholder | Como é afetado | Usa interface? | Status/evidência |
+|---|---|---|---|
+| {{...}} | {{...}} | sim/não | {{...}} |
+
+## 2.4 Que características desses perfis podem influenciar a interação?
+
+Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
+
+{{[F/H/?] ...}}
+
+---
+
+# 3. Entendendo objetivos e atividades
+
+## 3.1 O que o usuário está tentando conseguir no mundo real?
+
+Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
+
+{{[F/H/?] ...}}
+
+## 3.2 Quais são as atividades mais importantes?
+
+| ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
+|---|---|---|---|---|
+| A01 | {{...}} | {{...}} | {{...}} | {{...}} |
+| A02 | {{...}} | {{...}} | {{...}} | {{...}} |
+| A03 | {{...}} | {{...}} | {{...}} | {{...}} |
+
+## 3.3 Qual atividade parece mais frequente? Por quê?
+
+{{[F/H/?] ...}}
+
+## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
+
+{{[F/H/?] ...}}
+
+---
+
+# 4. Entendendo o problema ou processo atual
+
+## 4.1 Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina?
+
+Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
+
+{{[F/H/?] ...}}
+
+## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
+
+{{[F/H/?] ...}}
+
+## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
+
+{{[F/H/?] ...}}
+
+## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
+
+{{[F/H/?] ...}}
+
+## 4.5 Conte uma situação concreta.
+
+Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.**
+
+{{[F/H/?] narrativa...}}
+
+## 4.6 Que evidência existe hoje?
+
+| Evidência/fonte | O que sustenta | Limitação |
 |---|---|---|
 | {{...}} | {{...}} | {{...}} |
 
-## 1.9 Funcionalidades — visão do usuário
+---
 
-Escreva funcionalidades como capacidades observáveis pelo usuário, não como detalhes de backend.
+# 5. Entendendo o contexto de uso
 
-| ID | Funcionalidade | Objetivo do usuário atendido | Prioridade inicial |
+## 5.1 Onde e em quais situações a interação poderia ocorrer?
+
+{{[F/H/?] ...}}
+
+## 5.2 Em quais dispositivos/equipamentos?
+
+{{[F/H/?] ...}}
+
+## 5.3 Existem condições físicas relevantes?
+
+Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc.
+
+{{[F/H/?] ...}}
+
+## 5.4 Existem fatores sociais ou organizacionais?
+
+Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração.
+
+{{[F/H/?] ...}}
+
+## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
+
+{{[F/H/?] ...}}
+
+## 5.6 Um erro pode produzir consequência relevante? Qual?
+
+{{[F/H/?] ...}}
+
+---
+
+# 6. Entendendo mercado e alternativas existentes
+
+> Nesta entrega faça apenas um **levantamento inicial**. A análise aprofundada ocorre na Entrega 2.
+
+## 6.1 Como pessoas resolvem problemas semelhantes hoje?
+
+| Alternativa atual | Quem usa | Para quê | Status/evidência |
 |---|---|---|---|
-| F01 | {{...}} | {{...}} | alta/média/baixa |
+| {{...}} | {{...}} | {{...}} | {{...}} |
 
-## 1.10 Tecnologias e ferramentas previstas
+## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
-| Camada/uso | Tecnologia/ferramenta | Por que foi escolhida | Impacto potencial na interação |
+{{[F/H/?] ...}}
+
+## 6.3 Quais interfaces profissionais esse público já conhece?
+
+Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.
+
+{{[F/H/?] ...}}
+
+## 6.4 O que essas soluções parecem fazer bem?
+
+{{[F/H/?] ...}}
+
+## 6.5 O que parecem fazer mal, dificultar ou não atender?
+
+{{[F/H/?] ...}}
+
+## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
+
+{{[F/H/?] ...}}
+
+---
+
+# 7. Derivando o escopo de IHC da disciplina
+
+## 7.1 Escolha o caminho do projeto
+
+### Caminho A — TCC já possui interface
+
+Explique qual parte da interface será usada como recorte da disciplina e por que esse fluxo é relevante.
+
+{{...}}
+
+### Caminho B — TCC não possui interface prevista
+
+Faça o exercício de transferência de uso:
+
+> **Imagine que o TCC foi concluído com sucesso e uma empresa, laboratório ou organização quer transformar a contribuição em algo utilizável. Quem precisaria interagir com ela e para quê?**
+
+Responda:
+
+1. quem poderia contratar/adotar a solução? {{...}}
+2. quem seria o usuário direto? {{...}}
+3. quem administraria/configuraria? {{...}}
+4. quem interpretaria resultados? {{...}}
+5. quem tomaria decisões? {{...}}
+6. quais dados/entradas seriam necessários? {{...}}
+7. quais resultados deveriam ser compreendidos? {{...}}
+8. que erros/rupturas seriam possíveis? {{...}}
+
+## 7.2 Qual perfil será priorizado no projeto de IHC?
+
+{{...}}
+
+**Por que esse perfil foi escolhido?** {{...}}
+
+## 7.3 Qual objetivo desse usuário será priorizado?
+
+{{...}}
+
+## 7.4 Que interface será explorada na disciplina?
+
+Complete:
+
+> **Para fins da disciplina de IHC, será projetada uma interface que permita a `{{perfil}}` utilizar `{{capacidade/resultado do TCC}}` para `{{objetivo}}`, no contexto de `{{situação}}`.**
+
+{{...}}
+
+## 7.5 Qual é a relação dessa interface com o TCC?
+
+- [ ] Já fazia parte do TCC.
+- [ ] É um aprofundamento de algo parcialmente previsto.
+- [ ] É uma extensão conceitual criada para a disciplina.
+- [ ] É um protótipo demonstrativo de aplicação potencial.
+- [ ] Outra: {{...}}.
+
+> **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Sua inclusão ou implementação no TCC somente ocorrerá se isso for posteriormente decidido pela equipe e pelo orientador.
+
+---
+
+# 8. Levantando possibilidades de interação — sem desenhar ainda
+
+A equipe pode registrar possibilidades para investigação. **Não significa que todas serão implementadas.**
+
+Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
+
+| Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{ex.: limitações de dispositivo, latência, sensores}} |
+| Dashboard/visão geral | sim/não/talvez | {{...}} | {{...}} |
+| Configuração/parametrização | sim/não/talvez | {{...}} | {{...}} |
+| Entrada/upload/seleção de dados | sim/não/talvez | {{...}} | {{...}} |
+| Acompanhamento de processamento | sim/não/talvez | {{...}} | {{...}} |
+| Relatório/resultados | sim/não/talvez | {{...}} | {{...}} |
+| Histórico com busca/filtros | sim/não/talvez | {{...}} | {{...}} |
+| Comparação de resultados | sim/não/talvez | {{...}} | {{...}} |
+| Explicabilidade/detalhamento | sim/não/talvez | {{...}} | {{...}} |
+| Administração/configurações globais | sim/não/talvez | {{...}} | {{...}} |
+| Usuários/perfis/permissões | sim/não/talvez | {{...}} | {{...}} |
+| CRUD de entidade do domínio | sim/não/talvez | {{...}} | {{...}} |
+| Auditoria/logs | sim/não/talvez | {{...}} | {{...}} |
+| Alertas/ocorrências | sim/não/talvez | {{...}} | {{...}} |
+| Ajuda/documentação | sim/não/talvez | {{...}} | {{...}} |
 
-## 1.11 Contexto de uso
+> **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
-Descreva o contexto de forma estruturada.
+---
 
-### Usuários
+# 9. Benefícios e ações iniciais
 
-Características relevantes para a interação: experiência, conhecimento de domínio, limitações, diversidade, frequência de uso.
+## 9.1 Qual benefício concreto o projeto de IHC pretende oferecer?
 
-### Tarefas e objetivos
+| Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
+|---|---|---|---|
+| {{...}} | {{...}} | {{...}} | {{...}} |
 
-Quais tarefas importantes ocorrerão e com que frequência/criticidade?
+## 9.2 Que ações o usuário deverá conseguir realizar?
 
-### Equipamentos e plataforma
+| ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
+|---|---|---|---|
+| F01 | {{ação}} | {{objetivo}} | alta/média/baixa |
 
-Dispositivos, tamanho de tela, entrada/saída, conectividade, restrições de hardware/software.
+## 9.3 Tecnologias/restrições já definidas no TCC
 
-### Ambiente físico
+A tecnologia aparece **agora**, depois do entendimento do uso.
 
-Iluminação, ruído, mobilidade, privacidade, possibilidade de uso com uma mão, tempo disponível etc.
+| Tecnologia/restrição | Por que existe | Possível impacto na interação |
+|---|---|---|
+| {{...}} | {{...}} | {{...}} |
 
-### Ambiente social e organizacional
+---
 
-Uso individual/coletivo, presença de terceiros, políticas, papéis, responsabilidades, consequências de erro.
+# 10. Hipóteses e dúvidas prioritárias
 
-## Delimitação inicial
+| ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
+|---|---|---|---|
+| H01 | {{...}} | {{...}} | Entrega 2/3/7/... |
+| H02 | {{...}} | {{...}} | {{...}} |
+| H03 | {{...}} | {{...}} | {{...}} |
 
-**Dentro do escopo:** {{...}}  
-**Fora do escopo:** {{...}}
+Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
-## Síntese da entrega
+---
 
-Em 5–10 linhas, explique quais decisões desta entrega orientarão as próximas etapas.
+# 11. Síntese da equipe
 
-## Checklist
+| Pergunta | Síntese atual |
+|---|---|
+| Qual é a contribuição central do TCC? | {{...}} |
+| O TCC já previa interface? | {{...}} |
+| Quem é o usuário prioritário de IHC? | {{...}} |
+| O que ele precisa alcançar? | {{...}} |
+| Qual problema/atividade será estudado? | {{...}} |
+| Como isso acontece hoje? | {{...}} |
+| Qual é o contexto de uso? | {{...}} |
+| Que interface/recorte será explorado? | {{...}} |
+| Como a interface se relaciona ao TCC? | {{...}} |
+| Quais pontos ainda são hipóteses? | {{H01...}} |
 
-- [ ] O problema está descrito sem confundir problema com solução.
-- [ ] Usuário final está identificado de forma específica.
-- [ ] Funcionalidades estão na visão do usuário.
-- [ ] Benefícios estão ligados a necessidades reais/hipóteses explícitas.
-- [ ] Contexto inclui usuários, tarefas, plataforma e ambientes físico/social.
-- [ ] Escopo e limites estão claros.
-- [ ] A matriz de rastreabilidade foi iniciada.
+### Delimitação
+
+**Dentro do escopo de IHC:** {{...}}  
+**Fora do escopo de IHC:** {{...}}  
+**Dentro do escopo formal do TCC:** {{...}}  
+**Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
+
+---
+
+# 12. Como esta entrega alimenta as próximas
+
+- **Entrega 2:** verifica mercado, concorrentes e interfaces profissionais representativas.
+- **Entrega 3:** detalha perfis e contexto.
+- **Entrega 4:** aprofunda situações problemáticas.
+- **Entrega 5:** modela tarefas centrais.
+- **Entrega 6:** experimenta alternativas em baixa fidelidade.
+- **Entrega 7:** investiga hipóteses com dados.
+- **Entrega 8:** define restrições e metas de usabilidade.
+- **Entregas 9–11:** transformam o recorte em modelo de interação e protótipo.
+- **Entregas 12–14:** avaliam a interface construída na disciplina.
+
+A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser revisada quando surgirem evidências.
+
+---
+
+# 13. Relação com INOVA e comunicação do projeto
+
+Prepare uma explicação de até três frases:
+
+1. **Problema/atividade humana:** {{...}}
+2. **Contribuição técnica do TCC:** {{...}}
+3. **Como uma pessoa poderia utilizar essa contribuição:** {{...}}
+
+Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
+
+---
+
+# Checklist de qualidade
+
+- [ ] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [ ] A equipe declarou se o TCC já previa interface.
+- [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
+- [ ] A interface de IHC não foi apresentada como obrigação automática do TCC.
+- [ ] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
+- [ ] Usuários diretos e stakeholders foram diferenciados.
+- [ ] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
+- [ ] Objetivo do usuário não foi confundido com objetivo do projeto.
+- [ ] Processo/problema atual foi descrito antes da solução.
+- [ ] Existe situação concreta de uso/problema.
+- [ ] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
+- [ ] Mercado/alternativas existentes foram levantados inicialmente.
+- [ ] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
+- [ ] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
+- [ ] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
+- [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
+- [ ] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
+- [ ] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.

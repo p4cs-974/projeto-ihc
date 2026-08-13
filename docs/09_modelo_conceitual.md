@@ -8,6 +8,21 @@
 
 Passar do cenário de problema para uma concepção da interação, explicitando objetivos, tópicos de conversa, falas e signos que a interface deverá comunicar/manipular.
 
+## Transformando resultados técnicos em conceitos compreensíveis
+
+Em TCCs algorítmicos ou orientados a dados, esta entrega deve evitar que a interface exponha apenas estruturas internas do código. Identifique os **conceitos e signos que fazem sentido para o usuário**.
+
+Exemplos:
+
+- `query plan`, custo estimado, recomendação e impacto para um DBA;
+- modelo, dataset, versão, execução e métrica para engenheiro de IA;
+- período, indicador, grupo, tendência e filtro para gestor/analista;
+- alerta, severidade, evidência, responsável e status para analista de segurança.
+
+Se um termo técnico for necessário, modele como será comunicado, explicado e relacionado à tarefa.
+
+Dashboards, relatórios, filtros e CRUDs devem aparecer no modelo conceitual por meio dos **objetivos, signos e conversas** que justificam sua existência.
+
 ## 1. Cenários de interação
 
 Para cada cenário de problema, produza uma versão em que a solução já pode ser descrita. **Destaque claramente o texto alterado** em relação ao cenário original.
@@ -75,3 +90,6 @@ Quais objetivos/tópicos/signos deverão necessariamente aparecer nos diagramas 
 - [ ] Mapas individuais foram consolidados.
 - [ ] O esquema de signos está em uma tabela única e sem duplicações conceituais.
 - [ ] Nomes de objetivos/signos serão reutilizados na Entrega 10.
+- [ ] Em TCC técnico, signos representam conceitos do domínio compreensíveis ao usuário, não apenas variáveis/estruturas internas.
+- [ ] Padrões como dashboard, relatório, filtros, administração e CRUD possuem objetivos e signos correspondentes.
+- [ ] A interface comunica não só o resultado técnico, mas também seu significado para a tarefa.

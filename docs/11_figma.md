@@ -8,6 +8,30 @@
 
 Materializar o modelo de interação em um protótipo navegável, preservando a lógica dos objetivos, tópicos, signos, feedbacks, alternativas e recuperações definidos anteriormente.
 
+## Biblioteca de possibilidades para projetos técnicos
+
+O protótipo deve materializar os fluxos definidos nas entregas anteriores. Dependendo do escopo, podem fazer sentido:
+
+1. **Dashboard:** indicadores, alertas, estado, tendências e atalhos para tarefas frequentes.
+2. **Configuração/parametrização:** escolhas, presets, validação e explicação de opções técnicas.
+3. **Entrada de dados:** upload, conexão, seleção, pré-visualização e validação.
+4. **Processamento:** fila, status, progresso, cancelamento, falha e reexecução.
+5. **Relatório/resultados:** síntese, métricas, gráficos, explicação, exportação e compartilhamento.
+6. **Histórico:** busca, filtros, ordenação, paginação, detalhes e repetição de execução.
+7. **Comparação:** antes/depois, modelo A/B, execução A/B, baseline ou períodos.
+8. **Explicabilidade:** confiança, fatores, evidências, limitações e correção/contestação.
+9. **Administração:** usuários, grupos, perfis, permissões, integrações e políticas.
+10. **CRUDs de domínio:** somente quando criar/consultar/editar/excluir representa tarefa real.
+11. **Auditoria/logs:** histórico de alterações e eventos em linguagem adequada.
+12. **Alertas/ocorrências:** severidade, impacto, ação, responsável e resolução.
+13. **Ajuda/documentação:** apoio contextual a tarefas complexas.
+
+### Estados que não podem ser esquecidos
+
+Quando aplicável, considere: vazio/sem dados; carregamento/processamento; sucesso; erro de entrada; erro de processamento; filtro sem resultados; permissão insuficiente; confirmação de ação destrutiva; cancelamento/desfazer/recuperação; dados desatualizados/conflito.
+
+> Esta lista é repertório de design, **não uma exigência de quantidade de telas**. A rastreabilidade deve explicar por que cada tela existe.
+
 ## Link do Figma
 
 **Protótipo:** {{URL}}  
@@ -57,3 +81,7 @@ Para produto Web, considere critérios pertinentes da WCAG vigente (por exemplo,
 - [ ] Componentes equivalentes se comportam de forma consistente.
 - [ ] Fluxos críticos são clicáveis do início ao fim.
 - [ ] O protótipo está pronto para inspeção e testes, sem “links mortos” nas tarefas avaliadas.
+- [ ] Dashboards, relatórios, históricos, filtros, administração e CRUDs presentes possuem justificativa rastreável.
+- [ ] Estados de vazio, processamento, erro e recuperação foram considerados quando pertinentes.
+- [ ] Resultados técnicos são apresentados de forma interpretável para o perfil de usuário.
+- [ ] A equipe distingue no protótipo o que é interação simulada e o que é funcionalidade técnica realmente integrada, quando necessário.

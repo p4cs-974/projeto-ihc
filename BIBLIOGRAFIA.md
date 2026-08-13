@@ -34,3 +34,19 @@ Esta lista serve como base conceitual. Utilize a bibliografia indicada pelo doce
 - BRASIL. **Lei nº 10.098/2000 — normas gerais e critérios básicos para promoção da acessibilidade**.
 
 > Normas e legislação podem receber revisões, regulamentações ou interpretações posteriores. Em trabalhos que dependam de conformidade, consulte sempre a versão vigente e a orientação institucional.
+
+## Como esta bibliografia se relaciona com TCCs sem interface prevista
+
+A disciplina não assume que todo resultado computacional precise ser entregue como produto interativo. O exercício pedagógico consiste em identificar um **contexto de uso**, pessoas/stakeholders, objetivos e atividades plausíveis para então projetar e avaliar uma interação.
+
+Para fundamentar essa reflexão, consulte especialmente:
+
+- **Barbosa e Silva** para conceitos de usuários, contexto, design de interação, Engenharia Semiótica, avaliação e modelagem;
+- **Rogers, Sharp e Preece** para abordagem de design de interação centrada nas atividades e necessidades das pessoas;
+- **ISO 9241-210** para o princípio de compreender explicitamente usuários, tarefas e ambientes ao projetar sistemas interativos;
+- **ISO 9241-11** para discutir usabilidade em um contexto de uso especificado;
+- **Norman** para relações entre ação, interpretação, feedback e compreensão do sistema;
+- referências de **MoLIC/Engenharia Semiótica** quando a contribuição técnica precisar ser transformada em uma conversa de interação compreensível para o usuário.
+
+Em projetos baseados em IA, algoritmos, dados ou infraestrutura, a interface da disciplina deve ser tratada como um **recorte de aplicação/interação** a ser investigado, não como evidência de que a tecnologia já foi validada comercialmente ou de que o TCC precisa mudar de escopo.
+

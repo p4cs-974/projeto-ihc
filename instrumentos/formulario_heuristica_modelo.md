@@ -3,6 +3,7 @@
 **Avaliador:** {{...}}  
 **Versão:** {{...}}  
 **Data:** {{...}}
+**Estados especiais examinados:** {{vazio / carregamento / erro / filtro sem resultado / permissão / confirmação / outros}}
 
 ## Cobertura
 

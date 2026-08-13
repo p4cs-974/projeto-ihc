@@ -23,6 +23,25 @@ Encontrar problemas de usabilidade por inspeção sistemática da interface com 
 9. Ajudar usuários a reconhecer, diagnosticar e recuperar-se de erros
 10. Ajuda e documentação
 
+## Cobertura especial para interfaces administrativas e analíticas
+
+Quando existirem, não limite a avaliação às “telas principais”. Inspecione também:
+
+- dashboard em estados normal, vazio e erro;
+- filtros sem resultado e filtros combinados;
+- relatórios e exportação;
+- histórico/listas longas;
+- formulários CRUD (criação, edição, exclusão, validação);
+- alteração de perfil/permissão;
+- confirmações de ações destrutivas;
+- processamento/loading/progresso;
+- falha e recuperação;
+- comparação de resultados;
+- mensagens de termos técnicos, métricas e recomendações;
+- ajuda/documentação contextual.
+
+Em TCCs técnicos, observe especialmente se a interface comunica o estado do processamento e traduz informações técnicas para o vocabulário do usuário escolhido.
+
 ## 2. Escopo da inspeção
 
 | Item | Definição |
@@ -109,6 +128,8 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 
 - [ ] Cada integrante fez uma inspeção completa e identificada.
 - [ ] Todas as telas/estados relevantes foram examinados.
+- [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
+- [ ] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
 - [ ] H1–H10 aparecem na matriz de cobertura de cada avaliador.
 - [ ] Parte de violações contém apenas violações, sem “forçar” exemplos.
 - [ ] Todo problema tem print/localização e contexto.

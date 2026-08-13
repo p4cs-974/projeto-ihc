@@ -8,6 +8,21 @@
 
 Planejar a avaliação antes de executá-la, ligando perguntas de avaliação a métodos, participantes, tarefas, métricas, aspectos práticos, ética e forma de análise.
 
+## O que está sendo avaliado
+
+Em projetos cuja interface foi criada ou ampliada para a disciplina, o plano deve declarar explicitamente que a avaliação investiga **a qualidade da interação/protótipo**, não a validade científica ou o desempenho técnico do algoritmo/modelo do TCC.
+
+Exemplos de perguntas:
+
+- o DBA consegue localizar e comparar duas execuções?
+- o analista entende o significado de um indicador?
+- o administrador consegue alterar uma permissão sem risco de erro não percebido?
+- o usuário compreende que o processamento está em andamento e consegue recuperar-se de uma falha?
+- os filtros ajudam a localizar o histórico relevante?
+- um relatório permite identificar a informação necessária para a decisão?
+
+Se o protótipo utiliza dados ou resultados simulados, documente isso no plano.
+
 ## A. Método DECIDE
 
 | Etapa | Aplicação no projeto |
@@ -70,6 +85,8 @@ Defina antes dos testes:
 
 - [ ] As seis etapas DECIDE foram contextualizadas, não apenas expandidas por sigla.
 - [ ] Perguntas de avaliação têm método e evidência correspondentes.
+- [ ] O plano distingue avaliação de IHC de avaliação técnica/científica do TCC.
+- [ ] Dados ou processamentos simulados no protótipo estão declarados.
 - [ ] Tarefas vêm de objetivos/cenários relevantes.
 - [ ] Critérios de sucesso foram definidos antes da coleta.
 - [ ] Questões práticas e éticas estão resolvidas.

@@ -10,6 +10,14 @@ Observar usuários representativos realizando tarefas reais ou realisticamente s
 
 > **Participantes finais não devem ser membros da equipe.** Um integrante pode participar do teste piloto apenas para validar roteiro/equipamentos, sem contar na amostra final.
 
+### Quando o usuário é um perfil profissional especializado
+
+Em TCCs técnicos, o público pode ser DBA, analista, pesquisador, administrador, técnico ou outro especialista. Priorize participantes que possuam relação real com as tarefas. Se não for possível recrutar o perfil ideal, qualquer participante aproximado/proxy deve ser **justificado previamente e tratado como limitação**; não apresente o resultado como equivalente ao de especialistas reais.
+
+O teste avalia a **interação com o protótipo**. Não é necessário que o participante valide o desempenho científico do algoritmo. Resultados simulados podem ser usados quando declarados e coerentes com a tarefa.
+
+Tarefas podem envolver, por exemplo, interpretar um dashboard, configurar uma análise, encontrar uma execução no histórico usando filtros, comparar resultados, gerar relatório, revisar alerta ou administrar permissões.
+
 ## A. Fluxograma do processo — equipe
 
 ![Fluxograma](../assets/14_testes/fluxograma_avaliacao.svg)
@@ -105,6 +113,9 @@ A conclusão deve responder:
 
 - [ ] Número de participantes finais atende ao enunciado.
 - [ ] Participantes são representativos do público e não são membros da equipe.
+- [ ] Se foram usados participantes proxy, a justificativa e a limitação estão explícitas.
+- [ ] O teste avalia a interação; não confunde usabilidade do protótipo com desempenho técnico do TCC.
+- [ ] Tarefas administrativas/analíticas usadas no teste são rastreáveis a objetivos e cenários.
 - [ ] Há consentimento e anonimização.
 - [ ] Foi realizado teste piloto.
 - [ ] Tarefas têm critérios de sucesso definidos antes do teste.
