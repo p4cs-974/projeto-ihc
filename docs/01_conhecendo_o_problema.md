@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 13/08/2026  
+**Status:** `🟨 em andamento`
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -348,20 +348,20 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | sim/não/talvez | {{...}} | {{...}} |
-| Configuração/parametrização | sim/não/talvez | {{...}} | {{...}} |
-| Entrada/upload/seleção de dados | sim/não/talvez | {{...}} | {{...}} |
-| Acompanhamento de processamento | sim/não/talvez | {{...}} | {{...}} |
-| Relatório/resultados | sim/não/talvez | {{...}} | {{...}} |
-| Histórico com busca/filtros | sim/não/talvez | {{...}} | {{...}} |
-| Comparação de resultados | sim/não/talvez | {{...}} | {{...}} |
-| Explicabilidade/detalhamento | sim/não/talvez | {{...}} | {{...}} |
-| Administração/configurações globais | sim/não/talvez | {{...}} | {{...}} |
-| Usuários/perfis/permissões | sim/não/talvez | {{...}} | {{...}} |
-| CRUD de entidade do domínio | sim/não/talvez | {{...}} | {{...}} |
-| Auditoria/logs | sim/não/talvez | {{...}} | {{...}} |
-| Alertas/ocorrências | sim/não/talvez | {{...}} | {{...}} |
-| Ajuda/documentação | sim/não/talvez | {{...}} | {{...}} |
+| Dashboard/visão geral | sim | analisar o status/métricas do processamento dos vídeos atual/passados | [H] |
+| Configuração/parametrização | sim | {{...}} | {{...}} | 
+| Entrada/upload/seleção de dados | sim | inputar o(s) vídeo(s) para processamento | {{...}} |
+| Acompanhamento de processamento | sim | analisar as métricas/status para um vídeo específico em uma visão detalhada | {{...}} |
+| Relatório/resultados | sim | analisar as saídas dos vídeos | {{...}} |
+| Histórico com busca/filtros | sim | exportar os cortes do vídeo | {{...}} |
+| Comparação de resultados | não | não há necessidade de comparar os resultados dos diferentes vídeos | {{...}} |
+| Explicabilidade/detalhamento | sim | {{...}} | {{...}} |
+| Administração/configurações globais | sim | {{...}} | {{...}} |
+| Usuários/perfis/permissões | não | {{...}} | {{...}} |
+| CRUD de entidade do domínio | sim | {{...}} | {{...}} |
+| Auditoria/logs | sim | {{...}} | {{...}} |
+| Alertas/ocorrências | sim | {{...}} | {{...}} |
+| Ajuda/documentação | não | {{...}} | {{...}} |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -410,23 +410,23 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | {{...}} |
-| O TCC já previa interface? | {{...}} |
-| Quem é o usuário prioritário de IHC? | {{...}} |
-| O que ele precisa alcançar? | {{...}} |
-| Qual problema/atividade será estudado? | {{...}} |
-| Como isso acontece hoje? | {{...}} |
-| Qual é o contexto de uso? | {{...}} |
-| Que interface/recorte será explorado? | {{...}} |
-| Como a interface se relaciona ao TCC? | {{...}} |
+| Qual é a contribuição central do TCC? | Automatizar o processo de geração de cortes a partir da classificação de highlights em partidas de futebol |
+| O TCC já previa interface? | não |
+| Quem é o usuário prioritário de IHC? | editores de vídeo |
+| O que ele precisa alcançar? | extração automática de cortes a partir de um vídeo de futebol |
+| Qual problema/atividade será estudado? | classificação de highlights |
+| Como isso acontece hoje? | manualmente, pessoas anotam o momento dos highlights |
+| Qual é o contexto de uso? | pós produção de partidas de futebol |
+| Que interface/recorte será explorado? | app de computador (desktop ou web) |
+| Como a interface se relaciona ao TCC? | demosntração visual do processamento e resultados |
 | Quais pontos ainda são hipóteses? | {{H01...}} |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** {{...}}  
-**Fora do escopo de IHC:** {{...}}  
-**Dentro do escopo formal do TCC:** {{...}}  
-**Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
+**Dentro do escopo de IHC:** transformar um vídeo íntegro de uma partida de futebol em cortes  
+**Fora do escopo de IHC:** ciclo de vide completo de edição de video  
+**Dentro do escopo formal do TCC:** detectar e classificar highlights em partidas de futebol  
+**Interface da disciplina será implementada no TCC?** sim
 
 ---
 
@@ -450,9 +450,9 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** {{...}}
-2. **Contribuição técnica do TCC:** {{...}}
-3. **Como uma pessoa poderia utilizar essa contribuição:** {{...}}
+1. **Problema/atividade humana:** classificação manual de highlights em partidas de futebol
+2. **Contribuição técnica do TCC:** uso de LLMs multimodais para classificação
+3. **Como uma pessoa poderia utilizar essa contribuição:** através do sistema contruído pelo projeto
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
 
@@ -460,21 +460,21 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 # Checklist de qualidade
 
-- [ ] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
-- [ ] A equipe declarou se o TCC já previa interface.
-- [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
-- [ ] A interface de IHC não foi apresentada como obrigação automática do TCC.
-- [ ] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
-- [ ] Usuários diretos e stakeholders foram diferenciados.
-- [ ] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
-- [ ] Objetivo do usuário não foi confundido com objetivo do projeto.
-- [ ] Processo/problema atual foi descrito antes da solução.
-- [ ] Existe situação concreta de uso/problema.
-- [ ] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
+- [x] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [x] A equipe declarou se o TCC já previa interface.
+- [x] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
+- [x] A interface de IHC não foi apresentada como obrigação automática do TCC.
+- [x] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
+- [x] Usuários diretos e stakeholders foram diferenciados.
+- [x] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
+- [x] Objetivo do usuário não foi confundido com objetivo do projeto.
+- [x] Processo/problema atual foi descrito antes da solução.
+- [x] Existe situação concreta de uso/problema.
+- [x] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
 - [ ] Mercado/alternativas existentes foram levantados inicialmente.
-- [ ] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
-- [ ] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
-- [ ] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
+- [x] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
+- [x] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
+- [x] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
 - [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
-- [ ] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
-- [ ] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+- [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
+- [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
