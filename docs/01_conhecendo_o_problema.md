@@ -107,7 +107,7 @@ Desenvolver um sistema híbrido de visão computacional capaz de automatizar o p
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[H] O corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e estão sujeitos à interpretação humana, ao cansaço e a falhas.
+[H] H01 — O corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e estão sujeitos à interpretação humana, ao cansaço e a falhas.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -115,7 +115,7 @@ Identificar automaticamente os melhores momentos de partidas de futebol e gerar 
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-[H] Profissionais responsáveis pela geração de vídeos de melhores momentos gastarão menos tempo realizando cortes manualmente e terão resultados menos sujeitos a variações causadas por cansaço ou falha humana.
+[H] H02 — Profissionais responsáveis pela geração de vídeos de melhores momentos gastarão menos tempo realizando cortes manualmente e terão resultados menos sujeitos a variações causadas por cansaço ou falha humana.
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
@@ -138,17 +138,17 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
-| Profissional responsável pelo corte e geração de vídeos de melhores momentos | Usuário direto da aplicação potencial | Enviar vídeos para processamento, acompanhar o processo e acessar os cortes e metadados gerados | [H] |
+| Profissional responsável pelo corte e geração de vídeos de melhores momentos | Usuário direto da aplicação potencial | Enviar vídeos para processamento, acompanhar o processo e acessar os cortes e metadados gerados | [H] H03 |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| Empresas de mídia esportiva | menos custos devido à maior eficiência do processo | não | [H] |
+| Empresas de mídia esportiva | menos custos devido à maior eficiência do processo | não | [H] H04 |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-- Baixo conhecimento técnico a respeito de software e computação no geral. [H]
+- Baixo conhecimento técnico a respeito de software e computação no geral. [H] H05
 - Uso de trackpads e mouses acima do teclado. [F]
 - Costume com softwares tradicionais de edição/manipulação de vídeo. [F]
 - Uso focado em desktop/web. [F]
@@ -159,7 +159,7 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
 
-[H] Produzir vídeos de melhores momentos de partidas de futebol com eficiência e consistência, reduzindo o esforço de seleção e corte manual.
+[H] H06 — Produzir vídeos de melhores momentos de partidas de futebol com eficiência e consistência, reduzindo o esforço de seleção e corte manual.
 
 ## 3.2 Quais são as atividades mais importantes?
 
@@ -171,11 +171,11 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-[H] Selecionar/exportar os resultados processados. Para gerar compilações, ou editar em softwares externos para publicar em outras mídias.
+[H] H07 — Selecionar/exportar os resultados processados. Para gerar compilações, ou editar em softwares externos para publicar em outras mídias.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-[H] Processar os vídeos em lote. Se for mal executada as consequências podem ser: necessidade de retrabalho, custo de processamento da inferência da LLM, perda de arquivos.
+[H] H08 — Processar os vídeos em lote. Se for mal executada as consequências podem ser: necessidade de retrabalho, custo de processamento da inferência da LLM, perda de arquivos.
 
 ---
 
@@ -189,7 +189,7 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-[H] A análise depende da precisão e subjetividade do profissional, que pode estar sujeito a, por exemplo, se distrair e perdeu um highlight.
+[H] H09 — A análise depende da precisão e subjetividade do profissional, que pode estar sujeito a, por exemplo, se distrair e perdeu um highlight.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
@@ -197,13 +197,13 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-[H] Um lance possivelmente interessante da partida pode não estar devidamente rotulado pelo profissional, consequentemente, esse lance pode acabar ficando de fora de um vídeo de highlights final.
+[H] H10 — Um lance possivelmente interessante da partida pode não estar devidamente rotulado pelo profissional, consequentemente, esse lance pode acabar ficando de fora de um vídeo de highlights final.
 
 ## 4.5 Conte uma situação concreta.
 
 Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.**
 
-[H] Após o encerramento de uma partida, um editor de vídeo esportivo recebe a gravação integral e precisa preparar material de melhores momentos para publicação. Ele percorre o vídeo, identifica lances como gols, defesas, finalizações perigosas e ocorrências disciplinares, determina os limites dos trechos e os organiza para uso posterior. Sob pressão de prazo, assistir e selecionar manualmente conteúdo de uma partida extensa exige atenção contínua; um lance pode ser omitido ou recortado sem contexto, provocando retrabalho e atraso. A descrição deverá ser validada por entrevista ou observação de profissionais.
+[H] H11 — Após o encerramento de uma partida, um editor de vídeo esportivo recebe a gravação integral e precisa preparar material de melhores momentos para publicação. Ele percorre o vídeo, identifica lances como gols, defesas, finalizações perigosas e ocorrências disciplinares, determina os limites dos trechos e os organiza para uso posterior. Sob pressão de prazo, assistir e selecionar manualmente conteúdo de uma partida extensa exige atenção contínua; um lance pode ser omitido ou recortado sem contexto, provocando retrabalho e atraso. A descrição deverá ser validada por entrevista ou observação de profissionais.
 
 ## 4.6 Que evidência existe hoje?
 
@@ -219,7 +219,7 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 ## 5.1 Onde e em quais situações a interação poderia ocorrer?
 
-[H] O uso ocorrerá no fluxo de pós-produção, após a partida, quando o editor tiver acesso à gravação integral e precisar obter cortes para continuar o trabalho em ferramentas externas. O local exato — emissora, produtora, clube, trabalho remoto ou outro — ainda é [?] desconhecido.
+[H] H12 — O uso ocorrerá no fluxo de pós-produção, após a partida, quando o editor tiver acesso à gravação integral e precisar obter cortes para continuar o trabalho em ferramentas externas. O local exato — emissora, produtora, clube, trabalho remoto ou outro — ainda é [?] desconhecido.
 
 ## 5.2 Em quais dispositivos/equipamentos?
 
@@ -229,21 +229,21 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc.
 
-[H] H04 — Arquivos de vídeo extensos exigem armazenamento, largura de banda e tempo de processamento; a interface precisa deixar claros upload, fila, progresso, falha e conclusão. Também pode haver pressão para publicar logo após a partida e interrupções causadas por outras demandas de produção. Condições de iluminação, ruído, privacidade e compartilhamento de equipamento ainda são [?] desconhecidas.
+[H] H13 — Arquivos de vídeo extensos exigem armazenamento, largura de banda e tempo de processamento; a interface precisa deixar claros upload, fila, progresso, falha e conclusão. Também pode haver pressão para publicar logo após a partida e interrupções causadas por outras demandas de produção. Condições de iluminação, ruído, privacidade e compartilhamento de equipamento ainda são [?] desconhecidas.
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
 Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração.
 
-[H] O editor pode entregar os arquivos a produtores ou responsáveis editoriais que aprovam e publicam o conteúdo, mas esse fluxo e a separação entre editor e operador ainda precisam ser investigados. [?] Papéis, permissões, políticas de retenção, turnos e responsabilidade pela aprovação não estão definidos.
+[H] H14 — O editor pode entregar os arquivos a produtores ou responsáveis editoriais que aprovam e publicam o conteúdo, mas esse fluxo e a separação entre editor e operador ainda precisam ser investigados. [?] Papéis, permissões, políticas de retenção, turnos e responsabilidade pela aprovação não estão definidos.
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
-[H] H03 — Um histórico com nome da partida, data, estado, arquivos de entrada, resultados e motivo de falha ajudaria a localizar downloads, evitar reprocessamentos e compreender o que ocorreu. A necessidade de auditoria formal ainda é [?] desconhecida.
+[H] H15 — Um histórico com nome da partida, data, estado, arquivos de entrada, resultados e motivo de falha ajudaria a localizar downloads, evitar reprocessamentos e compreender o que ocorreu. A necessidade de auditoria formal ainda é [?] desconhecida.
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
-[H] Sim. Arquivo incompatível, envio interrompido, processamento com falha ou resultado incompleto podem causar atraso, retrabalho e custo adicional de inferência. Cortes incorretos podem omitir lances importantes; por isso o sistema não deve apresentar o resultado automático como editorialmente infalível.
+[H] H16 — Sim. Arquivo incompatível, envio interrompido, processamento com falha ou resultado incompleto podem causar atraso, retrabalho e custo adicional de inferência. Cortes incorretos podem omitir lances importantes; por isso o sistema não deve apresentar o resultado automático como editorialmente infalível.
 
 ---
 
@@ -267,7 +267,7 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.
 
-[H] Editores de vídeo esportivo provavelmente conhecem editores não lineares, como Adobe Premiere Pro e DaVinci Resolve, com player, biblioteca de mídia, marcadores, metadados, linha do tempo e exportação. Essa familiaridade precisa ser confirmada com o público-alvo.
+[H] H17 — Editores de vídeo esportivo provavelmente conhecem editores não lineares, como Adobe Premiere Pro e DaVinci Resolve, com player, biblioteca de mídia, marcadores, metadados, linha do tempo e exportação. Essa familiaridade precisa ser confirmada com o público-alvo.
 
 ## 6.4 O que essas soluções parecem fazer bem?
 
@@ -275,11 +275,11 @@ Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, 
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
 
-[?] Ainda não há evidência suficiente sobre problemas de usabilidade dessas plataformas. [H] Soluções amplas podem expor edição e distribuição além do necessário para o recorte simples de enviar, acompanhar, consultar e baixar. Preço, acesso, transparência do processamento e qualidade percebida deverão ser investigados na Entrega 2.
+[?] Ainda não há evidência suficiente sobre problemas de usabilidade dessas plataformas. [H] H18 — Soluções amplas podem expor edição e distribuição além do necessário para o recorte simples de enviar, acompanhar, consultar e baixar. Preço, acesso, transparência do processamento e qualidade percebida deverão ser investigados na Entrega 2.
 
 ## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
 
-[H] Player de vídeo, miniaturas, timecode, clipe, evento/lance, metadados, biblioteca de mídia, fila, progresso, status, histórico, filtros, download e exportação parecem adequados ao domínio. A terminologia deverá ser validada com editores para evitar expor termos técnicos como “inferência” ou “log” sem tradução.
+[H] H19 — Player de vídeo, miniaturas, timecode, clipe, evento/lance, metadados, biblioteca de mídia, fila, progresso, status, histórico, filtros, download e exportação parecem adequados ao domínio. A terminologia deverá ser validada com editores para evitar expor termos técnicos como “inferência” ou “log” sem tradução.
 
 ---
 
@@ -301,24 +301,24 @@ Faça o exercício de transferência de uso:
 
 Responda:
 
-1. quem poderia contratar/adotar a solução? [H] Empresas de mídia esportiva, emissoras, produtoras, clubes, ligas e organizações que publiquem conteúdo de partidas.
-2. quem seria o usuário direto? [H] Editor de vídeo esportivo responsável por obter material de melhores momentos.
+1. quem poderia contratar/adotar a solução? [H] H20 — Empresas de mídia esportiva, emissoras, produtoras, clubes, ligas e organizações que publiquem conteúdo de partidas.
+2. quem seria o usuário direto? [H] H21 — Editor de vídeo esportivo responsável por obter material de melhores momentos.
 3. quem administraria/configuraria? [?] A administração ainda não foi definida; no recorte inicial, parâmetros técnicos ficam sob responsabilidade da equipe técnica e não do editor.
-4. quem interpretaria resultados? [H] O editor consultaria os cortes e metadados; produtores ou responsáveis editoriais poderiam utilizá-los posteriormente fora da interface.
-5. quem tomaria decisões? [H] O editor decidiria quais arquivos baixar e como continuar o trabalho; a decisão de publicação poderia caber a um responsável editorial.
-6. quais dados/entradas seriam necessários? [H] Um ou mais arquivos de vídeo de partidas encerradas e informações mínimas para identificá-los, como nome da partida e data. Formatos e limites ainda são [?] desconhecidos.
-7. quais resultados deveriam ser compreendidos? [H] Estado do processamento, falhas e ações de recuperação, lista de lances, timecodes, classificação/metadados e arquivos disponíveis para download.
-8. que erros/rupturas seriam possíveis? [H] Arquivo incompatível ou duplicado, interrupção de upload, processamento demorado, falha parcial ou total, resultado vazio, corte ou metadado incorreto e download indisponível.
+4. quem interpretaria resultados? [H] H22 — O editor consultaria os cortes e metadados; produtores ou responsáveis editoriais poderiam utilizá-los posteriormente fora da interface.
+5. quem tomaria decisões? [H] H23 — O editor decidiria quais arquivos baixar e como continuar o trabalho; a decisão de publicação poderia caber a um responsável editorial.
+6. quais dados/entradas seriam necessários? [H] H24 — Um ou mais arquivos de vídeo de partidas encerradas e informações mínimas para identificá-los, como nome da partida e data. Formatos e limites ainda são [?] desconhecidos.
+7. quais resultados deveriam ser compreendidos? [H] H25 — Estado do processamento, falhas e ações de recuperação, lista de lances, timecodes, classificação/metadados e arquivos disponíveis para download.
+8. que erros/rupturas seriam possíveis? [H] H26 — Arquivo incompatível ou duplicado, interrupção de upload, processamento demorado, falha parcial ou total, resultado vazio, corte ou metadado incorreto e download indisponível.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
 Editor de vídeo esportivo.
 
-**Por que esse perfil foi escolhido?** [H] É o profissional cujo objetivo de produzir compilações se relaciona diretamente à capacidade do TCC de identificar e cortar lances. O recorte permite investigar entrada de arquivos, acompanhamento de processamento e compreensão dos resultados sem transformar a disciplina em um editor de vídeo completo. A adequação do perfil será validada nas Entregas 3 e 7.
+**Por que esse perfil foi escolhido?** [H] H27 — É o profissional cujo objetivo de produzir compilações se relaciona diretamente à capacidade do TCC de identificar e cortar lances. O recorte permite investigar entrada de arquivos, acompanhamento de processamento e compreensão dos resultados sem transformar a disciplina em um editor de vídeo completo. A adequação do perfil será validada nas Entregas 3 e 7.
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-[H] Obter, com menor esforço manual, cortes e metadados de melhores momentos de partidas gravadas para continuar a edição ou publicação em ferramentas externas.
+[H] H28 — Obter, com menor esforço manual, cortes e metadados de melhores momentos de partidas gravadas para continuar a edição ou publicação em ferramentas externas.
 
 ## 7.4 Que interface será explorada na disciplina?
 
