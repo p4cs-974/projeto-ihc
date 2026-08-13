@@ -63,7 +63,9 @@ Escreva funcionalidades como capacidades observáveis pelo usuário, não como d
 
 | ID | Funcionalidade | Objetivo do usuário atendido | Prioridade inicial |
 |---|---|---|---|
-| F01 | {{...}} | {{...}} | alta/média/baixa |
+| F01 | Processamento em Lote | Analisar vídeos de maneira eficiente | média |
+| FO2 | Observabilidade/Logs | Acompanhar com precisão o processo | média |
+| FO3 | Visualizar Histórico de Outputs | Poder acessar o output de todos os arquivos processados | média |
 
 ## 1.10 Tecnologias e ferramentas previstas
 
