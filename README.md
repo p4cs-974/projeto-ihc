@@ -30,8 +30,8 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
 | Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | {{...}} |
-| Lucas Roberto Boccia dos Santos | {{matrícula}} | [uniflusantos](https://github.com/uniflusantos) | {{...}} |
-| Giovanni Chahin Morassi | |[giovanni1351](https://github.com/giovanni1351) | | 
+| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | {{...}} |
+| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | {{...}} |
 
 ## Relação entre TCC e projeto de IHC
 

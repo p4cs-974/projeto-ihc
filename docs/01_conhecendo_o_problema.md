@@ -60,24 +60,24 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
 | Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) |
-| Lucas Roberto Boccia dos Santos | {{matrícula}} | [uniflusantos](https://github.com/uniflusantos) |
-| Giovanni Chahin Morassi | {{matrícula}} | [giovanni1351](https://github.com/giovanni1351) |
+| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) |
+| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) |
 
 ## 0.2 Título atual do TCC
 
-Identificação de melhores momentos em partidas de futebol utilizando sistemas híbridos de visão computacional
+Identificação de Melhores Momentos em Partidas de Futebol Utilizando Sistemas Híbridos de Visão Computacional
 
 ## 0.3 Orientador(a)
 
-Murillo Freitas Bouzon
+Prof. Dr. Murillo Freitas Bouzon
 
 ## 0.4 Qual é o resultado principal atualmente previsto no TCC?
 
 Marque e descreva:
 
 - [ ] sistema/aplicação interativa;
-- [ ] algoritmo;
-- [ ] modelo de IA/ML/LLM;
+- [x] algoritmo;
+- [x] modelo de IA/ML/LLM;
 - [ ] biblioteca/API/framework;
 - [ ] análise de dataset;
 - [ ] estudo/benchmark/avaliação experimental;
@@ -85,15 +85,15 @@ Marque e descreva:
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** {{...}}
+**Descrição:** Sistema híbrido de visão computacional que recebe arquivos de vídeo de partidas de futebol e produz cortes de melhores momentos acompanhados de arquivos de metadados.
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
 - [ ] Sim, a interface já faz parte do TCC.
 - [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
-- [ ] Não. O TCC é predominantemente técnico e não previa interface.
+- [x] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** {{...}}
+**Explique o que está formalmente previsto no TCC:** Estava previsto apenas o desenvolvimento do sistema de backend. Com a orientação do professor, a equipe desenvolverá uma interface para a disciplina CC8122.
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -103,11 +103,11 @@ Marque e descreva:
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-{{...}}
+Desenvolver um sistema híbrido de visão computacional capaz de automatizar o processo de corte de melhores momentos em partidas de futebol, reduzindo a necessidade de trabalho manual.
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-{{[F/H/?] ...}}
+[H] O corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e estão sujeitos à interpretação humana, ao cansaço e a falhas.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -117,17 +117,17 @@ Complete, se ajudar:
 
 Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
 
-{{...}}
+Identificar automaticamente os melhores momentos de partidas de futebol e gerar os respectivos cortes de vídeo e metadados.
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-{{[F/H/?] ...}}
+[H] Profissionais responsáveis pela geração de vídeos de melhores momentos gastarão menos tempo realizando cortes manualmente e terão resultados menos sujeitos a variações causadas por cansaço ou falha humana.
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
-| {{...}} | {{...}} |
+| Automação da identificação de melhores momentos com visão computacional | Redução do trabalho manual na produção dos cortes e geração de metadados para os resultados |
 
 ---
 
@@ -137,7 +137,7 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
 
-{{[F/H/?] ...}}
+NÃO SE APLICA AO ESCOPO ORIGINAL.
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
@@ -145,7 +145,7 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
-| {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
+| Profissional responsável pelo corte e geração de vídeos de melhores momentos | Usuário direto da aplicação potencial | Enviar vídeos para processamento, acompanhar o processo e acessar os cortes e metadados gerados | H |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
@@ -167,15 +167,15 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 
 Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
 
-{{[F/H/?] ...}}
+[H] Produzir vídeos de melhores momentos de partidas de futebol com eficiência e consistência, reduzindo o esforço de seleção e corte manual.
 
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A02 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A03 | {{...}} | {{...}} | {{...}} | {{...}} |
+| A01 | Processar vídeos em lote | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
+| A02 | Acompanhar o processamento por meio de informações de observabilidade e logs | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
+| A03 | Consultar o histórico de resultados processados | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
@@ -377,13 +377,16 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Economia de tempo | Necessidade de realizar manualmente cortes em vídeos brutos | Profissional responsável pela geração de vídeos de melhores momentos | H |
+| Redução da subjetividade | A seleção manual pode variar devido à interpretação humana, ao cansaço ou a falhas | Profissional responsável pela geração de vídeos de melhores momentos | H |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | {{ação}} | {{objetivo}} | alta/média/baixa |
+| F01 | Processar vídeos em lote | Analisar vídeos de maneira eficiente | média |
+| F02 | Acompanhar o processamento por informações de observabilidade e logs | Acompanhar com precisão o processo | média |
+| F03 | Visualizar o histórico de resultados | Acessar os resultados de todos os arquivos processados | média |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
