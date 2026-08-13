@@ -79,9 +79,9 @@ Marque e descreva:
 - [x] algoritmo;
 - [x] modelo de IA/ML/LLM;
 - [ ] biblioteca/API/framework;
-- [ ] análise de dataset;
-- [ ] estudo/benchmark/avaliação experimental;
-- [ ] infraestrutura/backend;
+- [x] análise de dataset;
+- [x] estudo/benchmark/avaliação experimental;
+- [x] infraestrutura/backend;
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
@@ -111,12 +111,6 @@ Desenvolver um sistema híbrido de visão computacional capaz de automatizar o p
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
-Complete, se ajudar:
-
-> “Nosso TCC produz, melhora, analisa ou permite `{{capacidade}}`.”
-
-Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
-
 Identificar automaticamente os melhores momentos de partidas de futebol e gerar os respectivos cortes de vídeo e metadados.
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
@@ -128,14 +122,13 @@ Identificar automaticamente os melhores momentos de partidas de futebol e gerar 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
 | Automação da identificação de melhores momentos com visão computacional | Redução do trabalho manual na produção dos cortes e geração de metadados para os resultados |
+| Uso de LLMs multimodais na detecção e classificação dos highlights | Evidenciar a capacidade de generalização do conhecimento e aplicabilidade dos modelos de linguagem |
 
 ---
 
 # 2. Entendendo as pessoas envolvidas
 
 ## 2.1 Quem interage diretamente com o produto, se já existe interface prevista?
-
-Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
 
 NÃO SE APLICA AO ESCOPO ORIGINAL.
 
@@ -145,27 +138,26 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
-| Profissional responsável pelo corte e geração de vídeos de melhores momentos | Usuário direto da aplicação potencial | Enviar vídeos para processamento, acompanhar o processo e acessar os cortes e metadados gerados | H |
+| Profissional responsável pelo corte e geração de vídeos de melhores momentos | Usuário direto da aplicação potencial | Enviar vídeos para processamento, acompanhar o processo e acessar os cortes e metadados gerados | [H] |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | sim/não | {{...}} |
+| Empresas de mídia esportiva | menos custos devido à maior eficiência do processo | não | [H] |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
-
-{{[F/H/?] ...}}
+- Baixo conhecimento técnico a respeito de software e computação no geral. [H]
+- Uso de trackpads e mouses acima do teclado. [F]
+- Costume com softwares tradicionais de edição/manipulação de vídeo. [F]
+- Uso focado em desktop/web. [F]
 
 ---
 
 # 3. Entendendo objetivos e atividades
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
-
-Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
 
 [H] Produzir vídeos de melhores momentos de partidas de futebol com eficiência e consistência, reduzindo o esforço de seleção e corte manual.
 
@@ -179,11 +171,11 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-{{[F/H/?] ...}}
+[H] Selecionar/exportar os resultados processados. Para gerar compilações, ou editar em softwares externos para publicar em outras mídias.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-{{[F/H/?] ...}}
+[H] Processar os vídeos em lote. Se for mal executada as consequências podem ser: necessidade de retrabalho, custo de processamento da inferência da LLM, perda de arquivos.
 
 ---
 
@@ -193,19 +185,19 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
 
-{{[F/H/?] ...}}
+[F] Editores humanos precisam segmentar e classificar os lances em tempo real durante as transmissões.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-{{[F/H/?] ...}}
+[H] A análise depende da precisão e subjetividade do profissional, que pode estar sujeito a, por exemplo, se distrair e perdeu um highlight.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-{{[F/H/?] ...}}
+[F] Contexto da partida de futebol.
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-{{[F/H/?] ...}}
+[H] Um lance possivelmente interessante da partida pode não estar devidamente rotulado pelo profissional, consequentemente, esse lance pode acabar ficando de fora de um vídeo de highlights final.
 
 ## 4.5 Conte uma situação concreta.
 
