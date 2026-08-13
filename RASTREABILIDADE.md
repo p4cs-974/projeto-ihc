@@ -55,6 +55,7 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 | H26 | Erros possíveis: arquivo incompatível/duplicado, upload interrompido, processamento demorado, falha, resultado vazio, corte/metadado incorreto, download indisponível | H | Tratamento de erro | Entrega 5, 8 e 12–14 | PENDENTE | aberta | Estados de erro da interface |
 | H27 | Perfil escolhido: editor de vídeo esportivo; o recorte permite investigar entrada, acompanhamento e resultados sem virar editor completo | H | Foco do projeto de IHC | Entrega 3 e 7 (validação) | PENDENTE | aberta | Persona e escopo do projeto |
 | H28 | Objetivo priorizado: obter, com menor esforço manual, cortes e metadados de melhores momentos para continuar a edição/publicação | H | Objetivo de usuário central | Entrega 3, 5 e 7 | PENDENTE | aberta | Objetivo da interface |
+| H29 | Uma visão geral (dashboard) com status/métricas do processamento dos vídeos atuais e passados seria útil | H | Justifica o padrão de interface “dashboard” | Entrega 5 (tarefas) e 7 | PENDENTE | aberta | Tela de dashboard/visão geral |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 

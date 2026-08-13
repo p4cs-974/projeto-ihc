@@ -348,7 +348,7 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | sim | analisar o status/métricas do processamento dos vídeos atual/passados | [H] |
+| Dashboard/visão geral | sim | analisar o status/métricas do processamento dos vídeos atual/passados | [H] H29 |
 | Configuração/parametrização | sim | {{...}} | {{...}} | 
 | Entrada/upload/seleção de dados | sim | inputar o(s) vídeo(s) para processamento | {{...}} |
 | Acompanhamento de processamento | sim | analisar as métricas/status para um vídeo específico em uma visão detalhada | {{...}} |
