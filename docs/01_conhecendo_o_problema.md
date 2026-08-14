@@ -57,11 +57,11 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 ## 0.1 Membros
 
-| Nome completo | Matrícula | GitHub |
-|---|---:|---|
-| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) |
-| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) |
-| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) |
+| Nome completo | Matrícula | GitHub | Responsabilidade Principal |
+|---|---:|---|---|
+| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | Tela de Input |
+| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Tela de Output |
+| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Tela de Logs/Rastreabilidade |
 
 ## 0.2 Título atual do TCC
 
@@ -209,9 +209,9 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 | Evidência/fonte | O que sustenta | Limitação |
 |---|---|---|
-| Shu, F.; Yang, H. *Automatic Soccer Game Highlight Detection* (Stanford, 2024), [PDF](https://cs231n.stanford.edu/2024/papers/automatic-soccer-game-highlight-detection.pdf) | A produção ainda depende fortemente de edição manual; melhores momentos pós-jogo têm relevância e diferentes tempos de entrega; a detecção deve considerar eventos além de gols | Estudo acadêmico com 25 partidas e foco no desempenho técnico; não investiga diretamente o fluxo de trabalho ou a experiência de editores profissionais |
-| [WSC Sports — plataforma](https://wsc-sports.com/platform/) (acesso em 13/08/2026) | Existem plataformas de mercado que analisam eventos, geram conteúdo e metadados e gerenciam ativos esportivos com IA | Fonte institucional e promocional; não oferece evidência independente de usabilidade ou adequação ao nosso público |
-| [Magnifi — produto](https://www.magnifi.ai/product) e [FAQ](https://www.magnifi.ai/) (acesso em 13/08/2026) | Existem soluções que recebem vídeo gravado em MP4, geram clips/tags e permitem baixar resultados, além de fluxos mais amplos de edição e publicação | Fonte institucional e comercial; funcionalidades e resultados anunciados ainda precisam de análise independente na Entrega 2 |
+| AKAN, Sara; VARLI, Songül. Use of deep learning in soccer videos analysis: survey: S. Akan, S. Varlı. Multimedia Systems, v. 29, n. 3, p. 897-915, 2023. | A produção ainda depende fortemente de edição manual; melhores momentos pós-jogo têm relevância e diferentes tempos de entrega; a detecção deve considerar eventos além de gols | Estudo acadêmico com 25 partidas e foco no desempenho técnico; não investiga diretamente o fluxo de trabalho ou a experiência de editores profissionais |
+| YIN, Hongwei; SINNOTT, Richard O.; JAYAPUTERA, Glenn T. A survey of video-based human action recognition in team sports: H. Yin et al. Artificial intelligence review, v. 57, n. 11, p. 293, 2024. | Existem plataformas de mercado que analisam eventos, geram conteúdo e metadados e gerenciam ativos esportivos com IA | Fonte institucional e promocional; não oferece evidência independente de usabilidade ou adequação ao nosso público |
+| SEWERYN, Karolina; WRÓBLEWSKA, Anna; ŁUKASIK, Szymon. Survey of action recognition, spotting, and spatio-temporal localization in soccer—Current trends and research perspectives. ACM Transactions on Intelligent Systems and Technology, v. 17, n. 2, p. 1-37, 2026. | Existem soluções que recebem vídeo gravado em MP4, geram clips/tags e permitem baixar resultados, além de fluxos mais amplos de edição e publicação | Fonte institucional e comercial; funcionalidades e resultados anunciados ainda precisam de análise independente na Entrega 2 |
 
 ---
 
