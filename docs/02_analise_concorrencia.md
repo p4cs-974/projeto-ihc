@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 19/08/2026  
+**Status:** `🟨 em andamento`
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -25,6 +25,7 @@ Exemplos:
 A pergunta é: **“que convenções esse perfil já conhece para executar tarefas equivalentes?”**
 
 ## Entrada obrigatória da Entrega 1
+> softwares pra olhar: capcut, davinci resolve, premiere pro, fina cut pro, cap.so, sony vegas
 
 Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equipe deixa de trabalhar apenas com impressão inicial e passa a **investigar sistematicamente** cada solução.
 
