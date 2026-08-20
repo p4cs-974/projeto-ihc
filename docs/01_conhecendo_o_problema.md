@@ -261,11 +261,9 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
-[F] Sim. WSC Sports e Magnifi atuam com automação de conteúdo e melhores momentos esportivos. O DaVinci Resolve e o Adobe Premiere Pro são alternativas indiretas para edição manual. A comparação aprofundada de funcionalidades, experiência, preço e limitações será feita na Entrega 2.
+[F] Sim. WSC Sports e Magnifi atuam com automação de conteúdo e melhores momentos esportivos. O DaVinci Resolve, Adobe Premiere Pro, CapCut, Final Cut Pro, e cap.so são alternativas indiretas para edição manual.
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
-
-Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.
 
 [H] H17 — Editores de vídeo esportivo provavelmente conhecem editores não lineares, como Adobe Premiere Pro e DaVinci Resolve, com player, biblioteca de mídia, marcadores, metadados, linha do tempo e exportação. Essa familiaridade precisa ser confirmada com o público-alvo.
 
