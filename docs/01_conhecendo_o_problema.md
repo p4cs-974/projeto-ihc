@@ -349,19 +349,19 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
 | Dashboard/visão geral | sim | analisar o status/métricas do processamento dos vídeos atual/passados | [H] H29 |
-| Configuração/parametrização | sim | {{...}} | {{...}} | 
+| Configuração/parametrização | sim | identificar os vídeos enviados (nome da partida, data), escolher o modelo de IA e definir o material desejado antes do processamento | {{...}} |
 | Entrada/upload/seleção de dados | sim | inputar o(s) vídeo(s) para processamento | {{...}} |
 | Acompanhamento de processamento | sim | analisar as métricas/status para um vídeo específico em uma visão detalhada | {{...}} |
 | Relatório/resultados | sim | analisar as saídas dos vídeos | {{...}} |
 | Histórico com busca/filtros | sim | exportar os cortes do vídeo | {{...}} |
 | Comparação de resultados | não | não há necessidade de comparar os resultados dos diferentes vídeos | {{...}} |
-| Explicabilidade/detalhamento | sim | {{...}} | {{...}} |
-| Administração/configurações globais | sim | {{...}} | {{...}} |
-| Usuários/perfis/permissões | não | {{...}} | {{...}} |
-| CRUD de entidade do domínio | sim | {{...}} | {{...}} |
-| Auditoria/logs | sim | {{...}} | {{...}} |
-| Alertas/ocorrências | sim | {{...}} | {{...}} |
-| Ajuda/documentação | não | {{...}} | {{...}} |
+| Explicabilidade/detalhamento | sim | entender por que um trecho foi classificado como melhor momento, para decidir o que baixar e usar | {{...}} |
+| Administração/configurações globais | sim | gerenciar armazenamento e retenção dos vídeos e resultados ao longo do tempo | {{...}} |
+| Usuários/perfis/permissões | não | fora do recorte inicial: um único perfil (editor de vídeo esportivo); papéis e permissões ainda não definidos | {{...}} |
+| CRUD de entidade do domínio | sim | gerenciar os registros das partidas enviadas (renomear, excluir, reprocessar) | {{...}} |
+| Auditoria/logs | sim | investigar o motivo de falhas e o que foi produzido em cada processamento, sem depender da equipe técnica | {{...}} |
+| Alertas/ocorrências | sim | ser avisado de conclusão ou falha do processamento sem precisar vigiar a tela | {{...}} |
+| Ajuda/documentação | não | fora do recorte inicial: fluxo curto e linear (enviar → acompanhar → consultar → baixar) para um público familiarizado com ferramentas do domínio | {{...}} |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -390,7 +390,11 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Processamento de vídeo com visão computacional e LLMs multimodais | Núcleo do TCC: detecção e classificação dos melhores momentos | Tempo de processamento não trivial; a interface precisa comunicar fila, progresso e estimativas em vez de responder instantaneamente (H13) |
+| Custo de inferência da LLM | Cada processamento tem custo computacional/financeiro | Reprocessar não é gratuito; a interface deve evitar envios duplicados e deixar claro quando o custo foi gerado (H08, H16) |
+| Entrada em arquivo de vídeo (partidas gravadas, p. ex. MP4) | O escopo do TCC trabalha com partidas encerradas, não transmissão ao vivo | Upload de arquivos extensos; a interface precisa tratar upload lento/interrupto e formatos/limites ainda desconhecidos (H24, H26) |
+| Backend sem interface prevista originalmente | O TCC previa apenas o sistema de backend | A interface da disciplina é um protótipo demonstrativo; opções como web desktop ou aplicação desktop nativa permanecem em aberto (5.2) |
+| Saída em cortes de vídeo + arquivos de metadados | Formato de resultado definido pelo TCC | A interface precisa apresentar lances, timecodes e metadados de forma compreensível e permitir o download dos arquivos (H25) |
 
 ---
 
@@ -398,9 +402,19 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | {{...}} | {{...}} | Entrega 2/3/7/... |
-| H02 | {{...}} | {{...}} | {{...}} |
-| H03 | {{...}} | {{...}} | {{...}} |
+| H01 | O corte e a geração de melhores momentos são feitos manualmente, demandam tempo e estão sujeitos a cansaço e falhas humanas | Motiva o problema central do TCC; se for falsa, a solução perde a justificativa | Entrega 4 (cenários) e 7 (coleta de dados) |
+| H02 | Profissionais gastarão menos tempo e terão resultados menos sujeitos a variações | É o benefício esperado da solução; sustenta o valor percebido | Entrega 7 |
+| H03 | O profissional responsável pelo corte é o usuário direto da aplicação | Define o usuário-alvo de todo o projeto de IHC | Entrega 3 (personas) e 7 |
+| H05 | O perfil tem baixo conhecimento técnico de software e computação | Influi na simplicidade e na linguagem da interface | Entrega 3 e 7 |
+| H07 | Selecionar/exportar os resultados é a atividade mais frequente | Prioriza o fluxo principal da interface | Entrega 5 (análise de tarefas) e 7 |
+| H08 | Processar vídeos em lote é a atividade mais crítica | Prioriza tratamento de erro e confiabilidade | Entrega 5 e 7 |
+| H12 | O uso ocorre na pós-produção, após a partida; local exato desconhecido | Define o contexto de uso e requisitos de ambiente | Entrega 3 e 7 |
+| H13 | Arquivos extensos exigem armazenamento, banda e tempo; há pressão de prazo | Determina a necessidade de feedback de progresso e estados claros | Entrega 3 e 7 |
+| H17 | Editores já conhecem NLEs (Premiere, Resolve), player, marcadores e timecode | Define padrões e vocabulário de interface reaproveitáveis | Entrega 2 (concorrência), 3 e 6 |
+| H27 | O editor de vídeo esportivo é o perfil a priorizar | Foco do projeto de IHC; direciona personas e tarefas | Entrega 3 e 7 (validação) |
+| H28 | Objetivo do usuário: obter cortes e metadados com menor esforço manual | É o objetivo que a interface deve servir | Entrega 3, 5 e 7 |
+
+Registro completo das hipóteses H01–H29 em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -419,7 +433,7 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | Qual é o contexto de uso? | pós produção de partidas de futebol |
 | Que interface/recorte será explorado? | app de computador (desktop ou web) |
 | Como a interface se relaciona ao TCC? | demosntração visual do processamento e resultados |
-| Quais pontos ainda são hipóteses? | {{H01...}} |
+| Quais pontos ainda são hipóteses? | H01–H29, consolidadas na seção 10 e em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md); as prioritárias são H01, H02, H03, H05, H07, H08, H12, H13, H17, H27 e H28 |
 
 ### Delimitação
 
@@ -471,10 +485,10 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 - [x] Processo/problema atual foi descrito antes da solução.
 - [x] Existe situação concreta de uso/problema.
 - [x] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
-- [ ] Mercado/alternativas existentes foram levantados inicialmente.
+- [x] Mercado/alternativas existentes foram levantados inicialmente.
 - [x] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
 - [x] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
 - [x] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
-- [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
+- [x] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
 - [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
 - [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.

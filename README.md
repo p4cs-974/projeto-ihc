@@ -29,22 +29,22 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | {{...}} |
-| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | {{...}} |
-| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | {{...}} |
+| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | Tela de Input |
+| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Tela de Output |
+| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Tela de Logs/Rastreabilidade |
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
-| Interface/recorte explorado na disciplina | {{...}} |
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
+| Tema central do TCC | Identificação de melhores momentos em partidas de futebol utilizando sistemas híbridos de visão computacional |
+| Resultado técnico esperado do TCC | Sistema híbrido de visão computacional (algoritmo, modelo de IA/LLM, análise de dataset, benchmark e backend) que recebe vídeos de partidas e produz cortes de melhores momentos com metadados |
+| O TCC já previa interface? | não — previa apenas o sistema de backend; a interface surgiu para a disciplina de IHC |
+| Capacidade técnica que pode gerar valor para pessoas | Identificação automática de melhores momentos e geração dos respectivos cortes de vídeo e metadados, reduzindo o trabalho manual de edição |
+| Usuário principal adotado em IHC | Editor de vídeo esportivo, responsável por obter material de melhores momentos (H27) |
+| Objetivo principal desse usuário | Obter, com menor esforço manual, cortes e metadados de melhores momentos de partidas gravadas para continuar a edição ou publicação em ferramentas externas (H28) |
+| Interface/recorte explorado na disciplina | Interface para enviar vídeos gravados, acompanhar o processamento, consultar os resultados e baixar cortes e metadados — sem edição detalhada nem publicação |
+| Relação com o escopo formal do TCC | protótipo demonstrativo de aplicação potencial |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
@@ -53,6 +53,8 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolhido, o que precisa alcançar, qual problema enfrenta ou qual atividade precisa executar, em qual contexto e como a contribuição do TCC se relaciona com essa situação.
 
 Evite começar pela tecnologia.
+
+Um editor de vídeo esportivo precisa produzir compilações de melhores momentos de partidas de futebol na pós-produção, após o encerramento do jogo. Atualmente esse trabalho é manual: ele assiste à gravação integral, identifica lances, define os cortes e organiza o material — processo lento, sujeito a cansaço e interpretação, com risco de omitir lances importantes. O TCC investiga um sistema híbrido de visão computacional que detecta e classifica automaticamente os melhores momentos. Para fins da disciplina de IHC, será explorada uma interface que permita ao editor enviar os vídeos gravados, acompanhar o processamento e obter os cortes e metadados para dar continuidade à edição em ferramentas externas.
 
 > **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
 
@@ -102,7 +104,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 
 | # | Entrega | Quantidade mínima / responsabilidade | Status |
 |---:|---|---|---|
-| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | ⬜ |
+| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟨 |
 | 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | ⬜ |
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | ⬜ |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | ⬜ |
