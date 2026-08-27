@@ -63,7 +63,10 @@ Analisar como o Adobe Premiere Pro apoia a edição manual de vídeos de melhore
 
 | Funcionalidade | Como é realizada | Evidência/print                              | Observação de IHC |
 | -------------- | ---------------- | -------------------------------------------- | ----------------- |
-| {{...}}        | {{...}}          | `../assets/02_concorrencia/premiere-pro/...` | {{...}}           |
+| Abrir video        | O usuario pode abrir uma pasta do computador, selecionar os arquivos e importar para o projeto, o software entende isso e consegue utilizar para visualização do conteudo           | `../assets/02_concorrencia/premiere-pro/...` | {{...}}           |
+| Adicionar na timeline      | pela interface do sistema é possivel o usuario arrastar os videos importados para a area da timeline          | `../assets/02_concorrencia/premiere-pro/...` | {{...}}           |
+| cortar um clipe        | a timeline possui um cursor, no qual pode navegar por toda duração do video, ao colocar o cursor em determinado momento existe um botão com o icone de tesoura, é possivel clickar, e ao clickar os clips onde estão por baixo do cursor serão divididos em 2          | `../assets/02_concorrencia/premiere-pro/...` | {{...}}           |
+| adicionar musica ao video        | a timeline é dividida em visual e audio, é possivel da mesma forma que adicionar um video ao projeto é possivel adicionar uma musica, e da mesma foram que ao adicionar o video na timeline é possivel adicionar a musica, porem no setor da timeline da musica          | `../assets/02_concorrencia/premiere-pro/...` | {{...}}           |
 
 #### Experiência do usuário e opiniões
 
