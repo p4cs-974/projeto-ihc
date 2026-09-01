@@ -215,17 +215,33 @@ Analisar como o cap.so apoia a edição manual de vídeos.
 
 #### Contexto e proposta
 
-Analisar como a WSC Sports automatiza a análise de eventos esportivos, a criação de conteúdo, o gerenciamento de ativos e a distribuição de resultados.
+A WSC Sports provê uma plataforma com algorítmos especializados de IA para analisar, classificar, avaliar, criar e gerenciar conteúdo de eventos de esporte. O principal objetivo do serviço é acelerar e aprimorar o fluxo de produção e personalização do conteúdo.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print                            | Observação de IHC |
 | -------------- | ---------------- | ------------------------------------------ | ----------------- |
-| {{...}}        | {{...}}          | `../assets/02_concorrencia/wsc-sports/...` | {{...}}           |
+| Identificar e classificar objetos em vídeos      | O usuário seleciona um vídeo e um algorítmo de visão computacional realiza a identificação e classificação dos objetos na tela         | `../assets/02_concorrencia/wsc-sports/wsc-objects.jpeg` | O site não nos dá uma preview do processo para realizar essa análise, mas a interface que mostra os objetos na tela destaca e classifica os objetos na tela de forma muito sólida, com bounding boxes e tags contrastantes e fáceis de serem lidas e um índice de objetos identificados        |
+| Criação de vídeos automática | O usuário seleciona um conjunto de cenas, clica em "Criar Video" e o sistema cria um ou mais vídeos personalizados com o conjunto de cenas | `../assets/02_concorrencia/wsc-sports/wsc-create.jpeg` | A preview de interface que o site nos fornece é bem direta ao ponto, o usuário seleciona o conjunto de cenas e clica em um botão "Create Video", e os vídeos são gerados na tela para ele |
+| Estúdio de edição de vídeos | O usuário possui, dentro da plataforma, um serviço completo de edição de vídeos, com opções para gerenciar vídeo, aúdio, legendas, gráficos, tudo com preview em tempo real e uma opção de publicação automática | `../assets/02_concorrencia/wsc-sports/wsc-studio.jpeg` | A preview simplificada da interface no site representa uma UI clássica de programas famosos de edição, com uma tela de preview, e os atributos (áudio, vídeo, legendas, gráficos) na parte inferior em um sistema de barras |
+| Pesquisa por Conteúdo Existente | O usuário dispõe da funcionalidade de gerenciar o contéudo já gravado na plataforma, podendo pesquisar por mídias específicas, seja por nome, seja por classificação | `../assets/02_concorrencia/wsc-sports/wsc-manage.jpeg` |  A preview do sistema de pesquisa mostra uma interface de busca organizada e direta ao ponto, sem muitos elementos na tela além do essencial |
+| Monitoramento Estatístico dos Vídeos | O usuário consegue visualizar a "performance" do vídeo nas mídias sociais, podendo acessar dados como número de visualizações, número de compartilhamentos, número de vezes que o app foi instalado e até a renda estimada | | `../assets/02_concorrencia/wsc-sports/wsc-engage.jpeg` | Os indicadores de performance são diretos e fáceis de entender, o sistema indica ao usuário as informações de forma bem clara e explícita, acompanhado de uma preview do vídeo |
 
 #### Experiência do usuário e opiniões
 
-{{avaliações, relatos, estudos ou teste próprio com fonte identificável}}
+Os relatos foram traduzidos da página oficial de clientes da WSC Sports
+
+"A confiabilidade da plataforma da WSC Sports é algo que nunca nos deixou na mão. É algo em que pudemos confiar desde que começamos a usá-la em 2015." - Brandon Jirousek, VP Digital, Cleveland Cavaliers.
+
+"A WSC Sports nos permite investir de verdade na personalização e na localização do nosso conteúdo, o que é fundamental para ampliar o nível de personalização que oferecemos aos nossos torcedores." - Chris Foster, VP Digital Business Development - NHL.
+
+"Em colaboração com a WCS Sports, poderemos oferecer aos nossos torcedores conteúdos cada vez mais envolventes e inovadores, assim como oferecer aos 20 clubes da Lega Serie A um produto de ponta para ampliar suas ofertas nas redes sociais" - Lorenzo Dallari, Editorial & Social Director - Lega Serie A.
+
+"Nossa parceria com a WSC nos permite liderar a criação e a entrega de conteúdo altamente relevante e personalizado — aquele que é mais importante para o nosso público — em tempo real." - Olek Lowenstein, President of Global Sports - TelevisaUnivision.
+
+"A ATP Media busca constantemente formas de aumentar o engajamento e oferecer um atendimento excepcional aos nossos fãs. Por meio da parceria com a WSC Sports, podemos levar momentos ainda mais emocionantes dos nossos torneios a milhões de fãs de tênis em todo o mundo, com rapidez e em grande escala." - Stuart Watts, COO - ATP Media.
+
+"Nós sabemos o que os fãs querem. Em parceria com a WSC Sports, conseguimos maximizar o impacto dos nossos direitos e transformar a nossa forma de entrega nesse segmento; estamos alcançando mais fãs ao criar clipes e melhores momentos empolgantes, adaptados aos locais e plataformas de onde eles consomem o conteúdo." - Sarah Beattie, Chief of Marketing Officer - Six Nations Rugby.
 
 #### Padrões e tendências percebidos
 
