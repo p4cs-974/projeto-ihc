@@ -1,0 +1,83 @@
+{
+  "platform": "MacOS",
+  "pretty_name": "Cap 2026-09-01 at 20.45.41",
+  "sharing": null,
+  "segments": [
+    {
+      "display": {
+        "path": "content/segments/segment-0/display.mp4",
+        "fps": 30,
+        "start_time": 0.11677025
+      },
+      "cursor": "content/segments/segment-0/cursor.json",
+      "keyboard": "content/segments/segment-0/keyboard.bin"
+    },
+    {
+      "display": {
+        "path": "content/segments/segment-1/display.mp4",
+        "fps": 30,
+        "start_time": 0.0
+      },
+      "system_audio": {
+        "path": "content/segments/segment-1/audio.ogg",
+        "start_time": 0.0
+      }
+    },
+    {
+      "display": {
+        "path": "content/segments/segment-2/display.mp4",
+        "fps": 30,
+        "start_time": 0.0
+      },
+      "system_audio": {
+        "path": "content/segments/segment-2/audio.ogg",
+        "start_time": 0.0
+      }
+    }
+  ],
+  "cursors": {
+    "2": {
+      "imagePath": "content/cursors/cursor_2.png",
+      "hotspot": {
+        "x": 0.5217391304347826,
+        "y": 0.5
+      },
+      "shape": "MacOS|TahoeIBeam"
+    },
+    "1": {
+      "imagePath": "content/cursors/cursor_1.png",
+      "hotspot": {
+        "x": 0.40625,
+        "y": 0.25
+      },
+      "shape": "MacOS|TahoePointingHand"
+    },
+    "4": {
+      "imagePath": "content/cursors/cursor_4.png",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "shape": "MacOS|ResizeDown"
+    },
+    "3": {
+      "imagePath": "content/cursors/cursor_3.png",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "shape": "MacOS|ResizeLeftRight"
+    },
+    "0": {
+      "imagePath": "content/cursors/cursor_0.png",
+      "hotspot": {
+        "x": 0.17857142857142858,
+        "y": 0.125
+      },
+      "shape": "MacOS|TahoeArrow"
+    }
+  },
+  "status": {
+    "status": "Complete"
+  }
+}
