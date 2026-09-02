@@ -473,9 +473,9 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 | ------------------ | ----------------------------------------------- | -------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------- |
 | Adobe Premiere Pro | Importar, organizar, recortar e exportar vídeos | Player, biblioteca de mídia, marcadores, linha do tempo e exportação | Pendente | Empregar termos e controles familiares aos editores de vídeo                  |
 | DaVinci Resolve    | Organizar, editar e exportar vídeos             | Player, biblioteca de mídia, metadados, linha do tempo e exportação  | Pendente | Apresentar arquivos e resultados de forma visual e organizada                 |
-| CapCut             | Realizar edições e exportações de vídeo         | Player, miniaturas, linha do tempo e exportação                      | Figuras 1 a 3 | Manter as tarefas principais acessíveis e reduzir a complexidade da interface |
-| Final Cut Pro      | Organizar, editar e exportar vídeos             | Player, biblioteca de mídia, marcadores, linha do tempo e exportação | Figuras 1 a 5 | Facilitar a localização, seleção e manipulação de trechos                     |
-| cap.so             | Editar e apresentar vídeos                      | Player, pré-visualização e exportação                                | Figuras 1 a 6 | Oferecer pré-visualização clara antes de baixar ou exportar resultados        |
+| CapCut             | Realizar edições e exportações de vídeo         | Player, miniaturas, linha do tempo e exportação                      | Figuras 1 a 3  | Manter as tarefas principais acessíveis e reduzir a complexidade da interface |
+| Final Cut Pro      | Organizar, editar e exportar vídeos             | Player, biblioteca de mídia, marcadores, linha do tempo e exportação | Figuras 4 a 8  | Facilitar a localização, seleção e manipulação de trechos                     |
+| cap.so             | Editar e apresentar vídeos                      | Player, pré-visualização e exportação                                | Figuras 9 a 14 | Oferecer pré-visualização clara antes de baixar ou exportar resultados        |
 
 > A familiaridade do público com esses softwares e padrões ainda deve ser validada, conforme a hipótese H17 da Entrega 1.
 
