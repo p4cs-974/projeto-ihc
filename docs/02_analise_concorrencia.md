@@ -489,7 +489,6 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 | ------------------ | ----------------------------------------------- | -------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------- |
 | Adobe Premiere Pro | Importar, organizar, recortar e exportar vídeos | Player, biblioteca de mídia, marcadores, linha do tempo e exportação | Pendente | Empregar termos e controles familiares aos editores de vídeo                  |
 | DaVinci Resolve    | Organizar, editar e exportar vídeos             | Player, biblioteca de mídia, metadados, linha do tempo e exportação  | Pendente | Apresentar arquivos e resultados de forma visual e organizada                 |
-
 | CapCut             | Realizar edições e exportações de vídeo         | Player, miniaturas, linha do tempo e exportação                      | Figuras 1 a 3 | Manter as tarefas principais acessíveis e reduzir a complexidade da interface |
 | Final Cut Pro      | Organizar, editar e exportar vídeos             | Player, biblioteca de mídia, marcadores, linha do tempo e exportação | Figuras 1 a 5 | Facilitar a localização, seleção e manipulação de trechos                     |
 | cap.so             | Editar e apresentar vídeos                      | Player, pré-visualização e exportação                                | Figuras 1 a 6 | Oferecer pré-visualização clara antes de baixar ou exportar resultados        |
@@ -502,13 +501,17 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 Registre somente padrões encontrados nas soluções analisadas e que possam ter relação com objetivos reais da equipe.
 
-| Padrão observado         | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
-| ------------------------ | ---------- | ---------------------- | ------------------ | --------------- | -------------------------- |
-| dashboard                | {{...}}    | {{...}}                | {{...}}            | {{...}}         | sim/não/talvez             |
-| relatório                | {{...}}    | {{...}}                | {{...}}            | {{...}}         | {{...}}                    |
-| histórico + filtros      | {{...}}    | {{...}}                | {{...}}            | {{...}}         | {{...}}                    |
-| administração/CRUD       | {{...}}    | {{...}}                | {{...}}            | {{...}}         | {{...}}                    |
-| comparação de resultados | {{...}}    | {{...}}                | {{...}}            | {{...}}         | {{...}}                    |
+| Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
+| ---------------- | ---------- | ---------------------- | ------------------ | --------------- | -------------------------- |
+| Biblioteca visual com miniaturas e metadados | CapCut, Final Cut Pro, cap.so, WSC Sports | Localizar e organizar vídeos e trechos | Facilita o reconhecimento sem abrir cada arquivo | Nomes cortados ou genéricos dificultam distinguir itens parecidos | Sim |
+| Player ligado ao trecho de origem | CapCut, Final Cut Pro, cap.so, WSC Sports, Magnifi | Conferir cortes e resultados da IA | Mantém o resultado verificável antes da aprovação | Muitos controles podem sobrecarregar a revisão | Sim |
+| Linha do tempo com segmentos | Premiere Pro, CapCut, Final Cut Pro, cap.so, WSC Sports, Magnifi | Navegar, recortar e ordenar trechos | Expõe duração, sequência e relação temporal | Uma linha do tempo profissional completa aumenta a complexidade | Talvez, em versão simplificada |
+| Busca e filtros por conteúdo ou metadados | Final Cut Pro, WSC Sports | Encontrar cenas e mídias em acervos extensos | Reduz a inspeção manual de vídeos longos | Resultados podem esconder limites da análise ou perder contexto | Sim |
+| Estado e progresso de tarefas assíncronas | Final Cut Pro, CapCut, cap.so | Acompanhar importação, análise e exportação | Permite continuar o trabalho e saber quando o resultado está pronto | Estados vagos geram dúvida entre espera, pausa e erro | Sim |
+| Prévia e resumo antes da saída | CapCut, Final Cut Pro, cap.so | Confirmar o conteúdo antes de exportar ou baixar | Reduz erros de arquivo, formato, duração e destino | Estimativas de tempo e tamanho podem ser imprecisas | Sim |
+| Automação com revisão humana | Final Cut Pro, WSC Sports, Magnifi | Gerar, selecionar e publicar melhores momentos | Poupa trabalho sem retirar a decisão final do usuário | A automação pode parecer confiável mesmo quando erra ou não cobre todo o vídeo | Sim |
+| Controles contextuais e ajustes progressivos | CapCut, Final Cut Pro, cap.so | Editar o item selecionado e configurar a saída | Mantém opções avançadas fora do fluxo principal | Ícones sem rótulo e termos técnicos prejudicam iniciantes e acessibilidade | Sim |
+| Regras de publicação e distribuição | WSC Sports, Magnifi | Automatizar a entrega de conteúdo a canais externos | Escala tarefas repetitivas de publicação | Uma regra errada pode distribuir conteúdo inadequado | Não nesta etapa |
 
 > O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
 
