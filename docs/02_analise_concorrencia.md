@@ -458,13 +458,13 @@ A WSC Sports provê uma plataforma com algorítmos especializados de IA para ana
 
 #### Funcionalidades relevantes
 
-| Funcionalidade                              | Como é realizada                                                                                                                                                                                                           | Evidência/print                                                                 | Observação de IHC                                                                                                                                                                                                                                                                       |
-| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Identificar e classificar objetos em vídeos | O usuário seleciona um vídeo e um algorítmo de visão computacional realiza a identificação e classificação dos objetos na tela                                                                                             | ![Detecção de Objetos](../assets/02_concorrencia/wsc-sports/wsc_objects.jpeg)   | O site não nos dá uma preview do processo para realizar essa análise, mas a interface que mostra os objetos na tela destaca e classifica os objetos na tela de forma muito sólida, com bounding boxes e tags contrastantes e fáceis de serem lidas e um índice de objetos identificados |
-| Criação de vídeos automática                | O usuário seleciona um conjunto de cenas, clica em "Criar Video" e o sistema cria um ou mais vídeos personalizados com o conjunto de cenas                                                                                 | [Criar Vídeos](../assets/02_concorrencia/wsc-sports/wsc_create.jpeg)            | A preview de interface que o site nos fornece é bem direta ao ponto, o usuário seleciona o conjunto de cenas e clica em um botão "Create Video", e os vídeos são gerados na tela para ele                                                                                               |
-| Estúdio de edição de vídeos                 | O usuário possui, dentro da plataforma, um serviço completo de edição de vídeos, com opções para gerenciar vídeo, aúdio, legendas, gráficos, tudo com preview em tempo real e uma opção de publicação automática           | [Estúdio de Edição](../assets/02_concorrencia/wsc-sports/wsc_studio.jpeg)       | A preview simplificada da interface no site representa uma UI clássica de programas famosos de edição, com uma tela de preview, e os atributos (áudio, vídeo, legendas, gráficos) na parte inferior em um sistema de barras                                                             |
-| Pesquisa por Conteúdo Existente             | O usuário dispõe da funcionalidade de gerenciar o contéudo já gravado na plataforma, podendo pesquisar por mídias específicas, seja por nome, seja por classificação                                                       | [Gerenciamento de Vídeos](../assets/02_concorrencia/wsc-sports/wsc_manage.jpeg) | A preview do sistema de pesquisa mostra uma interface de busca organizada e direta ao ponto, sem muitos elementos na tela além do essencial                                                                                                                                             |
-| Monitoramento de Performance dos Vídeos     | O usuário consegue visualizar a "performance" do vídeo nas mídias sociais, podendo acessar dados como número de visualizações, número de compartilhamentos, número de vezes que o app foi instalado e até a renda estimada | [Monitoramento](../assets/02_concorrencia/wsc-sports/wsc_engage.jpeg)           | Os indicadores de performance são diretos e fáceis de entender, o sistema indica ao usuário as informações de forma bem clara e explícita, acompanhado de uma preview do vídeo                                                                                                          |
+| Funcionalidade | Como é realizada | Evidência/print                            | Observação de IHC |
+| -------------- | ---------------- | ------------------------------------------ | ----------------- |
+| Identificar e classificar objetos em vídeos      | O usuário seleciona um vídeo e um algorítmo de visão computacional realiza a identificação e classificação dos objetos na tela | ![Detecção de Objetos](../assets/02_concorrencia/wsc-sports/wsc_objects.jpeg) | O site não nos dá uma preview do processo para realizar essa análise, mas a interface que mostra os objetos na tela destaca e classifica os objetos na tela de forma muito sólida, com bounding boxes e tags contrastantes e fáceis de serem lidas e um índice de objetos identificados        |
+| Criação de vídeos automática | O usuário seleciona um conjunto de cenas, clica em "Criar Video" e o sistema cria um ou mais vídeos personalizados com o conjunto de cenas | ![Criar Vídeos](../assets/02_concorrencia/wsc-sports/wsc_create.jpeg) | A preview de interface que o site nos fornece é bem direta ao ponto, o usuário seleciona o conjunto de cenas e clica em um botão "Create Video", e os vídeos são gerados na tela para ele |
+| Estúdio de edição de vídeos | O usuário possui, dentro da plataforma, um serviço completo de edição de vídeos, com opções para gerenciar vídeo, aúdio, legendas, gráficos, tudo com preview em tempo real e uma opção de publicação automática | ![Estúdio de Edição](../assets/02_concorrencia/wsc-sports/wsc_studio.jpeg) | A preview simplificada da interface no site representa uma UI clássica de programas famosos de edição, com uma tela de preview, e os atributos (áudio, vídeo, legendas, gráficos) na parte inferior em um sistema de barras |
+| Pesquisa por Conteúdo Existente | O usuário dispõe da funcionalidade de gerenciar o contéudo já gravado na plataforma, podendo pesquisar por mídias específicas, seja por nome, seja por classificação | ![Gerenciamento de Vídeos](../assets/02_concorrencia/wsc-sports/wsc_manage.jpeg) |  A preview do sistema de pesquisa mostra uma interface de busca organizada e direta ao ponto, sem muitos elementos na tela além do essencial |
+| Monitoramento de Performance dos Vídeos | O usuário consegue visualizar a "performance" do vídeo nas mídias sociais, podendo acessar dados como número de visualizações, número de compartilhamentos, número de vezes que o app foi instalado e até a renda estimada | ![Monitoramento](../assets/02_concorrencia/wsc-sports/wsc_engage.jpeg) | Os indicadores de performance são diretos e fáceis de entender, o sistema indica ao usuário as informações de forma bem clara e explícita, acompanhado de uma preview do vídeo |
 
 #### Experiência do usuário e opiniões
 
@@ -484,7 +484,7 @@ Os relatos foram traduzidos da página oficial de clientes da WSC Sports
 
 #### Padrões e tendências percebidos
 
-Com base nas previews que temos acesso no site da WSC_Sports, a plataforma utiliza um padrão de interface que mistura elementos comuns de interfaces web com o visual clássico de outros softwares populares de edição de vídeo. Os mecanismos de busca e gerenciamento de conteúdo usam um layout com elementos visuais semelhantes aos de muitos webapps, com botões responsivos, animações, emojis e navegação rápida. O layout do estúdio de edição, por sua vez, segue o padrão de fundo escuro, cores contrastantes e divisão de elementos de edição (como áudio, vídeo, legendas e gráficos) por meio de um sistema de barras.
+Com base nas previews que temos acesso no site da WSC Sports, a plataforma utiliza um padrão de interface que mistura elementos comuns de interfaces web com o visual clássico de outros softwares populares de edição de vídeo. Os mecanismos de busca e gerenciamento de conteúdo usam um layout com elementos visuais semelhantes aos de muitos webapps, com botões responsivos, animações, emojis e navegação rápida. O layout do estúdio de edição, por sua vez, segue o padrão de fundo escuro, cores contrastantes e divisão de elementos de edição (como áudio, vídeo, legendas e gráficos) por meio de um sistema de barras.
 
 #### Pontos positivos, limitações e lições
 
@@ -499,31 +499,47 @@ Com base nas previews que temos acesso no site da WSC_Sports, a plataforma utili
 **Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1  
 **Tipo:** concorrente direto  
 **Link oficial:** [Página do produto](https://www.magnifi.ai/product)  
-**Data de acesso:** {{dd/mm/aaaa}}
+**Data de acesso:** 02/09/2026
 
 #### Contexto e proposta
 
-Analisar como a Magnifi recebe vídeos, gera e etiqueta cortes esportivos e permite baixar ou distribuir os resultados.
+Similar à plataforma da WSC Sports, a plataforma da Magnifi oferece serviços com aplicação de IA para automatizar processos de análise e extração de highlights, edição avançada de vídeo, geração de legendas e dublagens em vários idiomas, e gerenciamento de conteúdo para publicação em mídias sociais. O principal objetivo da plataforma é agilizar o processo de produção de conteúdo e aprimorar a personalização e opções de gerenciamento do mesmo, além de reduzir custos operacionais.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print                         | Observação de IHC |
 | -------------- | ---------------- | --------------------------------------- | ----------------- |
-| {{...}}        | {{...}}          | `../assets/02_concorrencia/magnifi/...` | {{...}}           |
+|     Identificar e Classificar Objetos em Vídeos   | O usuário seleciona o vídeo que deseja analisar, e o modelo de IA empregado pela Magnifi realiza a detecção e classificação dos objetos na tela         | ![Detecção de Objetos](../assets/02_concorrencia/magnifi/magnifi_objects.jpeg) | Ainda que o site não nos forneça uma visualização completa do processo e da interface, a demonstração oferecida mostra uma interface direta ao ponto e que exige muito pouco do usuário, assim como a da WSC-Sports. A detecção de objetos utiliza bounding boxes e tags contrastantes, fáceis de serem identificadas no vídeo     |
+| Criação de Vídeos Automática | O usuário seleciona os vídeos que deseja condensar em um vídeo único de highlights, e a plataforma realiza a edição e formação do vídeo | ![Criação de Vídeos](../assets/02_concorrencia/magnifi/magnifi_highlights.jpeg) | Novamente, a interface é direta ao ponto e fácil de ser operada. O usuário simplesmente seleciona os vídeos que deseja combinar e clica em "Create", e a plataforma faz o resto do trabalho |
+| Automação de Gerenciamento de Conteúdo Baseado em Regras | O usuário pode definir regras que sejam atendidas para automatizar o fluxo de produção e gerenciamento de conteúdo. Por exemplo: Se houver um vídeo de um lance de enterrada no basquete, publique-o no youtube | ![Regras](../assets/02_concorrencia/magnifi/magnifi_rules.jpeg) | A demonstração do site mostra um sistema de regras direto e simples de ser operado. O usuário define o conjunto de regras que deseja nas categorias disponíveis (como esporte, evento, mídia de destino) e a plataforma aplica-as ao gerenciamento de conteúdo |
+| Integração Direta para Publicação nas Redes Sociais | O usuário seleciona o vídeo que deseja, a IA empregada pela plataforma gera elementos como thumbnail, legenda para a postagem, tags geográficas e publica-o na rede social desejada | ![Social](../assets/02_concorrencia/magnifi/magnifi_social.jpeg) | Novamente a IA da plataforma realiza a maior parte do processo, dando ao usuário apenas o trabalho de selecionar na interface os elementos que deseja incluir na postagem, conferir as informações e aprovar o output |
+| Geração de Legendas em Vídeos | O usuário seleciona o vídeo que deseja legendar e o idioma da legenda. O serviço de IA da plataforma, por sua vez, gera a legenda e a traduz para qualquer idioma que o usuário selecione | ![Legendas](../assets/02_concorrencia/magnifi/magnifi_subtitles.jpeg) | O editor que realiza o processo segue o padrão dos outros softwares de edição tratados nesse estudo, com cores contrastantes, com preview em tempo real, sistema de barras e botões facilmente identificáveis |
 
 #### Experiência do usuário e opiniões
 
-{{avaliações, relatos, estudos ou teste próprio com fonte identificável}}
+Os relatos foram traduzidos da página "About" do site oficial da Magnifi
+
+"A parceria com a Magnifi transformou a maneira como entregamos conteúdo em nossas redes sociais. Suas ferramentas de automação ampliaram nosso alcance, agregaram valor real para os nossos públicos e nos permitiram escalar a criação de conteúdo de forma rápida e eficiente — produzindo mais com menos. As operações agora são mais dinâmicas e os custos foram reduzidos sem comprometer a qualidade. As equipes de Sucesso do Cliente (Customer Success) e Entrega são excepcionais — sempre prestativas, qualificadas e dispostas a ir além. Nenhum esforço é demais para eles. Uma parceira fantástica para se trabalhar." - Ahmad Joudah, Sports Marketing Manager - StarzPlay.
+
+"Um dos nossos maiores desafios era manter a consistência em nosso canal do YouTube. Dependíamos fortemente de edição manual para cortar e ajustar filmagens de partidas longas de temporadas anteriores, o que tornava o processo lento e consumia muitos recursos. Após a integração com a Magnifi, nosso volume de produção de conteúdo aumentou, e começamos a notar um engajamento mais forte e um crescimento constante de inscritos — tudo impulsionado por publicações frequentes. Desde a primeira partida, sentimos total confiança na equipe da Magnifi. Eles foram ágeis na comunicação, rápidos para lidar com prazos apertados e proativos na resolução de quaisquer problemas que surgiam. A Magnifi desempenhou um papel fundamental em nos ajudar a otimizar nosso fluxo de trabalho e elevar nossa presença no YouTube." - Joy Bhattacharjya, CEO - Prime Volleyball League.
+
+"Tivemos uma primeira rodada excelente tanto na 3F Superliga quanto na Betinia Liga neste fim de semana — e também um ótimo começo com a Magnifi! No geral, tudo correu perfeitamente: as partidas foram processadas corretamente, os clipes surgiam em tempo real e os melhores momentos eram gerados automaticamente — ótimo trabalho! Mesmo sem experiência prévia, consegui cortar clipes e consolidar os melhores momentos, o que demonstra como a plataforma é intuitiva para usuários de primeira viagem. Em 11 de 12 partidas, usamos os melhores momentos gerados pela Magnifi... como os compactos oficiais das partidas." - Esben Halding, Head of Business Development - Divisionsforeningen / Danish League.
+
+"A Magnifi foi um divisor de águas para a ECHL e suas 28 equipes integrantes ao longo da temporada 2024–25. A automação impulsionada por IA da plataforma nos permitiu capturar cada momento em todos os jogos e distribuir o conteúdo rapidamente para nossos canais de mídia social — mantendo os torcedores engajados e informados em tempo real." - Amanda Arrowsmith, Manager of Social & Digital Media - ECHL.
+
+"Gostaria de aproveitar este momento para agradecer sinceramente por uma primeira temporada fantástica trabalhando juntos. A plataforma Magnifi otimizou imensamente nosso fluxo de trabalho noturno na NCHC, e o suporte e a comunicação constantes da sua equipe desempenharam um papel fundamental para tornar esta uma experiência fluida e bem-sucedida." - Sam Kuhne, Digital Content and Creative Services Coordinator National Collegiate Hockey Conference - NCHC.
 
 #### Padrões e tendências percebidos
 
-{{...}}
+Com base nas previews disponibilizadas no site da Magnifi, as interfaces seguem padrões misturando elementos típicos de webapps com um visual comum em aplicativos mobile. A interface do serviço de edição de vídeos segue o padrão dos softwares mais populares da área, com preview em tempo real, sistema de barras individualizado para diferentes elementos de edição (áudio, vídeo, legendas) e cores contrastantes. O restante das interfaces dispõem de botões responsivos, muitos elemtnos visuais, animações consistentes e priorizam a facilidade e agilidade de navegação.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto   | Evidência | Implicação para nosso projeto |
 | ------- | --------- | ----------------------------- |
-| {{...}} | {{...}}   | {{...}}                       |
+| Ponto positivo: Interfaces modernas que seguem padrões usados na indústria e muito populares em aplicações atuais | Pontos discutidos anteriormente e prints disponíveis na pasta assets   | Valida o tipo de interface comum entre os softwares da área, nos dando uma ideia do que a indústria usa e de como são tratados processos, elementos e funcionalidades que facilitam a navegação e operação da plataforma                       |
+| Ponto positivo: Plataforma completa que condensa diversos tipos de serviços diferentes e úteis da área (como identificação de objetos, criação de vídeos automatizada, automação do gerenciamento de conteúdo, edição de vídeo, integração para publicação nas redes sociais) | Pontos discutidos na tabela de funcionalidades, prints da pasta assets e informações disponíveis no site da Magnifi | Nos dá uma ideia de que tipo de software já existe e é adotado e validado pela indústria hoje, nos permitindo ter uma visão melhor de quais elementos adotar para a nossa interface e de onde a contribuição científica da nossa pesquisa se posiciona na área |
+| Limitação: Pouco acesso a informações técnicas mais aprofundadas e à interface completa do produto | A Magnifi divulga informações técnicas e imagens da plataforma de forma muito limitada no seu website e nas suas mídias sociais | Por não termos acesso à interface completa da plataforma, nem a detalhes técnicos mais aprofundados sobre o seu funcionamento, a plataforma da Magnifi serve como um exemplo muito mais limitado do que outros softwares tradicionais do meio, em que o acesso e conhecimento sobre a operação e a interface são muito mais difundidos e facilmente accessíveis |
 
 > Preencha cada análise com evidências próprias, fontes identificáveis e prints legíveis antes de transformar os templates em conclusões.
 
@@ -531,13 +547,15 @@ Analisar como a Magnifi recebe vídeos, gera e etiqueta cortes esportivos e perm
 
 Analise interfaces que moldam a expectativa do público, mesmo que não sejam concorrentes.
 
-| Software           | Por que o público usa                           | Padrões relevantes                                                   | Prints         | O que aprender                                                                |
-| ------------------ | ----------------------------------------------- | -------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------- |
-| Adobe Premiere Pro | Importar, organizar, recortar e exportar vídeos | Player, biblioteca de mídia, marcadores, linha do tempo e exportação | Figuras 1 a 3  | Empregar termos e controles familiares aos editores de vídeo                  |
-| DaVinci Resolve    | Organizar, editar e exportar vídeos             | Player, biblioteca de mídia, metadados, linha do tempo e exportação  | Figuras 4 a 8  | Apresentar arquivos e resultados de forma visual e organizada                 |
-| CapCut             | Realizar edições e exportações de vídeo         | Player, miniaturas, linha do tempo e exportação                      | Figuras 1 a 3  | Manter as tarefas principais acessíveis e reduzir a complexidade da interface |
-| Final Cut Pro      | Organizar, editar e exportar vídeos             | Player, biblioteca de mídia, marcadores, linha do tempo e exportação | Figuras 4 a 8  | Facilitar a localização, seleção e manipulação de trechos                     |
-| cap.so             | Editar e apresentar vídeos                      | Player, pré-visualização e exportação                                | Figuras 9 a 14 | Oferecer pré-visualização clara antes de baixar ou exportar resultados        |
+| Software           | Por que o público usa                           | Padrões relevantes                                                   | Prints   | O que aprender                                                                |
+| ------------------ | ----------------------------------------------- | -------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------- |
+| Adobe Premiere Pro | Importar, organizar, recortar e exportar vídeos | Player, biblioteca de mídia, marcadores, linha do tempo e exportação | Pendente | Empregar termos e controles familiares aos editores de vídeo                  |
+| DaVinci Resolve    | Organizar, editar e exportar vídeos             | Player, biblioteca de mídia, metadados, linha do tempo e exportação  | Pendente | Apresentar arquivos e resultados de forma visual e organizada                 |
+| CapCut             | Realizar edições e exportações de vídeo         | Player, miniaturas, linha do tempo e exportação                      | Figuras 1 a 3 | Manter as tarefas principais acessíveis e reduzir a complexidade da interface |
+| Final Cut Pro      | Organizar, editar e exportar vídeos             | Player, biblioteca de mídia, marcadores, linha do tempo e exportação | Figuras 1 a 5 | Facilitar a localização, seleção e manipulação de trechos                     |
+| cap.so             | Editar e apresentar vídeos                      | Player, pré-visualização e exportação                                | Figuras 1 a 6 | Oferecer pré-visualização clara antes de baixar ou exportar resultados        |
+| WSC Sports | Automatizar o fluxo de produção e gerenciamento de contéudo de mídias esportivas | Interface web-like, serviço de edição de vídeos integrado, serviços de gerenciamento de conteúdo em mídias sociais, funcionalidades totalmente integradas com IA | [Figuras WSC Sports](../assets/02_concorrencia/wsc-sports) | Tipo de interface já adotada na indústria, como a nossa contribuição científica se posiciona dado os serviços já existentes |
+| Magnifi | Automatizar o fluxo de produção e gerenciamento de contéudo de mídias esportivas | Interface que combina elementos web com elementos populares em aplicações mobile, serviços de edição de vídeo, gerenciamento de conteúdo em mídias sociais integrados, funcionalidades totalmente integradas com IA | [Figuras Magnifi](../assets/02_concorrencia/magnifi) | Tipo de interface já adotada na indústria, como a nossa contribuição científica se posiciona dado os serviços já existentes |
 
 > A familiaridade do público com esses softwares e padrões ainda deve ser validada, conforme a hipótese H17 da Entrega 1.
 
@@ -545,26 +563,31 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 Registre somente padrões encontrados nas soluções analisadas e que possam ter relação com objetivos reais da equipe.
 
-| Padrão observado         | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
-| ------------------------ | ---------- | ---------------------- | ------------------ | --------------- | -------------------------- |
-| dashboard                | {{...}}    | {{...}}                | {{...}}            | {{...}}         | sim/não/talvez             |
-| relatório                | {{...}}    | {{...}}                | {{...}}            | {{...}}         | {{...}}                    |
-| histórico + filtros      | {{...}}    | {{...}}                | {{...}}            | {{...}}         | {{...}}                    |
-| administração/CRUD       | {{...}}    | {{...}}                | {{...}}            | {{...}}         | {{...}}                    |
-| comparação de resultados | {{...}}    | {{...}}                | {{...}}            | {{...}}         | {{...}}                    |
+| Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
+| ---------------- | ---------- | ---------------------- | ------------------ | --------------- | -------------------------- |
+| Biblioteca visual com miniaturas e metadados | CapCut, Final Cut Pro, cap.so, WSC Sports | Localizar e organizar vídeos e trechos | Facilita o reconhecimento sem abrir cada arquivo | Nomes cortados ou genéricos dificultam distinguir itens parecidos | Sim |
+| Player ligado ao trecho de origem | CapCut, Final Cut Pro, cap.so, WSC Sports, Magnifi | Conferir cortes e resultados da IA | Mantém o resultado verificável antes da aprovação | Muitos controles podem sobrecarregar a revisão | Sim |
+| Linha do tempo com segmentos | Premiere Pro, CapCut, Final Cut Pro, cap.so, WSC Sports, Magnifi | Navegar, recortar e ordenar trechos | Expõe duração, sequência e relação temporal | Uma linha do tempo profissional completa aumenta a complexidade | Talvez, em versão simplificada |
+| Busca e filtros por conteúdo ou metadados | Final Cut Pro, WSC Sports | Encontrar cenas e mídias em acervos extensos | Reduz a inspeção manual de vídeos longos | Resultados podem esconder limites da análise ou perder contexto | Sim |
+| Estado e progresso de tarefas assíncronas | Final Cut Pro, CapCut, cap.so | Acompanhar importação, análise e exportação | Permite continuar o trabalho e saber quando o resultado está pronto | Estados vagos geram dúvida entre espera, pausa e erro | Sim |
+| Prévia e resumo antes da saída | CapCut, Final Cut Pro, cap.so | Confirmar o conteúdo antes de exportar ou baixar | Reduz erros de arquivo, formato, duração e destino | Estimativas de tempo e tamanho podem ser imprecisas | Sim |
+| Automação com revisão humana | Final Cut Pro, WSC Sports, Magnifi | Gerar, selecionar e publicar melhores momentos | Poupa trabalho sem retirar a decisão final do usuário | A automação pode parecer confiável mesmo quando erra ou não cobre todo o vídeo | Sim |
+| Controles contextuais e ajustes progressivos | CapCut, Final Cut Pro, cap.so | Editar o item selecionado e configurar a saída | Mantém opções avançadas fora do fluxo principal | Ícones sem rótulo e termos técnicos prejudicam iniciantes e acessibilidade | Sim |
+| Regras de publicação e distribuição | WSC Sports, Magnifi | Automatizar a entrega de conteúdo a canais externos | Escala tarefas repetitivas de publicação | Uma regra errada pode distribuir conteúdo inadequado | Não nesta etapa |
 
 > O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
 
 ## 4. Síntese comparativa da equipe
 
-| Critério                      | C01 | C02 | C03 | Oportunidade para o projeto |
-| ----------------------------- | --- | --- | --- | --------------------------- |
-| Navegação                     |     |     |     |                             |
-| Feedback/estado               |     |     |     |                             |
-| Prevenção/recuperação de erro |     |     |     |                             |
-| Terminologia                  |     |     |     |                             |
-| Acessibilidade                |     |     |     |                             |
-| Eficiência                    |     |     |     |                             |
+| Critério                      | C01 | C02 | C03 | C04 | C05 | C06 | C07 | Oportunidade para o projeto |
+| ----------------------------- | --- | --- | --- | --- | --- | --- | --- | --------------------------- |
+| Navegação                     |     |     |     |     |     |     |     |                             |
+| Feedback/estado               |     |     |     |     |     |     |     |                             |
+| Prevenção/recuperação de erro |     |     |     |     |     |     |     |                             |
+| Terminologia                  |     |     |     |     |     |     |     |                             |
+| Acessibilidade                |     |     |     |     |     |     |     |                             |
+| Eficiência                    |     |     |     |     |     |     |     |                             |
+
 
 ## 5. Recomendações derivadas
 
