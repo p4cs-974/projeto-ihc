@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relatório de alinhamento entre os documentos 01 e 02</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --surface-2: #f1f1f1;
+      --text: #171717;
+      --muted: #5f5f5f;
+      --line: #d4d4d4;
+      --strong-line: #8b8b8b;
+      --good: #176b3a;
+      --good-bg: #e8f6ed;
+      --warn: #7a4b00;
+      --warn-bg: #fff4d6;
+      --bad: #9b1c1c;
+      --bad-bg: #fdecec;
+      --info: #174c8c;
+      --info-bg: #eaf2fc;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --surface: #0b0b0b;
+        --surface-2: #171717;
+        --text: #ffffff;
+        --muted: #b3b3b3;
+        --line: #353535;
+        --strong-line: #707070;
+        --good: #8bd3a7;
+        --good-bg: #10291a;
+        --warn: #f2c46d;
+        --warn-bg: #2d220b;
+        --bad: #ff9a9a;
+        --bad-bg: #321414;
+        --info: #9fc6f5;
+        --info-bg: #10243b;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; }
+    h1 { margin: 0 0 8px; font-size: clamp(1.7rem, 4vw, 2.45rem); }
+    h2 { margin: 44px 0 14px; font-size: 1.45rem; }
+    h3 { margin: 28px 0 10px; font-size: 1.08rem; }
+    p { margin: 8px 0 14px; }
+    ul, ol { margin: 8px 0 16px; padding-left: 22px; }
+    li + li { margin-top: 5px; }
+    a { color: inherit; text-underline-offset: 3px; }
+
+    .meta {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .summary {
+      border: 1px solid var(--strong-line);
+      background: var(--surface);
+      padding: 20px;
+    }
+
+    .summary strong { font-size: 1.08rem; }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 18px 0 4px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      padding: 12px;
+      min-height: 88px;
+    }
+
+    .metric b { display: block; font-size: 1.45rem; line-height: 1; margin-bottom: 7px; }
+    .metric span { color: var(--muted); font-size: 0.88rem; }
+
+    .callout {
+      border-left: 4px solid var(--info);
+      background: var(--info-bg);
+      padding: 12px 14px;
+      margin: 18px 0;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 880px;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      padding: 11px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th:last-child, td:last-child { border-right: 0; }
+    tr:last-child td { border-bottom: 0; }
+    th { background: var(--surface-2); font-weight: 700; }
+    tbody tr:hover { background: color-mix(in srgb, var(--surface-2) 55%, transparent); }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .high { color: var(--bad); background: var(--bad-bg); }
+    .medium { color: var(--warn); background: var(--warn-bg); }
+    .low { color: var(--info); background: var(--info-bg); }
+    .aligned { color: var(--good); background: var(--good-bg); }
+
+    .finding {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      padding: 16px;
+      margin: 12px 0;
+    }
+
+    .finding h3 { margin: 0 0 8px; }
+    .finding p:last-child { margin-bottom: 0; }
+
+    .ticket-id {
+      display: inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font: 700 0.78rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: 0.02em;
+      vertical-align: 0.08em;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      padding: 1px 4px;
+      font-size: 0.9em;
+    }
+
+    .proposed {
+      margin-top: 9px;
+      padding: 10px 12px;
+      background: var(--surface-2);
+      border-left: 3px solid var(--strong-line);
+    }
+
+    .small { color: var(--muted); font-size: 0.88rem; }
+
+    .toc {
+      columns: 2;
+      column-gap: 36px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 14px 0;
+      margin-top: 22px;
+    }
+
+    .toc li { break-inside: avoid; }
+
+    @media (max-width: 760px) {
+      main { width: min(100% - 22px, 1180px); padding-top: 24px; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toc { columns: 1; }
+      .summary, .finding { padding: 14px; }
+    }
+
+    @media print {
+      :root {
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --surface-2: #f3f3f3;
+        --text: #000000;
+        --muted: #444444;
+        --line: #bdbdbd;
+        --strong-line: #555555;
+      }
+
+      body { font-size: 10.5pt; }
+      main { width: 100%; padding: 0; }
+      .table-wrap { overflow: visible; }
+      table { min-width: 0; font-size: 8.5pt; }
+      .finding, .summary, table { break-inside: avoid; }
+      h2 { break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Relatório de alinhamento entre os documentos 01 e 02</h1>
+      <p class="meta">Revisão integral do entendimento do problema e da análise de concorrência, com auditoria específica das recomendações da seção 5 do Documento 02. Data da revisão: 3 de setembro de 2026.</p>
+    </header>
+
+    <section class="summary" aria-labelledby="conclusao">
+      <h2 id="conclusao" style="margin-top:0">Conclusão</h2>
+      <p><strong>Os documentos estão alinhados na proposta central, mas ainda não estão prontos para serem tratados como uma cadeia de requisitos.</strong> Ambos priorizam o editor de vídeo esportivo, o uso pós-partida, a entrada de gravações, o processamento demorado, a revisão humana e o download de cortes. O problema aparece quando o Documento 02 transforma hipóteses do Documento 01 em decisões fechadas e acrescenta configuração técnica, estados e atalhos que o projeto ainda não definiu.</p>
+      <p>O desalinhamento mais relevante está na RC06. Ela entrega ao editor configurações de inferência, embora o Documento 01 atribua parâmetros técnicos à equipe técnica e proponha uma interface curta, sem expor "inferência" ou virar um editor completo. O segundo problema é documental: o Documento 01 omite revisão e download de suas tabelas de atividades, mesmo declarando essa tarefa como a mais frequente e como parte do fluxo prioritário.</p>
+
+      <div class="metrics" aria-label="Resumo quantitativo">
+        <div class="metric"><b>12</b><span>recomendações da seção 5 auditadas</span></div>
+        <div class="metric"><b>4</b><span>alinhadas sem mudança estrutural</span></div>
+        <div class="metric"><b>7</b><span>alinhadas, mas precisam de condição ou redação</span></div>
+        <div class="metric"><b>1</b><span>desalinhada com o recorte atual, RC06</span></div>
+      </div>
+    </section>
+
+    <nav aria-label="Conteúdo do relatório">
+      <ol class="toc">
+        <li><a href="#base-comum">Base comum já alinhada</a></li>
+        <li><a href="#prioritarios">Desalinhamentos prioritários</a></li>
+        <li><a href="#auditoria-rc">Auditoria da seção 5</a></li>
+        <li><a href="#documento-01">Problemas no Documento 01</a></li>
+        <li><a href="#documento-02">Problemas no Documento 02</a></li>
+        <li><a href="#ordem">Ordem sugerida de correção</a></li>
+      </ol>
+    </nav>
+
+    <section id="base-comum">
+      <h2>1. Base comum já alinhada</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Decisão</th>
+              <th>Documento 01</th>
+              <th>Documento 02</th>
+              <th>Avaliação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Usuário principal</td>
+              <td>Editor de vídeo esportivo responsável por obter material de melhores momentos, seções 7.1 e 7.2.</td>
+              <td>Mesmo perfil na seção 1 e nas análises dos produtos.</td>
+              <td><span class="tag aligned">Alinhado</span></td>
+            </tr>
+            <tr>
+              <td>Contexto</td>
+              <td>Pós-produção de partidas encerradas, com gravações integrais, seções 5.1, 7.4 e 9.3.</td>
+              <td>O fluxo analisado é envio, acompanhamento, revisão e obtenção de arquivos.</td>
+              <td><span class="tag aligned">Alinhado</span></td>
+            </tr>
+            <tr>
+              <td>Limite funcional</td>
+              <td>A edição detalhada e a publicação ficam fora da interface, seção 7.4.</td>
+              <td>As recomendações evitam uma linha do tempo profissional e deixam publicação e distribuição fora desta etapa.</td>
+              <td><span class="tag aligned">Alinhado</span></td>
+            </tr>
+            <tr>
+              <td>Processamento demorado</td>
+              <td>Upload, fila, progresso, falha e conclusão precisam ser compreensíveis, H13, H16 e H26.</td>
+              <td>RC02, RC03 e RC10 tratam estados, recuperação e reprocessamento.</td>
+              <td><span class="tag aligned">Alinhado</span></td>
+            </tr>
+            <tr>
+              <td>Revisão humana</td>
+              <td>O resultado automático não deve parecer editorialmente infalível, H16.</td>
+              <td>RC04 e RC05 preservam contexto e decisão do editor.</td>
+              <td><span class="tag aligned">Alinhado</span></td>
+            </tr>
+            <tr>
+              <td>Histórico e lote</td>
+              <td>A01, A03, H08 e H15 propõem lote, histórico e prevenção de reprocessamento.</td>
+              <td>RC02, RC08 e RC10 retomam essas necessidades.</td>
+              <td><span class="tag aligned">Alinhado</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="prioritarios">
+      <h2>2. Desalinhamentos prioritários</h2>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-001</span><span class="tag high">Alta</span> A revisão e o download são centrais, mas desapareceram das tabelas de atividades do Documento 01</h3>
+        <p><strong>Evidência.</strong> O Documento 01 afirma em H07 que selecionar ou exportar resultados é a atividade mais frequente. As seções 7.3 e 7.4 também priorizam obter, consultar e baixar cortes. Mesmo assim, a tabela da seção 3.2 contém apenas processar, acompanhar e consultar histórico. A tabela da seção 9.2 repete essa omissão. O Documento 02 dedica RC04, RC05, RC08 e RC09 à revisão e ao download.</p>
+        <p><strong>Diagnóstico.</strong> O Documento 02 está mais coerente com o objetivo declarado do usuário que as tabelas do Documento 01. Não se deve remover a revisão do Documento 02.</p>
+        <div class="proposed"><strong>Mudança sugerida no Documento 01.</strong> Adicionar uma atividade "Revisar, selecionar e baixar cortes e metadados" e uma ação correspondente. Dar prioridade alta a essa ação. Renomear A02 e F02 para "acompanhar estado, progresso e falhas", deixando logs técnicos fora do caminho principal.</div>
+      </article>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-002</span><span class="tag high">Alta</span> A RC06 entrega configuração técnica ao editor</h3>
+        <p><strong>Evidência.</strong> A RC06 permite configurar tipos de evento, confiança mínima e contexto temporal em uma "área de inferência". No Documento 01, a seção 7.1 diz que parâmetros técnicos ficam com a equipe técnica, H05 supõe baixo conhecimento técnico e H19 manda evitar o termo "inferência". O fluxo da seção 7.4 não contém parametrização.</p>
+        <p><strong>Diagnóstico.</strong> A recomendação aumenta o escopo e mistura a capacidade técnica do TCC com a atividade do editor. Ela também não deriva das análises citadas. Os concorrentes mostram ajustes de edição e exportação, não que este usuário deva escolher modelo ou limiar de IA.</p>
+        <div class="proposed"><strong>Mudança sugerida nos dois documentos.</strong> No Documento 02, substituir a RC06 por uma recomendação de valores padrão e retirada dos parâmetros técnicos do fluxo principal. No Documento 01, mudar a linha "Configuração/parametrização" da seção 8 para "não no recorte inicial". Se entrevistas mostrarem necessidade, criar depois um modo avançado com linguagem do domínio.</div>
+      </article>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-003</span><span class="tag high">Alta</span> Hipóteses do Documento 01 aparecem como fatos no Documento 02</h3>
+        <p><strong>Evidência.</strong> A seção 1 do Documento 02 declara que o público utiliza computadores e está familiarizado com editores. No Documento 01, essa familiaridade é H17 e ainda deve ser validada. A seção 3 do Documento 02 chama WSC Sports e Magnifi de softwares usados no cotidiano, sem evidência de uso pelo público escolhido.</p>
+        <p><strong>Diagnóstico.</strong> A análise de concorrentes confirma que certos padrões existem. Ela não confirma que o público do projeto os conhece ou usa. Isso só pode vir de dados sobre o usuário.</p>
+        <div class="proposed"><strong>Mudança sugerida no Documento 02.</strong> Preservar os marcadores <code>[H]</code>, os IDs H03, H12 e H17 e a necessidade de validação. Na seção 3, separar "ferramentas cotidianas presumidas" de "alternativas de mercado". Mover WSC Sports e Magnifi para a segunda categoria.</div>
+      </article>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-004</span><span class="tag medium">Média</span> O processo atual alterna entre segmentação em tempo real e pós-produção sem explicar que são fluxos distintos</h3>
+        <p><strong>Evidência.</strong> A seção 4.1 do Documento 01 afirma que editores segmentam e classificam lances em tempo real. H11 e H12 descrevem um editor que recebe a gravação completa depois da partida. O Documento 02 usa produtos que enfatizam produção ao vivo, mas recomenda um fluxo assíncrono de arquivo gravado.</p>
+        <p><strong>Diagnóstico.</strong> Os dois cenários podem existir. O texto atual os trata como se fossem o mesmo processo e enfraquece a justificativa do recorte.</p>
+        <div class="proposed"><strong>Mudança sugerida no Documento 01.</strong> Declarar que o mercado possui fluxos ao vivo e pós-jogo, mas que o projeto escolhe pós-produção de gravações encerradas. Na análise de WSC Sports e Magnifi, o Documento 02 deve apontar explicitamente quais achados vieram de um contexto ao vivo e por que ainda são transferíveis.</div>
+      </article>
+    </section>
+
+    <section id="auditoria-rc">
+      <h2>3. Auditoria das recomendações da seção 5</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Recomendação</th>
+              <th>Estado</th>
+              <th>Relação com o Documento 01</th>
+              <th>Mudança sugerida</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RC01, quatro etapas</td>
+              <td><span class="tag medium">Ajustar</span></td>
+              <td>O encadeamento está correto, mas "processar" é uma ação do sistema. O Documento 01 usa "acompanhar o processamento".</td>
+              <td>Usar "enviar, acompanhar, revisar resultados e baixar". Adicionar revisão e download às tabelas do Documento 01.</td>
+            </tr>
+            <tr>
+              <td>RC02, envio em lote e validação</td>
+              <td><span class="tag aligned">Alinhada</span></td>
+              <td>Corresponde a A01, H08, H13, H24 e H26.</td>
+              <td>Manter. Tratar ausência de áudio como alerta somente se o áudio for necessário ao modelo ou ao resultado. Formatos e limites continuam pendentes.</td>
+            </tr>
+            <tr>
+              <td>RC03, tarefas assíncronas</td>
+              <td><span class="tag medium">Condicionar</span></td>
+              <td>Fila, progresso, erro e retorno posterior estão alinhados a H13 e H26. "Pausado", retomada e porcentagem dependem do backend.</td>
+              <td>Exibir apenas estados reais do sistema. Redigir retomada como requisito a validar tecnicamente, não como capacidade já existente.</td>
+            </tr>
+            <tr>
+              <td>RC04, revisão com contexto</td>
+              <td><span class="tag aligned">Alinhada</span></td>
+              <td>Atende H10, H11, H16, H25 e a explicabilidade prevista na seção 8.</td>
+              <td>Manter. Tratar a quantidade de segundos antes e depois como parâmetro de projeto a testar, não como requisito fechado.</td>
+            </tr>
+            <tr>
+              <td>RC05, decisão editorial</td>
+              <td><span class="tag medium">Ajustar</span></td>
+              <td>A revisão humana está alinhada a H16 e H28. "Descartar" e porcentagem de confiança não estão confirmados como saídas do backend.</td>
+              <td>Corrigir o erro "usuáriol". Usar "incluir ou excluir da seleção para download". Mostrar confiança somente se o modelo produzir uma medida calibrada e compreensível.</td>
+            </tr>
+            <tr>
+              <td>RC06, configuração de inferência</td>
+              <td><span class="tag high">Desalinhada</span></td>
+              <td>Contraria a seção 7.1, H05, H19 e o fluxo da seção 7.4.</td>
+              <td>Retirar parâmetros técnicos do fluxo principal. Usar padrões definidos pela equipe técnica. Reavaliar um modo avançado após pesquisa com usuários.</td>
+            </tr>
+            <tr>
+              <td>RC07, vocabulário</td>
+              <td><span class="tag medium">Condicionar</span></td>
+              <td>Domínio e preenchimento automático estão alinhados. H17 e H19 ainda não confirmam que "highlight" é o termo preferido.</td>
+              <td>Adotar "melhor momento" como rótulo inicial e testar "highlight", "lance" e "corte" com usuários. Evitar "inferência" na interface.</td>
+            </tr>
+            <tr>
+              <td>RC08, filtros e seleção múltipla</td>
+              <td><span class="tag aligned">Alinhada</span></td>
+              <td>Atende H07, H19, H25 e o processamento em lote.</td>
+              <td>Manter como hipótese de eficiência. Só oferecer filtro de confiança se essa informação existir e tiver significado para o editor.</td>
+            </tr>
+            <tr>
+              <td>RC09, resumo antes do download</td>
+              <td><span class="tag aligned">Alinhada</span></td>
+              <td>Corresponde ao objetivo H28, à saída de cortes e metadados e à prevenção de erro de H16.</td>
+              <td>Manter. Se o formato for fixo pelo TCC, mostrá-lo como informação, não como decisão adicional.</td>
+            </tr>
+            <tr>
+              <td>RC10, histórico e reprocessamento</td>
+              <td><span class="tag medium">Ajustar fonte</span></td>
+              <td>Está apoiada principalmente em A03, H08, H15 e H26, não apenas nos concorrentes C02 e C04.</td>
+              <td>Corrigir a derivação. Trocar "custo previsto" por "aviso de novo custo" enquanto não houver cálculo confiável. Corrigir "o vídeos" para "o vídeo".</td>
+            </tr>
+            <tr>
+              <td>RC11, acessibilidade e teclado</td>
+              <td><span class="tag aligned">Alinhada</span></td>
+              <td>A meta é coerente com IHC e com as barreiras vistas. A referência à tecla Command é apenas um exemplo de como atalhos podem ser apresentados.</td>
+              <td>Manter foco visível, nomes acessíveis, texto para estados e alternativas a arrastar. Definir a combinação concreta de teclas quando a plataforma for escolhida.</td>
+            </tr>
+            <tr>
+              <td>RC12, plataforma</td>
+              <td><span class="tag aligned">Decisão futura</span></td>
+              <td>O Documento 01 só sustenta uso em computador com tela ampla. Web e nativo continuam em aberto.</td>
+              <td>Manter a decisão de stack para uma etapa posterior. Quando chegar a hora, comparar navegador, Electron ou nativo com base no upload de arquivos extensos, retomada e integração com o backend.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>Regra de interpretação.</strong> As RCs são recomendações de design derivadas de concorrência. Elas não viram requisitos confirmados do usuário sem validação nas entregas de personas, tarefas e coleta de dados. O Documento 02 precisa dizer isso antes da lista.
+      </div>
+    </section>
+
+    <section id="documento-01">
+      <h2>4. Ajustes necessários no Documento 01</h2>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-005</span><span class="tag high">Alta</span> Atividades e prioridades não refletem o próprio objetivo do usuário</h3>
+        <p>A seção 3.3 chama seleção e exportação de atividade mais frequente, mas as seções 3.2 e 9.2 não a registram. Além disso, todas as ações recebem prioridade média, inclusive o processamento em lote chamado de mais crítico em H08. Adicionar revisão e download, definir prioridades coerentes e manter a distinção entre atividade humana e função do sistema.</p>
+      </article>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-006</span><span class="tag medium">Média</span> "Observabilidade e logs" não combina com o perfil e a linguagem escolhidos</h3>
+        <p>A02 e F02 usam vocabulário técnico, enquanto H05 prevê baixo conhecimento técnico e H19 recomenda traduzir "log". O usuário precisa acompanhar progresso, fila, conclusão e falhas. Logs técnicos podem existir para suporte, mas não devem definir a tarefa do editor.</p>
+      </article>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-007</span><span class="tag medium">Média</span> A síntese final volta a confundir problema humano e contribuição técnica</h3>
+        <p>Na seção 11, "classificação de highlights" aparece como o problema estudado. Essa é a operação computacional. O problema humano descrito antes é localizar, selecionar e recortar momentos sob pressão, com risco de omissão e retrabalho. A síntese e o texto para o INOVA devem usar essa formulação.</p>
+      </article>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-008</span><span class="tag low">Baixa</span> Há erros e resíduos de preenchimento</h3>
+        <p>Há campos <code>{{...}}</code> na seção 8, repetição da instrução de registrar hipóteses, além de "demosntração", "vide" e "contruído". O checklist declara concluídos itens que esses resíduos contradizem. Corrigir o texto e reabrir os itens correspondentes até a revisão terminar.</p>
+      </article>
+    </section>
+
+    <section id="documento-02">
+      <h2>5. Ajustes necessários no Documento 02</h2>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-009</span><span class="tag high">Alta</span> As análises de WSC Sports e Magnifi não sustentam conclusões de usabilidade</h3>
+        <p>As duas análises usam imagens promocionais e depoimentos escolhidos pelos fornecedores. Mesmo assim, chamam interfaces de diretas, fáceis e validadas pela indústria. A ressalva só aparece na síntese. Materiais comerciais comprovam proposta e recursos anunciados. Não comprovam facilidade, erros, acessibilidade ou adoção pelo público específico do projeto.</p>
+        <div class="proposed"><strong>Mudança sugerida.</strong> Trocar avaliações de facilidade por descrições observáveis. Marcar inferências como tais. Resumir os depoimentos e manter apenas os que sustentam o contexto de trabalho, não a usabilidade. Classificar C06 e C07 como concorrentes diretos parciais, pois abrangem produção ao vivo e publicação que ficaram fora do recorte.</div>
+      </article>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-010</span><span class="tag medium">Média</span> As recomendações precisam ser relacionadas ao Documento 01</h3>
+        <p>As RCs citam concorrentes, mas raramente citam as hipóteses e decisões do Documento 01 que justificam sua aplicação ao projeto. RC06 cita produtos que não mostram configuração de modelo ou limiar. RC10 deriva histórico e custo de C02 e C04, embora a base real esteja em H08, H15 e H26. RC11 chama de "observadas" limitações que C01, C02 e C04 não testaram.</p>
+        <div class="proposed"><strong>Mudança sugerida.</strong> Para cada RC, verificar se é possível relacioná-la de forma clara a alguma seção, atividade, hipótese ou decisão do Documento 01. Quando essa relação não existir, deixar explícito que a recomendação é exploratória e ainda precisa ser validada, em vez de apresentá-la como consequência direta da análise.</div>
+      </article>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-011</span><span class="tag medium">Média</span> A lista inicial não fecha a decisão sobre Sony Vegas</h3>
+        <p>A nota de entrada cita Sony Vegas, mas a tabela não o inclui e não registra por que foi descartado. Isso não muda o recorte, mas deixa a revisão do mapa inicial incompleta.</p>
+        <div class="proposed"><strong>Mudança sugerida.</strong> Remover a nota informal ou adicionar uma linha "não analisar, por redundância com os editores não lineares já cobertos". Não é necessário produzir outra análise completa se não houver ganho comparativo.</div>
+      </article>
+
+      <article class="finding">
+        <h3><span class="ticket-id">AC-012</span><span class="tag low">Baixa</span> O documento ainda contém bloqueadores de entrega</h3>
+        <p>A data de acesso da WSC Sports e a seção de referências continuam como placeholders. Uma instrução de template permanece depois de C07. Todo o checklist está desmarcado. Há erros como "algorítmos", "contéudo", "elemtnos", "usuáriol" e "o vídeos". Corrigir antes de alterar o status de "em andamento".</p>
+      </article>
+    </section>
+
+    <section id="ordem">
+      <h2>6. Ordem sugerida de correção</h2>
+      <ol>
+        <li><strong>Estabilizar o Documento 01.</strong> Acrescentar revisão e download às atividades, retirar logs da tarefa do editor e fechar o recorte de parametrização e administração.</li>
+        <li><strong>Reescrever RC01 e RC06.</strong> São os pontos em que a seção 5 mais se afasta do recorte ou antecipa decisões técnicas.</li>
+        <li><strong>Qualificar as demais RCs.</strong> Estados, confiança, filtros, retomada e estimativas devem depender de capacidade real do backend e de validação com usuários.</li>
+        <li><strong>Corrigir a força das evidências.</strong> Manter hipóteses como hipóteses e separar existência de padrão, uso pelo público e facilidade de uso.</li>
+        <li><strong>Finalizar o Documento 02.</strong> Completar fontes e datas, reduzir material periférico, corrigir linguagem e só então marcar o checklist.</li>
+      </ol>
+
+      <div class="callout">
+        <strong>Resultado esperado depois das correções.</strong> O Documento 01 define problema, usuário, contexto, hipóteses e limite. O Documento 02 mostra o que os concorrentes ensinam dentro desse limite. As recomendações continuam provisórias até a pesquisa com usuários, sem prometer funções técnicas que o TCC ainda não oferece.
+      </div>
+    </section>
+
+    <footer class="small" style="margin-top:48px; border-top:1px solid var(--line); padding-top:14px">
+      Escopo desta revisão: coerência interna, rastreabilidade entre os dois documentos, adequação das recomendações ao recorte do projeto e força das evidências declaradas. Não houve verificação externa das fontes ou teste dos produtos citados.
+      <br><br>
+      Assinatura: gpt-5.6-sol (high) no Codex.
+    </footer>
+  </main>
+</body>
+</html>
