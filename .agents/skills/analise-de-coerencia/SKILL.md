@@ -1,6 +1,6 @@
 ---
 name: analise-de-coerencia
-description: Analisa a coerência documental do repositório e gera um relatório HTML com tickets numerados.
+description: Audita a coerência documental do repositório, gera relatórios HTML com tickets numerados e atualiza seu acompanhamento quando solicitado.
 ---
 
 # Análise de coerência
@@ -21,17 +21,51 @@ Faça uma auditoria documental somente de leitura. Entregue o diagnóstico em HT
 
 2. **Mapear o que cada documento afirma.** Extraia propósito, escopo, decisões, fatos, hipóteses, dúvidas, recomendações, público, terminologia e dependências. Anote a seção ou outra localização precisa de cada afirmação relevante. O mapa termina quando toda conclusão potencial pode ser rastreada a passagens concretas.
 
+   Distinga decisões e conteúdo preenchido de instruções, exemplos e campos pendentes do template. Use relatórios anteriores como histórico de auditoria; revalide seus achados nos documentos atuais antes de repeti-los.
+
 3. **Comparar.** Procure contradições, omissões, mudanças silenciosas de escopo, hipóteses tratadas como fatos, requisitos sem origem, recomendações sem apoio, terminologia incompatível e decisões que ignoram o contexto do projeto. Separe desalinhamento real de informação nova compatível e de diferença apenas editorial.
+
+   Abra tickets com evidência e efeito concreto. Para contradições, cite afirmações incompatíveis no mesmo contexto. Para omissões, identifique a exigência ou dependência não atendida e considere o estágio de elaboração do documento. Para recomendações sem apoio, explique qual fundamentação é necessária e por quê. Preferências editoriais só justificam tickets quando prejudicam a compreensão ou violam uma convenção explícita.
 
 4. **Investigar incertezas.** Consulte referências internas e, quando trouxer ganho real, fontes externas. Evidência externa verifica fatos e práticas; decisões explícitas do projeto continuam sendo definidas pelo repositório. Se interpretações razoáveis ainda competirem, mantenha o achado e marque `Precisa de revisão`.
 
-5. **Numerar os tickets.** Antes de criar tickets, procure em todos os relatórios existentes na pasta `análises de coerência` o maior identificador `AC-###`, inclusive identificadores preservados em comentários de tickets retirados. Comece no número seguinte. Se não houver identificador anterior, comece em `AC-001`. Cada desalinhamento recebe um identificador único, e a sequência continua entre relatórios.
+5. **Agrupar e numerar os tickets.** Agrupe ocorrências com a mesma causa e correção conjunta em um ticket, citando todos os documentos afetados. Antes de criar tickets, procure nos relatórios da pasta `analises de coerencia` o maior identificador `AC-###`, inclusive em comentários de tickets retirados. Consulte também `análises de coerência` se essa pasta existir, para preservar históricos anteriores. Comece no número seguinte, ou em `AC-001` se não houver histórico. Cada novo ticket recebe um ID único. Quando um achado anterior persistir ou reaparecer, crie um novo ticket com referência ao ID e relatório anteriores, explicando a situação atual. Preserve os relatórios anteriores durante uma nova auditoria.
 
-6. **Escrever cada ticket.** Inclua gravidade, estado da conclusão, evidências localizáveis, efeito sobre a coerência e mudança sugerida no documento que fizer mais sentido para a proposta do projeto. Para cada recomendação analisada, verifique se é possível relacioná-la a alguma seção, atividade, hipótese ou decisão de um documento de base. Quando a relação não existir, apresente a recomendação como exploratória e sujeita a validação.
+6. **Escrever cada ticket.** Inclua gravidade, confiança na conclusão, status de acompanhamento, evidências localizáveis, efeito sobre a coerência e mudança sugerida no documento que fizer mais sentido para a proposta do projeto. Use os critérios abaixo. Para cada recomendação analisada, verifique se é possível relacioná-la a alguma seção, atividade, hipótese ou decisão de um documento de base. Quando a relação não existir, apresente a recomendação como exploratória e sujeita a validação.
 
-7. **Gerar o HTML.** Crie o relatório em `análises de coerência/DD-MM-YYYY-HH:MM.html`, usando a data, hora e fuso locais. Se o nome já existir, acrescente `-02`, `-03` e assim por diante, sem sobrescrever relatórios. Coloque no começo do documento a assinatura `modelo (nível de raciocínio) no harness`, com os dados reais da execução. Quando algum dado não estiver disponível, escreva `não informado` em seu lugar.
+7. **Gerar o HTML.** Crie o relatório em `analises de coerencia/DD-MM-YYYY-HH:MM.html`, usando a data, hora e fuso locais. Se o nome já existir, acrescente `-02`, `-03` e assim por diante, sem sobrescrever relatórios. Coloque no começo do documento a assinatura `modelo (nível de raciocínio) no harness`, com os dados reais da execução. Quando algum dado não estiver disponível, escreva `não informado` em seu lugar.
 
 8. **Verificar.** Confirme que o HTML abre sem erro estrutural, funciona em telas pequenas, contém todos os tickets e não alterou nenhum arquivo analisado. Confira a continuidade e a unicidade dos IDs. A execução termina quando o relatório existe, todas as fontes do escopo foram contabilizadas e cada conclusão está sustentada ou marcada para revisão.
+
+## Critérios dos tickets
+
+A gravidade expressa o impacto, independentemente da confiança na conclusão:
+
+- `Alta`: conflito que altera escopo ou público, ou invalida uma atividade ou conclusão central.
+- `Média`: inconsistência que prejudica a interpretação ou a rastreabilidade sem invalidar o trabalho central.
+- `Baixa`: problema localizado de compreensão ou de cumprimento de uma convenção explícita.
+
+Use `Sustentado` quando a evidência justificar a conclusão e `Precisa de revisão` quando faltar confirmação ou houver interpretações concorrentes. Neste último caso, registre o que falta decidir ou verificar.
+
+## Acompanhamento
+
+Registre o status de cada ticket no próprio HTML, separado da gravidade e da confiança:
+
+- `Pendente`: status inicial; a mudança ainda não foi concluída. Aplicações parciais permanecem pendentes, com nota do que falta.
+- `Aplicado`: a correção foi verificada nos documentos ou o usuário informou que a aplicou. Registre a data e a evidência localizável, ou atribua explicitamente a confirmação ao usuário.
+- `Descartado`: o usuário decidiu não aplicar a sugestão ou a reavaliação mostrou que ela não procede. Registre data e justificativa, preservando o ticket.
+
+Derive o status da análise dos tickets, recalculando-o a cada atualização:
+
+- `Sem achados`: nenhum ticket.
+- `Pendente`: todos os tickets pendentes.
+- `Em andamento`: há tickets pendentes e outros aplicados ou descartados.
+- `Aplicada`: todos os tickets aplicados.
+- `Encerrada`: nenhum ticket pendente e pelo menos um descartado.
+
+Quando o usuário pedir para marcar tickets ou uma análise inteira, atualize o HTML correspondente. Marcar a análise como aplicada equivale a marcar todos os seus tickets como aplicados; pedidos explícitos de marcação valem como confirmação do usuário. Preserve justificativas anteriores e registre mudanças de status com data e motivo, inclusive reaberturas. Relatórios antigos sem status começam com acompanhamento pendente, sem inferir que as sugestões foram aplicadas.
+
+O acompanhamento persiste no arquivo versionado. Uma atualização de status modifica apenas o relatório; a aplicação das correções nos documentos depende de um pedido para realizá-las.
 
 ## Conteúdo do relatório
 
@@ -40,9 +74,9 @@ O HTML deve ser autocontido, sem scripts ou folhas de estilo externas. Use HTML 
 Inclua no mínimo:
 
 - assinatura do agente no início;
-- data e escopo da análise;
+- data, escopo e status derivado da análise, com contagem de tickets por status;
 - conclusão geral;
-- cobertura do repositório e exclusões;
+- cobertura com caminhos relativos dos documentos lidos e materiais inspecionados, materiais inacessíveis e exclusões justificadas por categoria; materiais inacessíveis são limitações, não fontes verificadas;
 - pontos que já estão alinhados;
 - tickets `AC-###`, organizados para leitura rápida;
 - limitações da análise e fontes externas usadas.

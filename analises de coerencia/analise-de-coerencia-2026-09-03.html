@@ -225,12 +225,15 @@
 <body>
   <main>
     <header>
+      <p class="meta">Assinatura: GPT-6 (nível de raciocínio não informado) no Codex.</p>
       <h1>Relatório de alinhamento entre os documentos 01 e 02</h1>
       <p class="meta">Revisão integral do entendimento do problema e da análise de concorrência, com auditoria específica das recomendações da seção 5 do Documento 02. Data da revisão: 3 de setembro de 2026.</p>
+      <p><strong>Status da análise: Aplicada.</strong> 12 tickets aplicados, 0 pendentes e 0 descartados.</p>
+      <p class="meta">Acompanhamento atualizado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>, por confirmação de Pedro. O diagnóstico abaixo registra a situação analisada em 03/09/2026; esta atualização não revalida as correções nos documentos.</p>
     </header>
 
     <section class="summary" aria-labelledby="conclusao">
-      <h2 id="conclusao" style="margin-top:0">Conclusão</h2>
+      <h2 id="conclusao" style="margin-top:0">Conclusão da análise original</h2>
       <p><strong>Os documentos estão alinhados na proposta central, mas ainda não estão prontos para serem tratados como uma cadeia de requisitos.</strong> Ambos priorizam o editor de vídeo esportivo, o uso pós-partida, a entrada de gravações, o processamento demorado, a revisão humana e o download de cortes. O problema aparece quando o Documento 02 transforma hipóteses do Documento 01 em decisões fechadas e acrescenta configuração técnica, estados e atalhos que o projeto ainda não definiu.</p>
       <p>O desalinhamento mais relevante está na RC06. Ela entrega ao editor configurações de inferência, embora o Documento 01 atribua parâmetros técnicos à equipe técnica e proponha uma interface curta, sem expor "inferência" ou virar um editor completo. O segundo problema é documental: o Documento 01 omite revisão e download de suas tabelas de atividades, mesmo declarando essa tarefa como a mais frequente e como parte do fluxo prioritário.</p>
 
@@ -250,6 +253,7 @@
         <li><a href="#documento-01">Problemas no Documento 01</a></li>
         <li><a href="#documento-02">Problemas no Documento 02</a></li>
         <li><a href="#ordem">Ordem sugerida de correção</a></li>
+        <li><a href="#cobertura">Cobertura e limitações</a></li>
       </ol>
     </nav>
 
@@ -310,29 +314,37 @@
     <section id="prioritarios">
       <h2>2. Desalinhamentos prioritários</h2>
 
-      <article class="finding">
+      <article class="finding" id="AC-001" data-status="aplicado">
         <h3><span class="ticket-id">AC-001</span><span class="tag high">Alta</span> A revisão e o download são centrais, mas desapareceram das tabelas de atividades do Documento 01</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p><strong>Evidência.</strong> O Documento 01 afirma em H07 que selecionar ou exportar resultados é a atividade mais frequente. As seções 7.3 e 7.4 também priorizam obter, consultar e baixar cortes. Mesmo assim, a tabela da seção 3.2 contém apenas processar, acompanhar e consultar histórico. A tabela da seção 9.2 repete essa omissão. O Documento 02 dedica RC04, RC05, RC08 e RC09 à revisão e ao download.</p>
         <p><strong>Diagnóstico.</strong> O Documento 02 está mais coerente com o objetivo declarado do usuário que as tabelas do Documento 01. Não se deve remover a revisão do Documento 02.</p>
         <div class="proposed"><strong>Mudança sugerida no Documento 01.</strong> Adicionar uma atividade "Revisar, selecionar e baixar cortes e metadados" e uma ação correspondente. Dar prioridade alta a essa ação. Renomear A02 e F02 para "acompanhar estado, progresso e falhas", deixando logs técnicos fora do caminho principal.</div>
       </article>
 
-      <article class="finding">
+      <article class="finding" id="AC-002" data-status="aplicado">
         <h3><span class="ticket-id">AC-002</span><span class="tag high">Alta</span> A RC06 entrega configuração técnica ao editor</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p><strong>Evidência.</strong> A RC06 permite configurar tipos de evento, confiança mínima e contexto temporal em uma "área de inferência". No Documento 01, a seção 7.1 diz que parâmetros técnicos ficam com a equipe técnica, H05 supõe baixo conhecimento técnico e H19 manda evitar o termo "inferência". O fluxo da seção 7.4 não contém parametrização.</p>
         <p><strong>Diagnóstico.</strong> A recomendação aumenta o escopo e mistura a capacidade técnica do TCC com a atividade do editor. Ela também não deriva das análises citadas. Os concorrentes mostram ajustes de edição e exportação, não que este usuário deva escolher modelo ou limiar de IA.</p>
         <div class="proposed"><strong>Mudança sugerida nos dois documentos.</strong> No Documento 02, substituir a RC06 por uma recomendação de valores padrão e retirada dos parâmetros técnicos do fluxo principal. No Documento 01, mudar a linha "Configuração/parametrização" da seção 8 para "não no recorte inicial". Se entrevistas mostrarem necessidade, criar depois um modo avançado com linguagem do domínio.</div>
       </article>
 
-      <article class="finding">
+      <article class="finding" id="AC-003" data-status="aplicado">
         <h3><span class="ticket-id">AC-003</span><span class="tag high">Alta</span> Hipóteses do Documento 01 aparecem como fatos no Documento 02</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p><strong>Evidência.</strong> A seção 1 do Documento 02 declara que o público utiliza computadores e está familiarizado com editores. No Documento 01, essa familiaridade é H17 e ainda deve ser validada. A seção 3 do Documento 02 chama WSC Sports e Magnifi de softwares usados no cotidiano, sem evidência de uso pelo público escolhido.</p>
         <p><strong>Diagnóstico.</strong> A análise de concorrentes confirma que certos padrões existem. Ela não confirma que o público do projeto os conhece ou usa. Isso só pode vir de dados sobre o usuário.</p>
         <div class="proposed"><strong>Mudança sugerida no Documento 02.</strong> Preservar os marcadores <code>[H]</code>, os IDs H03, H12 e H17 e a necessidade de validação. Na seção 3, separar "ferramentas cotidianas presumidas" de "alternativas de mercado". Mover WSC Sports e Magnifi para a segunda categoria.</div>
       </article>
 
-      <article class="finding">
+      <article class="finding" id="AC-004" data-status="aplicado">
         <h3><span class="ticket-id">AC-004</span><span class="tag medium">Média</span> O processo atual alterna entre segmentação em tempo real e pós-produção sem explicar que são fluxos distintos</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p><strong>Evidência.</strong> A seção 4.1 do Documento 01 afirma que editores segmentam e classificam lances em tempo real. H11 e H12 descrevem um editor que recebe a gravação completa depois da partida. O Documento 02 usa produtos que enfatizam produção ao vivo, mas recomenda um fluxo assíncrono de arquivo gravado.</p>
         <p><strong>Diagnóstico.</strong> Os dois cenários podem existir. O texto atual os trata como se fossem o mesmo processo e enfraquece a justificativa do recorte.</p>
         <div class="proposed"><strong>Mudança sugerida no Documento 01.</strong> Declarar que o mercado possui fluxos ao vivo e pós-jogo, mas que o projeto escolhe pós-produção de gravações encerradas. Na análise de WSC Sports e Magnifi, o Documento 02 deve apontar explicitamente quais achados vieram de um contexto ao vivo e por que ainda são transferíveis.</div>
@@ -436,23 +448,31 @@
     <section id="documento-01">
       <h2>4. Ajustes necessários no Documento 01</h2>
 
-      <article class="finding">
+      <article class="finding" id="AC-005" data-status="aplicado">
         <h3><span class="ticket-id">AC-005</span><span class="tag high">Alta</span> Atividades e prioridades não refletem o próprio objetivo do usuário</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p>A seção 3.3 chama seleção e exportação de atividade mais frequente, mas as seções 3.2 e 9.2 não a registram. Além disso, todas as ações recebem prioridade média, inclusive o processamento em lote chamado de mais crítico em H08. Adicionar revisão e download, definir prioridades coerentes e manter a distinção entre atividade humana e função do sistema.</p>
       </article>
 
-      <article class="finding">
+      <article class="finding" id="AC-006" data-status="aplicado">
         <h3><span class="ticket-id">AC-006</span><span class="tag medium">Média</span> "Observabilidade e logs" não combina com o perfil e a linguagem escolhidos</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p>A02 e F02 usam vocabulário técnico, enquanto H05 prevê baixo conhecimento técnico e H19 recomenda traduzir "log". O usuário precisa acompanhar progresso, fila, conclusão e falhas. Logs técnicos podem existir para suporte, mas não devem definir a tarefa do editor.</p>
       </article>
 
-      <article class="finding">
+      <article class="finding" id="AC-007" data-status="aplicado">
         <h3><span class="ticket-id">AC-007</span><span class="tag medium">Média</span> A síntese final volta a confundir problema humano e contribuição técnica</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p>Na seção 11, "classificação de highlights" aparece como o problema estudado. Essa é a operação computacional. O problema humano descrito antes é localizar, selecionar e recortar momentos sob pressão, com risco de omissão e retrabalho. A síntese e o texto para o INOVA devem usar essa formulação.</p>
       </article>
 
-      <article class="finding">
+      <article class="finding" id="AC-008" data-status="aplicado">
         <h3><span class="ticket-id">AC-008</span><span class="tag low">Baixa</span> Há erros e resíduos de preenchimento</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p>Há campos <code>{{...}}</code> na seção 8, repetição da instrução de registrar hipóteses, além de "demosntração", "vide" e "contruído". O checklist declara concluídos itens que esses resíduos contradizem. Corrigir o texto e reabrir os itens correspondentes até a revisão terminar.</p>
       </article>
     </section>
@@ -460,26 +480,34 @@
     <section id="documento-02">
       <h2>5. Ajustes necessários no Documento 02</h2>
 
-      <article class="finding">
+      <article class="finding" id="AC-009" data-status="aplicado">
         <h3><span class="ticket-id">AC-009</span><span class="tag high">Alta</span> As análises de WSC Sports e Magnifi não sustentam conclusões de usabilidade</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p>As duas análises usam imagens promocionais e depoimentos escolhidos pelos fornecedores. Mesmo assim, chamam interfaces de diretas, fáceis e validadas pela indústria. A ressalva só aparece na síntese. Materiais comerciais comprovam proposta e recursos anunciados. Não comprovam facilidade, erros, acessibilidade ou adoção pelo público específico do projeto.</p>
         <div class="proposed"><strong>Mudança sugerida.</strong> Trocar avaliações de facilidade por descrições observáveis. Marcar inferências como tais. Resumir os depoimentos e manter apenas os que sustentam o contexto de trabalho, não a usabilidade. Classificar C06 e C07 como concorrentes diretos parciais, pois abrangem produção ao vivo e publicação que ficaram fora do recorte.</div>
       </article>
 
-      <article class="finding">
+      <article class="finding" id="AC-010" data-status="aplicado">
         <h3><span class="ticket-id">AC-010</span><span class="tag medium">Média</span> As recomendações precisam ser relacionadas ao Documento 01</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p>As RCs citam concorrentes, mas raramente citam as hipóteses e decisões do Documento 01 que justificam sua aplicação ao projeto. RC06 cita produtos que não mostram configuração de modelo ou limiar. RC10 deriva histórico e custo de C02 e C04, embora a base real esteja em H08, H15 e H26. RC11 chama de "observadas" limitações que C01, C02 e C04 não testaram.</p>
         <div class="proposed"><strong>Mudança sugerida.</strong> Para cada RC, verificar se é possível relacioná-la de forma clara a alguma seção, atividade, hipótese ou decisão do Documento 01. Quando essa relação não existir, deixar explícito que a recomendação é exploratória e ainda precisa ser validada, em vez de apresentá-la como consequência direta da análise.</div>
       </article>
 
-      <article class="finding">
+      <article class="finding" id="AC-011" data-status="aplicado">
         <h3><span class="ticket-id">AC-011</span><span class="tag medium">Média</span> A lista inicial não fecha a decisão sobre Sony Vegas</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p>A nota de entrada cita Sony Vegas, mas a tabela não o inclui e não registra por que foi descartado. Isso não muda o recorte, mas deixa a revisão do mapa inicial incompleta.</p>
         <div class="proposed"><strong>Mudança sugerida.</strong> Remover a nota informal ou adicionar uma linha "não analisar, por redundância com os editores não lineares já cobertos". Não é necessário produzir outra análise completa se não houver ganho comparativo.</div>
       </article>
 
-      <article class="finding">
+      <article class="finding" id="AC-012" data-status="aplicado">
         <h3><span class="ticket-id">AC-012</span><span class="tag low">Baixa</span> O documento ainda contém bloqueadores de entrega</h3>
+        <p class="small"><strong>Status: Aplicado.</strong> Confiança no diagnóstico original: Sustentado pelas evidências registradas neste ticket.</p>
+        <p class="small">Histórico: Pendente → Aplicado em <time datetime="2026-09-04T19:40-03:00">04/09/2026 às 19:40 UTC-03:00</time>. Aplicação confirmada por Pedro ao solicitar a marcação da análise inteira como aplicada.</p>
         <p>A data de acesso da WSC Sports e a seção de referências continuam como placeholders. Uma instrução de template permanece depois de C07. Todo o checklist está desmarcado. Há erros como "algorítmos", "contéudo", "elemtnos", "usuáriol" e "o vídeos". Corrigir antes de alterar o status de "em andamento".</p>
       </article>
     </section>
@@ -499,10 +527,17 @@
       </div>
     </section>
 
+    <section id="cobertura">
+      <h2>7. Cobertura e limitações</h2>
+      <p>A análise original registra a leitura integral de <code>docs/01_conhecendo_o_problema.md</code> e <code>docs/02_analise_concorrencia.md</code>. As referências a Documento 01 e Documento 02 nos tickets correspondem a esses caminhos; as seções e IDs citados são os da análise original.</p>
+      <p>Os demais documentos, arquivos de apoio, mídias, artefatos gerados e dependências não têm cobertura individual registrada no relatório original. A revisão tinha foco nos dois documentos e não permite afirmar cobertura integral do repositório. Também não há inventário de materiais inacessíveis ou registro de inspeção direta das imagens.</p>
+      <p>Não houve pesquisa externa nem teste dos produtos citados. As observações sobre concorrentes se baseiam no que os dois documentos declaravam. Esta atualização preserva os achados e suas gravidades; a confiança indicada descreve sua fundamentação registrada, sem nova verificação. Os tickets mantêm seus IDs históricos, inclusive quando tratam de causas relacionadas.</p>
+    </section>
+
     <footer class="small" style="margin-top:48px; border-top:1px solid var(--line); padding-top:14px">
       Escopo desta revisão: coerência interna, rastreabilidade entre os dois documentos, adequação das recomendações ao recorte do projeto e força das evidências declaradas. Não houve verificação externa das fontes ou teste dos produtos citados.
       <br><br>
-      Assinatura: gpt-5.6-sol (high) no Codex.
+      Atualização do relatório: GPT-6 (nível de raciocínio não informado) no Codex.
     </footer>
   </main>
 </body>
