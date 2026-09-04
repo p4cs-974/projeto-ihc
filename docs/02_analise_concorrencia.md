@@ -593,10 +593,18 @@ As conclusões sobre C06 e C07 se baseiam em materiais promocionais. Não foi po
 
 ## 5. Recomendações derivadas
 
-Liste recomendações com origem explícita.
-
-- **RC01:** {{recomendação}} — derivada de {{C01/C02/evidência}}.
-- **RC02:** {{...}}
+- **RC01:** Organizar o fluxo principal em quatro etapas visíveis: enviar, processar, revisar e baixar. A interface deve indicar a etapa atual e manter a ação seguinte fácil de localizar, sem dividir o trabalho entre páginas especializadas nem reproduzir um editor completo. Derivada de C01, C02, C03, C04 e C05.
+- **RC02:** Permitir o envio de vários vídeos e representar cada arquivo com miniatura, nome completo, duração e estado. Antes do processamento, o sistema deve validar formato, integridade, possível duplicidade e ausência inesperada de áudio ou imagem, mostrar uma prévia e permitir a substituição do arquivo. Derivada de C03 e C05.
+- **RC03:** Tratar envio e processamento como tarefas assíncronas. Cada vídeo deve ter um estado textual inequívoco, como "enviando", "aguardando", "processando", "pausado", "pronto" ou "erro", acompanhado da etapa em execução. Porcentagem e previsão de término só devem aparecer quando houver dados confiáveis. O usuário deve poder sair, retornar e retomar uma tarefa interrompida sem perder o trabalho. Derivada de C02, C04 e C05.
+- **RC04:** Reunir, na tela de revisão, a lista de melhores momentos, o player e uma representação temporal simplificada da partida. Ao selecionar um resultado, a interface deve mostrar o trecho, o instante inicial, a duração e alguns segundos de contexto anterior e posterior, preservando a ligação com o vídeo de origem. Derivada de C01, C02, C04 e C05.
+- **RC05:** Manter a decisão editorial com o usuário. A interface deve permitir revisar, selecionar e descartar os resultados da IA e explicar qualquer porcentagem de confiança, bem como limites, falhas parciais e partes do vídeo que não puderam ser analisadas. Um resultado vazio não deve ser apresentado como prova de que a partida não teve acontecimentos relevantes. Derivada de C04, C06 e C07.
+- **RC06:** Oferecer apenas os ajustes necessários para corrigir um corte, como alterar início e fim, restaurar os limites detectados e desfazer a última mudança. Controles multipista, modos de corte especializados e parâmetros técnicos de inferência devem ficar fora do fluxo principal. Derivada de C01, C02, C03, C04 e C05, além da delimitação definida nas seções 7.4 e 11 da Entrega 1.
+- **RC07:** Usar o vocabulário do trabalho do editor, com termos como "partida", "vídeo enviado", "melhor momento", "gol", "início", "fim", "duração" e "baixar cortes". O sistema deve preencher automaticamente dados que já conhece, como arquivo de origem, tipo de evento e timecode, sem expor termos internos como "inferência" ou exigir nomes genéricos como "Clip 1". Derivada de C01, C02, C04 e C05.
+- **RC08:** Apoiar a revisão de muitos resultados com filtros por partida, tipo de evento, período, estado e confiança, navegação sequencial e seleção de vários cortes. Essas funções devem reduzir a inspeção manual e viabilizar o download em lote. Derivada de C02, C04, C06 e C07.
+- **RC09:** Antes de preparar o download, apresentar uma prévia e um resumo dos itens selecionados, com quantidade de cortes, duração, formato, tamanho estimado e respectivos vídeos de origem. Durante a geração dos arquivos, mostrar os estados "preparando", "pronto" e "erro". Derivada de C01, C03, C04 e C05.
+- **RC10:** Manter um histórico pesquisável por partida, data e estado. Cada registro deve reunir arquivos de entrada, resultados, datas, identificador do processamento e motivo de falha, além de informar o prazo de armazenamento. A interface deve evitar reprocessamentos acidentais e explicar o custo antes de repetir uma análise. Derivada de C02 e C04.
+- **RC11:** Garantir que envio, revisão e download possam ser realizados pelo teclado. Todos os controles devem ter nome acessível e foco visível. Estados e erros devem aparecer em texto, sem depender apenas de cor, ícone, animação ou arraste. Derivada das limitações de acessibilidade observadas em C01, C02, C03, C04 e C05.
+- **RC12:** Priorizar uma interface web para computador, adequada à inspeção de vídeos longos em tela ampla e sem dependência de um sistema operacional específico. O protótipo deve considerar upload demorado, interrupções e retorno posterior ao trabalho. Derivada de C04 e da decisão ainda aberta registrada na seção 5.2 da Entrega 1.
 
 ## Referências
 
