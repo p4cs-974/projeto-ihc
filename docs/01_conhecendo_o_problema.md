@@ -83,7 +83,7 @@ Marque e descreva:
 - [x] estudo/benchmark/avaliação experimental;
 - [x] infraestrutura/backend;
 - [ ] componente embarcado/IoT;
-- [ ] outro: {{...}}.
+- [ ] outro.
 
 **Descrição:** Sistema híbrido de visão computacional que recebe arquivos de vídeo de partidas de futebol e produz cortes de melhores momentos acompanhados de arquivos de metadados.
 
@@ -148,10 +148,10 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-- Baixo conhecimento técnico a respeito de software e computação no geral. [H] H05
-- Uso de trackpads e mouses acima do teclado. [F]
-- Costume com softwares tradicionais de edição/manipulação de vídeo. [F]
-- Uso focado em desktop/web. [F]
+- [H] H05: baixo conhecimento técnico de software e computação.
+- [?] Dispositivos de entrada preferidos, como teclado, mouse ou trackpad, ainda não foram investigados.
+- [H] H17: possível familiaridade com softwares tradicionais de edição de vídeo e seus padrões.
+- [H] H12 e H13: uso provável em computador com tela ampla; navegador e aplicação nativa continuam como alternativas.
 
 ---
 
@@ -166,8 +166,9 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
 | A01 | Processar vídeos em lote | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
-| A02 | Acompanhar o processamento por meio de informações de observabilidade e logs | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
+| A02 | Acompanhar estado, progresso e falhas do processamento | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
 | A03 | Consultar o histórico de resultados processados | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
+| A04 | Revisar, selecionar e baixar cortes e metadados | Profissional responsável pela geração de vídeos de melhores momentos | Hipótese de maior frequência; prioridade alta | H |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
@@ -185,7 +186,7 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
 
-[F] Editores humanos precisam segmentar e classificar os lances em tempo real durante as transmissões.
+[F] Materiais oficiais da [WSC Sports](https://wsc-sports.com/platform/) e da [Magnifi](https://www.magnifi.ai/product) mostram que o mercado possui fluxos de segmentação e classificação durante transmissões ao vivo. Este projeto não adota esse contexto. Conforme H11 e H12, o recorte escolhido é a pós-produção de partidas encerradas, quando o editor recebe a gravação integral e prepara os melhores momentos.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
@@ -332,7 +333,7 @@ O fluxo prioritário será: selecionar/enviar vídeos gravados → acompanhar o 
 - [ ] É um aprofundamento de algo parcialmente previsto.
 - [ ] É uma extensão conceitual criada para a disciplina.
 - [x] É um protótipo demonstrativo de aplicação potencial.
-- [ ] Outra: {{...}}.
+- [ ] Outra.
 
 > **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Sua inclusão ou implementação no TCC somente ocorrerá se isso for posteriormente decidido pela equipe e pelo orientador.
 
@@ -346,20 +347,20 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | sim | analisar o status/métricas do processamento dos vídeos atual/passados | [H] H29 |
-| Configuração/parametrização | sim | identificar os vídeos enviados (nome da partida, data), escolher o modelo de IA e definir o material desejado antes do processamento | {{...}} |
-| Entrada/upload/seleção de dados | sim | inputar o(s) vídeo(s) para processamento | {{...}} |
-| Acompanhamento de processamento | sim | analisar as métricas/status para um vídeo específico em uma visão detalhada | {{...}} |
-| Relatório/resultados | sim | analisar as saídas dos vídeos | {{...}} |
-| Histórico com busca/filtros | sim | exportar os cortes do vídeo | {{...}} |
-| Comparação de resultados | não | não há necessidade de comparar os resultados dos diferentes vídeos | {{...}} |
-| Explicabilidade/detalhamento | sim | entender por que um trecho foi classificado como melhor momento, para decidir o que baixar e usar | {{...}} |
-| Administração/configurações globais | sim | gerenciar armazenamento e retenção dos vídeos e resultados ao longo do tempo | {{...}} |
-| Usuários/perfis/permissões | não | fora do recorte inicial: um único perfil (editor de vídeo esportivo); papéis e permissões ainda não definidos | {{...}} |
-| CRUD de entidade do domínio | sim | gerenciar os registros das partidas enviadas (renomear, excluir, reprocessar) | {{...}} |
-| Auditoria/logs | sim | investigar o motivo de falhas e o que foi produzido em cada processamento, sem depender da equipe técnica | {{...}} |
-| Alertas/ocorrências | sim | ser avisado de conclusão ou falha do processamento sem precisar vigiar a tela | {{...}} |
-| Ajuda/documentação | não | fora do recorte inicial: fluxo curto e linear (enviar → acompanhar → consultar → baixar) para um público familiarizado com ferramentas do domínio | {{...}} |
+| Dashboard/visão geral | talvez | acompanhar os processamentos atuais e acessar trabalhos recentes | [H] H29; validar nas Entregas 5 e 7 |
+| Configuração/parametrização | não no recorte inicial | usar valores definidos pela equipe técnica, sem escolher modelo ou limiar de IA | decisão da seção 7.1; H05 e H19 |
+| Entrada/upload/seleção de dados | sim | enviar um ou mais vídeos de partidas encerradas | H08, H13 e H24 |
+| Acompanhamento de processamento | sim | verificar estado, progresso, conclusão e falhas de cada vídeo | H13, H25 e H26 |
+| Relatório/resultados | sim | revisar cortes e metadados produzidos | H07, H25 e H28 |
+| Histórico com busca/filtros | talvez | localizar resultados anteriores e identificar falhas ou reprocessamentos | H15; validar nas Entregas 5 e 7 |
+| Comparação de resultados | não no recorte inicial | não há objetivo de usuário identificado para comparar processamentos | lacuna registrada; reavaliar se surgir evidência |
+| Explicabilidade/detalhamento | sim | conferir contexto, origem e dados do trecho antes de selecioná-lo | H16, H25 e H28 |
+| Administração/configurações globais | não no recorte inicial | parâmetros técnicos e políticas administrativas ficam com a equipe técnica | seção 7.1; H14 ainda aberta |
+| Usuários/perfis/permissões | não no recorte inicial | o projeto considera um único perfil; papéis e permissões ainda não foram definidos | H14 |
+| Gestão de partidas enviadas | talvez | renomear, excluir ou reprocessar um registro quando isso apoiar o fluxo principal | H15, H24 e H26; validar nas Entregas 5 e 7 |
+| Auditoria/logs técnicos | não no fluxo do editor | mostrar mensagens compreensíveis de estado e falha; reservar logs técnicos para suporte | H05, H19, H25 e H26 |
+| Alertas/ocorrências | talvez | saber que um processamento terminou ou falhou sem vigiar a tela | H13 e H26; validar nas Entregas 5 e 7 |
+| Ajuda/documentação | talvez | explicar estados, erros e termos que não forem autoexplicativos | H05 e H19; necessidade ainda não validada |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -378,9 +379,10 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | Processar vídeos em lote | Analisar vídeos de maneira eficiente | média |
-| F02 | Acompanhar o processamento por informações de observabilidade e logs | Acompanhar com precisão o processo | média |
-| F03 | Visualizar o histórico de resultados | Acessar os resultados de todos os arquivos processados | média |
+| F01 | Enviar vídeos para processamento em lote | Iniciar a análise das partidas gravadas | alta |
+| F02 | Acompanhar estado, progresso e falhas | Saber se deve aguardar, corrigir uma entrada ou tentar novamente | alta |
+| F03 | Consultar o histórico de resultados | Retomar trabalhos anteriores e localizar resultados | média |
+| F04 | Revisar, selecionar e baixar cortes e metadados | Obter o material que seguirá para edição ou publicação externa | alta |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -414,31 +416,30 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 Registro completo das hipóteses H01–H29 em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
-Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
-
----
-
 # 11. Síntese da equipe
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | Automatizar o processo de geração de cortes a partir da classificação de highlights em partidas de futebol |
+| Qual é a contribuição central do TCC? | Detectar melhores momentos em partidas gravadas e produzir cortes e metadados automaticamente |
 | O TCC já previa interface? | não |
 | Quem é o usuário prioritário de IHC? | editores de vídeo |
-| O que ele precisa alcançar? | extração automática de cortes a partir de um vídeo de futebol |
-| Qual problema/atividade será estudado? | classificação de highlights |
-| Como isso acontece hoje? | manualmente, pessoas anotam o momento dos highlights |
-| Qual é o contexto de uso? | pós produção de partidas de futebol |
-| Que interface/recorte será explorado? | app de computador (desktop ou web) |
-| Como a interface se relaciona ao TCC? | demosntração visual do processamento e resultados |
+| O que ele precisa alcançar? | obter cortes e metadados para continuar a produção de uma compilação |
+| Qual problema/atividade será estudado? | localizar, selecionar e recortar momentos de uma gravação extensa sob pressão de prazo, com risco de omissão e retrabalho |
+| Como isso acontece hoje? | o editor percorre a gravação, identifica os lances e prepara os cortes manualmente |
+| Qual é o contexto de uso? | pós-produção de partidas de futebol já encerradas |
+| Que interface/recorte será explorado? | protótipo para computador, web ou nativo, com envio, acompanhamento, revisão e download |
+| Como a interface se relaciona ao TCC? | demonstra como um editor poderia fornecer vídeos e utilizar os cortes e metadados produzidos pelo backend |
 | Quais pontos ainda são hipóteses? | H01–H29, consolidadas na seção 10 e em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md); as prioritárias são H01, H02, H03, H05, H07, H08, H12, H13, H17, H27 e H28 |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** transformar um vídeo íntegro de uma partida de futebol em cortes  
-**Fora do escopo de IHC:** ciclo de vide completo de edição de video  
-**Dentro do escopo formal do TCC:** detectar e classificar highlights em partidas de futebol  
-**Interface da disciplina será implementada no TCC?** sim
+**Dentro do escopo de IHC:** enviar partidas gravadas, acompanhar o processamento, revisar resultados e baixar cortes e metadados
+
+**Fora do escopo de IHC:** edição detalhada dos cortes, publicação, parâmetros técnicos do modelo e administração de usuários
+
+**Dentro do escopo formal do TCC:** detectar e classificar melhores momentos em partidas de futebol
+
+**Interface da disciplina será implementada no TCC?** Não está decidido. O protótipo é um artefato da disciplina e só será incorporado ao TCC se a equipe e o orientador decidirem posteriormente.
 
 ---
 
@@ -462,9 +463,9 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** classificação manual de highlights em partidas de futebol
-2. **Contribuição técnica do TCC:** uso de LLMs multimodais para classificação
-3. **Como uma pessoa poderia utilizar essa contribuição:** através do sistema contruído pelo projeto
+1. **Problema/atividade humana:** localizar e recortar manualmente melhores momentos em gravações extensas exige atenção contínua e pode causar omissões e retrabalho.
+2. **Contribuição técnica do TCC:** um sistema híbrido de visão computacional detecta momentos e produz cortes e metadados.
+3. **Como uma pessoa poderia utilizar essa contribuição:** um editor envia a gravação, acompanha o processamento, revisa os resultados e baixa o material para continuar a produção.
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
 
