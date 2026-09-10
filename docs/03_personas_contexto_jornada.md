@@ -84,6 +84,28 @@ Essas decisões são iniciais e deverão ser revistas com a coleta de dados. A e
 
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
+**PO2 - Administrador/Editor-Chefe**
+
+| Campo | Descrição |
+|---|---|
+| Faixa etária / contexto relevante | [?] Faixa etária não investigada. [H] Atuação na administração do conteúdo como um todo. |
+| Ocupação/papel | [H] Administrador do setor de mídias digitais, responsável pela supervisão da produção e gerenciamento de conteúdo digital. |
+| Conhecimento do domínio | [H] Gerencia como o conteúdo trabalhado pelos editores deve ser tratado: fluxo de postagens em redes sociais, chancela de decisões editoriais. [?] Nível de experiência não investigado. |
+| Experiência tecnológica | [H] Baixo conhecimento técnico de software e computação, H05, com possível baixa familiaridade com editores de vídeo, H17. Essa combinação ainda precisa ser validada. |
+| Objetivos | [H] Supervisionar o processo editorial, chancelar decisões editoriais, responsável pelo gerenciamento de conteúdo digital |
+| Necessidades | [H] Facilitar o acompanhamento do processo editorial, utilizar a automação também como ferramenta para manter controle sobre a produção e gerenciamento de conteúdo digital |
+| Dores/frustrações | [H] Dificuldade de manter controle e supervisionar o processo atual, engessado. |
+| Motivadores | [H] Maior produtividade do processo editorial e do fluxo de produção e gerenciamento de conteúdo. |
+| Restrições/acessibilidade | [H] Conhecimento limitado sobre software, curva de aprendizado e de adaptação à implantação de um novo sistema, compliance com burocracia coorporativa [?] Necessidades individuais de acessibilidade não investigadas. |
+| Ambiente típico de uso | [H] Supervisão do processo editorial e da produção de conteúdo, H12. [?] Local exato e equipamentos não definidos; computador com tela de controle é hipótese de trabalho. |
+| Comportamentos relevantes | [H] Chancelar decisões editoriais, supervisionar o fluxo de postagens em redes sociais, gerenciar a produção de conteúdo como um todo. |
+
+**Decisões de design influenciadas por P02:**
+
+- Manter as informações do fluxo principal nítidas para fácil observação e acompanhamento
+- Manter parâmetros técnicos fora do fluxo principal.
+- Registrar logs de ocorrências e de auditoria sobre o processo, permitindo que o administrador tenha noção e controle do que acontece no ambiente editorial.
+- 
 ### Síntese das personas
 
 O perfil prioritário é o editor de vídeo esportivo, conforme H27 e [entrega 1](01_conhecendo_o_problema.md). A síntese das diferenças entre personas depende da elaboração dos perfis individuais pelos integrantes.
