@@ -84,7 +84,14 @@ Essas decisões são iniciais e deverão ser revistas com a coleta de dados. A e
 
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
-**PO2 - Administrador/Editor-Chefe**
+### Persona P02 — Administrador/Editor-Chefe
+
+**Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1  
+**Base de evidências:** proto-persona proposta pelo autor na PR #5, ainda sem validação com usuários.
+
+![Avatar ilustrativo da persona P02, administrador/editor-chefe](../assets/03_personas/p02-avatar.png)
+
+O avatar foi gerado por IA e é apenas ilustrativo. Aparência e idade aparente não representam dados coletados.
 
 | Campo | Descrição |
 |---|---|
@@ -105,7 +112,7 @@ Essas decisões são iniciais e deverão ser revistas com a coleta de dados. A e
 - Manter as informações do fluxo principal nítidas para fácil observação e acompanhamento
 - Manter parâmetros técnicos fora do fluxo principal.
 - Registrar logs de ocorrências e de auditoria sobre o processo, permitindo que o administrador tenha noção e controle do que acontece no ambiente editorial.
-- 
+
 ### Síntese das personas
 
 O perfil prioritário é o editor de vídeo esportivo, conforme H27 e [entrega 1](01_conhecendo_o_problema.md). A síntese das diferenças entre personas depende da elaboração dos perfis individuais pelos integrantes.
