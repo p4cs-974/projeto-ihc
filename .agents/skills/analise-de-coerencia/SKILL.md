@@ -90,3 +90,5 @@ Quando o usuário pedir ajustes no HTML, edite apenas o relatório indicado. Pre
 ## Correção de abertura do relatório
 
 Quando o usuário relatar preview em branco, diferencie arquivo vazio ou malformado, falha de resolução do caminho e falha do visualizador. Não atribua a causa ao CSS ou ao nome sem evidência. Se renomear um relatório para compatibilidade, preserve conteúdo, IDs e acompanhamento, atualize referências sob controle da tarefa e entregue o novo link. Não crie uma nova auditoria nem marque tickets como aplicados por corrigir a abertura.
+
+Se o preview continuar falhando, não apresente uma renomeação como solução confirmada. Disponibilize uma cópia de leitura em Markdown quando isso permitir ao usuário acessar o diagnóstico, identificando-a como cópia do mesmo relatório, sem criar novos IDs ou alterar status. Registre que o problema do preview permanece aberto; a cópia não substitui a verificação do HTML.
