@@ -33,9 +33,9 @@ Faça uma auditoria documental somente de leitura. Entregue o diagnóstico em HT
 
 6. **Escrever cada ticket.** Inclua gravidade, confiança na conclusão, status de acompanhamento, evidências localizáveis, efeito sobre a coerência e mudança sugerida no documento que fizer mais sentido para a proposta do projeto. Use os critérios abaixo. Para cada recomendação analisada, verifique se é possível relacioná-la a alguma seção, atividade, hipótese ou decisão de um documento de base. Quando a relação não existir, apresente a recomendação como exploratória e sujeita a validação.
 
-7. **Gerar o HTML.** Crie o relatório em `analises de coerencia/DD-MM-YYYY-HH:MM.html`, usando a data, hora e fuso locais. Se o nome já existir, acrescente `-02`, `-03` e assim por diante, sem sobrescrever relatórios. Coloque no começo do documento a assinatura `modelo (nível de raciocínio) no harness`, com os dados reais da execução. Quando algum dado não estiver disponível, escreva `não informado` em seu lugar.
+7. **Gerar o HTML.** Crie o relatório em `analises de coerencia/DD-MM-YYYY-HH-MM.html`, usando a data, hora e fuso locais. Use hífen entre hora e minuto no nome do arquivo; reserve `HH:MM` para o texto do relatório. Isso evita caracteres problemáticos em links locais e visualizadores. Se o nome já existir, acrescente `-02`, `-03` e assim por diante, sem sobrescrever relatórios. Coloque no começo do documento a assinatura `modelo (nível de raciocínio) no harness`, com os dados reais da execução. Quando algum dado não estiver disponível, escreva `não informado` em seu lugar.
 
-8. **Verificar.** Confirme que o HTML abre sem erro estrutural, funciona em telas pequenas, contém todos os tickets e não alterou nenhum arquivo analisado. Confira a continuidade e a unicidade dos IDs. A execução termina quando o relatório existe, todas as fontes do escopo foram contabilizadas e cada conclusão está sustentada ou marcada para revisão.
+8. **Verificar.** Valide a estrutura do HTML, os tickets e a preservação dos arquivos analisados. Quando houver navegador disponível e permitido, abra o arquivo pelo mecanismo de preview que será entregue ao usuário e confira conteúdo visível e leitura em uma largura estreita. Um parser HTML não comprova renderização nem funcionamento do link. Se a verificação visual estiver indisponível ou bloqueada, registre essa limitação e não declare que o preview foi verificado. Confira a continuidade e a unicidade dos IDs. A execução termina quando o relatório existe, todas as fontes do escopo foram contabilizadas e cada conclusão está sustentada ou marcada para revisão.
 
 ## Critérios dos tickets
 
@@ -86,3 +86,7 @@ Use nomes relativos ao repositório e seções para localizar evidências. Não 
 ## Revisão de um relatório existente
 
 Quando o usuário pedir ajustes no HTML, edite apenas o relatório indicado. Preserve os IDs dos tickets mantidos. Ao retirar um ticket, conserve seu identificador em um comentário HTML no formato `<!-- ticket-retirado: AC-### -->`; isso impede que o número seja reutilizado em relatórios futuros.
+
+## Correção de abertura do relatório
+
+Quando o usuário relatar preview em branco, diferencie arquivo vazio ou malformado, falha de resolução do caminho e falha do visualizador. Não atribua a causa ao CSS ou ao nome sem evidência. Se renomear um relatório para compatibilidade, preserve conteúdo, IDs e acompanhamento, atualize referências sob controle da tarefa e entregue o novo link. Não crie uma nova auditoria nem marque tickets como aplicados por corrigir a abertura.
