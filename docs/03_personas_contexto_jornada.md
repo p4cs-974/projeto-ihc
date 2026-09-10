@@ -90,12 +90,23 @@ O perfil prioritário é o editor de vídeo esportivo, conforme H27 e [entrega 1
 
 ## 2. Mapa de empatia — equipe
 
-**Persona escolhida:** {{P01}}  
-**Justificativa:** {{por que esse perfil é relevante}}
+**Persona escolhida:** P01, Rafael  
+**Justificativa:** Rafael representa o editor de vídeo esportivo priorizado na Entrega 1, H27. Seu objetivo de obter cortes e metadados com menor esforço manual, H28, se relaciona diretamente à identificação automática de melhores momentos produzida pelo TCC.
 
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
 
-Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
+O mapa abaixo sintetiza as hipóteses de P01 e as escolhas feitas com o autor. Não contém falas coletadas nem observações de usuários. O arquivo visual acima ainda é um modelo a substituir.
+
+| Dimensão | Registro | Base |
+|---|---|---|
+| Vê | [H] Gravações extensas e lances que precisa selecionar. No uso proposto, acompanha o estado das partidas e confere os cortes gerados. | H11, H25 e H32; P01 |
+| Ouve | [?] Não sabemos quais orientações, cobranças ou comentários recebe de colegas e responsáveis editoriais. | Fluxo organizacional ainda a investigar, H14 |
+| Diz/faz | [H] Envia várias partidas, continua outras edições durante a espera, revisa uma partida por vez e escolhe os cortes para download. Recupera lances omitidos no editor externo. [?] Não há falas coletadas. | H32; comportamentos definidos para P01 |
+| Pensa/sente | [H] Preocupa-se com o prazo e com a possibilidade de deixar passar um lance importante. Aceita revisar alguns cortes sem interesse para reduzir esse risco. | H11 e H30; dores de P01 |
+| Dores | [H] Seleção manual demorada, omissões, cortes sem contexto e retrabalho. Quando ocorre uma falha, precisa entender o motivo e como continuar. | H01, H10, H11, H16 e H26 |
+| Ganhos | [H] Entregar no prazo lances relevantes e com contexto, gastando menos tempo procurando e recortando a gravação. Continuar outros trabalhos enquanto as partidas são processadas. | H06, H28 e H32; critério de sucesso de P01 |
+
+Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P01 desta entrega e [hipóteses H30 a H32](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
 
 ## 3. Contexto de uso — consolidação
 
@@ -113,13 +124,21 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), seções 3, 5, 7 e 11, e [Entr
 
 ## 4. Jornada do usuário — equipe
 
-**Persona:** {{P01}}  
+**Persona:** P01, Rafael  
 **Objetivo da jornada:** [H] Obter cortes e metadados de uma partida gravada para continuar a produção em ferramentas externas, H28.  
 **Início e fim da jornada:** [H] Começa com o recebimento da gravação integral após a partida, H11 e H12, e termina com a obtenção do material para continuar a edição em ferramenta externa, H28. Base: [Entrega 1](01_conhecendo_o_problema.md), seções 4.5 e 7.3.
 
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
 |---|---|---|---|---|---|---|
-| 1 | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| 1 | Recebe as gravações após as partidas e organiza o material para produzir os melhores momentos. | Preparar o trabalho dentro do prazo. | [H] Preocupação com o prazo e com lances que podem passar despercebidos. | Gravações extensas exigem atenção e seleção manual. | Permitir identificar e conferir os vídeos antes de enviá-los. | H01, H11, H12 e H24; RC02 |
+| 2 | Envia várias partidas para processamento. | Obter cortes e metadados com menos esforço manual. | [?] Reação específica ao envio não investigada. | Arquivo incompatível ou envio interrompido pode gerar retrabalho. | Validar entradas e informar o estado de cada vídeo. | A01, H24, H26 e H32; RC02 e RC03 |
+| 3 | Continua outras edições enquanto as partidas são processadas e recebe aviso de conclusão. | Aproveitar o tempo de espera e saber quando pode revisar. | [?] Sentimento durante a espera não investigado. | Processamento demorado e incerteza sobre seu estado. | Mostrar estados reais por partida e avisar quando os resultados estiverem prontos. Meio de aviso a definir. | A02, H13 e H32; RC03 |
+| 4, se houver falha | Consulta o problema da partida afetada e a orientação para resolvê-lo; continua com as demais. | Recuperar o trabalho sem perder resultados já concluídos. | [H] Preocupação com atraso e retrabalho. | Falha sem explicação dificulta saber como prosseguir. | Identificar a partida, explicar a causa conhecida e indicar o próximo passo; preservar os demais resultados. | H16 e H26; necessidades e comportamentos de P01 |
+| 5 | Revisa uma partida por vez, assiste aos cortes gerados e seleciona quais utilizar. | Obter uma seleção relevante e com contexto. | [H] Prefere descartar cortes extras a perder um lance importante. | Cortes sem contexto ou sem interesse aumentam o esforço de revisão. | Permitir prévia com contexto temporal e inclusão ou exclusão da seleção para download. | A04, H10, H16, H30 e H32; RC04 e RC05 |
+| 6 | Baixa os cortes e metadados escolhidos. | Levar o material revisado para a ferramenta de edição. | [?] Reação específica ao download não investigada. | Download indisponível ou seleção incorreta atrasa a continuidade. | Apresentar resumo da seleção e comunicar falhas na obtenção dos arquivos. | A04, H25, H26 e H28; RC09 |
+| 7 | Continua a montagem no editor que já utiliza. Caso perceba uma omissão, procura o lance na gravação original e faz o corte manualmente. | Concluir o material no prazo com os lances relevantes. | [H] Preocupação em não deixar um lance importante de fora. | Uma omissão exige busca e corte adicionais. | Manter identificáveis a partida de origem e os tempos dos cortes para apoiar a continuidade fora da interface. | H10, H28 e H30; comportamentos de P01 e delimitação da Entrega 1 |
+
+Esta é uma jornada proposta, baseada nas hipóteses da [Entrega 1](01_conhecendo_o_problema.md), nas recomendações RC da [Entrega 2](02_analise_concorrencia.md) e nas escolhas de P01. Não descreve um fluxo observado com usuários. A etapa de falha é condicional.
 
 > A jornada pode incluir etapas **antes, durante e depois** do uso do produto. Não transforme a jornada em lista de telas.
 
@@ -133,19 +152,19 @@ A partir da [Entrega 1](01_conhecendo_o_problema.md), os cenários e as tarefas 
 - A revisão, seleção e download dos resultados, A04, H16 e H25, mantendo a decisão editorial com o usuário.
 - A investigação da necessidade de recuperar resultados anteriores, A03 e H15.
 
-Esses pontos mantêm o status de hipótese. Ainda faltam os perfis individuais completos, o mapa de empatia e o detalhamento das etapas da jornada. Edição detalhada, publicação e administração de usuários permanecem fora do escopo definido na Entrega 1.
+Esses pontos mantêm o status de hipótese. Ainda faltam as personas dos demais integrantes e a atualização do artefato visual do mapa de empatia. O mapa textual e a jornada proposta de Rafael estão preenchidos e precisam ser validados com usuários. Edição detalhada, publicação e administração de usuários permanecem fora do escopo definido na Entrega 1.
 
 ## Checklist
 
 - [ ] Existe pelo menos uma persona por integrante.
 - [ ] As personas não são apenas diferenças demográficas superficiais.
-- [ ] Está claro o que é dado real e o que é hipótese/proto-persona.
-- [ ] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
-- [ ] Objetivos e dores têm consequência para o design.
+- [x] Está claro o que é dado real e o que é hipótese/proto-persona.
+- [x] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
+- [x] Objetivos e dores de P01 têm consequência para o design.
 - [x] Contexto de uso está coerente com a Entrega 1.
-- [ ] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica.
+- [x] Em TCC sem interface original, P01 possui relação explícita com a contribuição técnica.
 - [ ] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
-- [ ] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
+- [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
 - [x] IDs das personas já elaboradas foram adicionados à rastreabilidade: P01. P02 e P03 serão registradas quando elaboradas.
 
 ## Histórico de revisões
