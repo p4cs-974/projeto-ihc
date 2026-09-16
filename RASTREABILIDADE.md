@@ -59,13 +59,16 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 ## 2.1 Hipóteses acrescentadas na Entrega 3
 
-Estas hipóteses vêm de escolhas de elaboração de P01 com o autor. Não são resultados de pesquisa com usuários e não generalizam o perfil para todo o público.
+Estas hipóteses vêm de escolhas de elaboração de P01 e P03 com o autor. Não são resultados de pesquisa com usuários e não generalizam o perfil para todo o público.
 
 | ID | Hipótese | Origem | Estado | Como investigar na Entrega 7 | Decisão afetada |
 |---|---|---|---|---|---|
 | H30 | P01 prefere revisar alguns cortes sem interesse a deixar um lance importante de fora | [Entrega 3, P01](docs/03_personas_contexto_jornada.md#persona-p01--rafael), Dores/frustrações | aberta; sem evidência empírica | Entrevistar editores sobre omissões e candidatos sem interesse, usando exemplos para investigar limites aceitáveis de esforço de revisão | Revisão e exclusão da seleção para download; não implica garantia de detecção |
 | H31 | P01 prefere modo escuro para trabalhar na sala de edição pouco iluminada | [Entrega 3, P01](docs/03_personas_contexto_jornada.md#persona-p01--rafael), Ambiente típico de uso; contexto hipotético H12/H13 | aberta; sem evidência empírica | Investigar iluminação e preferências de apresentação com editores; observar leitura e identificação de controles no ambiente de uso | Modo escuro como alternativa exploratória, mantendo legibilidade e foco |
 | H32 | P01 envia várias partidas, continua outras edições durante a espera e, após aviso de conclusão, revisa uma partida por vez | [Entrega 3, P01](docs/03_personas_contexto_jornada.md#persona-p01--rafael), Comportamentos relevantes; relacionada a A01/A02/A04 e H13 | aberta; sem evidência empírica | Entrevistar ou observar editores sobre alternância de tarefas, ordem de revisão e necessidade e meio de aviso | Estado por partida, aviso de conclusão e continuidade da revisão |
+| H33 | P03 produz compilações centradas em um jogador específico e precisa identificar e filtrar lances por jogador, não apenas os melhores momentos gerais | [Entrega 3, P03](docs/03_personas_contexto_jornada.md#persona-p03--jorginho-jr), Objetivos, Necessidades e Comportamentos relevantes | aberta; sem evidência empírica | Entrevistar criadores amadores sobre o recorte por jogador, o número de lances considerados relevantes e como filtram o material | Filtro/identificação por jogador na revisão e seleção dos cortes |
+| H34 | P03 tem computador pouco potente e pouco armazenamento, mas boa conexão, e depende do processamento remoto para viabilizar o trabalho | [Entrega 3, P03](docs/03_personas_contexto_jornada.md#persona-p03--jorginho-jr), Restrições/acessibilidade e Comportamentos relevantes; contexto hipotético H12/H13 | aberta; sem evidência empírica | Entrevistar criadores amadores sobre equipamento, armazenamento, conexão e onde processariam os vídeos | Processamento no servidor, com upload/download e sem exigir hardware local |
+| H35 | P03 tem experiência com editores mobile e amadora, não com NLEs profissionais, o que afeta vocabulário e expectativas de edição | [Entrega 3, P03](docs/03_personas_contexto_jornada.md#persona-p03--jorginho-jr), Experiência tecnológica; contrapõe H17 | aberta; sem evidência empírica | Entrevistar criadores amadores sobre editores usados, termos conhecidos e onde pretendem continuar a edição | Vocabulário acessível e continuidade em ferramentas externas, inclusive mobile |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
@@ -103,3 +106,4 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 ## Histórico de atualização da rastreabilidade
 
 - 09/09/2026 às 21:40: AC-013 aplicado. Registrados H30–H32, refinamentos hipotéticos de P01 e relações R01/R02. As afirmações iniciais foram preservadas; não houve validação empírica nem mudança do recorte de IHC.
+- 10/09/2026: revisão de P03 (Jorginho Jr), tipificada como persona secundária. Registrados H33–H35, originados da elaboração de P03 com o autor, ainda sem evidência empírica. O perfil prioritário (editor de vídeo esportivo, H27) foi preservado.
