@@ -80,13 +80,73 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), [Entrega 2](02_analise_concorr
 - Em caso de falha, identificar a partida afetada, explicar o motivo conhecido em linguagem compreensível para Rafael e indicar o próximo passo. Se a causa não for conhecida, informar isso sem inventar uma explicação. Preservar o acesso aos resultados já concluídos e permitir continuar com as outras partidas, conforme H16, H26 e o comportamento definido com o autor.
 - Comunicar progresso e falhas em texto e permitir operação por teclado, conforme RC03 e RC11. A acessibilidade é uma recomendação de design da Entrega 2, não uma característica já observada de P01.
 
-Essas decisões são iniciais e deverão ser revistas com a coleta de dados. A elaboração e a diferenciação das demais personas continuam pendentes.
+Essas decisões são iniciais e deverão ser revistas com a coleta de dados. P02 está descrita a seguir; P03 continua pendente.
 
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
+### Persona P02 — Administrador/Editor-Chefe
+
+**Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1  
+**Tipo:** [H] stakeholder indireto, responsável editorial que recebe os resultados fora da interface, H33.
+
+**Base de evidências:** proto-persona proposta pelo autor na PR #5, ainda sem validação com usuários.
+
+**Base herdada:** H14, H22 e H23 admitem entrega a responsáveis editoriais e decisões posteriores sobre os resultados. A supervisão de P02 é uma derivação exploratória dessa base.
+
+**Hipóteses novas da Entrega 3:** H33, relação com os resultados; H34, experiência tecnológica específica de P02; H35, possível necessidade de auditoria editorial. Acompanhamento no [registro de hipóteses](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
+
+A participação indireta é a hipótese inicial adotada com Pedro ao aplicar AC-016, compatível com o recorte da Entrega 1 e ainda a validar com usuários. P02 também pode vir a usar a interface para acompanhar resultados. Essa alternativa fica em investigação em H33: quais informações consultaria diretamente e que decisão tomaria a partir delas? O cargo de administrador não implica acesso administrativo ao produto.
+
+![Avatar ilustrativo da persona P02, administrador/editor-chefe](../assets/03_personas/p02-avatar.png)
+
+O avatar foi gerado por IA e é apenas ilustrativo. Aparência e idade aparente não representam dados coletados.
+
+| Campo | Descrição |
+|---|---|
+| Faixa etária / contexto relevante | [?] Faixa etária não investigada. [H] Atuação na administração do conteúdo como um todo. |
+| Ocupação/papel | [H] Administrador do setor de mídias digitais, responsável pela supervisão da produção e gerenciamento de conteúdo digital. |
+| Conhecimento do domínio | [H] Gerencia como o conteúdo trabalhado pelos editores deve ser tratado: fluxo de postagens em redes sociais, chancela de decisões editoriais. [?] Nível de experiência não investigado. |
+| Experiência tecnológica | [H] Baixo conhecimento técnico de software e computação, com possível baixa familiaridade com editores de vídeo, H34, proposta original do autor para P02. H05 e H17 descrevem o perfil de edição e não comprovam essa combinação para a supervisão. |
+| Objetivos | [H] Supervisionar a produção e chancelar decisões editoriais. No uso indireto proposto, decidir se os cortes recebidos podem seguir para montagem ou precisam de revisão pelo editor, H33. |
+| Necessidades | [H] Receber cortes identificados por partida e metadados que permitam localizar e compreender os lances antes da decisão editorial, H33, derivada de H22/H23. Investigar quais informações do andamento o editor precisa comunicar para apoiar a supervisão. |
+| Dores/frustrações | [H] Dificuldade de manter controle e supervisionar o processo atual, engessado. |
+| Motivadores | [H] Maior produtividade do processo editorial e do fluxo de produção e gerenciamento de conteúdo. |
+| Restrições/acessibilidade | [H] Conhecimento limitado sobre software e possível dificuldade de adaptação, H34. [?] Regras corporativas e necessidades individuais de acessibilidade não investigadas. |
+| Ambiente típico de uso | [H] Supervisão editorial como derivação de H14/H22/H23, recebendo os resultados fora da interface, H33. [?] Local, equipamentos e necessidade de uma tela de acompanhamento não definidos. |
+| Comportamentos relevantes | [H] Recebe do editor os cortes e metadados, consulta o material e devolve a decisão de seguir para montagem ou revisar a seleção, H33. Chancela editorial, gestão da produção e supervisão das postagens são atividades externas ao produto. |
+
+**Tarefa proposta com os resultados do TCC, H33:**
+
+| Etapa | Ação e informação |
+|---|---|
+| Início | Após a revisão e o download pelo editor, P02 recebe os cortes e metadados por um canal externo ainda a definir. |
+| Consulta | Assiste aos cortes e consulta a partida de origem, os timecodes e a classificação dos lances nos metadados disponíveis, H25. |
+| Decisão | Decide se a seleção atende à intenção editorial e pode seguir para montagem ou se o editor precisa revisá-la. |
+| Resultado esperado | O editor recebe uma orientação vinculada aos cortes e à partida, para continuar a produção em ferramenta externa. |
+
+O valor esperado da contribuição do TCC para P02 é receber trechos localizáveis e contextualizados para decidir sobre a seleção. O fluxo completo é hipotético. P02 não envia partidas nem aprova ou publica pela interface no recorte adotado.
+
+**Decisões de design influenciadas por P02:**
+
+- Manter identificáveis a partida de origem e os metadados dos cortes baixados pelo editor, para apoiar a consulta externa por P02, H33 e H25, RC05 e RC09.
+- Apresentar ao editor estados e ocorrências compreensíveis de processamento, A02/H25/H26 e RC03. Investigar quais dessas informações P02 precisa receber para decidir sobre o andamento da produção; isso não define uma tela de supervisão.
+- Manter parâmetros técnicos fora do fluxo principal, conforme a decisão da Entrega 1, seção 7.1, e RC06. Essa delimitação não depende de confirmar H34.
+- Investigar a consulta de histórico de processamento pelo editor, A03/H15 e RC10, para localizar resultados e explicar falhas anteriores. Sua utilidade para a comunicação com P02 ainda está aberta.
+
+**Proposta exploratória de auditoria editorial, H35:** o evento a investigar é uma decisão de aprovar uma seleção ou devolvê-la para revisão. Um possível registro identificaria a seleção, a decisão, seu responsável, o momento e o motivo, para esclarecer qual material foi chancelado e por que houve retrabalho. Pergunta de pesquisa: P02 precisa recuperar essas decisões para resolver divergências, e os registros externos já usados pela equipe atendem à necessidade? Não há evidência dessa necessidade nem decisão de incluir auditoria na interface. Logs técnicos continuam reservados ao suporte, conforme a Entrega 1, seção 8.
+
 ### Síntese das personas
 
-O perfil prioritário é o editor de vídeo esportivo, conforme H27 e [entrega 1](01_conhecendo_o_problema.md). A síntese das diferenças entre personas depende da elaboração dos perfis individuais pelos integrantes.
+O perfil prioritário é P01, o editor de vídeo esportivo, conforme H27 e [entrega 1](01_conhecendo_o_problema.md). P02 representa a supervisão editorial como stakeholder indireto na hipótese H33.
+
+| Aspecto | P01, Rafael | P02, Administrador/Editor-Chefe |
+|---|---|---|
+| Participação | Envia partidas, acompanha o processamento, revisa e baixa resultados na interface. | Recebe os cortes e metadados do editor e os consulta fora da interface. |
+| Decisão | Escolhe quais cortes baixar e como continuar a edição. | Chancela a seleção para montagem ou solicita revisão ao editor. |
+| Necessidade que afeta design | Reduzir esforço manual, evitar omissões e entender falhas, H28/H30/H32. | Receber material identificável e com contexto para a decisão editorial, H33. |
+| Experiência tecnológica | Experiência com edição e ausência de conhecimento de IA/programação, H05/H17 refinadas para P01. | Possível baixa familiaridade com edição e computação, H34, independente de H17. |
+
+As duas fichas são proto-personas sem validação empírica. P03 ainda precisa ser elaborada. O mapa de empatia e a jornada da equipe continuam centrados em P01.
 
 ## 2. Mapa de empatia — equipe
 
@@ -112,15 +172,15 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P01 desta entrega e [hi
 
 | Dimensão | Descrição | Implicação de design |
 |---|---|---|
-| Usuários | [H] Editor de vídeo esportivo, H03, H21 e H27. | Priorizar obtenção e revisão de cortes e metadados; testar linguagem com o público, RC01 e RC07. |
+| Usuários e stakeholders | [H] P01 é o editor de vídeo esportivo, usuário direto, H03, H21 e H27. P02 é a supervisão editorial que recebe os resultados fora da interface, H33. | Priorizar obtenção e revisão de cortes e metadados por P01; preservar identificação e contexto do material entregue a P02, RC01, RC05 e RC09. Testar linguagem com o público, RC07. |
 | Tarefas | [H] Enviar vídeos em lote, acompanhar processamento, consultar histórico e revisar, selecionar e baixar resultados, A01 a A04. | Organizar o fluxo de enviar, acompanhar, revisar e baixar, RC01; validar a necessidade de histórico, RC10. |
 | Equipamentos | [H] Computador com tela ampla, escolhido para P01. [?] Demais equipamentos e escolha entre aplicação web e nativa ainda em aberto, Entrega 1, seção 5.2. | Projetar para inspeção visual de vídeos em computador e considerar arquivos extensos na escolha da plataforma, RC12. |
 | Ambiente físico | [H] Para P01, trabalho presencial em sala de edição da produtora, com pouca luz e pressão de prazo, como detalhamento de H12 e H13. [?] Ruído e compartilhamento não definidos. | Oferecer modo escuro com controles legíveis e estados claros de processamento; avisar sobre conclusão enquanto o editor realiza outros trabalhos, conforme H31, H32 e RC03. |
-| Ambiente social/organizacional | [H] O editor pode entregar material a produtores ou responsáveis editoriais para aprovação e publicação, H14, H22 e H23. | Permitir revisar e baixar material para continuidade em ferramentas externas; publicação está fora do recorte, RC05 e RC09. |
-| Papéis/permissões/governança | [?] Papéis, permissões, aprovação e retenção não definidos. Parâmetros técnicos ficam com a equipe técnica no recorte inicial, Entrega 1, seções 5.4 e 7.1. | Manter administração de usuários fora do escopo e parâmetros técnicos fora do fluxo principal, conforme delimitação da Entrega 1 e RC06. |
+| Ambiente social/organizacional | [H] O editor pode entregar material a produtores ou responsáveis editoriais, H14, H22 e H23. Em H33, P02 recebe os cortes e metadados e devolve ao editor uma decisão sobre a seleção. | Permitir revisar e baixar material para continuidade em ferramentas externas, RC05 e RC09. Chancela editorial e publicação ocorrem fora da interface. |
+| Papéis/permissões/governança | [H] P02 recebe material e devolve uma decisão editorial externamente, H33. [?] Regras detalhadas de aprovação, permissões e retenção não definidas. Parâmetros técnicos ficam com a equipe técnica no recorte inicial, Entrega 1, seções 5.4 e 7.1. | Manter administração de usuários fora do escopo e parâmetros técnicos fora do fluxo principal, conforme delimitação da Entrega 1 e RC06. |
 | Volume de dados/histórico | [H] Vídeos extensos, H08 e H13. Para P01, várias partidas na fila e revisão de uma por vez, H32, conforme definição com o autor; utilidade de histórico a validar, H15. [?] Volume, formatos, limites e retenção não definidos. | Representar estado por vídeo, validar entradas e investigar histórico para localizar resultados e evitar reprocessamento, RC02, RC03 e RC10. |
 
-Fontes: [Entrega 1](01_conhecendo_o_problema.md), seções 3, 5, 7 e 11, e [Entrega 2](02_analise_concorrencia.md), seção 5. As características específicas de P01 também incorporam as escolhas feitas com o autor nesta entrega, ainda como hipóteses. As implicações são recomendações iniciais de design.
+Fontes: [Entrega 1](01_conhecendo_o_problema.md), seções 3, 5, 7 e 11, e [Entrega 2](02_analise_concorrencia.md), seção 5. As características específicas de P01 incorporam as escolhas feitas com o autor nesta entrega. A participação inicial de P02 foi delimitada com Pedro em H33, preservando o acompanhamento direto como alternativa a investigar. As implicações são recomendações iniciais de design.
 
 ## 4. Jornada do usuário — equipe
 
@@ -151,22 +211,24 @@ A partir da [Entrega 1](01_conhecendo_o_problema.md), os cenários e as tarefas 
 - O envio em lote e a compreensão de progresso, falhas e possibilidades de recuperação, A01 e A02, H08, H13 e H26.
 - A revisão, seleção e download dos resultados, A04, H16 e H25, mantendo a decisão editorial com o usuário.
 - A investigação da necessidade de recuperar resultados anteriores, A03 e H15.
+- A entrega externa de cortes e metadados a P02 para uma decisão sobre a seleção, H33; investigar H34 e H35 antes de propor interações específicas para esse perfil.
 
-Esses pontos mantêm o status de hipótese. Ainda faltam as personas dos demais integrantes e a atualização do artefato visual do mapa de empatia. O mapa textual e a jornada proposta de Rafael estão preenchidos e precisam ser validados com usuários. Edição detalhada, publicação e administração de usuários permanecem fora do escopo definido na Entrega 1.
+Esses pontos mantêm o status de hipótese. P01 e P02 estão elaboradas; faltam P03 e a atualização do artefato visual do mapa de empatia. O mapa textual e a jornada proposta de Rafael estão preenchidos e precisam ser validados com usuários. Cenários e modelos de tarefas futuros continuam pendentes. Edição detalhada, publicação e administração de usuários permanecem fora do escopo definido na Entrega 1.
 
 ## Checklist
 
 - [ ] Existe pelo menos uma persona por integrante.
-- [ ] As personas não são apenas diferenças demográficas superficiais.
+- [x] P01 e P02 se diferenciam por tarefas e decisões; P03 ainda pendente.
 - [x] Está claro o que é dado real e o que é hipótese/proto-persona.
 - [x] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
 - [x] Objetivos e dores de P01 têm consequência para o design.
 - [x] Contexto de uso está coerente com a Entrega 1.
-- [x] Em TCC sem interface original, P01 possui relação explícita com a contribuição técnica.
-- [ ] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
+- [x] Em TCC sem interface original, P01 e P02 possuem relação explícita com a contribuição técnica.
+- [x] P02 possui tarefa decisória distinta, fora da interface, como hipótese H33; não foi criado acesso administrativo.
 - [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
-- [x] IDs das personas já elaboradas foram adicionados à rastreabilidade: P01. P02 e P03 serão registradas quando elaboradas.
+- [x] IDs das personas já elaboradas foram adicionados à rastreabilidade: P01 e P02. P03 será registrada quando elaborada.
 
 ## Histórico de revisões
 
 - 09/09/2026 às 21:40: aplicação de AC-013 e AC-015. H30–H32 receberam IDs e acompanhamento; P01 foi ligada à contribuição técnica e às necessidades na matriz. Autoria completada com matrícula. Hipóteses permanecem abertas e a entrega continua em andamento.
+- 09/09/2026: aplicação de AC-016 a AC-019 da análise das 22:02. P02 recebeu tarefa externa hipotética, referências corrigidas, hipóteses H33 a H35 e relação R03. Síntese, contexto e pendências foram atualizados. Pedro definiu recebimento externo como participação inicial e acompanhamento direto como alternativa a investigar. Auditoria editorial permanece exploratória e não houve validação com usuários.
