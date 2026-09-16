@@ -34,7 +34,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 | Esforço manual, omissões e retrabalho sob pressão de prazo, H01, H09, H10 e H11        | H              | Situação hipotética da Entrega 1, seção 4.5                                                       | Manter como dores hipotéticas, sem atribuir relatos a participantes      |
 | Baixo conhecimento de computação e familiaridade com editores de vídeo, H05, H17 e H19 | H              | Entrega 2, seção 3, identifica padrões nas ferramentas, mas não comprova familiaridade do público | Manter como hipótese; investigar experiência e vocabulário               |
 | Pós-produção, arquivos extensos e pressão de prazo, H12 e H13                          | H              | Entrega 1, seções 5.1 a 5.3                                                                       | Incorporar ao contexto provisório                                        |
-| Entrega a responsáveis editoriais e decisões sobre resultados, H14, H22 e H23          | H              | Entrega 1, seções 5.4 e 7.1; divisão de responsabilidades não investigada                         | Manter como hipótese; não criar papéis adicionais sem tarefas distinta s |
+| Entrega a responsáveis editoriais e decisões sobre resultados, H14, H22 e H23          | H              | Entrega 1, seções 5.4 e 7.1; divisão de responsabilidades não investigada                         | Manter como hipótese; não criar papéis adicionais sem tarefas distintas |
 | Histórico e consequências de falhas, H15, H16 e H26                                    | H              | Entrega 1, seções 5.5, 5.6 e 7.1; recomendações RC03 e RC10 da Entrega 2                          | Investigar necessidade de histórico e formas de recuperação              |
 | Equipamentos, local, acessibilidade, permissões e retenção                             | ?              | Lacunas registradas na Entrega 1, seções 2.4 e 5                                                  | Manter em aberto para coleta de dados                                    |
 
@@ -137,9 +137,11 @@ O valor esperado da contribuição do TCC para P02 é receber trechos localizáv
 
 ### Persona P03 — Jorginho Jr.
 
-**Autor(a):** Giovanni Chahin Morassi — 22.123.025-3  
-**Tipo:** secundária  
-**Base de evidências:** hipóteses da [entrega 1](01_conhecendo_o_problema.md), ainda não confirmadas com usuários, e análise de ferramentas da [entrega 2](02_analise_concorrencia.md) (decisões de interface).  
+**Autor(a):** Giovanni Chahin Morassi — 22.123.025-3
+**Tipo:** secundária
+
+**Base de evidências:** hipóteses da [entrega 1](01_conhecendo_o_problema.md), ainda não confirmadas com usuários, e análise de ferramentas da [entrega 2](02_analise_concorrencia.md) (decisões de interface).
+
 **Hipóteses da Entrega 1 relacionadas:** H05, H06, H08, H10, H11, H19, H24, H25 e H28.
 
 **Hipóteses novas da Entrega 3:** H36, H37 e H38, acompanhadas no [registro de hipóteses](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
