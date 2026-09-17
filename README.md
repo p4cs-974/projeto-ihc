@@ -1,4 +1,4 @@
-# Projeto de Interação Humano-Computador (IHC)
+# Projeto de Interação Humano-Computador (IHC)  - Equipe 16
 
 > **Template acadêmico para documentação do projeto no GitHub.**  
 > Substitua todo texto entre `{{...}}`, remova exemplos que não se aplicam e mantenha evidências no próprio repositório sempre que possível.
