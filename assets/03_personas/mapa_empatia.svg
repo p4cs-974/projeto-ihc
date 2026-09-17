@@ -1,5 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1240" viewBox="0 0 1440 1240" role="img" aria-labelledby="title desc">
+<title id="title">Mapa de empatia de Rafael, persona P01</title>
+<desc id="desc">Proto-persona de editor de vídeo esportivo. Seis dimensões sintetizam hipóteses das entregas 1 e 3; a dimensão Ouve permanece não investigada. Não há falas ou observações coletadas.</desc>
+<rect width="1440" height="1240" fill="#f1f5f9"/>
+<g font-family="Arial, sans-serif" fill="#172b42">
+<text x="48" y="60" font-size="32" font-weight="700">Mapa de empatia • Rafael</text>
+<text x="48" y="99" font-size="21">Nome: Rafael • P01 • Editor de vídeo esportivo • Idade: [?] não investigada</text>
+<text x="48" y="137" font-size="19">Obter cortes e metadados com menor esforço manual para continuar a edição em ferramenta externa.</text>
+<text x="48" y="174" font-size="18" fill="#475569">Proto-persona sem validação empírica. [H] Hipótese • [?] Lacuna • Não há falas coletadas.</text>
+<rect x="48" y="206" width="1344" height="940" fill="white" stroke="#94a3b8"/>
+<path d="M48 206 L1392 926 M1392 206 L48 926" stroke="#94a3b8" stroke-dasharray="7 6"/>
+<path d="M48 926 H1392 M720 926 V1146" stroke="#94a3b8"/>
+<circle cx="720" cy="566" r="100" fill="#e2e8f0" stroke="#64748b"/>
+<circle cx="720" cy="535" r="23" fill="#64748b"/>
+<path d="M674 592 Q674 562 720 562 Q766 562 766 592" fill="#64748b"/>
+<text x="720" y="625" text-anchor="middle" font-size="22" font-weight="700">Rafael • P01</text>
+<text x="1150" y="475" text-anchor="middle" font-size="24" font-weight="700">O que vê?</text>
+<text x="1150" y="510" text-anchor="middle" font-size="19">[H] Gravações extensas e lances para selecionar.</text>
+<text x="1150" y="537" text-anchor="middle" font-size="19">No uso proposto, vê o estado de cada partida</text>
+<text x="1150" y="564" text-anchor="middle" font-size="19">e confere os cortes gerados.</text>
+<text x="1150" y="591" text-anchor="middle" font-size="16">Base: H11, H25 e H32</text>
+<text x="290" y="475" text-anchor="middle" font-size="24" font-weight="700">O que ouve?</text>
+<text x="290" y="510" text-anchor="middle" font-size="19">[?] Orientações, cobranças e comentários da</text>
+<text x="290" y="537" text-anchor="middle" font-size="19">equipe e dos responsáveis editoriais ainda</text>
+<text x="290" y="564" text-anchor="middle" font-size="19">não foram investigados.</text>
+<text x="290" y="591" text-anchor="middle" font-size="16">Base: H14 • lacuna de pesquisa</text>
+<text x="720" y="745" text-anchor="middle" font-size="24" font-weight="700">O que fala e faz?</text>
+<text x="720" y="780" text-anchor="middle" font-size="19">[H] Envia várias partidas e continua outras edições.</text>
+<text x="720" y="807" text-anchor="middle" font-size="19">Revisa uma partida por vez e escolhe os cortes.</text>
+<text x="720" y="834" text-anchor="middle" font-size="19">Recupera omissões no editor externo.</text>
+<text x="720" y="861" text-anchor="middle" font-size="19">[?] Não há falas coletadas.</text>
+<text x="720" y="888" text-anchor="middle" font-size="16">Base: H32 • comportamentos de P01</text>
+<text x="720" y="260" text-anchor="middle" font-size="24" font-weight="700">O que pensa e sente?</text>
+<text x="720" y="295" text-anchor="middle" font-size="19">[H] Preocupa-se com o prazo e com omissões.</text>
+<text x="720" y="322" text-anchor="middle" font-size="19">Aceita revisar cortes sem interesse para reduzir</text>
+<text x="720" y="349" text-anchor="middle" font-size="19">o risco de deixar um lance importante de fora.</text>
+<text x="720" y="376" text-anchor="middle" font-size="16">Base: H11 e H30</text>
+<text x="385" y="985" text-anchor="middle" font-size="24" font-weight="700">Quais são as dores?</text>
+<text x="385" y="1020" text-anchor="middle" font-size="19">[H] Seleção manual demorada, cortes sem</text>
+<text x="385" y="1047" text-anchor="middle" font-size="19">contexto, omissões e retrabalho.</text>
+<text x="385" y="1074" text-anchor="middle" font-size="19">Quando há falha, precisa entender a causa</text>
+<text x="385" y="1101" text-anchor="middle" font-size="19">e como continuar.</text>
+<text x="385" y="1128" text-anchor="middle" font-size="16">Base: H01, H10, H11, H16 e H26</text>
+<text x="1055" y="985" text-anchor="middle" font-size="24" font-weight="700">Quais são as necessidades?</text>
+<text x="1055" y="1020" text-anchor="middle" font-size="19">[H] Entregar no prazo lances relevantes e</text>
+<text x="1055" y="1047" text-anchor="middle" font-size="19">contextualizados, com menos busca e corte manual.</text>
+<text x="1055" y="1074" text-anchor="middle" font-size="19">Continuar outros trabalhos durante o</text>
+<text x="1055" y="1101" text-anchor="middle" font-size="19">processamento das partidas.</text>
+<text x="1055" y="1128" text-anchor="middle" font-size="16">Base: H06, H28 e H32</text>
+<text x="48" y="1183" font-size="17" fill="#475569">Modelo: CC8122-Personas, slides 11 e 12. Fontes: Entrega 1, P01 e hipóteses H30 a H32.</text>
+<text x="48" y="1212" font-size="17" fill="#475569">Síntese da equipe • 16/09/2026 • As descrições representam hipóteses, não resultados de pesquisa.</text>
+</g></svg>
