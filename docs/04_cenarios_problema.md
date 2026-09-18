@@ -38,8 +38,6 @@ Essa é a premissa definida pelo autor para C01. A duração expressa como "hora
 
 ### 2. Questões de refinamento
 
-O PDF de referência apresenta sete elementos de cenário, mas não define uma taxonomia de perguntas. As questões abaixo estão organizadas por esses elementos. As respostas adotadas vêm da ficha de P01 e das decisões narrativas discutidas e confirmadas com Pedro durante o refinamento de C01. Essa confirmação estabelece o cenário pretendido pelo autor; não constitui validação com usuários.
-
 | Elemento | Questão que a premissa deixa em aberto | Resposta adotada para a narrativa e origem | O que investigar com usuários |
 |---|---|---|---|
 | Ambiente/contexto | Em que condições Rafael faz a seleção? | Um dia de trabalho com várias gravações de partidas encerradas, na sala de edição pouco iluminada da produtora, com computador e tela ampla. Contexto de P01, H12/H13, e recorte diário confirmado pelo autor. O prazo é uma pressão de fundo, sem horário exato. | Quantidade e duração das gravações, tempo disponível e condições reais de trabalho. |
