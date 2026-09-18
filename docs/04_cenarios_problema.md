@@ -1,7 +1,7 @@
 # Entrega 4 — Cenários de análise/problema
 
 **Data:** 17/09/2026
-**Status:** em elaboração; C01 desenvolvido como hipótese, demais cenários pendentes
+**Status:** 🟨 em andamento; C01 desenvolvido como hipótese, demais cenários pendentes
 **Responsabilidade:** 1 análise de cenário por integrante
 
 ## Objetivo da atividade
@@ -24,10 +24,10 @@ Se o integrante escolher um novo problema/situação, explique por que ele passo
 
 ## Cenário C01 — Seleção manual de melhores momentos sob pressão de prazo
 
-**Autor:** Pedro Alexandre Custódio Silva, 22.123.049-3
-**Persona relacionada:** [P01, Rafael](03_personas_contexto_jornada.md#persona-p01--rafael)
-**Necessidade relacionada:** R01, reduzir o esforço manual e revisar a seleção com contexto
-**Situação de origem:** [Entrega 1, seção 4.5](01_conhecendo_o_problema.md#45-conte-uma-situação-concreta), H11
+**Autor:** Pedro Alexandre Custódio Silva, 22.123.049-3  
+**Persona relacionada:** [P01, Rafael](03_personas_contexto_jornada.md#persona-p01--rafael)  
+**Necessidade relacionada:** R01, reduzir o esforço manual e revisar a seleção com contexto  
+**Situação de origem:** [Entrega 1, seção 4.5](01_conhecendo_o_problema.md#45-conte-uma-situação-concreta), H11  
 **Hipóteses relacionadas:** H01, H06, H09, H10, H11, H12, H13, H17, H28 e H30
 
 ### 1. Cenário inicial
@@ -67,8 +67,6 @@ Os parágrafos identificados com **[NOVO]** desenvolvem a premissa inicial. Os d
 **[NOVO]** Rafael termina as seleções das partidas recebidas e segue para a montagem exausto, com menos tempo disponível para concluir os vídeos. Conseguiu revisar os trechos escolhidos, mas essa conferência não elimina sua dúvida sobre possíveis lances ignorados durante os avanços. Rever integralmente as gravações exigiria mais tempo e atenção. Ao encerrar a seleção, leva consigo essa incerteza, além do desgaste acumulado e do tempo gasto refazendo cortes.
 
 ### 4. Elementos extraídos
-
-A organização segue os elementos apresentados na página 4 do [PDF da aula](../.ref/CC8122-Cenario%20Analise%20Problema%20%281%29.pdf), atribuído a Barbosa e Silva, 2010.
 
 | Elemento | Evidência no cenário |
 |---|---|
