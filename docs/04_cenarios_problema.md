@@ -22,25 +22,31 @@ A interface da disciplina aparecerá somente depois, nos cenários de interaçã
 
 Se o integrante escolher um novo problema/situação, explique por que ele passou a ser relevante e indique a evidência que motivou sua inclusão.
 
-## Cenário C01 — {{título}}
+## Cenário C02 — Controle do Processo Editorial Engessado
 
-**Autor(a):** {{nome — matrícula}}  
-**Persona(s) relacionada(s):** {{P01}}  
-**Necessidade relacionada:** {{R01}}  
+**Autor(a):** Lucas Roberto Boccia dos Santos, 22.123.012-1
+**Persona(s) relacionada(s):** PO2
+**Necessidade relacionada:** R02 - Manter o controle e supervisão sobre todo o processo editorial e trabalho dos editores  
 **Situação concreta da Entrega 1 relacionada:** {{seção 4.4 / H01 / outra ou “nova situação justificada”}}  
 **Hipóteses ainda presentes:** {{H01, H02 ou —}}
 
 ### 1. Cenário inicial
 
-{{narrativa}}
+Arnaldo é editor-chefe de uma emissora esportiva e tem como dever supervisionar o trabalho dos editores e garantir a fluidez do processo editorial. Hoje, passa horas por dia andando pelas salas de edição, conversando com editores e tentando manter controle sobre o trabalho manual que todos estão desenvolvendo, tendo que chancelar decisões editoriais em meio a prazos e epxectativas de entrega, sendo o responsável maior pelo conteúdo final publicado.
 
 ### 2. Questões de refinamento
 
 Use os tipos de questões/taxonomia definidos na aula. As perguntas devem revelar informações **ainda ausentes** do cenário, não repetir o que já foi respondido.
 
-| # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
-|---|---|---|---|
-| Q1 | {{...}} | {{...}} | {{...}} |
+| Elemento | Questão que a premissa deixa em aberto | Resposta adotada para a narrativa e origem | Contexto | O que investigar com usuários |
+|---|---|---|---|---|
+| Ambiente/contexto | Em que condições Arnaldo precisa controlar o processo atual? | Um dia de trabalho com diversos editores trabalhando na edição de múltiplas partidas diferentes, muitas vezes não relacionadas entre si, percorrendo a sala de edição e olhando as diferentes telas para monitorar o que está sendo feito. | Contexto de P02. | Quantidade média de atividades acompanhadas simultaneamente, tipo de decisões a chancelar, condições reais de trabalho |
+| Ator | A dificuldade decorre de falta de entendimento do processo? | Arnaldo é um editor-chefe experiente, que já atua na função há anos. A dificuldade é manter a atenção e coerência enquanto avalia diversos processos simultaneamente, com pouco tempo para chancelar decisões editoriais. | P02 | Experiência, como esse processo já evoluiu com o tempo e como a demanda cada vez maior tem o transformado |
+| Objetivo | O que precisa estar pronto ao final desta atividade? | O conteúdo editado deve ter sido publicado na internet de acordo com as normas e preferências da emissora, processo chancelado pelo editor-chefe | PO2 | Critérios editoriais, processo de publicação. |
+| Planejamento | Como pretende monitorar e auditorar o processo? | Acompanha o trabalho de vários editores ao mesmo tempo, está em contato constante com os mesmos e procura manter anotações das questões que considera de maior relevância, garantindo que o processo siga conforme o esperado e desejado pela emissora. | PO2 | Ordem efetiva, uso de anotações e tratamento de trechos duvidosos. |
+| Ações | Como aprova e chancela (ou não) decisões? | Possui conhecimento pleno das normas, exigências e necessidades da emissora. Baseia suas decisões nestas e na sua experiência no ofício. Tem a palavra final sobre o trabalho produzido pelos editores. | PO2 | Quais fatores e situações costumam gerar a necessidade de intervenção por parte do editor-chefe. |
+| Eventos | Que ocorrência torna o problema visível? | Na revisão de uma das últimas partidas do dia, a reprodução de um corte começa com a finalização e deixa de fora a construção da jogada. Episódio de H11 escolhido com o autor para tornar visível a queda de qualidade. | Ocorrência e frequência de cortes inadequados e como são percebidos. |
+| Avaliação | Como Rafael interpreta o corte e decide o próximo passo? | Julga que falta contexto, volta ao original e amplia o trecho. Ao final, distingue a qualidade dos cortes revisados da dúvida sobre lances que podem ter passado despercebidos. Construção hipotética apoiada em H09/H10/H11. | Como confere a cobertura da partida e equilibra revisão, cansaço e prazo. |
 
 ### 3. Cenário refinado
 
