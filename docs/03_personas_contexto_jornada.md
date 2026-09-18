@@ -84,18 +84,16 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), [Entrega 2](02_analise_concorr
 
 Essas decisões são iniciais e deverão ser revistas com a coleta de dados.
 
-### Persona P02 — Administrador/Editor-Chefe
+### Persona P02 — Arnaldo - Administrador/Editor-Chefe
 
 **Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1
-**Tipo:** [H] stakeholder indireto, responsável editorial que recebe os resultados fora da interface, H33.
+**Tipo:** Secundário
 
 **Base de evidências:** proto-persona proposta pelo autor na PR #5, ainda sem validação com usuários.
 
 **Base herdada:** H14, H22 e H23 admitem entrega a responsáveis editoriais e decisões posteriores sobre os resultados. A supervisão de P02 é uma derivação exploratória dessa base.
 
 **Hipóteses novas da Entrega 3:** H33, relação com os resultados; H34, experiência tecnológica específica de P02; H35, possível necessidade de auditoria editorial. Acompanhamento no [registro de hipóteses](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
-
-A participação indireta é a hipótese inicial adotada com Pedro ao aplicar AC-016, compatível com o recorte da Entrega 1 e ainda a validar com usuários. P02 também pode vir a usar a interface para acompanhar resultados. Essa alternativa fica em investigação em H33: quais informações consultaria diretamente e que decisão tomaria a partir delas? O cargo de administrador não implica acesso administrativo ao produto.
 
 ![Avatar ilustrativo da persona P02, administrador/editor-chefe](../assets/03_personas/p02-avatar.png)
 
