@@ -1,7 +1,7 @@
 # Entrega 4 — Cenários de análise/problema
 
 **Data:** 17/09/2026
-**Status:** 🟨 em andamento; C01 e C02 desenvolvidos como hipótese, demais cenários pendentes
+**Status:** 🟨 em andamento; C01 desenvolvido como hipótese, demais cenários pendentes
 **Responsabilidade:** 1 análise de cenário por integrante
 
 ## Objetivo da atividade
@@ -159,8 +159,17 @@ Ao modelar o uso proposto, a relação R03 liga essa necessidade ao consumo qual
 A coleta de dados (para a [Entrega 7](07_coleta_dados.md)) deverá investigar a quantidade média de editores e partidas supervisionadas ao mesmo tempo; quais critérios e diretrizes orientam a decisão de chancelar ou vetar um lance; que tipo de informação mínima o editor-chefe precisa consultar para aprovar um corte com segurança; com que frequência ocorrem aprovações sob pressão ou erros perceptíveis pelo público; e como são tratadas as divergências e retrabalhos na equipe.
 
 O valor a investigar para o projeto é conferir rastreabilidade, identificação e contexto aos lances gerados, facilitando a supervisão e reduzindo o risco de decisões arbitrárias ou desinformadas. C02 evidencia que a tecnologia do TCC deve apoiar o fluxo de revisão humana com metadados claros, e não automatizar a política editorial nem substituir o papel do editor-chefe na emissora.
+=======
+### Referência conceitual
+
+Material de aula, *Cenários de análise/problema*, arquivo disponível em `.ref/`. As páginas 3 e 4 definem a narrativa e seus elementos; as páginas 5 e 6 exemplificam ações, dificuldades e consequências; a página 7 orienta a elaboração da atividade. O PDF atribui o conteúdo a Barbosa e Silva, 2010. A estrutura de cenário inicial, questões e refinamento vem do roteiro deste repositório.
+
+Os demais integrantes devem acrescentar seus cenários com autoria própria. C01 não substitui as análises dos outros membros do grupo.
+
 
 ## Checklist
+
+Checklist da equipe. Os itens permanecem abertos até a incorporação e revisão dos cenários dos demais integrantes. C01 já contém narrativa refinada, os sete elementos do PDF e vínculo com R01.
 
 - [ ] Há um cenário completo por integrante.
 - [x] Cada cenário tem título, ator, objetivo, contexto e problema.
