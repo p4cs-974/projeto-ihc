@@ -84,7 +84,7 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), [Entrega 2](02_analise_concorr
 
 Essas decisões são iniciais e deverão ser revistas com a coleta de dados.
 
-### Persona P02 — Arnaldo - Administrador/Editor-Chefe
+### Persona P02 — Arnaldo
 
 **Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1
 **Tipo:** Secundário

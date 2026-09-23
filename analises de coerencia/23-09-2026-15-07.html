@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Análise de Coerência — Entrega 4: Cenários de Análise/Problema (Reavaliação Pós-Ajustes)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --fg: #171717;
+      --muted: #555;
+      --panel: #f0f0f0;
+      --border: #bbb;
+      --tag-high-bg: #fee2e2;
+      --tag-high-fg: #991b1b;
+      --tag-med-bg: #fef3c7;
+      --tag-med-fg: #92400e;
+      --tag-low-bg: #e0f2fe;
+      --tag-low-fg: #075985;
+      --tag-pending-bg: #f3f4f6;
+      --tag-pending-fg: #374151;
+      --tag-applied-bg: #dcfce7;
+      --tag-applied-fg: #166534;
+      --tag-discarded-bg: #f3f4f6;
+      --tag-discarded-fg: #6b7280;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --fg: #e5e5e5;
+        --muted: #aaa;
+        --panel: #1e1e1e;
+        --border: #444;
+        --tag-high-bg: #450a0a;
+        --tag-high-fg: #fecaca;
+        --tag-med-bg: #451a03;
+        --tag-med-fg: #fde68a;
+        --tag-low-bg: #082f49;
+        --tag-low-fg: #bae6fd;
+        --tag-pending-bg: #27272a;
+        --tag-pending-fg: #e4e4e7;
+        --tag-applied-bg: #14532d;
+        --tag-applied-fg: #bbf7d0;
+        --tag-discarded-bg: #27272a;
+        --tag-discarded-fg: #9ca3af;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 32px 24px;
+    }
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    h1 { font-size: 1.85rem; line-height: 1.25; margin: .5rem 0; }
+    h2 { font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: .3rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.2rem; }
+    h4 { font-size: 1rem; margin-bottom: .25rem; margin-top: 1rem; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 1.5rem 0;
+      padding: 10px 14px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    nav a {
+      color: inherit;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 22px;
+      margin: 24px 0;
+      break-inside: avoid;
+    }
+    article.high { border-left: 6px solid #dc2626; }
+    article.medium { border-left: 6px solid #d97706; }
+    article.low { border-left: 6px solid #0284c7; }
+    p, li, td, code { overflow-wrap: anywhere; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: .92em;
+      background: rgba(125, 125, 125, 0.15);
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    a { color: inherit; }
+    li { margin: .4rem 0; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 600px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: rgba(125, 125, 125, 0.1);
+      font-weight: 600;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 6px 0;
+    }
+    details { margin: .5rem 0; }
+    .meta { color: var(--muted); font-size: .92rem; }
+    .tags {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+      font-size: .82rem;
+      font-weight: 600;
+    }
+    .tag {
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .tag-high { background: var(--tag-high-bg); color: var(--tag-high-fg); }
+    .tag-med { background: var(--tag-med-bg); color: var(--tag-med-fg); }
+    .tag-low { background: var(--tag-low-bg); color: var(--tag-low-fg); }
+    .tag-pending { background: var(--tag-pending-bg); color: var(--tag-pending-fg); border: 1px solid var(--border); }
+    .tag-applied { background: var(--tag-applied-bg); color: var(--tag-applied-fg); }
+    .tag-discarded { background: var(--tag-discarded-bg); color: var(--tag-discarded-fg); border: 1px dashed var(--border); }
+    .callout {
+      padding: 14px 18px;
+      border-radius: 4px;
+      background: var(--panel);
+      border-left: 4px solid #16a34a;
+      margin: 1.2rem 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="meta">Gemini 3.8 Flash (alto nível de raciocínio) no Antigravity CLI.</p>
+    <h1>Análise de Coerência — Entrega 4: Cenários de Análise/Problema (Reavaliação Pós-Ajustes)</h1>
+    <p class="meta">23/09/2026 às 15:07 · America/Sao_Paulo · UTC-03:00</p>
+    <p><strong>Status da análise: Sem achados.</strong> 0 tickets novos abertos, 0 tickets pendentes no escopo delimitado. Histórico anterior: 4 tickets aplicados (AC-032, AC-034, AC-035, AC-036) e 1 ticket fora do escopo desta rodada por solicitação explícita do usuário (AC-033 / ausência de C03).</p>
+    <p><strong>Escopo da análise:</strong> Reavaliação de conformidade e coerência documental do arquivo <code>docs/04_cenarios_problema.md</code> e sua rastreabilidade no repositório após o commit <code>27cf2c2</code> (&ldquo;correcoes pos-analise de coerencia&rdquo;). Conforme instrução expressa do usuário, <strong>a pendência de elaboração do Cenário C03 (atribuído a Giovanni Chahin Morassi / Persona P03) foi desconsiderada como motivo de apontamento de inconsistência</strong> nesta rodada. Todos os arquivos do repositório foram inventariados e contextualizados de modo somente de leitura.</p>
+  </header>
+
+  <nav aria-label="Seções">
+    <a href="#conclusao">Conclusão geral</a>
+    <a href="#pontos-alinhados">Pontos já alinhados</a>
+    <a href="#mapa">Mapa de afirmações e dependências</a>
+    <a href="#revalidacao-tickets">Revalidação de tickets anteriores</a>
+    <a href="#tickets">Novos tickets de coerência</a>
+    <a href="#cobertura">Cobertura e inventário</a>
+    <a href="#limites">Limitações e fontes externas</a>
+    <a href="#verificacao">Verificação</a>
+  </nav>
+
+  <section id="conclusao">
+    <h2>Conclusão geral</h2>
+    <div class="callout">
+      <p><strong>Diagnóstico: Entrega alinhada e tecnicamente consistente sob a delimitação de escopo solicitada.</strong></p>
+      <p>A auditoria confirma que o documento <code>docs/04_cenarios_problema.md</code> atinge plena coerência interna e externa. Os quatro apontamentos técnicos da análise das 14:04 (AC-032, AC-034, AC-035 e AC-036) foram integralmente sanados no commit <code>27cf2c2</code>. Abstraindo-se temporariamente a elaboração pendente do Cenário C03 (conforme orientação direta do usuário), os cenários C01 (Rafael / P01) e C02 (Arnaldo / P02) cumprem com rigor a metodologia de Barbosa e Silva (2010), respeitam a fronteira entre problema humano e solução de interface, e mantêm perfeita rastreabilidade com a matriz de requisitos e com as hipóteses da Entrega 1.</p>
+    </div>
+    <p>Os principais resultados da verificação pós-correção são:</p>
+    <ol>
+      <li><strong>Limpeza completa de resíduos sintáticos:</strong> O marcador de mesclagem git (<code>=======</code>) na linha 162 foi removido, restaurando a conformidade estrutural do documento Markdown (resolvendo <strong>AC-032</strong>);</li>
+      <li><strong>Alinhamento dos metadados de status e checklist:</strong> O cabeçalho agora reflete com precisão que tanto C01 quanto C02 foram desenvolvidos como hipóteses, deixando transparente a pendência exclusiva de C03. As notas explicativas do checklist e da referência teórica foram corrigidas para reconhecer o trabalho já consolidado em C01 e C02 (resolvendo <strong>AC-034</strong>);</li>
+      <li><strong>Resolução hipertextual de P02:</strong> A normalização do título da persona em <code>docs/03_personas_contexto_jornada.md</code> para <code>### Persona P02 — Arnaldo</code> estabeleceu o slug estável <code>#persona-p02--arnaldo</code>, sincronizado tanto em <code>docs/04_cenarios_problema.md</code> quanto em <code>RASTREABILIDADE.md</code>, tornando todos os links navegáveis e testados (resolvendo <strong>AC-035</strong>);</li>
+      <li><strong>Eliminação de caminho inexistente e fundamentação formal:</strong> A menção ao diretório não versionado <code>.ref/</code> foi removida e substituída por citação à literatura catalogada em <code>BIBLIOGRAFIA.md</code> (Barbosa e Silva, 2010), mantendo a rastreabilidade bibliográfica auditável (resolvendo <strong>AC-036</strong>);</li>
+      <li><strong>Delimitação de C03:</strong> A ausência de C03 permanece documentada no cabeçalho e no primeiro item do checklist (<code>- [ ] Há um cenário completo por integrante.</code>) como um fato conhecido e aguardado da dinâmica de grupo, sem gerar novos tickets nem invalidar o conteúdo já aprovado de C01 e C02.</li>
+    </ol>
+  </section>
+
+  <section id="pontos-alinhados">
+    <h2>Pontos já alinhados</h2>
+    <ul>
+      <li><strong>Fidelidade estrita ao conceito de cenário de análise/problema:</strong> Tanto C01 quanto C02 narram o contexto de trabalho humano contemporâneo com suas dores, gargalos, pressões e rupturas cotidianas. Nenhum dos dois cenários comete o erro clássico de antecipar interfaces, botões futuros, IA autônoma ou funcionalidades do TCC como se já existissem no momento da crise descrita.</li>
+      <li><strong>Estrutura canônica em 5 partes por cenário:</strong>
+        <ol>
+          <li><em>Cenário inicial:</em> premissa concisa do problema;</li>
+          <li><em>Questões de refinamento:</em> tabela que decompõe o problema e explicita os pontos em aberto;</li>
+          <li><em>Cenário refinado:</em> narrativa detalhada com parágrafos identificados com <code>**[NOVO]**</code>;</li>
+          <li><em>Elementos extraídos:</em> quadro sinóptico cobrindo os 7 elementos fundamentais de Barbosa e Silva (Ambiente/contexto, Ator, Objetivo, Planejamento, Ações, Eventos, Avaliação) e os 3 complementares (Recursos/informações, Problemas/rupturas, Consequências), com separação explícita entre ações observáveis e atividades mentais;</li>
+          <li><em>Implicações para as próximas entregas:</em> indicação clara da tarefa de origem para a Entrega 5 (HTA/GOMS/CTT), conexão com o mapeamento da Entrega 7 (coleta empírica) e delimitação do valor a investigar.</li>
+        </ol>
+      </li>
+      <li><strong>Rastreabilidade comprovada e hipóteses vinculadas:</strong>
+        <ul>
+          <li><strong>C01:</strong> Autor Pedro Custódio (22.123.049-3), Persona P01 (Rafael), necessidade R01, origem na seção 4.5 da Entrega 1 e hipótese H11, vinculado a H01, H06, H09, H10, H11, H12, H13, H17, H28 e H30;</li>
+          <li><strong>C02:</strong> Autor Lucas Roberto (22.123.012-1), Persona P02 (Arnaldo), necessidade R03, origem na seção 5.4 da Entrega 1 e hipótese H14, vinculado a H04, H10, H14, H16, H20, H22, H23, H33, H34 e H35.</li>
+        </ul>
+      </li>
+      <li><strong>Delimitação correta do escopo de IHC versus escopo do TCC:</strong> Ambos os cenários reforçam que o sistema de IHC fornecerá suporte interativo focado na revisão, seleção e download de cortes com metadados temporais e contextuais (A04). P02 atua inicialmente como destinatário externo/indireto desses dados, sem necessidade de implementação de CMS, automação editorial ou ferramentas de edição complexas, que permanecem sob domínio de softwares terceiros ou da política humana da emissora.</li>
+      <li><strong>Integridade dos links locais e navegação hipertextual:</strong> Todos os links para <code>01_conhecendo_o_problema.md</code>, <code>03_personas_contexto_jornada.md</code>, <code>05_analise_tarefas.md</code>, <code>07_coleta_dados.md</code> e <code>../BIBLIOGRAFIA.md</code> foram resolvidos com sucesso e apontam para seções e arquivos válidos.</li>
+    </ul>
+  </section>
+
+  <section id="mapa">
+    <h2>Mapa de afirmações e dependências</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Elemento / Afirmação em <code>docs/04</code></th>
+            <th>Origem e Rastreabilidade no Repositório</th>
+            <th>Status de Coerência</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>C01: Rafael seleciona lances manualmente de partidas gravadas sob pressão de prazo e sofre com desgaste e cortes sem contexto</td>
+            <td><code>docs/01</code>, seção 4.5 e H11; <code>docs/03</code>, Persona P01; <code>RASTREABILIDADE.md</code>, R01</td>
+            <td><strong>Alinhado.</strong> Hipótese narrativa sólida, sem conflito com o recorte de IHC.</td>
+          </tr>
+          <tr>
+            <td>C02: Arnaldo supervisiona ilhas de edição, chancela sob pressão e enfrenta crise por vídeo sem contexto publicado</td>
+            <td><code>docs/01</code>, seção 5.4 e H14; <code>docs/03</code>, Persona P02; <code>RASTREABILIDADE.md</code>, R03</td>
+            <td><strong>Alinhado.</strong> Cenário plenamente estruturado, hipóteses de supervisão e auditoria confirmadas.</td>
+          </tr>
+          <tr>
+            <td>C03: Cenário focado na produção amadora e compilações de jogadores (P03, Jorginho Jr.)</td>
+            <td><code>docs/01</code>, seções 2.3 e 7.1; <code>docs/03</code>, Persona P03; <code>RASTREABILIDADE.md</code>, R04 e R05</td>
+            <td><strong>Fora de escopo desta rodada.</strong> Não implementado por Giovanni Chahin Morassi; desconsiderado por instrução expressa do usuário.</td>
+          </tr>
+          <tr>
+            <td>Status do documento registra C01 e C02 desenvolvidos e C03 pendente</td>
+            <td><code>docs/04</code>, linha 4 e notas das linhas 167 e 172</td>
+            <td><strong>Alinhado.</strong> Metadados refletem a situação exata da entrega.</td>
+          </tr>
+          <tr>
+            <td>Âncora hipertextual para a Persona P02 (<code>#persona-p02--arnaldo</code>)</td>
+            <td><code>docs/04</code>, linha 97; <code>RASTREABILIDADE.md</code>, linha 82; <code>docs/03</code>, linha 87</td>
+            <td><strong>Alinhado.</strong> Slug padronizado e validado após ajuste em <code>docs/03</code>.</td>
+          </tr>
+          <tr>
+            <td>Referência conceitual a Barbosa e Silva (2010)</td>
+            <td><code>docs/04</code>, linha 165; <code>BIBLIOGRAFIA.md</code>, linha 7</td>
+            <td><strong>Alinhado.</strong> Referência formal catalogada no repositório.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="revalidacao-tickets">
+    <h2>Revalidação de tickets anteriores</h2>
+    <p>Acompanhamento do ciclo de vida dos tickets levantados nas rodadas anteriores sobre a Entrega 4:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket</th>
+            <th>Descrição Resumida</th>
+            <th>Status Anterior</th>
+            <th>Situação Atual (Commit <code>27cf2c2</code>)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>AC-028</strong></td>
+            <td>Substituição indevida de C01 ao iniciar C02</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> C01 e C02 coexistem pacificamente no documento.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-029</strong></td>
+            <td>Vinculação equivocada da necessidade R02 a P02</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> C02 e RASTREABILIDADE.md associam P02 a R03.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-030</strong></td>
+            <td>Itens 3, 4 e 5 de C02 pendentes</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> Todas as seções de C02 estão desenvolvidas com alto nível de detalhe.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-031</strong></td>
+            <td>Grafia &ldquo;PO2&rdquo; e inconsistências de autoria</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> Identificadores e dados de matrícula normalizados.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-032</strong></td>
+            <td>Marcador de conflito git (<code>=======</code>) na linha 162</td>
+            <td>Pendente &rarr; Aplicado</td>
+            <td><strong>Aplicado e verificado.</strong> Linha residual de merge removida no commit <code>27cf2c2</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-033</strong></td>
+            <td>Ausência de C03 (Giovanni Chahin Morassi / P03)</td>
+            <td>Pendente</td>
+            <td><strong>Suspenso / Fora de escopo.</strong> O usuário determinou ignorar este ponto nesta rodada de análise.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-034</strong></td>
+            <td>Metadados e notas de checklist desatualizados sobre C02</td>
+            <td>Pendente &rarr; Aplicado</td>
+            <td><strong>Aplicado e verificado.</strong> Cabeçalho e notas ajustados para refletir C01 e C02 desenvolvidos.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-035</strong></td>
+            <td>Divergência de âncora do link de P02 em <code>docs/03</code></td>
+            <td>Pendente &rarr; Aplicado</td>
+            <td><strong>Aplicado e verificado.</strong> Cabeçalho em <code>docs/03</code> e links em <code>docs/04</code> e <code>RASTREABILIDADE.md</code> unificados em <code>#persona-p02--arnaldo</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-036</strong></td>
+            <td>Menção a diretório inexistente <code>.ref/</code></td>
+            <td>Pendente &rarr; Aplicado</td>
+            <td><strong>Aplicado e verificado.</strong> Substituído por referência a Barbosa e Silva (2010) via <code>BIBLIOGRAFIA.md</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tickets">
+    <h2>Novos tickets de coerência</h2>
+    <div class="callout">
+      <p><strong>Nenhum novo ticket gerado nesta rodada.</strong></p>
+      <p>Todas as verificações de integridade sintática, referencial, semântica e metodológica em <code>docs/04_cenarios_problema.md</code> foram aprovadas sem inconformidades, considerando a exclusão expressa da pendência do cenário C03.</p>
+    </div>
+  </section>
+
+  <section id="cobertura">
+    <h2>Cobertura e inventário</h2>
+    <p>O repositório contém 191 arquivos no total (130 arquivos fora do diretório interno <code>.git</code>). Todas as 31 fontes textuais em Markdown foram contabilizadas e lidas no escopo global de contexto. Os 7 relatórios anteriores de auditoria documental foram revisados para controle de identificadores e revalidação de ciclo de vida. Nenhum material necessário esteve inacessível.</p>
+
+    <details>
+      <summary>Fontes textuais lidas na íntegra (31 arquivos Markdown)</summary>
+      <ul>
+        <li><code>.agents/skills/analise-de-coerencia/SKILL.md</code></li>
+        <li><code>.agents/skills/html-communication/SKILL.md</code></li>
+        <li><code>.github/PULL_REQUEST_TEMPLATE.md</code></li>
+        <li><code>BIBLIOGRAFIA.md</code></li>
+        <li><code>CHECKLIST_FINAL.md</code></li>
+        <li><code>CONTRIBUTING.md</code></li>
+        <li><code>GUIA_DE_USO.md</code></li>
+        <li><code>GUIA_ESCOPO_IHC.md</code></li>
+        <li><code>RASTREABILIDADE.md</code></li>
+        <li><code>README.md</code></li>
+        <li><code>assets/02_concorrencia/wsc-sports/a.md</code></li>
+        <li><code>assets/README.md</code></li>
+        <li><code>docs/01_conhecendo_o_problema.md</code></li>
+        <li><code>docs/02_analise_concorrencia.md</code></li>
+        <li><code>docs/03_personas_contexto_jornada.md</code></li>
+        <li><code>docs/04_cenarios_problema.md</code> (foco principal da auditoria)</li>
+        <li><code>docs/05_analise_tarefas.md</code></li>
+        <li><code>docs/06_prototipacao_papel.md</code></li>
+        <li><code>docs/07_coleta_dados.md</code></li>
+        <li><code>docs/08_engenharia_usabilidade.md</code></li>
+        <li><code>docs/09_modelo_conceitual.md</code></li>
+        <li><code>docs/10_molic.md</code></li>
+        <li><code>docs/11_figma.md</code></li>
+        <li><code>docs/12_planejamento_avaliacao.md</code></li>
+        <li><code>docs/13_avaliacao_heuristica.md</code></li>
+        <li><code>docs/14_observacao_usuario.md</code></li>
+        <li><code>instrumentos/README.md</code></li>
+        <li><code>instrumentos/formulario_heuristica_modelo.md</code></li>
+        <li><code>instrumentos/planilha_observacao_modelo.md</code></li>
+        <li><code>instrumentos/roteiro_teste_usabilidade.md</code></li>
+        <li><code>instrumentos/termo_consentimento_modelo.md</code></li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Histórico de auditoria e relatórios consultados (7 arquivos HTML locais)</summary>
+      <ul>
+        <li><code>analises de coerencia/analise-de-coerencia-2026-09-03.html</code> (AC-001 a AC-012)</li>
+        <li><code>analises de coerencia/09-09-2026-21-12.html</code> (AC-013 a AC-015)</li>
+        <li><code>analises de coerencia/09-09-2026-22-02.html</code> (AC-016 a AC-019)</li>
+        <li><code>analises de coerencia/16-09-2026-19:49.html</code> (AC-020 a AC-024)</li>
+        <li><code>analises de coerencia/17-09-2026-21-42.html</code> (AC-025 a AC-027)</li>
+        <li><code>analises de coerencia/21-09-2026-20-28.html</code> (AC-028 a AC-031)</li>
+        <li><code>analises de coerencia/23-09-2026-14-04.html</code> (AC-032 a AC-036)</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Arquivos de apoio, mídias e diagramas inspecionados (18 arquivos)</summary>
+      <ul>
+        <li><code>.agents/skills/analise-de-coerencia/agents/openai.yaml</code></li>
+        <li><code>.gitignore</code></li>
+        <li><code>CC8122-Personas (1).pdf</code> (material didático de apoio na raiz)</li>
+        <li><code>assets/03_personas/jorginho-avatar.png</code></li>
+        <li><code>assets/03_personas/p02-avatar.png</code> (avatar de Arnaldo)</li>
+        <li><code>assets/03_personas/rafael-avatar.png</code></li>
+        <li>12 arquivos SVG em <code>assets/</code> (mapa de empatia e diagramas estruturais)</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Exclusões justificadas por categoria (74 arquivos)</summary>
+      <ul>
+        <li><strong>Mídias preexistentes de concorrência (48 arquivos):</strong> capturas de tela e evidências visuais em <code>assets/02_concorrencia/</code> pertencentes à Entrega 2, mantidas intactas;</li>
+        <li><strong>Dados de demonstração do concorrente Cap (17 arquivos):</strong> áudios, vídeos e cursores em <code>assets/02_concorrencia/cap-so/capcut-footage.cap/</code>;</li>
+        <li><strong>Marcadores vazios (9 arquivos):</strong> arquivos <code>.gitkeep</code> em pastas reservadas para próximas fases;</li>
+        <li><strong>Metadados do Git (61 arquivos):</strong> diretório <code>.git/</code> excluído da auditoria de conteúdo.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="limites">
+    <h2>Limitações e fontes externas</h2>
+    <p>Esta análise documental foi conduzida em modo somente de leitura. A avaliação de C01 e C02 confirmou sua plausibilidade descritiva frente ao domínio de trabalho esportivo e sua rastreabilidade interna, reconhecendo-os formalmente como hipóteses de trabalho que deverão ser submetidas à validação empírica na Entrega 7.</p>
+    <p>A ausência do Cenário C03 não foi tratada como inconformidade nesta auditoria por restrição deliberada e explícita do usuário, mantendo-se a nota de que a entrega da equipe perante a disciplina só estará integralmente fechada quando o terceiro integrante incluir sua análise.</p>
+    <p>Não houve necessidade de consulta a fontes externas via web nesta iteração, pois todas as regras e evidências foram confirmadas a partir da literatura catalogada do projeto (Barbosa e Silva, 2010 em <code>BIBLIOGRAFIA.md</code>) e da integridade dos artefatos versionados no repositório.</p>
+  </section>
+
+  <section id="verificacao">
+    <h2>Verificação</h2>
+    <p>O relatório foi estruturado em HTML5 semântico com estilos CSS embutidos, oferecendo suporte dinâmico a temas claro e escuro, layout responsivo e tabelas acessíveis. Nenhum documento analisado foi alterado durante a auditoria. O controle de identificadores registra o maior ticket anterior como <code>AC-036</code>, com 0 novos tickets abertos nesta rodada.</p>
+    <p class="meta">Limitação de visualização: A ferramenta de preview gráfico em navegador não esteve disponível no ambiente de execução; a integridade estrutural foi validada por meio de verificação direta da sintaxe e dos elementos HTML gerados.</p>
+  </section>
+</main>
+</body>
+</html>

@@ -1,7 +1,7 @@
 # Entrega 4 — Cenários de análise/problema
 
 **Data:** 17/09/2026
-**Status:** 🟨 em andamento; C01 desenvolvido como hipótese, demais cenários pendentes
+**Status:** 🟨 em andamento; C01 e C02 desenvolvidos como hipótese, C03 pendente
 **Responsabilidade:** 1 análise de cenário por integrante
 
 ## Objetivo da atividade
@@ -91,22 +91,92 @@ A coleta de dados deverá investigar quanto tempo se gasta procurando, recortand
 
 O valor a investigar para o projeto é reduzir o esforço de busca e preparação dos trechos, preservando a possibilidade de o editor julgar sua relevância e contexto. C01 não demonstra que uma seleção automática seria completa nem que eliminaria a revisão humana.
 
+## Cenário C02 — Controle do Processo Editorial Engessado
+
+**Autor:** Lucas Roberto Boccia dos Santos, 22.123.012-1  
+**Persona relacionada:** [P02, Arnaldo](03_personas_contexto_jornada.md#persona-p02--arnaldo)  
+**Necessidade relacionada:** R03, receber material identificável e contextualizado para decidir sobre a seleção e supervisão editorial  
+**Situação de origem:** [Entrega 1, seção 5.4](01_conhecendo_o_problema.md#54-existem-fatores-sociais-ou-organizacionais), H14  
+**Hipóteses relacionadas:** H04, H10, H14, H16, H20, H22, H23, H33, H34 e H35
+
+### 1. Cenário inicial
+
+Arnaldo é editor-chefe de uma emissora esportiva e tem como dever supervisionar o trabalho dos editores e garantir a fluidez do processo editorial. Hoje, passa horas por dia andando pelas salas de edição, conversando com editores e tentando manter controle sobre o trabalho manual que todos estão desenvolvendo, tendo que chancelar decisões editoriais em meio a prazos e expectativas de entrega, sendo o responsável maior pelo conteúdo final publicado.
+
+Essa é a premissa definida pelo autor para C02. O relato descreve as dificuldades da supervisão presencial e da aprovação sob demanda. O cenário e seus desdobramentos são hipotéticos e ainda precisam de validação com profissionais.
+
+### 2. Questões de refinamento
+
+| Elemento | Questão que a premissa deixa em aberto | Resposta adotada para a narrativa e origem | Contexto | O que investigar com usuários |
+|---|---|---|---|---|
+| Ambiente/contexto | Em que condições Arnaldo precisa controlar o processo atual? | Um dia de trabalho com diversos editores trabalhando na edição de múltiplas partidas diferentes, muitas vezes não relacionadas entre si, percorrendo a sala de edição e olhando as diferentes telas para monitorar o que está sendo feito. | Contexto de P02. | Quantidade média de atividades acompanhadas simultaneamente, tipo de decisões a chancelar, condições reais de trabalho |
+| Ator | A dificuldade decorre de falta de entendimento do processo? | Arnaldo é um editor-chefe experiente, que já atua na função há anos. A dificuldade é manter a atenção e coerência enquanto avalia diversos processos simultaneamente, com pouco tempo para chancelar decisões editoriais. | P02 | Experiência, como esse processo já evoluiu com o tempo e como a demanda cada vez maior tem o transformado |
+| Objetivo | O que precisa estar pronto ao final desta atividade? | O conteúdo editado deve ter sido publicado na internet de acordo com as normas e preferências da emissora, processo chancelado pelo editor-chefe | P02 | Critérios editoriais, processo de publicação. |
+| Planejamento | Como pretende monitorar e auditorar o processo? | Acompanha o trabalho de vários editores ao mesmo tempo, está em contato constante com os mesmos e procura manter anotações das questões que considera de maior relevância, garantindo que o processo siga conforme o esperado e desejado pela emissora. | P02 | Ordem efetiva, uso de anotações e tratamento de trechos duvidosos. |
+| Ações | Como aprova e chancela (ou não) decisões? | Possui conhecimento pleno das normas, exigências e necessidades da emissora. Baseia suas decisões nestas e na sua experiência no ofício. Tem a palavra final sobre o trabalho produzido pelos editores. | P02 | Quais fatores e situações costumam gerar a necessidade de intervenção por parte do editor-chefe. |
+| Eventos | Que ocorrência torna o problema visível? | Mídias sendo postadas nas redes sociais de forma inconsistente ou com falhas no conteúdo. Aprovar decisões "às cegas", baseado puramente na experiência profissional, pois não tem tempo ou condições de fazer a revisão completa e adequada. | P02 | Qual a frequência desse tipo de ocorrência. Como isso tem escalado com o aumento constante da demanda por esse tipo de conteúdo. |
+| Avaliação | Como toma uma decisão editorial em um momento de pressão? | Necessita chancelar uma decisão definitiva em meio à indecisão dos editores, muitas vezes em pouco tempo. Utiliza sua experiência e aprendizados de casos anteriores para tomar a decisão que julga ser a mais cabível ou segura para a situação. | P02 | Quais os principais fatores levados em consideração na tomada dessas decisões. Quais os principais aprendizados das ocorrências anteriores. |
+
+### 3. Cenário refinado
+
+Os parágrafos identificados com **[NOVO]** desenvolvem a premissa inicial. Os detalhes são uma construção narrativa baseada nas hipóteses acima, sem atribuição de falas ou observações a participantes reais.
+
+**[NOVO]** Em um dia movimentado de rodada de futebol na emissora esportiva, Arnaldo atua como editor-chefe responsável por supervisionar a produção de conteúdo digital e chancelar a publicação dos melhores momentos. Na área de pós-produção, vários editores trabalham simultaneamente em ilhas de edição, cada um encarregado de uma partida diferente. O ritmo é acelerado e há forte expectativa da direção e da audiência para que os vídeos e recortes sejam publicados nas redes sociais logo após o término dos jogos. Arnaldo conhece a fundo a linha editorial e as exigências da emissora, mas o acompanhamento presencial e descentralizado de múltiplas partidas consome horas do seu turno.
+
+**[NOVO]** Para tentar manter o controle, Arnaldo adota a estratégia de circular continuamente pelas ilhas de edição, observando o que está sendo montado diretamente nas telas de cada computador. Ele conversa brevemente com os editores para acompanhar o andamento dos cortes e mantém um bloco de notas manual com anotações pontuais sobre o status de cada partida, os lances pendentes e os alertas prioritários. O objetivo é assegurar que todas as seleções atendam aos padrões de qualidade da emissora antes de serem liberadas para postagem externa.
+
+**[NOVO]** Ao longo da jornada, Arnaldo é constantemente interrompido por editores que solicitam sua presença física para resolver dúvidas e validar escolhas difíceis. Diante da indecisão de um editor sobre a pertinência de um cartão polêmico ou a delimitação de uma finalização perigosa, Arnaldo debruça-se sobre a estação de trabalho, assiste ao trecho isolado na linha do tempo e precisa chancelar uma decisão definitiva em poucos minutos. Como não acompanhou os 90 minutos daquela partida, recorre exclusivamente à sua memória de casos anteriores e à sua intuição profissional para definir se o corte deve ser mantido ou descartado.
+
+**[NOVO]** Conforme várias partidas se encerram quase ao mesmo tempo, a demanda atinge o ápice e o processo se torna caótico e engessado. Os editores acumulam vídeos prontos para revisão simultaneamente, gerando uma fila de espera pela chancela do editor-chefe. Sem tempo hábil para assistir a todos os trechos e com os prazos de publicação estourando, Arnaldo é forçado a aprovar lotes de cortes "às cegas", confiando apenas nas anotações de sua prancheta e no relato verbal rápido dos profissionais, sem condições de verificar se os recortes mantiveram o contexto do lance ou se omissões ocorreram.
+
+**[NOVO]** A fragilidade desse modelo torna-se visível quando um clipe de melhores momentos é publicado nas redes sociais da emissora com grave falha de contexto: a jogada que culminou no gol da vitória foi cortada sem mostrar o lance de falta anterior que gerou intensa reclamação do time adversário. Em poucos minutos, a postagem acumula críticas de torcedores nos comentários questionando a imparcialidade do canal, e a direção da emissora contata Arnaldo cobrando explicações imediatas sobre a aprovação daquele conteúdo incompleto.
+
+**[NOVO]** Arnaldo precisa interromper o acompanhamento dos outros editores para intervir na crise: ordena a retirada imediata do vídeo do ar, senta-se com o editor responsável para refazer o corte recuperando a jogada original e chancela a republicação do material corrigido. O episódio consome um tempo precioso e atrasa as postagens das demais partidas do dia. Ao término do expediente, Arnaldo conclui seu trabalho desgastado e frustrado, percebendo que a supervisão puramente presencial, informal e desprovida de registros contextualizados sobre os cortes não apenas sobrecarrega sua rotina, mas deixa o processo editorial exposto a falhas graves.
+
+### 4. Elementos extraídos
+
+| Elemento | Evidência no cenário |
+|---|---|
+| Ambiente ou contexto | Dia de rodada esportiva na emissora, área de pós-produção com múltiplas ilhas de edição operando simultaneamente em partidas distintas, sob forte pressão de prazo para publicação em redes sociais. |
+| Ator | Arnaldo, P02, editor-chefe experiente encarregado da supervisão editorial e da chancela final das publicações. |
+| Objetivo | Garantir que o conteúdo publicado nas redes sociais e plataformas digitais cumpra as normas da emissora e mantenha alto padrão editorial, chancelado a tempo. |
+| Planejamento | Circular continuamente pelas ilhas de edição, monitorar as telas dos editores, manter anotações manuais sobre o andamento e atender pontualmente às dúvidas editoriais. |
+| Ações | Percorrer as salas de edição, inspecionar telas, dialogar com editores, anotar pendências, assistir a cortes pontuais nas ilhas de edição, chancelar aprovações sob pressão e ordenar a remoção/correção de vídeo com falha. |
+| Eventos | Acúmulo de partidas encerradas simultaneamente, solicitação de aprovação de múltiplos lotes em curto intervalo e publicação nas redes sociais de um corte com contexto incompleto (falta anterior ao gol suprimida). |
+| Avaliação | Julgar a pertinência editorial de lances com base na experiência acumulada, avaliar o risco de aprovar cortes "às cegas" para não atrasar a publicação e reconhecer o impacto negativo do vídeo incompleto publicado. |
+| Recursos e informações | Normas e diretrizes da emissora, estações/telas de edição dos editores, bloco de anotações manual, lances montados nas linhas do tempo e reações imediatas da audiência nas redes sociais. |
+| Problemas e rupturas | Supervisão manual e engessada, interrupções frequentes, sobrecarga cognitiva diante de múltiplos jogos simultâneos, aprovação "às cegas" por falta de tempo e publicação de conteúdo inconsistente. |
+| Consequências | Postagem com falha editorial, exposição negativa da emissora, cobrança da direção, retrabalho emergencial (remover, regravar e republicar) e exaustão com sensação de perda de controle do processo. |
+
+Planejamento e avaliação descrevem atividades mentais; ações descrevem comportamentos observáveis. No episódio da postagem incorreta, a publicação do corte truncado e as críticas da audiência configuram os eventos, o julgamento de que o material é inaceitável e expõe a emissora representa a avaliação, e a ordem de remoção e refação do corte constituem as ações decorrentes.
+
+### 5. Implicações para as próximas entregas
+
+Para a [Entrega 5](05_analise_tarefas.md), C02 oferece como tarefa de origem **supervisionar a seleção editorial e chancelar cortes para publicação**. A análise deve detalhar a rotina de monitoramento das ilhas de edição, o atendimento a dúvidas dos editores, a verificação da cobertura e do contexto dos lances sob pressão de tempo, os momentos de decisão/chancela e o fluxo de contingência diante de falhas de publicação. Essas atividades evidenciam como o julgamento profissional e os critérios de qualidade da emissora se manifestam no trabalho cotidiano e onde o processo manual se torna um gargalo.
+
+Ao modelar o uso proposto, a relação R03 liga essa necessidade ao consumo qualificado dos resultados. Conforme delimitado no projeto, P02 atua inicialmente como stakeholder indireto que recebe cortes identificados por partida e acompanhados de metadados estruturados (timecode, tipo de lance, descrição) fora da interface, após a atividade A04 realizada pelo editor. Isso permite a P02 avaliar e chancelar as seleções antes da montagem final ou solicitar revisões pontuais sem precisar inspecionar vídeos inteiros ou aprovar "às cegas". A eventual existência de uma visualização direta para supervisão ou histórico de auditoria editorial (H35) permanece como proposta exploratória a ser validada, sem previsão de telas de publicação direta ou CMS no escopo de IHC. Os modelos HTA, GOMS e CTT para essas atividades serão desenvolvidos na Entrega 5.
+
+A coleta de dados (para a [Entrega 7](07_coleta_dados.md)) deverá investigar a quantidade média de editores e partidas supervisionadas ao mesmo tempo; quais critérios e diretrizes orientam a decisão de chancelar ou vetar um lance; que tipo de informação mínima o editor-chefe precisa consultar para aprovar um corte com segurança; com que frequência ocorrem aprovações sob pressão ou erros perceptíveis pelo público; e como são tratadas as divergências e retrabalhos na equipe.
+
+O valor a investigar para o projeto é conferir rastreabilidade, identificação e contexto aos lances gerados, facilitando a supervisão e reduzindo o risco de decisões arbitrárias ou desinformadas. C02 evidencia que a tecnologia do TCC deve apoiar o fluxo de revisão humana com metadados claros, e não automatizar a política editorial nem substituir o papel do editor-chefe na emissora.
+
 ### Referência conceitual
 
-Material de aula, *Cenários de análise/problema*, arquivo disponível em `.ref/`. As páginas 3 e 4 definem a narrativa e seus elementos; as páginas 5 e 6 exemplificam ações, dificuldades e consequências; a página 7 orienta a elaboração da atividade. O PDF atribui o conteúdo a Barbosa e Silva, 2010. A estrutura de cenário inicial, questões e refinamento vem do roteiro deste repositório.
+Material de aula, *Cenários de análise/problema*, referenciado a partir de Barbosa e Silva (2010), catalogado em [BIBLIOGRAFIA.md](../BIBLIOGRAFIA.md). As seções teóricas definem a narrativa e seus elementos (ambiente/contexto, atores, objetivos, planejamento, ações, eventos e avaliação), exemplificam ações, dificuldades e consequências, e orientam a elaboração da atividade. A estrutura de cenário inicial, questões e refinamento vem do roteiro deste repositório.
 
-Os demais integrantes devem acrescentar seus cenários com autoria própria. C01 não substitui as análises dos outros membros do grupo.
+O integrante restante (Giovanni) deve acrescentar seu cenário (C03) com autoria própria. C01 e C02 não substituem a análise do terceiro membro do grupo.
+
 
 ## Checklist
 
-Checklist da equipe. Os itens permanecem abertos até a incorporação e revisão dos cenários dos demais integrantes. C01 já contém narrativa refinada, os sete elementos do PDF e vínculo com R01.
+Checklist da equipe. Os itens permanecem abertos até a incorporação e revisão do cenário do integrante restante (C03). C01 e C02 já contêm narrativa refinada, os elementos da taxonomia e vínculos na matriz (R01 e R03).
 
 - [ ] Há um cenário completo por integrante.
-- [ ] Cada cenário tem título, ator, objetivo, contexto e problema.
-- [ ] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
-- [ ] O texto descreve a situação atual, sem antecipar a solução.
-- [ ] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
-- [ ] Questões de refinamento acrescentam informação nova.
-- [ ] O refinamento mostra claramente o que foi adicionado/alterado.
-- [ ] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
-- [ ] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+- [x] Cada cenário tem título, ator, objetivo, contexto e problema.
+- [x] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
+- [x] O texto descreve a situação atual, sem antecipar a solução.
+- [x] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
+- [x] Questões de refinamento acrescentam informação nova.
+- [x] O refinamento mostra claramente o que foi adicionado/alterado.
+- [x] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
+- [x] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
