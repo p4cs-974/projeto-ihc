@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1240" viewBox="0 0 1440 1240" role="img" aria-labelledby="title desc">
+<title id="title">Mapa de empatia de Arnaldo, persona P02</title>
+<desc id="desc">Proto-persona de administrador / editor-chefe. Seis dimensões sintetizam hipóteses das entregas 1 e 3; a dimensão Ouve permanece não investigada. Não há falas ou observações coletadas.</desc>
+<rect width="1440" height="1240" fill="#f1f5f9"/>
+<g font-family="Arial, sans-serif" fill="#172b42">
+<text x="48" y="60" font-size="32" font-weight="700">Mapa de empatia • Arnaldo</text>
+<text x="48" y="99" font-size="21">Nome: Arnaldo • P02 • Administrador / Editor-chefe • Idade: [?] não investigada</text>
+<text x="48" y="137" font-size="19">Supervisionar a produção, chancelar decisões editoriais e evitar aprovações às cegas de cortes esportivos.</text>
+<text x="48" y="174" font-size="18" fill="#475569">Proto-persona sem validação empírica. [H] Hipótese • [?] Lacuna • Não há falas coletadas.</text>
+<rect x="48" y="206" width="1344" height="940" fill="white" stroke="#94a3b8"/>
+<path d="M48 206 L1392 926 M1392 206 L48 926" stroke="#94a3b8" stroke-dasharray="7 6"/>
+<path d="M48 926 H1392 M720 926 V1146" stroke="#94a3b8"/>
+<circle cx="720" cy="566" r="100" fill="#e2e8f0" stroke="#64748b"/>
+<circle cx="720" cy="535" r="23" fill="#64748b"/>
+<path d="M674 592 Q674 562 720 562 Q766 562 766 592" fill="#64748b"/>
+<text x="720" y="625" text-anchor="middle" font-size="22" font-weight="700">Arnaldo • P02</text>
+<text x="1150" y="475" text-anchor="middle" font-size="24" font-weight="700">O que vê?</text>
+<text x="1150" y="510" text-anchor="middle" font-size="19">[H] Várias ilhas de edição operando em paralelo.</text>
+<text x="1150" y="537" text-anchor="middle" font-size="19">No uso proposto, recebe externamente os cortes</text>
+<text x="1150" y="564" text-anchor="middle" font-size="19">identificados por partida e seus metadados.</text>
+<text x="1150" y="591" text-anchor="middle" font-size="16">Base: H14, H25 e H33</text>
+<text x="290" y="475" text-anchor="middle" font-size="24" font-weight="700">O que ouve?</text>
+<text x="290" y="510" text-anchor="middle" font-size="19">[?] Cobranças da direção por agilidade e</text>
+<text x="290" y="537" text-anchor="middle" font-size="19">dúvidas pontuais trazidas pelos editores</text>
+<text x="290" y="564" text-anchor="middle" font-size="19">ainda não foram investigadas com usuários.</text>
+<text x="290" y="591" text-anchor="middle" font-size="16">Base: H14 • lacuna de pesquisa</text>
+<text x="720" y="745" text-anchor="middle" font-size="24" font-weight="700">O que fala e faz?</text>
+<text x="720" y="780" text-anchor="middle" font-size="19">[H] Percorre as salas de edição e atende dúvidas.</text>
+<text x="720" y="807" text-anchor="middle" font-size="19">Recebe cortes e metadados, avalia o material e</text>
+<text x="720" y="834" text-anchor="middle" font-size="19">devolve a chancela ou pedido de revisão externa.</text>
+<text x="720" y="861" text-anchor="middle" font-size="19">[?] Não há falas coletadas.</text>
+<text x="720" y="888" text-anchor="middle" font-size="16">Base: H33 e H34 • comportamentos de P02</text>
+<text x="720" y="260" text-anchor="middle" font-size="24" font-weight="700">O que pensa e sente?</text>
+<text x="720" y="295" text-anchor="middle" font-size="19">[H] Sente sobrecarga ao supervisionar vários jogos.</text>
+<text x="720" y="322" text-anchor="middle" font-size="19">Teme aprovar lotes "às cegas" e ter publicações</text>
+<text x="720" y="349" text-anchor="middle" font-size="19">inconsistentes que prejudiquem a emissora.</text>
+<text x="720" y="376" text-anchor="middle" font-size="16">Base: H22, H23 e H33</text>
+<text x="385" y="985" text-anchor="middle" font-size="24" font-weight="700">Quais são as dores?</text>
+<text x="385" y="1020" text-anchor="middle" font-size="19">[H] Supervisão descentralizada e engessada,</text>
+<text x="385" y="1047" text-anchor="middle" font-size="19">aprovações sob pressão sem ver o contexto,</text>
+<text x="385" y="1074" text-anchor="middle" font-size="19">risco de publicação falha e retrabalho</text>
+<text x="385" y="1101" text-anchor="middle" font-size="19">para gerenciar crises de conteúdo.</text>
+<text x="385" y="1128" text-anchor="middle" font-size="16">Base: H10, H14, H16 e H33</text>
+<text x="1055" y="985" text-anchor="middle" font-size="24" font-weight="700">Quais são as necessidades?</text>
+<text x="1055" y="1020" text-anchor="middle" font-size="19">[H] Receber cortes identificados por partida</text>
+<text x="1055" y="1047" text-anchor="middle" font-size="19">e com metadados para avaliar com agilidade.</text>
+<text x="1055" y="1074" text-anchor="middle" font-size="19">Chancelar decisões com segurança e maior</text>
+<text x="1055" y="1101" text-anchor="middle" font-size="19">fluidez no processo de publicação.</text>
+<text x="1055" y="1128" text-anchor="middle" font-size="16">Base: H22, H25 e H33</text>
+<text x="48" y="1183" font-size="17" fill="#475569">Modelo: CC8122-Personas, slides 11 e 12. Fontes: Entrega 1, P02, Cenário C02 e hipóteses H33 a H35.</text>
+<text x="48" y="1212" font-size="17" fill="#475569">Síntese da equipe • 29/09/2026 • As descrições representam hipóteses, não resultados de pesquisa.</text>
+</g></svg>

@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Análise de Coerência — Entrega 3: Expansão do Mapa de Empatia e Jornada de P02</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --fg: #171717;
+      --muted: #555;
+      --panel: #f0f0f0;
+      --border: #bbb;
+      --tag-high-bg: #fee2e2;
+      --tag-high-fg: #991b1b;
+      --tag-med-bg: #fef3c7;
+      --tag-med-fg: #92400e;
+      --tag-low-bg: #e0f2fe;
+      --tag-low-fg: #075985;
+      --tag-pending-bg: #f3f4f6;
+      --tag-pending-fg: #374151;
+      --tag-applied-bg: #dcfce7;
+      --tag-applied-fg: #166534;
+      --tag-discarded-bg: #f3f4f6;
+      --tag-discarded-fg: #6b7280;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --fg: #e5e5e5;
+        --muted: #aaa;
+        --panel: #1e1e1e;
+        --border: #444;
+        --tag-high-bg: #450a0a;
+        --tag-high-fg: #fecaca;
+        --tag-med-bg: #451a03;
+        --tag-med-fg: #fde68a;
+        --tag-low-bg: #082f49;
+        --tag-low-fg: #bae6fd;
+        --tag-pending-bg: #27272a;
+        --tag-pending-fg: #e4e4e7;
+        --tag-applied-bg: #14532d;
+        --tag-applied-fg: #bbf7d0;
+        --tag-discarded-bg: #27272a;
+        --tag-discarded-fg: #9ca3af;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 32px 24px;
+    }
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    h1 { font-size: 1.85rem; line-height: 1.25; margin: .5rem 0; }
+    h2 { font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: .3rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.2rem; }
+    h4 { font-size: 1rem; margin-bottom: .25rem; margin-top: 1rem; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 1.5rem 0;
+      padding: 10px 14px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    nav a {
+      color: inherit;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 22px;
+      margin: 24px 0;
+      break-inside: avoid;
+    }
+    article.high { border-left: 6px solid #dc2626; }
+    article.medium { border-left: 6px solid #d97706; }
+    article.low { border-left: 6px solid #0284c7; }
+    p, li, td, code { overflow-wrap: anywhere; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: .92em;
+      background: rgba(125, 125, 125, 0.15);
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    a { color: inherit; }
+    li { margin: .4rem 0; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 600px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: rgba(125, 125, 125, 0.1);
+      font-weight: 600;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 6px 0;
+    }
+    details { margin: .5rem 0; }
+    .meta { color: var(--muted); font-size: .92rem; }
+    .tags {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+      font-size: .82rem;
+      font-weight: 600;
+    }
+    .tag {
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .tag-high { background: var(--tag-high-bg); color: var(--tag-high-fg); }
+    .tag-med { background: var(--tag-med-bg); color: var(--tag-med-fg); }
+    .tag-low { background: var(--tag-low-bg); color: var(--tag-low-fg); }
+    .tag-pending { background: var(--tag-pending-bg); color: var(--tag-pending-fg); border: 1px solid var(--border); }
+    .tag-applied { background: var(--tag-applied-bg); color: var(--tag-applied-fg); }
+    .tag-discarded { background: var(--tag-discarded-bg); color: var(--tag-discarded-fg); border: 1px dashed var(--border); }
+    .callout {
+      padding: 14px 18px;
+      border-radius: 4px;
+      background: var(--panel);
+      border-left: 4px solid #16a34a;
+      margin: 1.2rem 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="meta">Gemini 3.8 Flash (alto nível de raciocínio) no Antigravity CLI.</p>
+    <h1>Análise de Coerência — Entrega 3: Expansão do Mapa de Empatia e Jornada de P02</h1>
+    <p class="meta">30/09/2026 às 12:26 · America/Sao_Paulo · UTC-03:00</p>
+    <p><strong>Status da análise: Sem achados.</strong> 0 tickets novos abertos, 0 tickets pendentes no escopo delimitado.</p>
+    <p><strong>Escopo da análise:</strong> Auditoria documental e de rastreabilidade das adições em <code>docs/03_personas_contexto_jornada.md</code> no branch <code>att-lab3-robertinho</code>, especificamente: (1) inclusão da seção do mapa de empatia textual para P02 (Arnaldo); (2) criação e vinculação do artefato vetorial <code>assets/03_personas/mapa_empatia_p02.svg</code>; (3) elaboração da jornada do usuário proposta para P02 com 7 etapas correspondentes; e (4) alinhamento recíproco com <code>docs/01_conhecendo_o_problema.md</code>, <code>docs/04_cenarios_problema.md</code>, <code>RASTREABILIDADE.md</code> e com a bibliografia catalogada (Barbosa e Silva, 2010). Todos os arquivos do repositório foram inventariados e verificados de modo somente de leitura.</p>
+  </header>
+
+  <nav aria-label="Seções">
+    <a href="#conclusao">Conclusão geral</a>
+    <a href="#pontos-alinhados">Pontos já alinhados</a>
+    <a href="#mapa">Mapa de afirmações e dependências</a>
+    <a href="#revalidacao-tickets">Revalidação do histórico de tickets</a>
+    <a href="#tickets">Novos tickets de coerência</a>
+    <a href="#cobertura">Cobertura e inventário</a>
+    <a href="#limites">Limitações e fontes externas</a>
+    <a href="#verificacao">Verificação</a>
+  </nav>
+
+  <section id="conclusao">
+    <h2>Conclusão geral</h2>
+    <div class="callout">
+      <p><strong>Diagnóstico: Entrega 3 plenamente alinhada, consistente e sem quebra de rastreabilidade.</strong></p>
+      <p>A auditoria atesta que as alterações promovidas em <code>docs/03_personas_contexto_jornada.md</code> respeitam integralmente os padrões metodológicos e editoriais consagrados no projeto. O mapa de empatia e a jornada do usuário elaborados para a persona secundária <strong>P02 (Arnaldo)</strong> expandem com precisão a compreensão do papel de supervisão editorial, mantendo-se estritamente articulados ao recorte de IHC (recebimento externo dos resultados pós-atividade A04, consulta contextualizada e chancela para montagem final) sem invadir o domínio técnico do TCC nem inventar telas administrativas não justificadas.</p>
+    </div>
+    <p>Os principais pilares validados nesta análise são:</p>
+    <ol>
+      <li><strong>Consistência metodológica e epistêmica:</strong> O mapa de empatia e a jornada de P02 mantêm rigorosamente os prefixos <code>[H]</code> (hipóteses a validar) e <code>[?]</code> (lacunas de pesquisa não investigadas), abstendo-se de apresentar relatos fictícios como dados empíricos de usuários reais;</li>
+      <li><strong>Paridade visual e integridade vetorial:</strong> O novo arquivo <code>assets/03_personas/mapa_empatia_p02.svg</code> preserva exatamente o mesmo layout geométrico (1440&times;1240), fontes (<code>Arial, sans-serif</code>), hierarquia de tamanhos de texto e códigos de cores de <code>assets/03_personas/mapa_empatia.svg</code> (P01), com XML bem-formado e correspondência textual fidedigna ao quadro Markdown;</li>
+      <li><strong>Paralelismo estrutural nas jornadas:</strong> A jornada de P02 foi estruturada em 7 etapas que espelham organicamente a jornada de P01, incluindo a etapa condicional (etapa 5) de tratamento de divergências ou cortes incompletos, orientada por timecodes e metadados estruturados;</li>
+      <li><strong>Rastreabilidade comprovada de ponta a ponta:</strong> Todas as passagens de P02 foram referenciadas às hipóteses registradas (<code>H10</code>, <code>H14</code>, <code>H16</code>, <code>H22</code>, <code>H23</code>, <code>H25</code>, <code>H33</code>, <code>H34</code>, <code>H35</code>), à relação <code>R03</code> na matriz de rastreabilidade e à narrativa do Cenário <code>C02</code> (em <code>docs/04_cenarios_problema.md</code>);</li>
+      <li><strong>Integridade hipertextual completa:</strong> Todos os 34 links Markdown e 5 referências de imagem do documento foram validados sem ocorrência de referências quebradas ou caminhos órfãos.</li>
+    </ol>
+  </section>
+
+  <section id="pontos-alinhados">
+    <h2>Pontos já alinhados</h2>
+    <ul>
+      <li><strong>Delimitação do papel de P02 no escopo de IHC:</strong> A jornada e o mapa de empatia reforçam a decisão de projeto estabelecida na relação <code>R03</code> e na hipótese <code>H33</code>: Arnaldo atua como consumidor qualificado e externo dos resultados gerados pelo backend do TCC após a revisão e download realizados pelo editor (A04). Não há inclusão prematura de telas de publicação, CMS ou sistemas complexos de permissão na interface de IHC, preservando o escopo focado em enviar, acompanhar, revisar e baixar.</li>
+      <li><strong>Correspondência biunívoca entre SVG e Markdown:</strong> O conteúdo dos 6 quadrantes do arquivo <code>mapa_empatia_p02.svg</code> (O que pensa e sente, O que ouve, O que vê, O que fala e faz, Quais são as dores, Quais são as necessidades) expressa com exatidão os mesmos registros e bases hipotéticas tabulados no documento Markdown, eliminando contradições entre a visualização gráfica e o texto do relatório.</li>
+      <li><strong>Conexão orgânica com o Cenário C02 (Entrega 4):</strong> A dor de &ldquo;aprovações às cegas&rdquo;, a sobrecarga ao acompanhar múltiplas ilhas de edição na rodada, o risco de republicação emergencial por falta de contexto (ex: lance de falta omitido antes do gol) e o valor de timecodes objetivos para direcionar correções são derivados diretamente da narrativa de C02 em <code>docs/04_cenarios_problema.md</code>.</li>
+      <li><strong>Sincronização global dos metadados em <code>docs/03</code>:</strong>
+        <ul>
+          <li>O resumo introdutório pós-tabela de síntese registra que mapas de empatia e jornadas contemplam P01 e P02, mantendo P01 como persona primária;</li>
+          <li>A síntese da seção 4 reconhece que ambos os perfis possuem jornada proposta a validar com usuários;</li>
+          <li>O checklist final teve seus itens atualizados (<code>Os mapas de empatia visuais estão preenchidos e correspondem aos quadros textuais (P01 e P02)</code> e <code>As jornadas do usuário (P01 e P02) possuem etapas, dores e oportunidades</code>);</li>
+          <li>O histórico de revisões recebeu o registro circunstanciado das atualizações efetuadas em 29/09/2026.</li>
+        </ul>
+      </li>
+      <li><strong>Preservação das âncoras hipertextuais:</strong> As âncoras canônicas <code>#persona-p01--rafael</code>, <code>#persona-p02--arnaldo</code> e <code>#persona-p03--jorginho-jr</code> permanecem atreladas às fichas completas das personas na seção 1, garantindo que os links provenientes de <code>docs/04</code> e <code>RASTREABILIDADE.md</code> continuem direcionando para os perfis detalhados sem desvios.</li>
+    </ul>
+  </section>
+
+  <section id="mapa">
+    <h2>Mapa de afirmações e dependências</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Elemento / Afirmação em <code>docs/03</code></th>
+            <th>Origem e Rastreabilidade no Repositório</th>
+            <th>Status de Coerência</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mapa de Empatia de P02: 6 dimensões com foco em supervisão editorial e recepção externa de cortes</td>
+            <td><code>docs/01</code>, seção 5.4 e H14/H22/H23; <code>docs/03</code>, ficha P02; <code>RASTREABILIDADE.md</code>, H33/H34 e R03</td>
+            <td><strong>Alinhado.</strong> Segue a taxonomia formal de Barbosa e Silva (2010), diferenciando hipóteses <code>[H]</code> de lacunas <code>[?]</code>.</td>
+          </tr>
+          <tr>
+            <td>Artefato visual <code>mapa_empatia_p02.svg</code> vinculado na seção 2</td>
+            <td><code>assets/03_personas/mapa_empatia_p02.svg</code>; modelo de slides 11 e 12 de <code>CC8122-Personas (1).pdf</code></td>
+            <td><strong>Alinhado.</strong> Arquivo existente, renderizável, bem-formado e estilisticamente idêntico a <code>mapa_empatia.svg</code>.</td>
+          </tr>
+          <tr>
+            <td>Jornada de P02: 7 etapas cobrindo alinhamento, acompanhamento, recepção, consulta, ajuste, chancela e publicação</td>
+            <td><code>docs/04</code>, Cenário C02; <code>RASTREABILIDADE.md</code>, R03; <code>docs/03</code>, tarefa proposta H33</td>
+            <td><strong>Alinhado.</strong> Articula-se perfeitamente com a jornada de P01 (recebimento pós-A04), com etapa condicional de ajuste.</td>
+          </tr>
+          <tr>
+            <td>Etapa condicional da jornada (etapa 5: divergência ou corte incompleto)</td>
+            <td><code>docs/04</code>, C02 (parágrafos 132–134) e hipóteses H10, H16, H30 e H35</td>
+            <td><strong>Alinhado.</strong> Reflete o tratamento de exceção sem assumir infalibilidade do algoritmo.</td>
+          </tr>
+          <tr>
+            <td>Papel prioritário mantido em P01 (Rafael) e papel secundário em P02 (Arnaldo) e P03 (Jorginho Jr.)</td>
+            <td><code>docs/01</code>, seção 7.2 e H27; <code>RASTREABILIDADE.md</code>, seção 1</td>
+            <td><strong>Alinhado.</strong> A ampliação de artefatos para P02 não descaracterizou a primazia de P01 na interface do TCC.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="revalidacao-tickets">
+    <h2>Revalidação do histórico de tickets</h2>
+    <p>Acompanhamento dos tickets documentados em auditorias anteriores pertinentes às Entregas 3 e 4:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket</th>
+            <th>Origem / Descrição Resumida</th>
+            <th>Status Anterior</th>
+            <th>Situação Atual nesta Auditoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>AC-016</strong></td>
+            <td>Delimitação da tarefa proposta de P02 como recepção externa (H33)</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> Mapa de empatia e jornada respeitam a fronteira externa estabelecida.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-017</strong></td>
+            <td>Auditoria editorial de P02 delimitada como exploratória (H35)</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> Registrada como proposta a investigar na etapa 6 da jornada, sem criação de tela.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-018</strong></td>
+            <td>Experiência tecnológica específica de P02 registrada em H34</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> Referenciada adequadamente na base do mapa e jornada.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-020</strong></td>
+            <td>Integração da ficha de P02 e conciliação de IDs de hipóteses</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> Numeração H30–H32 (P01), H33–H35 (P02) e H36–H38 (P03) estável.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-023</strong></td>
+            <td>Contexto consolidado e relações R04/R05 de P03</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> Contexto de uso consolidado mantém o alinhamento multilateral.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-035</strong></td>
+            <td>Padronização do slug da Persona P02 (<code>#persona-p02--arnaldo</code>)</td>
+            <td>Aplicado</td>
+            <td><strong>Mantém-se Aplicado.</strong> A estrutura de títulos mantém a resolução da âncora principal sem ambiguidades.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tickets">
+    <h2>Novos tickets de coerência</h2>
+    <div class="callout">
+      <p><strong>Nenhum novo ticket gerado nesta rodada.</strong></p>
+      <p>Todas as verificações de conformidade estrutural, rastreabilidade epistêmica, validação vetorial dos assets e integridade hipertextual em <code>docs/03_personas_contexto_jornada.md</code> foram aprovadas com sucesso pleno.</p>
+    </div>
+  </section>
+
+  <section id="cobertura">
+    <h2>Cobertura e inventário</h2>
+    <p>O repositório contém 164 arquivos no total (134 arquivos fora do diretório interno <code>.git</code>). Todas as 33 fontes textuais em Markdown foram contabilizadas e lidas no escopo global de contexto. Os 8 relatórios anteriores de auditoria documental foram revisados para controle de identificadores e revalidação de ciclo de vida. Nenhum material necessário esteve inacessível.</p>
+
+    <details>
+      <summary>Fontes textuais lidas na íntegra (33 arquivos Markdown)</summary>
+      <ul>
+        <li><code>.agents/skills/analise-de-coerencia/SKILL.md</code></li>
+        <li><code>.agents/skills/html-communication/SKILL.md</code></li>
+        <li><code>assets/02_concorrencia/wsc-sports/a.md</code></li>
+        <li><code>assets/README.md</code></li>
+        <li><code>BIBLIOGRAFIA.md</code></li>
+        <li><code>CHECKLIST_FINAL.md</code></li>
+        <li><code>CONTRIBUTING.md</code></li>
+        <li><code>docs/01_conhecendo_o_problema.md</code></li>
+        <li><code>docs/02_analise_concorrencia.md</code></li>
+        <li><code>docs/03_personas_contexto_jornada.md</code> (foco principal da auditoria)</li>
+        <li><code>docs/04_cenarios_problema.md</code></li>
+        <li><code>docs/05_analise_tarefas.md</code></li>
+        <li><code>docs/06_prototipacao_papel.md</code></li>
+        <li><code>docs/07_coleta_dados.md</code></li>
+        <li><code>docs/08_engenharia_usabilidade.md</code></li>
+        <li><code>docs/09_modelo_conceitual.md</code></li>
+        <li><code>docs/10_molic.md</code></li>
+        <li><code>docs/11_figma.md</code></li>
+        <li><code>docs/12_planejamento_avaliacao.md</code></li>
+        <li><code>docs/13_avaliacao_heuristica.md</code></li>
+        <li><code>docs/14_observacao_usuario.md</code></li>
+        <li><code>feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md</code></li>
+        <li><code>feedbacks_professor/Feedback_Professor_Entrega02_Equipe16.md</code></li>
+        <li><code>.github/PULL_REQUEST_TEMPLATE.md</code></li>
+        <li><code>GUIA_DE_USO.md</code></li>
+        <li><code>GUIA_ESCOPO_IHC.md</code></li>
+        <li><code>instrumentos/formulario_heuristica_modelo.md</code></li>
+        <li><code>instrumentos/planilha_observacao_modelo.md</code></li>
+        <li><code>instrumentos/README.md</code></li>
+        <li><code>instrumentos/roteiro_teste_usabilidade.md</code></li>
+        <li><code>instrumentos/termo_consentimento_modelo.md</code></li>
+        <li><code>RASTREABILIDADE.md</code></li>
+        <li><code>README.md</code></li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Histórico de auditoria e relatórios consultados (8 arquivos HTML locais)</summary>
+      <ul>
+        <li><code>analises de coerencia/analise-de-coerencia-2026-09-03.html</code> (AC-001 a AC-012)</li>
+        <li><code>analises de coerencia/09-09-2026-21-12.html</code> (AC-013 a AC-015)</li>
+        <li><code>analises de coerencia/09-09-2026-22-02.html</code> (AC-016 a AC-019)</li>
+        <li><code>analises de coerencia/16-09-2026-19:49.html</code> (AC-020 a AC-024)</li>
+        <li><code>analises de coerencia/17-09-2026-21-42.html</code> (AC-025 a AC-027)</li>
+        <li><code>analises de coerencia/21-09-2026-20-28.html</code> (AC-028 a AC-031)</li>
+        <li><code>analises de coerencia/23-09-2026-14-04.html</code> (AC-032 a AC-036)</li>
+        <li><code>analises de coerencia/23-09-2026-15-07.html</code> (Reavaliação pós-ajustes)</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Arquivos de apoio, mídias e diagramas inspecionados (19 arquivos)</summary>
+      <ul>
+        <li><code>.agents/skills/analise-de-coerencia/agents/openai.yaml</code></li>
+        <li><code>.gitignore</code></li>
+        <li><code>CC8122-Personas (1).pdf</code> (material didático de apoio na raiz)</li>
+        <li><code>assets/03_personas/jorginho-avatar.png</code></li>
+        <li><code>assets/03_personas/p02-avatar.png</code></li>
+        <li><code>assets/03_personas/rafael-avatar.png</code></li>
+        <li><code>assets/03_personas/mapa_empatia.svg</code> (mapa visual de P01)</li>
+        <li><code>assets/03_personas/mapa_empatia_p02.svg</code> (mapa visual de P02 — novo asset)</li>
+        <li>11 outros arquivos SVG em <code>assets/</code> (diagramas estruturais de tarefas, fluxos e modelos)</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Exclusões justificadas por categoria (74 arquivos)</summary>
+      <ul>
+        <li><strong>Mídias preexistentes de concorrência (48 arquivos):</strong> capturas de tela e evidências visuais em <code>assets/02_concorrencia/</code> pertencentes à Entrega 2, mantidas intactas;</li>
+        <li><strong>Dados de demonstração do concorrente Cap (17 arquivos):</strong> áudios, vídeos e cursores em <code>assets/02_concorrencia/cap-so/capcut-footage.cap/</code>;</li>
+        <li><strong>Marcadores vazios (9 arquivos):</strong> arquivos <code>.gitkeep</code> em pastas reservadas para próximas fases;</li>
+        <li><strong>Metadados do Git (30 arquivos):</strong> diretório <code>.git/</code> excluído da auditoria de conteúdo.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="limites">
+    <h2>Limitações e fontes externas</h2>
+    <p>Esta análise documental foi conduzida em modo estritamente de leitura. A verificação do mapa de empatia e da jornada de P02 confirmou sua consistência lógica e teórica frente aos objetivos de supervisão editorial do projeto, enfatizando que ambos os artefatos permanecem categorizados como hipóteses/proto-personas que deverão passar por validação empírica na Entrega 7.</p>
+    <p>A literatura técnica catalogada em <code>BIBLIOGRAFIA.md</code> (Barbosa e Silva, 2010, slides de personas e cenários) fundamentou os critérios de verificação. Não houve necessidade de consulta a fontes externas da web, dado que todo o universo de regras, rastreabilidade e decisões arquiteturais encontra-se consolidado no repositório.</p>
+  </section>
+
+  <section id="verificacao">
+    <h2>Verificação</h2>
+    <p>O relatório foi estruturado em HTML5 semântico com estilos CSS embutidos, suporte automático a temas claro e escuro, diagramação responsiva e tabelas com rolagem horizontal. O novo asset vetorial foi validado via parser XML e renderizado com <code>rsvg-convert</code> para assegurar legibilidade e alinhamento gráfico. Nenhum documento analisado foi alterado durante a compilação desta auditoria. O controle de identificadores registra <code>AC-036</code> como o maior ticket histórico anterior, com 0 novos tickets abertos nesta rodada.</p>
+    <p class="meta">Nota de visualização: A ferramenta gráfica de preview interativo em navegador esteve indisponível no ambiente de execução; a integridade estrutural e hipertextual foi comprovada diretamente sobre os elementos HTML e links normalizados.</p>
+  </section>
+</main>
+</body>
+</html>
