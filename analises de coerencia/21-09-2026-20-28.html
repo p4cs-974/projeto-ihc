@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coerência da branch lab-4-robertinho</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --fg: #171717;
+      --muted: #555;
+      --panel: #f0f0f0;
+      --border: #bbb;
+      --tag-high-bg: #fee2e2;
+      --tag-high-fg: #991b1b;
+      --tag-med-bg: #fef3c7;
+      --tag-med-fg: #92400e;
+      --tag-low-bg: #e0f2fe;
+      --tag-low-fg: #075985;
+      --tag-pending-bg: #f3f4f6;
+      --tag-pending-fg: #374151;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --fg: #e5e5e5;
+        --muted: #aaa;
+        --panel: #1e1e1e;
+        --border: #444;
+        --tag-high-bg: #450a0a;
+        --tag-high-fg: #fecaca;
+        --tag-med-bg: #451a03;
+        --tag-med-fg: #fde68a;
+        --tag-low-bg: #082f49;
+        --tag-low-fg: #bae6fd;
+        --tag-pending-bg: #27272a;
+        --tag-pending-fg: #e4e4e7;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 32px 24px;
+    }
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    h1 { font-size: 1.85rem; line-height: 1.25; margin: .5rem 0; }
+    h2 { font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: .3rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.2rem; }
+    h4 { font-size: 1rem; margin-bottom: .25rem; margin-top: 1rem; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 1.5rem 0;
+      padding: 10px 14px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    nav a {
+      color: inherit;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 22px;
+      margin: 24px 0;
+      break-inside: avoid;
+    }
+    article.high { border-left: 6px solid #dc2626; }
+    article.medium { border-left: 6px solid #d97706; }
+    article.low { border-left: 6px solid #0284c7; }
+    p, li, td, code { overflow-wrap: anywhere; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: .92em;
+      background: rgba(125, 125, 125, 0.15);
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    a { color: inherit; }
+    li { margin: .4rem 0; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 600px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: rgba(125, 125, 125, 0.1);
+      font-weight: 600;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 6px 0;
+    }
+    details { margin: .5rem 0; }
+    .meta { color: var(--muted); font-size: .92rem; }
+    .tags {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+      font-size: .82rem;
+      font-weight: 600;
+    }
+    .tag {
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .tag-high { background: var(--tag-high-bg); color: var(--tag-high-fg); }
+    .tag-med { background: var(--tag-med-bg); color: var(--tag-med-fg); }
+    .tag-low { background: var(--tag-low-bg); color: var(--tag-low-fg); }
+    .tag-pending { background: var(--tag-pending-bg); color: var(--tag-pending-fg); border: 1px solid var(--border); }
+    .tag-discarded { background: var(--tag-pending-bg); color: var(--muted); border: 1px dashed var(--border); }
+    .tag-applied { background: #dcfce7; color: #166534; }
+    @media (prefers-color-scheme: dark) {
+      .tag-applied { background: #14532d; color: #bbf7d0; }
+    }
+    .history {
+      margin-top: 1.2rem;
+      padding-top: .8rem;
+      border-top: 1px dashed var(--border);
+      font-size: .88rem;
+      color: var(--muted);
+    }
+    @media (max-width: 600px) {
+      main { padding: 16px 12px; }
+      article { padding: 14px; }
+      th, td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="meta">Gemini 3.8 Flash (alto nível de raciocínio) no Antigravity CLI.</p>
+    <h1>Coerência da branch lab-4-robertinho</h1>
+    <p class="meta">21/09/2026 às 20:28 · America/Sao_Paulo · UTC-03:00</p>
+    <p><strong>Status da análise: Aplicada.</strong> 0 tickets pendentes, 4 aplicados, 0 descartados. Gravidade: 1 alta, 2 médias, 1 baixa. Confiança: 4 sustentados.</p>
+    <p><strong>Atualização em 21/09/2026 às 20:51 UTC-03:00:</strong> AC-030 descartado temporariamente a pedido do autor (&ldquo;Cancele o ticket 30, eu farei depois&rdquo;). O diagnóstico original permaneceu preservado como histórico.</p>
+    <p><strong>Atualização em 21/09/2026 às 21:15 UTC-03:00:</strong> AC-028 e AC-029 aplicados por solicitação do usuário. O Cenário C01 foi reintegrado em <code>docs/04_cenarios_problema.md</code> antecedendo o Cenário C02, a necessidade vinculada a C02 foi corrigida para R03, e a relação com C02 foi registrada na Matriz de Rastreabilidade em <code>RASTREABILIDADE.md</code>.</p>
+    <p><strong>Atualização em 22/09/2026 às 13:15 UTC-03:00:</strong> AC-030 e AC-031 aplicados por solicitação do usuário. Os itens 3, 4 e 5 do Cenário C02 foram desenvolvidos no padrão de C01 em <code>docs/04_cenarios_problema.md</code>, as pendências de cabeçalho e tipografia foram sanadas, referências a PO2 foram normalizadas para P02 e o estado na matriz de rastreabilidade foi atualizado.</p>
+    <p><strong>Escopo da análise:</strong> Auditoria focada nas alterações dos commits <code>b4ba823</code> (&ldquo;Início do cenário 02&rdquo;) e <code>888820b</code> (&ldquo;Finalização do item 2&rdquo;) do autor Lucas Roberto Boccia dos Santos, comparadas com a base comum <code>e964a90</code> e contextualizadas com a branch <code>main</code> disponível localmente (a qual já inclui os commits de elaboração e refinamento do Cenário C01 por Pedro Custódio: <code>3e5ecc6</code>, <code>ce4dca1</code>, <code>ba70735</code>, <code>2252882</code>). Todos os documentos do repositório foram inventariados e lidos como contexto integral. Esta é uma auditoria estritamente de leitura.</p>
+  </header>
+
+  <nav aria-label="Seções">
+    <a href="#conclusao">Conclusão geral</a>
+    <a href="#pontos-alinhados">Pontos já alinhados</a>
+    <a href="#mapa">Mapa de afirmações e dependências</a>
+    <a href="#tickets">Tickets (AC-028 a AC-031)</a>
+    <a href="#cobertura">Cobertura e inventário</a>
+    <a href="#limites">Limitações e fontes externas</a>
+    <a href="#verificacao">Verificação</a>
+  </nav>
+
+  <section id="conclusao">
+    <h2>Conclusão geral</h2>
+    <p>O trabalho realizado por Lucas Roberto no Cenário C02 (&ldquo;Controle do Processo Editorial Engessado&rdquo;) é conceitualmente consistente com a persona P02 (Arnaldo, Administrador/Editor-Chefe) e com os objetivos do projeto de IHC. A premissa formulada respeita fielmente a regra central da Entrega 4: narra uma &ldquo;história do problema&rdquo; humano no processo manual atual de supervisão em emissora esportiva, sem antecipar telas, botões ou o futuro aplicativo. A tabela de questões de refinamento aborda as sete dimensões taxonômicas de cenário de forma rica e detalhada, levantando pontos relevantes sobre a sobrecarga de supervisão simultânea e o risco de aprovação de cortes &ldquo;às cegas&rdquo; sob pressão de tempo.</p>
+    <p>No entanto, a entrega encontra-se em estado preliminar e apresenta conflitos estruturais críticos para a integridade documental e integração da equipe:</p>
+    <ol>
+      <li><strong>Substituição estrutural de C01:</strong> C02 foi redigido no lugar exato do bloco reservado a C01 no template de <code>docs/04_cenarios_problema.md</code>, removendo C01 desta branch e gerando colisão direta com o trabalho de C01 desenvolvido por Pedro na <code>main</code>;</li>
+      <li><strong>Desalinhamento na Matriz de Rastreabilidade:</strong> C02 foi associado a &ldquo;R02&rdquo; com redação própria, quando na verdade R02 pertence a Rafael (P01), e a necessidade formalmente mapeada para P02 na matriz é <code>R03</code>;</li>
+      <li><strong>Incompletude da entrega:</strong> O desenvolvimento foi interrompido no final do item 2 (tabela de refinamento). O cenário refinado (item 3), a tabela de elementos extraídos (item 4), as implicações para entregas futuras (item 5) e os metadados de cabeçalho permanecem como placeholders vazios do template;</li>
+      <li><strong>Padronização de identificadores e convenções:</strong> Uso repetido do identificador com letra &lsquo;O&rsquo; (<code>PO2</code> em vez de <code>P02</code>), ausência de links internos para a persona e pequenos deslizes ortográficos e de pontuação.</li>
+    </ol>
+  </section>
+
+  <section id="pontos-alinhados">
+    <h3>Pontos já alinhados</h3>
+    <ul>
+      <li><strong>Conformidade com a natureza de cenário de problema:</strong> O texto descreve exclusivamente a prática de trabalho atual (Arnaldo circulando pelas salas de edição, conversando com editores, tentando coordenar prazos e aprovando decisões), sem violar a fronteira do problema e sem presumir a interface do produto.</li>
+      <li><strong>Aderência direta a P02 e à Entrega 1:</strong> A história dá vida à dor central de P02 em <code>docs/03_personas_contexto_jornada.md</code> (&ldquo;Dificuldade de manter controle e supervisionar o processo atual, engessado&rdquo;) e ancora-se nas hipóteses de supervisão e aprovação da Entrega 1 (H14, H22, H23) e Entrega 3 (H33).</li>
+      <li><strong>Cobertura completa dos 7 elementos na taxonomia de refinamento:</strong> A tabela de questões cobre Ambiente/contexto, Ator, Objetivo, Planejamento, Ações, Eventos e Avaliação, respondendo às lacunas da narrativa inicial.</li>
+      <li><strong>Reserva metodológica para pesquisa de campo:</strong> A coluna &ldquo;O que investigar com usuários&rdquo; levanta tópicos reais e necessários para a Entrega 7 (ex.: quantidade média de atividades simultâneas, critérios de intervenção, frequência de falhas em redes sociais), sem tratar suposições da narrativa como dados empíricos consolidados.</li>
+      <li><strong>Identificação de autoria:</strong> Nome completo e matrícula do integrante constam no cabeçalho do cenário.</li>
+    </ul>
+  </section>
+
+  <section id="mapa">
+    <h2>Mapa de afirmações e dependências</h2>
+    <p>O Cenário C02 aprofunda as atividades de supervisão descritas em <code>docs/01</code> e <code>docs/03</code>. O quadro abaixo mapeia como as decisões adotadas no cenário se relacionam com as bases documentais consolidadas do repositório:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Afirmação / Premissa no C02</th>
+            <th>Origem no Repositório</th>
+            <th>Avaliação de Coerência</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supervisão do trabalho de múltiplos editores em emissora esportiva</td>
+            <td><code>docs/03</code>, P02 (ocupação e papel); <code>docs/01</code>, seção 5.4 (H14) e seção 7.1 (H20)</td>
+            <td><strong>Alinhado.</strong> Cenário situa Arnaldo no ambiente corporativo previsto para P02.</td>
+          </tr>
+          <tr>
+            <td>Processo de supervisão manual, presencial e engessado</td>
+            <td><code>docs/03</code>, P02 (Dores/frustrações); <code>RASTREABILIDADE.md</code>, H33</td>
+            <td><strong>Alinhado.</strong> Materializa a dor de controle e fluidez editorial registrada na ficha de P02.</td>
+          </tr>
+          <tr>
+            <td>Editor-chefe experiente (anos na função, domínio das normas)</td>
+            <td><code>docs/03</code>, P02 (Conhecimento do domínio)</td>
+            <td><strong>Alinhado.</strong> Especificação narrativa compatível com a função editorial, sem contrariar a hipótese H34 (baixo conhecimento de computação/código).</td>
+          </tr>
+          <tr>
+            <td>Objetivo: conteúdo editado publicado nas redes sociais chancelado pelo editor-chefe</td>
+            <td><code>docs/03</code>, P02 (Objetivos e Comportamentos); <code>docs/01</code>, H14/H23</td>
+            <td><strong>Alinhado.</strong> Corresponde ao papel de aprovação final do fluxo editorial.</td>
+          </tr>
+          <tr>
+            <td>Ruptura visível: mídias postadas com falhas e aprovações &ldquo;às cegas&rdquo; por falta de tempo</td>
+            <td><code>docs/01</code>, H10 e H16; <code>docs/03</code>, Dores de P02</td>
+            <td><strong>Alinhado.</strong> Constrói um evento concreto e plausível que evidencia o limite do trabalho manual.</td>
+          </tr>
+          <tr>
+            <td>Vinculação à necessidade de controle editorial</td>
+            <td><code>RASTREABILIDADE.md</code>, seção 3 (linha 82)</td>
+            <td><strong>Inconsistente.</strong> O cabeçalho cita &ldquo;R02&rdquo;, mas R02 na matriz é de P01 (Rafael). A linha oficial para P02 é <code>R03</code>. Ver ticket AC-029.</td>
+          </tr>
+          <tr>
+            <td>Estrutura e independência dos cenários</td>
+            <td><code>docs/04</code>, linha 5 e linha 73; <code>CHECKLIST_FINAL.md</code></td>
+            <td><strong>Inconsistente.</strong> O bloco de C01 foi substituído em vez de duplicado/estendido para C02. Ver ticket AC-028.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tickets">
+    <h2>Tickets</h2>
+
+    <article id="AC-028" class="high">
+      <h3>AC-028 · Substituição estrutural do Cenário C01 e colisão com a branch principal
+        <span class="tags">
+          <span class="tag tag-high">Alta</span>
+          <span class="tag">Confiança: Sustentado</span>
+          <span class="tag tag-applied">Status: Aplicado</span>
+        </span>
+      </h3>
+      <h4>Evidências</h4>
+      <p>Em <code>docs/04_cenarios_problema.md</code>, linha 25 da branch <code>lab-4-robertinho</code>, o cabeçalho original do template <code>## Cenário C01 — {{título}}</code> foi substituído por <code>## Cenário C02 — Controle do Processo Editorial Engessado</code>. O conteúdo e a estrutura dedicados a C01 deixaram de existir no arquivo desta branch.</p>
+      <p>A especificação do documento (linhas 5 e 73) determina &ldquo;1 solução completa por integrante&rdquo; e instrui explicitamente: <code>&gt; Repita para C02, C03... com autoria individual.</code>. Além disso, na branch <code>main</code> (commits <code>3e5ecc6</code>, <code>ce4dca1</code>, <code>2252882</code>), Pedro Custódio desenvolveu e concluiu o Cenário C01 completo (&ldquo;Seleção manual de melhores momentos sob pressão de prazo&rdquo;).</p>
+      <h4>Efeito sobre a coerência</h4>
+      <p>A substituição apaga o Cenário C01 da entrega. Ao integrar a branch <code>lab-4-robertinho</code> com a <code>main</code>, haverá um conflito severo de mesclagem no arquivo <code>docs/04_cenarios_problema.md</code>, com risco de sobrescrever ou eliminar o cenário C01 de Pedro. A entrega coletiva ficaria com um único cenário, descumprindo o critério da disciplina.</p>
+      <h4>Mudança sugerida</h4>
+      <p>Em <code>docs/04_cenarios_problema.md</code>, preservar integralmente o Cenário C01 (conforme consta na <code>main</code>) e posicionar o Cenário C02 como uma nova seção subsequente independente (<code>## Cenário C02 — Controle do Processo Editorial Engessado</code>). Ao finalizar a elaboração, realizar a sincronização (rebase ou merge) com a <code>main</code> mais recente, garantindo a convivência limpa dos cenários C01 e C02.</p>
+      <p class="history">Acompanhamento iniciado em 21/09/2026 às 20:28 UTC-03:00. Pendente &rarr; Aplicado em 21/09/2026 às 21:15 UTC-03:00 por solicitação do usuário. Em <code>docs/04_cenarios_problema.md</code>, o Cenário C01 de Pedro Custódio foi integralmente reintegrado a partir da <code>main</code>, e o Cenário C02 de Lucas Roberto foi posicionado como seção individual subsequente, eliminando o risco de colisão e preservando ambos os cenários.</p>
+    </article>
+
+    <article id="AC-029" class="medium">
+      <h3>AC-029 · Atribuição da necessidade R02 a P02 colide com a Matriz de Rastreabilidade
+        <span class="tags">
+          <span class="tag tag-med">Média</span>
+          <span class="tag">Confiança: Sustentado</span>
+          <span class="tag tag-applied">Status: Aplicado</span>
+        </span>
+      </h3>
+      <h4>Evidências</h4>
+      <p>Em <code>docs/04_cenarios_problema.md</code>, linha 29, o metadado do Cenário C02 declara:</p>
+      <p><code>**Necessidade relacionada:** R02 - Manter o controle e supervisão sobre todo o processo editorial e trabalho dos editores</code></p>
+      <p>No entanto, em <code>RASTREABILIDADE.md</code>, seção 3 (linha 81), a necessidade <code>R02</code> já está definida e atribuída a <strong>P01 (Rafael)</strong>:</p>
+      <p><code>| R02 | Processamento das gravações para gerar cortes e metadados, Entrega 1, seção 0.4 | Acompanhar partidas durante outras edições e preservar resultados em caso de falha, H13/H16/H26/H32 | [P01 — Rafael] | ...</code></p>
+      <p>A necessidade registrada especificamente para <strong>P02 (Arnaldo, Administrador/Editor-Chefe)</strong> na matriz é a <strong><code>R03</code></strong> (linha 82):</p>
+      <p><code>| R03 | Geração de cortes e metadados de melhores momentos, Entrega 1, seção 1.3 | Receber material identificável e contextualizado para decidir sobre a seleção, H22/H23/H25/H33 | [P02, Administrador/Editor-Chefe] | PENDENTE | ...</code></p>
+      <p>Além disso, a coluna &ldquo;Cenário problema&rdquo; na linha R03 de <code>RASTREABILIDADE.md</code> permanece como <code>PENDENTE</code>.</p>
+      <h4>Efeito sobre a coerência</h4>
+      <p>Gera-se uma colisão de significado para o identificador <code>R02</code>: na matriz ele rastreia a necessidade de acompanhamento assíncrono do editor Rafael, enquanto no cabeçalho de C02 ele é redefinido para a supervisão do editor-chefe Arnaldo. Isso quebra a rastreabilidade transversal entre entregas e deixa a linha formal R03 sem ligação com o cenário elaborado.</p>
+      <h4>Mudança sugerida</h4>
+      <p>No cabeçalho do Cenário C02 em <code>docs/04_cenarios_problema.md</code>, alterar a necessidade relacionada de <code>R02</code> para <code>R03</code>, ajustando o texto para refletir a necessidade cadastrada na matriz (&ldquo;R03 — Receber material identificável e contextualizado para decidir sobre a seleção e supervisão editorial&rdquo;). Posteriormente, em <code>RASTREABILIDADE.md</code>, preencher o campo &ldquo;Cenário problema&rdquo; da linha R03 com o link para C02.</p>
+      <p class="history">Acompanhamento iniciado em 21/09/2026 às 20:28 UTC-03:00. Pendente &rarr; Aplicado em 21/09/2026 às 21:15 UTC-03:00 por solicitação do usuário. Em <code>docs/04_cenarios_problema.md</code>, cabeçalho de C02, a necessidade relacionada foi alterada para R03 (&ldquo;R03, receber material identificável e contextualizado para decidir sobre a seleção e supervisão editorial&rdquo;). Em <code>RASTREABILIDADE.md</code>, seção 3, a linha R03 foi vinculada a C02 (em elaboração) e o histórico de atualizações foi registrado.</p>
+    </article>
+
+    <article id="AC-030" class="medium">
+      <h3>AC-030 · Cenário C02 incompleto a partir da seção 3 e campos pendentes de cabeçalho
+        <span class="tags">
+          <span class="tag tag-med">Média</span>
+          <span class="tag">Confiança: Sustentado</span>
+          <span class="tag tag-applied">Status: Aplicado</span>
+        </span>
+      </h3>
+      <h4>Evidências</h4>
+      <p>Em <code>docs/04_cenarios_problema.md</code>:</p>
+      <ul>
+        <li>A seção <strong>3. Cenário refinado</strong> continha apenas a instrução e o marcador <code>{{narrativa refinada}}</code>;</li>
+        <li>A seção <strong>4. Elementos extraídos</strong> possuía tabela com placeholders vazios <code>{{...}}</code>;</li>
+        <li>A seção <strong>5. Implicações para as próximas entregas</strong> mantinha o texto orientativo do template;</li>
+        <li>No cabeçalho do Cenário C02, a situação de origem e hipóteses ainda presentes constavam como placeholders;</li>
+        <li>O checklist da atividade permanecia inteiramente desmarcado.</li>
+      </ul>
+      <h4>Efeito sobre a coerência</h4>
+      <p>O cenário ficava inacabado. Sem a narrativa refinada com a marcação dos novos conteúdos (ex.: <code>**[NOVO]**</code>) e sem a extração explícita de problemas/rupturas e implicações, a Entrega 4 não fornecia insumos para as modelagens de tarefas da Entrega 5 (HTA/GOMS/CTT).</p>
+      <h4>Mudança sugerida</h4>
+      <p>Em <code>docs/04_cenarios_problema.md</code>: redigir o item 3 (Cenário refinado) destacando o conteúdo novo com <code>**[NOVO]**</code>; preencher o item 4 (Elementos extraídos); preencher o item 5 (Implicações para as próximas entregas) conectando às Entregas 5 e 7; preencher situação de origem (seção 5.4 / H14) e hipóteses (H04, H10, H14, H16, H20, H22, H23, H33, H34 e H35); e atualizar o status do documento.</p>
+      <p class="history">Acompanhamento iniciado em 21/09/2026 às 20:28 UTC-03:00. Pendente &rarr; Descartado em 21/09/2026 às 20:51 UTC-03:00 por decisão inicial do autor. Descartado &rarr; Aplicado em 22/09/2026 às 13:15 UTC-03:00 por solicitação do usuário. Todos os itens (3, 4 e 5), cabeçalho de C02 e checklist foram plenamente desenvolvidos e alinhados ao padrão de C01.</p>
+    </article>
+
+    <article id="AC-031" class="low">
+      <h3>AC-031 · Grafia PO2 com a letra &lsquo;O&rsquo;, ausência de link e ajustes de acabamento
+        <span class="tags">
+          <span class="tag tag-low">Baixa</span>
+          <span class="tag">Confiança: Sustentado</span>
+          <span class="tag tag-applied">Status: Aplicado</span>
+        </span>
+      </h3>
+      <h4>Evidências</h4>
+      <p>Em <code>docs/04_cenarios_problema.md</code>:</p>
+      <ul>
+        <li>O identificador da persona estava grafado como <code>PO2</code> (com a letra &lsquo;O&rsquo; em vez do dígito zero) em 6 ocorrências;</li>
+        <li>O cabeçalho não incluía link em Markdown para a persona P02;</li>
+        <li>No item 1, constava o erro tipográfico &ldquo;epxectativas&rdquo;;</li>
+        <li>No item 2 (Avaliação), a questão estava sem ponto de interrogação.</li>
+      </ul>
+      <h4>Efeito sobre a coerência</h4>
+      <p>Inconsistência leve de padronização editorial que prejudicava buscas pelo identificador canônico <code>P02</code> e reduzia a navegabilidade entre os documentos.</p>
+      <h4>Mudança sugerida</h4>
+      <p>Substituir todas as ocorrências de <code>PO2</code> por <code>P02</code>, adicionar o link para <code>docs/03_personas_contexto_jornada.md</code>, corrigir &ldquo;expectativas&rdquo; e acrescentar o ponto de interrogação.</p>
+      <p class="history">Acompanhamento iniciado em 21/09/2026 às 20:28 UTC-03:00. Pendente &rarr; Aplicado em 22/09/2026 às 13:15 UTC-03:00. Ocorrências de PO2 normalizadas para P02 com link para a persona, erro de digitação corrigido e pontuação ajustada na tabela de refinamento.</p>
+    </article>
+  </section>
+
+  <section id="cobertura">
+    <h2>Cobertura e inventário</h2>
+    <p>Foram inventariados 162 arquivos no repositório. Todas as 29 fontes textuais em Markdown produzidas para o projeto foram lidas na íntegra. Os relatórios de auditoria anteriores foram consultados para histórico e controle de identificadores (verificando-se que na branch <code>main</code> o identificador mais alto atingido foi <code>AC-027</code>, permitindo iniciar esta auditoria em <code>AC-028</code> sem risco de colisão). Nenhum arquivo necessário à análise esteve inacessível.</p>
+
+    <details>
+      <summary>Fontes textuais lidas na íntegra (29 arquivos Markdown)</summary>
+      <ul>
+        <li><code>.github/PULL_REQUEST_TEMPLATE.md</code></li>
+        <li><code>BIBLIOGRAFIA.md</code></li>
+        <li><code>CHECKLIST_FINAL.md</code></li>
+        <li><code>CONTRIBUTING.md</code></li>
+        <li><code>GUIA_DE_USO.md</code></li>
+        <li><code>GUIA_ESCOPO_IHC.md</code></li>
+        <li><code>RASTREABILIDADE.md</code></li>
+        <li><code>README.md</code></li>
+        <li><code>assets/02_concorrencia/wsc-sports/a.md</code></li>
+        <li><code>assets/README.md</code></li>
+        <li><code>docs/01_conhecendo_o_problema.md</code></li>
+        <li><code>docs/02_analise_concorrencia.md</code></li>
+        <li><code>docs/03_personas_contexto_jornada.md</code></li>
+        <li><code>docs/04_cenarios_problema.md</code> (foco principal)</li>
+        <li><code>docs/05_analise_tarefas.md</code></li>
+        <li><code>docs/06_prototipacao_papel.md</code></li>
+        <li><code>docs/07_coleta_dados.md</code></li>
+        <li><code>docs/08_engenharia_usabilidade.md</code></li>
+        <li><code>docs/09_modelo_conceitual.md</code></li>
+        <li><code>docs/10_molic.md</code></li>
+        <li><code>docs/11_figma.md</code></li>
+        <li><code>docs/12_planejamento_avaliacao.md</code></li>
+        <li><code>docs/13_avaliacao_heuristica.md</code></li>
+        <li><code>docs/14_observacao_usuario.md</code></li>
+        <li><code>instrumentos/README.md</code></li>
+        <li><code>instrumentos/formulario_heuristica_modelo.md</code></li>
+        <li><code>instrumentos/planilha_observacao_modelo.md</code></li>
+        <li><code>instrumentos/roteiro_teste_usabilidade.md</code></li>
+        <li><code>instrumentos/termo_consentimento_modelo.md</code></li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Instruções e apoio lidos (4 arquivos)</summary>
+      <ul>
+        <li><code>.agents/skills/analise-de-coerencia/SKILL.md</code></li>
+        <li><code>.agents/skills/analise-de-coerencia/agents/openai.yaml</code></li>
+        <li><code>.agents/skills/html-communication/SKILL.md</code></li>
+        <li><code>.gitignore</code></li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Histórico de auditoria e relatórios consultados (4 arquivos locais + 1 em main)</summary>
+      <ul>
+        <li><code>analises de coerencia/analise-de-coerencia-2026-09-03.html</code> (AC-001 a AC-012)</li>
+        <li><code>analises de coerencia/09-09-2026-21-12.html</code> (AC-013 a AC-015)</li>
+        <li><code>analises de coerencia/09-09-2026-22-02.html</code> (AC-016 a AC-019)</li>
+        <li><code>analises de coerencia/16-09-2026-19:49.html</code> (AC-020 a AC-024)</li>
+        <li><em>Contexto via git da branch main:</em> <code>analises de coerencia/17-09-2026-21-42.html</code> (AC-025 a AC-027)</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Mídias e diagramas inspecionados (16 arquivos)</summary>
+      <ul>
+        <li><code>CC8122-Personas (1).pdf</code> (material de aula para personas)</li>
+        <li><code>assets/03_personas/jorginho-avatar.png</code></li>
+        <li><code>assets/03_personas/p02-avatar.png</code> (avatar de Arnaldo)</li>
+        <li><code>assets/03_personas/rafael-avatar.png</code></li>
+        <li>12 arquivos SVG em <code>assets/</code> (mapa de empatia e diagramas conceituais/placeholders)</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Exclusões justificadas por categoria (70 arquivos)</summary>
+      <ul>
+        <li><strong>Mídias preexistentes de concorrência (48 arquivos):</strong> capturas de tela em <code>assets/02_concorrencia/</code> pertencentes às análises da Entrega 2, não alteradas nesta branch e irrelevantes para a auditoria de C02;</li>
+        <li><strong>Projeto Cap (17 arquivos):</strong> dados brutos de gravação, binários, áudios e segmentos de teste em <code>assets/02_concorrencia/cap-so/capcut-footage.cap/</code>;</li>
+        <li><strong>Marcadores de diretório (9 arquivos):</strong> arquivos <code>.gitkeep</code> vazios;</li>
+        <li><strong>Metadados do Git:</strong> arquivos sob <code>.git/</code> excluídos da contagem de fontes documentais.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="limites">
+    <h2>Limitações e fontes externas</h2>
+    <p>Esta análise de coerência documental é restrita aos materiais textuais, diagramas e dados versionados no repositório. Não foram realizadas entrevistas com editores ou coordenadores editoriais externos. As rotinas e procedimentos narrados em C02 foram avaliados quanto à sua consistência lógica e aderência às hipóteses do projeto, permanecendo como hipóteses a serem validadas na Entrega 7.</p>
+    <p>Não houve necessidade de consulta externa à internet nesta execução, visto que todas as inconsistências decorrem exclusivamente de relações documentais internas do projeto (rastreabilidade, numeração de personas e estrutura de entrega).</p>
+  </section>
+
+  <section id="verificacao">
+    <h2>Verificação</h2>
+    <p>O documento foi gerado como HTML5 autocontido, sem dependência de scripts ou estilos remotos, compatível com temas claro e escuro do sistema e responsivo para leitura em diferentes dispositivos. A integridade de todos os arquivos analisados foi preservada integralmente (auditoria estritamente somente de leitura). Este relatório é o único arquivo gerado na execução.</p>
+    <p class="meta">Limitação de visualização: A verificação visual em navegador integrado não esteve disponível durante a execução; a validação foi realizada via verificação estática estrutural e semântica do documento.</p>
+  </section>
+</main>
+</body>
+</html>
