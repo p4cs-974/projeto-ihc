@@ -191,15 +191,17 @@ P01, Rafael, continua sendo a persona primária e representa o editor de vídeo 
 | Necessidade que afeta design | Reduzir esforço manual, evitar omissões e entender falhas, H28/H30/H32. | Receber material identificável e com contexto para a decisão editorial, H33. | Obter material de várias partidas com equipamento limitado, H36/H37. |
 | Experiência tecnológica | Experiência com edição, sem conhecimento de IA/programação, H05/H17 refinadas para P01. | Possível baixa familiaridade com edição e computação, H34. | Experiência amadora com editores mobile e de computador; vocabulário a validar, H38. |
 
-As três fichas são proto-personas sem validação empírica. O mapa de empatia e a jornada da equipe continuam centrados em P01. O uso direto da interface por P02 e a auditoria editorial permanecem em investigação, H33/H35.
+As três fichas são proto-personas sem validação empírica. Os mapas de empatia e as jornadas do usuário contemplam P01, P02 e P03, mantendo P01 como persona primária do projeto. O uso direto da interface por P02 e a auditoria editorial permanecem em investigação, H33/H35, e o filtro por jogador para P03 depende de confirmação técnica, H36.
 
 ## 2. Mapa de empatia — equipe
+
+### Persona P01 — Rafael
 
 **Persona escolhida:** P01, Rafael  
 **Idade:** [?] Não investigada.  
 **Justificativa:** Rafael representa o editor de vídeo esportivo priorizado na Entrega 1, H27. Seu objetivo de obter cortes e metadados com menor esforço manual, H28, se relaciona diretamente à identificação automática de melhores momentos produzida pelo TCC.
 
-![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
+![Mapa de empatia de Rafael](../assets/03_personas/mapa_empatia.svg)
 
 O mapa abaixo sintetiza as hipóteses de P01 e as escolhas feitas com o autor. Não contém falas coletadas nem observações de usuários. O arquivo visual acima apresenta a mesma síntese do quadro textual.
 
@@ -213,6 +215,48 @@ O mapa abaixo sintetiza as hipóteses de P01 e as escolhas feitas com o autor. N
 | Necessidades      | [H] Entregar no prazo lances relevantes e com contexto, gastando menos tempo procurando e recortando a gravação. Continuar outros trabalhos enquanto as partidas são processadas.                          | H06, H28 e H32; critério de sucesso de P01   |
 
 Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P01 desta entrega e [hipóteses H30 a H32](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
+
+### Persona P02 — Arnaldo
+
+**Persona escolhida:** P02, Arnaldo  
+**Idade:** [?] Não investigada.  
+**Justificativa:** Arnaldo representa a supervisão e administração do setor de mídias digitais/editor-chefe, destinatário indireto inicial dos cortes e metadados gerados (H14, H22, H23 e H33). Seu objetivo de supervisionar a produção, chancelar decisões editoriais e evitar aprovações às cegas de cortes esportivos se relaciona à entrega de material contextualizado e identificável pelo TCC.
+
+![Mapa de empatia de Arnaldo](../assets/03_personas/mapa_empatia_p02.svg)
+
+O mapa abaixo sintetiza as hipóteses de P02, as propostas do autor (Lucas Roberto, PR #5) e o detalhamento do cenário C02. Não contém falas coletadas nem observações de usuários. O arquivo visual acima apresenta a mesma síntese do quadro textual.
+
+| Dimensão    | Registro                                                                                                                                                                                                   | Base                                         |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| Vê          | [H] Várias ilhas de edição operando em paralelo e anotações manuais sobre o andamento. No uso proposto, recebe externamente os cortes identificados por partida e seus metadados.                        | H14, H25 e H33; perfil P02 e cenário C02     |
+| Ouve        | [?] Cobranças da direção por agilidade e dúvidas pontuais trazidas pelos editores ainda não foram investigadas com usuários.                                                                               | H14; comunicação editorial ainda a investigar |
+| Fala e faz  | [H] Percorre as salas de edição, orienta editores e atende dúvidas. Recebe cortes e metadados externamente, avalia o material e devolve a chancela ou pedido de revisão externa. [?] Não há falas coletadas.     | H33 e H34; comportamentos definidos para P02 e C02 |
+| Pensa e sente | [H] Sente sobrecarga ao supervisionar vários jogos. Teme aprovar lotes "às cegas" e ter publicações inconsistentes que prejudiquem a reputação da emissora.                                               | H22, H23 e H33; dores de P02 e C02           |
+| Dores       | [H] Supervisão descentralizada e engessada, aprovações sob pressão sem ver o contexto, risco de publicação falha e retrabalho para intervir em crises de conteúdo.                                        | H10, H14, H16 e H33; perfil P02 e C02       |
+| Necessidades | [H] Receber cortes identificados por partida e com metadados para avaliar com agilidade. Chancelar decisões com segurança e maior fluidez no processo de publicação.                                      | H22, H25 e H33; objetivos de P02 e R03       |
+
+Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P02 desta entrega, [Cenário C02](04_cenarios_problema.md#cenário-c02--controle-do-processo-editorial-engessado) e [hipóteses H33 a H35](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
+
+### Persona P03 — Jorginho Jr.
+
+**Persona escolhida:** P03, Jorginho Jr.  
+**Idade:** [H] 12 a 24 anos (a validar).  
+**Justificativa:** Jorginho Jr. representa o criador de conteúdo esportivo amador (persona secundária), que busca crescer no meio digital (H06) produzindo compilações e vídeos centrados em jogadores específicos (H36). Seu objetivo de obter cortes e metadados com menor esforço manual a partir de partidas completas (H28) e sem depender de hardware local potente (H37) conecta-se diretamente ao processamento remoto de detecção automática de lances do TCC (R04 e R05).
+
+![Mapa de empatia de Jorginho Jr.](../assets/03_personas/mapa_empatia_p03.svg)
+
+O mapa abaixo sintetiza as hipóteses de P03 e as escolhas feitas com o autor (Giovanni Chahin Morassi). Não contém falas coletadas nem observações de usuários. O arquivo visual acima apresenta a mesma síntese do quadro textual.
+
+| Dimensão    | Registro                                                                                                                                                                                                                            | Base                                                                 |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Vê          | [H] Gravações extensas baixadas e vídeos de canais concorrentes. No uso proposto, vê o estado das partidas e confere a lista de cortes gerados no servidor remoto.                                                                  | H08, H25, H36 e H37; perfil P03                                      |
+| Ouve        | [?] Reações da audiência, preferências de inscritos e comentários de outros criadores sobre suas edições ainda não foram investigados.                                                                                              | H06 e H19; lacuna de pesquisa                                        |
+| Fala e faz  | [H] Envia partidas inteiras pela web, aguarda o servidor remoto enquanto faz tarefas cotidianas, revisa os cortes buscando lances de um jogador e baixa o material para editar em apps amadores/mobile. [?] Não há falas coletadas.   | H28, H36, H37 e H38; comportamentos de P03 e relações R04/R05        |
+| Pensa e sente | [H] Frustra-se ao gastar horas assistindo a jogos longos. Sonha em crescer no YouTube e receia que travamentos em seu PC modesto impeçam a regularidade de publicações em seu canal.                                              | H01, H06, H11, H36 e H37; dores e motivadores de P03                |
+| Dores       | [H] Análise manual demorada por partida, pouco espaço em disco, PC lento e dificuldade de isolar lances de um jogador entre várias gravações. Risco de desistir do canal por exaustão no processo de decupagem.                   | H01, H11, H36 e H37; perfil P03                                      |
+| Necessidades | [H] Encontrar rapidamente jogadas de atletas específicos em múltiplos jogos sem sobrecarregar sua máquina. Baixar cortes com contexto e metadados para concluir a edição fora da ferramenta (inclusive mobile).                   | H06, H10, H24, H25, H28, H36, H37 e H38; objetivos e necessidades   |
+
+Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P03 desta entrega, [hipóteses H36 a H38](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3) e relações [R04 e R05](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos).
 
 ## 3. Contexto de uso — consolidação
 
@@ -230,6 +274,8 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), seções 3, 5, 7 e 11, e [Entr
 
 
 ## 4. Jornada do usuário — equipe
+
+### Persona P01 — Rafael
 
 **Persona:** P01, Rafael  
 **Objetivo da jornada:** [H] Obter cortes e metadados de uma partida gravada para continuar a produção em ferramentas externas, H28.  
@@ -249,6 +295,46 @@ Esta é uma jornada proposta, baseada nas hipóteses da [Entrega 1](01_conhecend
 
 A jornada inclui a preparação anterior ao envio e a continuidade da edição após o download. A montagem e a eventual recuperação manual de lances acontecem fora da interface.
 
+### Persona P02 — Arnaldo
+
+**Persona:** P02, Arnaldo  
+**Objetivo da jornada:** [H] Supervisionar a produção de melhores momentos, consultar cortes e metadados recebidos externamente e chancelar decisões editoriais com rapidez e segurança, evitando aprovações às cegas e retrabalho, H33.  
+**Início e fim da jornada:** [H] Começa com o alinhamento das prioridades da rodada e o acompanhamento descentralizado das ilhas de edição, H14, e termina com a chancela editorial do material ou orientação de ajuste para montagem final externa, H33. Base: [Entrega 1](01_conhecendo_o_problema.md), seção 5.4, [Cenário C02](04_cenarios_problema.md#cenário-c02--controle-do-processo-editorial-engessado) e [hipóteses H33 a H35](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
+
+| Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Alinha a pauta e as prioridades editoriais da rodada com os editores de vídeo na redação. | Definir quais partidas e lances têm prioridade de publicação nas redes da emissora. | [H] Pressão por agilidade na entrega logo após o apito final de múltiplos jogos simultâneos. | Demanda intensa e descentralizada; dificuldade de acompanhar vários editores ao mesmo tempo. | Permitir que o fluxo do sistema gere saídas organizadas por partida para orientar a entrega ao supervisor. | H14 e H22; cenário C02 |
+| 2 | Acompanha a rotina da redação enquanto os editores enviam os vídeos e aguardam o processamento pelo backend do TCC. | Manter a visão geral do status da produção e antecipar a fila de aprovação editorial. | [?] Reação à espera do processamento pelo editor não investigada. | Incerteza sobre o tempo de conclusão e sobrecarga ao tentar monitorar telas presencialmente. | Exibir estados claros de processamento para o editor (RC03/A02), facilitando a comunicação do status a P02. | A02, H13, H25 e H33; RC03 |
+| 3 | Recebe do editor os cortes pré-selecionados e os metadados estruturados gerados pelo TCC (por canal externo). | Obter os trechos candidatos com metadados estruturados (partida, timecode, tipo de lance). | [?] Reação à recepção dos lotes de cortes não investigada. | Receber arquivos sem nomenclatura padronizada, sem contexto do lance ou misturados entre partidas. | Garantir que o download pelo editor mantenha a identificação da partida e metadados legíveis (RC05 e RC09). | A04, H25 e H33; RC05 e RC09 |
+| 4 | Consulta e inspeciona os cortes recebidos, assistindo aos lances com contexto temporal e checando os metadados. | Avaliar a pertinência editorial dos trechos sem precisar assistir à gravação integral de 90 minutos. | [H] Alívio ao visualizar o contexto do lance, reduzindo a necessidade de aprovar "às cegas". | Trechos cortados rente demais que omitem faltas anteriores ou polêmicas cruciais para a linha editorial. | Exportar cortes com margem de contexto temporal e metadados legíveis que facilitem a inspeção externa rápida. | H10, H16, H25 e H33; RC04, RC05 e cenário C02 |
+| 5, se houver divergência ou omissão | Identifica corte truncado ou lance faltante, orienta o editor com base nos timecodes/metadados e solicita ajuste pontual. | Corrigir a seleção antes da montagem final e evitar a publicação de material incorreto ou tendencioso. | [H] Preocupação em não atrasar o cronograma de postagens ao demandar revisão. | Dificuldade de apontar o ponto exato a corrigir sem timecodes; risco de retrabalho amplo e desnecessário. | Metadados com timecodes originais permitem referenciar com precisão o momento da partida a ser ajustado no editor externo. | H10, H16, H30, H33 e H35; cenário C02 e H35 |
+| 6 | Chancela a seleção de melhores momentos da partida e autoriza a continuidade para a montagem e pós-produção externa. | Liberar o material aprovado para finalização técnica e postagem pelas equipes de mídia social. | [H] Segurança de que o conteúdo atende às normas editoriais da emissora e à expectativa do público. | Insegurança em aprovações sob pressão; ausência de histórico consolidado sobre qual seleção foi chancelada. | Investigar a utilidade de histórico de auditoria editorial (H35) para registrar seleções chanceladas ou devolvidas. | H14, H22, H23, H33 e H35; relação R03 |
+| 7 | Acompanha a publicação do conteúdo nas redes sociais e monitora o retorno da audiência. | Concluir o ciclo editorial com material de qualidade, sem retrabalho emergencial de despublicação. | [H] Satisfação com o fluxo fluido e alívio por não precisar intervir em crises causadas por falhas de contexto. | Críticas da audiência e cobranças da diretoria caso lances polêmicos tenham sido publicados incorretamente. | Processo com cortes contextualizados e chancela informada reduz expressivamente falhas editoriais de publicação. | H04, H14 e H33; cenário C02 |
+
+Esta é uma jornada proposta para P02, derivada das hipóteses da [Entrega 1](01_conhecendo_o_problema.md), das decisões de consumo externo de resultados em H33 e da narrativa do [Cenário C02](04_cenarios_problema.md#cenário-c02--controle-do-processo-editorial-engessado). Não descreve um fluxo observado empiricamente com supervisores. A etapa 5 é condicional à ocorrência de divergência ou necessidade de ajuste na seleção.
+
+A jornada de P02 opera em estreita articulação com a de P01: inicia-se na redação esportiva, integra-se ao fluxo do TCC a partir do recebimento dos resultados baixados pelo editor (A04) e conclui-se externamente com a chancela editorial e a publicação nas redes sociais.
+
+### Persona P03 — Jorginho Jr.
+
+**Persona:** P03, Jorginho Jr.  
+**Objetivo da jornada:** [H] Obter cortes e metadados de partidas com lances de um jogador específico sem sobrecarregar seu computador, para montar compilações esportivas em ferramentas externas (como editores amadores de desktop ou mobile) e publicar em seus canais digitais, H06, H28, H36 e H37.  
+**Início e fim da jornada:** [H] Começa com o download ou obtenção das gravações de jogos da internet para selecionar lances de um atleta de interesse, H11 e H36, e termina com a exportação e publicação da compilação em suas redes sociais após a edição externa, H06 e H28. Base: [Entrega 1](01_conhecendo_o_problema.md), seções 4.5 e 7.3, [perfil P03](03_personas_contexto_jornada.md#persona-p03--jorginho-jr), [hipóteses H36 a H38](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3) e relações [R04 e R05](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos).
+
+| Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Reúne gravações completas de partidas recentes do jogador em que deseja focar o próximo vídeo do seu canal. | Preparar o material bruto para extrair jogadas sem lotar o armazenamento limitado do computador. | [H] Empolgação com a ideia do compilado, misturada ao receio do tempo que levaria para assistir a múltiplos jogos inteiros. | Gravações extensas (90+ min) ocupam quase todo o espaço livre em disco e exigem esforço manual exaustivo. | Permitir o envio de arquivos de forma simples e validar entradas antes de iniciar o upload. | H01, H11, H36 e H37; RC02 |
+| 2 | Envia as gravações de várias partidas para processamento remoto no sistema do TCC via interface web. | Delegar a análise pesada de vídeo para o servidor remoto, poupando CPU e disco da sua máquina modesta. | [?] Reação ao envio em lote não investigada; expectativa de que o upload aproveite sua boa conexão de internet. | Queda de conexão no upload ou falha de envio sem indicação clara de progresso gerando retrabalho. | Exibir progresso de envio transparente por partida, com feedback claro e sem travar a interface do navegador. | A01, H08, H24, H37 e R05; RC02 e RC12 |
+| 3 | Aguarda o processamento automático no servidor remoto enquanto realiza tarefas cotidianas ou estudos. | Não precisar manter softwares pesados rodando localmente nem ficar preso diante da tela durante a detecção dos lances. | [?] Sentimento durante o processamento remoto não investigado; expectativa de saber quando pode revisar os cortes. | Ansiedade com a demora e incerteza sobre se o processamento travou ou continua ativo no servidor. | Indicar status claro por partida (na fila, processando, concluído) e sinalizar a conclusão dos lotes. | A02, H13, H25, H32 e H37; RC03 |
+| 4, se houver falha | Identifica mensagem de falha em uma das partidas enviadas e consulta a orientação na interface para corrigir o problema. | Compreender rapidamente o motivo do erro em vocabulário simples e saber como prosseguir sem perder as outras partidas. | [H] Frustração com a interrupção, mas alívio se as demais partidas continuarem salvas e processadas normalmente. | Mensagens de erro com termos técnicos indecifráveis para um criador sem formação em computação. | Apresentar mensagens em vocabulário acessível (RC07), explicar o problema da partida e preservar os resultados das outras. | H16, H26, H37 e H38; RC03 e RC07 |
+| 5 | Revisa os cortes sugeridos na interface, assiste às prévias com contexto temporal e identifica os lances do jogador de interesse. | Selecionar apenas os cortes pertinentes ao atleta para compor o compilado temático. | [H] Desejo de filtrar ou localizar diretamente as jogadas do atleta sem precisar assistir a todos os cortes gerais. | Dificuldade e cansaço ao inspecionar manualmente dezenas de lances gerais de vários jogos para achar o jogador; cortes secos sem início da jogada. | Prévia com contexto temporal (RC04); investigar a viabilidade técnica de filtro por jogador (H36); vocabulário amigável (RC07). | A04, H10, H16, H25, H36 e H38; RC04, RC05 e RC07 |
+| 6 | Confirma a seleção dos cortes do atleta e realiza o download dos trechos escolhidos e metadados para seu dispositivo. | Obter apenas os arquivos essenciais selecionados, economizando armazenamento local em sua máquina. | [?] Reação à etapa de download não investigada; satisfação ao obter um pacote leve e organizado. | Download de pacotes excessivamente pesados ou cortes sem identificação clara da partida de origem e do lance. | Permitir baixar apenas os cortes marcados, com nomes padronizados identificando a partida e timecodes legíveis. | A04, H25, H28, H36 e H37; RC05, RC09 e R04 |
+| 7 | Importa os cortes baixados em um editor de vídeo externo (mobile ou aplicativo simples de PC), adiciona trilha/efeitos e publica no canal. | Concluir o vídeo com visual dinâmico para engajar a audiência e atrair inscritos para seu canal esportivo. | [H] Sensação de realização e orgulho ao publicar conteúdo com frequência e qualidade, sem exaustão manual. | Incompatibilidade de codecs em ferramentas externas amadoras ou necessidade de refazer recortes manuais. | Gerar cortes em formatos padrão amplamente suportados e manter a montagem detalhada e publicação fora da interface. | H06, H19, H28, H37 e H38; RC05 e R04 |
+
+Esta é uma jornada proposta para P03, derivada das hipóteses da [Entrega 1](01_conhecendo_o_problema.md), das características de criador amador definidas em sua ficha (equipamento modesto, processamento remoto em H37 e vocabulário acessível em H38) e das relações R04 e R05 da [matriz de rastreabilidade](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos). Não descreve um fluxo observado empiricamente com usuários. A etapa 4 é condicional à ocorrência de falhas no processamento.
+
+A jornada de P03 articula a busca inicial de gravações brutas na internet com a utilização do processamento em nuvem do TCC para contornar limitações locais de hardware, encerrando-se na pós-produção e publicação externa em plataformas como YouTube ou redes sociais por meio de editores amadores ou mobile.
+
 ## Síntese
 
 A partir da [Entrega 1](01_conhecendo_o_problema.md), os cenários e as tarefas seguintes devem contemplar:
@@ -259,11 +345,11 @@ A partir da [Entrega 1](01_conhecendo_o_problema.md), os cenários e as tarefas 
 - A revisão, seleção e download dos resultados (A04, H16 e H25) mantendo a decisão editorial com o usuário.
 - A entrega externa de cortes e metadados a P02 para uma decisão sobre a seleção (H33); investigar H34/H35 antes de propor interações específicas para esse perfil.
 
-Esses pontos mantêm o status de hipótese. P01, P02 e P03 estão elaboradas, o mapa textual e a jornada proposta tomam P01 como referência e precisam ser validados com usuários; P03 acrescenta a necessidade hipotética de filtrar lances por jogador (H36) cuja viabilidade técnica não está confirmada e não fazia parte do escopo original das capacidades do sistema proposto, e reforça a proposta de processamento remoto (H37). Edição detalhada, publicação e administração de usuários permanecem fora do escopo definido na Entrega 1.
+Esses pontos mantêm o status de hipótese. P01, P02 e P03 estão elaboradas, os mapas de empatia e as jornadas propostas (P01, P02 e P03) precisam ser validados com usuários; P03 acrescenta a necessidade hipotética de filtrar lances por jogador (H36) cuja viabilidade técnica não está confirmada e não fazia parte do escopo original das capacidades do sistema proposto, e reforça a proposta de processamento remoto (H37). Edição detalhada, publicação e administração de usuários permanecem fora do escopo definido na Entrega 1.
 
 ## Checklist
 
-- [x] O mapa de empatia visual está preenchido e corresponde ao quadro textual.
+- [x] Os mapas de empatia visuais estão preenchidos e correspondem aos quadros textuais (P01, P02 e P03).
 - [x] Existe pelo menos uma persona por integrante.
 - [x] As personas diferem por tarefas, decisões, experiência e contexto de uso.
 - [x] Está claro o que é dado real e o que é hipótese/proto-persona.
@@ -272,7 +358,7 @@ Esses pontos mantêm o status de hipótese. P01, P02 e P03 estão elaboradas, o 
 - [x] Contexto de uso está coerente com a Entrega 1.
 - [x] Em TCC sem interface original, P01, P02 e P03 possuem relação explícita com a contribuição técnica.
 - [x] P02 possui tarefa decisória distinta, fora da interface, em H33; não foi criado acesso administrativo.
-- [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
+- [x] As jornadas do usuário (P01, P02 e P03) possuem etapas, dores e oportunidades e não são apenas wireflows.
 - [x] IDs das personas elaboradas foram adicionados à rastreabilidade: P01, P02 e P03, nas relações R01 a R05.
 
 ## Lacunas para investigação
@@ -308,3 +394,7 @@ As lacunas abaixo não impedem a elaboração das personas, mas servem pra  orie
 - 16/09/2026 às 20:07: AC-020 aplicado. Integrada a ficha de P02 da main ec04f95, com suas hipóteses H33/H34/H35 e relação R03 preservadas. As hipóteses de P03 foram renumeradas: H33 → H36, filtro por jogador; H34 → H37, equipamento/processamento remoto; H35 → H38, experiência tecnológica. Atualizadas as referências atuais, síntese, contexto e checklist. Registros anteriores conservam os IDs usados na época. P01 permanece prioritária e a entrega continua em andamento.
 
 - 16/09/2026: substituído o placeholder do mapa de empatia por uma síntese visual de P01, com hipóteses e lacunas identificadas. Removidas instruções de preenchimento já atendidas e reunidas as perguntas para a coleta de dados. Incorporadas as respostas de Pedro: falas e reações não investigadas permanecem como lacunas; filtro por jogador condicionado à investigação e à viabilidade técnica. Preenchimento concluído, com validação empírica pendente.
+
+- 29/09/2026: adicionadas as seções de mapa de empatia e de jornada do usuário para P02 (Arnaldo) logo abaixo das de P01. A jornada detalha as 7 etapas de supervisão editorial, consulta a cortes/metadados, tratamento de divergências e chancela externa, mantendo rastreabilidade (H14, H22, H23, H25, H33, H35, C02 e R03) e total coerência estrutural com P01.
+
+- 30/09/2026: adicionadas as seções de mapa de empatia e de jornada do usuário para P03 (Jorginho Jr.) logo abaixo das de P01 e P02. Criado o arquivo visual correspondente em assets/03_personas/mapa_empatia_p03.svg, mantendo estrita paridade dimensional, visual e de fontes com P01 e P02. A jornada detalha as 7 etapas de produção amadora, upload em lote, acompanhamento remoto, revisão com recorte de jogador, download leve e pós-produção externa, mantendo rastreabilidade rigorosa (H01, H06, H08, H10, H11, H13, H16, H19, H24, H25, H28, H32, H36, H37, H38, R04 e R05) e total coerência estrutural com P01 e P02.
