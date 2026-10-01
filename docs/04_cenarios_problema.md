@@ -1,7 +1,7 @@
 # Entrega 4 — Cenários de análise/problema
 
 **Data:** 17/09/2026
-**Status:** 🟨 em andamento; C01 e C02 desenvolvidos como hipótese, C03 pendente
+**Status:** 🟩 concluído; C01, C02 e C03 desenvolvidos como hipótese
 **Responsabilidade:** 1 análise de cenário por integrante
 
 ## Objetivo da atividade
@@ -160,18 +160,87 @@ A coleta de dados (para a [Entrega 7](07_coleta_dados.md)) deverá investigar a 
 
 O valor a investigar para o projeto é conferir rastreabilidade, identificação e contexto aos lances gerados, facilitando a supervisão e reduzindo o risco de decisões arbitrárias ou desinformadas. C02 evidencia que a tecnologia do TCC deve apoiar o fluxo de revisão humana com metadados claros, e não automatizar a política editorial nem substituir o papel do editor-chefe na emissora.
 
+## Cenário C03 — Decupagem manual de lances por jogador sob restrições de hardware
+
+**Autor:** Giovanni Chahin Morassi, 22.123.025-3  
+**Persona relacionada:** [P03, Jorginho Jr.](03_personas_contexto_jornada.md#persona-p03--jorginho-jr)  
+**Necessidade relacionada:** R04, reduzir a busca manual e obter cortes de várias partidas para produção amadora; e R05, viabilizar o preparo de materiais com equipamento limitado  
+**Situação de origem:** [Entrega 1, seção 3.3 e seção 5.3](01_conhecendo_o_problema.md#33-qual-atividade-parece-mais-frequente-por-quê), H07 e H13  
+**Hipóteses relacionadas:** H01, H06, H08, H10, H11, H13, H19, H24, H25, H28, H36, H37 e H38
+
+### 1. Cenário inicial
+
+Jorginho Jr. é um criador de conteúdo amador que produz compilações e vídeos de melhores momentos focados em jogadores específicos para publicar em seu canal. Hoje, passa dias inteiros baixando gravações completas de múltiplas partidas e percorrendo-as manualmente em seu computador modesto para tentar identificar e recortar as jogadas em que o atleta de interesse participa. Com capacidade de processamento fraca e pouco espaço de armazenamento livre, seu computador frequentemente engasga ou trava ao manipular vídeos longos em alta resolução, e o esforço de decupagem manual repetitiva em vários jogos de 90 minutos é exaustivo e sujeito a omissões e perda de arquivos.
+
+Essa é a premissa definida pelo autor para C03. O relato reflete a realidade de produção independente sem infraestrutura profissional de hardware ou licenças de softwares avançados. O cenário e seus desdobramentos são hipotéticos e ainda precisam de validação empírica com criadores amadores.
+
+### 2. Questões de refinamento
+
+| Elemento | Questão que a premissa deixa em aberto | Resposta adotada para a narrativa e origem | O que investigar com usuários |
+|---|---|---|---|
+| Ambiente/contexto | Em que condições e com quais equipamentos Jorginho realiza a decupagem das partidas? | Em seu quarto residencial, à mesa do computador doméstico, utilizando um PC com configurações modestas de processador/memória e armazenamento quase no limite, com boa conexão de internet. Contexto de P03, H13, H37 e recorte amador confirmado pelo autor. A busca abrange várias partidas completas de um atleta para montar um compilado temático. | Configurações reais de hardware dos criadores amadores, espaço médio disponível em disco, formato e tamanho dos arquivos baixados e tempo despendido por vídeo. |
+| Ator | A dificuldade decorre de pouca familiaridade com edição de vídeo? | Jorginho tem prática intuitiva com editores simples e mobile (como CapCut), sem formação técnica em edição audiovisual ou programação. A dificuldade é sustentar a atenção visual procurando um único atleta entre 22 jogadores em vídeos longos e lidar com a lentidão e engasgos de uma máquina fraca. P03, H05, H19, H37 e H38. | Editores e aplicativos habitualmente utilizados (mobile/desktop), termos familiares, conhecimento prático de edição e como organizam os arquivos de projeto. |
+| Objetivo | O que precisa estar pronto ao final desta etapa de decupagem? | Um conjunto selecionado de cortes curtos contendo as melhores jogadas (dribles, finalizações, assistências e desarmes) do atleta-alvo extraídas de três jogos distintos, com contexto temporal suficiente para seguir para a montagem e pós-produção externa no canal. P03, H06, H28 e H36. | Quantidade média de clipes necessária para um compilado típico, critérios para julgar o lance como aproveitável para a audiência e formato final esperado de vídeo. |
+| Planejamento | Como pretende garimpar os lances do jogador nas partidas e lidar com o espaço em disco? | Baixa uma partida por vez devido ao armazenamento limitado em disco. Abre a gravação no editor local, acelera a reprodução e tenta rastrear o número da camisa do atleta. Planeja recortar os lances do jogador, exportar os clipes pequenos e apagar o arquivo bruto de 90 minutos para liberar espaço antes de baixar o jogo seguinte. Estratégia de contorno baseada em P03, H11, H36 e H37. | Fluxo real de gerenciamento de arquivos em disco, estratégias de busca visual (avançar em 2x, pular minutos, consultar cronogramas) e como evitam perdas. |
+| Ações | O que faz ao localizar visualmente o atleta participando de uma jogada? | Reduz a velocidade para 1x, retrocede alguns segundos na linha do tempo para capturar a origem da jogada, define os marcadores de início e fim, fatia o clipe e o salva na pasta do projeto. Quando a linha do tempo engasga por sobrecarga, aguarda ou força o encerramento de outros programas. P03, H01, H11, H36 e H37. | Como definem a margem de tempo de cada corte, nomenclatura e organização de pastas locais, e métodos de recuperação ao sofrer travamentos. |
+| Eventos | Que ocorrência torna o problema e as limitações de recursos visíveis? | Durante a decupagem da segunda partida, ao tentar aplicar um corte e pré-visualizar uma sequência de drible do atleta, o editor congela por consumo excessivo de memória RAM e esgotamento do disco de cache temporário. O programa encerra repentinamente, corrompe o arquivo do projeto e faz Jorginho perder mais de uma hora de marcações não salvas. P03, H13, H16 e H37. | Frequência de falhas técnicas locais (travamentos, falta de espaço em disco, perda de projetos) e impacto disso na motivação e continuidade do canal. |
+| Avaliação | Como Jorginho reage à perda de tempo e avalia o resultado do material obtido? | Constata que perdeu horas de esforço não salvo, reavalia se vale a pena conferir a partida inteira de novo ou fatiar de forma apressada, e percebe que cortes rápidos deixaram de fora lances decisivos. Reconhece que o hardware modesto torna insustentável manter a frequência do canal com o fluxo manual atual. P03, H01, H10, H11, H36 e H37. | Como equilibram o cansaço mental da busca manual, a tolerância a falhas do equipamento e a qualidade/frequência dos vídeos publicados. |
+
+### 3. Cenário refinado
+
+Os parágrafos identificados com **[NOVO]** desenvolvem a premissa inicial. Os detalhes são uma construção narrativa baseada nas hipóteses acima, sem atribuição de falas ou observações a participantes reais.
+
+**[NOVO]** Em uma tarde de sábado, em sua casa, Jorginho Jr. prepara o próximo vídeo para seu canal esportivo no YouTube. Ele pretende produzir um compilado temático de melhores momentos destacando a atuação de uma jovem promessa do futebol em seus três últimos jogos. Sentado à mesa do quarto, utiliza um computador de mesa modesto, equipado com processador antigo, memória RAM limitada e um disco rígido quase cheio, embora conte com uma conexão de internet de boa velocidade. Jorginho tem familiaridade intuitiva com editores de vídeo simples e aplicativos mobile, mas não domina softwares profissionais de pós-produção nem técnicas avançadas de gerenciamento de mídias pesadas.
+
+**[NOVO]** Devido ao pouco espaço disponível no disco rígido, Jorginho não consegue baixar as três gravações completas de uma só vez, já que cada partida em alta definição ocupa dezenas de gigabytes. Ele adota como estratégia trabalhar uma partida por vez: baixa o primeiro jogo da internet, importa o arquivo bruto para o editor de vídeo que costuma utilizar e planeja garimpar manualmente cada lance em que seu jogador favorito toca na bola. Seu plano é fatiar os trechos do atleta, salvar esses pequenos cortes em uma pasta de favoritos e em seguida apagar o vídeo de 90 minutos do computador para liberar espaço e poder baixar a partida seguinte.
+
+**[NOVO]** Para encontrar as jogadas sem precisar assistir aos 90 minutos em tempo real, Jorginho acelera a reprodução e tenta acompanhar visualmente o atleta em meio aos 22 jogadores na tela. Quando identifica a camisa do jogador recebendo a bola, desacelera o vídeo, volta alguns segundos na linha do tempo para capturar a construção do lance, define os limites do corte e separa o trecho. O processo exige concentração contínua e gera incerteza: ao avançar a gravação de forma acelerada para economizar tempo, teme ter pulado uma movimentação importante sem a bola ou um passe decisivo. Ainda assim, conclui a primeira partida, exporta os clipes obtidos e apaga a gravação original para liberar o disco.
+
+**[NOVO]** Ao baixar e abrir a segunda gravação, o acúmulo de horas de trabalho e as limitações de hardware começam a cobrar seu preço. O computador esquenta, a memória RAM chega ao limite com o acúmulo de arquivos temporários de cache e o sistema operacional emite alertas intermitentes de armazenamento insuficiente. A reprodução na linha do tempo fica engasgada, com quedas constantes de quadros que dificultam enxergar o número da camisa do atleta. Visualmente exausto após horas diante do monitor, Jorginho passa a acelerar ainda mais os trechos, delimitando os cortes de forma apressada e seca, suprimindo o início das jogadas para tentar terminar logo a tarefa.
+
+**[NOVO]** A fragilidade desse fluxo manual em equipamento limitado atinge o ponto crítico durante a decupagem de um contra-ataque decisivo da segunda partida. Enquanto tenta retroceder a agulha de reprodução para capturar o drible que originou o lance, a interface do editor trava por completo. O cursor do mouse vira um círculo giratório de carregamento, o sistema operacional para de responder e, após alguns segundos de congelamento, o programa fecha inesperadamente devido ao estouro de memória e à falta de espaço no disco de cache. Ao reabrir o software, Jorginho descobre que o arquivo de projeto foi corrompido e que mais de uma hora de marcações e cortes realizados naquela partida foram perdidos.
+
+**[NOVO]** Diante do prejuízo, Jorginho precisa gastar quase uma hora apagando arquivos pessoais e limpando caches do sistema para conseguir reabrir o editor com estabilidade mínima, precisando recomeçar o garimpo da segunda partida do zero. O desgaste acumulado atrasa todo o cronograma de publicação do canal no fim de semana, deixando a terceira partida pendente por falta de tempo e esgotamento mental. Ao revisar os poucos cortes que conseguiu salvar, percebe que muitos ficaram curtos demais e sem contexto. Ele encerra a noite desanimado, questionando se conseguirá manter o sonho de crescer como criador de conteúdo digital sem uma forma eficiente de receber os lances do jogador já recortados e sem sobrecarregar sua máquina.
+
+### 4. Elementos extraídos
+
+| Elemento | Evidência no cenário |
+|---|---|
+| Ambiente ou contexto | Quarto residencial, mesa do computador doméstico, PC com configurações modestas de processamento e pouco armazenamento livre, boa conexão de internet e objetivo de produzir conteúdo amador no fim de semana. |
+| Ator | Jorginho Jr., P03, criador de conteúdo esportivo amador, sem formação técnica em computação ou edição profissional. |
+| Objetivo | Isolar e extrair lances de um jogador específico a partir de várias partidas gravadas, gerando cortes curtos e contextuais para montar compilações em ferramentas externas e publicar em seu canal. |
+| Planejamento | Baixar e decupar uma partida por vez para contornar o limite de armazenamento; acelerar a reprodução para rastrear o atleta; fatiar e salvar clipes individuais e apagar os arquivos brutos pesados antes da próxima partida. |
+| Ações | Baixar gravação, importar no editor local, acelerar reprodução, rastrear visualmente a camisa do atleta, desacelerar, retroceder na linha do tempo, marcar início e fim de cortes, excluir arquivos pesados para liberar espaço e reiniciar o sistema após crash. |
+| Eventos | Emissão de alertas de disco cheio pelo sistema operacional, engasgos severos na reprodução da linha do tempo e congelamento do software de edição com encerramento forçado e perda do projeto da segunda partida. |
+| Avaliação | Julgar se uma movimentação do atleta é relevante, notar cortes secos sem contexto feitos por pressa, constatar a perda de horas de trabalho após o crash e avaliar a inviabilidade de sustentar a frequência do canal com o fluxo manual em máquina limitada. |
+| Recursos e informações | Gravações completas de futebol em alta definição, computador modesto com CPU/RAM limitadas e pouco espaço livre em disco, editor de vídeo amador, conexão de internet e conhecimento visual do estilo de jogo do atleta. |
+| Problemas e rupturas | Hardware sobrecarregado por arquivos pesados, esgotamento de memória e disco de cache, fadiga visual ao rastrear um atleta entre 22 jogadores, cortes sem contexto por pressa e travamento catastrófico com perda de dados. |
+| Consequências | Horas de esforço perdidas, necessidade de retrabalho integral da segunda partida, cancelamento do planejamento da terceira partida, atraso no cronograma de publicação e frustração com o risco de desistência do canal. |
+
+Planejamento e avaliação descrevem atividades mentais; ações descrevem comportamentos observáveis. No episódio do travamento, o congelamento da interface e o fechamento abrupto do software configuram os eventos, a percepção do tempo perdido e o sentimento de desânimo com a limitação da máquina constituem a avaliação, e a exclusão de arquivos para liberar espaço e o reinício da decupagem formam as ações decorrentes.
+
+### 5. Implicações para as próximas entregas
+
+Para a [Entrega 5](05_analise_tarefas.md), C03 oferece como tarefa de origem **garimpar e decupar lances de um jogador específico em partidas gravadas para compilação em ferramenta externa**. A análise deve detalhar o recebimento e armazenamento provisório dos arquivos brutos, a busca visual do atleta na linha do tempo, a delimitação temporal dos trechos, a gestão de arquivos em disco limitado e os fluxos de recuperação diante de travamentos e perda de trabalho. Essas atividades evidenciam como a ausência de automação e as restrições de infraestrutura criam gargalos severos para o criador de conteúdo amador.
+
+Ao modelar o uso proposto, as relações R04 e R05 ligam esse problema às capacidades centrais do TCC. A relação R05 contempla o envio de gravações e o acompanhamento remoto (atividades A01 e A02), transferindo o processamento pesado de visão computacional para o servidor remoto e contornando as restrições locais de CPU e armazenamento de P03 (H37 e RC12). A relação R04 abrange a revisão, seleção e download de cortes leves e metadados estruturados (atividade A04), permitindo ao criador baixar apenas os trechos que realmente importam, identificados por partida e com timecodes legíveis (RC05 e RC09), para então realizar a edição estética e musical em editores amadores de desktop ou mobile (H38 e RC05). A possibilidade de filtrar diretamente os lances pelo atleta de interesse (H36) permanece como necessidade a investigar com a equipe técnica quanto à viabilidade no backend, preservando a autonomia do criador na seleção final dos trechos. Os modelos HTA, GOMS e CTT para essas tarefas serão estruturados na Entrega 5.
+
+A coleta de dados (para a [Entrega 7](07_coleta_dados.md)) deverá investigar a configuração típica de hardware e armazenamento de criadores amadores; quanto tempo despendem decupando jogos versus montando o vídeo final; quais termos e convenções visuais utilizam em editores acessíveis; a frequência de travamentos e perdas de arquivos locais; e como definem e recortam jogadas de atletas específicos para seus canais.
+
+O valor a investigar para o projeto é democratizar o acesso à análise e corte de partidas, permitindo que criadores independentes com equipamentos modestos possam produzir vídeos com agilidade e consistência, delegando o processamento computacionalmente intensivo para a nuvem. C03 evidencia que o fornecimento de cortes leves e contextualizados viabiliza a rotina de produção de P03 sem descaracterizar a natureza humana e criativa da edição audiovisual.
+
 ### Referência conceitual
 
 Material de aula, *Cenários de análise/problema*, referenciado a partir de Barbosa e Silva (2010), catalogado em [BIBLIOGRAFIA.md](../BIBLIOGRAFIA.md). As seções teóricas definem a narrativa e seus elementos (ambiente/contexto, atores, objetivos, planejamento, ações, eventos e avaliação), exemplificam ações, dificuldades e consequências, e orientam a elaboração da atividade. A estrutura de cenário inicial, questões e refinamento vem do roteiro deste repositório.
 
-O integrante restante (Giovanni) deve acrescentar seu cenário (C03) com autoria própria. C01 e C02 não substituem a análise do terceiro membro do grupo.
+Com a incorporação de C01 (Pedro Custódio), C02 (Lucas Roberto) e C03 (Giovanni Chahin), a entrega contempla a totalidade dos integrantes da equipe, cobrindo os diferentes perfis (editor profissional, supervisor editorial e criador amador) e suas respectivas necessidades na matriz de rastreabilidade.
 
 
 ## Checklist
 
-Checklist da equipe. Os itens permanecem abertos até a incorporação e revisão do cenário do integrante restante (C03). C01 e C02 já contêm narrativa refinada, os elementos da taxonomia e vínculos na matriz (R01 e R03).
+Checklist da equipe. Os três cenários (C01, C02 e C03) contêm narrativa refinada, os elementos da taxonomia e vínculos na matriz de rastreabilidade (R01, R03, R04 e R05).
 
-- [ ] Há um cenário completo por integrante.
+- [x] Há um cenário completo por integrante.
 - [x] Cada cenário tem título, ator, objetivo, contexto e problema.
 - [x] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
 - [x] O texto descreve a situação atual, sem antecipar a solução.
