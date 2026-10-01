@@ -4,6 +4,8 @@
 **Status:** 🟩 concluído; C01, C02 e C03 desenvolvidos como hipótese
 **Responsabilidade:** 1 análise de cenário por integrante
 
+**OBS: O Histórico de commits recentes pode parecer um pouco "bagunçado", foi analisado 1 cenário por integrante conforme as personas desenvolvidas na entrega 03**
+
 ## Objetivo da atividade
 
 Descrever situações atuais em que o usuário tenta alcançar um objetivo e encontra dificuldades. O cenário de análise/problema deve tornar visível **o contexto, os atores, as ações e as rupturas**, sem antecipar a interface que será projetada.
