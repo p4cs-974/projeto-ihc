@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Análise de Coerência — Alinhamento da Entrega 4 com a Nova Síntese da Entrega 3</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --fg: #171717;
+      --muted: #555;
+      --panel: #f0f0f0;
+      --border: #bbb;
+      --tag-high-bg: #fee2e2;
+      --tag-high-fg: #991b1b;
+      --tag-med-bg: #fef3c7;
+      --tag-med-fg: #92400e;
+      --tag-low-bg: #e0f2fe;
+      --tag-low-fg: #075985;
+      --tag-pending-bg: #f3f4f6;
+      --tag-pending-fg: #374151;
+      --tag-applied-bg: #dcfce7;
+      --tag-applied-fg: #166534;
+      --tag-discarded-bg: #f3f4f6;
+      --tag-discarded-fg: #6b7280;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --fg: #e5e5e5;
+        --muted: #aaa;
+        --panel: #1e1e1e;
+        --border: #444;
+        --tag-high-bg: #450a0a;
+        --tag-high-fg: #fecaca;
+        --tag-med-bg: #451a03;
+        --tag-med-fg: #fde68a;
+        --tag-low-bg: #082f49;
+        --tag-low-fg: #bae6fd;
+        --tag-pending-bg: #27272a;
+        --tag-pending-fg: #e4e4e7;
+        --tag-applied-bg: #14532d;
+        --tag-applied-fg: #bbf7d0;
+        --tag-discarded-bg: #27272a;
+        --tag-discarded-fg: #9ca3af;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 32px 24px;
+    }
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    h1 { font-size: 1.85rem; line-height: 1.25; margin: .5rem 0; }
+    h2 { font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: .3rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.2rem; }
+    h4 { font-size: 1rem; margin-bottom: .25rem; margin-top: 1rem; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 1.5rem 0;
+      padding: 10px 14px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    nav a {
+      color: inherit;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 22px;
+      margin: 24px 0;
+      break-inside: avoid;
+    }
+    article.high { border-left: 6px solid #dc2626; }
+    article.medium { border-left: 6px solid #d97706; }
+    article.low { border-left: 6px solid #0284c7; }
+    p, li, td, code { overflow-wrap: anywhere; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: .92em;
+      background: rgba(125, 125, 125, 0.15);
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    a { color: inherit; }
+    li { margin: .4rem 0; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 600px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: rgba(125, 125, 125, 0.1);
+      font-weight: 600;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 6px 0;
+    }
+    details { margin: .5rem 0; }
+    .meta { color: var(--muted); font-size: .92rem; }
+    .tags {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+      font-size: .82rem;
+      font-weight: 600;
+    }
+    .tag {
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .tag-high { background: var(--tag-high-bg); color: var(--tag-high-fg); }
+    .tag-med { background: var(--tag-med-bg); color: var(--tag-med-fg); }
+    .tag-low { background: var(--tag-low-bg); color: var(--tag-low-fg); }
+    .tag-pending { background: var(--tag-pending-bg); color: var(--tag-pending-fg); border: 1px solid var(--border); }
+    .tag-applied { background: var(--tag-applied-bg); color: var(--tag-applied-fg); }
+    .tag-discarded { background: var(--tag-discarded-bg); color: var(--tag-discarded-fg); border: 1px dashed var(--border); }
+    .callout {
+      padding: 14px 18px;
+      border-radius: 4px;
+      background: var(--panel);
+      border-left: 4px solid #16a34a;
+      margin: 1.2rem 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="meta">Gemini 3.8 Flash (alto nível de raciocínio) no Antigravity CLI.</p>
+    <h1>Análise de Coerência — Alinhamento da Entrega 4 com a Nova Síntese da Entrega 3</h1>
+    <p class="meta">01/10/2026 às 16:39 · America/Sao_Paulo · UTC-03:00</p>
+    <p><strong>Status da análise: Em andamento.</strong> 0 novos tickets abertos; 1 ticket histórico revalidado como pendente em <code>README.md</code> (<a href="#revalidacao-tickets">AC-037</a>).</p>
+    <p><strong>Escopo da análise:</strong> Auditoria documental e de rastreabilidade com foco estrito na conformidade de <code>docs/04_cenarios_problema.md</code> perante a nova redação da seção <strong>Síntese</strong> em <code>docs/03_personas_contexto_jornada.md</code> (reestruturada para orientar exclusivamente as entregas subsequentes, da Entrega 4 em diante). A auditoria examina: (1) aderência dos três cenários (C01, C02 e C03) às diretrizes narrativas e de ruptura formuladas para P01, P02 e P03; (2) integridade metodológica e ausência de presunção de telas futuras; (3) conformidade com as 5 seções canônicas de Barbosa e Silva (2010); (4) reciprocidade na matriz de rastreabilidade (<code>RASTREABILIDADE.md</code>, relações R01, R03, R04 e R05); e (5) estado de acompanhamento dos tickets históricos. Todos os arquivos do repositório foram inventariados e checados em modo somente de leitura.</p>
+  </header>
+
+  <nav aria-label="Seções">
+    <a href="#conclusao">Conclusão geral</a>
+    <a href="#confronto-sintese">Confrontação direta: Síntese da Entrega 3 vs. Entrega 4</a>
+    <a href="#pontos-alinhados">Pontos já alinhados</a>
+    <a href="#mapa">Mapa de afirmações e dependências</a>
+    <a href="#revalidacao-tickets">Revalidação do histórico de tickets</a>
+    <a href="#tickets">Novos tickets de coerência</a>
+    <a href="#cobertura">Cobertura e inventário</a>
+    <a href="#limites">Limitações e fontes externas</a>
+    <a href="#verificacao">Verificação</a>
+  </nav>
+
+  <section id="conclusao">
+    <h2>Conclusão geral</h2>
+    <p>A auditoria comprova que o arquivo <code>docs/04_cenarios_problema.md</code> atende com <strong>100% de precisão e fidelidade conceitual às diretrizes prescritas na nova seção &ldquo;Síntese&rdquo; da Entrega 3</strong> (<code>docs/03_personas_contexto_jornada.md</code>).</p>
+    <p>A nova redação da Síntese em <code>docs/03</code> estabeleceu diretrizes expressas e prospectivas para a Entrega 4: aprofundar narrativas detalhadas retratando as dores, tensões e rupturas de cada persona em suas rotinas atuais de trabalho (C01 para Rafael/P01 sob pressão de prazo e risco de cortes truncados; C02 para Arnaldo/P02 na supervisão engessada com risco de aprovação às cegas; e C03 para Jorginho Jr./P03 no garimpo de atleta em PC modesto e pouco armazenamento). Cada um dos três cenários desenvolvidos em <code>docs/04</code> incorpora fielmente esses exatos pontos, articulando as hipóteses vinculadas (H01 a H38) e consolidando tarefas de origem sem antecipar a solução técnica da disciplina.</p>
+    <p>A integridade hipertextual, a rastreabilidade bilateral com <code>RASTREABILIDADE.md</code> e o cumprimento do requisito didático de &ldquo;1 solução completa por integrante&rdquo; (Pedro Custódio em C01, Lucas Roberto em C02 e Giovanni Chahin em C03) estão rigorosamente garantidos. O único apontamento ativo no repositório permanece sendo o ticket <a href="#revalidacao-tickets">AC-037</a> (indicador visual da Entrega 4 na tabela de <code>README.md</code> ainda marcado como <code>🟨</code>), que segue em status Pendente aguardando atualização do arquivo de apresentação.</p>
+  </section>
+
+  <section id="confronto-sintese">
+    <h2>Confrontação direta: Síntese da Entrega 3 vs. Entrega 4</h2>
+    <p>A tabela abaixo detalha o confronto entre cada diretriz explicitada na seção &ldquo;Síntese&rdquo; de <code>docs/03_personas_contexto_jornada.md</code> e sua respectiva concretização textual em <code>docs/04_cenarios_problema.md</code>:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Diretriz na Síntese de docs/03</th>
+            <th>Concretização em docs/04</th>
+            <th>Avaliação de Coerência</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>C01 (Rafael / P01):</strong><br>
+              A exaustão da busca e corte manual de lances em gravações longas sob forte pressão de prazo, o risco constante de omissões ou perda de contexto e a necessidade de rever material duvidoso (H01, H09, H10, H11 e H30).
+            </td>
+            <td>
+              <code>docs/04</code>, linhas 25–93:<br>
+              Rafael passa horas percorrendo gravações integrais em sala com pouca luz; adota a estratégia de separar candidatos duvidosos para reavaliar durante a revisão (H30); com o cansaço acumulado, a qualidade cai e ele identifica um corte truncado no momento da finalização que omitiu a criação da jogada (H11); precisa retornar ao original e refazer o trecho, concluindo a jornada exausto e sem eliminar a incerteza de ter deixado lances relevantes para trás (H01, H09, H10).
+            </td>
+            <td><strong>Totalmente Alinhado.</strong> A narrativa materializa com exatidão todas as hipóteses, dores de decupagem manual e rupturas prescritas na síntese de P01.</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>C02 (Arnaldo / P02):</strong><br>
+              A rotina engessada de supervisão editorial na redação, o recebimento descentralizado de lotes e a necessidade de chancelar seleções com base em metadados/timecodes claros para evitar aprovações às cegas e retrabalho (H14, H22, H23 e H33).
+            </td>
+            <td>
+              <code>docs/04</code>, linhas 94–162:<br>
+              Arnaldo supervisiona presencialmente múltiplas ilhas de edição na emissora em dias de jogos simultâneos; mantém anotações manuais em bloco; o volume de entregas estipula gargalo crítico e o força a aprovar lotes &ldquo;às cegas&rdquo; sob pressão de redes sociais (H14, H22, H23); um vídeo de gol é postado sem a falta anterior, gerando críticas do público e cobrança da direção, exigindo intervenção emergencial de despublicação e correção manual; evidencia a necessidade de receber material estruturado com metadados legíveis (H33).
+            </td>
+            <td><strong>Totalmente Alinhado.</strong> Retrata fielmente a tensão do supervisor editorial, a ausência de interface administrativa e o valor de cortes contextualizados com timecodes.</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>C03 (Jorginho Jr. / P03):</strong><br>
+              O esforço exaustivo de um criador amador para garimpar lances de um atleta específico em múltiplos jogos usando computador modesto e armazenamento escasso (H06, H28, H36, H37 e H38).
+            </td>
+            <td>
+              <code>docs/04</code>, linhas 163–231:<br>
+              Jorginho Jr. produz compilações focadas em um jogador jovem (H36); com computador doméstico modesto e pouco espaço em disco rígido, é forçado a baixar, garimpar e apagar uma partida de 90 minutos por vez antes de baixar a próxima (H37); rastreia visualmente a camisa do atleta em velocidade acelerada; durante a segunda partida, o editor de vídeo sofre sobrecarga de RAM e cache, congela e encerra repentinamente, corrompendo o projeto e destruindo mais de uma hora de trabalho (H01, H11, H13, H37, H38).
+            </td>
+            <td><strong>Totalmente Alinhado.</strong> Expressa com perfeição a realidade de infraestrutura modesta, a dor de decupagem manual repetitiva por jogador e a ruptura catastrófica de crash local.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="pontos-alinhados">
+    <h2>Pontos já alinhados</h2>
+    <ul>
+      <li><strong>Completude da equipe e autoria inequívoca:</strong> Cada um dos três integrantes matriculados é autor de um cenário completo e independente: C01 por Pedro Alexandre Custódio Silva (22.123.049-3), C02 por Lucas Roberto Boccia dos Santos (22.123.012-1) e C03 por Giovanni Chahin Morassi (22.123.025-3). O checklist atesta o cumprimento da exigência de &ldquo;1 solução completa por integrante&rdquo;.</li>
+      <li><strong>Paridade metodológica estrita (Barbosa e Silva, 2010):</strong> C01, C02 e C03 obedecem com uniformidade absoluta à estrutura em cinco partes:
+        <ol>
+          <li>Cenário inicial com premissa e ressalva explícita de hipótese;</li>
+          <li>Questões de refinamento detalhando elementos da taxonomia e perguntas para coleta empírica;</li>
+          <li>Cenário refinado em múltiplos parágrafos com distinção formal via marcações <code>**[NOVO]**</code>;</li>
+          <li>Elementos extraídos tabulados, diferenciando atividades mentais (planejamento/avaliação) de ações observáveis;</li>
+          <li>Implicações para as próximas entregas (tarefas de origem para a Entrega 5, rastreabilidade técnica e questões de pesquisa para a Entrega 7).</li>
+        </ol>
+      </li>
+      <li><strong>Estrita adesão ao conceito de Cenário de Análise/Problema:</strong> Nenhum dos cenários comete anacronismo projetual ou projeta telas futuras da disciplina. Não há descrições de &ldquo;o sistema detecta&rdquo;, &ldquo;o usuário clica na interface do TCC&rdquo; ou botões futuros. Os textos narram exclusivamente o sofrimento humano, as restrições operacionais e as práticas manuais cotidianas no estado da arte atual.</li>
+      <li><strong>Rastreabilidade bilateral consolidada:</strong>
+        <ul>
+          <li>C01 conecta-se à persona P01 (Rafael) e à relação R01 na matriz de rastreabilidade;</li>
+          <li>C02 conecta-se à persona P02 (Arnaldo) e à relação R03 na matriz de rastreabilidade;</li>
+          <li>C03 conecta-se à persona P03 (Jorginho Jr.) e às relações R04 e R05 na matriz de rastreabilidade.</li>
+        </ul>
+      </li>
+      <li><strong>Integridade dos hiperlinks relativos:</strong> Todas as âncoras para <code>03_personas_contexto_jornada.md</code> (<code>#persona-p01--rafael</code>, <code>#persona-p02--arnaldo</code>, <code>#persona-p03--jorginho-jr</code>), para as seções de <code>01_conhecendo_o_problema.md</code> e para <code>BIBLIOGRAFIA.md</code> foram testadas e validadas.</li>
+      <li><strong>Projeção consistente para as Entregas 5 e 7:</strong> Cada cenário define com clareza sua tarefa de origem humana para modelagem em HTA, GOMS e CTT na Entrega 5 e formula perguntas concretas de pesquisa para orientar os instrumentos da Entrega 7, em perfeita consonância com o cronograma estabelecido na Síntese de <code>docs/03</code>.</li>
+    </ul>
+  </section>
+
+  <section id="mapa">
+    <h2>Mapa de afirmações e dependências</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Artefato / Seção</th>
+            <th>Origem e Rastreabilidade</th>
+            <th>Avaliação de Coerência com a Síntese de docs/03</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>C01</strong>: Seleção manual de melhores momentos sob pressão de prazo</td>
+            <td><code>docs/01</code>, seção 4.5 e H11; <code>docs/03</code>, P01 e Síntese; <code>RASTREABILIDADE.md</code>, R01</td>
+            <td><strong>Alinhado.</strong> Cumpre rigorosamente o direcionamento de demonstrar a exaustão da decupagem manual, cortes truncados sem contexto e desgaste acumulado ao longo da jornada.</td>
+          </tr>
+          <tr>
+            <td><strong>C02</strong>: Controle do processo editorial engessado</td>
+            <td><code>docs/01</code>, seção 5.4 e H14; <code>docs/03</code>, P02 e Síntese; <code>RASTREABILIDADE.md</code>, R03</td>
+            <td><strong>Alinhado.</strong> Materializa a supervisão descentralizada em ilhas de edição, a sobrecarga de jogos simultâneos, aprovações às cegas e crise gerada por corte descontextualizado.</td>
+          </tr>
+          <tr>
+            <td><strong>C03</strong>: Decupagem manual de lances por jogador sob restrições de hardware</td>
+            <td><code>docs/01</code>, seções 3.3 e 5.3 (H07 e H13); <code>docs/03</code>, P03 e Síntese; <code>RASTREABILIDADE.md</code>, R04 e R05</td>
+            <td><strong>Alinhado.</strong> Retrata o garimpo manual centrado em um atleta, a estratégia de contorno de disco cheio e o crash de software por esgotamento de RAM/cache.</td>
+          </tr>
+          <tr>
+            <td><strong>Projeção para a Entrega 5</strong> (Análise de Tarefas)</td>
+            <td><code>docs/04</code>, seções 5 de C01, C02 e C03; <code>docs/03</code>, Síntese</td>
+            <td><strong>Alinhado.</strong> Define tarefas prioritárias de seleção manual de lances (C01), supervisão e chancela editorial (C02) e garimpo/decupagem por atleta em máquina limitada (C03).</td>
+          </tr>
+          <tr>
+            <td><strong>Projeção para a Entrega 7</strong> (Coleta de Dados)</td>
+            <td><code>docs/04</code>, seções 5 de C01, C02 e C03; <code>docs/03</code>, Síntese e Lacunas</td>
+            <td><strong>Alinhado.</strong> Delimita questões de pesquisa empírica para investigar tempos de decupagem, critérios de corte, tolerância a travamentos e rotinas de chancela na redação.</td>
+          </tr>
+          <tr>
+            <td><strong>Status da Entrega 4</strong> no cabeçalho de <code>docs/04</code></td>
+            <td><code>docs/04_cenarios_problema.md</code>, linha 4</td>
+            <td><strong>Alinhado.</strong> Exibe <code>🟩 concluído; C01, C02 e C03 desenvolvidos como hipótese</code>, coerente com o preenchimento integral dos três cenários.</td>
+          </tr>
+          <tr>
+            <td><strong>Tabela-resumo de Entregas</strong> em <code>README.md</code></td>
+            <td><code>README.md</code>, linha 110</td>
+            <td><strong>Divergente (Pendente).</strong> Mantém <code>🟨</code> (em andamento) apesar da conclusão formal da entrega em <code>docs/04</code>. Acompanhado em <a href="#revalidacao-tickets">AC-037</a>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="revalidacao-tickets">
+    <h2>Revalidação do histórico de tickets</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket</th>
+            <th>Descrição Resumida</th>
+            <th>Status Anterior</th>
+            <th>Situação Atual nesta Auditoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>AC-032</strong></td>
+            <td>Marcador de conflito git residual (<code>=======</code>) em <code>docs/04</code></td>
+            <td><span class="tag tag-applied">Aplicado</span></td>
+            <td><strong>Mantém-se Aplicado.</strong> Nenhuma marcação residual de merge identificada.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-033</strong></td>
+            <td>Ausência de C03 (Giovanni Chahin Morassi / P03) na Entrega 4</td>
+            <td><span class="tag tag-applied">Aplicado</span></td>
+            <td><strong>Mantém-se Aplicado.</strong> Cenário C03 plenamente elaborado, formatado nas 5 seções e integrado na matriz.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-034</strong></td>
+            <td>Metadados e notas de checklist desatualizados em <code>docs/04</code></td>
+            <td><span class="tag tag-applied">Aplicado</span></td>
+            <td><strong>Mantém-se Aplicado.</strong> Cabeçalho <code>🟩 concluído</code> e 9 itens do checklist devidamente marcados.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-035</strong></td>
+            <td>Âncora de link para P02 desalinhada do cabeçalho em <code>docs/03</code></td>
+            <td><span class="tag tag-applied">Aplicado</span></td>
+            <td><strong>Mantém-se Aplicado.</strong> Slug <code>#persona-p02--arnaldo</code> consistente e plenamente navegável.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-036</strong></td>
+            <td>Menção textual a diretório inexistente <code>.ref/</code> em <code>docs/04</code></td>
+            <td><span class="tag tag-applied">Aplicado</span></td>
+            <td><strong>Mantém-se Aplicado.</strong> Citação formal a Barbosa e Silva (2010) em <code>BIBLIOGRAFIA.md</code> preservada.</td>
+          </tr>
+          <tr>
+            <td><strong>AC-037</strong></td>
+            <td>Status da Entrega 4 desatualizado na tabela geral de <code>README.md</code> (<code>🟨</code> vs <code>🟩</code>)</td>
+            <td><span class="tag tag-pending">Pendente</span></td>
+            <td><span class="tag tag-pending">Pendente</span> <strong>Revalidado.</strong> Permanece pendente de atualização a linha 110 de <code>README.md</code> para sincronizar o painel com o status concluído da Entrega 4.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tickets">
+    <h2>Novos tickets de coerência</h2>
+    <div class="callout">
+      <p><strong>Nenhum novo ticket de coerência aberto nesta auditoria.</strong></p>
+      <p>O conteúdo de <code>docs/04_cenarios_problema.md</code> cumpre com 100% de precisão as diretrizes estabelecidas na nova seção &ldquo;Síntese&rdquo; de <code>docs/03_personas_contexto_jornada.md</code>. As narrativas de C01, C02 e C03 expressam exatamente as tensões, rotinas de trabalho, rupturas e restrições atribuídas a Rafael (P01), Arnaldo (P02) e Jorginho Jr. (P03), respeitando o rigor metodológico de IHC sem antecipação de interfaces futuras.</p>
+    </div>
+  </section>
+
+  <section id="cobertura">
+    <h2>Cobertura e inventário do repositório</h2>
+    <p>Todos os arquivos sob controle de versão foram contabilizados e categorizados:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Categoria</th>
+            <th>Arquivos Inspecionados</th>
+            <th>Tratamento na Auditoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Documentos de Entrega (Foco Principal)</strong></td>
+            <td>
+              <code>docs/04_cenarios_problema.md</code> (inspeção textual integral de C01, C02 e C03, taxonomias, tabelas de elementos e seções de implicações),<br>
+              <code>docs/03_personas_contexto_jornada.md</code> (confrontação direta com o novo texto da seção Síntese, perfis P01/P02/P03, mapas de empatia e jornadas).
+            </td>
+            <td>Leitura minuciosa, verificação de paridade de conteúdo, links âncora e dependências conceituais.</td>
+          </tr>
+          <tr>
+            <td><strong>Matriz de Rastreabilidade e Fontes de Base</strong></td>
+            <td>
+              <code>RASTREABILIDADE.md</code> (verificação de R01 a R05, histórico de alterações e mapeamento de hipóteses H01 a H38),<br>
+              <code>docs/01_conhecendo_o_problema.md</code> (situações de origem das atividades A01 a A04 e hipóteses H07, H11, H13, H14),<br>
+              <code>docs/02_analise_concorrencia.md</code> (recomendações de design RC02, RC03, RC04, RC05, RC07, RC09 e RC12),<br>
+              <code>README.md</code> (painel geral de entregas e lista de integrantes),<br>
+              <code>BIBLIOGRAFIA.md</code> (referência canônica a Barbosa e Silva, 2010).
+            </td>
+            <td>Confrontação com hipóteses, necessidades e vínculos declarados em C01, C02 e C03.</td>
+          </tr>
+          <tr>
+            <td><strong>Assets Gráficos e Vetoriais</strong></td>
+            <td>
+              <code>assets/03_personas/mapa_empatia_p01.svg</code> (renomeado e atualizado),<br>
+              <code>assets/03_personas/mapa_empatia_p02.svg</code> (atualizado),<br>
+              <code>assets/03_personas/mapa_empatia_p03.svg</code> (atualizado),<br>
+              Avatares PNG em <code>assets/03_personas/</code> e diagramas em <code>assets/05_tarefas/</code>.
+            </td>
+            <td>Verificada a consistência dos identificadores visuais e alinhamento com os textos dos mapas e personas.</td>
+          </tr>
+          <tr>
+            <td><strong>Documentos Futuros (Templates / Apoio)</strong></td>
+            <td>
+              <code>docs/05_analise_tarefas.md</code>, <code>docs/06_prototipacao_papel.md</code>, <code>docs/07_coleta_dados.md</code>, <code>docs/08_engenharia_usabilidade.md</code>, <code>docs/09_modelo_conceitual.md</code>, <code>docs/10_molic.md</code>, <code>docs/11_figma.md</code>, <code>docs/12_planejamento_avaliacao.md</code>, <code>docs/13_avaliacao_heuristica.md</code>, <code>docs/14_observacao_usuario.md</code>,<br>
+              <code>CHECKLIST_FINAL.md</code>, <code>CONTRIBUTING.md</code>, <code>GUIA_DE_USO.md</code>, <code>GUIA_ESCOPO_IHC.md</code>.
+            </td>
+            <td>Inspecionados para assegurar que as tarefas de origem e perguntas para coleta formuladas em C01–C03 oferecem base sólida para as próximas etapas.</td>
+          </tr>
+          <tr>
+            <td><strong>Histórico de Auditorias de Coerência</strong></td>
+            <td>
+              <code>analises de coerencia/analise-de-coerencia-2026-09-03.html</code> a <code>analises de coerencia/01-10-2026-14-35.html</code> (10 relatórios anteriores).
+            </td>
+            <td>Revalidação do ciclo de vida dos tickets históricos (AC-032 a AC-037) e controle de numeração.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="limites">
+    <h2>Limitações e fontes externas</h2>
+    <p>A auditoria apoia-se nas seguintes premissas e fontes de autoridade:</p>
+    <ul>
+      <li><strong>Status de hipótese declarado:</strong> Todos os desdobramentos narrativos, tempos subjetivos de tarefa e reações descritos em C01, C02 e C03 permanecem classificados como construções hipotéticas fundamentadas em proto-personas, aguardando validação empírica direta com usuários na Entrega 7. Essa ressalva é expressamente declarada nos três cenários.</li>
+      <li><strong>Referencial conceitual:</strong> BARBOSA, Simone; SILVA, Bruno. <em>Interação Humano-Computador</em>. Rio de Janeiro: Elsevier / Campus, 2010. Utilizado como base teórica para a taxonomia de elementos e distinção entre atividades cognitivas e ações observáveis.</li>
+      <li><strong>Delimitação de escopo técnico:</strong> A demanda hipotética de Jorginho Jr. por filtro de lances por atleta (H36) permanece adequadamente condicionada à investigação de viabilidade técnica no backend, sem configurar compromisso contratual de implementação de visão computacional na interface.</li>
+    </ul>
+  </section>
+
+  <section id="verificacao">
+    <h2>Verificação</h2>
+    <p>O presente relatório foi gerado em conformidade estrita com a especificação de <code>.agents/skills/analise-de-coerencia/SKILL.md</code>. O documento é autocontido em HTML5 sem scripts remotos, adota folha de estilos responsiva com suporte dinâmico a tema escuro/claro e tabelas com rolagem horizontal preventiva.</p>
+    <p>A unicidade e continuidade dos tickets foram verificadas: não houve necessidade de abrir novo identificador (o maior índice anterior, <code>AC-037</code>, foi preservado como pendente na revalidação histórica).</p>
+  </section>
+</main>
+</body>
+</html>

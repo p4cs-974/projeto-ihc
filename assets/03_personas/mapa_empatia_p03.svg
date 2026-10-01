@@ -20,9 +20,9 @@
 <text x="1150" y="564" text-anchor="middle" font-size="19">das partidas e confere a lista de cortes gerados.</text>
 <text x="1150" y="591" text-anchor="middle" font-size="16">Base: H08, H25, H36 e H37</text>
 <text x="290" y="475" text-anchor="middle" font-size="24" font-weight="700">O que ouve?</text>
-<text x="290" y="510" text-anchor="middle" font-size="19">[?] Reações da audiência, preferências de</text>
-<text x="290" y="537" text-anchor="middle" font-size="19">inscritos e comentários de outros criadores</text>
-<text x="290" y="564" text-anchor="middle" font-size="19">ainda não foram investigados.</text>
+<text x="290" y="510" text-anchor="middle" font-size="19">[H] Reações da audiência, preferências de</text>
+<text x="290" y="537" text-anchor="middle" font-size="19">inscritos e comentários de outros criadores. [?]</text>
+<text x="290" y="564" text-anchor="middle" font-size="19">Evidências reais ainda não foram investigadas.</text>
 <text x="290" y="591" text-anchor="middle" font-size="16">Base: H06 e H19 • lacuna de pesquisa</text>
 <text x="720" y="745" text-anchor="middle" font-size="24" font-weight="700">O que fala e faz?</text>
 <text x="720" y="780" text-anchor="middle" font-size="19">[H] Envia partidas inteiras e aguarda o servidor remoto.</text>

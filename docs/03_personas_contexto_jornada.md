@@ -201,14 +201,14 @@ As três fichas são proto-personas sem validação empírica. Os mapas de empat
 **Idade:** [?] Não investigada.  
 **Justificativa:** Rafael representa o editor de vídeo esportivo priorizado na Entrega 1, H27. Seu objetivo de obter cortes e metadados com menor esforço manual, H28, se relaciona diretamente à identificação automática de melhores momentos produzida pelo TCC.
 
-![Mapa de empatia de Rafael](../assets/03_personas/mapa_empatia.svg)
+![Mapa de empatia de Rafael](../assets/03_personas/mapa_empatia_p01.svg)
 
 O mapa abaixo sintetiza as hipóteses de P01 e as escolhas feitas com o autor. Não contém falas coletadas nem observações de usuários. O arquivo visual acima apresenta a mesma síntese do quadro textual.
 
 | Dimensão    | Registro                                                                                                                                                                                                   | Base                                         |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
 | Vê          | [H] Gravações extensas e lances que precisa selecionar. No uso proposto, acompanha o estado das partidas e confere os cortes gerados.                                                                      | H11, H25 e H32; P01                          |
-| Ouve        | [?] Não sabemos quais orientações, cobranças ou comentários recebe de colegas e responsáveis editoriais.                                                                                                   | Fluxo organizacional ainda a investigar, H14 |
+| Ouve        | [H] Orientações, cobranças e comentários da equipe e dos responsáveis editoriais. [?] Evidências reais ainda não foram investigadas.                                                                       | Fluxo organizacional ainda a investigar, H14 |
 | Fala e faz     | [H] Envia várias partidas, continua outras edições durante a espera, revisa uma partida por vez e escolhe os cortes para download. Recupera lances omitidos no editor externo. [?] Não há falas coletadas. | H32; comportamentos definidos para P01       |
 | Pensa e sente | [H] Preocupa-se com o prazo e com a possibilidade de deixar passar um lance importante. Aceita revisar alguns cortes sem interesse para reduzir esse risco.                                                | H11 e H30; dores de P01                      |
 | Dores       | [H] Seleção manual demorada, omissões, cortes sem contexto e retrabalho. Quando ocorre uma falha, precisa entender o motivo e como continuar.                                                              | H01, H10, H11, H16 e H26                     |
@@ -229,7 +229,7 @@ O mapa abaixo sintetiza as hipóteses de P02, as propostas do autor (Lucas Rober
 | Dimensão    | Registro                                                                                                                                                                                                   | Base                                         |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
 | Vê          | [H] Várias ilhas de edição operando em paralelo e anotações manuais sobre o andamento. No uso proposto, recebe externamente os cortes identificados por partida e seus metadados.                        | H14, H25 e H33; perfil P02 e cenário C02     |
-| Ouve        | [?] Cobranças da direção por agilidade e dúvidas pontuais trazidas pelos editores ainda não foram investigadas com usuários.                                                                               | H14; comunicação editorial ainda a investigar |
+| Ouve        | [H] Cobranças da direção por agilidade e dúvidas pontuais trazidas pelos editores. [?] Evidências reais ainda não foram investigadas.                                                                      | H14; comunicação editorial ainda a investigar |
 | Fala e faz  | [H] Percorre as salas de edição, orienta editores e atende dúvidas. Recebe cortes e metadados externamente, avalia o material e devolve a chancela ou pedido de revisão externa. [?] Não há falas coletadas.     | H33 e H34; comportamentos definidos para P02 e C02 |
 | Pensa e sente | [H] Sente sobrecarga ao supervisionar vários jogos. Teme aprovar lotes "às cegas" e ter publicações inconsistentes que prejudiquem a reputação da emissora.                                               | H22, H23 e H33; dores de P02 e C02           |
 | Dores       | [H] Supervisão descentralizada e engessada, aprovações sob pressão sem ver o contexto, risco de publicação falha e retrabalho para intervir em crises de conteúdo.                                        | H10, H14, H16 e H33; perfil P02 e C02       |
@@ -250,7 +250,7 @@ O mapa abaixo sintetiza as hipóteses de P03 e as escolhas feitas com o autor (G
 | Dimensão    | Registro                                                                                                                                                                                                                            | Base                                                                 |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Vê          | [H] Gravações extensas baixadas e vídeos de canais concorrentes. No uso proposto, vê o estado das partidas e confere a lista de cortes gerados no servidor remoto.                                                                  | H08, H25, H36 e H37; perfil P03                                      |
-| Ouve        | [?] Reações da audiência, preferências de inscritos e comentários de outros criadores sobre suas edições ainda não foram investigados.                                                                                              | H06 e H19; lacuna de pesquisa                                        |
+| Ouve        | [H] Reações da audiência, preferências de inscritos e comentários de outros criadores. [?] Evidências reais ainda não foram investigadas.                                                                                         | H06 e H19; lacuna de pesquisa                                        |
 | Fala e faz  | [H] Envia partidas inteiras pela web, aguarda o servidor remoto enquanto faz tarefas cotidianas, revisa os cortes buscando lances de um jogador e baixa o material para editar em apps amadores/mobile. [?] Não há falas coletadas.   | H28, H36, H37 e H38; comportamentos de P03 e relações R04/R05        |
 | Pensa e sente | [H] Frustra-se ao gastar horas assistindo a jogos longos. Sonha em crescer no YouTube e receia que travamentos em seu PC modesto impeçam a regularidade de publicações em seu canal.                                              | H01, H06, H11, H36 e H37; dores e motivadores de P03                |
 | Dores       | [H] Análise manual demorada por partida, pouco espaço em disco, PC lento e dificuldade de isolar lances de um jogador entre várias gravações. Risco de desistir do canal por exaustão no processo de decupagem.                   | H01, H11, H36 e H37; perfil P03                                      |
@@ -337,15 +337,35 @@ A jornada de P03 articula a busca inicial de gravações brutas na internet com 
 
 ## Síntese
 
-A partir da [Entrega 1](01_conhecendo_o_problema.md), os cenários e as tarefas seguintes devem contemplar:
+Os perfis, mapas de empatia, contexto de uso e jornadas estruturados nesta entrega estabelecem as seguintes diretrizes para o desenvolvimento das entregas subsequentes (da Entrega 4 em diante):
 
-- O esforço de localizar e recortar lances em gravações extensas e o risco de omissão ou perda de contexto (H01, H09, H10 e H11).
-- A obtenção de cortes e metadados para continuar a produção em ferramentas externas (H06 e H28).
-- O envio em lote e a compreensão de progresso, falhas e possibilidades de recuperação (A01 e A02, H08, H13 e H26).
-- A revisão, seleção e download dos resultados (A04, H16 e H25) mantendo a decisão editorial com o usuário.
-- A entrega externa de cortes e metadados a P02 para uma decisão sobre a seleção (H33); investigar H34/H35 antes de propor interações específicas para esse perfil.
+- **Entrega 4 (Cenários de análise/problema):** Desenvolver narrativas detalhadas aprofundando as dores, tensões e rupturas de cada persona em suas rotinas atuais de trabalho:
+  - **C01 (Rafael / P01):** A exaustão da busca e corte manual de lances em gravações longas sob forte pressão de prazo, o risco constante de omissões ou perda de contexto e a necessidade de rever material duvidoso (H01, H09, H10, H11 e H30);
+  - **C02 (Arnaldo / P02):** A rotina engessada de supervisão editorial na redação, o recebimento descentralizado de lotes e a necessidade de chancelar seleções com base em metadados/timecodes claros para evitar aprovações às cegas e retrabalho (H14, H22, H23 e H33);
+  - **C03 (Jorginho Jr. / P03):** O esforço exaustivo de um criador amador para garimpar lances de um atleta específico em múltiplos jogos usando computador modesto e armazenamento escasso (H06, H28, H36, H37 e H38).
 
-Esses pontos mantêm o status de hipótese. P01, P02 e P03 estão elaboradas, os mapas de empatia e as jornadas propostas (P01, P02 e P03) precisam ser validados com usuários; P03 acrescenta a necessidade hipotética de filtrar lances por jogador (H36) cuja viabilidade técnica não está confirmada e não fazia parte do escopo original das capacidades do sistema proposto, e reforça a proposta de processamento remoto (H37). Edição detalhada, publicação e administração de usuários permanecem fora do escopo definido na Entrega 1.
+- **Entrega 5 (Análise de tarefas — HTA, GOMS e CTT):** Modelar formalmente as tarefas humanas prioritárias levantadas nos fluxos e jornadas:
+  - Envio em lote de partidas com validação prévia de entradas e feedback imediato (A01, H08, H24 e H37);
+  - Acompanhamento do processamento remoto, sinalização transparente de estados e diagnóstico compreensível de falhas (A02, H13, H16, H26 e H32);
+  - Revisão, inspeção contextualizada e seleção manual de cortes para download (A04, H10, H16, H25, H28 e H30);
+  - Consulta externa e tomada de decisão editorial orientada por metadados estruturados por P02 (H33).
+
+- **Entrega 6 (Prototipação em papel) e Entrega 11 (Protótipo interativo no Figma):** Incorporar diretamente as oportunidades de design e preferências mapeadas para os perfis:
+  - Dispor de componente visual semelhante à linha do tempo/player com margem temporal para revisão rápida de lances;
+  - Exibir progresso claro por partida e prover sinalização de término que permita aos usuários alternarem para outras atividades durante a espera (H32);
+  - Empregar linguagem clara e vocabulário acessível do domínio esportivo, eliminando jargões técnicos de IA ou computação (RC06, RC07, H05, H19 e H38);
+  - Prever suporte a modo escuro para ambientes com pouca luz (H31).
+
+- **Entrega 7 (Coleta de dados com usuários):** Estruturar a pesquisa de campo e instrumentos de coleta para investigar empiricamente as lacunas e hipóteses em aberto consolidadas nos mapas de empatia e perfis:
+  - Dimensão "Ouve": investigar orientações, cobranças e comentários reais recebidos por editores e supervisores (P01 e P02), bem como as reações e preferências da audiência e de outros criadores (P03);
+  - Coletar dados reais sobre reações e sentimentos durante o envio, a espera pelo processamento e o download;
+  - Avaliar preferências sobre canais de aviso de conclusão em segundo plano (H32);
+  - Analisar a demanda concreta e viabilidade técnica do filtro/recorte de lances por jogador para criadores de conteúdo (H36);
+  - Verificar a necessidade efetiva de consulta a histórico de processamento (H15) e de registros de auditoria editorial (H35).
+
+- **Entregas de Engenharia de Usabilidade e Avaliação (Entregas 8, 12, 13 e 14):**
+  - Fixar metas quantitativas de usabilidade (Entrega 8) voltadas a reduzir o tempo de decupagem e minimizar omissões;
+  - Guiar a avaliação heurística (Entrega 13) e os testes de observação de uso (Entrega 14) com usuários reais a partir dos critérios de sucesso e limitações documentados para P01, P02 e P03.
 
 ## Checklist
 
@@ -398,3 +418,5 @@ As lacunas abaixo não impedem a elaboração das personas, mas servem pra  orie
 - 29/09/2026: adicionadas as seções de mapa de empatia e de jornada do usuário para P02 (Arnaldo) logo abaixo das de P01. A jornada detalha as 7 etapas de supervisão editorial, consulta a cortes/metadados, tratamento de divergências e chancela externa, mantendo rastreabilidade (H14, H22, H23, H25, H33, H35, C02 e R03) e total coerência estrutural com P01.
 
 - 30/09/2026: adicionadas as seções de mapa de empatia e de jornada do usuário para P03 (Jorginho Jr.) logo abaixo das de P01 e P02. Criado o arquivo visual correspondente em assets/03_personas/mapa_empatia_p03.svg, mantendo estrita paridade dimensional, visual e de fontes com P01 e P02. A jornada detalha as 7 etapas de produção amadora, upload em lote, acompanhamento remoto, revisão com recorte de jogador, download leve e pós-produção externa, mantendo rastreabilidade rigorosa (H01, H06, H08, H10, H11, H13, H16, H19, H24, H25, H28, H32, H36, H37, H38, R04 e R05) e total coerência estrutural com P01 e P02.
+
+- 01/10/2026: renomeado o arquivo visual de P01 para mapa_empatia_p01.svg e atualizados os links correspondentes. Atualizado o quadrante e linha de tabela "Ouve" nos mapas de empatia de P01, P02 e P03 para uniformizar a formulação com hipóteses e lacunas de evidências reais a investigar. Reestruturada a seção "Síntese" para focar exclusivamente no direcionamento das entregas subsequentes (da Entrega 4 em diante).
