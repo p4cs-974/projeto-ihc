@@ -89,9 +89,11 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 
 | ID da tela/fluxo | Padrão de interface | Objetivo/tarefa que justifica | Informação/ação principal | Evidência de necessidade | Artefatos relacionados |
 |---|---|---|---|---|---|
-| F01 | dashboard | {{T01}} | {{...}} | {{H01/evidência...}} | {{C01/M01}} |
-| F02 | histórico com filtros | {{T02}} | {{...}} | {{...}} | {{...}} |
-| F03 | administração/CRUD | {{T03}} | {{...}} | {{...}} | {{...}} |
+| PENDENTE | dashboard/visão geral | A02: acompanhar estado, progresso e falhas; T pendente | Processamentos atuais e trabalhos recentes | H29 aberta; validar nas Entregas 5 e 7 | Entrega 1, seção 8 |
+| PENDENTE | histórico com busca/filtros | A03: consultar o histórico de resultados; T pendente | Localizar resultados anteriores, falhas e reprocessamentos | H15 aberta; validar nas Entregas 5 e 7 | Entrega 1, seção 8 |
+| não adotado | administração/CRUD | Nenhuma tarefa do editor identificada | — | Exemplo do template; administração e parâmetros técnicos estão fora do recorte (Entrega 1, seções 8 e 11) | — |
+
+> Até 02/10/2026 esta tabela continha as linhas de exemplo do template (`{{...}}`), com F01 = dashboard, F02 = histórico e F03 = administração/CRUD. Elas não eram decisões da equipe e colidiam com os IDs da seção 9.2 da Entrega 1. Os IDs `F` passam a ser reservados às telas/fluxos efetivamente desenhados (Entrega 11); dashboard e histórico permanecem possibilidades a validar e administração/CRUD não foi adotada.
 
 ## 5. Registro de mudanças de escopo
 

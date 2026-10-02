@@ -59,9 +59,11 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub | Responsabilidade Principal |
 |---|---:|---|---|
-| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | Tela de Input |
-| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Tela de Output |
-| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Tela de Logs/Rastreabilidade |
+| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | Envio de partidas para processamento (A01) |
+| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Revisão, seleção e download de resultados (A04) |
+| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Acompanhamento e histórico de processamento (A02/A03) e manutenção da matriz de rastreabilidade |
+
+> As responsabilidades indicam a **atividade do usuário** que cada integrante estuda com prioridade (seção 3.2), não telas já aprovadas. A versão anterior usava "Tela de Input", "Tela de Output" e "Tela de Logs/Rastreabilidade", o que consolidava telas antes de sua necessidade estar justificada. Logs técnicos continuam fora do fluxo do editor (seção 8); a responsabilidade de Giovanni cobre o estudo do histórico de trabalhos e das mensagens de estado (A02/A03, H15) e a manutenção documental de [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 ## 0.2 Título atual do TCC
 
@@ -410,12 +412,14 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
+As ações abaixo usam os mesmos IDs das atividades da seção 3.2. Na versão anterior elas eram identificadas como F01–F04, o que colidia com os IDs `F` reservados a telas/fluxos na seção 4 de [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
+
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | Enviar vídeos para processamento em lote | Iniciar a análise das partidas gravadas | alta |
-| F02 | Acompanhar estado, progresso e falhas | Saber se deve aguardar, corrigir uma entrada ou tentar novamente | alta |
-| F03 | Consultar o histórico de resultados | Retomar trabalhos anteriores e localizar resultados | média |
-| F04 | Revisar, selecionar e baixar cortes e metadados | Obter o material que seguirá para edição ou publicação externa | alta |
+| A01 | Enviar vídeos para processamento em lote | Iniciar a análise das partidas gravadas | alta |
+| A02 | Acompanhar estado, progresso e falhas | Saber se deve aguardar, corrigir uma entrada ou tentar novamente | alta |
+| A03 | Consultar o histórico de resultados | Retomar trabalhos anteriores e localizar resultados | média |
+| A04 | Revisar, selecionar e baixar cortes e metadados | Obter o material que seguirá para edição ou publicação externa | alta |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
