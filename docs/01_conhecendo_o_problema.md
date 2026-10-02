@@ -109,7 +109,7 @@ Desenvolver um sistema híbrido de visão computacional capaz de automatizar o p
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[H] H01 — O corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e exigem atenção contínua; o esforço é repetitivo e o cansaço pode levar a omissões involuntárias de lances. A escolha de quais lances entram em uma compilação é um julgamento editorial do profissional, não um erro a ser eliminado.
+[H] H01 — No público e no contexto investigados — editores de vídeo esportivo na pós-produção de partidas encerradas —, o corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e exigem atenção contínua; o esforço é repetitivo e o cansaço pode levar a omissões involuntárias de lances. A escolha de quais lances entram em uma compilação é um julgamento editorial do profissional, não um erro a ser eliminado. Como já existem alternativas automatizadas no mercado (seção 6.1), H01 não se aplica a toda a produção de melhores momentos.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -450,7 +450,7 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | O corte e a geração de melhores momentos são feitos manualmente, demandam tempo e esforço repetitivo, e o cansaço pode causar omissões involuntárias; a seleção em si é julgamento editorial | Motiva o problema central do TCC; se for falsa, a solução perde a justificativa | Entrega 4 (cenários) e 7 (coleta de dados) |
+| H01 | Para editores na pós-produção de partidas encerradas, o corte e a geração de melhores momentos são feitos manualmente, demandam tempo e esforço repetitivo, e o cansaço pode causar omissões involuntárias; a seleção em si é julgamento editorial | Motiva o problema central do TCC; se for falsa, a solução perde a justificativa | Entrega 4 (cenários) e 7 (coleta de dados) |
 | H02 | Profissionais gastarão menos tempo e terão menos esforço repetitivo, omissões involuntárias e retrabalho, mantendo a decisão editorial | É o benefício esperado da solução; sustenta o valor percebido | Entrega 7 |
 | H03 | O profissional responsável pelo corte é o usuário direto da aplicação | Define o usuário-alvo de todo o projeto de IHC | Entrega 3 (personas) e 7 |
 | H05 | O editor domina ferramentas de edição, mas conhece pouco de programação e IA | Influi na linguagem, na ajuda e nos controles, sem tratar o editor como iniciante em edição | Entrega 3 e 7 |
@@ -470,11 +470,11 @@ Registro completo das hipóteses H01–H29 em [`../RASTREABILIDADE.md`](../RASTR
 |---|---|
 | Qual é a contribuição central do TCC? | Detectar melhores momentos em partidas gravadas e produzir cortes e metadados automaticamente |
 | O TCC já previa interface? | não |
-| Quem é o usuário prioritário de IHC? | editores de vídeo |
+| Quem é o usuário prioritário de IHC? | [H] editores de vídeo esportivo (H27) |
 | O que ele precisa alcançar? | obter cortes e metadados para continuar a produção de uma compilação |
-| Qual problema/atividade será estudado? | localizar, selecionar e recortar momentos de uma gravação extensa sob pressão de prazo, com risco de omissão e retrabalho |
-| Como isso acontece hoje? | o editor percorre a gravação, identifica os lances e prepara os cortes manualmente |
-| Qual é o contexto de uso? | pós-produção de partidas de futebol já encerradas |
+| Qual problema/atividade será estudado? | [H] no recorte inicial: localizar, selecionar e recortar momentos de uma gravação extensa sob pressão de prazo, com risco de omissão involuntária e retrabalho (H01, H09, H11) |
+| Como isso acontece hoje? | [H] supomos, ainda sem investigação, que o editor percorre a gravação, identifica os lances, decide os limites e prepara os cortes manualmente (seção 4.1) |
+| Qual é o contexto de uso? | [H] pós-produção de partidas de futebol já encerradas (H12); local e equipamentos ainda desconhecidos |
 | Que interface/recorte será explorado? | protótipo para computador, web ou nativo, com envio, acompanhamento, revisão e download |
 | Como a interface se relaciona ao TCC? | demonstra como um editor poderia fornecer vídeos e utilizar os cortes e metadados produzidos pelo backend |
 | Quais pontos ainda são hipóteses? | H01–H29, consolidadas na seção 10 e em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md); as prioritárias são H01, H02, H03, H05, H07, H08, H12, H13, H17, H27 e H28 |
@@ -511,11 +511,11 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** localizar e recortar manualmente melhores momentos em gravações extensas exige atenção contínua e pode causar omissões e retrabalho.
+1. **Problema/atividade humana:** no recorte inicial que estamos investigando, supomos que editores localizam e recortam manualmente melhores momentos em gravações extensas, o que exige atenção contínua e pode causar omissões involuntárias e retrabalho.
 2. **Contribuição técnica do TCC:** um sistema híbrido de visão computacional detecta momentos e produz cortes e metadados.
 3. **Como uma pessoa poderia utilizar essa contribuição:** um editor envia a gravação, acompanha o processamento, revisa os resultados e baixa o material para continuar a produção.
 
-Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
+Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico. O item 1 continua sendo hipótese (H01, H09, H11): ao comunicar o projeto publicamente, a equipe deve apresentá-lo como problema a investigar, não como fato estabelecido.
 
 ---
 
