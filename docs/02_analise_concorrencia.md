@@ -1,6 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
-**Data:** 19/08/2026  
+**Data:** 19/08/2026 (versão original)  
+**Revisão:** 02/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe16.md)  
 **Status:** `🟩 concluída`
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
