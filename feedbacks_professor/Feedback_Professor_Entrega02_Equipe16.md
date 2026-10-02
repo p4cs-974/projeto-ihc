@@ -16,7 +16,7 @@
 > | Recomendação: legibilidade e concisão | aplicada | [`4a0c70e`](https://github.com/p4cs-974/projeto-ihc/commit/4a0c70e), [`b6e611c`](https://github.com/p4cs-974/projeto-ihc/commit/b6e611c) |
 > | Recomendação: exemplos `{{...}}` na matriz | já aplicada na revisão da Entrega 1 | [`7366be7`](https://github.com/p4cs-974/projeto-ihc/commit/7366be7) |
 > | Recomendação: data de revisão | aplicada | [`518657b`](https://github.com/p4cs-974/projeto-ihc/commit/518657b) |
-> | Registro na matriz de rastreabilidade | aplicado | [`3774654`](https://github.com/p4cs-974/projeto-ihc/commit/3774654) |
+> | Registro na matriz de rastreabilidade | aplicado | [`3774654`](https://github.com/p4cs-974/projeto-ihc/commit/3774654), [`44c5688`](https://github.com/p4cs-974/projeto-ihc/commit/44c5688) |
 >
 > \- Pedro
 
