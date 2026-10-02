@@ -221,16 +221,13 @@ _Figura 11. Projeto com os dois vídeos na linha do tempo. O editor reúne bibli
 
 As avaliações das lojas tratam dos aplicativos para celular, não da versão web testada. Servem como pistas sobre o produto, mas não comprovam o comportamento do editor no navegador.
 
-Nas avaliações da [App Store](https://apps.apple.com/us/app/capcut-photo-video-editor/id1500855883?platform=iphone&see-all=reviews), iniciantes dizem que conseguiram produzir vídeos sem experiência prévia. Eles atribuem essa facilidade à interface e aos templates prontos.
+As lojas não oferecem link para cada avaliação, e os relatos individuais lidos em 01/09/2026 não foram registrados. Por isso, os pontos abaixo são uma impressão geral da leitura das listas da [App Store](https://apps.apple.com/us/app/capcut-photo-video-editor/id1500855883?platform=iphone&see-all=reviews) e do [Google Play](https://play.google.com/store/apps/details/CapCut?hl=en_AU&id=com.lemon.lvoverseas), não relatos que possam ser conferidos um a um:
 
-Também aparecem críticas recorrentes:
+- Iniciantes dizem ter produzido vídeos sem experiência prévia e atribuem a facilidade à interface e aos templates prontos.
+- Parte dos usuários reclama que efeitos e recursos passaram a exigir a assinatura Pro. A própria [central de ajuda do CapCut](https://www.capcut.com/help/capcut-pro-features-unavailable) confirma que certos recursos e materiais exigem o plano Pro.
+- Aparecem relatos de travamentos na reprodução, falhas na busca de efeitos e dificuldade para importar vídeos longos, além de templates inadequados e restrições regionais.
 
-- Parte dos efeitos e recursos passou a exigir a assinatura Pro, o que empobreceu a versão gratuita.
-- Há relatos de travamentos na reprodução, falhas na busca de efeitos e dificuldade para importar vídeos longos.
-- Alguns usuários encontraram templates ou resultados de busca inadequados. Outros citam restrições regionais a comentários e templates.
-- Quando o aplicativo funciona bem, os templates e controles simples encurtam a edição de vídeos para redes sociais.
-
-Esses pontos foram resumidos a partir de avaliações públicas da [App Store](https://apps.apple.com/us/app/capcut-photo-video-editor/id1500855883?platform=iphone&see-all=reviews) e do [Google Play](https://play.google.com/store/apps/details/CapCut?hl=en_AU&id=com.lemon.lvoverseas), consultadas em 01/09/2026. São opiniões de usuários das lojas, não entrevistas realizadas para este projeto.
+São opiniões de usuários das lojas, em versões não identificadas, e não entrevistas realizadas para este projeto. Nenhuma lição desta análise depende apenas delas.
 
 #### Padrões e tendências percebidos
 
@@ -313,7 +310,7 @@ _Figura 16. Confirmação de exportação com prévia, atributos e estimativa de
 
 A avaliação do [TechRadar](https://www.techradar.com/pro/apple-final-cut-pro-review) chama a interface de rígida. Os painéis podem ser redimensionados, mas não rearranjados livremente. O limite reduz a personalização e mantém a mesma configuração entre computadores. A linha do tempo magnética também divide opiniões. Elementos conectados se movem junto com o clipe principal, algo que exige adaptação, mas pode acelerar a edição depois que o usuário entende a lógica. O texto ainda elogia a fluidez, a organização e as ferramentas recentes. Entre as críticas estão a exclusividade do Mac e a exigência de hardware recente para alguns recursos.
 
-Na [Mac App Store](https://apps.apple.com/us/app/final-cut-pro/id424389933?mt=12&platform=mac&see-all=reviews), há relatos de navegação clara, boa otimização, exportação rápida e economia de tempo em comparação com outros editores. Outros usuários, sobretudo profissionais acostumados a pistas fixas, consideram a linha do tempo contraintuitiva. Também aparecem reclamações sobre pouco espaço vertical, dificuldade para separar áudio e vídeo, travamentos e perda de compatibilidade com fluxos antigos. As avaliações tratam de versões diferentes e registram experiências individuais, não testes controlados.
+Na [Mac App Store](https://apps.apple.com/us/app/final-cut-pro/id424389933?mt=12&platform=mac&see-all=reviews), a leitura das avaliações em 01/09/2026 encontrou relatos de navegação clara, boa otimização, exportação rápida e economia de tempo em comparação com outros editores. Outros usuários, sobretudo profissionais acostumados a pistas fixas, consideram a linha do tempo contraintuitiva. Também aparecem reclamações sobre pouco espaço vertical, dificuldade para separar áudio e vídeo, travamentos e perda de compatibilidade com fluxos antigos. A loja não oferece link para cada avaliação, e os relatos individuais não foram registrados; o parágrafo resume uma impressão geral da leitura. As avaliações tratam de versões diferentes e registram experiências individuais, não testes controlados. As críticas específicas à linha do tempo também aparecem na avaliação do TechRadar, citada acima, e nas discussões do Reddit, citadas a seguir, que têm link próprio.
 
 Em duas discussões da comunidade, iniciantes dizem que a quantidade de controles desorienta na primeira abertura. Os obstáculos mais citados são descobrir onde o aplicativo guarda a mídia e deixar para trás o hábito das pistas fixas. Parte dos participantes afirma que o fluxo fica simples e rápido depois de um ou dois projetos. [Discussão sobre aprendizado](https://www.reddit.com/r/finalcutpro/comments/1qxosq3/i_just_started_using_final_cut_pro_and_im_lowkey/) e [discussão sobre primeiros passos](https://www.reddit.com/r/finalcutpro/comments/1vzpys3/what_would_you_recommend_based_on_your_experience/)
 
