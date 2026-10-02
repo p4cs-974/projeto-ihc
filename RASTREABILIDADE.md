@@ -93,8 +93,6 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 | PENDENTE | histórico com busca/filtros | A03: consultar o histórico de resultados; T pendente | Localizar resultados anteriores, falhas e reprocessamentos | H15 aberta; validar nas Entregas 5 e 7 | Entrega 1, seção 8 |
 | não adotado | administração/CRUD | Nenhuma tarefa do editor identificada | não se aplica | Exemplo do template; administração e parâmetros técnicos estão fora do recorte (Entrega 1, seções 8 e 11) | não se aplica |
 
-> Os IDs `F` são reservados às telas/fluxos efetivamente desenhados (Entrega 11). Dashboard e histórico permanecem possibilidades a validar; administração/CRUD não foi adotada.
-
 ## 5. Registro de mudanças de escopo
 
 | Data | O que mudou | Evidência/feedback que motivou | Artefatos afetados | Responsável |
