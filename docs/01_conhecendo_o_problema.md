@@ -187,7 +187,11 @@ Essa finalidade explica **para que** os resultados serão usados, mas não suste
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-[H] H08 — Processar os vídeos em lote (A01). Se for mal executada as consequências podem ser: necessidade de retrabalho, custo de processamento da inferência da LLM, perda de arquivos.
+[H] H08 — Processar os vídeos em lote (A01). Se for mal executada as consequências podem ser: necessidade de retrabalho, custo de processamento da inferência da LLM e perda de arquivos. "Perda de arquivos" reúne situações diferentes, que não presumimos indistintamente:
+
+- **perda do original:** a gravação enviada deixa de estar disponível. [?] Não sabemos se o editor mantém cópia local; se mantiver, a consequência é reenviar, não perder a partida;
+- **indisponibilidade dos resultados:** o processamento termina, mas cortes ou metadados não ficam acessíveis para download (H26);
+- **reprocessamento:** o envio ou o processamento falha, total ou parcialmente, e a partida precisa ser processada de novo, com novo tempo de espera e novo custo de inferência (H16).
 
 **Frequência, prioridade e criticidade não são a mesma coisa.** Frequência indica quantas vezes a atividade ocorre; criticidade, a gravidade da consequência quando ela falha; prioridade é a decisão de projeto que combina as duas com o objetivo do usuário. Por isso A04 pode ser a mais frequente (H07) e A01 a mais crítica (H08) sem contradição: supomos que uma falha no envio ou no processamento bloqueia todas as atividades seguintes daquela partida e gera custo de inferência, enquanto um erro na revisão poderia ser corrigido revisando ou baixando novamente. Ambas recebem prioridade alta por razões diferentes.
 
@@ -451,7 +455,7 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 | H03 | O profissional responsável pelo corte é o usuário direto da aplicação | Define o usuário-alvo de todo o projeto de IHC | Entrega 3 (personas) e 7 |
 | H05 | O editor domina ferramentas de edição, mas conhece pouco de programação e IA | Influi na linguagem, na ajuda e nos controles, sem tratar o editor como iniciante em edição | Entrega 3 e 7 |
 | H07 | Selecionar/exportar os resultados é a atividade mais frequente | Prioriza o fluxo principal da interface | Entrega 5 (análise de tarefas) e 7 |
-| H08 | Processar vídeos em lote é a atividade mais crítica | Prioriza tratamento de erro e confiabilidade | Entrega 5 e 7 |
+| H08 | Processar vídeos em lote é a atividade mais crítica (retrabalho, custo de inferência; "perda de arquivos" desdobrada em perda do original, indisponibilidade dos resultados e reprocessamento) | Prioriza tratamento de erro e confiabilidade | Entrega 5 e 7 |
 | H12 | O uso ocorre na pós-produção, após a partida; local exato desconhecido | Define o contexto de uso e requisitos de ambiente | Entrega 3 e 7 |
 | H13 | Arquivos extensos exigem armazenamento, banda e tempo; há pressão de prazo | Determina a necessidade de feedback de progresso e estados claros | Entrega 3 e 7 |
 | H17 | Editores já conhecem NLEs (Premiere, Resolve), player, marcadores e timecode | Define padrões e vocabulário de interface reaproveitáveis | Entrega 2 (concorrência), 3 e 6 |
