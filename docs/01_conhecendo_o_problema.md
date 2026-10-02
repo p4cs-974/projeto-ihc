@@ -421,8 +421,6 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 | Redução de omissões involuntárias e de retrabalho | Por cansaço ou distração, o editor pode deixar passar lances que ele próprio consideraria relevantes e precisar voltar à gravação | Profissional responsável pela geração de vídeos de melhores momentos | [H] H09, H10 |
 | Apoio ao julgamento editorial, sem substituí-lo | A seleção final depende da finalidade da compilação; a interface deve apresentar candidatos com contexto para o editor decidir | Profissional responsável pela geração de vídeos de melhores momentos | [?] critérios editoriais a investigar na Entrega 7 |
 
-> A versão anterior desta tabela usava "redução da subjetividade", reunindo interpretação humana, cansaço e falhas como um único problema. A revisão separa **esforço repetitivo** e **omissão involuntária**, que a interface pode ajudar a reduzir, do **julgamento editorial**, que pertence ao editor. A redução de tempo e de omissões continua como hipótese; demonstrá-la exigirá observação ou comparação nas Entregas 12–14.
-
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 As ações abaixo usam os mesmos IDs das atividades da seção 3.2. Na versão anterior elas eram identificadas como F01–F04, o que colidia com os IDs `F` reservados a telas/fluxos na seção 4 de [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
