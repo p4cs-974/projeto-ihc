@@ -577,18 +577,51 @@ As conclusões sobre C06 e C07 se baseiam em materiais promocionais. Não foi po
 
 Estas recomendações são decisões iniciais de design. Elas deverão ser confirmadas ou revistas nas entregas de personas, análise de tarefas e coleta de dados. Recursos que dependem do backend só poderão entrar no protótipo se forem tecnicamente viáveis.
 
-- **RC01:** Organizar o fluxo principal em quatro etapas visíveis: enviar, acompanhar, revisar resultados e baixar. A interface deve indicar a etapa atual sem reproduzir um editor completo. Derivada de C01 a C05 e das atividades A01, A02 e A04 da Entrega 1.
-- **RC02:** Permitir o envio de vários vídeos e representar cada arquivo com miniatura, nome completo, duração e estado. Antes do processamento, validar formato, integridade e possível duplicidade, mostrar uma prévia e permitir substituição. A ausência de áudio só deve gerar alerta se o modelo ou o resultado dependerem dele. Formatos e limites permanecem em aberto. Derivada de C03 e C05, além de H08, H13, H24 e H26.
-- **RC03:** Tratar envio e processamento como tarefas assíncronas. Cada vídeo deve apresentar em texto apenas os estados que o backend realmente produzir. Porcentagem e previsão de término só devem aparecer quando houver cálculo confiável. A retomada após interrupção é desejável, mas depende de validação técnica. Derivada de C02, C04 e C05, além de H13 e H26.
-- **RC04:** Reunir na revisão a lista de melhores momentos, o player e uma representação temporal simples da partida. Ao selecionar um resultado, mostrar o trecho, o instante inicial, a duração e contexto anterior e posterior. A quantidade de contexto deverá ser testada. Derivada de C01, C02, C04 e C05, além de H10, H11, H16 e H25.
-- **RC05:** Manter a decisão editorial com o usuário sem incluir edição detalhada. A interface deve permitir incluir ou excluir resultados da seleção para download e informar limites, falhas parciais e partes não analisadas. Exibir confiança somente se o modelo produzir uma medida calibrada e compreensível. Um resultado vazio não prova que a partida não teve acontecimentos relevantes. Derivada de C04, C06 e C07, além de H16 e H28.
-- **RC06:** Retirar parâmetros técnicos do fluxo principal. Modelo, limiar e demais configurações de inferência usarão valores definidos pela equipe técnica. Um modo avançado só deverá ser considerado se a pesquisa com usuários demonstrar essa necessidade. Derivada da seção 7.1 da Entrega 1 e de H05 e H19.
-- **RC07:** Usar inicialmente termos como "partida", "vídeo enviado", "melhor momento", "início", "fim", "duração" e "baixar cortes". Preencher automaticamente os dados conhecidos e evitar termos internos como "inferência". A pesquisa deverá testar "highlight", "lance" e "corte" com usuários. Derivada de C01, C02, C04 e C05, além de H17 e H19.
-- **RC08:** Tratar filtros, navegação sequencial e seleção múltipla como hipóteses de eficiência para revisar muitos resultados. Incluir filtro de confiança somente se essa medida existir e tiver significado para o editor. Derivada de C02, C04, C06 e C07, além de H07, H19 e H25.
-- **RC09:** Antes do download, apresentar prévia e resumo da seleção com quantidade de cortes, duração, formato, tamanho estimado e vídeos de origem. Se o formato for fixo, mostrá-lo como informação. Durante a preparação, comunicar os estados reais do sistema. Derivada de C01, C03, C04 e C05, além de H16, H25 e H28.
-- **RC10:** Manter como hipótese um histórico com busca por partida, data e estado. Cada registro deve mostrar o vídeo de origem, os resultados, a data, o identificador do processamento e o motivo de eventual falha. Em um reprocessamento, avisar que haverá novo custo e pedir confirmação. Um valor previsto só deverá aparecer se houver cálculo confiável. Derivada de A03, H08, H15 e H26, com referências de C02 e C04.
-- **RC11:** Permitir que envio, revisão e download sejam realizados pelo teclado. Todos os controles devem ter nome acessível e foco visível. Estados e erros devem aparecer em texto, e ações de arrastar precisam de alternativa. Atalhos e sua apresentação serão definidos quando a plataforma for escolhida. Derivada das barreiras identificadas em C03 e C05 e da meta de acessibilidade do projeto; C01, C02 e C04 não foram testados por teclado.
-- **RC12:** Projetar para computador com tela ampla. A escolha entre aplicação web, Electron e aplicação nativa continua aberta e deverá considerar arquivos extensos, retomada de upload e integração com o backend. Derivada de H12, H13 e da decisão aberta na seção 5.2 da Entrega 1.
+Cada recomendação indica sua **natureza** e sua **origem**. A natureza separa quatro tipos de fundamento:
+
+- **padrão observado:** aparece nas interfaces analisadas, com a evidência indicada;
+- **princípio de IHC:** orientação geral de projeto, aplicada ao nosso fluxo;
+- **hipótese do projeto:** proposta da equipe, ainda sem confirmação com usuários;
+- **decisão de escopo:** delimitação do que a interface fará ou deixará de fazer.
+
+Não é necessário que uma recomendação tenha sido copiada de uma função existente. Quando ela combina aprendizados ou propõe algo novo, a origem diz o que veio dos concorrentes e o que veio do projeto.
+
+- **RC01:** Organizar o fluxo principal em quatro etapas visíveis: enviar, acompanhar, revisar resultados e baixar. A interface deve indicar a etapa atual sem reproduzir um editor completo.
+  - **Natureza:** decisão de escopo, apoiada em padrão observado.
+  - **Origem:** a separação entre importar, organizar, revisar e exportar aparece em C01 a C05; as etapas correspondem às atividades A01, A02 e A04 da Entrega 1.
+- **RC02:** Permitir o envio de vários vídeos e representar cada arquivo com miniatura, nome completo, duração e estado. Antes do processamento, validar formato, integridade e possível duplicidade, mostrar uma prévia e permitir substituição. A ausência de áudio só deve gerar alerta se o modelo ou o resultado dependerem dele. Formatos e limites permanecem em aberto.
+  - **Natureza:** padrão observado na representação dos arquivos; hipótese do projeto nas validações.
+  - **Origem:** miniatura, nome, duração e estado aparecem em C03 (Figura 10) e C05 (Figura 18); a conferência visual antes de um processamento longo vem da lição de C05, em que a validação técnica aprovou uma captura diferente da pretendida. A validação de integridade e duplicidade e a substituição de arquivos são propostas do projeto a partir de H08, H13, H24 e H26 e não foram testadas nos concorrentes.
+- **RC03:** Tratar envio e processamento como tarefas assíncronas. Cada vídeo deve apresentar em texto apenas os estados que o backend realmente produzir. Porcentagem e previsão de término só devem aparecer quando houver cálculo confiável. A retomada após interrupção é desejável, mas depende de validação técnica.
+  - **Natureza:** princípio de IHC (visibilidade do estado do sistema), apoiado em padrão observado.
+  - **Origem:** fila e andamento de renderização na página Deliver de C02 ([documentação oficial](https://www.blackmagicdesign.com/products/davinciresolve)); tarefas em segundo plano com percentual, fila e pausa em C04 ([guia de tarefas em segundo plano](https://support.apple.com/en-ae/guide/final-cut-pro/ver64e71609/mac)); estimativa de tempo antes da exportação em C05 (Figura 22). As condições para porcentagem, previsão e retomada vêm de H13 e H26.
+- **RC04:** Reunir na revisão a lista de melhores momentos, o player e uma representação temporal simples da partida. Ao selecionar um resultado, mostrar o trecho, o instante inicial, a duração e contexto anterior e posterior. A quantidade de contexto deverá ser investigada.
+  - **Natureza:** padrão observado, adaptado ao fluxo de revisão.
+  - **Origem:** player com playhead e timecode em C01; visão global e detalhe em C02 (Figura 7); resultados de busca com início, fim e duração em C04 (Figura 15); acesso ao trecho original em C05. Relaciona-se a H10, H11, H16 e H25.
+- **RC05:** Manter a decisão editorial com o usuário sem incluir edição detalhada. A interface deve permitir incluir ou excluir resultados da seleção para download. Além disso, deve informar limites, falhas parciais e partes não analisadas. Exibir confiança somente se o modelo produzir uma medida calibrada e compreensível. Um resultado vazio não prova que a partida não teve acontecimentos relevantes.
+  - **Natureza:** decisão de escopo e princípio de IHC (controle do usuário) na seleção; hipótese do projeto na comunicação de falhas, cobertura e confiança.
+  - **Origem:** o padrão visual de selecionar antes de gerar o resultado aparece em C04 (favoritos e rejeitados) e, de forma apenas promocional, em C06 e C07. A comunicação de falhas parciais, cobertura e confiança é proposta do projeto, a partir de H16 e H28; C04 contribui com o exemplo de limites declarados da busca por fala (idioma e tipos de clipe).
+- **RC06:** Retirar parâmetros técnicos do fluxo principal. Modelo, limiar e demais configurações de inferência usarão valores definidos pela equipe técnica. Um modo avançado só deverá ser considerado se a pesquisa com usuários demonstrar essa necessidade.
+  - **Natureza:** decisão de escopo, reforçada pela análise.
+  - **Origem:** seção 7.1 da Entrega 1, H05 e H19. A análise reforça a decisão ao mostrar o custo de terminologia e densidade de controles em C01 (pistas, Razor e tipos de trim) e C05 (tensão, atrito, massa e BPP).
+- **RC07:** Usar inicialmente termos como "partida", "vídeo enviado", "melhor momento", "início", "fim", "duração" e "baixar cortes". Preencher automaticamente os dados conhecidos e evitar termos internos como "inferência". A pesquisa deverá testar "highlight", "lance" e "corte" com usuários.
+  - **Natureza:** hipótese do projeto (proposta inicial de vocabulário).
+  - **Origem:** custo de aprender o vocabulário próprio de cada editor, visto em C01, C02, C04 e C05, e necessidade de reconhecer arquivos sem abri-los. A validação de H17 e H19 continua pendente.
+- **RC08:** Tratar filtros, navegação sequencial e seleção múltipla como hipóteses de eficiência para revisar muitos resultados, sem presumir que todo editor precisará de todos os filtros. Incluir filtro de confiança somente se essa medida existir e tiver significado para o editor.
+  - **Natureza:** hipótese do projeto.
+  - **Origem:** Smart Bins em C02, busca e coleções em C04 e referências exploratórias de C06 e C07. Relaciona-se a H07, H19 e H25.
+- **RC09:** Antes do download, apresentar prévia e resumo da seleção com quantidade de cortes, duração, formato, tamanho estimado e vídeos de origem. Se o formato for fixo, mostrá-lo como informação. Durante a preparação, comunicar os estados reais do sistema.
+  - **Natureza:** padrão observado.
+  - **Origem:** janelas de exportação do Final Cut Pro (C04, Figura 16) e do Cap (C05, Figura 22), que mostram prévia, formato, duração e tamanho estimado antes de salvar; a documentação do Premiere (C01) descreve um resumo semelhante. Relaciona-se a H16, H25 e H28.
+- **RC10:** Manter como hipótese um histórico com busca por partida, data e estado. Cada registro deve mostrar o vídeo de origem, os resultados, a data, o identificador do processamento e o motivo de eventual falha. Em um reprocessamento, avisar que haverá novo custo e pedir confirmação. Um valor previsto só deverá aparecer se houver cálculo confiável.
+  - **Natureza:** hipótese do projeto.
+  - **Origem:** A03, H08, H15 e H26. Os concorrentes ajudam com a organização de projetos (C04) e com tarefas demoradas em fila (C02 e C04), mas uma fila de renderização não comprova necessidade de histórico permanente, política de retenção ou cobrança.
+- **RC11:** Permitir que envio, revisão e download sejam realizados pelo teclado. Todos os controles devem ter nome acessível e foco visível. Estados e erros devem aparecer em texto, e ações de arrastar precisam de alternativa. Atalhos e sua apresentação serão definidos quando a plataforma for escolhida.
+  - **Natureza:** princípio de IHC (acessibilidade), assumido como meta do projeto.
+  - **Origem:** meta de acessibilidade do projeto. C03 e C05 mostram controles apenas com ícone e ações por arraste (Figuras 11 e 17); o nome acessível desses controles não foi registrado e permanece em aberto [?]. C01, C02 e C04 não foram testados por teclado.
+- **RC12:** Projetar inicialmente para computador com tela ampla. A escolha entre aplicação web, Electron e aplicação nativa continua aberta e deverá considerar arquivos extensos, retomada de upload e integração com o backend.
+  - **Natureza:** decisão de escopo provisória, de contexto e plataforma.
+  - **Origem:** H12, H13 e a decisão aberta na seção 5.2 da Entrega 1. Não é uma conclusão empírica da análise de concorrência.
 
 ## Referências
 
