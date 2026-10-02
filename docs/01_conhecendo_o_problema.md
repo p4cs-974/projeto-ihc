@@ -64,7 +64,7 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 | Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Revisão, seleção e download de resultados (A04) |
 | Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Acompanhamento e histórico de processamento (A02/A03) e manutenção da matriz de rastreabilidade |
 
-> As responsabilidades indicam a **atividade do usuário** que cada integrante estuda com prioridade (seção 3.2), não telas já aprovadas. A versão anterior usava "Tela de Input", "Tela de Output" e "Tela de Logs/Rastreabilidade", o que consolidava telas antes de sua necessidade estar justificada. Logs técnicos continuam fora do fluxo do editor (seção 8); a responsabilidade de Giovanni cobre o estudo do histórico de trabalhos e das mensagens de estado (A02/A03, H15) e a manutenção documental de [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
+> As responsabilidades indicam a **atividade do usuário** que cada integrante estuda com prioridade (seção 3.2), não telas já aprovadas. Logs técnicos continuam fora do fluxo do editor (seção 8); a responsabilidade de Giovanni cobre o estudo do histórico de trabalhos e das mensagens de estado (A02/A03, H15) e a manutenção documental de [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 ## 0.2 Título atual do TCC
 
@@ -224,7 +224,7 @@ Essa descrição deriva de H11 (seção 4.5) e das ferramentas listadas na seç�
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-A versão anterior registrava apenas "[F] Contexto da partida de futebol", afirmação ampla demais e sem fonte sobre o trabalho do editor. A revisão abaixo liga cada informação suposta à decisão que ela apoiaria. São questões de investigação, não requisitos confirmados:
+A tabela abaixo liga cada informação que supomos ser interpretada pelo editor à decisão que ela apoiaria. São questões de investigação, não requisitos confirmados:
 
 | Informação que supomos ser interpretada | Decisão que apoiaria | Status | Pergunta a investigar (Entrega 7) |
 |---|---|---|---|
@@ -250,7 +250,7 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 | Evidência/fonte | Tipo de fonte | O que sustenta | Limitação |
 |---|---|---|---|
-| AKAN, Sara; VARLI, Songül. Use of deep learning in soccer videos analysis: survey: S. Akan, S. Varlı. Multimedia Systems, v. 29, n. 3, p. 897-915, 2023. | Artigo de revisão (survey) em periódico | A produção ainda depende fortemente de edição manual; melhores momentos pós-jogo têm relevância e diferentes tempos de entrega; a detecção deve considerar eventos além de gols | É um levantamento bibliográfico com foco no desempenho técnico dos métodos. O recorte de 25 partidas citado anteriormente pertence a um estudo relatado pelo próprio levantamento, e não a uma coleta feita por Akan e Varlı; usamos o dado como referência indireta, não como evidência sobre editores. Não investiga diretamente o fluxo de trabalho ou a experiência de editores profissionais |
+| AKAN, Sara; VARLI, Songül. Use of deep learning in soccer videos analysis: survey: S. Akan, S. Varlı. Multimedia Systems, v. 29, n. 3, p. 897-915, 2023. | Artigo de revisão (survey) em periódico | A produção ainda depende fortemente de edição manual; melhores momentos pós-jogo têm relevância e diferentes tempos de entrega; a detecção deve considerar eventos além de gols | É um levantamento bibliográfico com foco no desempenho técnico dos métodos. O recorte de 25 partidas pertence a um estudo relatado pelo próprio levantamento, e não a uma coleta feita por Akan e Varlı; usamos o dado como referência indireta, não como evidência sobre editores. Não investiga diretamente o fluxo de trabalho ou a experiência de editores profissionais |
 | YIN, Hongwei; SINNOTT, Richard O.; JAYAPUTERA, Glenn T. A survey of video-based human action recognition in team sports: H. Yin et al. Artificial intelligence review, v. 57, n. 11, p. 293, 2024. | Artigo de revisão (survey) em periódico | Existem plataformas de mercado que analisam eventos, geram conteúdo e metadados e gerenciam ativos esportivos com IA | Revisão de literatura com foco técnico em reconhecimento de ações; menciona as plataformas sem avaliar sua usabilidade ou adequação ao editor escolhido |
 | SEWERYN, Karolina; WRÓBLEWSKA, Anna; ŁUKASIK, Szymon. Survey of action recognition, spotting, and spatio-temporal localization in soccer—Current trends and research perspectives. ACM Transactions on Intelligent Systems and Technology, v. 17, n. 2, p. 1-37, 2026. | Artigo de revisão (survey) em periódico | Existem soluções que recebem vídeo gravado, geram clipes/tags e permitem baixar resultados, além de fluxos mais amplos de edição e publicação | Revisão de literatura com foco técnico em detecção e localização de ações; não investiga o trabalho ou a experiência de editores profissionais |
 | [WSC Sports, página oficial da plataforma](https://wsc-sports.com/platform/) | Página institucional/comercial | A WSC Sports declara análise de eventos, criação automatizada de conteúdo, geração de metadados e gestão de ativos esportivos | Fonte institucional e promocional; não oferece evidência independente de usabilidade ou adequação ao nosso público. Análise da interface na Entrega 2, C06 |
@@ -423,7 +423,7 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
-As ações abaixo usam os mesmos IDs das atividades da seção 3.2. Na versão anterior elas eram identificadas como F01–F04, o que colidia com os IDs `F` reservados a telas/fluxos na seção 4 de [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
+As ações abaixo usam os mesmos IDs das atividades da seção 3.2. Os IDs `F` ficam reservados a telas/fluxos, na seção 4 de [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
