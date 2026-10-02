@@ -181,7 +181,8 @@ A [documentação da Cut Page](https://www.blackmagicdesign.com/products/davinci
 **Autor(a):** Pedro Alexandre Custodio Silva — 22.123.049-3  
 **Tipo:** concorrente indireto / ferramenta cotidiana  
 **Link oficial:** [CapCut](https://www.capcut.com/)  
-**Data de acesso:** 01/09/2026
+**Data de acesso:** 01/09/2026  
+**Versão e plataforma:** CapCut para navegador (editor em capcut.com), versão não exibida na interface. As avaliações citadas em "Experiência do usuário e opiniões" vêm dos aplicativos móveis
 
 #### Contexto e proposta
 
@@ -216,6 +217,8 @@ _Figura 10. Biblioteca após a importação. Um balão sobre edição por transc
 _Figura 11. Projeto com os dois vídeos na linha do tempo. O editor reúne biblioteca, player, propriedades e faixa temporal na mesma tela._
 
 #### Experiência do usuário e opiniões
+
+As avaliações das lojas tratam dos aplicativos para celular, não da versão web testada. Servem como pistas sobre o produto, mas não comprovam o comportamento do editor no navegador.
 
 Nas avaliações da [App Store](https://apps.apple.com/us/app/capcut-photo-video-editor/id1500855883?platform=iphone&see-all=reviews), iniciantes dizem que conseguiram produzir vídeos sem experiência prévia. Eles atribuem essa facilidade à interface e aos templates prontos.
 
@@ -258,7 +261,8 @@ O que vale aproveitar do CapCut é o começo do fluxo. Na inspeção, o carregam
 **Autor(a):** Pedro Alexandre Custodio Silva — 22.123.049-3  
 **Tipo:** concorrente indireto / ferramenta cotidiana  
 **Link oficial:** [Final Cut Pro](https://www.apple.com/final-cut-pro/)  
-**Data de acesso:** 01/09/2026
+**Data de acesso:** 01/09/2026  
+**Versão e plataforma:** Final Cut Pro para Mac, versão não identificada. O guia e as imagens oficiais consultados podem corresponder a versões diferentes; não houve acesso ao aplicativo
 
 #### Contexto e proposta
 
@@ -346,7 +350,8 @@ Entre os três concorrentes, o Final Cut Pro é o que melhor separa triagem e mo
 **Autor(a):** Pedro Alexandre Custodio Silva — 22.123.049-3  
 **Tipo:** concorrente indireto / ferramenta cotidiana  
 **Link oficial:** [Cap](https://cap.so/)  
-**Data de acesso:** 01/09/2026
+**Data de acesso:** 01/09/2026  
+**Versão e plataforma:** Cap Desktop 0.5.9 e CLI 0.1.0, em macOS
 
 #### Contexto e proposta
 
