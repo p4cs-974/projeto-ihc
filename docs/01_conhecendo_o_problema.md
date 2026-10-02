@@ -436,10 +436,12 @@ As ações abaixo usam os mesmos IDs das atividades da seção 3.2. Na versão a
 
 A tecnologia aparece **agora**, depois do entendimento do uso.
 
+> A definição técnica interna de cada restrição é aceita como tal; sua implicação para o usuário é hipótese. A coluna da direita separa o que o TCC efetivamente fornece do que ainda precisa ser investigado para ser comunicado de forma confiável.
+
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
-| Processamento de vídeo com visão computacional e LLMs multimodais | Núcleo do TCC: detecção e classificação dos melhores momentos | Tempo de processamento não trivial; a interface precisa comunicar fila, progresso e estimativas em vez de responder instantaneamente (H13) |
-| Custo de inferência da LLM | Cada processamento tem custo computacional/financeiro | Reprocessar não é gratuito; a interface deve evitar envios duplicados e deixar claro quando o custo foi gerado (H08, H16) |
+| Processamento de vídeo com visão computacional e LLMs multimodais | Núcleo do TCC: detecção e classificação dos melhores momentos | Tempo de processamento não trivial; a interface precisa comunicar que o trabalho está em andamento em vez de responder instantaneamente (H13). **O que o TCC fornece:** estados de execução do processamento. **A investigar:** se o backend expõe progresso parcial e se é possível estimar a duração de forma confiável; sem isso, a interface deve comunicar apenas estados (na fila, processando, concluído, falhou), sem prometer porcentagens ou prazos |
+| Custo de inferência da LLM | Cada processamento tem custo computacional/financeiro | Reprocessar não é gratuito; a interface deve ajudar a evitar envios duplicados (H08, H16). **A investigar:** como o custo é medido e atribuído a cada processamento, e se o editor é quem arca com ele ou precisa conhecê-lo; indicar "quando houve custo" só faz sentido se essa informação existir e for relevante para a decisão do editor |
 | Entrada em arquivo de vídeo (partidas gravadas, p. ex. MP4) | O escopo do TCC trabalha com partidas encerradas, não transmissão ao vivo | Upload de arquivos extensos; a interface precisa tratar upload lento/interrupto e formatos/limites ainda desconhecidos (H24, H26) |
 | Backend sem interface prevista originalmente | O TCC previa apenas o sistema de backend | A interface da disciplina é um protótipo demonstrativo; opções como web desktop ou aplicação desktop nativa permanecem em aberto (5.2) |
 | Saída em cortes de vídeo + arquivos de metadados | Formato de resultado definido pelo TCC | A interface precisa apresentar lances, timecodes e metadados de forma compreensível e permitir o download dos arquivos (H25) |
