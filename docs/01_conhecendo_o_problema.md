@@ -122,7 +122,9 @@ Identificar automaticamente os melhores momentos de partidas de futebol e gerar 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
 | Automação da identificação de melhores momentos com visão computacional | Redução do trabalho manual na produção dos cortes e geração de metadados para os resultados |
-| Uso de LLMs multimodais na detecção e classificação dos highlights | Evidenciar a capacidade de generalização do conhecimento e aplicabilidade dos modelos de linguagem |
+| Uso de LLMs multimodais na detecção e classificação dos highlights, avaliando sua capacidade de generalização e aplicabilidade (mérito científico) | [H] H02 — Cortes acompanhados de uma classificação do tipo de lance poderiam ajudar o editor a localizar e filtrar o que procura para uma compilação específica, sem assistir a cada trecho para descobrir do que se trata. A utilidade dessa classificação depende dos critérios editoriais ainda a investigar (seção 4.3) |
+
+> A capacidade de generalização dos LLMs é um mérito técnico/científico do TCC e não, por si só, um valor percebido pelo editor. Na coluna da direita registramos apenas a atividade humana que essa capacidade poderia favorecer, como hipótese.
 
 ---
 
@@ -148,7 +150,7 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-- [H] H05: baixo conhecimento técnico de software e computação.
+- [H] H05: o editor domina ferramentas de edição de vídeo (ver H17), mas tem pouco ou nenhum conhecimento de programação, de modelos de IA e de parâmetros de inferência. Simplificar termos internos do modelo não significa tratá-lo como iniciante na própria profissão: a interface pode usar o vocabulário de edição que ele conhece, evitando jargão de IA.
 - [?] Dispositivos de entrada preferidos, como teclado, mouse ou trackpad, ainda não foram investigados.
 - [H] H17: possível familiaridade com softwares tradicionais de edição de vídeo e seus padrões.
 - [H] H12 e H13: uso provável em computador com tela ampla; navegador e aplicação nativa continuam como alternativas.
@@ -436,7 +438,7 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 | H01 | O corte e a geração de melhores momentos são feitos manualmente, demandam tempo e esforço repetitivo, e o cansaço pode causar omissões involuntárias; a seleção em si é julgamento editorial | Motiva o problema central do TCC; se for falsa, a solução perde a justificativa | Entrega 4 (cenários) e 7 (coleta de dados) |
 | H02 | Profissionais gastarão menos tempo e terão menos esforço repetitivo, omissões involuntárias e retrabalho, mantendo a decisão editorial | É o benefício esperado da solução; sustenta o valor percebido | Entrega 7 |
 | H03 | O profissional responsável pelo corte é o usuário direto da aplicação | Define o usuário-alvo de todo o projeto de IHC | Entrega 3 (personas) e 7 |
-| H05 | O perfil tem baixo conhecimento técnico de software e computação | Influi na simplicidade e na linguagem da interface | Entrega 3 e 7 |
+| H05 | O editor domina ferramentas de edição, mas conhece pouco de programação e IA | Influi na linguagem, na ajuda e nos controles, sem tratar o editor como iniciante em edição | Entrega 3 e 7 |
 | H07 | Selecionar/exportar os resultados é a atividade mais frequente | Prioriza o fluxo principal da interface | Entrega 5 (análise de tarefas) e 7 |
 | H08 | Processar vídeos em lote é a atividade mais crítica | Prioriza tratamento de erro e confiabilidade | Entrega 5 e 7 |
 | H12 | O uso ocorre na pós-produção, após a partida; local exato desconhecido | Define o contexto de uso e requisitos de ambiente | Entrega 3 e 7 |
