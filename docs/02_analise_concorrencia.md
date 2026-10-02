@@ -182,7 +182,8 @@ A [documentação da Cut Page](https://www.blackmagicdesign.com/products/davinci
 **Tipo:** concorrente indireto / ferramenta cotidiana  
 **Link oficial:** [CapCut](https://www.capcut.com/)  
 **Data de acesso:** 01/09/2026  
-**Versão e plataforma:** CapCut para navegador (editor em capcut.com), versão não exibida na interface. As avaliações citadas em "Experiência do usuário e opiniões" vêm dos aplicativos móveis
+**Versão e plataforma:** CapCut para navegador (editor em capcut.com), versão não exibida na interface. As avaliações citadas em "Experiência do usuário e opiniões" vêm dos aplicativos móveis  
+**Modelo de acesso:** gratuito, com recursos e materiais Pro liberados por assinatura (ver [modelo de acesso](#modelo-de-acesso-dos-produtos-analisados))
 
 #### Contexto e proposta
 
@@ -262,7 +263,8 @@ O que vale aproveitar do CapCut é o começo do fluxo. Na inspeção, o carregam
 **Tipo:** concorrente indireto / ferramenta cotidiana  
 **Link oficial:** [Final Cut Pro](https://www.apple.com/final-cut-pro/)  
 **Data de acesso:** 01/09/2026  
-**Versão e plataforma:** Final Cut Pro para Mac, versão não identificada. O guia e as imagens oficiais consultados podem corresponder a versões diferentes; não houve acesso ao aplicativo
+**Versão e plataforma:** Final Cut Pro para Mac, versão não identificada. O guia e as imagens oficiais consultados podem corresponder a versões diferentes; não houve acesso ao aplicativo  
+**Modelo de acesso:** compra única na Mac App Store, com período de teste; exige macOS (ver [modelo de acesso](#modelo-de-acesso-dos-produtos-analisados))
 
 #### Contexto e proposta
 
@@ -351,7 +353,8 @@ Entre os três concorrentes, o Final Cut Pro é o que melhor separa triagem e mo
 **Tipo:** concorrente indireto / ferramenta cotidiana  
 **Link oficial:** [Cap](https://cap.so/)  
 **Data de acesso:** 01/09/2026  
-**Versão e plataforma:** Cap Desktop 0.5.9 e CLI 0.1.0, em macOS
+**Versão e plataforma:** Cap Desktop 0.5.9 e CLI 0.1.0, em macOS  
+**Modelo de acesso:** código aberto, com uso local gratuito; licença desktop e plano Pro pagos para recursos adicionais e de nuvem (ver [modelo de acesso](#modelo-de-acesso-dos-produtos-analisados))
 
 #### Contexto e proposta
 
@@ -577,6 +580,20 @@ As conclusões sobre C06 e C07 se baseiam em materiais promocionais. Não foi po
 | Terminologia                  | Usa conceitos profissionais como sequência, pistas, Razor e tipos de trim. São precisos para especialistas, mas excessivos para uma consulta de melhores momentos.        | Termos como Media, Cut, Edit, Deliver, bins e trims refletem a edição profissional e exigem que o usuário aprenda a estrutura do programa.                | "Carregar" e "Exportar" são claros. Parte das ações depende de ícones e termos genéricos de edição.                                                                              | Biblioteca, evento, projeto, papéis e Magnetic Timeline pertencem ao vocabulário do aplicativo, não ao futebol.                                                   | "Clips" e "Export" convivem com BPP, tensão, atrito e massa. "Instant" e "Studio" não explicam quando os dados são enviados.                                                                               | "Create Video", busca por mídia e métricas de desempenho correspondem às tarefas mostradas.                                                                    | As prévias usam rótulos curtos, como "Create", e categorias para organizar regras.                                                                                         | Usar "partida", "vídeo enviado", "melhor momento", "gol", "início", "fim", "duração" e "baixar cortes". Se o modelo produzir uma medida de confiança calibrada e compreensível (RC05), explicar que ela representa a estimativa da IA para aquela detecção. Informar também se o vídeo ainda está sendo processado e por quanto tempo o arquivo ficará armazenado. |
 | Acessibilidade                | Não foi testada. A densidade de painéis, ícones e modos indica a necessidade de verificar teclado, foco, contraste e nomes acessíveis.                                    | Não foi testada. Muitos painéis e controles compactos podem dificultar navegação e leitura.                                                               | Vários controles não têm rótulo visual. O nome acessível não foi registrado [?]. O arraste precisa de alternativa por teclado.                                        | Não foi possível testar VoiceOver ou teclado. Há muitos ícones compactos e uso de cor para distinguir papéis.                                                     | Parte dos botões tem rótulo visual; abas de propriedades e controles do player usam só ícone. O nome acessível não foi registrado [?].                                                                   | Não observado. Imagens promocionais estáticas não permitem avaliar contraste efetivo, teclado, foco ou nomes acessíveis.                                                                                                                   | Não observado. Imagens promocionais estáticas não permitem avaliar contraste efetivo, animações, teclado, foco ou nomes acessíveis.                                                                                      | Permitir que o usuário envie um vídeo, revise um corte e faça o download usando apenas o teclado. Todos os controles devem ter nome acessível e foco visível. Estados como "processando", "pronto" e "erro" precisam aparecer em texto, não apenas por cor ou animação. |
 | Eficiência                    | Oferece atalhos, marcadores e controle preciso, mas a localização e o corte continuam manuais e exigem domínio do editor.                                                 | Source Tape, Smart Bins, linha do tempo dupla e fila reduzem abertura de clipes, perda de contexto e espera bloqueante.                                   | Por inspeção, o carregamento inicial é fácil de localizar e os controles contextuais evitam telas extras. A interface completa e problemas relatados com vídeos longos podem atrasar a tarefa. | Segundo a documentação, busca visual e por transcrição, favoritos e tarefas em segundo plano podem encurtar a triagem; não houve teste prático. A montagem profissional ainda traz funções além do necessário.           | Por inspeção, presets e zoom automático reduzem ajustes manuais, e a exportação antecipa o custo. A dispersão das decisões e os problemas de estabilidade reduzem o ganho.                                               | Não observado. O material anuncia automação de análise, criação, edição e gestão, mas não permite medir tempo ou esforço.                                                                                         | Não observado. O material anuncia automação de identificação, montagem, legendas, regras e publicação, mas não permite medir tempo ou esforço.                                                                                                                | Automatizar a detecção e a preparação dos cortes, mas preservar revisão humana. Investigar se filtros, navegação sequencial e seleção múltipla ajudam a revisar muitos resultados (hipótese de eficiência, RC08), sem reproduzir um editor completo.                                  |
+
+### Modelo de acesso dos produtos analisados
+
+A tabela registra como cada produto é disponibilizado e o que isso implica para a adoção pelo público ou para a investigação da equipe. Não é uma pesquisa de preços: valores mudam com frequência e não orientam decisões deste projeto. Consulta em 02/10/2026.
+
+| Produto | Modelo de acesso | Implicação para adoção ou investigação |
+|---|---|---|
+| C01 - Adobe Premiere Pro | Assinatura, como aplicativo individual ou dentro de planos do Creative Cloud, com período de teste ([planos](https://www.adobe.com/products/premiere/plans.html)) | O custo é recorrente. Investigar na Entrega 7 se o editor escolhe e paga a ferramenta ou se ela é fornecida pela organização. |
+| C02 - DaVinci Resolve | Versão gratuita com as páginas de edição; versão Studio por licença paga de compra única ([página oficial](https://www.blackmagicdesign.com/products/davinciresolve)) | A versão gratuita reduz a barreira de entrada. É plausível que editores com pouco orçamento a usem, mas isso precisa ser verificado com usuários. |
+| C03 - CapCut | Gratuito, com recursos e materiais Pro liberados por assinatura ([CapCut](https://www.capcut.com/)) | A entrada é gratuita, mas avaliações citam recursos que passaram a exigir o plano Pro (ver C03). A análise usou apenas recursos gratuitos. |
+| C04 - Final Cut Pro | Compra única na Mac App Store, com período de teste; disponível apenas para macOS ([Final Cut Pro](https://www.apple.com/final-cut-pro/)) | O uso depende de um Mac. Reforça que a plataforma do nosso projeto não deve ser presumida (RC12). Não houve acesso ao aplicativo nesta análise. |
+| C05 - Cap | Código aberto; gravação e edição local gratuitas; licença desktop e plano Pro pagos para recursos adicionais, de nuvem e de equipe ([Cap](https://cap.so/)) | Permitiu o teste prático sem custo. Os recursos de nuvem e compartilhamento ficam fora do nosso recorte. |
+| C06 - WSC Sports | Contratação corporativa, sem preço público nem teste por conta própria; acesso mediante contato comercial ([WSC Sports](https://wsc-sports.com/platform/)) | Não é possível testar sem contrato, o que explica a análise baseada em material promocional. Os clientes anunciados são ligas, clubes e empresas de mídia (H04, H20). |
+| C07 - Magnifi | Contratação corporativa, com preço sob consulta e demonstração mediante contato comercial ([Magnifi](https://www.magnifi.ai/product)) | Mesmo limite de C06 para a análise. Indica que a geração automática de melhores momentos é vendida a organizações, não a editores individuais. |
 
 ## 5. Recomendações derivadas
 
