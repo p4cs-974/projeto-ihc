@@ -148,7 +148,10 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| Empresas de mídia esportiva | menos custos devido à maior eficiência do processo | não | [H] H04 |
+| Empresas de mídia esportiva, emissoras, produtoras, clubes e ligas | Possível adoção da solução e menos custos devido à maior eficiência do processo | não | [H] H04, H20 |
+| Produtores e responsáveis editoriais | Recebem os cortes e metadados escolhidos pelo editor, aprovam ou devolvem a seleção e decidem a publicação | não, no recorte inicial: recebem os resultados fora da interface | [H] H14, H22, H23 |
+
+> Esta tabela consolida papéis já mencionados nas seções 5.4 e 7.1. Produtores e responsáveis editoriais são destinatários e decisores externos, não usuários diretos; o recorte não inclui telas de aprovação. A Entrega 3 detalha esse papel como a persona P02.
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
