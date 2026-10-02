@@ -103,6 +103,8 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 
 | 09/09/2026 | Delimitada a participação inicial de P02 como destinatária externa dos cortes e metadados, preservando o recorte de IHC e o escopo formal do TCC. Acompanhamento direto fica como alternativa a investigar, antes de decidir ampliar o recorte | AC-016 a AC-019 da [análise das 22:02](analises%20de%20coerencia/09-09-2026-22-02.html); orientação de Pedro para receber resultados externamente a princípio, sem excluir acompanhamento direto futuro | Entrega 3; H33 a H35; R03. Compatível com Entrega 1, H22/H23; auditoria editorial sem inclusão aprovada | Pedro, na aplicação dos tickets pelo Codex |
 
+| 02/10/2026 | Revisão da Entrega 1: separação entre julgamento editorial, omissão involuntária e esforço repetitivo; processo atual descrito como hipótese; responsabilidades redefinidas como atividades; IDs da seção 9.2 alinhados a A01–A04; exemplos do template removidos da seção 4. O recorte de IHC não mudou | [Feedback do professor da Entrega 01](feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md) | Entrega 1; README; H01, H02, H05, H08, H09, H10, H11; seção 4 desta matriz | Pedro |
+
 ## Como usar
 
 - Use identificadores estáveis (`H01`, `P01`, `C01`, `T01`, `M01`, `F01`, `UT01`).
@@ -137,3 +139,5 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 - 23/09/2026: AC-035 aplicado por solicitação do usuário. Âncoras da Persona P02 em RASTREABILIDADE.md e docs/04 atualizadas para #persona-p02--arnaldo, alinhadas à padronização do cabeçalho em docs/03.
 
 - 01/10/2026: elaborado C03 por Giovanni Chahin Morassi a partir da premissa de criador amador (P03), das hipóteses H36 a H38 e das situações de origem na Entrega 1 (H07 e H13). R04 e R05 passam a apontar para C03 como cenário hipotético, detalhando o garimpo manual de lances por atleta, o gargalo de hardware modesto e o retrabalho por travamento local de software.
+
+- 02/10/2026: aplicado o feedback do professor da Entrega 01. Reformuladas H01, H02, H05, H08, H09 e H10, com a data da revisão no próprio registro; H11 recebeu o detalhamento do processo atual (seções 4.1 e 4.3). A seção 4 deixa de conter os exemplos do template: dashboard e histórico ficam PENDENTES e administração/CRUD é registrada como não adotada. As hipóteses continuam abertas e sem evidência empírica.

@@ -1,6 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** 13/08/2026  
+**Data:** 13/08/2026 (versão original)  
+**Revisão:** 02/10/2026 — aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md)  
 **Status:** `🟩 concluída`  
 **Responsabilidade:** 1 solução consolidada por equipe
 
