@@ -172,20 +172,24 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | Processar vídeos em lote | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
+| A01 | Processar vídeos em lote | Profissional responsável pela geração de vídeos de melhores momentos | Frequência desconhecida; hipótese de maior criticidade (H08); prioridade alta | H |
 | A02 | Acompanhar estado, progresso e falhas do processamento | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
 | A03 | Consultar o histórico de resultados processados | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
-| A04 | Revisar, selecionar e baixar cortes e metadados | Profissional responsável pela geração de vídeos de melhores momentos | Hipótese de maior frequência; prioridade alta | H |
+| A04 | Revisar, selecionar e baixar cortes e metadados | Profissional responsável pela geração de vídeos de melhores momentos | Hipótese de maior frequência (H07); prioridade alta | H |
 
 > A01–A04 descrevem atividades previstas para a **aplicação potencial**, não práticas atuais conhecidas do público. Hoje não sabemos se editores processam partidas em lote ou acompanham estados de processamento; o processo atual hipotético está descrito na seção 4.1.
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-[H] H07 — Selecionar/exportar os resultados processados. Para gerar compilações, ou editar em softwares externos para publicar em outras mídias.
+[H] H07 — Revisar, selecionar e baixar os resultados processados (A04). Esses resultados seriam usados para gerar compilações ou continuar a edição em softwares externos antes da publicação.
+
+Essa finalidade explica **para que** os resultados serão usados, mas não sustenta sozinha **por que** essa seria a atividade mais frequente. O raciocínio provisório é que um único envio de partida pode gerar vários cortes, cada um revisado e eventualmente baixado, de modo que a revisão se repetiria mais vezes do que o envio. Não há dado de frequência; isso será investigado nas Entregas 5 e 7.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-[H] H08 — Processar os vídeos em lote. Se for mal executada as consequências podem ser: necessidade de retrabalho, custo de processamento da inferência da LLM, perda de arquivos.
+[H] H08 — Processar os vídeos em lote (A01). Se for mal executada as consequências podem ser: necessidade de retrabalho, custo de processamento da inferência da LLM, perda de arquivos.
+
+**Frequência, prioridade e criticidade não são a mesma coisa.** Frequência indica quantas vezes a atividade ocorre; criticidade, a gravidade da consequência quando ela falha; prioridade é a decisão de projeto que combina as duas com o objetivo do usuário. Por isso A04 pode ser a mais frequente (H07) e A01 a mais crítica (H08) sem contradição: supomos que uma falha no envio ou no processamento bloqueia todas as atividades seguintes daquela partida e gera custo de inferência, enquanto um erro na revisão poderia ser corrigido revisando ou baixando novamente. Ambas recebem prioridade alta por razões diferentes.
 
 ---
 
