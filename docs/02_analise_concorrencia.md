@@ -302,6 +302,10 @@ _Figura 14. Busca visual por "climbing stairs". O filtro e o resultado permanece
 
 _Figura 15. Busca por um assunto falado. A tabela associa o texto encontrado aos intervalos temporais. Fonte: [Apple, Final Cut Pro](https://www.apple.com/final-cut-pro/)._
 
+![Detalhe ampliado da tabela de resultados da busca por transcrição](../assets/02_concorrencia/final-cut-pro/04-busca-transcricao-detalhe.png)
+
+_Figura 15 (detalhe). Recorte ampliado pela equipe a partir da imagem oficial. A tabela mostra as colunas Name, Relevance, Start, End e Media Duration para cada trecho encontrado, e o filtro aplicado é "Transcript", "Is Related To", "history of racing"._
+
 ![Janela de exportação com prévia, metadados e informações do arquivo](../assets/02_concorrencia/final-cut-pro/05-exportacao-anotado.png)
 
 _Figura 16. Confirmação de exportação com prévia, atributos e estimativa de tamanho. Fonte: [Apple, exportar arquivos finais](https://support.apple.com/en-ca/guide/final-cut-pro/ver0192a47b8/mac)._
