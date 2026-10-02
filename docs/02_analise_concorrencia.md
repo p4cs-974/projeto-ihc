@@ -31,7 +31,7 @@ Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equ
 
 | Item citado na Entrega 1 | Tipo                 | Por que foi citado                                                         | Status inicial                                                          | Decisão nesta entrega |
 | ------------------------ | -------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------- | --------------------- |
-| Adobe Premiere Pro       | ferramenta cotidiana | Editar manualmente vídeos de melhores momentos                             | [F] Citado na Entrega 1 como editor profissional conhecido pelo público | analisar              |
+| Adobe Premiere Pro       | ferramenta cotidiana | Editar manualmente vídeos de melhores momentos                             | [F] Citado pela equipe na Entrega 1 como editor profissional; a familiaridade do público com ele é hipótese (H17) | analisar              |
 | DaVinci Resolve          | ferramenta cotidiana | Importar, assistir, marcar, recortar, organizar e exportar trechos         | [F] Alternativa de edição manual documentada na Entrega 1               | analisar              |
 | CapCut                   | ferramenta cotidiana | Editar manualmente vídeos                                                  | [F] Citado na Entrega 1 como alternativa indireta para edição manual    | analisar              |
 | Final Cut Pro            | ferramenta cotidiana | Editar manualmente vídeos                                                  | [F] Citado na Entrega 1 como alternativa indireta para edição manual    | analisar              |
