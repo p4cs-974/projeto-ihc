@@ -159,6 +159,7 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 - [?] Dispositivos de entrada preferidos, como teclado, mouse ou trackpad, ainda não foram investigados.
 - [H] H17: possível familiaridade com softwares tradicionais de edição de vídeo e seus padrões.
 - [H] H12 e H13: uso provável em computador com tela ampla; navegador e aplicação nativa continuam como alternativas.
+- [?] Necessidades de acessibilidade ainda não foram investigadas: não sabemos se o público tem limitações que afetem a leitura de textos e timecodes, a navegação por teclado ou mouse, ou a inspeção visual e auditiva de vídeos. A qualidade de uso depende das características e do contexto das pessoas; essa lacuna deve ser levantada na Entrega 7, sem exigir agora uma avaliação completa de acessibilidade.
 
 ---
 
