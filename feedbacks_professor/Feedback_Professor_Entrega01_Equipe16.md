@@ -4,18 +4,18 @@
 >
 > | Item do parecer | Commit(s) |
 > |---|---|
-> | Correção 1 — referências, afirmações e limitações (4.6) | [`81c38a0`](https://github.com/p4cs-974/projeto-ihc/commit/81c38a0) |
-> | Correção 2 — julgamento editorial × erro × esforço | [`51d6d90`](https://github.com/p4cs-974/projeto-ihc/commit/51d6d90) |
-> | Correção 3 — processo atual e informações das decisões | [`86eeb39`](https://github.com/p4cs-974/projeto-ihc/commit/86eeb39) |
-> | Correção 4 — benefício técnico × de uso; H05 | [`1d88573`](https://github.com/p4cs-974/projeto-ihc/commit/1d88573), [`ae39933`](https://github.com/p4cs-974/projeto-ihc/commit/ae39933) |
-> | Correção 5 — responsabilidades e identificadores | [`7366be7`](https://github.com/p4cs-974/projeto-ihc/commit/7366be7) |
-> | Recomendação — stakeholders | [`faab8d7`](https://github.com/p4cs-974/projeto-ihc/commit/faab8d7) |
-> | Recomendação — frequência, prioridade e criticidade | [`c4b5c99`](https://github.com/p4cs-974/projeto-ihc/commit/c4b5c99) |
-> | Recomendação — "perda de arquivos" | [`62b20ff`](https://github.com/p4cs-974/projeto-ihc/commit/62b20ff) |
-> | Recomendação — incerteza nas sínteses | [`a48af73`](https://github.com/p4cs-974/projeto-ihc/commit/a48af73) |
-> | Recomendação — impacto possível × capacidade assegurada | [`d6d008e`](https://github.com/p4cs-974/projeto-ihc/commit/d6d008e) |
-> | Recomendação — acessibilidade | [`de14e9f`](https://github.com/p4cs-974/projeto-ihc/commit/de14e9f) |
-> | Recomendação — data de revisão | [`e834ef6`](https://github.com/p4cs-974/projeto-ihc/commit/e834ef6) |
+> | Correção 1: referências, afirmações e limitações (4.6) | [`81c38a0`](https://github.com/p4cs-974/projeto-ihc/commit/81c38a0) |
+> | Correção 2: julgamento editorial × erro × esforço | [`51d6d90`](https://github.com/p4cs-974/projeto-ihc/commit/51d6d90) |
+> | Correção 3: processo atual e informações das decisões | [`86eeb39`](https://github.com/p4cs-974/projeto-ihc/commit/86eeb39) |
+> | Correção 4: benefício técnico × de uso; H05 | [`1d88573`](https://github.com/p4cs-974/projeto-ihc/commit/1d88573), [`ae39933`](https://github.com/p4cs-974/projeto-ihc/commit/ae39933) |
+> | Correção 5: responsabilidades e identificadores | [`7366be7`](https://github.com/p4cs-974/projeto-ihc/commit/7366be7) |
+> | Recomendação: stakeholders | [`faab8d7`](https://github.com/p4cs-974/projeto-ihc/commit/faab8d7) |
+> | Recomendação: frequência, prioridade e criticidade | [`c4b5c99`](https://github.com/p4cs-974/projeto-ihc/commit/c4b5c99) |
+> | Recomendação: "perda de arquivos" | [`62b20ff`](https://github.com/p4cs-974/projeto-ihc/commit/62b20ff) |
+> | Recomendação: incerteza nas sínteses | [`a48af73`](https://github.com/p4cs-974/projeto-ihc/commit/a48af73) |
+> | Recomendação: impacto possível × capacidade assegurada | [`d6d008e`](https://github.com/p4cs-974/projeto-ihc/commit/d6d008e) |
+> | Recomendação: acessibilidade | [`de14e9f`](https://github.com/p4cs-974/projeto-ihc/commit/de14e9f) |
+> | Recomendação: data de revisão | [`e834ef6`](https://github.com/p4cs-974/projeto-ihc/commit/e834ef6) |
 
 
 ## Avaliação geral

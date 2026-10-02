@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
 **Data:** 13/08/2026 (versão original)  
-**Revisão:** 02/10/2026 — aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md)  
+**Revisão:** 02/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md)  
 **Status:** `🟩 concluída`  
 **Responsabilidade:** 1 solução consolidada por equipe
 
@@ -110,7 +110,7 @@ Desenvolver um sistema híbrido de visão computacional capaz de automatizar o p
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[H] H01 — No público e no contexto investigados — editores de vídeo esportivo na pós-produção de partidas encerradas —, o corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e exigem atenção contínua; o esforço é repetitivo e o cansaço pode levar a omissões involuntárias de lances. A escolha de quais lances entram em uma compilação é um julgamento editorial do profissional, não um erro a ser eliminado. Como já existem alternativas automatizadas no mercado (seção 6.1), H01 não se aplica a toda a produção de melhores momentos.
+[H] H01 — No público e no contexto investigados (editores de vídeo esportivo na pós-produção de partidas encerradas), o corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e exigem atenção contínua; o esforço é repetitivo e o cansaço pode levar a omissões involuntárias de lances. A escolha de quais lances entram em uma compilação é um julgamento editorial do profissional, não um erro a ser eliminado. Como já existem alternativas automatizadas no mercado (seção 6.1), H01 não se aplica a toda a produção de melhores momentos.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -125,7 +125,7 @@ Identificar automaticamente os melhores momentos de partidas de futebol e gerar 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
 | Automação da identificação de melhores momentos com visão computacional | Redução do trabalho manual na produção dos cortes e geração de metadados para os resultados |
-| Uso de LLMs multimodais na detecção e classificação dos highlights, avaliando sua capacidade de generalização e aplicabilidade (mérito científico) | [H] Relacionada a H02 e H28 — Cortes acompanhados de uma classificação do tipo de lance poderiam ajudar o editor a localizar e filtrar o que procura para uma compilação específica, sem assistir a cada trecho para descobrir do que se trata. A utilidade dessa classificação depende dos critérios editoriais ainda a investigar (seção 4.3) |
+| Uso de LLMs multimodais na detecção e classificação dos highlights, avaliando sua capacidade de generalização e aplicabilidade (mérito científico) | [H] Relacionada a H02 e H28: cortes acompanhados de uma classificação do tipo de lance poderiam ajudar o editor a localizar e filtrar o que procura para uma compilação específica, sem assistir a cada trecho para descobrir do que se trata. A utilidade dessa classificação depende dos critérios editoriais ainda a investigar (seção 4.3) |
 
 > A capacidade de generalização dos LLMs é um mérito técnico/científico do TCC e não, por si só, um valor percebido pelo editor. Na coluna da direita registramos apenas a atividade humana que essa capacidade poderia favorecer, como hipótese.
 
@@ -207,10 +207,10 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 [F] Materiais oficiais da [WSC Sports](https://wsc-sports.com/platform/) e da [Magnifi](https://www.magnifi.ai/product) mostram que o mercado possui fluxos de segmentação e classificação durante transmissões ao vivo. Este projeto não adota esse contexto. Conforme H11 e H12, o recorte escolhido é a pós-produção de partidas encerradas, quando o editor recebe a gravação integral e prepara os melhores momentos.
 
-[H] Detalhamento de H11 — No recorte escolhido, supomos que o processo atual do editor seja o seguinte, ainda sem investigação com profissionais:
+[H] Detalhamento de H11: no recorte escolhido, supomos que o processo atual do editor seja o seguinte, ainda sem investigação com profissionais:
 
 1. **Recebe o material:** obtém a gravação integral da partida encerrada (arquivo enviado pela produção, transmissão gravada ou outra origem a investigar) e a importa em um editor não linear, como Adobe Premiere Pro ou DaVinci Resolve (seção 6.1, H17).
-2. **Identifica os trechos:** percorre a gravação, avançando e voltando, para localizar candidatos a lance — gols, defesas, finalizações perigosas, ocorrências disciplinares — e os marca com marcadores ou anotações de timecode.
+2. **Identifica os trechos:** percorre a gravação, avançando e voltando, para localizar candidatos a lance (gols, defesas, finalizações perigosas, ocorrências disciplinares) e os marca com marcadores ou anotações de timecode.
 3. **Decide os limites:** para cada lance, escolhe onde o corte começa e termina, decidindo quanto do que acontece antes e depois é necessário para o lance ser compreendido.
 4. **Prepara a seleção:** organiza os cortes escolhidos, descarta os que não servem à finalidade da compilação e segue para a montagem ou entrega o material a quem aprova a publicação (H14).
 
@@ -253,8 +253,8 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 | AKAN, Sara; VARLI, Songül. Use of deep learning in soccer videos analysis: survey: S. Akan, S. Varlı. Multimedia Systems, v. 29, n. 3, p. 897-915, 2023. | Artigo de revisão (survey) em periódico | A produção ainda depende fortemente de edição manual; melhores momentos pós-jogo têm relevância e diferentes tempos de entrega; a detecção deve considerar eventos além de gols | É um levantamento bibliográfico com foco no desempenho técnico dos métodos. O recorte de 25 partidas citado anteriormente pertence a um estudo relatado pelo próprio levantamento, e não a uma coleta feita por Akan e Varlı; usamos o dado como referência indireta, não como evidência sobre editores. Não investiga diretamente o fluxo de trabalho ou a experiência de editores profissionais |
 | YIN, Hongwei; SINNOTT, Richard O.; JAYAPUTERA, Glenn T. A survey of video-based human action recognition in team sports: H. Yin et al. Artificial intelligence review, v. 57, n. 11, p. 293, 2024. | Artigo de revisão (survey) em periódico | Existem plataformas de mercado que analisam eventos, geram conteúdo e metadados e gerenciam ativos esportivos com IA | Revisão de literatura com foco técnico em reconhecimento de ações; menciona as plataformas sem avaliar sua usabilidade ou adequação ao editor escolhido |
 | SEWERYN, Karolina; WRÓBLEWSKA, Anna; ŁUKASIK, Szymon. Survey of action recognition, spotting, and spatio-temporal localization in soccer—Current trends and research perspectives. ACM Transactions on Intelligent Systems and Technology, v. 17, n. 2, p. 1-37, 2026. | Artigo de revisão (survey) em periódico | Existem soluções que recebem vídeo gravado, geram clipes/tags e permitem baixar resultados, além de fluxos mais amplos de edição e publicação | Revisão de literatura com foco técnico em detecção e localização de ações; não investiga o trabalho ou a experiência de editores profissionais |
-| [WSC Sports — página oficial da plataforma](https://wsc-sports.com/platform/) | Página institucional/comercial | A WSC Sports declara análise de eventos, criação automatizada de conteúdo, geração de metadados e gestão de ativos esportivos | Fonte institucional e promocional; não oferece evidência independente de usabilidade ou adequação ao nosso público. Análise da interface na Entrega 2, C06 |
-| [Magnifi — página do produto](https://www.magnifi.ai/product) e [FAQ](https://www.magnifi.ai/) | Página institucional/comercial | A Magnifi declara receber vídeo gravado em MP4, gerar e etiquetar cortes e permitir baixá-los ou distribuí-los | Fonte institucional e comercial; funcionalidades e resultados anunciados precisam de análise independente. Análise da interface na Entrega 2, C07 |
+| [WSC Sports, página oficial da plataforma](https://wsc-sports.com/platform/) | Página institucional/comercial | A WSC Sports declara análise de eventos, criação automatizada de conteúdo, geração de metadados e gestão de ativos esportivos | Fonte institucional e promocional; não oferece evidência independente de usabilidade ou adequação ao nosso público. Análise da interface na Entrega 2, C06 |
+| [Magnifi, página do produto](https://www.magnifi.ai/product) e [FAQ](https://www.magnifi.ai/) | Página institucional/comercial | A Magnifi declara receber vídeo gravado em MP4, gerar e etiquetar cortes e permitir baixá-los ou distribuí-los | Fonte institucional e comercial; funcionalidades e resultados anunciados precisam de análise independente. Análise da interface na Entrega 2, C07 |
 
 > As afirmações sobre funcionalidades de produtos específicos vêm das páginas oficiais desses produtos; os artigos de revisão sustentam apenas o panorama técnico e de mercado que descrevem. Nenhuma das fontes investiga diretamente o editor de vídeo esportivo escolhido nesta disciplina.
 
