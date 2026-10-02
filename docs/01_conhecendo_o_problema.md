@@ -170,6 +170,8 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 | A03 | Consultar o histórico de resultados processados | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
 | A04 | Revisar, selecionar e baixar cortes e metadados | Profissional responsável pela geração de vídeos de melhores momentos | Hipótese de maior frequência; prioridade alta | H |
 
+> A01–A04 descrevem atividades previstas para a **aplicação potencial**, não práticas atuais conhecidas do público. Hoje não sabemos se editores processam partidas em lote ou acompanham estados de processamento; o processo atual hipotético está descrito na seção 4.1.
+
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
 [H] H07 — Selecionar/exportar os resultados processados. Para gerar compilações, ou editar em softwares externos para publicar em outras mídias.
@@ -188,6 +190,15 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 [F] Materiais oficiais da [WSC Sports](https://wsc-sports.com/platform/) e da [Magnifi](https://www.magnifi.ai/product) mostram que o mercado possui fluxos de segmentação e classificação durante transmissões ao vivo. Este projeto não adota esse contexto. Conforme H11 e H12, o recorte escolhido é a pós-produção de partidas encerradas, quando o editor recebe a gravação integral e prepara os melhores momentos.
 
+[H] Detalhamento de H11 — No recorte escolhido, supomos que o processo atual do editor seja o seguinte, ainda sem investigação com profissionais:
+
+1. **Recebe o material:** obtém a gravação integral da partida encerrada (arquivo enviado pela produção, transmissão gravada ou outra origem a investigar) e a importa em um editor não linear, como Adobe Premiere Pro ou DaVinci Resolve (seção 6.1, H17).
+2. **Identifica os trechos:** percorre a gravação, avançando e voltando, para localizar candidatos a lance — gols, defesas, finalizações perigosas, ocorrências disciplinares — e os marca com marcadores ou anotações de timecode.
+3. **Decide os limites:** para cada lance, escolhe onde o corte começa e termina, decidindo quanto do que acontece antes e depois é necessário para o lance ser compreendido.
+4. **Prepara a seleção:** organiza os cortes escolhidos, descarta os que não servem à finalidade da compilação e segue para a montagem ou entrega o material a quem aprova a publicação (H14).
+
+Essa descrição deriva de H11 (seção 4.5) e das ferramentas listadas na seção 6.1. Sua validação está prevista para a Entrega 7.
+
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
 [H] H09 — Percorrer manualmente uma gravação extensa é repetitivo e exige atenção contínua; por distração ou cansaço, o profissional pode deixar passar um lance que ele próprio consideraria relevante (omissão involuntária). Isso é diferente de descartar um lance por escolha editorial deliberada.
@@ -196,7 +207,17 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-[F] Contexto da partida de futebol.
+A versão anterior registrava apenas "[F] Contexto da partida de futebol", afirmação ampla demais e sem fonte sobre o trabalho do editor. A revisão abaixo liga cada informação suposta à decisão que ela apoiaria. São questões de investigação, não requisitos confirmados:
+
+| Informação que supomos ser interpretada | Decisão que apoiaria | Status | Pergunta a investigar (Entrega 7) |
+|---|---|---|---|
+| Tipo de lance (gol, defesa, finalização, falta, cartão etc.) | Incluir ou não o lance na compilação, conforme sua finalidade | [H] | Conhecer o tipo de lance altera a seleção? Que tipos importam para cada finalidade? |
+| O que acontece antes e depois do lance | Onde o corte começa e termina | [H] | Observar a jogada que origina o lance e a reação posterior altera os limites do corte? |
+| Momento da partida e placar | Relevância relativa do lance (um gol de empate no fim vs. um gol em goleada) | [?] | O editor considera o placar e o minuto ao selecionar? |
+| Jogadores e equipes envolvidos | Seleção para compilações focadas em um atleta ou clube | [?] | Compilações por jogador ou equipe são comuns no público priorizado? (relacionada a H36) |
+| Finalidade e destino da compilação | Quantidade e duração dos cortes | [?] | Como a finalidade (rede social, programa, clube) muda o que é selecionado? |
+
+Sem essa ligação, timecodes, classificações e metadados poderiam apenas reproduzir a saída técnica do modelo sem demonstrar utilidade para o editor.
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
