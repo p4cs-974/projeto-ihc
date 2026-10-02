@@ -125,7 +125,7 @@ Identificar automaticamente os melhores momentos de partidas de futebol e gerar 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
 | Automação da identificação de melhores momentos com visão computacional | Redução do trabalho manual na produção dos cortes e geração de metadados para os resultados |
-| Uso de LLMs multimodais na detecção e classificação dos highlights, avaliando sua capacidade de generalização e aplicabilidade (mérito científico) | [H] H02 — Cortes acompanhados de uma classificação do tipo de lance poderiam ajudar o editor a localizar e filtrar o que procura para uma compilação específica, sem assistir a cada trecho para descobrir do que se trata. A utilidade dessa classificação depende dos critérios editoriais ainda a investigar (seção 4.3) |
+| Uso de LLMs multimodais na detecção e classificação dos highlights, avaliando sua capacidade de generalização e aplicabilidade (mérito científico) | [H] Relacionada a H02 e H28 — Cortes acompanhados de uma classificação do tipo de lance poderiam ajudar o editor a localizar e filtrar o que procura para uma compilação específica, sem assistir a cada trecho para descobrir do que se trata. A utilidade dessa classificação depende dos critérios editoriais ainda a investigar (seção 4.3) |
 
 > A capacidade de generalização dos LLMs é um mérito técnico/científico do TCC e não, por si só, um valor percebido pelo editor. Na coluna da direita registramos apenas a atividade humana que essa capacidade poderia favorecer, como hipótese.
 
