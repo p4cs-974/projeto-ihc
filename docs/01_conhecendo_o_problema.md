@@ -64,8 +64,6 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 | Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Revisão, seleção e download de resultados (A04) |
 | Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Acompanhamento e histórico de processamento (A02/A03) e manutenção da matriz de rastreabilidade |
 
-> As responsabilidades indicam a **atividade do usuário** que cada integrante estuda com prioridade (seção 3.2), não telas já aprovadas. Logs técnicos continuam fora do fluxo do editor (seção 8); a responsabilidade de Giovanni cobre o estudo do histórico de trabalhos e das mensagens de estado (A02/A03, H15) e a manutenção documental de [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
-
 ## 0.2 Título atual do TCC
 
 Identificação de Melhores Momentos em Partidas de Futebol Utilizando Sistemas Híbridos de Visão Computacional
