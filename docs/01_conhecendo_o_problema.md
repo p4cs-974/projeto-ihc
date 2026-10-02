@@ -107,7 +107,7 @@ Desenvolver um sistema híbrido de visão computacional capaz de automatizar o p
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[H] H01 — O corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e estão sujeitos à interpretação humana, ao cansaço e a falhas.
+[H] H01 — O corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e exigem atenção contínua; o esforço é repetitivo e o cansaço pode levar a omissões involuntárias de lances. A escolha de quais lances entram em uma compilação é um julgamento editorial do profissional, não um erro a ser eliminado.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -115,7 +115,7 @@ Identificar automaticamente os melhores momentos de partidas de futebol e gerar 
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-[H] H02 — Profissionais responsáveis pela geração de vídeos de melhores momentos gastarão menos tempo realizando cortes manualmente e terão resultados menos sujeitos a variações causadas por cansaço ou falha humana.
+[H] H02 — Profissionais responsáveis pela geração de vídeos de melhores momentos gastarão menos tempo localizando e recortando lances manualmente, com menos esforço repetitivo, menos omissões involuntárias e menos retrabalho. A decisão editorial sobre quais cortes usar continua com o profissional: o resultado automático é ponto de partida para esse julgamento, não um substituto dele.
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
@@ -190,7 +190,9 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-[H] H09 — A análise depende da precisão e subjetividade do profissional, que pode estar sujeito a, por exemplo, se distrair e perdeu um highlight.
+[H] H09 — Percorrer manualmente uma gravação extensa é repetitivo e exige atenção contínua; por distração ou cansaço, o profissional pode deixar passar um lance que ele próprio consideraria relevante (omissão involuntária). Isso é diferente de descartar um lance por escolha editorial deliberada.
+
+[?] Ainda não sabemos quais critérios tornam um lance relevante para a finalidade de cada compilação. Não presumimos que exista uma única seleção correta para todas as situações; esses critérios serão investigados com editores na Entrega 7.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
@@ -198,7 +200,7 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-[H] H10 — Um lance possivelmente interessante da partida pode não estar devidamente rotulado pelo profissional, consequentemente, esse lance pode acabar ficando de fora de um vídeo de highlights final.
+[H] H10 — Quando o profissional deixa passar involuntariamente um lance que consideraria relevante, esse lance pode ficar de fora do vídeo final ou só ser recuperado depois, com retrabalho e atraso. Já quando o editor descarta um lance por critério editorial, não há falha: a mesma partida pode gerar seleções diferentes conforme a finalidade da compilação. Por isso, uma divergência entre o editor e uma sugestão automática não deve ser tratada como erro do usuário.
 
 ## 4.5 Conte uma situação concreta.
 
@@ -376,8 +378,12 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| Economia de tempo | Necessidade de realizar manualmente cortes em vídeos brutos | Profissional responsável pela geração de vídeos de melhores momentos | H |
-| Redução da subjetividade | A seleção manual pode variar devido à interpretação humana, ao cansaço ou a falhas | Profissional responsável pela geração de vídeos de melhores momentos | H |
+| Economia de tempo | Necessidade de percorrer e recortar manualmente gravações extensas | Profissional responsável pela geração de vídeos de melhores momentos | [H] H02 |
+| Redução do esforço repetitivo | Assistir à partida inteira para localizar candidatos a lance exige atenção contínua e repetitiva | Profissional responsável pela geração de vídeos de melhores momentos | [H] H01, H09 |
+| Redução de omissões involuntárias e de retrabalho | Por cansaço ou distração, o editor pode deixar passar lances que ele próprio consideraria relevantes e precisar voltar à gravação | Profissional responsável pela geração de vídeos de melhores momentos | [H] H09, H10 |
+| Apoio ao julgamento editorial, sem substituí-lo | A seleção final depende da finalidade da compilação; a interface deve apresentar candidatos com contexto para o editor decidir | Profissional responsável pela geração de vídeos de melhores momentos | [?] critérios editoriais a investigar na Entrega 7 |
+
+> A versão anterior desta tabela usava "redução da subjetividade", reunindo interpretação humana, cansaço e falhas como um único problema. A revisão separa **esforço repetitivo** e **omissão involuntária**, que a interface pode ajudar a reduzir, do **julgamento editorial**, que pertence ao editor. A redução de tempo e de omissões continua como hipótese; demonstrá-la exigirá observação ou comparação nas Entregas 12–14.
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
@@ -406,8 +412,8 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | O corte e a geração de melhores momentos são feitos manualmente, demandam tempo e estão sujeitos a cansaço e falhas humanas | Motiva o problema central do TCC; se for falsa, a solução perde a justificativa | Entrega 4 (cenários) e 7 (coleta de dados) |
-| H02 | Profissionais gastarão menos tempo e terão resultados menos sujeitos a variações | É o benefício esperado da solução; sustenta o valor percebido | Entrega 7 |
+| H01 | O corte e a geração de melhores momentos são feitos manualmente, demandam tempo e esforço repetitivo, e o cansaço pode causar omissões involuntárias; a seleção em si é julgamento editorial | Motiva o problema central do TCC; se for falsa, a solução perde a justificativa | Entrega 4 (cenários) e 7 (coleta de dados) |
+| H02 | Profissionais gastarão menos tempo e terão menos esforço repetitivo, omissões involuntárias e retrabalho, mantendo a decisão editorial | É o benefício esperado da solução; sustenta o valor percebido | Entrega 7 |
 | H03 | O profissional responsável pelo corte é o usuário direto da aplicação | Define o usuário-alvo de todo o projeto de IHC | Entrega 3 (personas) e 7 |
 | H05 | O perfil tem baixo conhecimento técnico de software e computação | Influi na simplicidade e na linguagem da interface | Entrega 3 e 7 |
 | H07 | Selecionar/exportar os resultados é a atividade mais frequente | Prioriza o fluxo principal da interface | Entrega 5 (análise de tarefas) e 7 |
