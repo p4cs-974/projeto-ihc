@@ -1,6 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** 16/9/2026  
+**Data:** 16/9/2026 (versão original)  
+**Revisão:** 03/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md)  
 **Status:** 🟩 preenchida como proto-personas; validação com usuários pendente
 
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
@@ -494,3 +495,5 @@ H35, auditoria editorial, e H36, recorte por jogador, continuam exploratórias. 
 - 30/09/2026: adicionadas as seções de mapa de empatia e de jornada do usuário para P03 (Jorginho Jr.) logo abaixo das de P01 e P02. Criado o arquivo visual correspondente em assets/03_personas/mapa_empatia_p03.svg, mantendo estrita paridade dimensional, visual e de fontes com P01 e P02. A jornada detalha as 7 etapas de produção amadora, upload em lote, acompanhamento remoto, revisão com recorte de jogador, download leve e pós-produção externa, mantendo rastreabilidade rigorosa (H01, H06, H08, H10, H11, H13, H16, H19, H24, H25, H28, H32, H36, H37, H38, R04 e R05) e total coerência estrutural com P01 e P02.
 
 - 01/10/2026: renomeado o arquivo visual de P01 para mapa_empatia_p01.svg e atualizados os links correspondentes. Atualizado o quadrante e linha de tabela "Ouve" nos mapas de empatia de P01, P02 e P03 para uniformizar a formulação com hipóteses e lacunas de evidências reais a investigar. Reestruturada a seção "Síntese" para focar exclusivamente no direcionamento das entregas subsequentes (da Entrega 4 em diante).
+
+- 03/10/2026: aplicado o feedback do professor da Entrega 03 nas partes de Pedro (P01) e do grupo. P01 e P03 passam a primárias e P02 a persona atendida, com justificativa na composição das personas. Rafael ganhou biografia e idade; o contexto ganhou as condições físicas e sociais da produtora e da casa de P03; a jornada de P01 ganhou relato encadeado; mapa e jornada de P01 separam o comportamento atual do uso proposto. Registradas H39 a H41. As fichas, mapas e jornadas de P02 e P03 ficam com seus autores.
