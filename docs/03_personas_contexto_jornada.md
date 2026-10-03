@@ -2,7 +2,7 @@
 
 **Data:** 16/9/2026 (versão original)  
 **Revisão:** 03/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md)  
-**Status:** 🟩 preenchida como proto-personas; validação com usuários pendente
+**Status:** 🟨 em revisão após feedback; P01 e partes do grupo revisadas; P02, P03 e seus mapas e jornadas aguardam Lucas e Giovanni; validação com usuários pendente
 
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 

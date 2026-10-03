@@ -2,7 +2,7 @@
 
 **Data:** 19/08/2026 (versão original)  
 **Revisão:** 02/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe16.md)  
-**Status:** `🟩 concluída`
+**Status:** `🟨 em revisão após feedback`; partes de Pedro e do grupo revisadas; C01 e C02, de Giovanni, e C06 e C07, de Lucas, aguardam seus autores
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
