@@ -43,10 +43,23 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), [Entrega 2](02_analise_concorr
 
 ## 1. Personas
 
+### Composição e prioridade das personas
+
+P01 e P03 são personas primárias. As duas usam a interface do envio ao download, e as necessidades de cada uma mudam decisões essenciais do fluxo de enviar, acompanhar, revisar e baixar. P02 não usa a interface no recorte adotado: recebe por canal externo o material que o editor baixa e decide sobre ele. Por isso P02 deixa de ser classificada como persona secundária de uso e passa a ser uma **persona atendida**, categoria de Cooper para quem não opera o produto, mas depende do que ele produz.
+
+| Persona | Classificação | Atividades apoiadas pela interface | Por que essa prioridade | Consequência prática no projeto |
+|---|---|---|---|---|
+| P01, Rafael | Primária | A01, A02 e A04; A03 a validar | Revisa várias partidas sob prazo e precisa conferir os cortes antes de baixar, H30 e H32. Essas necessidades definem a fila de partidas, o aviso de conclusão e a revisão com contexto, que formam o fluxo principal. | A interface precisa aceitar várias partidas, mostrar o estado de cada uma e permitir assistir a todos os cortes antes do download. Falhas de uma partida não podem bloquear as outras, H16. |
+| P03, Jorginho Jr. | Primária | A01, A02 e A04 | Percorre o mesmo fluxo de P01, mas com computador pouco potente, pouco armazenamento, H37, e experiência em editores mobile, H38. Essas diferenças não são necessidades adicionais que se atendem à parte: restringem o próprio fluxo principal, por isso P03 não cabe como secundária. | O fluxo não pode depender de hardware local potente, e o download deve trazer só os cortes selecionados. Rótulos e mensagens não podem exigir vocabulário de editor profissional e devem ser testados também com criadores amadores, RC07. O filtro por jogador continua necessidade a investigar, H36, e não requisito. |
+| P02, Arnaldo | Atendida, não usuária da interface | Nenhuma no recorte; recebe o resultado de A04 por canal externo, H33 | Não opera o produto e por isso não orienta decisões de tela. Sua decisão editorial depende da qualidade do material que P01 baixa. | As necessidades de P02 recaem sobre o que P01 baixa: partida de origem identificável, timecodes e metadados legíveis fora da interface, RC05 e RC09. Não se cria área administrativa nem tela de supervisão; o acompanhamento direto continua alternativa a investigar em H33. |
+
+Quando as necessidades das duas primárias divergirem, a decisão deve atender às duas antes de favorecer uma delas. O caso mais provável é o vocabulário: P01 conhece editores profissionais, H17, e P03 conhece editores mobile, H38. Termos que só P01 entende não servem ao fluxo principal.
+
 ### Persona P01 — Rafael
 
 **Autor(a):** Pedro Alexandre Custódio Silva — 22.123.049-3  
 **Tipo:** primária  
+**Por que primária:** Rafael usa a interface em todas as atividades do recorte, A01, A02 e A04, e suas necessidades de revisar várias partidas sob prazo sem perder lances, H30 e H32, definem o fluxo principal. A importância do cargo não entra nessa classificação. Ver [composição e prioridade das personas](#composição-e-prioridade-das-personas).  
 **Base de evidências:** hipóteses da [entrega 1](01_conhecendo_o_problema.md), ainda não confirmadas com usuários, e análise de ferramentas da [entrega 2](02_analise_concorrencia.md) (decisões de interface).  
 **Hipóteses da Entrega 1 relacionadas:** H01, H03, H05, H06, H09, H10, H11, H12, H13, H16, H17, H19, H21, H27 e H28
 
@@ -87,7 +100,7 @@ Essas decisões são iniciais e deverão ser revistas com a coleta de dados.
 ### Persona P02 — Arnaldo
 
 **Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1
-**Tipo:** Secundário
+**Tipo:** persona atendida, não usuária da interface; ver [composição e prioridade das personas](#composição-e-prioridade-das-personas)
 
 **Base de evidências:** proto-persona proposta pelo autor na PR #5, ainda sem validação com usuários.
 
@@ -136,7 +149,7 @@ O valor esperado da contribuição do TCC para P02 é receber trechos localizáv
 ### Persona P03 — Jorginho Jr.
 
 **Autor(a):** Giovanni Chahin Morassi — 22.123.025-3
-**Tipo:** secundária
+**Tipo:** primária; ver [composição e prioridade das personas](#composição-e-prioridade-das-personas)
 
 **Base de evidências:** hipóteses da [entrega 1](01_conhecendo_o_problema.md), ainda não confirmadas com usuários, e análise de ferramentas da [entrega 2](02_analise_concorrencia.md) (decisões de interface).
 
@@ -182,7 +195,7 @@ Essas decisões são iniciais e deverão ser revistas com a coleta de dados.
 
 ### Síntese das personas
 
-P01, Rafael, continua sendo a persona primária e representa o editor de vídeo esportivo priorizado em H27 e na [Entrega 1](01_conhecendo_o_problema.md). P02 representa a supervisão editorial que recebe os resultados fora da interface, H33. P03, Jorginho Jr., é uma persona secundária de criador amador.
+P01, Rafael, e P03, Jorginho Jr., são as personas primárias. Rafael representa o editor de vídeo esportivo priorizado em H27 e na [Entrega 1](01_conhecendo_o_problema.md); Jorginho Jr. representa o criador amador que percorre o mesmo fluxo com equipamento limitado. P02 é uma persona atendida: representa a supervisão editorial que recebe os resultados fora da interface, H33.
 
 | Aspecto | P01, Rafael | P02, Administrador/Editor-Chefe | P03, Jorginho Jr. |
 |---|---|---|---|
@@ -191,7 +204,7 @@ P01, Rafael, continua sendo a persona primária e representa o editor de vídeo 
 | Necessidade que afeta design | Reduzir esforço manual, evitar omissões e entender falhas, H28/H30/H32. | Receber material identificável e com contexto para a decisão editorial, H33. | Obter material de várias partidas com equipamento limitado, H36/H37. |
 | Experiência tecnológica | Experiência com edição, sem conhecimento de IA/programação, H05/H17 refinadas para P01. | Possível baixa familiaridade com edição e computação, H34. | Experiência amadora com editores mobile e de computador; vocabulário a validar, H38. |
 
-As três fichas são proto-personas sem validação empírica. Os mapas de empatia e as jornadas do usuário contemplam P01, P02 e P03, mantendo P01 como persona primária do projeto. O uso direto da interface por P02 e a auditoria editorial permanecem em investigação, H33/H35, e o filtro por jogador para P03 depende de confirmação técnica, H36.
+As três fichas são proto-personas sem validação empírica. Os mapas de empatia e as jornadas do usuário contemplam P01, P02 e P03, com P01 e P03 como personas primárias e P02 como persona atendida. O uso direto da interface por P02 e a auditoria editorial permanecem em investigação, H33/H35, e o filtro por jogador para P03 depende de confirmação técnica, H36.
 
 ## 2. Mapa de empatia — equipe
 
@@ -241,7 +254,7 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P02 desta entrega, [Cen
 
 **Persona escolhida:** P03, Jorginho Jr.  
 **Idade:** [H] 12 a 24 anos (a validar).  
-**Justificativa:** Jorginho Jr. representa o criador de conteúdo esportivo amador (persona secundária), que busca crescer no meio digital (H06) produzindo compilações e vídeos centrados em jogadores específicos (H36). Seu objetivo de obter cortes e metadados com menor esforço manual a partir de partidas completas (H28) e sem depender de hardware local potente (H37) conecta-se diretamente ao processamento remoto de detecção automática de lances do TCC (R04 e R05).
+**Justificativa:** Jorginho Jr. representa o criador de conteúdo esportivo amador (persona primária), que busca crescer no meio digital (H06) produzindo compilações e vídeos centrados em jogadores específicos (H36). Seu objetivo de obter cortes e metadados com menor esforço manual a partir de partidas completas (H28) e sem depender de hardware local potente (H37) conecta-se diretamente ao processamento remoto de detecção automática de lances do TCC (R04 e R05).
 
 ![Mapa de empatia de Jorginho Jr.](../assets/03_personas/mapa_empatia_p03.svg)
 
@@ -262,7 +275,7 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P03 desta entrega, [hip
 
 | Dimensão                       | Descrição                                                                                                                                                                                                                       | Implicação de design                                                                                                                                                        |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Usuários e stakeholders | [H] P01 é o editor de vídeo esportivo prioritário, H03, H21 e H27. P02 recebe os resultados fora da interface como responsável editorial, H33. P03 é um criador amador secundário, com experiência em editores mobile, H38. | Priorizar o fluxo de P01. Preservar identificação e contexto do material entregue a P02, RC05 e RC09. Testar vocabulário com os perfis, RC07. |
+| Usuários e stakeholders | [H] P01 é o editor de vídeo esportivo priorizado em H03, H21 e H27. P03 é um criador amador com experiência em editores mobile, H38; os dois são personas primárias. P02 recebe os resultados fora da interface como responsável editorial, H33, e é persona atendida. | Priorizar o fluxo compartilhado por P01 e P03. Preservar identificação e contexto do material entregue a P02, RC05 e RC09. Testar vocabulário com os perfis, RC07. |
 | Tarefas | [H] P01 e P03 compartilham envio de partidas, acompanhamento, revisão, seleção e download, A01, A02 e A04. A consulta de histórico, A03, permanece uma hipótese a validar. P03 reúne material de várias partidas para editar o compilado em ferramenta externa. | Organizar o fluxo de enviar, acompanhar, revisar e baixar, RC01. Manter a montagem externa e investigar a necessidade de histórico, RC10. |
 | Equipamentos | [H] P01 usa computador com tela ampla. P03 usa computador pouco potente, com pouco armazenamento e boa conexão, H37; tem experiência com editores mobile, H38. [?] Escolha entre aplicação web e nativa ainda em aberto, Entrega 1, seção 5.2. | Projetar a revisão de vídeos em computador e considerar a limitação de equipamento de P03. Manter o processamento remoto proposto em sua ficha e testar a continuidade da edição em ferramentas externas, RC12. |
 | Ambiente físico | [H] P01 trabalha presencialmente em sala de edição com pouca luz e pressão de prazo, H12/H13. P03 trabalha em casa, à mesa do computador, conforme sua ficha. [?] Ruído e compartilhamento não definidos. | Manter modo escuro e aviso de conclusão ligados às hipóteses H31/H32 de P01. Investigar as condições de uso doméstico de P03 sem atribuir a ele as preferências de P01. |
@@ -371,6 +384,7 @@ Os perfis, mapas de empatia, contexto de uso e jornadas estruturados nesta entre
 
 - [x] Os mapas de empatia visuais estão preenchidos e correspondem aos quadros textuais (P01, P02 e P03).
 - [x] Existe pelo menos uma persona por integrante.
+- [x] Há predominância de personas primárias: P01 e P03. P02 é persona atendida, com o papel justificado na composição das personas.
 - [x] As personas diferem por tarefas, decisões, experiência e contexto de uso.
 - [x] Está claro o que é dado real e o que é hipótese/proto-persona.
 - [x] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
