@@ -76,6 +76,21 @@ H30 a H32 vêm de escolhas de elaboração de P01 com o autor. H33 a H35 registr
 | H40 | P01 entrega os cortes de cada partida em uma pasta do servidor da produtora e avisa P02 pelo chat; P02 consulta a pasta e devolve a decisão pelo chat ou na ilha de edição | [Entrega 3, contexto de uso](docs/03_personas_contexto_jornada.md#condições-físicas-e-sociais-de-uso); detalha H22/H23/H33 e a supervisão presencial do cenário C02 | aberta; sem evidência empírica | Perguntar a editores e supervisores como o material passa entre eles hoje, por quais canais e com que nomes de arquivo | Arquivos e metadados identificáveis fora da interface, RC05/RC09; sem tela de supervisão |
 | H41 | P01 é interrompido durante a revisão por mensagens e visitas da supervisão e precisa retomar a partida no ponto em que parou | [Entrega 3, contexto de uso](docs/03_personas_contexto_jornada.md#condições-físicas-e-sociais-de-uso); relacionada a H32 e ao cenário C02 | aberta; sem evidência empírica | Observar sessões de revisão com editores e registrar interrupções, frequência e como retomam o trabalho | Revisão retomável por partida, com cortes já vistos e selecionados preservados |
 
+## 2.2 Aspectos a investigar originados nos cenários da Entrega 4
+
+Os cenários de problema são hipotéticos. Os aspectos abaixo orientam a coleta de dados da Entrega 7 para testar a plausibilidade e a relevância das situações narradas, sem exigir a confirmação dos episódios. Quantidades, durações e sequências de acontecimentos dos cenários são parâmetros narrativos, não medições. A coluna "Questão" remete às questões de refinamento numeradas de cada cenário.
+
+| Cenário | Questão | Aspecto a investigar | Hipóteses | Como investigar na Entrega 7 | Tarefa afetada na Entrega 5 |
+|---|---|---|---|---|---|
+| [C01](docs/04_cenarios_problema.md#cenário-c01--seleção-manual-de-melhores-momentos-sob-pressão-de-prazo) | 1 | Volume de gravações por dia de rodada, prazo da seleção e passagem do material ao supervisor | H12, H13, H39, H40 | Entrevistar editores e supervisores sobre volume diário, prazos e como a seleção chega a quem decide a montagem | Contexto da tarefa de localizar, selecionar e revisar lances |
+| C01 | 3 | Critérios de lance relevante e de corte aceitável, incluindo quanto da construção da jogada precisa aparecer | H06, H11, H28 | Entrevista com exemplos de cortes curtos e longos do mesmo lance | Critérios de seleção e delimitação |
+| C01 | 4, 5 | Estratégia de percurso da gravação: ordem das partidas, trechos avançados, momento da revisão e uso de anotações | H11 | Observação ou entrevista com percurso guiado de uma gravação | Planejamento e ações de localizar e revisar |
+| C01 | 4 | Tratamento de candidatos duvidosos e tolerância a revisar candidatos sem interesse | H30 | Entrevista com exemplos de candidatos limítrofes | Decisão sobre candidatos na revisão |
+| C01 | 2, 5, 6 | Queda de qualidade dos cortes com o desgaste entre partidas e efeito das interrupções durante a busca | H01, H09, H39, H41 | Entrevista sobre retrabalho, cortes sem contexto e interrupções em dia de rodada | Revisão, retomada e correção de cortes |
+| C01 | 7 | Como o editor confere a cobertura de uma partida, percebe omissões e decide se vale rever trechos avançados | H09, H10 | Entrevista sobre a conferência final e omissões percebidas depois da entrega | Avaliação ao final da seleção |
+
+[?] Os aspectos de C02 e C03 ficam com Lucas e Giovanni, autores desses cenários.
+
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
