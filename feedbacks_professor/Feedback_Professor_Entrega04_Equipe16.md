@@ -14,7 +14,7 @@
 > | Recomendação: desfecho com conseguido, pendente e avaliação | aplicada em C01 | [`65bcb05`](https://github.com/p4cs-974/projeto-ihc/commit/65bcb05) |
 > | Recomendação: sincronizar personas e contexto | aplicada entre C01 e P01 | [`daec541`](https://github.com/p4cs-974/projeto-ihc/commit/daec541) |
 > | Pontos para as próximas entregas | registrados na matriz para C01 | [`d696e16`](https://github.com/p4cs-974/projeto-ihc/commit/d696e16) |
-> | Registro da revisão | cabeçalho e matriz | [`9fbbef5`](https://github.com/p4cs-974/projeto-ihc/commit/9fbbef5) |
+> | Registro da revisão | cabeçalho, matriz e índice do README | [`9fbbef5`](https://github.com/p4cs-974/projeto-ihc/commit/9fbbef5), [`c0bf81e`](https://github.com/p4cs-974/projeto-ihc/commit/c0bf81e) |
 >
 > \- Pedro
 
