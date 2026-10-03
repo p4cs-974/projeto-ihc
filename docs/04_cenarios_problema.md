@@ -68,7 +68,7 @@ Nas gravações seguintes, repete o processo. Nas últimas partidas do dia, sust
 
 Durante a busca na última partida, chega pelo chat uma pergunta de Arnaldo sobre um lance de outra partida **[6]**. Rafael deixa a gravação, localiza o trecho pedido, responde e volta ao editor **[5]**. Retoma pouco antes de uma finalização perigosa, marca o corte às pressas e segue adiante **[5]**. Na revisão dessa partida, reproduz o corte e o vídeo começa com o jogador já chutando **[6]**. A troca de passes que criou a oportunidade ficou de fora. Ele julga que, sem essa sequência, o lance não se entende **[7]**. Localiza a jogada na gravação original, recua o início do corte e o assiste de novo para conferir se ficou claro **[5, 7]**. A interrupção e a pressa custaram uma nova busca e mais uma revisão.
 
-Rafael termina as seleções das partidas recebidas e segue para a montagem exausto, com menos tempo disponível para concluir os vídeos. Conseguiu revisar os trechos escolhidos, mas essa conferência não elimina sua dúvida sobre possíveis lances ignorados durante os avanços **[7]**. Rever integralmente as gravações exigiria mais tempo e atenção. Ao encerrar a seleção, leva consigo essa incerteza, além do desgaste acumulado e do tempo gasto refazendo cortes.
+Rafael conclui as seleções de todas as partidas recebidas, copia a última para a pasta e avisa Arnaldo **[5]**. Conseguiu revisar e corrigir os cortes que escolheu e os considera compreensíveis **[7]**. Ficou pendente a conferência dos trechos que avançou: rever as gravações por inteiro não cabe no tempo que resta **[7]**. Encerra a seleção exausto, à espera da resposta de Arnaldo e sem segurança de que ela esteja completa **[7]**.
 
 ### 4. Elementos extraídos
 
