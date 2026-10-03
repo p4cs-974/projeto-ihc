@@ -224,18 +224,28 @@ As três fichas são proto-personas sem validação empírica. Os mapas de empat
 
 ![Mapa de empatia de Rafael](../assets/03_personas/mapa_empatia_p01.svg)
 
-O mapa abaixo sintetiza as hipóteses de P01 e as escolhas feitas com o autor. Não contém falas coletadas nem observações de usuários. O arquivo visual acima apresenta a mesma síntese do quadro textual.
+O mapa abaixo sintetiza as hipóteses de P01 e as escolhas feitas com o autor. Não contém falas coletadas nem observações de usuários. O arquivo visual acima apresenta a mesma síntese do quadro textual. Nos campos Vê, Fala e faz e Necessidades, **Hoje** descreve o comportamento atual hipotético e **Uso proposto** descreve a experiência imaginada com a interface. O uso proposto não serve de evidência a favor da própria solução.
 
 | Dimensão    | Registro                                                                                                                                                                                                   | Base                                         |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| Vê          | [H] Gravações extensas e lances que precisa selecionar. No uso proposto, acompanha o estado das partidas e confere os cortes gerados.                                                                      | H11, H25 e H32; P01                          |
+| Vê          | **Hoje:** [H] gravações extensas e lances que precisa encontrar e selecionar. **Uso proposto:** [H] acompanha o estado das partidas e confere os cortes gerados. | H11, H25 e H32; P01 |
 | Ouve        | [H] Orientações, cobranças e comentários da equipe e dos responsáveis editoriais. [?] Evidências reais ainda não foram investigadas.                                                                       | Fluxo organizacional ainda a investigar, H14 |
-| Fala e faz     | [H] Envia várias partidas, continua outras edições durante a espera, revisa uma partida por vez e escolhe os cortes para download. Recupera lances omitidos no editor externo. [?] Não há falas coletadas. | H32; comportamentos definidos para P01       |
+| Fala e faz     | **Hoje:** [H] abre uma gravação por vez no editor, avança nos trechos pouco promissores, volta ao perceber uma jogada, delimita e separa o corte, e revisa os cortes antes da próxima partida. **Uso proposto:** [H] envia várias partidas, edita outros materiais durante a espera e revisa uma partida por vez; recupera lances omitidos no editor externo. [?] Não há falas coletadas. | C01 e H11; H32 para o uso proposto |
 | Pensa e sente | [H] Preocupa-se com o prazo e com a possibilidade de deixar passar um lance importante. Aceita revisar alguns cortes sem interesse para reduzir esse risco.                                                | H11 e H30; dores de P01                      |
 | Dores       | [H] Seleção manual demorada, omissões, cortes sem contexto e retrabalho. Quando ocorre uma falha, precisa entender o motivo e como continuar.                                                              | H01, H10, H11, H16 e H26                     |
-| Necessidades      | [H] Entregar no prazo lances relevantes e com contexto, gastando menos tempo procurando e recortando a gravação. Continuar outros trabalhos enquanto as partidas são processadas.                          | H06, H28 e H32; critério de sucesso de P01   |
+| Necessidades      | [H] Entregar no prazo lances relevantes e com contexto, gastando menos tempo procurando e recortando a gravação, e ter atenção para revisar as últimas partidas do dia. **Uso proposto:** [H] seguir com outros trabalhos enquanto as partidas são processadas. | H06, H28, H32 e H39; critério de sucesso de P01 |
 
-Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P01 desta entrega e [hipóteses H30 a H32](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
+**Ligação entre dores e necessidades de P01**
+
+| Dor | Necessidade correspondente | Hipóteses |
+|---|---|---|
+| Seleção manual demorada em gravações extensas | Gastar menos tempo procurando e recortando lances | H01, H11 e H28 |
+| Atenção que cai ao longo das partidas do dia | Chegar às últimas partidas com atenção para revisar | H09 e H39 |
+| Omissão de lances importantes | Conferir os candidatos, inclusive os duvidosos, antes de baixar | H10 e H30 |
+| Cortes sem contexto e retrabalho | Receber cortes com a construção e o desfecho da jogada | H10 e H11 |
+| Falha sem explicação | Entender a causa e como continuar sem perder as outras partidas | H16 e H26 |
+
+Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P01 desta entrega e [hipóteses H30 a H32 e H39](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
 
 ### Persona P02 — Arnaldo
 
@@ -348,7 +358,7 @@ A jornada termina com o compacto montado. O benefício esperado é chegar até a
 | 6                  | Baixa os cortes e metadados escolhidos.                                                                                                 | Levar o material revisado para a ferramenta de edição.    | [?] Reação específica ao download não investigada.                       | Download indisponível ou seleção incorreta atrasa a continuidade.   | Apresentar resumo da seleção e comunicar falhas na obtenção dos arquivos.                                      | A04, H25, H26 e H28; RC09                                        |
 | 7                  | Continua a montagem no editor que já utiliza. Caso perceba uma omissão, procura o lance na gravação original e faz o corte manualmente. | Concluir o material no prazo com os lances relevantes.    | [H] Preocupação em não deixar um lance importante de fora.               | Uma omissão exige busca e corte adicionais.                         | Manter identificáveis a partida de origem e os tempos dos cortes para apoiar a continuidade fora da interface. | H10, H28 e H30; comportamentos de P01 e delimitação da Entrega 1 |
 
-Esta é uma jornada proposta, baseada nas hipóteses da [Entrega 1](01_conhecendo_o_problema.md), nas recomendações RC da [Entrega 2](02_analise_concorrencia.md) e nas escolhas de P01. Não descreve um fluxo observado com usuários. A etapa de falha é condicional.
+Esta é uma jornada proposta, baseada nas hipóteses da [Entrega 1](01_conhecendo_o_problema.md), nas recomendações RC da [Entrega 2](02_analise_concorrencia.md) e nas escolhas de P01. Não descreve um fluxo observado com usuários. As etapas 1 e 7 acontecem fora da interface; as etapas 2 a 6 descrevem o uso proposto e não servem de evidência a favor dele. A etapa de falha é condicional.
 
 A jornada inclui a preparação anterior ao envio e a continuidade da edição após o download. A montagem e a eventual recuperação manual de lances acontecem fora da interface.
 
