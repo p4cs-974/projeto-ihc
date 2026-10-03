@@ -66,7 +66,8 @@ def split_blocks(text):
                 tbl.append(lines[i]); i += 1
             if len(tbl) >= 2 and re.match(r'^\s*\|[\s:|-]+\|\s*$', tbl[1]):
                 header = tbl[0] + '\n' + tbl[1]
-                for r in tbl[2:]:
+                # tabela só com cabeçalho: uma linha vazia mantém o cabeçalho visível no diff
+                for r in tbl[2:] or ['']:
                     blocks.append({'kind': 'row', 'src': r, 'header': header})
             else:
                 blocks.append({'kind': 'text', 'src': '\n'.join(tbl)})
@@ -157,7 +158,9 @@ def diff_pairs(old_text, new_text):
     for op, i1, i2, j1, j2 in sm.get_opcodes():
         if op == 'equal':
             for k in range(i2 - i1):
-                pairs.append(('eq', ob[i1 + k], nb[j1 + k]))
+                o, x = ob[i1 + k], nb[j1 + k]
+                # mesma linha sob outro cabeçalho: a tabela mudou
+                pairs.append(('eq' if o.get('header') == x.get('header') else 'ch', o, x))
         else:
             for o, x in align_group(ob[i1:i2], nb[j1:j2]):
                 pairs.append(('ch', o, x))
@@ -221,7 +224,10 @@ def embed_images(h, rev, doc_path):
 def render_cell(blocks_src, rev, path):
     if not blocks_src:
         return ''
-    return embed_images(md(blocks_src), rev, path)
+    h = md(blocks_src)
+    # Python-Markdown acrescenta uma linha vazia a tabelas só com cabeçalho
+    h = re.sub(r'\s*<tbody>\s*<tr>(?:\s*<td></td>)+\s*</tr>\s*</tbody>', '', h)
+    return embed_images(h, rev, path)
 
 
 def build_rows(pairs, old_rev, new_rev, path, ctx=1):
@@ -241,36 +247,37 @@ def build_rows(pairs, old_rev, new_rev, path, ctx=1):
                 j += 1
             hidden = pairs[i:j]
             # linhas de tabela ocultas: agrupa com o cabeçalho
-            segs = []
-            cur_hdr = None
-            cur_rows = []
+            segs = []  # textos e [cabeçalho, linhas] de tabelas
+            cur = None  # tabela em andamento
             for _, _, b in hidden:
                 if b['kind'] == 'row':
-                    if cur_hdr != b['header'] and cur_rows:
-                        segs.append(cur_hdr + '\n' + '\n'.join(cur_rows)); cur_rows = []
-                    cur_hdr = b['header']; cur_rows.append(b['src'])
+                    if cur is None or cur[0] != b['header']:
+                        cur = [b['header'], []]; segs.append(cur)
+                    if b['src']:
+                        cur[1].append(b['src'])
                 else:
-                    if cur_rows:
-                        segs.append(cur_hdr + '\n' + '\n'.join(cur_rows)); cur_rows = []; cur_hdr = None
+                    cur = None
                     segs.append(b['src'])
-            if cur_rows:
-                segs.append(cur_hdr + '\n' + '\n'.join(cur_rows))
+            segs = [sg if isinstance(sg, str) else '\n'.join([sg[0]] + sg[1]) for sg in segs]
             inner = render_cell('\n\n'.join(segs), new_rev, path)
             label = f'{j - i} bloco{"s" if j - i > 1 else ""} sem mudança'
             out.append(f'<details class="fold"><summary>⋯ {label}</summary><div class="md same">{inner}</div></details>')
             i = j
             continue
-        # agrupa linhas de tabela consecutivas do mesmo cabeçalho
         k, o, x = pairs[i]
-        hdr = (o or x)['header'] if (o or x)['kind'] == 'row' else None
-        if hdr is not None:
+        # agrupa linhas de tabela consecutivas com os mesmos cabeçalhos (antigo e novo)
+        if (o or x)['kind'] == 'row':
             j = i
             group = []
+            ho = hn = None
             while j < n and show[j]:
                 kk, oo, xx = pairs[j]
-                b = oo or xx
-                if b['kind'] != 'row' or b['header'] != hdr:
+                if (oo or xx)['kind'] != 'row':
                     break
+                if (oo and ho not in (None, oo['header'])) or (xx and hn not in (None, xx['header'])):
+                    break
+                ho = oo['header'] if oo else ho
+                hn = xx['header'] if xx else hn
                 group.append(pairs[j]); j += 1
             left_rows, right_rows = [], []
             changed = False
@@ -286,8 +293,13 @@ def build_rows(pairs, old_rev, new_rev, path, ctx=1):
                         left_rows.append(mark_whole_row(oo['src'], 'del'))
                     else:
                         right_rows.append(mark_whole_row(xx['src'], 'ins'))
-            L = render_cell(hdr + '\n' + '\n'.join(left_rows), old_rev, path) if left_rows else ''
-            R = render_cell(hdr + '\n' + '\n'.join(right_rows), new_rev, path) if right_rows else ''
+            hl, hr = ho, hn
+            if ho and hn and ho != hn:
+                hl, hr = header_diff(ho, hn)
+            has_old = any(oo for _, oo, _ in group)
+            has_new = any(xx for _, _, xx in group)
+            L = render_table(hl, left_rows, old_rev, path) if has_old else ''
+            R = render_table(hr, right_rows, new_rev, path) if has_new else ''
             out.append(row_html(L, R, 'tbl' + (' mod' if changed else ' ctx')))
             i = j
             continue
@@ -305,7 +317,20 @@ def build_rows(pairs, old_rev, new_rev, path, ctx=1):
     return '\n'.join(out)
 
 
+def header_diff(old, new):
+    """Destaca só a linha de títulos; a linha de separadores (|---|) fica intacta."""
+    (ol, osep), (nl, nsep) = old.split('\n'), new.split('\n')
+    a, b = word_diff(ol, nl)
+    return a + '\n' + osep, b + '\n' + nsep
+
+
+def render_table(hdr, rows, rev, path):
+    return render_cell('\n'.join([hdr] + [r for r in rows if r]), rev, path)
+
+
 def mark_whole_row(src, tag):
+    if not src:
+        return src
     cells = src.strip().strip('|').split('|')
     return '| ' + ' | '.join(f'<{tag}>{c.strip()}</{tag}>' if c.strip() else '' for c in cells) + ' |'
 
@@ -377,7 +402,42 @@ def citacao(c):
     return PARECER[i:j].strip()
 
 
+def resolve(rev, what):
+    full = (git('rev-parse', '--verify', '--quiet', f'{rev}^{{commit}}') or '').strip()
+    if not full:
+        sys.exit(f'Commit não encontrado ({what}): {rev}')
+    return full
+
+
+def conferir_rodada(base, fim, spec_items):
+    """Garante que os commits de base..fim e os itens do spec sejam os mesmos e que cada item tenha citação ou nota."""
+    erros = []
+    commits = (git('rev-list', '--reverse', f'{base}..{fim}') or '').split()
+    por_item = {resolve(it['commit'], 'item do spec'): it for it in spec_items}
+    sem_item = [c for c in commits if c not in por_item]
+    fora = [c for c in por_item if c not in commits]
+    sem_origem = [c for c, it in por_item.items() if not it.get('citacoes') and not it.get('nota')]
+
+    def lista(cs):
+        return ''.join(f"\n  {c[:7]} {(git('log', '-1', '--format=%s', c) or '').strip()}" for c in cs)
+    if sem_item:
+        erros.append(f'{len(sem_item)} commit(s) de {base[:7]}..{fim[:7]} sem item no spec '
+                     f'(acrescente um item com citação ou nota, ou mude `fim`):{lista(sem_item)}')
+    if fora:
+        erros.append(f'{len(fora)} item(ns) do spec fora de {base[:7]}..{fim[:7]} '
+                     f'(confira `base`, `fim` e o campo `commit`):{lista(fora)}')
+    if sem_origem:
+        erros.append(f'{len(sem_origem)} item(ns) sem `citacoes` nem `nota`:{lista(sem_origem)}')
+    if erros:
+        sys.exit('A rodada do spec está inconsistente.\n' + '\n'.join(erros))
+
+
 TIPOS = {'correcao': 'c', 'recomendacao': 'r', 'registro': 'm', 'pendencia': 'm', 'anotacao': 'm'}
+FIM = resolve(SPEC['fim'], '`fim`') if SPEC.get('fim') else resolve(SPEC['itens'][-1]['commit'], 'último item')
+if not SPEC.get('fim'):
+    print(f'Aviso: spec sem `fim`; o Total termina no último item ({FIM[:7]}).', file=sys.stderr)
+BASE = resolve(BASE, '`base`')
+conferir_rodada(BASE, FIM, SPEC['itens'])
 items = []
 for it in SPEC['itens']:
     quotes = []
@@ -394,10 +454,10 @@ sections = []
 nav = []
 
 # total
-tot_files = changed_files(BASE, 'HEAD')
-stat = git('diff', '--shortstat', BASE, 'HEAD').strip()
-sections.append(('total', 'Total', f'Todas as mudanças ({BASE[:7]}..HEAD)', '',
-                 ''.join(file_section(BASE, 'HEAD', st, p) for st, p in tot_files), stat))
+tot_files = changed_files(BASE, FIM)
+stat = git('diff', '--shortstat', BASE, FIM).strip()
+sections.append(('total', 'Total', f'Todas as mudanças ({BASE[:7]}..{FIM[:7]})', '',
+                 ''.join(file_section(BASE, FIM, st, p) for st, p in tot_files), stat))
 nav.append(('total', 'Total', 'Todas as mudanças', 't'))
 
 def why_box(it):

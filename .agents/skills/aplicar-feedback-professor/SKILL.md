@@ -74,7 +74,7 @@ pip install markdown   # uma vez
 python3 .agents/skills/aplicar-feedback-professor/scripts/gerar_diffs.py <spec.json> <saida.html>
 ```
 
-O formato do `spec.json` e como escolher as âncoras das citações estão em [references/diff-html.md](references/diff-html.md), com um exemplo completo da Entrega 3. Salve o spec e o HTML fora do repositório (área temporária ou scratchpad): o HTML passa de 1 MB porque embute as imagens. Confira se nenhum commit ficou sem citação ou nota e envie o arquivo para a pessoa.
+O formato do `spec.json` e como escolher as âncoras das citações estão em [references/diff-html.md](references/diff-html.md), com um exemplo completo da Entrega 3. Informe no spec o `base` e o `fim` da rodada (o último commit, normalmente o das anotações). O script recusa gerar o HTML se algum commit desse intervalo ficar sem item. Salve o spec e o HTML fora do repositório (área temporária ou scratchpad): o HTML passa de 1 MB porque embute as imagens. Confira se nenhum commit ficou sem citação ou nota e envie o arquivo para a pessoa.
 
 ## 7. Fechar com a pessoa
 

@@ -261,7 +261,7 @@ O que vale aproveitar do CapCut é o começo do fluxo. Na inspeção, o carregam
 **Link oficial:** [Final Cut Pro](https://www.apple.com/final-cut-pro/)  
 **Data de acesso:** 01/09/2026  
 **Versão e plataforma:** Final Cut Pro para Mac, versão não identificada. O guia e as imagens oficiais consultados podem corresponder a versões diferentes; não houve acesso ao aplicativo  
-**Modelo de acesso:** compra única na Mac App Store, com período de teste; exige macOS (ver [modelo de acesso](#modelo-de-acesso-dos-produtos-analisados))
+**Modelo de acesso:** na variante Mac, compra única na Mac App Store ou assinatura Apple Creator Studio, que inclui o aplicativo (ver [modelo de acesso](#modelo-de-acesso-dos-produtos-analisados))
 
 #### Contexto e proposta
 
@@ -355,7 +355,7 @@ Entre os três concorrentes, o Final Cut Pro é o que melhor separa triagem e mo
 **Link oficial:** [Cap](https://cap.so/)  
 **Data de acesso:** 01/09/2026  
 **Versão e plataforma:** Cap Desktop 0.5.9 e CLI 0.1.0, em macOS  
-**Modelo de acesso:** código aberto, com uso local gratuito; licença desktop e plano Pro pagos para recursos adicionais e de nuvem (ver [modelo de acesso](#modelo-de-acesso-dos-produtos-analisados))
+**Modelo de acesso:** código aberto; Cap Desktop gratuito, mas o binário distribuído pelo Cap exige licença comercial para uso comercial, mesmo local. O teste da equipe foi sem custo (ver [modelo de acesso](#modelo-de-acesso-dos-produtos-analisados))
 
 #### Contexto e proposta
 
@@ -584,15 +584,15 @@ A tabela resume os contrastes por critério. O detalhe de cada produto está nas
 
 ### Modelo de acesso dos produtos analisados
 
-A tabela registra como cada produto é disponibilizado e o que isso implica para a adoção pelo público ou para a investigação da equipe. Não é uma pesquisa de preços: valores mudam com frequência e não orientam decisões deste projeto. Consulta em 02/10/2026.
+A tabela registra como cada produto é disponibilizado e o que isso implica para a adoção pelo público ou para a investigação da equipe. Não é uma pesquisa de preços: valores mudam com frequência e não orientam decisões deste projeto. Consulta em 02/10/2026; as linhas de Final Cut Pro e Cap foram conferidas de novo em 03/10/2026.
 
 | Produto | Modelo de acesso | Implicação para adoção ou investigação |
 |---|---|---|
 | C01 - Adobe Premiere Pro | Assinatura, como aplicativo individual ou dentro de planos do Creative Cloud, com período de teste ([planos](https://www.adobe.com/products/premiere/plans.html)) | O custo é recorrente. Investigar na Entrega 7 se o editor escolhe e paga a ferramenta ou se ela é fornecida pela organização. |
 | C02 - DaVinci Resolve | Versão gratuita com as páginas de edição; versão Studio por licença paga de compra única ([página oficial](https://www.blackmagicdesign.com/products/davinciresolve)) | A versão gratuita reduz a barreira de entrada. É plausível que editores com pouco orçamento a usem, mas isso precisa ser verificado com usuários. |
 | C03 - CapCut | Gratuito, com recursos e materiais Pro liberados por assinatura ([CapCut](https://www.capcut.com/)) | A entrada é gratuita, mas avaliações citam recursos que passaram a exigir o plano Pro (ver C03). A análise usou apenas recursos gratuitos. |
-| C04 - Final Cut Pro | Compra única na Mac App Store, com período de teste; disponível apenas para macOS ([Final Cut Pro](https://www.apple.com/final-cut-pro/)) | O uso depende de um Mac. Reforça que a plataforma do nosso projeto não deve ser presumida (RC12). Não houve acesso ao aplicativo nesta análise. |
-| C05 - Cap | Código aberto; gravação e edição local gratuitas; licença desktop e plano Pro pagos para recursos adicionais, de nuvem e de equipe ([Cap](https://cap.so/)) | Permitiu o teste prático sem custo. Os recursos de nuvem e compartilhamento ficam fora do nosso recorte. |
+| C04 - Final Cut Pro (variante Mac) | Compra única na Mac App Store ou assinatura Apple Creator Studio, que inclui o Final Cut Pro. O produto existe também para iPad, mas esta análise trata apenas da variante Mac ([Final Cut Pro](https://www.apple.com/final-cut-pro/)) | O uso depende de um Mac. Reforça que a plataforma do nosso projeto não deve ser presumida (RC12). Não houve acesso ao aplicativo nesta análise. |
+| C05 - Cap | Código aberto. O Cap Desktop é gratuito, mas, nos binários distribuídos pelo Cap, o uso comercial de gravação ou edição exige licença comercial, mesmo quando o trabalho é local. A licença não vale para versões compiladas pelo próprio usuário a partir do código-fonte ([Cap](https://cap.so/), [licença comercial](https://cap.so/docs/commercial-license)) | O teste acadêmico da equipe ocorreu sem custo. Numa produtora, a licença seria uma barreira de adoção. Os recursos de nuvem e compartilhamento ficam fora do nosso recorte. |
 | C06 - WSC Sports | Contratação corporativa, sem preço público nem teste por conta própria; acesso mediante contato comercial ([WSC Sports](https://wsc-sports.com/platform/)) | Não é possível testar sem contrato, o que explica a análise baseada em material promocional. Os clientes anunciados são ligas, clubes e empresas de mídia (H04, H20). |
 | C07 - Magnifi | Contratação corporativa, com preço sob consulta e demonstração mediante contato comercial ([Magnifi](https://www.magnifi.ai/product)) | Mesmo limite de C06 para a análise. Indica que a geração automática de melhores momentos é vendida a organizações, não a editores individuais. |
 

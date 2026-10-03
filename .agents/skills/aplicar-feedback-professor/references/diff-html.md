@@ -2,10 +2,10 @@
 
 `scripts/gerar_diffs.py` monta uma página com:
 
-- uma aba "Total", com o diff de todos os commits da rodada e um índice "qual comentário levou a cada commit";
+- uma aba "Total", com o diff de todos os commits da rodada (de `base` até `fim`) e um índice "qual comentário levou a cada commit";
 - uma seção por commit, com o trecho literal do parecer que o motivou e o diff renderizado de cada arquivo alterado.
 
-Nos arquivos `.md`, o diff é feito por blocos: parágrafos, itens de lista e linhas de tabela. Dentro de cada bloco, palavras removidas e acrescentadas aparecem destacadas, e o markdown é renderizado nos dois lados. Imagens novas e SVGs alterados aparecem lado a lado. Há um botão "Só mudanças" que esconde o contexto.
+Nos arquivos `.md`, o diff é feito por blocos: parágrafos, itens de lista e linhas de tabela. Cada lado da tabela usa o próprio cabeçalho, e uma mudança só nos títulos das colunas conta como mudança e aparece em "Só mudanças". Dentro de cada bloco, palavras removidas e acrescentadas aparecem destacadas, e o markdown é renderizado nos dois lados. Imagens novas e SVGs alterados aparecem lado a lado. Há um botão "Só mudanças" que esconde o contexto.
 
 ## Formato do spec.json
 
@@ -13,6 +13,7 @@ Nos arquivos `.md`, o diff é feito por blocos: parágrafos, itens de lista e li
 {
   "titulo": "Entrega 3: diffs do feedback",
   "base": "538c3dd",
+  "fim": "25fc482",
   "parecer": "feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md",
   "parecer_rev": "1f73b32",
   "itens": [
@@ -33,15 +34,18 @@ Nos arquivos `.md`, o diff é feito por blocos: parágrafos, itens de lista e li
 
 | Campo | Significado |
 |---|---|
-| `base` | Commit anterior ao primeiro commit da rodada. O "Total" compara `base..HEAD`. |
+| `base` | Commit anterior ao primeiro commit da rodada. |
+| `fim` | Último commit da rodada, normalmente o das anotações. O "Total" compara `base..fim`, então o HTML não muda quando a branch recebe commits novos. Se faltar, vale o commit do último item e o script avisa. |
 | `parecer_rev` | Um commit em que o parecer ainda não tem anotações, normalmente o último antes do commit de anotações. As citações saem dessa versão, para não citar as próprias anotações. |
 | `tipo` | `correcao`, `recomendacao`, `pendencia`, `registro` ou `anotacao`. Define a cor do rótulo no menu. |
 | `citacoes` | Trechos literais do parecer. Use `inicio` e `fim` (o trecho vai do começo de `inicio` até o fim de `fim`) ou `linha` (a linha inteira que contém o texto). |
 | `nota` | Texto curto exibido abaixo das citações. Use para explicar decisões ou dizer quem ficou com o restante. Commits que não vêm do parecer, como o de anotações ou o de registro, levam só nota. |
 
+O script confere a rodada antes de gerar o HTML. Todo commit de `base..fim` precisa ter um item no spec, e todo item precisa estar nesse intervalo e ter `citacoes` ou `nota`. Se algo faltar, o script lista os commits (hash e título) e não gera o arquivo. Um commit posterior à rodada fica de fora mudando o `fim`.
+
 As âncoras precisam existir literalmente no parecer, com as mesmas aspas e acentos. O script interrompe com uma mensagem quando não encontra uma âncora. Copie o começo e o fim do trecho direto do arquivo.
 
-Exemplo completo, que reproduz o HTML da Entrega 3: [exemplo-spec-entrega03.json](exemplo-spec-entrega03.json).
+Exemplo completo, que reproduz o HTML da Entrega 3 (`538c3dd..25fc482`, 9 itens): [exemplo-spec-entrega03.json](exemplo-spec-entrega03.json).
 
 ## Conferência
 

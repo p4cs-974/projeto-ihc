@@ -16,6 +16,8 @@
 > | Recomendação: impacto possível × capacidade assegurada | [`d6d008e`](https://github.com/p4cs-974/projeto-ihc/commit/d6d008e) |
 > | Recomendação: acessibilidade | [`de14e9f`](https://github.com/p4cs-974/projeto-ihc/commit/de14e9f) |
 > | Recomendação: data de revisão | [`e834ef6`](https://github.com/p4cs-974/projeto-ihc/commit/e834ef6) |
+>
+> \- Pedro
 
 
 ## Avaliação geral
@@ -52,6 +54,8 @@ A equipe precisa conferir cada linha e manter alinhados: referência efetivament
 Essa correção é prioritária porque uma associação documental incorreta pode sustentar decisões sobre usuários e atividades com uma evidência que trata de outro assunto. Não é necessário ampliar a revisão bibliográfica agora; é necessário corrigir a relação entre o que já foi citado e o que se afirma a partir disso.
 
 > **✅ Como foi tratado** ([`81c38a0`](https://github.com/p4cs-974/projeto-ihc/commit/81c38a0)): a tabela da seção 4.6 ganhou a coluna "Tipo de fonte". As três referências acadêmicas foram mantidas como artigos de revisão, e suas limitações deixaram de dizer "fonte institucional/promocional": agora descrevem o foco técnico de cada levantamento. A origem do recorte de 25 partidas foi esclarecida: trata-se de um estudo relatado pelo próprio survey de Akan e Varlı, usado como referência indireta, não como coleta dos autores nem como evidência sobre editores. As afirmações sobre funcionalidades da WSC Sports e da Magnifi passaram a citar as páginas oficiais em linhas próprias, com a limitação de fonte promocional e a remissão às análises C06 e C07 da Entrega 2. Uma nota abaixo da tabela explicita qual tipo de fonte sustenta cada tipo de afirmação. A bibliografia não foi ampliada.
+>
+> \- Pedro
 
 ### 2. Diferenciar julgamento editorial de erro e de esforço operacional
 
@@ -64,6 +68,8 @@ Automatizar a detecção não demonstra, por si só, que os resultados serão ma
 Revisem o benefício pretendido e explicitem o que vocês desejam reduzir: esforço repetitivo, omissões por distração, retrabalho ou outro problema a investigar. Mantenham a redução de tempo e de falhas como hipóteses. Investiguem quais critérios tornam um lance relevante para a finalidade editorial, sem presumir que existe uma única seleção correta para todas as situações. A interface deve apoiar o editor; ela ainda não ganhou a última palavra sobre o jogo.
 
 > **✅ Como foi tratado** ([`51d6d90`](https://github.com/p4cs-974/projeto-ihc/commit/51d6d90)): "Redução da subjetividade" foi removida da seção 9.1. A tabela agora separa economia de tempo, redução do esforço repetitivo, redução de omissões involuntárias e retrabalho, e apoio ao julgamento editorial sem substituí-lo. H01 (1.2), H02 (1.4), H09 (4.2) e H10 (4.4) foram reescritas para distinguir omissão involuntária de descarte editorial deliberado; H10 afirma que a divergência entre o editor e uma sugestão automática não é erro do usuário. Em 4.2 foi registrada a lacuna `[?]` sobre os critérios que tornam um lance relevante para cada compilação, sem presumir uma seleção única correta. A redução de tempo e de falhas continua como hipótese. As mesmas formulações foram levadas à seção 10 e à matriz.
+>
+> \- Pedro
 
 ### 3. Completar a descrição do processo atual e das informações usadas nas decisões
 
@@ -78,6 +84,8 @@ Em 4.3, “[F] Contexto da partida de futebol” é amplo demais para orientar a
 Sem essa ligação entre informação e decisão, a apresentação de timecodes, classificações e metadados pode acabar reproduzindo a saída técnica do modelo sem demonstrar sua utilidade para o usuário.
 
 > **✅ Como foi tratado** ([`86eeb39`](https://github.com/p4cs-974/projeto-ihc/commit/86eeb39)): a seção 4.1 passou a descrever o processo atual como **detalhamento hipotético de H11**, em quatro passos: receber o material, identificar trechos, decidir limites e preparar a seleção, com validação prevista para a Entrega 7. A seção 3.2 ganhou uma nota esclarecendo que A01–A04 são atividades da aplicação potencial, não práticas atuais conhecidas. Na seção 4.3, "[F] Contexto da partida de futebol" foi substituído por uma tabela que liga cada informação suposta (tipo de lance, o que acontece antes e depois, placar e minuto, jogadores, finalidade da compilação) à decisão que apoiaria, com status `[H]`/`[?]` e a pergunta a investigar. A matriz registra o detalhamento em H11.
+>
+> \- Pedro
 
 ### 4. Separar benefício técnico, benefício de uso e conhecimento do usuário
 
@@ -90,6 +98,8 @@ Também é preciso tornar H05 mais precisa. “Baixo conhecimento técnico de so
 A matriz já registra esse refinamento de H05, mas ele não aparece com a mesma clareza em 2.4. Atualizem a formulação, preservando seu caráter hipotético. Essa distinção afeta linguagem, ajuda e controles: simplificar termos internos do modelo não significa tratar o editor como iniciante em sua profissão.
 
 > **✅ Como foi tratado** ([`1d88573`](https://github.com/p4cs-974/projeto-ihc/commit/1d88573), [`ae39933`](https://github.com/p4cs-974/projeto-ihc/commit/ae39933)): na seção 1.5, a generalização dos LLMs foi movida para a coluna de mérito técnico/científico. O valor em uso virou hipótese ligada a uma atividade do editor: localizar e filtrar cortes por tipo de lance, relacionada a H02 e H28 e condicionada aos critérios da seção 4.3. Uma nota explica a distinção. H05 foi reformulada em 2.4, na seção 10 e na matriz: "o editor domina ferramentas de edição de vídeo, mas tem pouco ou nenhum conhecimento de programação, de modelos de IA e de parâmetros de inferência". O texto observa que simplificar termos do modelo não significa tratar o editor como iniciante.
+>
+> \- Pedro
 
 ### 5. Harmonizar responsabilidades e identificadores com o recorte adotado
 
@@ -102,36 +112,60 @@ Há também uma colisão concreta de identificadores. Na seção 9.2, F01 signif
 Identifiquem essas linhas como exemplos não adotados ou substituam-nas por registros coerentes, preservando `PENDENTE` para relações ainda não construídas. Diferenciem os identificadores das ações daqueles das telas ou explicitem sua correspondência. Não se exige desenhar telas, produzir MoLIC ou preencher modelos futuros agora; exige-se evitar que um exemplo do template seja confundido com decisão da equipe.
 
 > **✅ Como foi tratado** ([`7366be7`](https://github.com/p4cs-974/projeto-ihc/commit/7366be7)): na seção 0.1 e no README, as responsabilidades deixaram de ser telas e passaram a ser atividades: Pedro com o envio de partidas (A01); Lucas com revisão, seleção e download (A04); Giovanni com acompanhamento e histórico de processamento (A02/A03) e manutenção da matriz de rastreabilidade. As ações da seção 9.2 deixaram de usar F01–F04 e adotaram os mesmos IDs das atividades (A01–A04); os IDs `F` ficam reservados às telas da Entrega 11. Na seção 4 da matriz, as linhas `{{...}}` foram substituídas: dashboard e histórico ficaram `PENDENTE`, ligados a A02/A03 e H29/H15, e administração/CRUD foi marcada como "não adotado".
+>
+> \- Pedro
 
 ## Recomendações de melhoria
 
 - **Consolidar os stakeholders já mencionados.** A seção 2.3 lista empresas de mídia esportiva, enquanto 5.4 e 7.1 acrescentam produtores e responsáveis editoriais como destinatários e decisores externos. Reunir esses papéis tornaria a visão das pessoas mais consistente, sem criar novos usuários diretos ou telas de aprovação.
 
   > **✅ Como foi tratado** ([`faab8d7`](https://github.com/p4cs-974/projeto-ihc/commit/faab8d7)): a seção 2.3 passou a reunir organizações (H04/H20) e produtores e responsáveis editoriais (H14/H22/H23) como destinatários e decisores externos, que recebem os resultados fora da interface. Nenhum usuário direto nem tela de aprovação foi criado.
+  >
+  > \- Pedro
+
 - **Distinguir frequência, prioridade e criticidade.** A04 tem hipótese de maior frequência e prioridade alta, enquanto H08 aponta o processamento em lote como mais crítico. Isso pode ser coerente, mas expliquem a diferença. A justificativa de H07 informa para que os resultados serão usados, sem sustentar ainda por que essa seria a atividade mais frequente. Não são necessários números inventados.
 
   > **✅ Como foi tratado** ([`c4b5c99`](https://github.com/p4cs-974/projeto-ihc/commit/c4b5c99)): a seção 3.4 define frequência, criticidade e prioridade e explica por que A04 pode ser a mais frequente e A01 a mais crítica sem contradição. A tabela 3.2 foi alinhada a H07/H08. Em 3.3, a equipe admite que a finalidade dos resultados não sustenta sozinha a frequência e registra o raciocínio provisório, sem números inventados.
+  >
+  > \- Pedro
+
 - **Delimitar “perda de arquivos”.** Em H08, esclareçam se vocês se referem a perda do original, indisponibilidade dos resultados ou necessidade de repetir o processamento. Essas situações produzem consequências diferentes e não devem ser presumidas indistintamente.
 
   > **✅ Como foi tratado** ([`62b20ff`](https://github.com/p4cs-974/projeto-ihc/commit/62b20ff)): H08 (seção 3.4) desdobra "perda de arquivos" em perda do original, indisponibilidade dos resultados e reprocessamento, cada uma com sua consequência, e deixa como lacuna `[?]` se o editor mantém cópia local. Seção 10 e matriz atualizadas.
+  >
+  > \- Pedro
+
 - **Preservar a incerteza nas sínteses.** As seções 11 e 13 resumem como estabelecido um processo que continua hipotético. Uma indicação de que se trata do recorte inicial ajuda a evitar que a comunicação pública transforme hipóteses em fatos. A existência de alternativas automatizadas também recomenda restringir H01 ao público e ao contexto investigados, sem generalizar toda a produção de melhores momentos.
 
   > **✅ Como foi tratado** ([`a48af73`](https://github.com/p4cs-974/projeto-ihc/commit/a48af73)): as linhas da seção 11 sobre usuário, problema, processo atual e contexto passaram a ser marcadas `[H]` e a citar as hipóteses de origem. O item 1 da seção 13 passou a falar em "recorte inicial que estamos investigando", com nota contra apresentar o problema como fato em comunicação pública. H01 foi restringida a editores na pós-produção de partidas encerradas, com menção explícita às alternativas automatizadas da seção 6.1, em 1.2, na seção 10 e na matriz.
+  >
+  > \- Pedro
+
 - **Não transformar impacto possível em capacidade assegurada.** A seção 9.3 propõe estimativas de progresso e indicação de quando houve custo. Registrem o que o TCC realmente fornece e o que ainda precisa ser investigado para comunicar essas informações de maneira confiável. A definição técnica interna pode ser aceita como tal; sua implicação para o usuário precisa de justificativa.
 
   > **✅ Como foi tratado** ([`d6d008e`](https://github.com/p4cs-974/projeto-ihc/commit/d6d008e)): a seção 9.3 ganhou uma nota que aceita a definição técnica e trata sua implicação para o usuário como hipótese. As linhas de processamento e custo agora separam o que o TCC fornece (estados de execução) do que ainda precisa ser investigado: progresso parcial, estimativa confiável de duração e medição/atribuição do custo. Sem essas informações, a interface comunica apenas estados, sem prometer porcentagens ou prazos.
+  >
+  > \- Pedro
+
 - **Registrar acessibilidade como questão a investigar.** A seção 2.4 pode explicitar o desconhecimento sobre necessidades que afetem leitura, navegação e inspeção de vídeos. O capítulo 3 relaciona qualidade de uso às características e ao contexto das pessoas; não é preciso produzir uma avaliação completa de acessibilidade nesta etapa.
 
   > **✅ Como foi tratado** ([`de14e9f`](https://github.com/p4cs-974/projeto-ihc/commit/de14e9f)): a seção 2.4 ganhou uma lacuna `[?]` sobre necessidades que afetem leitura, navegação e inspeção de vídeos, encaminhada à Entrega 7, sem avaliação completa de acessibilidade nesta etapa.
+  >
+  > \- Pedro
+
 - **Identificar a revisão do documento.** A data de 13/08/2026 convive com mudanças posteriores registradas na matriz. Preservem a data original e acrescentem, se pertinente, a data de revisão. Isso facilita compreender qual versão está sendo avaliada.
 
   > **✅ Como foi tratado** ([`e834ef6`](https://github.com/p4cs-974/projeto-ihc/commit/e834ef6)): o cabeçalho preserva a data de 13/08/2026 como versão original e acrescenta "Revisão: 02/10/2026" com link para este parecer. A aplicação do feedback foi registrada no registro de mudanças de escopo (seção 5) e no histórico da matriz.
+  >
+  > \- Pedro
 
 ## Pontos que devem alimentar as próximas entregas
 
 Os encaminhamentos abaixo orientam a continuidade; não são artefatos adicionais exigidos para concluir a Entrega 01.
 
 > **ℹ️ Encaminhamento:** esta tabela não exige alteração na Entrega 01. Os pontos serão retomados nas entregas indicadas. As hipóteses citadas continuam abertas na [matriz de rastreabilidade](../RASTREABILIDADE.md), com as reformulações feitas nesta revisão.
+>
+> \- Pedro
 
 | Etapa | Questão a retomar | Ligação com a Entrega 01 |
 |---|---|---|
@@ -154,5 +188,7 @@ Personas, cenários e análise de concorrentes ajudam a organizar e refinar hip�
 6. Manter as hipóteses abertas e encaminhadas às etapas pertinentes, sem antecipar telas, modelos ou validações que ainda não são exigidos.
 
 > **✅ Como foi tratado:** itens 1 a 5 correspondem às correções prioritárias 1 a 5 acima ([`81c38a0`](https://github.com/p4cs-974/projeto-ihc/commit/81c38a0), [`51d6d90`](https://github.com/p4cs-974/projeto-ihc/commit/51d6d90), [`86eeb39`](https://github.com/p4cs-974/projeto-ihc/commit/86eeb39), [`1d88573`](https://github.com/p4cs-974/projeto-ihc/commit/1d88573), [`7366be7`](https://github.com/p4cs-974/projeto-ihc/commit/7366be7)). Item 6: nenhuma hipótese foi marcada como validada; todas as reformulações mantêm `[H]`/`[?]` e estado "aberta" na matriz. Nenhuma tela, MoLIC ou modelo futuro foi antecipado: as linhas de padrões de interface continuam `PENDENTE`.
+>
+> \- Pedro
 
 **Parecer geral:** A Entrega 01 demonstra compreensão satisfatória da passagem de uma contribuição técnica para um projeto de IHC e apresenta um recorte pertinente, delimitado e viável para a disciplina. O trabalho oferece uma base adequada para continuidade, mas precisa de revisão pontual da sustentação documental e de alguns conceitos antes de ser considerado plenamente consolidado. Preservando o foco no editor e corrigindo a relação entre evidências, julgamento humano, benefícios e rastreabilidade, a equipe terá melhores condições de justificar as próximas decisões de interação sem ampliar desnecessariamente o projeto ou tratar resultados automáticos como garantia de qualidade editorial.
