@@ -322,7 +322,21 @@ Consequências para o projeto: o estado do processamento precisa estar claro qua
 
 **Persona:** P01, Rafael  
 **Objetivo da jornada:** [H] Obter cortes e metadados de uma partida gravada para continuar a produção em ferramentas externas, H28.  
-**Início e fim da jornada:** [H] Começa com o recebimento da gravação integral após a partida, H11 e H12, e termina com a obtenção do material para continuar a edição em ferramenta externa, H28. Base: [Entrega 1](01_conhecendo_o_problema.md), seções 4.5 e 7.3.
+**Início e fim da jornada:** [H] Começa com o recebimento das gravações integrais após as partidas, H11 e H12, e termina com o compacto montado no editor externo que Rafael já utiliza, etapa 7, H28. A interface participa das etapas 2 a 6. Base: [Entrega 1](01_conhecendo_o_problema.md), seções 4.5 e 7.3.
+
+**Relato da jornada [H]:** o relato encadeia as etapas da tabela e descreve o uso proposto, não um uso observado.
+
+É sábado de rodada. Rafael chega à produtora sabendo que vai receber cinco partidas e que a seleção de cada uma precisa chegar a Arnaldo antes do fim do dia. O que o move é o prazo e o receio de repetir o gol esquecido no compacto, H30. Por isso começa conferindo o material: abre a pasta do servidor e verifica se as cinco gravações chegaram inteiras e com o nome da partida, porque um arquivo errado só apareceria horas depois (etapa 1).
+
+Com as gravações conferidas, envia as cinco de uma vez. Enviar tudo no começo é o que libera o resto do dia: enquanto as partidas são processadas, ele volta para a edição de uma entrevista que estava parada (etapas 2 e 3). Não fica olhando a fila; espera o aviso de que a primeira partida terminou.
+
+Se uma partida falha, a decisão é prática: entender se o problema está no arquivo ou no processamento, reenviar se for o caso e seguir com as outras quatro. Rafael não aceita perder os resultados já prontos por causa de uma falha isolada (etapa 4).
+
+Quando chega o aviso, revisa uma partida por vez. Assiste aos cortes com alguns segundos antes e depois de cada lance e decide o que entra no download. Mantém os candidatos duvidosos, pela mesma razão de sempre: prefere sobrar a faltar. Se Arnaldo o chama no meio da revisão, para e depois retoma a partida no ponto em que estava, H41 (etapa 5).
+
+Com a seleção fechada, baixa os cortes e metadados da partida para a pasta do servidor e avisa Arnaldo pelo chat, H40 (etapa 6). Quando Arnaldo responde que a seleção pode seguir, Rafael abre o material no editor que já usa e monta o compacto. Se nota que falta um lance, volta à gravação original, encontra o trecho pelo tempo de jogo e faz o corte à mão (etapa 7).
+
+A jornada termina com o compacto montado. O benefício esperado é chegar até ali com menos horas assistindo às gravações e com atenção sobrando para revisar as últimas partidas do dia. A revisão dos cortes gerados não garante que nenhum lance ficou de fora, e por isso a etapa 7 continua prevista.
 
 | Etapa              | Situação/ação                                                                                                                           | Objetivo                                                  | Pensamento/emoção                                                        | Dor                                                                 | Oportunidade de design                                                                                         | Evidência                                                        |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
