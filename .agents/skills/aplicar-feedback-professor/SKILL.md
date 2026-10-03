@@ -11,7 +11,7 @@ O fluxo foi construído aplicando os pareceres das Entregas 1 a 3. Os exemplos c
 
 ## 1. Identificar quem aplica e o que é de quem
 
-Descubra quem está aplicando: pergunte se não estiver claro pela conversa. `git config user.name` ajuda, mas não substitui a confirmação. A pessoa assina as anotações com o próprio nome (`\- Pedro`, `\- Lucas` ou `\- Giovanni`).
+Descubra quem está aplicando: pergunte se não estiver claro pela conversa. `git config user.name` ajuda, mas não substitui a confirmação. A pessoa assina as anotações com o próprio nome (`\- Pedro`, `\- Lucas` ou `\- [Nome do usuário]`). O nome do usuário deve constar nos membros do projeto.
 
 O escopo é **o trabalho individual de quem aplica e o trabalho de grupo**. O trabalho individual dos outros integrantes fica com eles: não reescreva, só registre no parecer o que ficou pendente e com quem.
 
