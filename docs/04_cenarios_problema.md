@@ -34,7 +34,7 @@ Se o integrante escolher um novo problema/situação, explique por que ele passo
 
 ### 1. Cenário inicial
 
-Rafael é um editor de vídeo esportivo que precisa preparar os melhores momentos de partidas gravadas. Hoje, passa horas do seu dia em ferramentas de edição, procurando e selecionando manualmente os lances relevantes. O trabalho exige atenção contínua e é mentalmente exaustivo. Sob pressão de prazo, precisa concluir a seleção sem deixar de fora lances importantes.
+Em um dia de trabalho, Rafael, editor de vídeo esportivo, precisa preparar os melhores momentos das partidas gravadas que recebeu. Abre as gravações na ferramenta de edição e passa horas procurando e selecionando manualmente os lances relevantes. O trabalho exige atenção contínua e se torna mentalmente exaustivo. Sob pressão de prazo, precisa concluir a seleção sem deixar de fora lances importantes.
 
 Essa é a premissa definida pelo autor para C01. A duração expressa como "horas" é qualitativa, não uma medição. O cenário e seus desdobramentos são hipotéticos e ainda precisam de validação com profissionais.
 
