@@ -15,6 +15,7 @@
 > | Recomendação: contexto e rastreabilidade em sincronia com os cenários | aplicada | [`623c187`](https://github.com/p4cs-974/projeto-ihc/commit/623c187), [`1f73b32`](https://github.com/p4cs-974/projeto-ihc/commit/1f73b32) |
 > | Pontos para as próximas entregas | registrados nas lacunas | [`7bb45ad`](https://github.com/p4cs-974/projeto-ihc/commit/7bb45ad) |
 > | Pendência da Entrega 1: redação de H05 na tabela de entradas | aplicada | [`9ed8554`](https://github.com/p4cs-974/projeto-ihc/commit/9ed8554) |
+> | Status da entrega | em revisão (🟨) até as partes de Lucas e Giovanni serem aplicadas | [`9623200`](https://github.com/p4cs-974/projeto-ihc/commit/9623200) |
 >
 > \- Pedro
 

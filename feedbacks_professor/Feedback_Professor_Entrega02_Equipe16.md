@@ -17,6 +17,7 @@
 > | Recomendação: exemplos `{{...}}` na matriz | já aplicada na revisão da Entrega 1 | [`7366be7`](https://github.com/p4cs-974/projeto-ihc/commit/7366be7) |
 > | Recomendação: data de revisão | aplicada | [`518657b`](https://github.com/p4cs-974/projeto-ihc/commit/518657b) |
 > | Registro na matriz de rastreabilidade | aplicado | [`3774654`](https://github.com/p4cs-974/projeto-ihc/commit/3774654), [`44c5688`](https://github.com/p4cs-974/projeto-ihc/commit/44c5688) |
+> | Status da entrega | em revisão (🟨) até as partes de Lucas e Giovanni serem aplicadas | [`9623200`](https://github.com/p4cs-974/projeto-ihc/commit/9623200) |
 >
 > \- Pedro
 
