@@ -2,7 +2,7 @@
 
 **Data:** 13/08/2026 (versão original)  
 **Revisão:** 02/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md)  
-**Status:** `🟩 concluída`  
+**Status:** `🟦 revisada após feedback`  
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -537,3 +537,10 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 - [x] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
 - [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
 - [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+
+---
+
+## Histórico de revisões
+
+- 13/08/2026: versão original.
+- 02/10/2026: aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md). Correções prioritárias 1 a 5 e recomendações de melhoria tratadas, cada uma com anotação e link de commit no parecer: tabela de evidências da seção 4.6, benefício da seção 9.1 sem "redução da subjetividade", processo atual em 4.1 e informações da decisão em 4.3, valor em uso em 1.5 e H05, responsabilidades e identificadores F01–F03. Nenhuma hipótese foi marcada como validada.
