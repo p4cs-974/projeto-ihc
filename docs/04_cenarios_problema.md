@@ -1,7 +1,8 @@
 # Entrega 4 — Cenários de análise/problema
 
-**Data:** 17/09/2026
-**Status:** 🟩 concluído; C01, C02 e C03 desenvolvidos como hipótese
+**Data:** 17/09/2026 (versão original)  
+**Revisão:** 03/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md) em C01  
+**Status:** 🟨 C01 revisado após o feedback; C02 e C03 aguardam a revisão de seus autores; cenários desenvolvidos como hipótese
 **Responsabilidade:** 1 análise de cenário por integrante
 
 **OBS: O Histórico de commits recentes pode parecer um pouco "bagunçado", foi analisado 1 cenário por integrante conforme as personas desenvolvidas na entrega 03**
