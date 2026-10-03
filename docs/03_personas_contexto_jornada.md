@@ -456,14 +456,20 @@ As lacunas abaixo não impedem a elaboração das personas, mas servem pra  orie
 
 | Lacuna | Como investigar | Decisão afetada |
 |---|---|---|
+| Tolerância de Rafael a omissões e a candidatos a mais, H30 | Mostrar a editores seleções de exemplo, uma com lances faltando e outra com candidatos sobrando, e perguntar qual aceitariam sob prazo. | Quantidade de candidatos apresentada e esforço de revisão aceitável. |
 | Orientações e cobranças recebidas por Rafael, H14 | Perguntar a editores e responsáveis editoriais como combinam prazos e critérios de seleção. | Dimensão Ouve do mapa e comunicação entre P01 e P02. |
 | Reações ao envio, à espera e ao download | Pedir ao editor que descreva essas etapas e observar dificuldades durante o uso do protótipo. | Feedback e apoio nas etapas 2, 3 e 6 da jornada. |
 | Aviso de conclusão, H32 | Investigar como o editor alterna tarefas e quais avisos percebe sem interromper o trabalho. | Meio de aviso e retorno à revisão. |
+| Interrupções e retomada da revisão, H41 | Observar sessões de revisão e registrar quem interrompe, com que frequência e como o editor volta ao ponto em que estava. | Revisão retomável por partida e preservação do que já foi visto. |
+| Vocabulário compreendido, H05/H17/H38 | Testar rótulos e mensagens com editores profissionais e com criadores amadores, pedindo que expliquem cada termo. | Termos da interface que sirvam às duas personas primárias, RC07. |
+| Transferência para ferramentas externas, H28/H40 | Pedir a editores e criadores que importem cortes de exemplo no editor que usam e acompanhar nomes de arquivo, formatos e organização em pastas. | Formato, nome e organização dos arquivos baixados, RC05 e RC09. |
 | Histórico e recuperação, H15/H26 | Investigar situações de consulta a resultados anteriores e de falha no processamento. | Informações de histórico e ações de recuperação. |
 | Condições de uso e acessibilidade | Levantar equipamentos, conexão, iluminação, ruído, compartilhamento e barreiras de interação. | Legibilidade, operação por teclado e continuidade do envio e download. |
 | Volume, formatos e retenção | Levantar tamanho e quantidade de gravações com usuários e conferir limites com a equipe técnica. | Validação de entradas, armazenamento e disponibilidade dos resultados. |
-| Supervisão e auditoria, H33/H35 | Investigar informações consultadas por P02 e como registra decisões fora do produto. | Necessidade de acompanhamento direto ou de registros adicionais. |
-| Recorte por jogador, H36 | Investigar a seleção de lances por criadores e verificar se o backend pode identificar jogadores. | Viabilidade de filtro por jogador para P03. |
+| Supervisão e auditoria, H33/H35/H40 | Investigar quais informações P02 consulta para decidir, como o material chega até ele e como registra decisões fora do produto. | Necessidade de acompanhamento direto ou de registros adicionais. |
+| Recorte por jogador, H36 | Investigar a seleção de lances por criadores e verificar se o backend pode identificar jogadores. Comparar os lances que P03 quer no compilado com os melhores momentos gerais, porque movimentações sem bola e passes de um atleta podem ficar fora de um conjunto de destaques. | Viabilidade de filtro por jogador para P03 e adequação dos resultados ao objetivo do compilado. |
+
+H35, auditoria editorial, e H36, recorte por jogador, continuam exploratórias. Nenhuma das duas entra como funcionalidade no protótipo antes de evidência da necessidade e, no caso de H36, de confirmação técnica do backend.
 
 
 ## Histórico de revisões
