@@ -1,7 +1,8 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** 16/9/2026  
-**Status:** 🟩 preenchida como proto-personas; validação com usuários pendente
+**Data:** 16/9/2026 (versão original)  
+**Revisão:** 03/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md)  
+**Status:** 🟨 em revisão após feedback; P01 e partes do grupo revisadas; P02, P03 e seus mapas e jornadas aguardam Lucas e Giovanni; validação com usuários pendente
 
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
@@ -33,7 +34,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 | Obter cortes e metadados com menor esforço manual, H06 e H28                           | H              | Entrega 1, seções 3.1 e 7.3                                                                       | Incorporar como objetivo a validar                                       |
 | Selecionar/exportar resultados e processar vídeos em lote, H07 e H08                   | H              | Atividades A01 a A04 da Entrega 1, seção 3.2; frequência e criticidade não confirmadas            | Incorporar atividades; investigar frequência e criticidade               |
 | Esforço manual, omissões e retrabalho sob pressão de prazo, H01, H09, H10 e H11        | H              | Situação hipotética da Entrega 1, seção 4.5                                                       | Manter como dores hipotéticas, sem atribuir relatos a participantes      |
-| Baixo conhecimento de computação e familiaridade com editores de vídeo, H05, H17 e H19 | H              | Entrega 2, seção 3, identifica padrões nas ferramentas, mas não comprova familiaridade do público | Manter como hipótese; investigar experiência e vocabulário               |
+| Domínio de ferramentas de edição, com pouco conhecimento de programação e IA, H05, H17 e H19 | H              | Entrega 2, seção 3, identifica padrões nas ferramentas, mas não comprova familiaridade do público | Manter como hipótese; investigar experiência e vocabulário               |
 | Pós-produção, arquivos extensos e pressão de prazo, H12 e H13                          | H              | Entrega 1, seções 5.1 a 5.3                                                                       | Incorporar ao contexto provisório                                        |
 | Entrega a responsáveis editoriais e decisões sobre resultados, H14, H22 e H23          | H              | Entrega 1, seções 5.4 e 7.1; divisão de responsabilidades não investigada                         | Manter como hipótese; não criar papéis adicionais sem tarefas distintas |
 | Histórico e consequências de falhas, H15, H16 e H26                                    | H              | Entrega 1, seções 5.5, 5.6 e 7.1; recomendações RC03 e RC10 da Entrega 2                          | Investigar necessidade de histórico e formas de recuperação              |
@@ -43,20 +44,41 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), [Entrega 2](02_analise_concorr
 
 ## 1. Personas
 
+### Composição e prioridade das personas
+
+P01 e P03 são personas primárias. As duas usam a interface do envio ao download, e as necessidades de cada uma mudam decisões essenciais do fluxo de enviar, acompanhar, revisar e baixar. P02 não usa a interface no recorte adotado: recebe por canal externo o material que o editor baixa e decide sobre ele. Por isso P02 deixa de ser classificada como persona secundária de uso e passa a ser uma **persona atendida**, categoria de Cooper para quem não opera o produto, mas depende do que ele produz.
+
+| Persona | Classificação | Atividades apoiadas pela interface | Por que essa prioridade | Consequência prática no projeto |
+|---|---|---|---|---|
+| P01, Rafael | Primária | A01, A02 e A04; A03 a validar | Revisa várias partidas sob prazo e precisa conferir os cortes antes de baixar, H30 e H32. Essas necessidades definem a fila de partidas, o aviso de conclusão e a revisão com contexto, que formam o fluxo principal. | A interface precisa aceitar várias partidas, mostrar o estado de cada uma e permitir assistir a todos os cortes antes do download. Falhas de uma partida não podem bloquear as outras, H16. |
+| P03, Jorginho Jr. | Primária | A01, A02 e A04 | Percorre o mesmo fluxo de P01, mas com computador pouco potente, pouco armazenamento, H37, e experiência em editores mobile, H38. Essas diferenças não são necessidades adicionais que se atendem à parte: restringem o próprio fluxo principal, por isso P03 não cabe como secundária. | O fluxo não pode depender de hardware local potente, e o download deve trazer só os cortes selecionados. Rótulos e mensagens não podem exigir vocabulário de editor profissional e devem ser testados também com criadores amadores, RC07. O filtro por jogador continua necessidade a investigar, H36, e não requisito. |
+| P02, Arnaldo | Atendida, não usuária da interface | Nenhuma no recorte; recebe o resultado de A04 por canal externo, H33 | Não opera o produto e por isso não orienta decisões de tela. Sua decisão editorial depende da qualidade do material que P01 baixa. | As necessidades de P02 recaem sobre o que P01 baixa: partida de origem identificável, timecodes e metadados legíveis fora da interface, RC05 e RC09. Não se cria área administrativa nem tela de supervisão; o acompanhamento direto continua alternativa a investigar em H33. |
+
+Quando as necessidades das duas primárias divergirem, a decisão deve atender às duas antes de favorecer uma delas. O caso mais provável é o vocabulário: P01 conhece editores profissionais, H17, e P03 conhece editores mobile, H38. Termos que só P01 entende não servem ao fluxo principal.
+
 ### Persona P01 — Rafael
 
 **Autor(a):** Pedro Alexandre Custódio Silva — 22.123.049-3  
 **Tipo:** primária  
+**Por que primária:** Rafael usa a interface em todas as atividades do recorte, A01, A02 e A04, e suas necessidades de revisar várias partidas sob prazo sem perder lances, H30 e H32, definem o fluxo principal. A importância do cargo não entra nessa classificação. Ver [composição e prioridade das personas](#composição-e-prioridade-das-personas).  
 **Base de evidências:** hipóteses da [entrega 1](01_conhecendo_o_problema.md), ainda não confirmadas com usuários, e análise de ferramentas da [entrega 2](02_analise_concorrencia.md) (decisões de interface).  
 **Hipóteses da Entrega 1 relacionadas:** H01, H03, H05, H06, H09, H10, H11, H12, H13, H16, H17, H19, H21, H27 e H28
 
-**Hipóteses novas da Entrega 3:** H30, H31 e H32, acompanhadas no [registro de hipóteses](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
+**Hipóteses novas da Entrega 3:** H30, H31, H32 e H39, acompanhadas no [registro de hipóteses](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
 
 ![Avatar da persona Rafael](../assets/03_personas/rafael-avatar.png)
 
+**Biografia [H]:** Rafael Moura tem 31 anos e edita vídeo há oito. Começou cortando gols de campeonatos amadores para uma emissora comunitária, onde montava sozinho o compacto inteiro, da gravação bruta ao arquivo final. Há cinco anos trabalha em uma produtora que faz conteúdo esportivo para clubes e canais digitais. Em dia de rodada recebe as gravações de quatro a seis partidas encerradas e precisa entregar a seleção de lances de cada uma no mesmo dia, para que a supervisão editorial decida o que segue para montagem, H39.
+
+A experiência deixa Rafael rápido nas ferramentas de edição, mas não reduz o tempo de assistir a cada partida. O esforço vem da quantidade de gravações: a atenção cai a partir da terceira ou quarta partida do dia, ele passa a delimitar os cortes com menos cuidado e a reabrir decisões já tomadas, como descreve o [cenário C01](04_cenarios_problema.md#cenário-c01--seleção-manual-de-melhores-momentos-sob-pressão-de-prazo). Por isso a revisão de várias partidas é o centro do seu dia, e não uma tarefa ocasional.
+
+Rafael responde pela seleção e pelo corte; a decisão de publicar fica com a supervisão editorial. Já recebeu reclamação de um clube por um gol que ficou fora do compacto e, desde então, prefere revisar candidatos a mais a correr esse risco de novo, H30. Fora das rodadas, edita entrevistas e bastidores da produtora; são esses trabalhos que retoma enquanto espera o processamento das partidas, H32.
+
+Idade, trajetória e episódio da reclamação são escolhas da proto-persona feitas com o autor, sem base em entrevistas. Ficam na ficha porque explicam o volume de partidas, a tolerância a candidatos extras e a alternância de tarefas durante a espera.
+
 | Campo                             | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Faixa etária / contexto relevante | [?] Faixa etária não investigada. [H] Atuação na pós-produção de partidas encerradas, H12.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Faixa etária / contexto relevante | [H] 31 anos; edita vídeo há oito anos, cinco deles na produtora atual. Atuação na pós-produção de partidas encerradas, de quatro a seis por dia de rodada, H12 e H39. |
 | Ocupação/papel                    | [H] Editor de vídeo esportivo experiente em uma produtora de conteúdo esportivo, responsável por obter material de melhores momentos. Detalhamento de H03, H21 e H27 definido com o autor, ainda a validar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Conhecimento do domínio           | [H] Identifica lances como gols, defesas, finalizações perigosas e ocorrências disciplinares, conforme a situação de H11. A experiência em edição foi definida com o autor como característica hipotética do perfil; o conhecimento específico de futebol ainda precisa ser validado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Experiência tecnológica           | [H] Experiente no uso de ferramentas de edição de vídeo, mas sem conhecimento de IA ou programação. Detalhamento de H05 e H17 definido com o autor, ainda a validar; a ferramenta utilizada não foi escolhida.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -66,7 +88,7 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), [Entrega 2](02_analise_concorr
 | Motivadores                       | [H] Produzir melhores momentos com eficiência e consistência, H06. Outros motivadores ainda não foram investigados.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Restrições/acessibilidade         | [H] Arquivos extensos, tempo de processamento e pressão de prazo, H13. [?] Necessidades individuais de acessibilidade não investigadas.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Ambiente típico de uso            | [H] Trabalho presencial na produtora, em sala de edição com pouca luz e computador com tela ampla, na pós-produção de partidas gravadas. Prefere o modo escuro para conforto no ambiente pouco iluminado, H31. Detalhamento de H12 e H13 definido com o autor, ainda a validar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Comportamentos relevantes         | [H] No processo atual imaginado, percorre a gravação, identifica lances e organiza os trechos, conforme H11. No uso proposto, envia várias partidas para a fila e continua outras edições enquanto aguarda o processamento. Precisa ser avisado quando os cortes estiverem prontos; então revisa uma partida por vez e seleciona o material para download. Ao perceber que falta um lance importante, consulta a gravação original e faz o corte no editor de vídeo que já utiliza. Se o processamento de uma partida falha, procura entender o motivo e a ação necessária para resolver o problema, enquanto continua com as demais. Fluxo definido com o autor, ainda a validar; a organização da espera e da revisão por partida é registrada em H32. |
+| Comportamentos relevantes         | [H] No processo atual imaginado, percorre a gravação, identifica lances e organiza os trechos, conforme H11. O [cenário C01](04_cenarios_problema.md#cenário-c01--seleção-manual-de-melhores-momentos-sob-pressão-de-prazo) detalha esse processo como escolha narrativa: trabalha uma partida por vez, avança nos períodos que julga pouco promissores, separa candidatos duvidosos e revisa os cortes antes da partida seguinte; considera um corte aceitável quando mostra a construção e o desfecho da jogada. No uso proposto, envia várias partidas para a fila e continua outras edições enquanto aguarda o processamento. Precisa ser avisado quando os cortes estiverem prontos; então revisa uma partida por vez e seleciona o material para download. Ao perceber que falta um lance importante, consulta a gravação original e faz o corte no editor de vídeo que já utiliza. Se o processamento de uma partida falha, procura entender o motivo e a ação necessária para resolver o problema, enquanto continua com as demais. Fluxo definido com o autor, ainda a validar; a organização da espera e da revisão por partida é registrada em H32. |
 
 **Decisões de design influenciadas por P01:**
 
@@ -87,7 +109,7 @@ Essas decisões são iniciais e deverão ser revistas com a coleta de dados.
 ### Persona P02 — Arnaldo
 
 **Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1
-**Tipo:** Secundário
+**Tipo:** persona atendida, não usuária da interface; ver [composição e prioridade das personas](#composição-e-prioridade-das-personas)
 
 **Base de evidências:** proto-persona proposta pelo autor na PR #5, ainda sem validação com usuários.
 
@@ -136,7 +158,7 @@ O valor esperado da contribuição do TCC para P02 é receber trechos localizáv
 ### Persona P03 — Jorginho Jr.
 
 **Autor(a):** Giovanni Chahin Morassi — 22.123.025-3
-**Tipo:** secundária
+**Tipo:** primária; ver [composição e prioridade das personas](#composição-e-prioridade-das-personas)
 
 **Base de evidências:** hipóteses da [entrega 1](01_conhecendo_o_problema.md), ainda não confirmadas com usuários, e análise de ferramentas da [entrega 2](02_analise_concorrencia.md) (decisões de interface).
 
@@ -182,7 +204,7 @@ Essas decisões são iniciais e deverão ser revistas com a coleta de dados.
 
 ### Síntese das personas
 
-P01, Rafael, continua sendo a persona primária e representa o editor de vídeo esportivo priorizado em H27 e na [Entrega 1](01_conhecendo_o_problema.md). P02 representa a supervisão editorial que recebe os resultados fora da interface, H33. P03, Jorginho Jr., é uma persona secundária de criador amador.
+P01, Rafael, e P03, Jorginho Jr., são as personas primárias. Rafael representa o editor de vídeo esportivo priorizado em H27 e na [Entrega 1](01_conhecendo_o_problema.md); Jorginho Jr. representa o criador amador que percorre o mesmo fluxo com equipamento limitado. P02 é uma persona atendida: representa a supervisão editorial que recebe os resultados fora da interface, H33.
 
 | Aspecto | P01, Rafael | P02, Administrador/Editor-Chefe | P03, Jorginho Jr. |
 |---|---|---|---|
@@ -191,30 +213,40 @@ P01, Rafael, continua sendo a persona primária e representa o editor de vídeo 
 | Necessidade que afeta design | Reduzir esforço manual, evitar omissões e entender falhas, H28/H30/H32. | Receber material identificável e com contexto para a decisão editorial, H33. | Obter material de várias partidas com equipamento limitado, H36/H37. |
 | Experiência tecnológica | Experiência com edição, sem conhecimento de IA/programação, H05/H17 refinadas para P01. | Possível baixa familiaridade com edição e computação, H34. | Experiência amadora com editores mobile e de computador; vocabulário a validar, H38. |
 
-As três fichas são proto-personas sem validação empírica. Os mapas de empatia e as jornadas do usuário contemplam P01, P02 e P03, mantendo P01 como persona primária do projeto. O uso direto da interface por P02 e a auditoria editorial permanecem em investigação, H33/H35, e o filtro por jogador para P03 depende de confirmação técnica, H36.
+As três fichas são proto-personas sem validação empírica. Os mapas de empatia e as jornadas do usuário contemplam P01, P02 e P03, com P01 e P03 como personas primárias e P02 como persona atendida. O uso direto da interface por P02 e a auditoria editorial permanecem em investigação, H33/H35, e o filtro por jogador para P03 depende de confirmação técnica, H36.
 
 ## 2. Mapa de empatia — equipe
 
 ### Persona P01 — Rafael
 
 **Persona escolhida:** P01, Rafael  
-**Idade:** [?] Não investigada.  
+**Idade:** [H] 31 anos, característica da proto-persona.  
 **Justificativa:** Rafael representa o editor de vídeo esportivo priorizado na Entrega 1, H27. Seu objetivo de obter cortes e metadados com menor esforço manual, H28, se relaciona diretamente à identificação automática de melhores momentos produzida pelo TCC.
 
 ![Mapa de empatia de Rafael](../assets/03_personas/mapa_empatia_p01.svg)
 
-O mapa abaixo sintetiza as hipóteses de P01 e as escolhas feitas com o autor. Não contém falas coletadas nem observações de usuários. O arquivo visual acima apresenta a mesma síntese do quadro textual.
+O mapa abaixo sintetiza as hipóteses de P01 e as escolhas feitas com o autor. Não contém falas coletadas nem observações de usuários. O arquivo visual acima apresenta a mesma síntese do quadro textual. Nos campos Vê, Fala e faz e Necessidades, **Hoje** descreve o comportamento atual hipotético e **Uso proposto** descreve a experiência imaginada com a interface. O uso proposto não serve de evidência a favor da própria solução.
 
 | Dimensão    | Registro                                                                                                                                                                                                   | Base                                         |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| Vê          | [H] Gravações extensas e lances que precisa selecionar. No uso proposto, acompanha o estado das partidas e confere os cortes gerados.                                                                      | H11, H25 e H32; P01                          |
+| Vê          | **Hoje:** [H] gravações extensas e lances que precisa encontrar e selecionar. **Uso proposto:** [H] acompanha o estado das partidas e confere os cortes gerados. | H11, H25 e H32; P01 |
 | Ouve        | [H] Orientações, cobranças e comentários da equipe e dos responsáveis editoriais. [?] Evidências reais ainda não foram investigadas.                                                                       | Fluxo organizacional ainda a investigar, H14 |
-| Fala e faz     | [H] Envia várias partidas, continua outras edições durante a espera, revisa uma partida por vez e escolhe os cortes para download. Recupera lances omitidos no editor externo. [?] Não há falas coletadas. | H32; comportamentos definidos para P01       |
+| Fala e faz     | **Hoje:** [H] abre uma gravação por vez no editor, avança nos trechos pouco promissores, volta ao perceber uma jogada, delimita e separa o corte, e revisa os cortes antes da próxima partida. **Uso proposto:** [H] envia várias partidas, edita outros materiais durante a espera e revisa uma partida por vez; recupera lances omitidos no editor externo. [?] Não há falas coletadas. | C01 e H11; H32 para o uso proposto |
 | Pensa e sente | [H] Preocupa-se com o prazo e com a possibilidade de deixar passar um lance importante. Aceita revisar alguns cortes sem interesse para reduzir esse risco.                                                | H11 e H30; dores de P01                      |
 | Dores       | [H] Seleção manual demorada, omissões, cortes sem contexto e retrabalho. Quando ocorre uma falha, precisa entender o motivo e como continuar.                                                              | H01, H10, H11, H16 e H26                     |
-| Necessidades      | [H] Entregar no prazo lances relevantes e com contexto, gastando menos tempo procurando e recortando a gravação. Continuar outros trabalhos enquanto as partidas são processadas.                          | H06, H28 e H32; critério de sucesso de P01   |
+| Necessidades      | [H] Entregar no prazo lances relevantes e com contexto, gastando menos tempo procurando e recortando a gravação, e ter atenção para revisar as últimas partidas do dia. **Uso proposto:** [H] seguir com outros trabalhos enquanto as partidas são processadas. | H06, H28, H32 e H39; critério de sucesso de P01 |
 
-Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P01 desta entrega e [hipóteses H30 a H32](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
+**Ligação entre dores e necessidades de P01**
+
+| Dor | Necessidade correspondente | Hipóteses |
+|---|---|---|
+| Seleção manual demorada em gravações extensas | Gastar menos tempo procurando e recortando lances | H01, H11 e H28 |
+| Atenção que cai ao longo das partidas do dia | Chegar às últimas partidas com atenção para revisar | H09 e H39 |
+| Omissão de lances importantes | Conferir os candidatos, inclusive os duvidosos, antes de baixar | H10 e H30 |
+| Cortes sem contexto e retrabalho | Receber cortes com a construção e o desfecho da jogada | H10 e H11 |
+| Falha sem explicação | Entender a causa e como continuar sem perder as outras partidas | H16 e H26 |
+
+Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P01 desta entrega e [hipóteses H30 a H32 e H39](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
 
 ### Persona P02 — Arnaldo
 
@@ -241,7 +273,7 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P02 desta entrega, [Cen
 
 **Persona escolhida:** P03, Jorginho Jr.  
 **Idade:** [H] 12 a 24 anos (a validar).  
-**Justificativa:** Jorginho Jr. representa o criador de conteúdo esportivo amador (persona secundária), que busca crescer no meio digital (H06) produzindo compilações e vídeos centrados em jogadores específicos (H36). Seu objetivo de obter cortes e metadados com menor esforço manual a partir de partidas completas (H28) e sem depender de hardware local potente (H37) conecta-se diretamente ao processamento remoto de detecção automática de lances do TCC (R04 e R05).
+**Justificativa:** Jorginho Jr. representa o criador de conteúdo esportivo amador (persona primária), que busca crescer no meio digital (H06) produzindo compilações e vídeos centrados em jogadores específicos (H36). Seu objetivo de obter cortes e metadados com menor esforço manual a partir de partidas completas (H28) e sem depender de hardware local potente (H37) conecta-se diretamente ao processamento remoto de detecção automática de lances do TCC (R04 e R05).
 
 ![Mapa de empatia de Jorginho Jr.](../assets/03_personas/mapa_empatia_p03.svg)
 
@@ -262,16 +294,38 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P03 desta entrega, [hip
 
 | Dimensão                       | Descrição                                                                                                                                                                                                                       | Implicação de design                                                                                                                                                        |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Usuários e stakeholders | [H] P01 é o editor de vídeo esportivo prioritário, H03, H21 e H27. P02 recebe os resultados fora da interface como responsável editorial, H33. P03 é um criador amador secundário, com experiência em editores mobile, H38. | Priorizar o fluxo de P01. Preservar identificação e contexto do material entregue a P02, RC05 e RC09. Testar vocabulário com os perfis, RC07. |
+| Usuários e stakeholders | [H] P01 é o editor de vídeo esportivo priorizado em H03, H21 e H27. P03 é um criador amador com experiência em editores mobile, H38; os dois são personas primárias. P02 recebe os resultados fora da interface como responsável editorial, H33, e é persona atendida. | Priorizar o fluxo compartilhado por P01 e P03. Preservar identificação e contexto do material entregue a P02, RC05 e RC09. Testar vocabulário com os perfis, RC07. |
 | Tarefas | [H] P01 e P03 compartilham envio de partidas, acompanhamento, revisão, seleção e download, A01, A02 e A04. A consulta de histórico, A03, permanece uma hipótese a validar. P03 reúne material de várias partidas para editar o compilado em ferramenta externa. | Organizar o fluxo de enviar, acompanhar, revisar e baixar, RC01. Manter a montagem externa e investigar a necessidade de histórico, RC10. |
 | Equipamentos | [H] P01 usa computador com tela ampla. P03 usa computador pouco potente, com pouco armazenamento e boa conexão, H37; tem experiência com editores mobile, H38. [?] Escolha entre aplicação web e nativa ainda em aberto, Entrega 1, seção 5.2. | Projetar a revisão de vídeos em computador e considerar a limitação de equipamento de P03. Manter o processamento remoto proposto em sua ficha e testar a continuidade da edição em ferramentas externas, RC12. |
-| Ambiente físico | [H] P01 trabalha presencialmente em sala de edição com pouca luz e pressão de prazo, H12/H13. P03 trabalha em casa, à mesa do computador, conforme sua ficha. [?] Ruído e compartilhamento não definidos. | Manter modo escuro e aviso de conclusão ligados às hipóteses H31/H32 de P01. Investigar as condições de uso doméstico de P03 sem atribuir a ele as preferências de P01. |
-| Ambiente social/organizacional | [H] P01 pode entregar material a responsáveis editoriais, H14, H22 e H23. P02 recebe os cortes e metadados e devolve uma decisão sobre a seleção, H33. P03 produz conteúdo amador para seus canais e decide quais cortes usar, conforme Objetivos e Necessidades de sua ficha. | Permitir a P01 e P03 revisar e baixar os cortes para continuar a produção em ferramentas externas. P02 recebe o material e devolve sua decisão externamente. Publicação permanece fora do recorte, RC05 e RC09. |
+| Ambiente físico | [H] P01 trabalha presencialmente em sala de edição com pouca luz e pressão de prazo, H12/H13. P03 trabalha em casa, à mesa do computador, conforme sua ficha. Pessoas presentes, interrupções e recursos compartilhados estão em [condições físicas e sociais de uso](#condições-físicas-e-sociais-de-uso). | Manter modo escuro e aviso de conclusão ligados às hipóteses H31/H32 de P01. Investigar as condições de uso doméstico de P03 sem atribuir a ele as preferências de P01. |
+| Ambiente social/organizacional | [H] P01 pode entregar material a responsáveis editoriais, H14, H22 e H23. P02 recebe os cortes e metadados e devolve uma decisão sobre a seleção, H33; a passagem ocorre por pasta compartilhada e chat da produtora, H40. P03 produz conteúdo amador para seus canais e decide quais cortes usar, conforme Objetivos e Necessidades de sua ficha. | Permitir a P01 e P03 revisar e baixar os cortes para continuar a produção em ferramentas externas. P02 recebe o material e devolve sua decisão externamente. Publicação permanece fora do recorte, RC05 e RC09. |
 | Papéis/permissões/governança | [H] P02 recebe material e devolve uma decisão editorial externamente, H33. [?] Regras detalhadas de aprovação, permissões e retenção não definidas. Parâmetros técnicos ficam com a equipe técnica, Entrega 1, seções 5.4 e 7.1. | Manter administração de usuários fora do escopo e parâmetros técnicos fora do fluxo principal, RC06. Acompanhamento direto por P02 permanece em investigação. |
 | Volume de dados/histórico | [H] Vídeos extensos, H08/H13. P01 envia várias partidas e revisa uma por vez, H32. P03 reúne cortes de vários jogos para um compilado, conforme sua ficha. Utilidade de histórico a validar, H15. [?] Volume, formatos, limites e retenção não definidos. | Representar estado por vídeo e manter a origem dos cortes identificável ao selecionar resultados de várias partidas, RC02, RC03 e RC09. Investigar histórico para localizar resultados e evitar reprocessamento, RC10. |
 
 Fontes: [Entrega 1](01_conhecendo_o_problema.md), seções 3, 5, 7 e 11, e [Entrega 2](02_analise_concorrencia.md), seção 5. As características específicas de P01 e P03 incorporam as escolhas de elaboração de suas fichas, ainda como hipóteses. A participação externa inicial de P02 foi delimitada com Pedro em H33 e é registrada em R03. As relações R04 e R05 da [matriz de rastreabilidade](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos) ligam P03 às atividades compartilhadas. As implicações são recomendações iniciais de design.
 
+### Condições físicas e sociais de uso
+
+As condições abaixo são hipóteses da equipe, escolhidas para orientar o projeto até a coleta de dados da Entrega 7. Descrevem quem está presente, como surgem as interrupções, como as pessoas se comunicam e o que compartilham. Equipamento só aparece quando muda o comportamento.
+
+**Produtora: Rafael (P01) e a passagem do material para Arnaldo (P02)**
+
+- **Quem está presente.** [H] Rafael divide a sala de edição com outros dois editores. Cada um trabalha em uma ilha, de fone, e a sala fica com pouca luz para evitar reflexo nas telas, H31. Em dia de rodada, Arnaldo, que supervisiona a pós-produção, passa pelas ilhas para acompanhar o andamento, como no [cenário C02](04_cenarios_problema.md#cenário-c02--controle-do-processo-editorial-engessado).
+- **Como surgem as interrupções.** [H] Pelo chat interno da produtora e pelas visitas de Arnaldo. Uma pergunta sobre um lance de outra partida obriga Rafael a deixar a revisão em curso, localizar o trecho e depois voltar ao ponto em que parou, H41.
+- **Recursos compartilhados.** [H] As gravações chegam por um servidor de arquivos usado por todas as ilhas. O prazo também é compartilhado: quando uma ilha atrasa, as outras recebem partidas a mais.
+- **Passagem do material.** [H] Rafael baixa os cortes de cada partida para uma pasta no servidor e avisa Arnaldo pelo chat. Arnaldo abre a pasta no próprio computador ou na ilha de Rafael e responde pelo chat se a seleção segue para montagem ou volta para revisão, H33 e H40. Essa troca não passa pela interface proposta.
+- **Pressão social.** [H] Os horários de publicação dos clubes fixam o prazo, e a cobrança acontece em voz alta, na frente dos colegas. Nas últimas partidas do dia, quando a atenção já caiu, H39, Rafael tende a acelerar a revisão para não ser o editor que atrasou a rodada.
+
+Consequências para o projeto: a revisão de uma partida precisa poder ser interrompida e retomada sem perder o que já foi visto e selecionado, H41. Os arquivos baixados precisam identificar a partida e os lances sem depender da interface, porque Arnaldo os abre em uma pasta, RC05 e RC09. O estado de cada partida precisa ser legível de relance, porque Rafael alterna entre a interface, o chat e outras edições, RC03.
+
+**Casa: Jorginho Jr. (P03)**
+
+- **Local e momento.** [H] Trabalha no quarto, à mesa do computador de casa, principalmente nos fins de semana, quando planeja publicar, como no [cenário C03](04_cenarios_problema.md#cenário-c03--decupagem-manual-de-lances-por-jogador-sob-restrições-de-hardware). Durante a semana, o tempo livre vem depois de estudos e tarefas cotidianas, conforme a jornada de P03.
+- **Outras atividades.** [H] O mesmo computador serve para assistir aos jogos, estudar e editar. Enquanto as partidas são processadas, Jorginho usa o computador para outras coisas ou sai de perto dele.
+- **Quem está presente.** [?] Com quem divide a casa, o computador e a conexão depende do momento de vida que a ficha de P03 ainda vai definir.
+- **Relações sociais.** [H] Não tem colegas nem supervisor. A pressão vem da audiência e da regularidade de publicação do canal, H06, e o retorno chega pelos comentários dos vídeos, depois do uso da interface.
+
+Consequências para o projeto: o estado do processamento precisa estar claro quando Jorginho volta, horas depois, e não só enquanto ele olha a tela. O download deve trazer apenas os cortes selecionados, porque o disco é o recurso escasso da casa, H37.
 
 ## 4. Jornada do usuário — equipe
 
@@ -279,7 +333,21 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), seções 3, 5, 7 e 11, e [Entr
 
 **Persona:** P01, Rafael  
 **Objetivo da jornada:** [H] Obter cortes e metadados de uma partida gravada para continuar a produção em ferramentas externas, H28.  
-**Início e fim da jornada:** [H] Começa com o recebimento da gravação integral após a partida, H11 e H12, e termina com a obtenção do material para continuar a edição em ferramenta externa, H28. Base: [Entrega 1](01_conhecendo_o_problema.md), seções 4.5 e 7.3.
+**Início e fim da jornada:** [H] Começa com o recebimento das gravações integrais após as partidas, H11 e H12, e termina com o compacto montado no editor externo que Rafael já utiliza, etapa 7, H28. A interface participa das etapas 2 a 6. Base: [Entrega 1](01_conhecendo_o_problema.md), seções 4.5 e 7.3.
+
+**Relato da jornada [H]:** o relato encadeia as etapas da tabela e descreve o uso proposto, não um uso observado.
+
+É sábado de rodada. Rafael chega à produtora sabendo que vai receber cinco partidas e que a seleção de cada uma precisa chegar a Arnaldo antes do fim do dia. O que o move é o prazo e o receio de repetir o gol esquecido no compacto, H30. Por isso começa conferindo o material: abre a pasta do servidor e verifica se as cinco gravações chegaram inteiras e com o nome da partida, porque um arquivo errado só apareceria horas depois (etapa 1).
+
+Com as gravações conferidas, envia as cinco de uma vez. Enviar tudo no começo é o que libera o resto do dia: enquanto as partidas são processadas, ele volta para a edição de uma entrevista que estava parada (etapas 2 e 3). Não fica olhando a fila; espera o aviso de que a primeira partida terminou.
+
+Se uma partida falha, a decisão é prática: entender se o problema está no arquivo ou no processamento, reenviar se for o caso e seguir com as outras quatro. Rafael não aceita perder os resultados já prontos por causa de uma falha isolada (etapa 4).
+
+Quando chega o aviso, revisa uma partida por vez. Assiste aos cortes com alguns segundos antes e depois de cada lance e decide o que entra no download. Mantém os candidatos duvidosos, pela mesma razão de sempre: prefere sobrar a faltar. Se Arnaldo o chama no meio da revisão, para e depois retoma a partida no ponto em que estava, H41 (etapa 5).
+
+Com a seleção fechada, baixa os cortes e metadados da partida para a pasta do servidor e avisa Arnaldo pelo chat, H40 (etapa 6). Quando Arnaldo responde que a seleção pode seguir, Rafael abre o material no editor que já usa e monta o compacto. Se nota que falta um lance, volta à gravação original, encontra o trecho pelo tempo de jogo e faz o corte à mão (etapa 7).
+
+A jornada termina com o compacto montado. O benefício esperado é chegar até ali com menos horas assistindo às gravações e com atenção sobrando para revisar as últimas partidas do dia. A revisão dos cortes gerados não garante que nenhum lance ficou de fora, e por isso a etapa 7 continua prevista.
 
 | Etapa              | Situação/ação                                                                                                                           | Objetivo                                                  | Pensamento/emoção                                                        | Dor                                                                 | Oportunidade de design                                                                                         | Evidência                                                        |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -291,7 +359,7 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), seções 3, 5, 7 e 11, e [Entr
 | 6                  | Baixa os cortes e metadados escolhidos.                                                                                                 | Levar o material revisado para a ferramenta de edição.    | [?] Reação específica ao download não investigada.                       | Download indisponível ou seleção incorreta atrasa a continuidade.   | Apresentar resumo da seleção e comunicar falhas na obtenção dos arquivos.                                      | A04, H25, H26 e H28; RC09                                        |
 | 7                  | Continua a montagem no editor que já utiliza. Caso perceba uma omissão, procura o lance na gravação original e faz o corte manualmente. | Concluir o material no prazo com os lances relevantes.    | [H] Preocupação em não deixar um lance importante de fora.               | Uma omissão exige busca e corte adicionais.                         | Manter identificáveis a partida de origem e os tempos dos cortes para apoiar a continuidade fora da interface. | H10, H28 e H30; comportamentos de P01 e delimitação da Entrega 1 |
 
-Esta é uma jornada proposta, baseada nas hipóteses da [Entrega 1](01_conhecendo_o_problema.md), nas recomendações RC da [Entrega 2](02_analise_concorrencia.md) e nas escolhas de P01. Não descreve um fluxo observado com usuários. A etapa de falha é condicional.
+Esta é uma jornada proposta, baseada nas hipóteses da [Entrega 1](01_conhecendo_o_problema.md), nas recomendações RC da [Entrega 2](02_analise_concorrencia.md) e nas escolhas de P01. Não descreve um fluxo observado com usuários. As etapas 1 e 7 acontecem fora da interface; as etapas 2 a 6 descrevem o uso proposto e não servem de evidência a favor dele. A etapa de falha é condicional.
 
 A jornada inclui a preparação anterior ao envio e a continuidade da edição após o download. A montagem e a eventual recuperação manual de lances acontecem fora da interface.
 
@@ -371,6 +439,7 @@ Os perfis, mapas de empatia, contexto de uso e jornadas estruturados nesta entre
 
 - [x] Os mapas de empatia visuais estão preenchidos e correspondem aos quadros textuais (P01, P02 e P03).
 - [x] Existe pelo menos uma persona por integrante.
+- [x] Há predominância de personas primárias: P01 e P03. P02 é persona atendida, com o papel justificado na composição das personas.
 - [x] As personas diferem por tarefas, decisões, experiência e contexto de uso.
 - [x] Está claro o que é dado real e o que é hipótese/proto-persona.
 - [x] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
@@ -388,14 +457,20 @@ As lacunas abaixo não impedem a elaboração das personas, mas servem pra  orie
 
 | Lacuna | Como investigar | Decisão afetada |
 |---|---|---|
+| Tolerância de Rafael a omissões e a candidatos a mais, H30 | Mostrar a editores seleções de exemplo, uma com lances faltando e outra com candidatos sobrando, e perguntar qual aceitariam sob prazo. | Quantidade de candidatos apresentada e esforço de revisão aceitável. |
 | Orientações e cobranças recebidas por Rafael, H14 | Perguntar a editores e responsáveis editoriais como combinam prazos e critérios de seleção. | Dimensão Ouve do mapa e comunicação entre P01 e P02. |
 | Reações ao envio, à espera e ao download | Pedir ao editor que descreva essas etapas e observar dificuldades durante o uso do protótipo. | Feedback e apoio nas etapas 2, 3 e 6 da jornada. |
 | Aviso de conclusão, H32 | Investigar como o editor alterna tarefas e quais avisos percebe sem interromper o trabalho. | Meio de aviso e retorno à revisão. |
+| Interrupções e retomada da revisão, H41 | Observar sessões de revisão e registrar quem interrompe, com que frequência e como o editor volta ao ponto em que estava. | Revisão retomável por partida e preservação do que já foi visto. |
+| Vocabulário compreendido, H05/H17/H38 | Testar rótulos e mensagens com editores profissionais e com criadores amadores, pedindo que expliquem cada termo. | Termos da interface que sirvam às duas personas primárias, RC07. |
+| Transferência para ferramentas externas, H28/H40 | Pedir a editores e criadores que importem cortes de exemplo no editor que usam e acompanhar nomes de arquivo, formatos e organização em pastas. | Formato, nome e organização dos arquivos baixados, RC05 e RC09. |
 | Histórico e recuperação, H15/H26 | Investigar situações de consulta a resultados anteriores e de falha no processamento. | Informações de histórico e ações de recuperação. |
 | Condições de uso e acessibilidade | Levantar equipamentos, conexão, iluminação, ruído, compartilhamento e barreiras de interação. | Legibilidade, operação por teclado e continuidade do envio e download. |
 | Volume, formatos e retenção | Levantar tamanho e quantidade de gravações com usuários e conferir limites com a equipe técnica. | Validação de entradas, armazenamento e disponibilidade dos resultados. |
-| Supervisão e auditoria, H33/H35 | Investigar informações consultadas por P02 e como registra decisões fora do produto. | Necessidade de acompanhamento direto ou de registros adicionais. |
-| Recorte por jogador, H36 | Investigar a seleção de lances por criadores e verificar se o backend pode identificar jogadores. | Viabilidade de filtro por jogador para P03. |
+| Supervisão e auditoria, H33/H35/H40 | Investigar quais informações P02 consulta para decidir, como o material chega até ele e como registra decisões fora do produto. | Necessidade de acompanhamento direto ou de registros adicionais. |
+| Recorte por jogador, H36 | Investigar a seleção de lances por criadores e verificar se o backend pode identificar jogadores. Comparar os lances que P03 quer no compilado com os melhores momentos gerais, porque movimentações sem bola e passes de um atleta podem ficar fora de um conjunto de destaques. | Viabilidade de filtro por jogador para P03 e adequação dos resultados ao objetivo do compilado. |
+
+H35, auditoria editorial, e H36, recorte por jogador, continuam exploratórias. Nenhuma das duas entra como funcionalidade no protótipo antes de evidência da necessidade e, no caso de H36, de confirmação técnica do backend.
 
 
 ## Histórico de revisões
@@ -420,3 +495,7 @@ As lacunas abaixo não impedem a elaboração das personas, mas servem pra  orie
 - 30/09/2026: adicionadas as seções de mapa de empatia e de jornada do usuário para P03 (Jorginho Jr.) logo abaixo das de P01 e P02. Criado o arquivo visual correspondente em assets/03_personas/mapa_empatia_p03.svg, mantendo estrita paridade dimensional, visual e de fontes com P01 e P02. A jornada detalha as 7 etapas de produção amadora, upload em lote, acompanhamento remoto, revisão com recorte de jogador, download leve e pós-produção externa, mantendo rastreabilidade rigorosa (H01, H06, H08, H10, H11, H13, H16, H19, H24, H25, H28, H32, H36, H37, H38, R04 e R05) e total coerência estrutural com P01 e P02.
 
 - 01/10/2026: renomeado o arquivo visual de P01 para mapa_empatia_p01.svg e atualizados os links correspondentes. Atualizado o quadrante e linha de tabela "Ouve" nos mapas de empatia de P01, P02 e P03 para uniformizar a formulação com hipóteses e lacunas de evidências reais a investigar. Reestruturada a seção "Síntese" para focar exclusivamente no direcionamento das entregas subsequentes (da Entrega 4 em diante).
+
+- 03/10/2026: aplicado o feedback do professor da Entrega 03 nas partes de Pedro (P01) e do grupo. P01 e P03 passam a primárias e P02 a persona atendida, com justificativa na composição das personas. Rafael ganhou biografia e idade; o contexto ganhou as condições físicas e sociais da produtora e da casa de P03; a jornada de P01 ganhou relato encadeado; mapa e jornada de P01 separam o comportamento atual do uso proposto. Registradas H39 a H41. As fichas, mapas e jornadas de P02 e P03 ficam com seus autores.
+
+- 03/10/2026: a ficha de P01 passa a citar, em Comportamentos relevantes, a estratégia atual detalhada no cenário C01 durante a aplicação do feedback da Entrega 04. É escolha narrativa do cenário, sem evidência empírica.

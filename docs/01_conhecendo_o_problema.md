@@ -1,7 +1,8 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** 13/08/2026  
-**Status:** `🟩 concluída`  
+**Data:** 13/08/2026 (versão original)  
+**Revisão:** 02/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md)  
+**Status:** `🟦 revisada após feedback`  
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -59,9 +60,9 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub | Responsabilidade Principal |
 |---|---:|---|---|
-| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | Tela de Input |
-| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Tela de Output |
-| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Tela de Logs/Rastreabilidade |
+| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | Envio de partidas para processamento (A01) |
+| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Revisão, seleção e download de resultados (A04) |
+| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Acompanhamento e histórico de processamento (A02/A03) e manutenção da matriz de rastreabilidade |
 
 ## 0.2 Título atual do TCC
 
@@ -107,7 +108,7 @@ Desenvolver um sistema híbrido de visão computacional capaz de automatizar o p
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[H] H01 — O corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e estão sujeitos à interpretação humana, ao cansaço e a falhas.
+[H] H01 — No público e no contexto investigados (editores de vídeo esportivo na pós-produção de partidas encerradas), o corte e a geração de vídeos de melhores momentos são feitos manualmente, demandam tempo e exigem atenção contínua; o esforço é repetitivo e o cansaço pode levar a omissões involuntárias de lances. A escolha de quais lances entram em uma compilação é um julgamento editorial do profissional, não um erro a ser eliminado. Como já existem alternativas automatizadas no mercado (seção 6.1), H01 não se aplica a toda a produção de melhores momentos.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -115,14 +116,16 @@ Identificar automaticamente os melhores momentos de partidas de futebol e gerar 
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-[H] H02 — Profissionais responsáveis pela geração de vídeos de melhores momentos gastarão menos tempo realizando cortes manualmente e terão resultados menos sujeitos a variações causadas por cansaço ou falha humana.
+[H] H02 — Profissionais responsáveis pela geração de vídeos de melhores momentos gastarão menos tempo localizando e recortando lances manualmente, com menos esforço repetitivo, menos omissões involuntárias e menos retrabalho. A decisão editorial sobre quais cortes usar continua com o profissional: o resultado automático é ponto de partida para esse julgamento, não um substituto dele.
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
 | Automação da identificação de melhores momentos com visão computacional | Redução do trabalho manual na produção dos cortes e geração de metadados para os resultados |
-| Uso de LLMs multimodais na detecção e classificação dos highlights | Evidenciar a capacidade de generalização do conhecimento e aplicabilidade dos modelos de linguagem |
+| Uso de LLMs multimodais na detecção e classificação dos highlights, avaliando sua capacidade de generalização e aplicabilidade (mérito científico) | [H] Relacionada a H02 e H28: cortes acompanhados de uma classificação do tipo de lance poderiam ajudar o editor a localizar e filtrar o que procura para uma compilação específica, sem assistir a cada trecho para descobrir do que se trata. A utilidade dessa classificação depende dos critérios editoriais ainda a investigar (seção 4.3) |
+
+> A capacidade de generalização dos LLMs é um mérito técnico/científico do TCC e não, por si só, um valor percebido pelo editor. Na coluna da direita registramos apenas a atividade humana que essa capacidade poderia favorecer, como hipótese.
 
 ---
 
@@ -144,14 +147,16 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| Empresas de mídia esportiva | menos custos devido à maior eficiência do processo | não | [H] H04 |
+| Empresas de mídia esportiva, emissoras, produtoras, clubes e ligas | Possível adoção da solução e menos custos devido à maior eficiência do processo | não | [H] H04, H20 |
+| Produtores e responsáveis editoriais | Recebem os cortes e metadados escolhidos pelo editor, aprovam ou devolvem a seleção e decidem a publicação | não, no recorte inicial: recebem os resultados fora da interface | [H] H14, H22, H23 |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-- [H] H05: baixo conhecimento técnico de software e computação.
+- [H] H05: o editor domina ferramentas de edição de vídeo (ver H17), mas tem pouco ou nenhum conhecimento de programação, de modelos de IA e de parâmetros de inferência. Simplificar termos internos do modelo não significa tratá-lo como iniciante na própria profissão: a interface pode usar o vocabulário de edição que ele conhece, evitando jargão de IA.
 - [?] Dispositivos de entrada preferidos, como teclado, mouse ou trackpad, ainda não foram investigados.
 - [H] H17: possível familiaridade com softwares tradicionais de edição de vídeo e seus padrões.
 - [H] H12 e H13: uso provável em computador com tela ampla; navegador e aplicação nativa continuam como alternativas.
+- [?] Necessidades de acessibilidade ainda não foram investigadas: não sabemos se o público tem limitações que afetem a leitura de textos e timecodes, a navegação por teclado ou mouse, ou a inspeção visual e auditiva de vídeos. A qualidade de uso depende das características e do contexto das pessoas; essa lacuna deve ser levantada na Entrega 7, sem exigir agora uma avaliação completa de acessibilidade.
 
 ---
 
@@ -165,18 +170,28 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | Processar vídeos em lote | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
+| A01 | Processar vídeos em lote | Profissional responsável pela geração de vídeos de melhores momentos | Frequência desconhecida; hipótese de maior criticidade (H08); prioridade alta | H |
 | A02 | Acompanhar estado, progresso e falhas do processamento | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
 | A03 | Consultar o histórico de resultados processados | Profissional responsável pela geração de vídeos de melhores momentos | Frequência e criticidade ainda desconhecidas | H |
-| A04 | Revisar, selecionar e baixar cortes e metadados | Profissional responsável pela geração de vídeos de melhores momentos | Hipótese de maior frequência; prioridade alta | H |
+| A04 | Revisar, selecionar e baixar cortes e metadados | Profissional responsável pela geração de vídeos de melhores momentos | Hipótese de maior frequência (H07); prioridade alta | H |
+
+> A01–A04 descrevem atividades previstas para a **aplicação potencial**, não práticas atuais conhecidas do público. Hoje não sabemos se editores processam partidas em lote ou acompanham estados de processamento; o processo atual hipotético está descrito na seção 4.1.
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-[H] H07 — Selecionar/exportar os resultados processados. Para gerar compilações, ou editar em softwares externos para publicar em outras mídias.
+[H] H07 — Revisar, selecionar e baixar os resultados processados (A04). Esses resultados seriam usados para gerar compilações ou continuar a edição em softwares externos antes da publicação.
+
+Essa finalidade explica **para que** os resultados serão usados, mas não sustenta sozinha **por que** essa seria a atividade mais frequente. O raciocínio provisório é que um único envio de partida pode gerar vários cortes, cada um revisado e eventualmente baixado, de modo que a revisão se repetiria mais vezes do que o envio. Não há dado de frequência; isso será investigado nas Entregas 5 e 7.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-[H] H08 — Processar os vídeos em lote. Se for mal executada as consequências podem ser: necessidade de retrabalho, custo de processamento da inferência da LLM, perda de arquivos.
+[H] H08 — Processar os vídeos em lote (A01). Se for mal executada as consequências podem ser: necessidade de retrabalho, custo de processamento da inferência da LLM e perda de arquivos. "Perda de arquivos" reúne situações diferentes, que não presumimos indistintamente:
+
+- **perda do original:** a gravação enviada deixa de estar disponível. [?] Não sabemos se o editor mantém cópia local; se mantiver, a consequência é reenviar, não perder a partida;
+- **indisponibilidade dos resultados:** o processamento termina, mas cortes ou metadados não ficam acessíveis para download (H26);
+- **reprocessamento:** o envio ou o processamento falha, total ou parcialmente, e a partida precisa ser processada de novo, com novo tempo de espera e novo custo de inferência (H16).
+
+**Frequência, prioridade e criticidade não são a mesma coisa.** Frequência indica quantas vezes a atividade ocorre; criticidade, a gravidade da consequência quando ela falha; prioridade é a decisão de projeto que combina as duas com o objetivo do usuário. Por isso A04 pode ser a mais frequente (H07) e A01 a mais crítica (H08) sem contradição: supomos que uma falha no envio ou no processamento bloqueia todas as atividades seguintes daquela partida e gera custo de inferência, enquanto um erro na revisão poderia ser corrigido revisando ou baixando novamente. Ambas recebem prioridade alta por razões diferentes.
 
 ---
 
@@ -188,17 +203,38 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 [F] Materiais oficiais da [WSC Sports](https://wsc-sports.com/platform/) e da [Magnifi](https://www.magnifi.ai/product) mostram que o mercado possui fluxos de segmentação e classificação durante transmissões ao vivo. Este projeto não adota esse contexto. Conforme H11 e H12, o recorte escolhido é a pós-produção de partidas encerradas, quando o editor recebe a gravação integral e prepara os melhores momentos.
 
+[H] Detalhamento de H11: no recorte escolhido, supomos que o processo atual do editor seja o seguinte, ainda sem investigação com profissionais:
+
+1. **Recebe o material:** obtém a gravação integral da partida encerrada (arquivo enviado pela produção, transmissão gravada ou outra origem a investigar) e a importa em um editor não linear, como Adobe Premiere Pro ou DaVinci Resolve (seção 6.1, H17).
+2. **Identifica os trechos:** percorre a gravação, avançando e voltando, para localizar candidatos a lance (gols, defesas, finalizações perigosas, ocorrências disciplinares) e os marca com marcadores ou anotações de timecode.
+3. **Decide os limites:** para cada lance, escolhe onde o corte começa e termina, decidindo quanto do que acontece antes e depois é necessário para o lance ser compreendido.
+4. **Prepara a seleção:** organiza os cortes escolhidos, descarta os que não servem à finalidade da compilação e segue para a montagem ou entrega o material a quem aprova a publicação (H14).
+
+Essa descrição deriva de H11 (seção 4.5) e das ferramentas listadas na seção 6.1. Sua validação está prevista para a Entrega 7.
+
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-[H] H09 — A análise depende da precisão e subjetividade do profissional, que pode estar sujeito a, por exemplo, se distrair e perdeu um highlight.
+[H] H09 — Percorrer manualmente uma gravação extensa é repetitivo e exige atenção contínua; por distração ou cansaço, o profissional pode deixar passar um lance que ele próprio consideraria relevante (omissão involuntária). Isso é diferente de descartar um lance por escolha editorial deliberada.
+
+[?] Ainda não sabemos quais critérios tornam um lance relevante para a finalidade de cada compilação. Não presumimos que exista uma única seleção correta para todas as situações; esses critérios serão investigados com editores na Entrega 7.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-[F] Contexto da partida de futebol.
+A tabela abaixo liga cada informação que supomos ser interpretada pelo editor à decisão que ela apoiaria. São questões de investigação, não requisitos confirmados:
+
+| Informação que supomos ser interpretada | Decisão que apoiaria | Status | Pergunta a investigar (Entrega 7) |
+|---|---|---|---|
+| Tipo de lance (gol, defesa, finalização, falta, cartão etc.) | Incluir ou não o lance na compilação, conforme sua finalidade | [H] | Conhecer o tipo de lance altera a seleção? Que tipos importam para cada finalidade? |
+| O que acontece antes e depois do lance | Onde o corte começa e termina | [H] | Observar a jogada que origina o lance e a reação posterior altera os limites do corte? |
+| Momento da partida e placar | Relevância relativa do lance (um gol de empate no fim vs. um gol em goleada) | [?] | O editor considera o placar e o minuto ao selecionar? |
+| Jogadores e equipes envolvidos | Seleção para compilações focadas em um atleta ou clube | [?] | Compilações por jogador ou equipe são comuns no público priorizado? (relacionada a H36) |
+| Finalidade e destino da compilação | Quantidade e duração dos cortes | [?] | Como a finalidade (rede social, programa, clube) muda o que é selecionado? |
+
+Sem essa ligação, timecodes, classificações e metadados poderiam apenas reproduzir a saída técnica do modelo sem demonstrar utilidade para o editor.
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-[H] H10 — Um lance possivelmente interessante da partida pode não estar devidamente rotulado pelo profissional, consequentemente, esse lance pode acabar ficando de fora de um vídeo de highlights final.
+[H] H10 — Quando o profissional deixa passar involuntariamente um lance que consideraria relevante, esse lance pode ficar de fora do vídeo final ou só ser recuperado depois, com retrabalho e atraso. Já quando o editor descarta um lance por critério editorial, não há falha: a mesma partida pode gerar seleções diferentes conforme a finalidade da compilação. Por isso, uma divergência entre o editor e uma sugestão automática não deve ser tratada como erro do usuário.
 
 ## 4.5 Conte uma situação concreta.
 
@@ -208,11 +244,15 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 ## 4.6 Que evidência existe hoje?
 
-| Evidência/fonte | O que sustenta | Limitação |
-|---|---|---|
-| AKAN, Sara; VARLI, Songül. Use of deep learning in soccer videos analysis: survey: S. Akan, S. Varlı. Multimedia Systems, v. 29, n. 3, p. 897-915, 2023. | A produção ainda depende fortemente de edição manual; melhores momentos pós-jogo têm relevância e diferentes tempos de entrega; a detecção deve considerar eventos além de gols | Estudo acadêmico com 25 partidas e foco no desempenho técnico; não investiga diretamente o fluxo de trabalho ou a experiência de editores profissionais |
-| YIN, Hongwei; SINNOTT, Richard O.; JAYAPUTERA, Glenn T. A survey of video-based human action recognition in team sports: H. Yin et al. Artificial intelligence review, v. 57, n. 11, p. 293, 2024. | Existem plataformas de mercado que analisam eventos, geram conteúdo e metadados e gerenciam ativos esportivos com IA | Fonte institucional e promocional; não oferece evidência independente de usabilidade ou adequação ao nosso público |
-| SEWERYN, Karolina; WRÓBLEWSKA, Anna; ŁUKASIK, Szymon. Survey of action recognition, spotting, and spatio-temporal localization in soccer—Current trends and research perspectives. ACM Transactions on Intelligent Systems and Technology, v. 17, n. 2, p. 1-37, 2026. | Existem soluções que recebem vídeo gravado em MP4, geram clips/tags e permitem baixar resultados, além de fluxos mais amplos de edição e publicação | Fonte institucional e comercial; funcionalidades e resultados anunciados ainda precisam de análise independente na Entrega 2 |
+| Evidência/fonte | Tipo de fonte | O que sustenta | Limitação |
+|---|---|---|---|
+| AKAN, Sara; VARLI, Songül. Use of deep learning in soccer videos analysis: survey: S. Akan, S. Varlı. Multimedia Systems, v. 29, n. 3, p. 897-915, 2023. | Artigo de revisão (survey) em periódico | A produção ainda depende fortemente de edição manual; melhores momentos pós-jogo têm relevância e diferentes tempos de entrega; a detecção deve considerar eventos além de gols | É um levantamento bibliográfico com foco no desempenho técnico dos métodos. O recorte de 25 partidas pertence a um estudo relatado pelo próprio levantamento, e não a uma coleta feita por Akan e Varlı; usamos o dado como referência indireta, não como evidência sobre editores. Não investiga diretamente o fluxo de trabalho ou a experiência de editores profissionais |
+| YIN, Hongwei; SINNOTT, Richard O.; JAYAPUTERA, Glenn T. A survey of video-based human action recognition in team sports: H. Yin et al. Artificial intelligence review, v. 57, n. 11, p. 293, 2024. | Artigo de revisão (survey) em periódico | Existem plataformas de mercado que analisam eventos, geram conteúdo e metadados e gerenciam ativos esportivos com IA | Revisão de literatura com foco técnico em reconhecimento de ações; menciona as plataformas sem avaliar sua usabilidade ou adequação ao editor escolhido |
+| SEWERYN, Karolina; WRÓBLEWSKA, Anna; ŁUKASIK, Szymon. Survey of action recognition, spotting, and spatio-temporal localization in soccer—Current trends and research perspectives. ACM Transactions on Intelligent Systems and Technology, v. 17, n. 2, p. 1-37, 2026. | Artigo de revisão (survey) em periódico | Existem soluções que recebem vídeo gravado, geram clipes/tags e permitem baixar resultados, além de fluxos mais amplos de edição e publicação | Revisão de literatura com foco técnico em detecção e localização de ações; não investiga o trabalho ou a experiência de editores profissionais |
+| [WSC Sports, página oficial da plataforma](https://wsc-sports.com/platform/) | Página institucional/comercial | A WSC Sports declara análise de eventos, criação automatizada de conteúdo, geração de metadados e gestão de ativos esportivos | Fonte institucional e promocional; não oferece evidência independente de usabilidade ou adequação ao nosso público. Análise da interface na Entrega 2, C06 |
+| [Magnifi, página do produto](https://www.magnifi.ai/product) e [FAQ](https://www.magnifi.ai/) | Página institucional/comercial | A Magnifi declara receber vídeo gravado em MP4, gerar e etiquetar cortes e permitir baixá-los ou distribuí-los | Fonte institucional e comercial; funcionalidades e resultados anunciados precisam de análise independente. Análise da interface na Entrega 2, C07 |
+
+> As afirmações sobre funcionalidades de produtos específicos vêm das páginas oficiais desses produtos; os artigos de revisão sustentam apenas o panorama técnico e de mercado que descrevem. Nenhuma das fontes investiga diretamente o editor de vídeo esportivo escolhido nesta disciplina.
 
 ---
 
@@ -372,26 +412,32 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| Economia de tempo | Necessidade de realizar manualmente cortes em vídeos brutos | Profissional responsável pela geração de vídeos de melhores momentos | H |
-| Redução da subjetividade | A seleção manual pode variar devido à interpretação humana, ao cansaço ou a falhas | Profissional responsável pela geração de vídeos de melhores momentos | H |
+| Economia de tempo | Necessidade de percorrer e recortar manualmente gravações extensas | Profissional responsável pela geração de vídeos de melhores momentos | [H] H02 |
+| Redução do esforço repetitivo | Assistir à partida inteira para localizar candidatos a lance exige atenção contínua e repetitiva | Profissional responsável pela geração de vídeos de melhores momentos | [H] H01, H09 |
+| Redução de omissões involuntárias e de retrabalho | Por cansaço ou distração, o editor pode deixar passar lances que ele próprio consideraria relevantes e precisar voltar à gravação | Profissional responsável pela geração de vídeos de melhores momentos | [H] H09, H10 |
+| Apoio ao julgamento editorial, sem substituí-lo | A seleção final depende da finalidade da compilação; a interface deve apresentar candidatos com contexto para o editor decidir | Profissional responsável pela geração de vídeos de melhores momentos | [?] critérios editoriais a investigar na Entrega 7 |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
+As ações abaixo usam os mesmos IDs das atividades da seção 3.2. Os IDs `F` ficam reservados a telas/fluxos, na seção 4 de [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
+
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | Enviar vídeos para processamento em lote | Iniciar a análise das partidas gravadas | alta |
-| F02 | Acompanhar estado, progresso e falhas | Saber se deve aguardar, corrigir uma entrada ou tentar novamente | alta |
-| F03 | Consultar o histórico de resultados | Retomar trabalhos anteriores e localizar resultados | média |
-| F04 | Revisar, selecionar e baixar cortes e metadados | Obter o material que seguirá para edição ou publicação externa | alta |
+| A01 | Enviar vídeos para processamento em lote | Iniciar a análise das partidas gravadas | alta |
+| A02 | Acompanhar estado, progresso e falhas | Saber se deve aguardar, corrigir uma entrada ou tentar novamente | alta |
+| A03 | Consultar o histórico de resultados | Retomar trabalhos anteriores e localizar resultados | média |
+| A04 | Revisar, selecionar e baixar cortes e metadados | Obter o material que seguirá para edição ou publicação externa | alta |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
 A tecnologia aparece **agora**, depois do entendimento do uso.
 
+> A definição técnica interna de cada restrição é aceita como tal; sua implicação para o usuário é hipótese. A coluna da direita separa o que o TCC efetivamente fornece do que ainda precisa ser investigado para ser comunicado de forma confiável.
+
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
-| Processamento de vídeo com visão computacional e LLMs multimodais | Núcleo do TCC: detecção e classificação dos melhores momentos | Tempo de processamento não trivial; a interface precisa comunicar fila, progresso e estimativas em vez de responder instantaneamente (H13) |
-| Custo de inferência da LLM | Cada processamento tem custo computacional/financeiro | Reprocessar não é gratuito; a interface deve evitar envios duplicados e deixar claro quando o custo foi gerado (H08, H16) |
+| Processamento de vídeo com visão computacional e LLMs multimodais | Núcleo do TCC: detecção e classificação dos melhores momentos | Tempo de processamento não trivial; a interface precisa comunicar que o trabalho está em andamento em vez de responder instantaneamente (H13). **O que o TCC fornece:** estados de execução do processamento. **A investigar:** se o backend expõe progresso parcial e se é possível estimar a duração de forma confiável; sem isso, a interface deve comunicar apenas estados (na fila, processando, concluído, falhou), sem prometer porcentagens ou prazos |
+| Custo de inferência da LLM | Cada processamento tem custo computacional/financeiro | Reprocessar não é gratuito; a interface deve ajudar a evitar envios duplicados (H08, H16). **A investigar:** como o custo é medido e atribuído a cada processamento, e se o editor é quem arca com ele ou precisa conhecê-lo; indicar "quando houve custo" só faz sentido se essa informação existir e for relevante para a decisão do editor |
 | Entrada em arquivo de vídeo (partidas gravadas, p. ex. MP4) | O escopo do TCC trabalha com partidas encerradas, não transmissão ao vivo | Upload de arquivos extensos; a interface precisa tratar upload lento/interrupto e formatos/limites ainda desconhecidos (H24, H26) |
 | Backend sem interface prevista originalmente | O TCC previa apenas o sistema de backend | A interface da disciplina é um protótipo demonstrativo; opções como web desktop ou aplicação desktop nativa permanecem em aberto (5.2) |
 | Saída em cortes de vídeo + arquivos de metadados | Formato de resultado definido pelo TCC | A interface precisa apresentar lances, timecodes e metadados de forma compreensível e permitir o download dos arquivos (H25) |
@@ -402,12 +448,12 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | O corte e a geração de melhores momentos são feitos manualmente, demandam tempo e estão sujeitos a cansaço e falhas humanas | Motiva o problema central do TCC; se for falsa, a solução perde a justificativa | Entrega 4 (cenários) e 7 (coleta de dados) |
-| H02 | Profissionais gastarão menos tempo e terão resultados menos sujeitos a variações | É o benefício esperado da solução; sustenta o valor percebido | Entrega 7 |
+| H01 | Para editores na pós-produção de partidas encerradas, o corte e a geração de melhores momentos são feitos manualmente, demandam tempo e esforço repetitivo, e o cansaço pode causar omissões involuntárias; a seleção em si é julgamento editorial | Motiva o problema central do TCC; se for falsa, a solução perde a justificativa | Entrega 4 (cenários) e 7 (coleta de dados) |
+| H02 | Profissionais gastarão menos tempo e terão menos esforço repetitivo, omissões involuntárias e retrabalho, mantendo a decisão editorial | É o benefício esperado da solução; sustenta o valor percebido | Entrega 7 |
 | H03 | O profissional responsável pelo corte é o usuário direto da aplicação | Define o usuário-alvo de todo o projeto de IHC | Entrega 3 (personas) e 7 |
-| H05 | O perfil tem baixo conhecimento técnico de software e computação | Influi na simplicidade e na linguagem da interface | Entrega 3 e 7 |
+| H05 | O editor domina ferramentas de edição, mas conhece pouco de programação e IA | Influi na linguagem, na ajuda e nos controles, sem tratar o editor como iniciante em edição | Entrega 3 e 7 |
 | H07 | Selecionar/exportar os resultados é a atividade mais frequente | Prioriza o fluxo principal da interface | Entrega 5 (análise de tarefas) e 7 |
-| H08 | Processar vídeos em lote é a atividade mais crítica | Prioriza tratamento de erro e confiabilidade | Entrega 5 e 7 |
+| H08 | Processar vídeos em lote é a atividade mais crítica (retrabalho, custo de inferência; "perda de arquivos" desdobrada em perda do original, indisponibilidade dos resultados e reprocessamento) | Prioriza tratamento de erro e confiabilidade | Entrega 5 e 7 |
 | H12 | O uso ocorre na pós-produção, após a partida; local exato desconhecido | Define o contexto de uso e requisitos de ambiente | Entrega 3 e 7 |
 | H13 | Arquivos extensos exigem armazenamento, banda e tempo; há pressão de prazo | Determina a necessidade de feedback de progresso e estados claros | Entrega 3 e 7 |
 | H17 | Editores já conhecem NLEs (Premiere, Resolve), player, marcadores e timecode | Define padrões e vocabulário de interface reaproveitáveis | Entrega 2 (concorrência), 3 e 6 |
@@ -422,11 +468,11 @@ Registro completo das hipóteses H01–H29 em [`../RASTREABILIDADE.md`](../RASTR
 |---|---|
 | Qual é a contribuição central do TCC? | Detectar melhores momentos em partidas gravadas e produzir cortes e metadados automaticamente |
 | O TCC já previa interface? | não |
-| Quem é o usuário prioritário de IHC? | editores de vídeo |
+| Quem é o usuário prioritário de IHC? | [H] editores de vídeo esportivo (H27) |
 | O que ele precisa alcançar? | obter cortes e metadados para continuar a produção de uma compilação |
-| Qual problema/atividade será estudado? | localizar, selecionar e recortar momentos de uma gravação extensa sob pressão de prazo, com risco de omissão e retrabalho |
-| Como isso acontece hoje? | o editor percorre a gravação, identifica os lances e prepara os cortes manualmente |
-| Qual é o contexto de uso? | pós-produção de partidas de futebol já encerradas |
+| Qual problema/atividade será estudado? | [H] no recorte inicial: localizar, selecionar e recortar momentos de uma gravação extensa sob pressão de prazo, com risco de omissão involuntária e retrabalho (H01, H09, H11) |
+| Como isso acontece hoje? | [H] supomos, ainda sem investigação, que o editor percorre a gravação, identifica os lances, decide os limites e prepara os cortes manualmente (seção 4.1) |
+| Qual é o contexto de uso? | [H] pós-produção de partidas de futebol já encerradas (H12); local e equipamentos ainda desconhecidos |
 | Que interface/recorte será explorado? | protótipo para computador, web ou nativo, com envio, acompanhamento, revisão e download |
 | Como a interface se relaciona ao TCC? | demonstra como um editor poderia fornecer vídeos e utilizar os cortes e metadados produzidos pelo backend |
 | Quais pontos ainda são hipóteses? | H01–H29, consolidadas na seção 10 e em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md); as prioritárias são H01, H02, H03, H05, H07, H08, H12, H13, H17, H27 e H28 |
@@ -463,11 +509,11 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** localizar e recortar manualmente melhores momentos em gravações extensas exige atenção contínua e pode causar omissões e retrabalho.
+1. **Problema/atividade humana:** no recorte inicial que estamos investigando, supomos que editores localizam e recortam manualmente melhores momentos em gravações extensas, o que exige atenção contínua e pode causar omissões involuntárias e retrabalho.
 2. **Contribuição técnica do TCC:** um sistema híbrido de visão computacional detecta momentos e produz cortes e metadados.
 3. **Como uma pessoa poderia utilizar essa contribuição:** um editor envia a gravação, acompanha o processamento, revisa os resultados e baixa o material para continuar a produção.
 
-Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
+Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico. O item 1 continua sendo hipótese (H01, H09, H11): ao comunicar o projeto publicamente, a equipe deve apresentá-lo como problema a investigar, não como fato estabelecido.
 
 ---
 
@@ -491,3 +537,10 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 - [x] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
 - [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
 - [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+
+---
+
+## Histórico de revisões
+
+- 13/08/2026: versão original.
+- 02/10/2026: aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md). Correções prioritárias 1 a 5 e recomendações de melhoria tratadas, cada uma com anotação e link de commit no parecer: tabela de evidências da seção 4.6, benefício da seção 9.1 sem "redução da subjetividade", processo atual em 4.1 e informações da decisão em 4.3, valor em uso em 1.5 e H05, responsabilidades e identificadores F01–F03. Nenhuma hipótese foi marcada como validada.
