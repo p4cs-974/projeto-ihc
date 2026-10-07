@@ -17,6 +17,23 @@
 > | Registro da revisão | cabeçalho, matriz e índice do README | [`9fbbef5`](https://github.com/p4cs-974/projeto-ihc/commit/9fbbef5), [`c0bf81e`](https://github.com/p4cs-974/projeto-ihc/commit/c0bf81e) |
 >
 > \- Pedro
+>
+> **Atualização da aplicação (07/10/2026):** esta revisão cobre o cenário de Lucas (C02, Arnaldo) e os alinhamentos correspondentes em `RASTREABILIDADE.md` e cabeçalho/histórico de revisões. C03, de Giovanni, fica sob sua responsabilidade.
+>
+> | Item do parecer | Situação | Commit(s) |
+> |---|---|---|
+> | Correção 1: numerar as questões e indicar as respostas | aplicada em C02 | [`8f6c9e3`](https://github.com/p4cs-974/projeto-ihc/commit/8f6c9e3) |
+> | Correção 2: questões que investigam informação ausente | aplicada em C02 | [`8f6c9e3`](https://github.com/p4cs-974/projeto-ihc/commit/8f6c9e3) |
+> | Correção 3: planejamento, ações, eventos e avaliação | aplicada em C02 | [`480c8ab`](https://github.com/p4cs-974/projeto-ihc/commit/480c8ab) |
+> | Correção 4: suposições e diagnóstico | aplicada em C02 | [`470b32c`](https://github.com/p4cs-974/projeto-ihc/commit/470b32c) |
+> | Correção 5: necessidades sem solução presumida | aplicada em C02 | [`470b32c`](https://github.com/p4cs-974/projeto-ihc/commit/470b32c) |
+> | Recomendação: evitar adjetivos como "engessado" ou "caótico" | aplicada em C02 | [`480c8ab`](https://github.com/p4cs-974/projeto-ihc/commit/480c8ab) |
+> | Recomendação: desfecho com conseguido, pendente e avaliação | aplicada em C02 | [`470b32c`](https://github.com/p4cs-974/projeto-ihc/commit/470b32c) |
+> | Recomendação: sincronizar personas e contexto | aplicada entre C02 e P02 (H40 e H41) | [`470b32c`](https://github.com/p4cs-974/projeto-ihc/commit/470b32c) |
+> | Pontos para as próximas entregas | registrados na matriz para C02 (seção 2.2) | [`db092bb`](https://github.com/p4cs-974/projeto-ihc/commit/db092bb) |
+> | Registro da revisão | cabeçalho, matriz e histórico em docs/04 | [`db092bb`](https://github.com/p4cs-974/projeto-ihc/commit/db092bb) |
+>
+> \- Lucas
 
 ## Avaliação geral
 
@@ -49,6 +66,10 @@ A finalidade é permitir que o leitor acompanhe o percurso entre lacuna, pergunt
 > **⏭️ Fora desta revisão:** C02 e C03 continuam com **[NOVO]** e ficam com Lucas e Giovanni.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`8f6c9e3`](https://github.com/p4cs-974/projeto-ihc/commit/8f6c9e3)): as questões de C02 foram numeradas de 1 a 7 na tabela de questões e a narrativa refinada indica entre colchetes a questão respondida em cada trecho (como **[1]**, **[2, 7]**, **[3]**, **[4]**, **[5, 6]**). Os trechos que retomam a versão inicial ficam sem número. A marca **[NOVO]** foi removida de C02. C03 fica com Giovanni.
+>
+> \- Lucas
 
 ### 2. Garantir que cada questão investigue informação ausente do cenário inicial
 
@@ -67,6 +88,10 @@ Revisem cada uma das sete perguntas de cada cenário. Mantenham pelo menos uma q
 > **⏭️ Fora desta revisão:** as perguntas de C02 e C03 ficam com Lucas e Giovanni.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`8f6c9e3`](https://github.com/p4cs-974/projeto-ihc/commit/8f6c9e3)): a tabela de C02 ganhou a coluna "Já informado na versão inicial", com cada questão partindo de uma lacuna real (ausência de dados de contexto nos cortes, simultaneidade de demandas, fluxo entre salas e chat, critérios de aprovação de corte). As respostas trazem informações que não constavam da narrativa inicial. As perguntas de C03 ficam sob responsabilidade de Giovanni.
+>
+> \- Lucas
 
 ### 3. Distinguir planejamento, ações, eventos e avaliação
 
@@ -81,6 +106,10 @@ Em todos os cenários, diferenciem o plano que o personagem formula, aquilo que 
 > **⏭️ Fora desta revisão:** a resposta de ações e a linha de eventos de C02 ficam com Lucas.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`480c8ab`](https://github.com/p4cs-974/projeto-ihc/commit/480c8ab)): na tabela de elementos extraídos de C02, as ações observáveis foram reescritas como comportamentos físicos e operacionais diretos (reproduzir lances, solicitar ajuste pelo chat, abrir mensagens, aprovar corte, solicitar retirada de publicação), e a linha de eventos passou a registrar estritamente acontecimentos externos à vontade de Arnaldo (chegada de mensagens de repórteres, cobrança urgente para redes sociais, alerta de seguidor sobre corte truncado). Planejamento e avaliação mantêm distinção explícita com indicação das questões de origem. C03 fica com Giovanni.
+>
+> \- Lucas
 
 ### 4. Manter as narrativas concretas sem transformar suposições em diagnóstico
 
@@ -95,6 +124,10 @@ Ajustem também a expressão de que o relato “reflete a realidade”, presente
 > **⏭️ Fora desta revisão:** a cadeia causal técnica e o "reflete a realidade" de C03 ficam com Giovanni; as reações da audiência e da direção em C02 ficam com Lucas.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`470b32c`](https://github.com/p4cs-974/projeto-ihc/commit/470b32c)): nas implicações de C02, as reações da audiência e a cobrança da direção foram delimitadas como parâmetros narrativos hipotéticos construídos para ilustrar o risco editorial, sem pretensão de medição empírica. Hipóteses H40 e H41 foram vinculadas e etiquetadas com [H]. A cadeia causal técnica de C03 fica com Giovanni.
+>
+> \- Lucas
 
 ### 5. Derivar necessidades sem presumir que a solução já as resolve
 
@@ -111,6 +144,10 @@ C02, por sua vez, é válido para compreender o problema editorial mesmo com a p
 > **⏭️ Fora desta revisão:** H36, H37 e o encerramento de C03 ficam com Giovanni; as necessidades de C02 ficam com Lucas.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`470b32c`](https://github.com/p4cs-974/projeto-ihc/commit/470b32c)): as implicações de C02 delimitam as necessidades editoriais derivadas (reduzir tempo de conferência, ter metadados contextuais, manter rastreabilidade de aprovação) sem antecipar soluções de software nem assumir que o sistema gerenciará a supervisão ampla da emissora. Questões de adequação e limites foram explicitadas. Implicações de C03 ficam com Giovanni.
+>
+> \- Lucas
 
 ## Recomendações de melhoria
 
@@ -119,24 +156,40 @@ C02, por sua vez, é válido para compreender o problema editorial mesmo com a p
   > **🟨 Tratado em parte** ([`06dd91a`](https://github.com/p4cs-974/projeto-ihc/commit/06dd91a)): a versão inicial de C01 narra um dia de trabalho com início, atividade e dificuldade, sem antecipar o que as questões investigam. As de C02 e C03 ficam com Lucas e Giovanni.
   >
   > \- Pedro
+  >
+  > **✅ Como foi tratado por Lucas** ([`8f6c9e3`](https://github.com/p4cs-974/projeto-ihc/commit/8f6c9e3)): a versão inicial de C02 narra o episódio concreto do sábado de rodada de Arnaldo na redação da emissora esportiva, detalhando início, atividade e a dificuldade de conciliar múltiplas demandas sob pressão de tempo. A de C03 fica com Giovanni.
+  >
+  > \- Lucas
 
 - Evitem repetir adjetivos como “engessado” ou “caótico” quando o próprio acontecimento pode demonstrar o problema. A fila de decisões, as interrupções e o retrabalho comunicam melhor a dificuldade.
 
   > **ℹ️ Encaminhamento:** C01 não usa esses adjetivos; o problema aparece pela interrupção, pelo corte sem contexto e pelo retrabalho. "Engessado" e "caótico" estão em C02, que fica com Lucas.
   >
   > \- Pedro
+  >
+  > **✅ Como foi tratado por Lucas** ([`480c8ab`](https://github.com/p4cs-974/projeto-ihc/commit/480c8ab)): os adjetivos "engessado" e "caótico" foram removidos da caracterização e da narrativa de C02, substituídos pela descrição concreta dos fatos (fila de mensagens simultâneas, interrupções frequentes e necessidade de refazer checagens).
+  >
+  > \- Lucas
 
 - Façam cada desfecho indicar o que o personagem conseguiu, o que ficou pendente e como avaliou o resultado. Isso ajuda a distinguir objetivo, consequência e avaliação.
 
   > **🟨 Tratado em parte** ([`65bcb05`](https://github.com/p4cs-974/projeto-ihc/commit/65bcb05)): o desfecho de C01 diz o que Rafael conseguiu (cortes revisados e corrigidos, entregues a Arnaldo), o que ficou pendente (conferência dos trechos avançados) e como avalia o resultado (cortes compreensíveis, sem segurança sobre a cobertura). C02 e C03 ficam com Lucas e Giovanni.
   >
   > \- Pedro
+  >
+  > **✅ Como foi tratado por Lucas** ([`470b32c`](https://github.com/p4cs-974/projeto-ihc/commit/470b32c)): o desfecho de C02 foi estruturado com o que Arnaldo conseguiu (liberação dos cortes urgentes e publicação a tempo), o que ficou pendente (revisão aprofundada de dois lances secundários) e sua avaliação do resultado (alívio pelo cumprimento do prazo, mas insegurança sobre a cobertura completa sem contexto). C03 fica com Giovanni.
+  >
+  > \- Lucas
 
 - Atualizem as características das personas e do contexto quando novos detalhes narrativos forem adotados. Mantenham a origem hipotética e evitem atribuir à ficha anterior informações que foram introduzidas somente no refinamento.
 
   > **🟨 Tratado em parte** ([`daec541`](https://github.com/p4cs-974/projeto-ihc/commit/daec541)): C01 adota o contexto de P01 da Entrega 3 revisada: sala dividida com outros dois editores, seleção entregue no mesmo dia em uma pasta e aviso a Arnaldo pelo chat, que decide o que segue para a montagem (H39, H40 e H41). A ficha de P01 cita a estratégia atual detalhada em C01 como escolha narrativa do cenário. A sincronização de C02 com P02 e de C03 com P03 fica com Lucas e Giovanni.
   >
   > \- Pedro
+  >
+  > **✅ Como foi tratado por Lucas** ([`470b32c`](https://github.com/p4cs-974/projeto-ihc/commit/470b32c)): C02 foi sincronizado com a persona P02 (Arnaldo) revisada na Entrega 03, alinhando a rotina de supervisor editorial, o uso do chat e da pasta compartilhada, e vinculando formalmente as hipóteses H40 e H41 com tags epistêmicas. C03 fica com Giovanni.
+  >
+  > \- Lucas
 
 ## Pontos que devem alimentar as próximas entregas
 
@@ -147,6 +200,10 @@ A investigação com usuários deverá testar a plausibilidade e a relevância d
 > **🟨 Tratado em parte** ([`d696e16`](https://github.com/p4cs-974/projeto-ihc/commit/d696e16)): a matriz ganhou a seção 2.2, com os aspectos de C01 a investigar na Entrega 7, ligados às questões numeradas, às hipóteses e à tarefa afetada na Entrega 5. As implicações de C01 apontam para essa seção e separam problema, necessidades e alternativas. A tarefa de origem passou a ser localizar, selecionar e revisar lances, incluindo decisões diante de dúvidas e omissões. As linhas de C02 e C03 ficam com Lucas e Giovanni.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`db092bb`](https://github.com/p4cs-974/projeto-ihc/commit/db092bb)): a tabela da seção 2.2 de `RASTREABILIDADE.md` foi preenchida para C02, documentando os aspectos a investigar na Entrega 07 (critérios de aprovação rápida, tolerância a cortes imperfeitos e impacto de interrupções na conferência), vinculados às questões 1 a 7, às hipóteses H40 e H41 e às tarefas da Entrega 05. Implicações de C02 apontam para essa seção. C03 fica com Giovanni.
+>
+> \- Lucas
 
 ## Síntese das ações recomendadas
 
@@ -159,5 +216,9 @@ A investigação com usuários deverá testar a plausibilidade e a relevância d
 > **Situação:** os cinco itens estão aplicados em C01, com registro no cabeçalho e na matriz ([`9fbbef5`](https://github.com/p4cs-974/projeto-ihc/commit/9fbbef5)). C02 e C03 ficam com Lucas e Giovanni (ver tabela no início).
 >
 > \- Pedro
+>
+> **✅ Situação para C02** ([`db092bb`](https://github.com/p4cs-974/projeto-ihc/commit/db092bb)): os itens pertinentes a C02 foram aplicados, com registros no cabeçalho, na matriz de rastreabilidade e no histórico de `docs/04_cenarios_problema.md`. C03 segue sob responsabilidade de Giovanni.
+>
+> \- Lucas
 
 De modo geral, considero que a equipe cumpriu a quantidade de cenários e construiu situações pertinentes, com versões refinadas que tornam os problemas mais compreensíveis. A entrega ainda precisa de revisão para atender ao processo de refinamento solicitado: as perguntas devem revelar lacunas reais, as respostas precisam ser localizáveis na narrativa e os elementos do método devem permanecer conceitualmente distintos. Com esses ajustes, o material poderá sustentar a análise de tarefas com mais clareza e coerência, sem depender de soluções antecipadas ou de benefícios presumidos.
