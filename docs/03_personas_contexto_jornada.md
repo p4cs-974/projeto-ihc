@@ -122,9 +122,15 @@ Essas decisões são iniciais e deverão ser revistas com a coleta de dados.
 
 O avatar foi gerado por IA e é apenas ilustrativo. Aparência e idade aparente não representam dados coletados.
 
+**Biografia [H]:** Arnaldo Rocha tem 46 anos e atua no jornalismo esportivo há mais de vinte. Começou como repórter cinematográfico e editor de vídeo em coberturas regionais, passando por funções de coordenação técnica até assumir, há sete anos, o cargo de editor-chefe e supervisor de mídias digitais em uma emissora esportiva (cujas demandas de pós-produção alimentam a produtora de conteúdo parceira onde Rafael trabalha). Em dias de rodada intensa, coordena as equipes que cobrem múltiplos jogos simultâneos, sendo o responsável final por aprovar o que vai ao ar nas redes sociais e compactos digitais.
+
+Sua rotina sob pressão é marcada pelo modelo de supervisão que considera engessado: sem uma forma estruturada de acompanhar o andamento dos cortes, circula continuamente entre as ilhas de edição, consulta anotações manuais em prancheta e atende interrupções frequentes dos editores para validar lances duvidosos, conforme narrado no [cenário C02](04_cenarios_problema.md#cenário-c02--controle-do-processo-editorial-engessado). Sua maior motivação é garantir agilidade nas publicações para redes sociais sem incorrer em aprovações às cegas, temendo falhas de contexto que já provocaram despublicações emergenciais e desgaste com a direção e a audiência.
+
+Arnaldo não opera diretamente softwares de IA ou a interface do TCC; como persona atendida, seu contato com o produto se dá exclusivamente ao receber os arquivos baixados pelo editor. Trajetória, rotina e o receio de aprovações descontextualizadas são escolhas hipotéticas da proto-persona feitas com o autor, mantidas para justificar a necessidade de metadados legíveis e cortes contextualizados fora do produto.
+
 | Campo | Descrição |
 |---|---|
-| Faixa etária / contexto relevante | [?] Faixa etária não investigada. [H] Atuação na administração do conteúdo como um todo. |
+| Faixa etária / contexto relevante | [H] 46 anos; atua há mais de vinte anos no jornalismo esportivo, sete deles na supervisão atual. Atuação na administração e chancela editorial do conteúdo digital, H14 e H22. |
 | Ocupação/papel | [H] Administrador do setor de mídias digitais, responsável pela supervisão da produção e gerenciamento de conteúdo digital. |
 | Conhecimento do domínio | [H] Gerencia como o conteúdo trabalhado pelos editores deve ser tratado: fluxo de postagens em redes sociais, chancela de decisões editoriais. [?] Nível de experiência não investigado. |
 | Experiência tecnológica | [H] Baixo conhecimento técnico de software e computação, com possível baixa familiaridade com editores de vídeo, H34, proposta original do autor para P02. H05 e H17 descrevem o perfil de edição e não comprovam essa combinação para a supervisão. |
@@ -252,7 +258,7 @@ Fontes: [Entrega 1](01_conhecendo_o_problema.md), perfil P01 desta entrega e [hi
 ### Persona P02 — Arnaldo
 
 **Persona escolhida:** P02, Arnaldo  
-**Idade:** [?] Não investigada.  
+**Idade:** [H] 46 anos, característica da proto-persona.  
 **Justificativa:** Arnaldo representa a supervisão e administração do setor de mídias digitais/editor-chefe, destinatário indireto inicial dos cortes e metadados gerados (H14, H22, H23 e H33). Seu objetivo de supervisionar a produção, chancelar decisões editoriais e evitar aprovações às cegas de cortes esportivos se relaciona à entrega de material contextualizado e identificável pelo TCC.
 
 ![Mapa de empatia de Arnaldo](../assets/03_personas/mapa_empatia_p02.svg)
