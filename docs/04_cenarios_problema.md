@@ -144,20 +144,20 @@ Arnaldo precisa interromper o acompanhamento dos outros editores para intervir n
 
 ### 4. Elementos extraídos
 
-| Elemento | Evidência no cenário |
-|---|---|
-| Ambiente ou contexto | Dia de rodada esportiva na emissora, área de pós-produção com múltiplas ilhas de edição operando simultaneamente em partidas distintas, sob forte pressão de prazo para publicação em redes sociais. |
-| Ator | Arnaldo, P02, editor-chefe experiente encarregado da supervisão editorial e da chancela final das publicações. |
-| Objetivo | Garantir que o conteúdo publicado nas redes sociais e plataformas digitais cumpra as normas da emissora e mantenha alto padrão editorial, chancelado a tempo. |
-| Planejamento | Circular continuamente pelas ilhas de edição, monitorar as telas dos editores, manter anotações manuais sobre o andamento e atender pontualmente às dúvidas editoriais. |
-| Ações | Percorrer as salas de edição, inspecionar telas, dialogar com editores, anotar pendências, assistir a cortes pontuais nas ilhas de edição, chancelar aprovações sob pressão e ordenar a remoção/correção de vídeo com falha. |
-| Eventos | Acúmulo de partidas encerradas simultaneamente, solicitação de aprovação de múltiplos lotes em curto intervalo e publicação nas redes sociais de um corte com contexto incompleto (falta anterior ao gol suprimida). |
-| Avaliação | Julgar a pertinência editorial de lances com base na experiência acumulada, avaliar o risco de aprovar cortes "às cegas" para não atrasar a publicação e reconhecer o impacto negativo do vídeo incompleto publicado. |
-| Recursos e informações | Normas e diretrizes da emissora, estações/telas de edição dos editores, bloco de anotações manual, lances montados nas linhas do tempo e reações imediatas da audiência nas redes sociais. |
-| Problemas e rupturas | Supervisão manual e engessada, interrupções frequentes, sobrecarga cognitiva diante de múltiplos jogos simultâneos, aprovação "às cegas" por falta de tempo e publicação de conteúdo inconsistente. |
-| Consequências | Postagem com falha editorial, exposição negativa da emissora, cobrança da direção, retrabalho emergencial (remover, regravar e republicar) e exaustão com sensação de perda de controle do processo. |
+| Elemento | Evidência no cenário | Questão |
+|---|---|---|
+| Ambiente ou contexto | Dia de rodada esportiva na redação da emissora, área de pós-produção com múltiplas ilhas de edição operando simultaneamente em partidas distintas, articulada com a produtora e sob forte pressão de prazo para publicação em redes sociais. | 1 |
+| Ator | Arnaldo Rocha, P02, editor-chefe experiente encarregado da supervisão editorial e da chancela final das publicações. | 2 |
+| Objetivo | Garantir que o conteúdo publicado nas redes sociais cumpra as normas da emissora, com contexto suficiente e sem comprometer a imparcialidade, chancelado a tempo. | 3 |
+| Planejamento | Circular continuamente pelas ilhas de edição, observar as telas dos editores, manter anotações na prancheta sobre o andamento e priorizar o atendimento onde houver lances polêmicos. | 4 |
+| Ações | Caminhar entre as bancadas, inspecionar telas, dialogar com editores, anotar status na prancheta, sentar-se ou debruçar-se para assistir a trechos na linha do tempo, autorizar a continuidade verbalmente ou pelo chat, receber avisos pelo chat (H40, H41) e ordenar a remoção e refação de corte com falha. | 5 |
+| Eventos | Término quase simultâneo de várias partidas, fila de lotes aguardando aprovação, chamados concorrentes de editores, publicação nas redes sociais de corte sem a falta anterior, mensagens de contestação da audiência e ligação da diretoria cobrando explicações. | 6 |
+| Avaliação | Julgar a pertinência editorial de lances com base na experiência, avaliar o risco de aprovar cortes às pressas sem contexto, reconhecer o prejuízo à reputação do canal e, ao final, separar o que foi concluído do que ficou pendente e avaliar o desgaste do dia. | 7 |
+| Recursos e informações | Normas e diretrizes da emissora, estações e telas dos editores, prancheta com anotações manuais, lances montados nas linhas do tempo, chat interno e repercussão imediata nas redes sociais. | 1, 2, 3 |
+| Problemas e rupturas | Supervisão descentralizada por caminhada entre salas, interrupções frequentes no atendimento presencial, sobrecarga diante de múltiplos jogos simultâneos, aprovação às pressas por escassez de tempo e publicação de corte incompleto. | 2, 5, 6 |
+| Consequências | Postagem com falha de contexto, questionamento público de imparcialidade, cobrança da direção, retrabalho emergencial de remoção e nova montagem, atraso nas demais partidas e exaustão ao final da rodada. | 7 |
 
-Planejamento e avaliação descrevem atividades mentais; ações descrevem comportamentos observáveis. No episódio da postagem incorreta, a publicação do corte truncado e as críticas da audiência configuram os eventos, o julgamento de que o material é inaceitável e expõe a emissora representa a avaliação, e a ordem de remoção e refação do corte constituem as ações decorrentes.
+Planejamento e avaliação descrevem atividades mentais; ações descrevem comportamentos observáveis; eventos são acontecimentos que alteram a situação sem depender de Arnaldo. Decidir a ordem de percurso entre as ilhas é planejamento; caminhar até a estação e inspecionar a tela é a ação que executa o plano. No episódio da postagem incorreta, o encerramento simultâneo das partidas, a publicação do corte truncado e as mensagens da audiência configuram os eventos, o julgamento de que o vídeo compromete a reputação da emissora é a avaliação, e a ordem de remoção e o acompanhamento da refação do corte constituem as ações decorrentes.
 
 ### 5. Implicações para as próximas entregas
 
