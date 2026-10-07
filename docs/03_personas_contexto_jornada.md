@@ -376,6 +376,22 @@ A jornada inclui a preparação anterior ao envio e a continuidade da edição a
 **Objetivo da jornada:** [H] Supervisionar a produção de melhores momentos, consultar cortes e metadados recebidos externamente e chancelar decisões editoriais com rapidez e segurança, evitando aprovações às cegas e retrabalho, H33.  
 **Início e fim da jornada:** [H] Começa com o alinhamento das prioridades da rodada e o acompanhamento descentralizado das ilhas de edição, H14, e termina com a chancela editorial do material ou orientação de ajuste para montagem final externa, H33. Base: [Entrega 1](01_conhecendo_o_problema.md), seção 5.4, [Cenário C02](04_cenarios_problema.md#cenário-c02--controle-do-processo-editorial-engessado) e [hipóteses H33 a H35](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3).
 
+**Relato da jornada [H]:** o relato encadeia as etapas da tabela e descreve a supervisão editorial acompanhando o processo, sem atribuir a Arnaldo uso direto da interface do produto.
+
+É tarde de sábado de rodada e várias partidas decisivas ocorrem quase em simultâneo. Arnaldo chega à redação da emissora esportiva e reúne os editores para alinhar as pautas e definir quais jogos e lances são prioritários para publicação imediata nas redes sociais e quais alimentarão os compactos da noite (etapa 1).
+
+Enquanto os editores preparam e enviam as gravações para o processamento, Arnaldo acompanha a rotina das ilhas de edição. Não opera telas do sistema nem fica monitorando filas de upload; circula pelas estações de trabalho e anota em sua prancheta o andamento estimado de cada partida para antecipar a demanda de aprovação (etapa 2).
+
+Conforme os editores concluem o download dos cortes, Arnaldo recebe os pacotes de arquivos em pastas compartilhadas no servidor, acompanhados de metadados com identificação da partida e timecodes, recebendo avisos pelo chat interno (etapa 3).
+
+Em sua estação de trabalho ou debruçando-se na ilha do editor, Arnaldo inspeciona os cortes recebidos. Graças à margem temporal dos vídeos e aos timecodes legíveis, consegue avaliar a pertinência editorial e a imparcialidade dos lances em poucos minutos, sem precisar assistir aos 90 minutos de gravação e evitando aprovações às cegas (etapa 4).
+
+Se identifica uma divergência, como um corte que começa já no chute e omite a falta anterior na jogada, Arnaldo aciona o editor pelo chat ou presencialmente, aponta o timecode exato e solicita o ajuste do limite antes que o compacto seja fechado, evitando retrabalho amplo (etapa 5).
+
+Com a seleção validada, Arnaldo chancela a liberação editorial dos melhores momentos e autoriza a equipe de redes sociais e de pós-produção a prosseguir com a montagem final e a publicação externa (etapa 6).
+
+Após a postagem, acompanha a repercussão com a audiência e o retorno das redes. A jornada conclui-se com o ciclo editorial encerrado sem crises de despublicação. O benefício esperado é manter a agilidade das postagens em dias de rodada sem comprometer a precisão editorial da emissora (etapa 7).
+
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Alinha a pauta e as prioridades editoriais da rodada com os editores de vídeo na redação. | Definir quais partidas e lances têm prioridade de publicação nas redes da emissora. | [H] Pressão por agilidade na entrega logo após o apito final de múltiplos jogos simultâneos. | Demanda intensa e descentralizada; dificuldade de acompanhar vários editores ao mesmo tempo. | Permitir que o fluxo do sistema gere saídas organizadas por partida para orientar a entrega ao supervisor. | H14 e H22; cenário C02 |
@@ -395,6 +411,22 @@ A jornada de P02 opera em estreita articulação com a de P01: inicia-se na reda
 **Persona:** P03, Jorginho Jr.  
 **Objetivo da jornada:** [H] Obter cortes e metadados de partidas com lances de um jogador específico sem sobrecarregar seu computador, para montar compilações esportivas em ferramentas externas (como editores amadores de desktop ou mobile) e publicar em seus canais digitais, H06, H28, H36 e H37.  
 **Início e fim da jornada:** [H] Começa com o download ou obtenção das gravações de jogos da internet para selecionar lances de um atleta de interesse, H11 e H36, e termina com a exportação e publicação da compilação em suas redes sociais após a edição externa, H06 e H28. Base: [Entrega 1](01_conhecendo_o_problema.md), seções 4.5 e 7.3, [perfil P03](03_personas_contexto_jornada.md#persona-p03--jorginho-jr), [hipóteses H36 a H38](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3) e relações [R04 e R05](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos).
+
+**Relato da jornada [H]:** o relato encadeia as etapas da tabela e descreve o uso proposto por um criador amador, mantendo a distinção entre selecionar manualmente entre os cortes disponíveis e depender de detecção automática por atleta.
+
+É sábado à tarde e Jorginho Jr. quer produzir um compilado temático sobre as jogadas recentes de um jovem atacante para seu canal de futebol. Sentado diante de seu computador modesto, obtém na internet as gravações integrais das partidas recentes em que o atleta atuou, organizando os arquivos para não sobrecarregar seu disco rígido (etapa 1).
+
+Como sua máquina tem processamento fraco e pouca memória, Jorginho envia as gravações para processamento remoto pela interface da aplicação, transferindo a análise pesada de vídeo para o servidor e poupando CPU e disco locais (etapa 2).
+
+Durante o processamento remoto, não precisa ficar preso olhando a tela; aproveita a espera para estudar ou cumprir tarefas da casa, aguardando a indicação visual de término por partida (etapa 3).
+
+Caso uma das partidas aponte falha, consulta a mensagem em vocabulário simples e compreensível, sem jargões de computação, entendendo o problema daquele arquivo e continuando normalmente com os demais resultados concluídos (etapa 4).
+
+Com o processamento finalizado, revisa os cortes sugeridos assistindo às prévias com contexto temporal. Inspeciona manualmente os lances para identificar aqueles em que o atacante participa diretamente, ciente de que a detecção geral de melhores momentos pode incluir lances de outros jogadores e que o filtro automático por atleta ainda é uma hipótese em investigação técnica (etapa 5).
+
+Após selecionar os lances do atleta, confirma o download exclusivamente dos cortes escolhidos e seus metadados, economizando o espaço limitado de armazenamento do seu computador (etapa 6).
+
+Jorginho importa os cortes baixados em seu editor amador habitual (mobile ou desktop simples), insere trilha sonora e efeitos e publica o compilado em seu canal no YouTube. A jornada se encerra com o vídeo publicado dentro do prazo planejado e sem a exaustão da decupagem manual jogo a jogo (etapa 7).
 
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
 | --- | --- | --- | --- | --- | --- | --- |
