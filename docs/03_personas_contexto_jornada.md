@@ -109,7 +109,8 @@ Essas decisões são iniciais e deverão ser revistas com a coleta de dados.
 ### Persona P02 — Arnaldo
 
 **Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1
-**Tipo:** persona atendida, não usuária da interface; ver [composição e prioridade das personas](#composição-e-prioridade-das-personas)
+**Tipo:** persona atendida, não usuária da interface; ver [composição e prioridade das personas](#composição-e-prioridade-das-personas)  
+**Por que atendida:** Arnaldo não opera o produto diretamente no recorte adotado, mas depende do material recebido externamente (cortes e metadados) para sua decisão editorial. Suas necessidades recaem sobre o que Rafael baixa (identificação de partida, timecodes e contexto), sem justificar interface própria ou área administrativa. Ver [composição e prioridade das personas](#composição-e-prioridade-das-personas).
 
 **Base de evidências:** proto-persona proposta pelo autor na PR #5, ainda sem validação com usuários.
 
