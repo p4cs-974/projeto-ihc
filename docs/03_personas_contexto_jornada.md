@@ -1,8 +1,8 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 **Data:** 16/9/2026 (versão original)  
-**Revisão:** 03/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md)  
-**Status:** 🟨 em revisão após feedback; P01 e partes do grupo revisadas; P02, P03 e seus mapas e jornadas aguardam Lucas e Giovanni; validação com usuários pendente
+**Revisão:** 07/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md) por Lucas (P02, mapas e jornadas de P02 e P03)  
+**Status:** 🟨 em revisão após feedback; P01, P02 e mapas e jornadas de P02 e P03 revisados; ficha individual de P03 aguarda Giovanni; validação com usuários pendente
 
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
@@ -557,3 +557,4 @@ H35, auditoria editorial, e H36, recorte por jogador, continuam exploratórias. 
 - 03/10/2026: aplicado o feedback do professor da Entrega 03 nas partes de Pedro (P01) e do grupo. P01 e P03 passam a primárias e P02 a persona atendida, com justificativa na composição das personas. Rafael ganhou biografia e idade; o contexto ganhou as condições físicas e sociais da produtora e da casa de P03; a jornada de P01 ganhou relato encadeado; mapa e jornada de P01 separam o comportamento atual do uso proposto. Registradas H39 a H41. As fichas, mapas e jornadas de P02 e P03 ficam com seus autores.
 
 - 03/10/2026: a ficha de P01 passa a citar, em Comportamentos relevantes, a estratégia atual detalhada no cenário C01 durante a aplicação do feedback da Entrega 04. É escolha narrativa do cenário, sem evidência empírica.
+- 07/10/2026: aplicação do feedback do professor da Entrega 03 por Lucas (P02, mapas de empatia e jornadas de P02 e P03). P02 formalizada como persona atendida com justificativa; adicionadas idade (46 anos) e biografia de Arnaldo Rocha; adicionados relatos narrativos das jornadas de P02 e P03; mapas de empatia de P02 e P03 estruturados com separação de hoje e uso proposto e tabelas ligando dores a necessidades; ajustadas formulações de interface e oportunidades de design nas jornadas; atualizados os SVGs mapa_empatia_p02.svg e mapa_empatia_p03.svg. A ficha de P03 permanece sob responsabilidade de Giovanni.
