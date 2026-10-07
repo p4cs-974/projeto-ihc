@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1380" height="880" viewBox="0 0 1380 880" role="img" aria-labelledby="title desc">
+  <title id="title">Diagrama HTA — Tarefa T02: Supervisionar processo editorial</title>
+  <desc id="desc">Decomposição hierárquica de tarefas (HTA) da tarefa de Arnaldo Rocha (P02), cobrindo monitoramento de fila, inspeção contextualizada de cortes, deliberação editorial e contingência emergencial.</desc>
+  
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 15px; fill: #475569; }
+      .node-root { fill: #1e293b; stroke: #0f172a; stroke-width: 2; rx: 8; }
+      .node-root-txt { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 16px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+      .node-root-sub { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #cbd5e1; text-anchor: middle; }
+      
+      .node-lvl1 { fill: #ffffff; stroke: #2563eb; stroke-width: 2; rx: 6; }
+      .node-lvl1-title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13.5px; font-weight: 700; fill: #1e3a8a; text-anchor: middle; }
+      .node-lvl1-sub { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11.5px; fill: #475569; text-anchor: middle; }
+      
+      .node-lvl2 { fill: #ffffff; stroke: #64748b; stroke-width: 1.5; rx: 5; }
+      .node-lvl2-title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #1e293b; text-anchor: middle; }
+      .node-lvl2-sub { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 10.5px; fill: #64748b; text-anchor: middle; }
+      
+      .plan-box { fill: #eff6ff; stroke: #93c5fd; stroke-width: 1.5; rx: 5; }
+      .plan-txt { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11.5px; font-weight: 600; fill: #1d4ed8; text-anchor: middle; }
+      
+      .line { stroke: #94a3b8; stroke-width: 2; fill: none; }
+      .line-alert { stroke: #ef4444; stroke-width: 2; stroke-dasharray: 4 4; fill: none; }
+      
+      .legend-box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 6; }
+      .legend-txt { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11px; fill: #334155; }
+    </style>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1380" height="880" class="bg"/>
+
+  <!-- Cabeçalho -->
+  <text x="40" y="46" class="title">HTA — T02: Supervisionar processo editorial</text>
+  <text x="40" y="72" class="subtitle">Autor: Lucas Roberto Boccia dos Santos (22.123.012-1) • Persona: P02 (Arnaldo Rocha) • Cenário: C02</text>
+
+  <!-- Linhas estruturais tronco -->
+  <path d="M 690 170 L 690 220" class="line"/>
+  <path d="M 170 220 L 1210 220" class="line"/>
+  
+  <path d="M 170 220 L 170 270" class="line"/>
+  <path d="M 510 220 L 510 270" class="line"/>
+  <path d="M 870 220 L 870 270" class="line"/>
+  <path d="M 1210 220 L 1210 270" class="line-alert"/>
+
+  <!-- NÓ RAIZ (0) -->
+  <g transform="translate(470, 95)">
+    <rect width="440" height="75" class="node-root"/>
+    <text x="220" y="32" class="node-root-txt">0. Supervisionar processo editorial esportivo</text>
+    <text x="220" y="52" class="node-root-sub">Chancelar seleções de cortes para redes sociais sob pressão de rodada</text>
+    <text x="220" y="67" class="node-root-sub" fill="#93c5fd">Plano 0: 1 > 2 > 3 por lote recebido; em caso de crise/contestação: 4</text>
+  </g>
+
+  <!-- ================= RAMO 1 ================= -->
+  <!-- NÓ 1 -->
+  <g transform="translate(45, 270)">
+    <rect width="250" height="65" class="node-lvl1"/>
+    <text x="125" y="27" class="node-lvl1-title">1. Monitorar status de partidas e fila</text>
+    <text x="125" y="44" class="node-lvl1-sub">Acompanhar encerramentos e entregas</text>
+    <text x="125" y="57" class="node-lvl1-sub" fill="#2563eb">Plano 1: 1.1 > 1.2 > 1.3</text>
+  </g>
+  
+  <!-- Linhas Ramo 1 -->
+  <path d="M 170 335 L 170 380" class="line"/>
+  <path d="M 75 380 L 265 380" class="line"/>
+  <path d="M 75 380 L 75 420" class="line"/>
+  <path d="M 170 380 L 170 420" class="line"/>
+  <path d="M 265 380 L 265 420" class="line"/>
+
+  <!-- Subnós Ramo 1 -->
+  <g transform="translate(10, 420)">
+    <rect width="130" height="60" class="node-lvl2"/>
+    <text x="65" y="24" class="node-lvl2-title">1.1. Consultar lista</text>
+    <text x="65" y="40" class="node-lvl2-sub">Jogos da rodada</text>
+    <text x="65" y="52" class="node-lvl2-sub">e prazos de post</text>
+  </g>
+  <g transform="translate(150, 420)">
+    <rect width="130" height="60" class="node-lvl2"/>
+    <text x="65" y="24" class="node-lvl2-title">1.2. Localizar lote</text>
+    <text x="65" y="40" class="node-lvl2-sub">Receber cortes e</text>
+    <text x="65" y="52" class="node-lvl2-sub">aviso do editor</text>
+  </g>
+  <g transform="translate(290, 420)">
+    <rect width="130" height="60" class="node-lvl2"/>
+    <text x="65" y="24" class="node-lvl2-title">1.3. Priorizar fila</text>
+    <text x="65" y="40" class="node-lvl2-sub">Ordenar por prazo</text>
+    <text x="65" y="52" class="node-lvl2-sub">e relevância do jogo</text>
+  </g>
+
+  <!-- ================= RAMO 2 ================= -->
+  <!-- NÓ 2 -->
+  <g transform="translate(370, 270)">
+    <rect width="280" height="65" class="node-lvl1"/>
+    <text x="140" y="27" class="node-lvl1-title">2. Inspecionar lote e metadados</text>
+    <text x="140" y="44" class="node-lvl1-sub">Verificar conformidade temporal e editorial</text>
+    <text x="140" y="57" class="node-lvl1-sub" fill="#2563eb">Plano 2: 2.1 > 2.2 > (se polêmico: 2.3)</text>
+  </g>
+
+  <!-- Linhas Ramo 2 -->
+  <path d="M 510 335 L 510 380" class="line"/>
+  <path d="M 405 380 L 615 380" class="line"/>
+  <path d="M 405 380 L 405 420" class="line"/>
+  <path d="M 510 380 L 510 420" class="line"/>
+  <path d="M 615 380 L 615 420" class="line"/>
+
+  <!-- Subnós Ramo 2 -->
+  <g transform="translate(340, 420)">
+    <rect width="130" height="60" class="node-lvl2"/>
+    <text x="65" y="23" class="node-lvl2-title">2.1. Ler metadados</text>
+    <text x="65" y="39" class="node-lvl2-sub">Partida, timecodes,</text>
+    <text x="65" y="51" class="node-lvl2-sub">rótulos de eventos</text>
+  </g>
+  <g transform="translate(480, 420)">
+    <rect width="130" height="60" class="node-lvl2"/>
+    <text x="65" y="23" class="node-lvl2-title">2.2. Avaliar cobertura</text>
+    <text x="65" y="39" class="node-lvl2-sub">Conferir lances</text>
+    <text x="65" y="51" class="node-lvl2-sub">capitais presentes</text>
+  </g>
+  <g transform="translate(620, 420)">
+    <rect width="140" height="60" class="node-lvl2"/>
+    <text x="70" y="23" class="node-lvl2-title">2.3. Checar contexto</text>
+    <text x="70" y="39" class="node-lvl2-sub">Reproduzir trechos</text>
+    <text x="70" y="51" class="node-lvl2-sub">duvidosos com margem</text>
+  </g>
+
+  <!-- ================= RAMO 3 ================= -->
+  <!-- NÓ 3 -->
+  <g transform="translate(735, 270)">
+    <rect width="270" height="65" class="node-lvl1"/>
+    <text x="135" y="27" class="node-lvl1-title">3. Deliberar decisão editorial</text>
+    <text x="135" y="44" class="node-lvl1-sub">Aprovar lote ou orientar ajustes pontuais</text>
+    <text x="135" y="57" class="node-lvl1-sub" fill="#2563eb">Plano 3: (3.1 OU 3.2) > 3.3</text>
+  </g>
+
+  <!-- Linhas Ramo 3 -->
+  <path d="M 870 335 L 870 380" class="line"/>
+  <path d="M 770 380 L 970 380" class="line"/>
+  <path d="M 770 380 L 770 420" class="line"/>
+  <path d="M 870 380 L 870 420" class="line"/>
+  <path d="M 970 380 L 970 420" class="line"/>
+
+  <!-- Subnós Ramo 3 -->
+  <g transform="translate(705, 420)">
+    <rect width="130" height="60" class="node-lvl2"/>
+    <text x="65" y="23" class="node-lvl2-title">3.1. Chancelar lote</text>
+    <text x="65" y="39" class="node-lvl2-sub">Liberar cortes para</text>
+    <text x="65" y="51" class="node-lvl2-sub">montagem e posts</text>
+  </g>
+  <g transform="translate(845, 420)">
+    <rect width="130" height="60" class="node-lvl2"/>
+    <text x="65" y="23" class="node-lvl2-title">3.2. Devolver ajuste</text>
+    <text x="65" y="39" class="node-lvl2-sub">Indicar corte ou</text>
+    <text x="65" y="51" class="node-lvl2-sub">timecode a rever</text>
+  </g>
+  <g transform="translate(985, 420)">
+    <rect width="130" height="60" class="node-lvl2"/>
+    <text x="65" y="23" class="node-lvl2-title">3.3. Comunicar editor</text>
+    <text x="65" y="39" class="node-lvl2-sub">Registrar chancela</text>
+    <text x="65" y="51" class="node-lvl2-sub">ou instrução no chat</text>
+  </g>
+
+  <!-- ================= RAMO 4 ================= -->
+  <!-- NÓ 4 (Contingência) -->
+  <g transform="translate(1075, 270)">
+    <rect width="270" height="65" class="node-lvl1" stroke="#dc2626"/>
+    <text x="135" y="27" class="node-lvl1-title" fill="#b91c1c">4. Tratar contingência de post</text>
+    <text x="135" y="44" class="node-lvl1-sub">Intervenção urgente pós-publicação</text>
+    <text x="135" y="57" class="node-lvl1-sub" fill="#dc2626">Plano 4: 4.1 > 4.2 > 4.3 (urgente)</text>
+  </g>
+
+  <!-- Linhas Ramo 4 -->
+  <path d="M 1210 335 L 1210 380" class="line-alert"/>
+  <path d="M 1115 380 L 1305 380" class="line-alert"/>
+  <path d="M 1115 380 L 1115 420" class="line-alert"/>
+  <path d="M 1210 380 L 1210 420" class="line-alert"/>
+  <path d="M 1305 380 L 1305 420" class="line-alert"/>
+
+  <!-- Subnós Ramo 4 -->
+  <g transform="translate(1055, 420)">
+    <rect width="120" height="60" class="node-lvl2" stroke="#ef4444"/>
+    <text x="60" y="23" class="node-lvl2-title">4.1. Despublicar</text>
+    <text x="60" y="39" class="node-lvl2-sub">Ordenar remoção</text>
+    <text x="60" y="51" class="node-lvl2-sub">imediata da rede</text>
+  </g>
+  <g transform="translate(1185, 420)">
+    <rect width="120" height="60" class="node-lvl2" stroke="#ef4444"/>
+    <text x="60" y="23" class="node-lvl2-title">4.2. Isolar falha</text>
+    <text x="60" y="39" class="node-lvl2-sub">Identificar corte</text>
+    <text x="60" y="51" class="node-lvl2-sub">sem lance anterior</text>
+  </g>
+  <g transform="translate(1315, 420)">
+    <rect width="120" height="60" class="node-lvl2" stroke="#ef4444"/>
+    <text x="60" y="23" class="node-lvl2-title">4.3. Reorientar</text>
+    <text x="60" y="39" class="node-lvl2-sub">Coordenar refação</text>
+    <text x="60" y="51" class="node-lvl2-sub">urgente com editor</text>
+  </g>
+
+  <!-- TABELA DE PLANOS E OBSERVAÇÕES -->
+  <g transform="translate(45, 520)">
+    <rect width="1290" height="320" class="legend-box"/>
+    <text x="25" y="30" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#0f172a">Planos Operacionais e Decisões de Design (HTA)</text>
+    
+    <line x1="25" y1="42" x2="1265" y2="42" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <!-- Plano 0 -->
+    <rect x="25" y="55" width="80" height="24" class="plan-box"/>
+    <text x="65" y="71" class="plan-txt">Plano 0</text>
+    <text x="120" y="72" class="legend-txt" font-weight="600">Executar 1 > 2 > 3 para cada partida finalizada da rodada. Se surgir alerta de contestação pública ou erro de contexto, executar 4 com prioridade máxima.</text>
+
+    <!-- Plano 1 -->
+    <rect x="25" y="90" width="80" height="24" class="plan-box"/>
+    <text x="65" y="106" class="plan-txt">Plano 1</text>
+    <text x="120" y="106" class="legend-txt">Fazer 1.1 (conferir tabela da rodada e cronograma de postagens), depois 1.2 (identificar recebimento dos cortes na pasta do servidor) e 1.3 (priorizar lotes cujas partidas acabaram primeiro ou com maior apelo de audiência).</text>
+
+    <!-- Plano 2 -->
+    <rect x="25" y="125" width="80" height="24" class="plan-box"/>
+    <text x="65" y="141" class="plan-txt">Plano 2</text>
+    <text x="120" y="141" class="legend-txt">Fazer 2.1 (conferir metadados legíveis: placar, times, timecodes); fazer 2.2 (conferir se todos os gols/cartões esperados constam no lote). Se houver lance polêmico ou limítrofe, fazer 2.3 (reproduzir o corte verificando a margem anterior); senão, avançar diretamente para 3.</text>
+
+    <!-- Plano 3 -->
+    <rect x="25" y="160" width="80" height="24" class="plan-box"/>
+    <text x="65" y="176" class="plan-txt">Plano 3</text>
+    <text x="120" y="176" class="legend-txt">Decidir entre 3.1 (chancelar lote íntegro) OU 3.2 (devolver seleção indicando timecode do ajuste pontual). Em seguida, executar obrigatoriamente 3.3 (comunicar decisão pelo canal de chat ou registro compartilhado). Se 3.2 for acionado, aguardar reenvio e reexecutar Plano 2.</text>
+
+    <!-- Plano 4 -->
+    <rect x="25" y="195" width="80" height="24" class="plan-box" stroke="#f87171" fill="#fef2f2"/>
+    <text x="65" y="211" class="plan-txt" fill="#b91c1c">Plano 4</text>
+    <text x="120" y="211" class="legend-txt" fill="#991b1b">Fluxo de contingência imediata: executar 4.1 (ordem expressa de retirada do vídeo da rede social) > 4.2 (inspecionar corte causador e recuperar o lance integral com o editor) > 4.3 (supervisionar refação urgente na ilha e autorizar republicação corrigida).</text>
+
+    <!-- Linha divisória -->
+    <line x1="25" y1="230" x2="1265" y2="230" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <text x="25" y="252" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#0f172a">Rastreabilidade e Decisões de Design Observadas:</text>
+    <text x="25" y="274" class="legend-txt">• <tspan font-weight="600">Gargalo do processo atual (C02):</tspan> Supervisão física andando entre salas gera interrupções constantes, filas cegas de aprovação e risco de omissão de faltas capitais.</text>
+    <text x="25" y="294" class="legend-txt">• <tspan font-weight="600">Impacto do TCC no fluxo de P02 (R03, H33, H40):</tspan> O editor (P01) baixa cortes já contextualizados (com pré-roll da jogada) e metadados estruturados. Arnaldo valida o material remotamente em sua estação, eliminando o modelo engessado e prevenindo aprovações às cegas.</text>
+  </g>
+</svg>

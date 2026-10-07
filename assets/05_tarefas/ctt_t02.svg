@@ -1,0 +1,295 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1380" height="920" viewBox="0 0 1380 920" role="img" aria-labelledby="ctt-title ctt-desc">
+  <title id="ctt-title">Diagrama CTT — Tarefa T02: Supervisionar processo editorial</title>
+  <desc id="ctt-desc">Modelagem ConcurTaskTrees (CTT) de Paternò para a supervisão editorial por Arnaldo Rocha (P02), detalhando tarefas abstratas, de usuário, de interação e de sistema, com operadores de habilitação, passagem de informação, escolha e desativação.</desc>
+  
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 15px; fill: #475569; }
+      
+      /* Caixas CTT por tipo de tarefa */
+      .task-abstract { fill: #f1f5f9; stroke: #475569; stroke-width: 2; rx: 6; }
+      .task-user { fill: #fef3c7; stroke: #d97706; stroke-width: 2; rx: 6; }
+      .task-interaction { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; rx: 6; }
+      .task-system { fill: #e0e7ff; stroke: #4f46e5; stroke-width: 2; rx: 6; }
+      .task-alert { fill: #fee2e2; stroke: #dc2626; stroke-width: 2; rx: 6; }
+      
+      .task-name { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12.5px; font-weight: 700; text-anchor: middle; fill: #0f172a; }
+      .task-badge { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 600; text-anchor: middle; fill: #475569; }
+      
+      /* Operadores temporais */
+      .op-badge { fill: #1e293b; rx: 4; }
+      .op-text { font-family: 'Courier New', monospace; font-size: 12.5px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+      .op-alert-badge { fill: #dc2626; rx: 4; }
+      
+      /* Linhas conectoras */
+      .conn { stroke: #64748b; stroke-width: 1.75; fill: none; }
+      .conn-alert { stroke: #ef4444; stroke-width: 2; stroke-dasharray: 4 3; fill: none; }
+      
+      /* Legenda */
+      .legend-card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 6; }
+      .legend-header { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 700; fill: #0f172a; }
+      .legend-item { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11.5px; fill: #334155; }
+    </style>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1380" height="920" class="bg"/>
+
+  <!-- Cabeçalho -->
+  <text x="40" y="44" class="title">CTT — T02: Supervisionar processo editorial</text>
+  <text x="40" y="70" class="subtitle">Notação ConcurTaskTrees (Paternò) • Autor: Lucas Roberto Boccia dos Santos (22.123.012-1) • Persona: P02 (Arnaldo)</text>
+
+  <!-- ================= NÍVEL 0: RAIZ ================= -->
+  <g transform="translate(480, 95)">
+    <rect width="420" height="60" class="task-abstract"/>
+    <!-- Ícone Abstrata (nuvem/bloco) -->
+    <rect x="15" y="16" width="26" height="26" rx="4" fill="#cbd5e1"/>
+    <text x="28" y="34" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="800" text-anchor="middle" fill="#1e293b">A</text>
+    <text x="230" y="32" class="task-name">Supervisionar processo editorial esportivo [T02]</text>
+    <text x="230" y="48" class="task-badge">Tarefa Abstrata • Meta Editorial Global</text>
+  </g>
+
+  <!-- Linha tronco raiz -->
+  <path d="M 690 155 L 690 195" class="conn"/>
+  <path d="M 450 195 L 1150 195" class="conn"/>
+  <path d="M 450 195 L 450 230" class="conn"/>
+  <path d="M 1150 195 L 1150 230" class="conn-alert"/>
+
+  <!-- Operador entre Ciclo Regular e Crise: [> (Desativação) -->
+  <g transform="translate(775, 183)">
+    <rect width="50" height="24" class="op-alert-badge"/>
+    <text x="25" y="17" class="op-text">[&gt;</text>
+  </g>
+
+  <!-- ================= NÍVEL 1: CICLO DE ROTINA vs CRISE ================= -->
+  
+  <!-- CICLO DE ROTINA -->
+  <g transform="translate(240, 230)">
+    <rect width="420" height="55" class="task-abstract"/>
+    <rect x="14" y="14" width="26" height="26" rx="4" fill="#cbd5e1"/>
+    <text x="27" y="32" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="800" text-anchor="middle" fill="#1e293b">A</text>
+    <text x="230" y="29" class="task-name">Ciclo regular de supervisão e chancela *</text>
+    <text x="230" y="44" class="task-badge">Tarefa Abstrata Iterativa (por partida/rodada)</text>
+  </g>
+
+  <!-- TRATAR CRISE / DESPUBLICAÇÃO -->
+  <g transform="translate(980, 230)">
+    <rect width="340" height="55" class="task-alert"/>
+    <rect x="14" y="14" width="26" height="26" rx="4" fill="#fca5a5"/>
+    <text x="27" y="32" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="800" text-anchor="middle" fill="#7f1d1d">A</text>
+    <text x="190" y="29" class="task-name" fill="#991b1b">Tratar crise de post / contingência</text>
+    <text x="190" y="44" class="task-badge" fill="#b91c1c">Tarefa Abstrata de Exceção Emergencial</text>
+  </g>
+
+  <!-- ================= NÍVEL 2: SUBTAREFAS DO CICLO REGULAR ================= -->
+  <!-- Linhas conectoras do ciclo de rotina -->
+  <path d="M 450 285 L 450 325" class="conn"/>
+  <path d="M 140 325 L 760 325" class="conn"/>
+  <path d="M 140 325 L 140 365" class="conn"/>
+  <path d="M 450 325 L 450 365" class="conn"/>
+  <path d="M 760 325 L 760 365" class="conn"/>
+
+  <!-- Operadores entre as três fases regulares: []>> (Habilitação com troca de dados) -->
+  <g transform="translate(265, 313)">
+    <rect width="60" height="24" class="op-badge"/>
+    <text x="30" y="17" class="op-text">[]&gt;&gt;</text>
+  </g>
+  <g transform="translate(575, 313)">
+    <rect width="60" height="24" class="op-badge"/>
+    <text x="30" y="17" class="op-text">[]&gt;&gt;</text>
+  </g>
+
+  <!-- FASE 1: Monitorar fila de entregas -->
+  <g transform="translate(30, 365)">
+    <rect width="220" height="55" class="task-abstract"/>
+    <text x="110" y="27" class="task-name">1. Monitorar fila</text>
+    <text x="110" y="43" class="task-badge">Abstrata: jogos e lotes</text>
+  </g>
+
+  <!-- FASE 2: Inspecionar lote e metadados -->
+  <g transform="translate(340, 365)">
+    <rect width="220" height="55" class="task-abstract"/>
+    <text x="110" y="27" class="task-name">2. Inspecionar cortes</text>
+    <text x="110" y="43" class="task-badge">Abstrata: contexto e dados</text>
+  </g>
+
+  <!-- FASE 3: Deliberar decisão editorial -->
+  <g transform="translate(650, 365)">
+    <rect width="220" height="55" class="task-abstract"/>
+    <text x="110" y="27" class="task-name">3. Deliberar decisão</text>
+    <text x="110" y="43" class="task-badge">Abstrata: aprovar ou ajustar</text>
+  </g>
+
+  <!-- ================= SUBTAREFAS DA FASE 1 (Monitorar fila) ================= -->
+  <path d="M 140 420 L 140 450" class="conn"/>
+  <path d="M 70 450 L 210 450" class="conn"/>
+  <path d="M 70 450 L 70 480" class="conn"/>
+  <path d="M 210 450 L 210 480" class="conn"/>
+
+  <!-- Operador entre 1.1 e 1.2: ||| (Concorrência independente) -->
+  <g transform="translate(115, 438)">
+    <rect width="50" height="22" class="op-badge"/>
+    <text x="25" y="16" class="op-text">|||</text>
+  </g>
+
+  <g transform="translate(10, 480)">
+    <rect width="120" height="55" class="task-interaction"/>
+    <!-- Ícone Interação -->
+    <text x="60" y="25" class="task-name">Consultar grade</text>
+    <text x="60" y="42" class="task-badge">Interação (Tabela)</text>
+  </g>
+  <g transform="translate(150, 480)">
+    <rect width="120" height="55" class="task-system"/>
+    <!-- Ícone Sistema -->
+    <text x="60" y="25" class="task-name">Receber aviso</text>
+    <text x="60" y="42" class="task-badge">Sistema (Chat/Fila)</text>
+  </g>
+
+  <!-- ================= SUBTAREFAS DA FASE 2 (Inspecionar cortes) ================= -->
+  <path d="M 450 420 L 450 450" class="conn"/>
+  <path d="M 330 450 L 570 450" class="conn"/>
+  <path d="M 330 450 L 330 480" class="conn"/>
+  <path d="M 450 450 L 450 480" class="conn"/>
+  <path d="M 570 450 L 570 480" class="conn"/>
+
+  <!-- Operadores entre 2.1, 2.2 e 2.3: >> e []>> -->
+  <g transform="translate(365, 439)">
+    <rect width="50" height="22" class="op-badge"/>
+    <text x="25" y="16" class="op-text">[]&gt;&gt;</text>
+  </g>
+  <g transform="translate(485, 439)">
+    <rect width="45" height="22" class="op-badge"/>
+    <text x="22.5" y="16" class="op-text">&gt;&gt;</text>
+  </g>
+
+  <g transform="translate(280, 480)">
+    <rect width="105" height="55" class="task-system"/>
+    <text x="52.5" y="23" class="task-name">Apresentar</text>
+    <text x="52.5" y="38" class="task-name">metadados</text>
+    <text x="52.5" y="50" class="task-badge">Sistema</text>
+  </g>
+  <g transform="translate(400, 480)">
+    <rect width="105" height="55" class="task-interaction"/>
+    <text x="52.5" y="23" class="task-name">Reproduzir</text>
+    <text x="52.5" y="38" class="task-name">corte no player</text>
+    <text x="52.5" y="50" class="task-badge">Interação</text>
+  </g>
+  <g transform="translate(520, 480)">
+    <rect width="115" height="55" class="task-user"/>
+    <text x="57.5" y="23" class="task-name">Avaliar contexto</text>
+    <text x="57.5" y="38" class="task-name">e imparcialidade</text>
+    <text x="57.5" y="50" class="task-badge">Usuário (Cognitiva)</text>
+  </g>
+
+  <!-- ================= SUBTAREFAS DA FASE 3 (Deliberar decisão) ================= -->
+  <path d="M 760 420 L 760 450" class="conn"/>
+  <path d="M 680 450 L 840 450" class="conn"/>
+  <path d="M 680 450 L 680 480" class="conn"/>
+  <path d="M 840 450 L 840 480" class="conn"/>
+
+  <!-- Operador entre alternativas de decisão: [] (Escolha) -->
+  <g transform="translate(735, 439)">
+    <rect width="50" height="22" class="op-badge"/>
+    <text x="25" y="16" class="op-text">[]</text>
+  </g>
+
+  <g transform="translate(640, 480)">
+    <rect width="110" height="55" class="task-interaction"/>
+    <text x="55" y="23" class="task-name">Chancelar lote</text>
+    <text x="55" y="38" class="task-name">integral</text>
+    <text x="55" y="50" class="task-badge">Interação</text>
+  </g>
+  <g transform="translate(770, 480)">
+    <rect width="130" height="55" class="task-interaction"/>
+    <text x="65" y="23" class="task-name">Apontar ajuste</text>
+    <text x="65" y="38" class="task-name">com timecode</text>
+    <text x="65" y="50" class="task-badge">Interação</text>
+  </g>
+
+  <!-- Ambas habilitam a comunicação final: >> Comunicar editor -->
+  <path d="M 745 535 L 745 560" class="conn"/>
+  <g transform="translate(720, 545)">
+    <rect width="50" height="22" class="op-badge"/>
+    <text x="25" y="16" class="op-text">&gt;&gt;</text>
+  </g>
+  <g transform="translate(685, 575)">
+    <rect width="150" height="50" class="task-interaction"/>
+    <text x="75" y="22" class="task-name">Transmitir despacho</text>
+    <text x="75" y="38" class="task-badge">Interação (Chat / Log)</text>
+  </g>
+
+  <!-- ================= SUBTAREFAS DA CRISE / CONTINGÊNCIA ================= -->
+  <path d="M 1150 285 L 1150 330" class="conn-alert"/>
+  <path d="M 1030 330 L 1270 330" class="conn-alert"/>
+  <path d="M 1030 330 L 1030 365" class="conn-alert"/>
+  <path d="M 1150 330 L 1150 365" class="conn-alert"/>
+  <path d="M 1270 330 L 1270 365" class="conn-alert"/>
+
+  <!-- Operadores entre passos da crise: >> (Habilitação sequencial urgente) -->
+  <g transform="translate(1070, 319)">
+    <rect width="40" height="22" class="op-alert-badge"/>
+    <text x="20" y="16" class="op-text">&gt;&gt;</text>
+  </g>
+  <g transform="translate(1190, 319)">
+    <rect width="40" height="22" class="op-alert-badge"/>
+    <text x="20" y="16" class="op-text">&gt;&gt;</text>
+  </g>
+
+  <g transform="translate(975, 365)">
+    <rect width="115" height="55" class="task-interaction" stroke="#ef4444"/>
+    <text x="57.5" y="23" class="task-name">Detectar erro</text>
+    <text x="57.5" y="38" class="task-name">ou contestação</text>
+    <text x="57.5" y="50" class="task-badge">Interação/Rede</text>
+  </g>
+  <g transform="translate(1100, 365)">
+    <rect width="110" height="55" class="task-user" stroke="#ef4444"/>
+    <text x="55" y="23" class="task-name">Determinar</text>
+    <text x="55" y="38" class="task-name">despublicação</text>
+    <text x="55" y="50" class="task-badge">Usuário (Decisão)</text>
+  </g>
+  <g transform="translate(1220, 365)">
+    <rect width="120" height="55" class="task-interaction" stroke="#ef4444"/>
+    <text x="60" y="23" class="task-name">Coordenar refação</text>
+    <text x="60" y="38" class="task-name">urgente na ilha</text>
+    <text x="60" y="50" class="task-badge">Interação com P01</text>
+  </g>
+
+  <!-- ================= QUADRO DE LEGENDA E OPERADORES CTT ================= -->
+  <g transform="translate(40, 650)">
+    <rect width="1300" height="240" class="legend-card"/>
+    <text x="25" y="28" class="legend-header">Legenda de Notação CTT (Fabio Paternò) e Relações Temporais Usadas no Modelo</text>
+    <line x1="25" y1="38" x2="1275" y2="38" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <!-- Tipos de Tarefas -->
+    <text x="25" y="60" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#1e293b">Tipos de Tarefas:</text>
+    
+    <!-- Abstrata -->
+    <rect x="25" y="72" width="18" height="18" class="task-abstract"/>
+    <text x="52" y="86" class="legend-item"><tspan font-weight="700">Tarefa Abstrata:</tspan> Composição hierárquica que agrupa subfluxos de naturezas distintas (ex.: ciclo regular, inspecionar cortes).</text>
+
+    <!-- Usuário -->
+    <rect x="25" y="98" width="18" height="18" class="task-user"/>
+    <text x="52" y="112" class="legend-item"><tspan font-weight="700">Tarefa de Usuário:</tspan> Processamento cognitivo, análise crítica ou julgamento humano puramente mental (ex.: avaliar contexto do lance).</text>
+
+    <!-- Interação -->
+    <rect x="25" y="124" width="18" height="18" class="task-interaction"/>
+    <text x="52" y="138" class="legend-item"><tspan font-weight="700">Tarefa de Interação:</tspan> Ação direta entre a pessoa e a interface/computador (ex.: reproduzir corte, digitar timecode, despachar).</text>
+
+    <!-- Sistema -->
+    <rect x="25" y="150" width="18" height="18" class="task-system"/>
+    <text x="52" y="164" class="legend-item"><tspan font-weight="700">Tarefa do Sistema:</tspan> Processamento executado automaticamente pela máquina (ex.: carregar metadados, emitir alerta na fila).</text>
+
+    <!-- Coluna de Operadores Temporais -->
+    <line x1="680" y1="48" x2="680" y2="225" stroke="#f1f5f9" stroke-width="2"/>
+    <text x="700" y="60" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#1e293b">Operadores Temporais CTT Aplicados:</text>
+
+    <text x="700" y="86" class="legend-item"><tspan font-family="'Courier New', monospace" font-weight="700" fill="#1d4ed8">T1 []&gt;&gt; T2</tspan> : <tspan font-weight="600">Habilitação com troca de informação</tspan> — T1 conclui e passa metadados/dados essenciais para disparar T2.</text>
+    <text x="700" y="112" class="legend-item"><tspan font-family="'Courier New', monospace" font-weight="700" fill="#1d4ed8">T1 &gt;&gt; T2</tspan> : <tspan font-weight="600">Habilitação simples</tspan> — A conclusão de T1 é pré-requisito obrigatório para o início de T2.</text>
+    <text x="700" y="138" class="legend-item"><tspan font-family="'Courier New', monospace" font-weight="700" fill="#1d4ed8">T1 [] T2</tspan> : <tspan font-weight="600">Escolha</tspan> — Alternativa exclusiva entre métodos (chancelar lote íntegro OU solicitar ajuste pontual ao editor).</text>
+    <text x="700" y="164" class="legend-item"><tspan font-family="'Courier New', monospace" font-weight="700" fill="#dc2626">T1 [&gt; T2</tspan> : <tspan font-weight="600">Desativação (Disabling)</tspan> — T2 (crise/despublicação) interrompe e desativa a execução normal de T1 (ciclo de rotina).</text>
+    <text x="700" y="190" class="legend-item"><tspan font-family="'Courier New', monospace" font-weight="700" fill="#1d4ed8">T1 ||| T2</tspan> : <tspan font-weight="600">Concorrência independente</tspan> — Tarefas executadas em paralelo sem ordem fixa (consultar grade e receber avisos).</text>
+    <text x="700" y="214" class="legend-item"><tspan font-family="'Courier New', monospace" font-weight="700" fill="#1d4ed8">T*</tspan> : <tspan font-weight="600">Iteração</tspan> — A tarefa repete ciclicamente para cada partida finalizada da rodada esportiva.</text>
+  </g>
+</svg>
