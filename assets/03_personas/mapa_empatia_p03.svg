@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1240" viewBox="0 0 1440 1240" role="img" aria-labelledby="title desc">
 <title id="title">Mapa de empatia de Jorginho Jr., persona P03</title>
-<desc id="desc">Proto-persona de criador de conteúdo amador. Seis dimensões sintetizam hipóteses das entregas 1 e 3; a dimensão Ouve permanece não investigada. Não há falas ou observações coletadas.</desc>
+<desc id="desc">Proto-persona de criador de conteúdo amador. Seis dimensões sintetizam hipóteses das entregas 1 e 3; a dimensão Ouve permanece não investigada. Os campos Vê, Fala e faz e Necessidades separam o comportamento atual do uso proposto. Não há falas ou observações coletadas.</desc>
 <rect width="1440" height="1240" fill="#f1f5f9"/>
 <g font-family="Arial, sans-serif" fill="#172b42">
 <text x="48" y="60" font-size="32" font-weight="700">Mapa de empatia • Jorginho Jr.</text>
 <text x="48" y="99" font-size="21">Nome: Jorginho Jr. • P03 • Criador de conteúdo amador • Idade: [H] 12 a 24 anos (a validar)</text>
 <text x="48" y="137" font-size="19">Produzir compilações de um jogador específico e obter cortes com menor esforço manual em hardware modesto.</text>
-<text x="48" y="174" font-size="18" fill="#475569">Proto-persona sem validação empírica. [H] Hipótese • [?] Lacuna • Não há falas coletadas.</text>
+<text x="48" y="174" font-size="18" fill="#475569">Proto-persona sem validação empírica. [H] Hipótese • [?] Lacuna • Em azul: uso proposto, não comportamento atual.</text>
 <rect x="48" y="206" width="1344" height="940" fill="white" stroke="#94a3b8"/>
 <path d="M48 206 L1392 926 M1392 206 L48 926" stroke="#94a3b8" stroke-dasharray="7 6"/>
 <path d="M48 926 H1392 M720 926 V1146" stroke="#94a3b8"/>
@@ -15,21 +15,22 @@
 <path d="M674 592 Q674 562 720 562 Q766 562 766 592" fill="#64748b"/>
 <text x="720" y="625" text-anchor="middle" font-size="22" font-weight="700">Jorginho Jr. • P03</text>
 <text x="1150" y="475" text-anchor="middle" font-size="24" font-weight="700">O que vê?</text>
-<text x="1150" y="510" text-anchor="middle" font-size="19">[H] Gravações extensas baixadas e canais</text>
-<text x="1150" y="537" text-anchor="middle" font-size="19">concorrentes. No uso proposto, vê o estado</text>
-<text x="1150" y="564" text-anchor="middle" font-size="19">das partidas e confere a lista de cortes gerados.</text>
-<text x="1150" y="591" text-anchor="middle" font-size="16">Base: H08, H25, H36 e H37</text>
+<text x="1150" y="510" text-anchor="middle" font-size="19">Hoje [H]: gravações longas baixadas e vídeos</text>
+<text x="1150" y="537" text-anchor="middle" font-size="19">de canais concorrentes no YouTube.</text>
+<text x="1150" y="564" text-anchor="middle" font-size="19" fill="#0369a1">Proposto: estado de partidas e lista</text>
+<text x="1150" y="591" text-anchor="middle" font-size="19" fill="#0369a1">de cortes no servidor remoto.</text>
+<text x="1150" y="618" text-anchor="middle" font-size="16">Base: H08, H25, H36 e H37</text>
 <text x="290" y="475" text-anchor="middle" font-size="24" font-weight="700">O que ouve?</text>
 <text x="290" y="510" text-anchor="middle" font-size="19">[H] Reações da audiência, preferências de</text>
 <text x="290" y="537" text-anchor="middle" font-size="19">inscritos e comentários de outros criadores. [?]</text>
 <text x="290" y="564" text-anchor="middle" font-size="19">Evidências reais ainda não foram investigadas.</text>
 <text x="290" y="591" text-anchor="middle" font-size="16">Base: H06 e H19 • lacuna de pesquisa</text>
 <text x="720" y="745" text-anchor="middle" font-size="24" font-weight="700">O que fala e faz?</text>
-<text x="720" y="780" text-anchor="middle" font-size="19">[H] Envia partidas inteiras e aguarda o servidor remoto.</text>
-<text x="720" y="807" text-anchor="middle" font-size="19">Revisa cortes buscando lances de um atleta específico</text>
-<text x="720" y="834" text-anchor="middle" font-size="19">e baixa o material para editar em apps amadores/mobile.</text>
-<text x="720" y="861" text-anchor="middle" font-size="19">[?] Não há falas coletadas.</text>
-<text x="720" y="888" text-anchor="middle" font-size="16">Base: H28, H36, H37 e H38 • comportamentos de P03</text>
+<text x="720" y="780" text-anchor="middle" font-size="19">Hoje [H]: percorre jogos longos no computador,</text>
+<text x="720" y="807" text-anchor="middle" font-size="19">desacelera e fatia trechos manualmente.</text>
+<text x="720" y="834" text-anchor="middle" font-size="19" fill="#0369a1">Proposto: envia partidas para processamento remoto,</text>
+<text x="720" y="861" text-anchor="middle" font-size="19" fill="#0369a1">revisa cortes do atleta e baixa para app amador.</text>
+<text x="720" y="888" text-anchor="middle" font-size="16">[?] Não há falas coletadas • Base: H28, H36 e H37</text>
 <text x="720" y="260" text-anchor="middle" font-size="24" font-weight="700">O que pensa e sente?</text>
 <text x="720" y="295" text-anchor="middle" font-size="19">[H] Frustra-se ao gastar horas assistindo a jogos longos.</text>
 <text x="720" y="322" text-anchor="middle" font-size="19">Sonha em crescer no YouTube e receia que travamentos</text>
@@ -42,11 +43,11 @@
 <text x="385" y="1101" text-anchor="middle" font-size="19">desistir do canal por exaustão na decupagem.</text>
 <text x="385" y="1128" text-anchor="middle" font-size="16">Base: H01, H11, H36 e H37</text>
 <text x="1055" y="985" text-anchor="middle" font-size="24" font-weight="700">Quais são as necessidades?</text>
-<text x="1055" y="1020" text-anchor="middle" font-size="19">[H] Encontrar rapidamente lances de um atleta em</text>
-<text x="1055" y="1047" text-anchor="middle" font-size="19">múltiplos jogos, sem sobrecarregar sua máquina.</text>
-<text x="1055" y="1074" text-anchor="middle" font-size="19">Baixar cortes com contexto e metadados para</text>
-<text x="1055" y="1101" text-anchor="middle" font-size="19">concluir a edição fora da ferramenta (inclusive mobile).</text>
-<text x="1055" y="1128" text-anchor="middle" font-size="16">Base: H06, H10, H24, H25, H28, H36, H37 e H38</text>
+<text x="1055" y="1020" text-anchor="middle" font-size="19">Hoje [H]: achar lances de atletas específicos</text>
+<text x="1055" y="1047" text-anchor="middle" font-size="19">sem sobrecarregar seu computador modesto.</text>
+<text x="1055" y="1074" text-anchor="middle" font-size="19" fill="#0369a1">Proposto: baixar cortes com contexto e metadados</text>
+<text x="1055" y="1101" text-anchor="middle" font-size="19" fill="#0369a1">para concluir edição fora (inclusive mobile).</text>
+<text x="1055" y="1128" text-anchor="middle" font-size="16">Base: H06, H10, H24, H25, H28, H36 e H37</text>
 <text x="48" y="1183" font-size="17" fill="#475569">Modelo: CC8122-Personas, slides 11 e 12. Fontes: Entrega 1, P03 e hipóteses H36 a H38.</text>
-<text x="48" y="1212" font-size="17" fill="#475569">Síntese da equipe • 30/09/2026 • As descrições representam hipóteses, não resultados de pesquisa.</text>
+<text x="48" y="1212" font-size="17" fill="#475569">Síntese da equipe • versão de 07/10/2026 • As descrições representam hipóteses, não resultados de pesquisa.</text>
 </g></svg>

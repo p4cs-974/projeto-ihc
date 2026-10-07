@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Análise de coerência documental · Entregas 3 e 4 · 07/10/2026</title>
+<style>
+:root{color-scheme:light dark;--bg:#fafafa;--fg:#171717;--line:#aaa;--link:#004da8;--soft:#ececec}
+@media(prefers-color-scheme:dark){:root{--bg:#000;--fg:#fff;--line:#626262;--link:#8fc6ff;--soft:#141414}}
+*{box-sizing:border-box}html{scroll-padding-top:20px}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-wrap:anywhere}
+main{max-width:1120px;margin:auto;padding:30px 28px 70px}h1{font-size:34px;line-height:1.2;margin:16px 0}h2{font-size:25px;line-height:1.3;margin:38px 0 14px}h3{font-size:21px;line-height:1.35;margin:0 0 12px}h4{font-size:16px;margin:18px 0 8px}p{margin:10px 0 14px}a{color:var(--link);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}a:focus-visible,summary:focus-visible{outline:2px solid var(--link);outline-offset:4px}code{font:0.87em/1.6 ui-monospace,SFMono-Regular,Consolas,monospace}ul{margin:10px 0 20px;padding-left:23px}li{margin:8px 0}.signature{margin:0;font-size:13px}.meta{font-size:14px}.lead{font-size:18px;max-width:950px}nav{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0}.table-scroll{overflow-x:auto;max-width:100%}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th,td{vertical-align:top;border-bottom:1px solid var(--line);padding:10px 12px}th{font-weight:650}thead{background:var(--soft)}.ticket{border-top:1px solid var(--line);padding:25px 0 12px;margin-top:25px}.ticket h3{max-width:1000px}details{border-top:1px solid var(--line);padding:13px 0}summary{cursor:pointer;font-weight:600}.paths{font-size:13px;columns:2;column-gap:30px}.paths li{break-inside:avoid}footer{margin-top:32px;border-top:1px solid var(--line);padding-top:16px;font-size:14px}
+@media(max-width:600px){main{padding:20px 16px 45px}h1{font-size:27px}h2{font-size:23px}h3{font-size:20px}.lead{font-size:17px}th,td{padding:8px}.paths{columns:1}.meta{line-height:1.7}}
+@media print{:root{--bg:#fff;--fg:#171717;--line:#aaa;--link:#171717;--soft:#eee}main{max-width:none;padding:0}nav{display:none}.ticket{break-inside:avoid}}
+</style></head><body><main>
+<header><p class="signature">Gemini 3.8 Flash (High) no Antigravity CLI</p>
+<h1>Análise de coerência documental · Entregas 3 e 4</h1>
+<p class="meta">07/10/2026 às 01:30 UTC-03:00 · Branch <code>feedbacke3e4-robertinho</code> · Status da análise: <strong>Pendente</strong></p>
+<p class="meta">5 tickets: 5 pendentes, 0 aplicados, 0 descartados. Gravidade: 0 alta, 5 média, 0 baixa. Confiança: 5 sustentados, 0 precisa de revisão.</p>
+<p class="lead"><strong>Conclusão da auditoria.</strong> Esta nova auditoria documental reavalia as Entregas 3 (<code>docs/03_personas_contexto_jornada.md</code>) e 4 (<code>docs/04_cenarios_problema.md</code>) após a aplicação integral das correções cabíveis a Lucas (P02/Arnaldo Rocha, C02 e os mapas e jornadas coletivos em E3). Constata-se que todos os artefatos de Pedro (P01 e C01) e de Lucas (P02 e C02, além dos mapas de empatia com Hoje/Uso Proposto e jornadas encadeadas) encontram-se metodologicamente rigorosos, plenamente rastreados na seção 2.2 de <code>RASTREABILIDADE.md</code> e anotados nos pareceres dos professores. As pendências documentais remanescentes concentram-se de forma exclusiva nos artefatos individuais sob responsabilidade de Giovanni: a ficha de P03 (Jorginho Jr.) mantém promessa contraditória de ausência de armazenamento local e recorte etário indefinido sem biografia, e o cenário C03 carece de numeração nas questões de refinamento, preserva marcadores genéricos [NOVO], apoia-se em determinismo técnico de hardware, omite aspectos na matriz e antecipa a solução em seu desfecho.</p>
+</header>
+<nav aria-label="Seções do relatório"><a href="#escopo">Escopo</a><a href="#alinhados">Pontos alinhados</a><a href="#tickets">Tickets</a><a href="#pendencias">Pendências por autor</a><a href="#cobertura">Cobertura</a><a href="#limites">Verificações e limites</a></nav>
+
+<section id="escopo"><h2>Escopo e autoridade dos documentos</h2>
+<p>Auditoria focalizada nos documentos <code>docs/03_personas_contexto_jornada.md</code> e <code>docs/04_cenarios_problema.md</code>, tendo como contexto o repositório completo (150 arquivos fora de <code>.git</code>). Foram examinados os pareceres <code>feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md</code> e <code>feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md</code>, a matriz <code>RASTREABILIDADE.md</code>, o índice <code>README.md</code>, os artefatos vetoriais em <code>assets/03_personas/</code> e o histórico das 14 análises de coerência anteriores (incluindo o acompanhamento atualizado em <code>07-10-2026-00-52.html</code>).</p>
+<p>A autoridade das decisões fundamenta-se nos objetivos do TCC (sistema híbrido de visão computacional para detecção de melhores momentos esportivos) e na delimitação de escopo de IHC consolidada nas Entregas 1 e 2 (fluxo de enviar gravações, acompanhar processamento, revisar com contexto e baixar cortes, sem edição detalhada interna nem ferramentas de publicação/CMS).</p>
+</section>
+
+<section id="alinhados"><h2>Pontos já alinhados</h2><ul>
+<li><strong>Alinhamento e solidez de P01 e C01 (Pedro).</strong> Rafael Moura conta com nome completo, idade (31 anos), biografia contextualizada, mapa de empatia com Hoje e Uso Proposto separados (texto e SVG) e jornada com relato encadeado. O cenário C01 apresenta questões numeradas de 1 a 7, narrativa referenciada por colchetes, distinção rigorosa entre planejamento, ações observáveis, eventos externos e avaliação, além de aspectos a investigar documentados na seção 2.2 da matriz.</li>
+<li><strong>Alinhamento e solidez de P02 e C02 (Lucas).</strong> Arnaldo Rocha conta com nome completo, idade ([H] 46 anos), justificativa explícita de persona atendida (Alan Cooper), biografia contextualizada em 4 parágrafos e sincronização no arquivo visual <code>mapa_empatia_p02.svg</code>. O cenário C02 possui questões numeradas de 1 a 7 com a coluna "Já informado na versão inicial", narrativa com respostas indicadas entre colchetes sem marcadores [NOVO], distinção conceitual estrita entre ações observáveis e eventos externos, desfecho estruturado nas três dimensões exigidas (conseguido, pendente e avaliação), vocabulário factual sem termos vagos ("engessado" ou "caótico") e 7 linhas mapeadas na seção 2.2 de <code>RASTREABILIDADE.md</code>.</li>
+<li><strong>Mapas de empatia e jornadas encadeadas coletivas (Entrega 3).</strong> Todos os três mapas de empatia (P01, P02 e P03) separam estruturadamente Hoje e Uso Proposto tanto nas tabelas quanto nos arquivos SVG correspondentes, empregando diferenciação cromática, e possuem tabelas de vinculação entre dores e necessidades. Todas as três jornadas contam com subseções de relatos narrativos encadeados, com neutralidade de plataforma ("interface da aplicação") assegurada na jornada de P03.</li>
+<li><strong>Preservação e rastreabilidade dos pareceres dos professores.</strong> Os feedbacks das Entregas 03 e 04 mantêm integralmente o texto do professor e registram blocos circunstanciados e assinados por Pedro e por Lucas, mapeando commits e justificativas para cada item tratado.</li>
+<li><strong>Acompanhamento de análises anteriores.</strong> O relatório <code>analises de coerencia/07-10-2026-00-52.html</code> teve seu status atualizado para "Em andamento", com os 7 tickets de responsabilidade de Lucas devidamente registrados como aplicados e documentados com seus respectivos hashes.</li>
+</ul></section>
+
+<section id="tickets"><h2>Tickets</h2>
+<p>Identificadores de AC-056 a AC-060 atribuídos aos achados documentados nesta auditoria. Todos representam a persistência das pendências de Giovanni registradas nos relatórios anteriores (AC-048, AC-049, AC-051, AC-053 e AC-054 de 07/10/2026 às 00:52).</p>
+<div class="table-scroll" role="region" aria-label="Índice de tickets" tabindex="0"><table><thead><tr><th>ID</th><th>Achado</th><th>Gravidade</th><th>Confiança</th><th>Status</th></tr></thead><tbody>
+<tr><th scope="row"><a href="#AC-056">AC-056</a></th><td>Decisão de design da ficha de P03 promete ausência de armazenamento em fluxo com arquivos locais</td><td>Média</td><td>Sustentado</td><td>Pendente</td></tr>
+<tr><th scope="row"><a href="#AC-057">AC-057</a></th><td>Assimetria de caracterização e ausência de biografia estruturada na ficha individual de P03</td><td>Média</td><td>Sustentado</td><td>Pendente</td></tr>
+<tr><th scope="row"><a href="#AC-058">AC-058</a></th><td>Ausência de numeração nas questões de refinamento e marca genérica [NOVO] em C03</td><td>Média</td><td>Sustentado</td><td>Pendente</td></tr>
+<tr><th scope="row"><a href="#AC-059">AC-059</a></th><td>Omissão dos aspectos a investigar de C03 na Matriz de Rastreabilidade (seção 2.2) e na tabela de elementos</td><td>Média</td><td>Sustentado</td><td>Pendente</td></tr>
+<tr><th scope="row"><a href="#AC-060">AC-060</a></th><td>Cadeia causal técnica determinista, afirmação de realidade e desfecho com solução presumida em C03</td><td>Média</td><td>Sustentado</td><td>Pendente</td></tr>
+</tbody></table></div>
+
+<article id="AC-056" class="ticket" data-status="Pendente">
+<h3>AC-056 · Decisão de design da ficha de P03 promete ausência de armazenamento em fluxo com arquivos locais</h3>
+<p class="meta"><strong>Gravidade:</strong> Média · <strong>Confiança:</strong> Sustentado · <strong>Status:</strong> Pendente</p>
+<p><strong>Relação com auditorias anteriores.</strong> Persistência de AC-048 (relatório <code>07-10-2026-00-52.html</code>) e AC-044 (relatório <code>03-10-2026-17-49.html</code>).</p>
+<h4>Evidências</h4><ul>
+<li><code>docs/03_personas_contexto_jornada.md</code>, linha 198 (Decisões de design influenciadas por P03): mantém a formulação literal "Manter o processamento no servidor e a troca por upload e download, para não exigir hardware potente nem armazenamento local do usuário, H37 e RC12."</li>
+<li><code>docs/03_personas_contexto_jornada.md</code>, jornada de P03 (linhas 436, 446, 452 e 457): relata explicitamente que Jorginho precisa obter gravações integrais de 90 minutos para enviar e baixar os cortes selecionados para seu armazenamento físico local a fim de concluir a montagem em ferramenta externa.</li>
+<li><code>feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md</code>, Correção prioritária 5 (linhas 93-94): instrui expressamente: "Reformulem o benefício esperado em termos de redução de esforço ou de necessidade de recursos, sem prometer ausência de armazenamento."</li>
+</ul>
+<p><strong>Efeito.</strong> Contradição frontal entre a promessa de benefício da ficha de requisitos e as atividades descritas na própria jornada e no fluxo do projeto, desatendendo apontamento nominal do professor.</p>
+<p><strong>Mudança sugerida.</strong> Na ficha individual de P03 (sob responsabilidade de Giovanni), reescrever a diretriz para enfatizar a transferência do processamento computacional pesado ao servidor e a redução do volume de arquivos intermediários, dimensionando a necessidade de armazenamento local para entradas e saídas selecionadas.</p>
+</article>
+
+<article id="AC-057" class="ticket" data-status="Pendente">
+<h3>AC-057 · Assimetria de caracterização e ausência de biografia estruturada na ficha individual de P03</h3>
+<p class="meta"><strong>Gravidade:</strong> Média · <strong>Confiança:</strong> Sustentado · <strong>Status:</strong> Pendente</p>
+<p><strong>Relação com auditorias anteriores.</strong> Desdobramento e persistência de AC-049 (relatório <code>07-10-2026-00-52.html</code>), no qual a ficha de P02 foi sanada por Lucas, restando P03 pendente.</p>
+<h4>Evidências</h4><ul>
+<li><code>docs/03_personas_contexto_jornada.md</code>, linhas 59-77 e 109-130: Rafael Moura (P01, 31 anos) e Arnaldo Rocha (P02, 46 anos) possuem nomes completos, idades definidas e biografias ricas em parágrafos encadeados detalhando trajetória, rotina, responsabilidades e motivações concretas.</li>
+<li><code>docs/03_personas_contexto_jornada.md</code>, linhas 165-193: Jorginho Jr. (P03) carece de seção biográfica narrativa e mantém a faixa etária amorfa de "[H] Jovem entre 12 e 24 anos, ainda sem renda própria e produzindo conteúdo esportivo de forma amadora. Faixa definida com o autor, ainda a validar" (linha 182).</li>
+<li><code>feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md</code>, Correção prioritária 2 (linhas 51-58): exige transformar os perfis em personagens com nome identificável, idade ou recorte coerente e breve biografia conectando trajetória, rotina e motivações.</li>
+</ul>
+<p><strong>Efeito.</strong> Mantém assimetria metodológica no documento, reduzindo P03 a uma categoria abstrata com recorte etário demasiado amplo que mistura momentos de vida incompatíveis (ensino fundamental versus maioridade com autonomia profissional).</p>
+<p><strong>Mudança sugerida.</strong> Definir na ficha individual de P03 (sob responsabilidade de Giovanni) um recorte etário pontual [H] (por exemplo, 17 ou 19 anos) e redigir uma biografia estruturada em parágrafos abordando sua rotina de estudos, criação de vídeos amadores e aspirações no canal digital.</p>
+</article>
+
+<article id="AC-058" class="ticket" data-status="Pendente">
+<h3>AC-058 · Ausência de numeração nas questões de refinamento e marca genérica [NOVO] em C03</h3>
+<p class="meta"><strong>Gravidade:</strong> Média · <strong>Confiança:</strong> Sustentado · <strong>Status:</strong> Pendente</p>
+<p><strong>Relação com auditorias anteriores.</strong> Desdobramento e persistência de AC-051 (relatório <code>07-10-2026-00-52.html</code>), no qual C02 foi corrigido por Lucas, restando C03 pendente.</p>
+<h4>Evidências</h4><ul>
+<li><code>docs/04_cenarios_problema.md</code>, linhas 46-54 (C01) e linhas 119-127 (C02): as tabelas de refinamento numeram rigorosamente as perguntas de 1 a 7 e contam com a coluna "Já informado na versão inicial", enquanto as narrativas correlatas inserem referências entre colchetes ([1] a [7]) sem nenhuma marca [NOVO].</li>
+<li><code>docs/04_cenarios_problema.md</code>, linhas 188-196: a tabela de C03 não possui numeração das perguntas e omite a coluna "Já informado na versão inicial".</li>
+<li><code>docs/04_cenarios_problema.md</code>, linhas 202-212: todos os parágrafos da narrativa refinada de C03 continuam marcados com a etiqueta indiferenciada "**[NOVO]**", sem qualquer indicação de quais questões cada trecho responde.</li>
+<li><code>feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md</code>, Correção prioritária 1 (linhas 39-46): exige explicitamente numerar as questões de todos os cenários e apontar suas respostas entre colchetes na narrativa, eliminando a marcação [NOVO].</li>
+</ul>
+<p><strong>Efeito.</strong> Quebra o rigor metodológico de refinamento em C03, impossibilitando ao leitor acompanhar o percurso entre lacuna, pergunta formulada e dado novo acrescentado.</p>
+<p><strong>Mudança sugerida.</strong> Adicionar a numeração de 1 a 7 e a coluna "Já informado na versão inicial" na tabela de refinamento de C03 (sob responsabilidade de Giovanni), substituindo os marcadores [NOVO] na narrativa pelos números das questões entre colchetes correspondentes.</p>
+</article>
+
+<article id="AC-059" class="ticket" data-status="Pendente">
+<h3>AC-059 · Omissão dos aspectos a investigar de C03 na Matriz de Rastreabilidade (seção 2.2) e na tabela de elementos</h3>
+<p class="meta"><strong>Gravidade:</strong> Média · <strong>Confiança:</strong> Sustentado · <strong>Status:</strong> Pendente</p>
+<p><strong>Relação com auditorias anteriores.</strong> Desdobramento e persistência de AC-053 (relatório <code>07-10-2026-00-52.html</code>), no qual C02 foi mapeado por Lucas, restando C03 pendente.</p>
+<h4>Evidências</h4><ul>
+<li><code>RASTREABILIDADE.md</code>, seção 2.2 (linhas 79-98): contém 6 linhas de C01 (Pedro) e 7 linhas de C02 (Lucas) detalhando questões, hipóteses, metodologia na Entrega 7 e tarefas na Entrega 5.</li>
+<li><code>RASTREABILIDADE.md</code>, linha 99: preserva o marcador em aberto "[?] Os aspectos de C03 ficam com Giovanni, autor desse cenário."</li>
+<li><code>docs/04_cenarios_problema.md</code>, linha 237: a seção de implicações de C03 não aponta para a seção 2.2 da matriz, ao contrário de C01 (linha 97) e C02 (linha 168).</li>
+<li><code>docs/04_cenarios_problema.md</code>, linhas 216-227: a tabela de elementos extraídos de C03 não contém a coluna "Questão", diferentemente das tabelas de C01 (linha 76) e C02 (linha 147).</li>
+<li><code>feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md</code>, Pontos que devem alimentar as próximas entregas (linhas 141-146): instrui a registrar os aspectos a investigar de todos os cenários na matriz.</li>
+</ul>
+<p><strong>Efeito.</strong> Rompe a cadeia de rastreabilidade entre as dores do criador amador (C03) e os instrumentos de coleta de dados da Entrega 7 e análise de tarefas da Entrega 5.</p>
+<p><strong>Mudança sugerida.</strong> Preencher as linhas de C03 na seção 2.2 de <code>RASTREABILIDADE.md</code> (sob responsabilidade de Giovanni), adicionar a coluna "Questão" na tabela de elementos extraídos de C03 e referenciar a matriz em suas implicações.</p>
+</article>
+
+<article id="AC-060" class="ticket" data-status="Pendente">
+<h3>AC-060 · Cadeia causal técnica determinista, afirmação de realidade e desfecho com solução presumida em C03</h3>
+<p class="meta"><strong>Gravidade:</strong> Média · <strong>Confiança:</strong> Sustentado · <strong>Status:</strong> Pendente</p>
+<p><strong>Relação com auditorias anteriores.</strong> Persistência de AC-054 (relatório <code>07-10-2026-00-52.html</code>).</p>
+<h4>Evidências</h4><ul>
+<li><code>docs/04_cenarios_problema.md</code>, linha 184: declara textualmente que o relato de C03 "reflete a realidade de produção independente", contrariando a premissa de cenário hipotético.</li>
+<li><code>docs/04_cenarios_problema.md</code>, linhas 208 e 210: diagnostica detalhadamente o hardware da máquina ("computador esquenta, a memória RAM chega ao limite com o acúmulo de arquivos temporários de cache... programa fecha inesperadamente devido ao estouro de memória e à falta de espaço no disco de cache... arquivo de projeto foi corrompido"), transformando a narrativa em laudo técnico de hardware em vez de sintomas de interação.</li>
+<li><code>docs/04_cenarios_problema.md</code>, linha 212: o encerramento descreve Jorginho "questionando se conseguirá manter o sonho de crescer como criador de conteúdo digital sem uma forma eficiente de receber os lances do jogador já recortados e sem sobrecarregar sua máquina", antecipando diretamente a solução técnica do projeto. Além disso, o desfecho não estrutura os blocos de conseguido, pendente e avaliação.</li>
+<li><code>feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md</code>, Correções prioritárias 4 e 5 e Recomendações (linhas 85-94, 99-106 e 129-133).</li>
+</ul>
+<p><strong>Efeito.</strong> Confunde o problema humano com diagnóstico técnico especulativo de computador e antecipa a solução pretendida antes da etapa de design de interação.</p>
+<p><strong>Mudança sugerida.</strong> Centrar o relato nos sintomas percebidos (engasgos na reprodução, lentidão, fechamento imprevisto), eliminar causalidades técnicas deterministas, estruturar o fechamento nas categorias conseguido, pendente e avaliação, e manter o recorte por atleta como hipótese exploratória (H36).</p>
+</article>
+</section>
+
+<section id="pendencias"><h2>Pendências por autor</h2>
+<p>Distribuição do estado das correções entre os autores responsáveis:</p>
+<div class="table-scroll" role="region" aria-label="Pendências por autor" tabindex="0"><table><thead><tr><th>Autor</th><th>Entrega</th><th>Artefatos</th><th>Situação</th><th>Ações necessárias</th></tr></thead><tbody>
+<tr><th scope="row">Lucas</th><td>Entrega 3</td><td>Persona P02 (Arnaldo), mapa e jornada de P02, mapa e jornada de P03</td><td>Concluído (100%)</td><td>Nenhuma pendência remanescente. P02 caracterizado com biografia e idade ([H] 46 anos), justificado como persona atendida, mapas e jornadas coletivos estruturados com Hoje/Proposto e relatos encadeados.</td></tr>
+<tr><th scope="row">Lucas</th><td>Entrega 4</td><td>Cenário C02 (Arnaldo) e Matriz 2.2</td><td>Concluído (100%)</td><td>Nenhuma pendência remanescente. Questões numeradas de 1 a 7 com "Já informado", referências entre colchetes na narrativa, distinção estrita de ações e eventos, desfecho estruturado, adjetivos removidos e seção 2.2 da matriz preenchida.</td></tr>
+<tr><th scope="row">Pedro</th><td>Entregas 3 e 4</td><td>Persona P01 (Rafael) e Cenário C01</td><td>Concluído (100%)</td><td>Nenhuma pendência remanescente. Artefatos de Rafael e C01 plenamente estruturados e alinhados aos pareceres.</td></tr>
+<tr><th scope="row">Giovanni</th><td>Entrega 3</td><td>Ficha individual de P03 (Jorginho Jr.)</td><td>Pendente (AC-056, AC-057)</td><td>Delimitar idade específica [H] e redigir biografia de Jorginho Jr.; reformular a decisão de design da ficha sem prometer ausência total de armazenamento local.</td></tr>
+<tr><th scope="row">Giovanni</th><td>Entrega 4</td><td>Cenário C03 (Jorginho Jr.) e Matriz 2.2</td><td>Pendente (AC-058, AC-059, AC-060)</td><td>Numerar questões de 1 a 7 com coluna "Já informado", substituir [NOVO] por referências entre colchetes, atenuar determinismo técnico, estruturar desfecho (conseguido, pendente, avaliação) e preencher seção 2.2 da matriz.</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="cobertura"><h2>Cobertura do repositório</h2>
+<p>Todos os 150 arquivos fora de <code>.git</code> foram contabilizados nesta auditoria documental.</p>
+<details><summary>Fontes textuais lidas: 43 arquivos</summary><ul class="paths">
+<li><code>.agents/skills/analise-de-coerencia/SKILL.md</code></li>
+<li><code>.agents/skills/analise-de-coerencia/agents/openai.yaml</code></li>
+<li><code>.agents/skills/aplicar-feedback-professor/SKILL.md</code></li>
+<li><code>.agents/skills/aplicar-feedback-professor/agents/openai.yaml</code></li>
+<li><code>.agents/skills/aplicar-feedback-professor/references/anotacoes.md</code></li>
+<li><code>.agents/skills/aplicar-feedback-professor/references/diff-html.md</code></li>
+<li><code>.agents/skills/aplicar-feedback-professor/references/exemplo-spec-entrega03.json</code></li>
+<li><code>.agents/skills/aplicar-feedback-professor/scripts/gerar_diffs.py</code></li>
+<li><code>.agents/skills/html-communication/SKILL.md</code></li>
+<li><code>.github/PULL_REQUEST_TEMPLATE.md</code></li>
+<li><code>.gitignore</code></li>
+<li><code>BIBLIOGRAFIA.md</code></li>
+<li><code>CHECKLIST_FINAL.md</code></li>
+<li><code>CONTRIBUTING.md</code></li>
+<li><code>GUIA_DE_USO.md</code></li>
+<li><code>GUIA_ESCOPO_IHC.md</code></li>
+<li><code>RASTREABILIDADE.md</code></li>
+<li><code>README.md</code></li>
+<li><code>assets/02_concorrencia/wsc-sports/a.md</code></li>
+<li><code>assets/README.md</code></li>
+<li><code>docs/01_conhecendo_o_problema.md</code></li>
+<li><code>docs/02_analise_concorrencia.md</code></li>
+<li><code>docs/03_personas_contexto_jornada.md</code></li>
+<li><code>docs/04_cenarios_problema.md</code></li>
+<li><code>docs/05_analise_tarefas.md</code></li>
+<li><code>docs/06_prototipacao_papel.md</code></li>
+<li><code>docs/07_coleta_dados.md</code></li>
+<li><code>docs/08_engenharia_usabilidade.md</code></li>
+<li><code>docs/09_modelo_conceitual.md</code></li>
+<li><code>docs/10_molic.md</code></li>
+<li><code>docs/11_figma.md</code></li>
+<li><code>docs/12_planejamento_avaliacao.md</code></li>
+<li><code>docs/13_avaliacao_heuristica.md</code></li>
+<li><code>docs/14_observacao_usuario.md</code></li>
+<li><code>feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md</code></li>
+<li><code>feedbacks_professor/Feedback_Professor_Entrega02_Equipe16.md</code></li>
+<li><code>feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md</code></li>
+<li><code>feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md</code></li>
+<li><code>instrumentos/README.md</code></li>
+<li><code>instrumentos/formulario_heuristica_modelo.md</code></li>
+<li><code>instrumentos/planilha_observacao_modelo.md</code></li>
+<li><code>instrumentos/roteiro_teste_usabilidade.md</code></li>
+<li><code>instrumentos/termo_consentimento_modelo.md</code></li>
+</ul></details>
+<details><summary>Material em PDF da disciplina: 1 arquivo</summary><p>Texto extraído e inspecionado.</p><ul class="paths"><li><code>CC8122-Personas (1).pdf</code></li></ul></details>
+<details><summary>Histórico de análises de coerência: 14 arquivos</summary><ul class="paths">
+<li><code>analises de coerencia/01-10-2026-14-35.html</code></li>
+<li><code>analises de coerencia/01-10-2026-16-39.html</code></li>
+<li><code>analises de coerencia/03-10-2026-17-49.html</code></li>
+<li><code>analises de coerencia/07-10-2026-00-52.html</code></li>
+<li><code>analises de coerencia/09-09-2026-21-12.html</code></li>
+<li><code>analises de coerencia/09-09-2026-22-02.html</code></li>
+<li><code>analises de coerencia/16-09-2026-19:49.html</code></li>
+<li><code>analises de coerencia/17-09-2026-21-42.html</code></li>
+<li><code>analises de coerencia/21-09-2026-20-28.html</code></li>
+<li><code>analises de coerencia/23-09-2026-14-04.html</code></li>
+<li><code>analises de coerencia/23-09-2026-15-07.html</code></li>
+<li><code>analises de coerencia/30-09-2026-12-26.html</code></li>
+<li><code>analises de coerencia/30-09-2026-13-41.html</code></li>
+<li><code>analises de coerencia/analise-de-coerencia-2026-09-03.html</code></li>
+</ul></details>
+<details><summary>Vetoriais SVG inspecionados: 5 arquivos</summary><ul class="paths">
+<li><code>assets/03_personas/mapa_empatia_p01.svg</code></li>
+<li><code>assets/03_personas/mapa_empatia_p02.svg</code></li>
+<li><code>assets/03_personas/mapa_empatia_p03.svg</code></li>
+<li><code>assets/03_personas/persona_p01.svg</code></li>
+<li><code>assets/03_personas/persona_p03.svg</code></li>
+</ul></details>
+<details><summary>Marcadores .gitkeep: 9 arquivos</summary><ul class="paths">
+<li><code>assets/02_concorrencia/.gitkeep</code></li>
+<li><code>assets/03_personas/.gitkeep</code></li>
+<li><code>assets/05_tarefas/.gitkeep</code></li>
+<li><code>assets/06_prototipos/.gitkeep</code></li>
+<li><code>assets/09_modelo_conceitual/.gitkeep</code></li>
+<li><code>assets/10_molic/.gitkeep</code></li>
+<li><code>assets/11_figma/.gitkeep</code></li>
+<li><code>assets/13_heuristica/.gitkeep</code></li>
+<li><code>assets/14_testes/.gitkeep</code></li>
+</ul></details>
+<details><summary>Imagens raster: 60 arquivos</summary><p>Folhas de contato, capturas de ferramentas de concorrência e avatares gerados em <code>assets/</code> inspecionados visualmente.</p></details>
+</section>
+
+<section id="limites"><h2>Verificações e limites</h2>
+<p>Auditoria estritamente documental e analítica, sem testes empíricos com usuários (previstos para a Entrega 7). A verificação dos artefatos limitou-se ao conteúdo disponível no repositório. O visualizador de navegador Playwright esteve indisponível no ambiente de execução, de modo que a renderização visual dos SVGs foi verificada por inspeção direta de código e folha de contato.</p>
+</section>
+
+<footer><p>Relatório gerado automaticamente pela skill <code>analise-de-coerencia</code> · Repositório <code>projeto-ihc</code>.</p></footer>
+</main></body></html>
