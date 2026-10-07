@@ -1,8 +1,8 @@
 # Entrega 4 — Cenários de análise/problema
 
 **Data:** 17/09/2026 (versão original)  
-**Revisão:** 03/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md) em C01  
-**Status:** 🟨 C01 revisado após o feedback; C02 e C03 aguardam a revisão de seus autores; cenários desenvolvidos como hipótese
+**Revisão:** 07/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md) em C01 (Pedro) e C02 (Lucas)  
+**Status:** 🟨 C01 e C02 revisados após o feedback; C03 aguarda Giovanni; cenários desenvolvidos como hipótese
 **Responsabilidade:** 1 análise de cenário por integrante
 
 **OBS: O Histórico de commits recentes pode parecer um pouco "bagunçado", foi analisado 1 cenário por integrante conforme as personas desenvolvidas na entrega 03**
@@ -258,3 +258,13 @@ Checklist da equipe. Os três cenários (C01, C02 e C03) contêm narrativa refin
 - [x] O refinamento mostra claramente o que foi adicionado/alterado.
 - [x] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
 - [x] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+
+## Histórico de revisões
+> NÃO É RELEVANTE PARA A ENTREGA.
+> Anotações de trabalho do grupo.
+
+- 17/09/2026: elaboração inicial de C01 por Pedro Alexandre Custódio Silva a partir da premissa de seleção manual de melhores momentos.
+- 22/09/2026: elaboração inicial de C02 por Lucas Roberto Boccia dos Santos a partir da premissa de supervisão editorial e chancela na redação.
+- 01/10/2026: elaboração inicial de C03 por Giovanni Chahin Morassi a partir da premissa de decupagem manual por criador amador sob restrições de hardware.
+- 03/10/2026: aplicação do feedback do professor da Entrega 04 em C01 por Pedro. Questões numeradas de 1 a 7 com coluna "Já informado", narrativa com respostas entre colchetes sem marcadores [NOVO], separação entre planejamento, ações, eventos e avaliação, desfecho estruturado e necessidades derivadas sem solução presumida. C02 e C03 ficaram com seus autores.
+- 07/10/2026: aplicação do feedback do professor da Entrega 04 em C02 por Lucas. Questões de refinamento numeradas de 1 a 7 com coluna "Já informado na versão inicial"; respostas da narrativa indicadas entre colchetes ([1] a [7]) e marcadores [NOVO] removidos; ações delimitadas a comportamentos observáveis e eventos a fatores externos; tabela de elementos extraídos correlacionada às questões; desfecho estruturado em três blocos (concluído, pendente e avaliação); necessidades derivadas na seção 5 descritas sem antecipar soluções de interface; cabeçalho de C02 atualizado com H40 e H41; aspectos a investigar mapeados na seção 2.2 de RASTREABILIDADE.md. O cenário C03 permanece sob responsabilidade de Giovanni.
