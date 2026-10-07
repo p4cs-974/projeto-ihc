@@ -18,6 +18,20 @@
 > | Status da entrega | em revisão (🟨) até as partes de Lucas e Giovanni serem aplicadas | [`9623200`](https://github.com/p4cs-974/projeto-ihc/commit/9623200) |
 >
 > \- Pedro
+>
+> **Atualização da aplicação (07/10/2026):** esta revisão cobre a persona de Lucas (P02, Arnaldo), os mapas de empatia de P02 e P03, as jornadas de P02 e P03 e os alinhamentos correspondentes em `RASTREABILIDADE.md`. A ficha individual de Giovanni (P03, Jorginho Jr.) permanece sob sua responsabilidade.
+>
+> | Item do parecer | Situação | Commit(s) |
+> |---|---|---|
+> | Correção 1: justificativa de P02 na ficha | aplicada na ficha de P02 | [`b47bc13`](https://github.com/p4cs-974/projeto-ihc/commit/b47bc13) |
+> | Correção 2: caracterização de Arnaldo | aplicada na ficha de P02 e no mapa SVG | [`ff19705`](https://github.com/p4cs-974/projeto-ihc/commit/ff19705) |
+> | Correção 4: narrativa das jornadas | relatos encadeados de P02 e P03 adicionados | [`0f350d7`](https://github.com/p4cs-974/projeto-ihc/commit/0f350d7) |
+> | Correção 5: necessidades, hipóteses e solução | aplicada nos mapas e jornadas de P02 e P03 e SVGs | [`d4a10cb`](https://github.com/p4cs-974/projeto-ihc/commit/d4a10cb) |
+> | Recomendação: ligar dores e necessidades nos mapas | aplicada nos mapas de P02 e P03 | [`d4a10cb`](https://github.com/p4cs-974/projeto-ihc/commit/d4a10cb) |
+> | Atualização de cabeçalho e rastreabilidade | aplicada | [`534a918`](https://github.com/p4cs-974/projeto-ihc/commit/534a918) |
+> | Status da entrega | em revisão (🟨); ficha de P03 aguarda Giovanni | [`534a918`](https://github.com/p4cs-974/projeto-ihc/commit/534a918) |
+>
+> \- Lucas
 
 ## Avaliação geral
 
@@ -47,6 +61,10 @@ Arnaldo merece atenção especial: sua participação foi delimitada como recebi
 > **✅ Como foi tratado** ([`1dde02e`](https://github.com/p4cs-974/projeto-ihc/commit/1dde02e)): a seção de personas abre com a subseção **Composição e prioridade das personas**. Para cada perfil, ela registra as atividades realizadas na interface, a justificativa da prioridade e a consequência prática no projeto. P01 e P03 são primárias porque as duas usam a interface do envio ao download. As restrições de equipamento e vocabulário de P03 mudam o próprio fluxo principal, por isso P03 não cabe como secundária. Arnaldo não usa a interface no recorte e passou a **persona atendida**, categoria de Cooper para quem não opera o produto, mas depende do que ele produz. As necessidades dele recaem sobre o que Rafael baixa, sem área administrativa nem tela de supervisão. Fichas, síntese, contexto, checklist e a linha R03 da matriz acompanham a mudança. Se Lucas preferir substituir Arnaldo por outro perfil que use a interface, a decisão fica com ele.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`b47bc13`](https://github.com/p4cs-974/projeto-ihc/commit/b47bc13)): a ficha de P02 ganhou a linha **Por que atendida**, explicitando que Arnaldo não opera a interface diretamente, mas depende da qualidade dos cortes e metadados recebidos para chancelar decisões editoriais, alinhado à categoria de Cooper e à tabela de composição.
+>
+> \- Lucas
 
 ### 2. Transformar os perfis em personagens suficientemente caracterizados
 
@@ -59,6 +77,10 @@ Em Rafael, expliquem como sua experiência e sua rotina se relacionam com a revi
 > **🟨 Tratado em parte** ([`84e1398`](https://github.com/p4cs-974/projeto-ihc/commit/84e1398)): Rafael ganhou nome completo, Rafael Moura, idade, 31 anos, e uma biografia curta. Ela cobre a trajetória, a rotina em dia de rodada, de quatro a seis partidas, a responsabilidade pela seleção e a motivação ligada a uma omissão já cobrada por um clube. A biografia explica por que a experiência não reduz o esforço: o gargalo é o volume de partidas e a atenção que cai ao longo do dia, não a habilidade com a ferramenta. Todos os traços estão marcados como escolhas da proto-persona; o volume de partidas virou H39. A idade também entrou no mapa de empatia. As biografias de Arnaldo e de Jorginho Jr., incluindo a faixa de 12 a 24 anos, ficam com Lucas e Giovanni.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`ff19705`](https://github.com/p4cs-974/projeto-ihc/commit/ff19705)): Arnaldo ganhou nome completo, Arnaldo Rocha, idade, 46 anos, e uma biografia detalhando sua trajetória no jornalismo esportivo, a transição para plataformas digitais, sua rotina aos sábados de rodada na redação da emissora esportiva e a responsabilidade de gerenciar crises causadas por publicações inconsistentes. A idade e a caracterização foram incorporadas à ficha e ao arquivo visual `assets/03_personas/mapa_empatia_p02.svg`. A ficha de Jorginho Jr. fica com Giovanni.
+>
+> \- Lucas
 
 ### 3. Detalhar o contexto físico e social de uso
 
@@ -83,6 +105,10 @@ Em Rafael, alinhem o encerramento declarado da jornada com a etapa de edição e
 > **🟨 Tratado em parte** ([`5b45239`](https://github.com/p4cs-974/projeto-ihc/commit/5b45239)): a jornada de Rafael ganhou um relato encadeado. Ele parte do prazo e do receio de repetir uma omissão, passa pela conferência das gravações, pelo envio de todas as partidas para liberar o dia e pelas decisões diante de uma falha ou interrupção, e termina no benefício esperado. As tabelas continuam como apoio. O início e o fim declarados agora incluem a montagem no editor externo, que já era a etapa 7. As jornadas de Arnaldo e Jorginho Jr. foram escritas por Lucas e ficam com ele.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`0f350d7`](https://github.com/p4cs-974/projeto-ihc/commit/0f350d7)): as jornadas de P02 (Arnaldo) e P03 (Jorginho Jr.) ganharam relatos narrativos encadeados (`Relato da jornada [H]`). Em Arnaldo, o relato descreve a chegada à redação, o alinhamento de pauta, o acompanhamento da rotina sem uso direto da interface, o recebimento externo dos lotes com metadados, a inspeção rápida, o acionamento pontual do editor em caso de divergência e a chancela editorial para postagem sem crises. Em Jorginho Jr., o relato descreve a obtenção de gravações brutas na internet, a delegação do processamento ao servidor do TCC via aplicação, a espera produtiva, a inspeção manual cuidadosa de cortes para compor o compilado do jogador e o download leve antes da pós-produção externa.
+>
+> \- Lucas
 
 ### 5. Separar necessidades, hipóteses de experiência e decisões de solução
 
@@ -102,6 +128,10 @@ Esses ajustes preservam o que vocês já fizeram bem ao distinguir hipóteses e 
 > **⏭️ Fora desta revisão:** os quatro ajustes pontuais estão em artefatos de Lucas e Giovanni. O armazenamento local é da ficha de P03, de Giovanni. A plataforma web, a frase "reduz expressivamente falhas editoriais" e a emoção no download de P03 estão nos mapas e jornadas de P02 e P03, escritos por Lucas.
 >
 > \- Pedro
+>
+> **✅ Como foi tratado por Lucas** ([`d4a10cb`](https://github.com/p4cs-974/projeto-ihc/commit/d4a10cb)): nos mapas de empatia de P02 e P03, os campos Vê, Fala e faz e Necessidades foram reestruturados para separar explicitamente **Hoje** de **Uso proposto**, tanto nas tabelas quanto nos arquivos SVG (`mapa_empatia_p02.svg` e `mapa_empatia_p03.svg`), onde o uso proposto foi destacado em azul `#0369a1`. Os três ajustes pontuais sob responsabilidade de Lucas foram aplicados: na jornada de P03 etapa 2, as menções a web/navegador foram substituídas por "interface da aplicação (plataforma a consolidar conforme a Entrega 1)"; na oportunidade da etapa 7 da jornada de P02, a afirmação taxativa foi reformulada como investigação a validar na Entrega 7; e na etapa 6 de P03, a reação não investigada foi devidamente separada da emoção hipotética adotada na narrativa (`[?] Reação à etapa de download não investigada. [H] Emoção hipotética adotada na narrativa: alívio ao obter um pacote leve e organizado sem sobrecarregar o disco.`). A nota de armazenamento local na ficha de P03 permanece com Giovanni.
+>
+> \- Lucas
 
 ## Recomendações de melhoria
 
@@ -116,6 +146,10 @@ Esses ajustes preservam o que vocês já fizeram bem ao distinguir hipóteses e 
   > **✅ Como foi tratado** ([`2895911`](https://github.com/p4cs-974/projeto-ihc/commit/2895911)): o mapa de Rafael ganhou uma tabela que liga cada dor à necessidade correspondente e às hipóteses de origem. Os mapas de P02 e P03 ficam com Lucas.
   >
   > \- Pedro
+  >
+  > **✅ Como foi tratado por Lucas** ([`d4a10cb`](https://github.com/p4cs-974/projeto-ihc/commit/d4a10cb)): os mapas de P02 e P03 ganharam tabelas dedicadas de ligação entre dores e necessidades correspondentes, indicando as hipóteses de origem de cada par.
+  >
+  > \- Lucas
 
 - Diferenciem a necessidade de obter lances de um jogador da capacidade de detectar melhores momentos em geral. Um conjunto de destaques pode deixar de fora ações relevantes para a compilação desejada por P03.
 
@@ -150,5 +184,9 @@ Não é necessário antecipar agora resultados dessa investigação. Registrem o
 > **Situação:** os itens 1 e 3 estão aplicados. Nos itens 2, 4 e 5, a parte de Rafael está aplicada; a parte de Arnaldo e Jorginho Jr. fica com Lucas e Giovanni (ver tabela no início).
 >
 > \- Pedro
+>
+> **Atualização da situação (07/10/2026):** os itens 1, 3 e 4 estão plenamente aplicados. No item 2, Arnaldo e Rafael estão completos; resta a ficha de Jorginho Jr. (Giovanni). No item 5, os mapas e jornadas de P01, P02 e P03 e os três ajustes pontuais de P02/P03 estão aplicados; resta o ajuste na ficha de P03 (Giovanni).
+>
+> \- Lucas
 
 De modo geral, considero que a entrega apresenta uma base organizada e pertinente ao projeto, especialmente nos mapas de empatia e na identificação das atividades que continuam após o uso. Ainda não a considero plenamente atendida, porque a composição das personas contraria a predominância solicitada e a caracterização dos personagens e de seus contextos precisa sustentar melhor as decisões futuras. A revisão deve aprofundar quem são essas pessoas e como vivem a atividade, aproveitando os artefatos existentes para produzir um entendimento mais concreto da experiência de uso.
