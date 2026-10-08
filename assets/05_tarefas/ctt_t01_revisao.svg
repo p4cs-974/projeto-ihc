@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1782" height="863" viewBox="0 0 1782 863" role="img" aria-labelledby="ctt-title ctt-desc">
+  <title id="ctt-title">Diagrama CTT — Tarefa T01, revisão de uma partida concluída no uso proposto</title>
+  <desc id="ctt-desc">Modelo ConcurTaskTrees da revisão de uma partida concluída por Rafael (P01): abrir resultados, revisar cada corte com prévia, atender a supervisão com suspensão e retomada, conferir cobertura, baixar a seleção, recuperar omissões no editor externo e entregar a seleção.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 15px; fill: #475569; }
+      .task-abstract { fill: #f1f5f9; stroke: #475569; stroke-width: 2; }
+      .task-user { fill: #fef3c7; stroke: #d97706; stroke-width: 2; }
+      .task-interaction { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; }
+      .task-system { fill: #e0e7ff; stroke: #4f46e5; stroke-width: 2; }
+      .type-letter { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11px; font-weight: 800; text-anchor: middle; }
+      .task-name { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 700; text-anchor: middle; fill: #0f172a; }
+      .task-badge { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 600; text-anchor: middle; fill: #475569; }
+      .note { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 10px; font-style: italic; text-anchor: middle; fill: #64748b; }
+      .op-badge { fill: #1e293b; }
+      .op-alert-badge { fill: #dc2626; }
+      .op-text { font-family: 'Courier New', monospace; font-size: 12.5px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+      .conn { stroke: #64748b; stroke-width: 1.75; fill: none; }
+      .legend-card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; }
+      .legend-header { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 700; fill: #0f172a; }
+      .legend-item { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11.5px; fill: #334155; }
+      .legend-op { font-family: 'Courier New', monospace; font-size: 12.5px; font-weight: 700; fill: #0f172a; }
+    </style>
+  </defs>
+  <rect width="1782" height="863" class="bg"/>
+  <text x="40.0" y="44.0" class="title">CTT — T01 (Figura 2b): Revisar partida concluída</text>
+  <text x="40.0" y="70.0" class="subtitle">Notação ConcurTaskTrees (Paternò) • Autor: Pedro Alexandre Custódio Silva (22.123.049-3) • Persona: P01 (Rafael) • Uso proposto (A04)</text>
+  <path d="M 891.0 158 L 891.0 185.0" class="conn"/>
+  <path d="M 135.0 185.0 L 1647.0 185.0" class="conn"/>
+  <path d="M 135.0 185.0 L 135.0 212.0" class="conn"/>
+  <path d="M 351.0 185.0 L 351.0 212.0" class="conn"/>
+  <path d="M 567.0 185.0 L 567.0 212.0" class="conn"/>
+  <path d="M 783.0 185.0 L 783.0 212.0" class="conn"/>
+  <path d="M 999.0 185.0 L 999.0 212.0" class="conn"/>
+  <path d="M 1215.0 185.0 L 1215.0 212.0" class="conn"/>
+  <path d="M 1431.0 185.0 L 1431.0 212.0" class="conn"/>
+  <path d="M 1647.0 185.0 L 1647.0 212.0" class="conn"/>
+  <path d="M 567.0 270 L 567.0 297.0" class="conn"/>
+  <path d="M 459.0 297.0 L 675.0 297.0" class="conn"/>
+  <path d="M 459.0 297.0 L 459.0 324.0" class="conn"/>
+  <path d="M 675.0 297.0 L 675.0 324.0" class="conn"/>
+  <path d="M 459.0 382 L 459.0 409.0" class="conn"/>
+  <path d="M 135.0 409.0 L 783.0 409.0" class="conn"/>
+  <path d="M 135.0 409.0 L 135.0 436.0" class="conn"/>
+  <path d="M 351.0 409.0 L 351.0 436.0" class="conn"/>
+  <path d="M 567.0 409.0 L 567.0 436.0" class="conn"/>
+  <path d="M 783.0 409.0 L 783.0 436.0" class="conn"/>
+  <path d="M 783.0 494 L 783.0 521.0" class="conn"/>
+  <path d="M 675.0 521.0 L 891.0 521.0" class="conn"/>
+  <path d="M 675.0 521.0 L 675.0 548.0" class="conn"/>
+  <path d="M 891.0 521.0 L 891.0 548.0" class="conn"/>
+  <path d="M 1215.0 270 L 1215.0 297.0" class="conn"/>
+  <path d="M 999.0 297.0 L 1431.0 297.0" class="conn"/>
+  <path d="M 999.0 297.0 L 999.0 324.0" class="conn"/>
+  <path d="M 1215.0 297.0 L 1215.0 324.0" class="conn"/>
+  <path d="M 1431.0 297.0 L 1431.0 324.0" class="conn"/>
+  <g transform="translate(731.0, 100.0)">
+    <rect width="320" height="58" rx="6" class="task-abstract"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#cbd5e1"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e293b">A</text>
+    <text x="172.0" y="22.0" class="task-name">Revisar partida concluída</text>
+    <text x="172.0" y="37.0" class="task-name">[T01, uso proposto]</text>
+    <text x="172.0" y="51.0" class="task-badge">Abstrata</text>
+  </g>
+  <g transform="translate(227.0, 173.0)">
+    <rect width="32" height="24" rx="4" class="op-badge"/>
+    <text x="16.0" y="17.0" class="op-text">&gt;&gt;</text>
+  </g>
+  <g transform="translate(434.0, 173.0)">
+    <rect width="50" height="24" rx="4" class="op-badge"/>
+    <text x="25.0" y="17.0" class="op-text">[]&gt;&gt;</text>
+  </g>
+  <g transform="translate(659.0, 173.0)">
+    <rect width="32" height="24" rx="4" class="op-alert-badge"/>
+    <text x="16.0" y="17.0" class="op-text">|&gt;</text>
+  </g>
+  <g transform="translate(866.0, 173.0)">
+    <rect width="50" height="24" rx="4" class="op-badge"/>
+    <text x="25.0" y="17.0" class="op-text">[]&gt;&gt;</text>
+  </g>
+  <g transform="translate(1091.0, 173.0)">
+    <rect width="32" height="24" rx="4" class="op-badge"/>
+    <text x="16.0" y="17.0" class="op-text">&gt;&gt;</text>
+  </g>
+  <g transform="translate(1307.0, 173.0)">
+    <rect width="32" height="24" rx="4" class="op-badge"/>
+    <text x="16.0" y="17.0" class="op-text">&gt;&gt;</text>
+  </g>
+  <g transform="translate(1523.0, 173.0)">
+    <rect width="32" height="24" rx="4" class="op-badge"/>
+    <text x="16.0" y="17.0" class="op-text">&gt;&gt;</text>
+  </g>
+  <g transform="translate(40.0, 212.0)">
+    <rect width="190" height="58" rx="6" class="task-system"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#a5b4fc"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#312e81">S</text>
+    <text x="107.0" y="22.0" class="task-name">Avisar conclusão</text>
+    <text x="107.0" y="37.0" class="task-name">da partida</text>
+    <text x="107.0" y="51.0" class="task-badge">Sistema</text>
+  </g>
+  <g transform="translate(256.0, 212.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="22.0" class="task-name">Abrir resultados</text>
+    <text x="107.0" y="37.0" class="task-name">da partida</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação</text>
+  </g>
+  <g transform="translate(472.0, 212.0)">
+    <rect width="190" height="58" rx="6" class="task-abstract"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#cbd5e1"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e293b">A</text>
+    <text x="107.0" y="22.0" class="task-name">Revisar cortes</text>
+    <text x="107.0" y="37.0" class="task-name">da partida</text>
+    <text x="107.0" y="51.0" class="task-badge">Abstrata</text>
+  </g>
+  <g transform="translate(551.0, 285.0)">
+    <rect width="32" height="24" rx="4" class="op-alert-badge"/>
+    <text x="16.0" y="17.0" class="op-text">[&gt;</text>
+  </g>
+  <g transform="translate(364.0, 324.0)">
+    <rect width="190" height="58" rx="6" class="task-abstract"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#cbd5e1"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e293b">A</text>
+    <text x="107.0" y="29.0" class="task-name">Revisar um corte *</text>
+    <text x="107.0" y="51.0" class="task-badge">Abstrata</text>
+  </g>
+  <g transform="translate(218.0, 397.0)">
+    <rect width="50" height="24" rx="4" class="op-badge"/>
+    <text x="25.0" y="17.0" class="op-text">[]&gt;&gt;</text>
+  </g>
+  <g transform="translate(434.0, 397.0)">
+    <rect width="50" height="24" rx="4" class="op-badge"/>
+    <text x="25.0" y="17.0" class="op-text">[]&gt;&gt;</text>
+  </g>
+  <g transform="translate(659.0, 397.0)">
+    <rect width="32" height="24" rx="4" class="op-badge"/>
+    <text x="16.0" y="17.0" class="op-text">&gt;&gt;</text>
+  </g>
+  <g transform="translate(40.0, 436.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="22.0" class="task-name">Escolher corte</text>
+    <text x="107.0" y="37.0" class="task-name">na lista da partida</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação</text>
+  </g>
+  <g transform="translate(256.0, 436.0)">
+    <rect width="190" height="58" rx="6" class="task-system"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#a5b4fc"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#312e81">S</text>
+    <text x="107.0" y="22.0" class="task-name">Exibir prévia com</text>
+    <text x="107.0" y="37.0" class="task-name">margem antes e depois</text>
+    <text x="107.0" y="51.0" class="task-badge">Sistema</text>
+  </g>
+  <g transform="translate(472.0, 436.0)">
+    <rect width="190" height="58" rx="6" class="task-user"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#fcd34d"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#78350f">U</text>
+    <text x="107.0" y="22.0" class="task-name">Avaliar construção</text>
+    <text x="107.0" y="37.0" class="task-name">e desfecho</text>
+    <text x="107.0" y="51.0" class="task-badge">Usuário</text>
+  </g>
+  <g transform="translate(688.0, 436.0)">
+    <rect width="190" height="58" rx="6" class="task-abstract"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#cbd5e1"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e293b">A</text>
+    <text x="107.0" y="29.0" class="task-name">Decidir sobre o corte</text>
+    <text x="107.0" y="51.0" class="task-badge">Abstrata</text>
+  </g>
+  <g transform="translate(767.0, 509.0)">
+    <rect width="32" height="24" rx="4" class="op-badge"/>
+    <text x="16.0" y="17.0" class="op-text">[]</text>
+  </g>
+  <g transform="translate(580.0, 548.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="29.0" class="task-name">Manter na seleção</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação</text>
+  </g>
+  <text x="675.0" y="620.0" class="note">inclui duvidosos, H30</text>
+  <g transform="translate(796.0, 548.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="29.0" class="task-name">Excluir da seleção</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação</text>
+  </g>
+  <g transform="translate(580.0, 324.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="22.0" class="task-name">Encerrar revisão</text>
+    <text x="107.0" y="37.0" class="task-name">da partida</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação</text>
+  </g>
+  <g transform="translate(688.0, 212.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="22.0" class="task-name">Atender pergunta da</text>
+    <text x="107.0" y="37.0" class="task-name">supervisão (chat)</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação</text>
+  </g>
+  <text x="783.0" y="284.0" class="note">fora da interface, H41</text>
+  <g transform="translate(904.0, 212.0)">
+    <rect width="190" height="58" rx="6" class="task-user"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#fcd34d"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#78350f">U</text>
+    <text x="107.0" y="22.0" class="task-name">Conferir cobertura</text>
+    <text x="107.0" y="37.0" class="task-name">da partida</text>
+    <text x="107.0" y="51.0" class="task-badge">Usuário</text>
+  </g>
+  <g transform="translate(1120.0, 212.0)">
+    <rect width="190" height="58" rx="6" class="task-abstract"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#cbd5e1"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e293b">A</text>
+    <text x="107.0" y="29.0" class="task-name">Baixar seleção</text>
+    <text x="107.0" y="51.0" class="task-badge">Abstrata</text>
+  </g>
+  <g transform="translate(1091.0, 285.0)">
+    <rect width="32" height="24" rx="4" class="op-badge"/>
+    <text x="16.0" y="17.0" class="op-text">&gt;&gt;</text>
+  </g>
+  <g transform="translate(1298.0, 285.0)">
+    <rect width="50" height="24" rx="4" class="op-badge"/>
+    <text x="25.0" y="17.0" class="op-text">[]&gt;&gt;</text>
+  </g>
+  <g transform="translate(904.0, 324.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="22.0" class="task-name">Conferir resumo</text>
+    <text x="107.0" y="37.0" class="task-name">da seleção</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação</text>
+  </g>
+  <g transform="translate(1120.0, 324.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="29.0" class="task-name">Solicitar download</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação</text>
+  </g>
+  <g transform="translate(1336.0, 324.0)">
+    <rect width="190" height="58" rx="6" class="task-system"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#a5b4fc"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#312e81">S</text>
+    <text x="107.0" y="22.0" class="task-name">Gerar arquivos de</text>
+    <text x="107.0" y="37.0" class="task-name">cortes e metadados</text>
+    <text x="107.0" y="51.0" class="task-badge">Sistema</text>
+  </g>
+  <g transform="translate(1336.0, 212.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction" stroke-dasharray="6 4"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="22.0" class="task-name">[Recuperar lance</text>
+    <text x="107.0" y="37.0" class="task-name">omitido]</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação • opcional</text>
+  </g>
+  <text x="1431.0" y="284.0" class="note">editor externo</text>
+  <g transform="translate(1552.0, 212.0)">
+    <rect width="190" height="58" rx="6" class="task-interaction"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#93c5fd"/>
+    <text x="18.0" y="22.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="107.0" y="22.0" class="task-name">Entregar seleção</text>
+    <text x="107.0" y="37.0" class="task-name">(pasta e chat)</text>
+    <text x="107.0" y="51.0" class="task-badge">Interação</text>
+  </g>
+  <text x="1647.0" y="284.0" class="note">fora da interface, H40</text>
+  <g transform="translate(40, 646)">
+    <rect width="1702" height="192" rx="6" class="legend-card"/>
+    <text x="20.0" y="26.0" class="legend-header">Operadores temporais usados neste diagrama</text>
+    <text x="20.0" y="50.0" class="legend-op">&gt;&gt;</text>
+    <text x="90.0" y="50.0" class="legend-item" font-weight="700">Habilitação:</text>
+    <text x="375.0" y="50.0" class="legend-item">O fim de uma tarefa libera a seguinte (ex.: conferir o resumo libera o pedido de download).</text>
+    <text x="20.0" y="70.0" class="legend-op">[]&gt;&gt;</text>
+    <text x="90.0" y="70.0" class="legend-item" font-weight="700">Habilitação com troca de informação:</text>
+    <text x="375.0" y="70.0" class="legend-item">A tarefa passa dados à seguinte (ex.: o corte escolhido determina a prévia exibida).</text>
+    <text x="20.0" y="90.0" class="legend-op">[]</text>
+    <text x="90.0" y="90.0" class="legend-item" font-weight="700">Escolha:</text>
+    <text x="375.0" y="90.0" class="legend-item">Manter OU excluir o corte da seleção; a escolha de uma alternativa descarta a outra.</text>
+    <text x="20.0" y="110.0" class="legend-op">[&gt;</text>
+    <text x="90.0" y="110.0" class="legend-item" font-weight="700">Desativação:</text>
+    <text x="375.0" y="110.0" class="legend-item">Encerrar a revisão interrompe o ciclo iterativo de revisar um corte.</text>
+    <text x="20.0" y="130.0" class="legend-op">|&gt;</text>
+    <text x="90.0" y="130.0" class="legend-item" font-weight="700">Suspensão e retomada:</text>
+    <text x="375.0" y="130.0" class="legend-item">A pergunta da supervisão suspende a revisão, que é retomada no ponto em que parou (H41).</text>
+    <text x="20.0" y="150.0" class="legend-op">*  [ ]</text>
+    <text x="90.0" y="150.0" class="legend-item" font-weight="700">Iteração e opcionalidade:</text>
+    <text x="375.0" y="150.0" class="legend-item">&quot;*&quot; repete a tarefa; colchetes e borda tracejada marcam tarefa opcional.</text>
+    <text x="20.0" y="178.0" class="legend-item" font-weight="700">Tipos:</text>
+    <rect x="70" y="164" width="18" height="18" rx="4" class="task-abstract"/>
+    <text x="79.0" y="178.0" class="type-letter" fill="#1e293b">A</text>
+    <text x="96.0" y="178.0" class="legend-item">Abstrata</text>
+    <rect x="190" y="164" width="18" height="18" rx="4" class="task-user"/>
+    <text x="199.0" y="178.0" class="type-letter" fill="#78350f">U</text>
+    <text x="216.0" y="178.0" class="legend-item">Usuário</text>
+    <rect x="310" y="164" width="18" height="18" rx="4" class="task-interaction"/>
+    <text x="319.0" y="178.0" class="type-letter" fill="#1e3a8a">I</text>
+    <text x="336.0" y="178.0" class="legend-item">Interação</text>
+    <rect x="430" y="164" width="18" height="18" rx="4" class="task-system"/>
+    <text x="439.0" y="178.0" class="type-letter" fill="#312e81">S</text>
+    <text x="456.0" y="178.0" class="legend-item">Sistema</text>
+    <text x="560.0" y="178.0" class="legend-item">Tarefas marcadas &quot;fora da interface&quot; ocorrem no chat, na pasta do servidor ou no editor externo.</text>
+  </g>
+</svg>

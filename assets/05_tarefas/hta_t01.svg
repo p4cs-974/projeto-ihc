@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1045" viewBox="0 0 1500 1045" role="img" aria-labelledby="title desc">
-  <title id="title">Diagrama HTA — Tarefa T01: Localizar, selecionar e revisar lances de melhores momentos</title>
+  <title id="title">Diagrama HTA — Tarefa T01: Obter, revisar e selecionar lances de melhores momentos</title>
   <desc id="desc">Decomposição hierárquica (HTA) do trabalho atual de Rafael (P01) descrito no cenário C01: organizar o dia, localizar e separar candidatos na gravação, revisar os cortes, entregar a seleção e atender interrupções da supervisão.</desc>
   <defs>
     <style>
@@ -27,7 +27,7 @@
     </style>
   </defs>
   <rect width="1500" height="1045" class="bg"/>
-  <text x="40" y="46" class="title">HTA — T01: Localizar, selecionar e revisar lances de melhores momentos</text>
+  <text x="40" y="46" class="title">HTA — T01: Obter, revisar e selecionar lances de melhores momentos</text>
   <text x="40" y="72" class="subtitle">Autor: Pedro Alexandre Custódio Silva (22.123.049-3) • Persona: P01 (Rafael) • Cenário: C01 • Modelo do trabalho atual</text>
   <g transform="translate(440.0, 95)">
     <rect width="620" height="80" rx="8" class="node-root"/>
@@ -224,6 +224,6 @@
     <text x="104" y="238" class="legend-txt">Fazer 5.1 &gt; 5.2 &gt; 5.3 e retornar ao passo de 2 ou 3 em que estava.</text>
     <line x1="20" y1="258" x2="1400" y2="258" stroke="#e2e8f0" stroke-width="1.5"/>
     <text x="20" y="278" class="legend-txt">Leitura: &quot;&gt;&quot; indica sequência; &quot;?&quot; indica passo condicional; &quot;*&quot; indica repetição. O ramo 5 (tracejado) é uma interrupção externa, não uma etapa planejada.</text>
-    <text x="20" y="296" class="legend-txt">O modelo descreve o trabalho atual hipotético de C01 (H01, H09, H11, H30, H39, H40, H41). Não representa uso observado nem a interface proposta; esta aparece no GOMS (M2) e na CTT.</text>
+    <text x="20" y="296" class="legend-txt">O modelo descreve o trabalho atual hipotético de C01 (H01, H09, H11, H30, H39, H40, H41). Não representa uso observado nem a interface proposta; envio, acompanhamento e revisão propostos estão no GOMS (M2) e na CTT.</text>
   </g>
 </svg>

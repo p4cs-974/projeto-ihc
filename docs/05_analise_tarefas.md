@@ -32,15 +32,15 @@ A tabela abaixo consolida as tarefas prioritárias identificadas a partir dos ce
 
 | ID | Tarefa | Persona / cenário de origem | Frequência / criticidade | Autor responsável | Status na entrega |
 |---|---|---|---|---|---|
-| **T01** | Localizar, selecionar e revisar lances de melhores momentos | [P01, Rafael](03_personas_contexto_jornada.md#persona-p01--rafael) / [C01](04_cenarios_problema.md#cenário-c01--seleção-manual-de-melhores-momentos-sob-pressão-de-prazo) | Alta frequência diária; alta criticidade (omissões involuntárias geram retrabalho na pós-produção) | Pedro Alexandre Custódio Silva — 22.123.049-3 | 🟩 Concluída (HTA, GOMS e CTT) |
+| **T01** | Obter, revisar e selecionar lances de melhores momentos | [P01, Rafael](03_personas_contexto_jornada.md#persona-p01--rafael) / [C01](04_cenarios_problema.md#cenário-c01--seleção-manual-de-melhores-momentos-sob-pressão-de-prazo) | Alta frequência diária; alta criticidade (omissões involuntárias geram retrabalho na pós-produção) | Pedro Alexandre Custódio Silva — 22.123.049-3 | 🟩 Concluída (HTA, GOMS e CTT) |
 | **T02** | Supervisionar processo editorial e chancelar cortes esportivos | [P02, Arnaldo](03_personas_contexto_jornada.md#persona-p02--arnaldo) / [C02](04_cenarios_problema.md#cenário-c02--controle-do-processo-editorial-engessado) | Alta frequência em dias de rodada; altíssima criticidade editorial (portão final de controle antes do ar; risco de dano à reputação da emissora) | Lucas Roberto Boccia dos Santos — 22.123.012-1 | 🟩 Concluída (HTA, GOMS e CTT) |
 | **T03** || [P03, Jorginho Jr.](03_personas_contexto_jornada.md#persona-p03--jorginho-jr) / [C03](04_cenarios_problema.md#cenário-c03--decupagem-manual-de-lances-por-jogador-sob-restrições-de-hardware) | | Giovanni Chahin Morassi — 22.123.025-3 | ⬜ Aguarda autor |
 
 ### Justificativa da prioridade de T01 (Seleção e revisão de lances)
 
-A tarefa **T01 — Localizar, selecionar e revisar lances de melhores momentos** é a origem indicada pelo [cenário C01, seção 5](04_cenarios_problema.md#5-implicações-para-as-próximas-entregas) e corresponde ao objetivo central do recorte de IHC ([H28](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1)). Foi escolhida por três motivos:
+A tarefa **T01 — Obter, revisar e selecionar lances de melhores momentos** parte da tarefa indicada pelo [cenário C01, seção 5](04_cenarios_problema.md#5-implicações-para-as-próximas-entregas) (localizar, selecionar e revisar lances) e corresponde ao objetivo central do recorte de IHC ([H28](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1)). Foi escolhida por três motivos:
 
-1. **É onde a contribuição do TCC atua.** A identificação automática de melhores momentos substitui, no uso proposto, justamente a busca manual na gravação ([R01](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos)). Modelar a tarefa permite ver o que essa substituição muda e o que continua com o editor.
+1. **É onde a contribuição do TCC atua.** A identificação automática de melhores momentos substitui, no uso proposto, justamente a busca manual na gravação ([R01](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos)). Para isso, Rafael precisa antes enviar as partidas e acompanhar o processamento ([R02](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos)). Por isso o nome da tarefa fala em *obter* os lances: no trabalho atual, obtê-los é percorrer a gravação; no uso proposto, é enviar a partida e esperar os cortes. Modelar a tarefa permite ver o que essa substituição muda e o que continua com o editor.
 2. **Repete-se várias vezes no mesmo dia.** Rafael trata de quatro a seis partidas por dia de rodada, uma por vez, e o desgaste cresce de uma partida para outra ([H39](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3) e [H09](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1)). Pequenas diferenças de esforço por partida se acumulam.
 3. **A seleção alimenta a decisão de outra pessoa.** O que Rafael entrega é o material que Arnaldo inspeciona em T02 ([H40](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3)). Omissões e cortes sem construção da jogada em T01 reaparecem como problemas em T02.
 
@@ -54,20 +54,20 @@ A tarefa **T02 — Supervisionar processo editorial e chancelar cortes esportivo
 
 ---
 
-## HTA — T01: Localizar, selecionar e revisar lances
+## HTA — T01: Obter, revisar e selecionar lances
 
 **Autor:** Pedro Alexandre Custódio Silva — 22.123.049-3  
 **Persona relacionada:** [P01, Rafael](03_personas_contexto_jornada.md#persona-p01--rafael) (editor de vídeo esportivo)  
 **Cenário de origem:** [Cenário C01 — Seleção manual de melhores momentos sob pressão de prazo](04_cenarios_problema.md#cenário-c01--seleção-manual-de-melhores-momentos-sob-pressão-de-prazo)  
-**Relação na rastreabilidade:** [R01](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos)  
-**Hipóteses relacionadas:** [H01](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H06](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H09](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H10](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H11](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H16](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H28](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H30](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3), [H32](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3), [H39](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3), [H40](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3) e [H41](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3)
+**Relação na rastreabilidade:** [R01 e R02](../RASTREABILIDADE.md#3-rastreabilidade-entre-contribuição-técnica-necessidades-e-artefatos)  
+**Hipóteses relacionadas:** [H01](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H06](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H09](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H10](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H11](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H16](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H28](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H30](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3), [H24](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H26](../RASTREABILIDADE.md#2-registro-de-hipóteses-e-lacunas-da-entrega-1), [H32](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3), [H39](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3), [H40](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3) e [H41](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3)
 
-**O que cada modelo de T01 representa.** O C01 pede que cada modelo declare se descreve o trabalho atual ou o uso proposto. Nesta tarefa, o **HTA descreve o trabalho atual** narrado em C01, sem a interface; o **GOMS compara os dois**, com um método para a seleção manual (M1) e outro para a revisão dos cortes gerados (M2); e a **CTT descreve o uso proposto** na atividade A04, onde aparecem tarefas do sistema. Os três modelos partem de hipóteses e de escolhas narrativas do cenário. Nenhum descreve uso observado, e o uso proposto não serve de evidência a favor da própria solução.
+**O que cada modelo de T01 representa.** O C01 pede que cada modelo declare se descreve o trabalho atual ou o uso proposto. Nesta tarefa, o **HTA descreve o trabalho atual** narrado em C01, sem a interface; o **GOMS compara os dois**, com um método para a seleção manual (M1) e outro para o uso proposto (M2), que começa pelo envio das partidas para processamento; e a **CTT descreve o uso proposto** nas atividades A01, A02 e A04: enviar as partidas, acompanhar o processamento, tratar falhas e revisar cada partida concluída. No HTA, o ramo 2 (localizar e separar candidatos) é o que o uso proposto substitui por enviar, aguardar e abrir os cortes gerados; os ramos 3 a 5 continuam, com outra forma. Os três modelos partem de hipóteses e de escolhas narrativas do cenário. Nenhum descreve uso observado, e o uso proposto não serve de evidência a favor da própria solução.
 
 ### Descrição da tarefa
 
 - **Objetivo:** entregar, no mesmo dia, a seleção revista de cada partida recebida. A seleção reúne gols, defesas, finalizações perigosas e ocorrências disciplinares, e cada corte mostra como a jogada surgiu e como terminou ([C01, questão 3](04_cenarios_problema.md#2-questões-de-refinamento)).
-- **Ponto de início:** as gravações integrais das partidas encerradas do dia estão no servidor da produtora ([H39](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3)).
+- **Ponto de início:** as gravações integrais das partidas encerradas do dia estão no servidor da produtora ([H39](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3)). No uso proposto, o primeiro passo é enviá-las para processamento.
 - **Conclusão esperada:** os cortes de cada partida estão na pasta do servidor e Arnaldo foi avisado pelo chat ([H40](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3)). Ao final, Rafael sabe o que revisou e o que ficou pendente, como os trechos avançados que não conferiu ([C01, questão 7](04_cenarios_problema.md#2-questões-de-refinamento)).
 - **Contexto:** sala de edição com pouca luz, dividida com outros dois editores, computador com tela ampla e o editor de vídeo que Rafael já usa. O prazo é o fim do dia, a atenção cai nas últimas partidas e a supervisão interrompe com perguntas pelo chat ([C01, questões 1, 2 e 6](04_cenarios_problema.md#2-questões-de-refinamento); [H41](../RASTREABILIDADE.md#21-hipóteses-acrescentadas-na-entrega-3)).
 - **Fora da tarefa:** a montagem do compacto e a edição detalhada continuam no editor externo ([jornada de P01, etapa 7](03_personas_contexto_jornada.md#persona-p01--rafael-2)). A decisão de seguir para a montagem é de Arnaldo e está modelada em [T02](#hta--t02-supervisionar-processo-editorial).
@@ -76,7 +76,7 @@ Quantidades e durações citadas vêm da narrativa de C01 e da biografia de P01.
 
 ### Diagrama HTA
 
-![HTA T01 — Localizar, selecionar e revisar lances](../assets/05_tarefas/hta_t01.svg)
+![HTA T01 — Obter, revisar e selecionar lances](../assets/05_tarefas/hta_t01.svg)
 
 *Figura 1 — HTA da tarefa T01 no trabalho atual (C01). Autor: Pedro Alexandre Custódio Silva. Arquivo vetorial editável em [assets/05_tarefas/hta_t01.svg](../assets/05_tarefas/hta_t01.svg).*
 
@@ -128,21 +128,24 @@ A coluna da direita registra o problema que C01 mostra em cada passo e, quando h
 
 ---
 
-## GOMS — T01: Localizar, selecionar e revisar lances
+## GOMS — T01: Obter, revisar e selecionar lances
 
 **Autor:** Pedro Alexandre Custódio Silva — 22.123.049-3  
-**Abordagem adotada:** CMN-GOMS (Card, Moran e Newell, 1983), com operadores em nível funcional. A meta é a mesma nos dois métodos principais; o que muda é como os candidatos chegam até Rafael. **M1 descreve o trabalho atual** (C01). **M2 descreve o uso proposto** (A04). A interface de M2 ainda não foi projetada: seus operadores seguem as decisões de design de P01 (prévia com contexto temporal, inclusão e exclusão da seleção para download) e serão revistos com o protótipo das Entregas 6 e 11.
+**Abordagem adotada:** CMN-GOMS (Card, Moran e Newell, 1983), com operadores em nível funcional. A meta é a mesma nos dois métodos principais; o que muda é como os candidatos chegam até Rafael. **M1 descreve o trabalho atual** (C01). **M2 descreve o uso proposto** (A04) e depende de duas metas anteriores que só existem no uso proposto: enviar as partidas para processamento (A01) e acompanhar o processamento, incluindo falhas (A02). A interface ainda não foi projetada: os operadores do uso proposto seguem as decisões de design de P01 (fila com estado por partida, aviso de conclusão, explicação de falhas, prévia com contexto temporal, inclusão e exclusão da seleção para download) e a [jornada de P01, etapas 1 a 6](03_personas_contexto_jornada.md#persona-p01--rafael-2). Serão revistos com o protótipo das Entregas 6 e 11.
 
 ### Goals (estrutura de metas)
 
-A unidade de análise é uma partida. O plano 0 do HTA repete essa meta para cada partida do dia.
+- `GOAL 0: OBTER-SELECOES-REVISTAS-DAS-PARTIDAS-DO-DIA`
+  - `GOAL 1: COLOCAR-AS-PARTIDAS-EM-PROCESSAMENTO [USO PROPOSTO]` (M-ENV)
+  - `GOAL 2: ACOMPANHAR-O-PROCESSAMENTO [USO PROPOSTO]` (M-ACOMP)
+    - `GOAL 2.1: TRATAR-FALHA-DE-UMA-PARTIDA [CONDICIONAL]` (M-FALHA, conforme SR5)
+  - `GOAL 3: OBTER-E-REVISAR-CANDIDATOS-DE-UMA-PARTIDA` (repetida por partida; M1 ou M2, conforme SR1)
+    - `GOAL 3.1: CORRIGIR-CORTE-SEM-CONSTRUCAO` (conforme SR3)
+    - `GOAL 3.2: RECUPERAR-LANCE-OMITIDO` (conforme SR4)
+  - `GOAL 4: ENTREGAR-SELECAO-A-SUPERVISAO` (M-ENT, repetida por partida)
+  - `GOAL 5: RETOMAR-APOS-INTERRUPCAO [CONDICIONAL]` (M-INT)
 
-- `GOAL 0: OBTER-SELECAO-REVISTA-DE-UMA-PARTIDA`
-  - `GOAL 1: OBTER-E-REVISAR-CANDIDATOS` (M1 ou M2, conforme SR1)
-    - `GOAL 1.1: CORRIGIR-CORTE-SEM-CONSTRUCAO` (conforme SR3)
-    - `GOAL 1.2: RECUPERAR-LANCE-OMITIDO` (conforme SR4)
-  - `GOAL 2: ENTREGAR-SELECAO-A-SUPERVISAO`
-  - `GOAL 3: RETOMAR-APOS-INTERRUPCAO [CONDICIONAL]`
+No trabalho atual, as metas 1 e 2 não existem: Rafael passa direto à meta 3 com M1, partida por partida, como no plano 0 do HTA. No uso proposto, a meta 1 é cumprida uma vez, no início do dia, e a meta 2 corre em paralelo às metas 3 e 4: enquanto o processamento segue, Rafael revisa e entrega as partidas que já terminaram e, no intervalo, continua outras edições (H32).
 
 ---
 
@@ -171,7 +174,7 @@ A unidade de análise é uma partida. O plano 0 do HTA repete essa meta para cad
   - Operator: *Recuperar* da memória quais trechos foram avançados
   - Operator: *Decidir* se vale rever algum trecho (SR4)
 
-- **Method M2: Revisar os cortes gerados (uso proposto, A04)**
+- **Method M2: Revisar os cortes gerados de uma partida (uso proposto, A04; depende de GOAL 1 e GOAL 2)**
   - Operator: *Perceber* o aviso de conclusão da partida
   - Operator: *Apontar* e *Clicar* na partida concluída
   - Operator: *Perceber* a lista de cortes com o tipo de lance e o tempo de jogo
@@ -185,7 +188,32 @@ A unidade de análise é uma partida. O plano 0 do HTA repete essa meta para cad
   - Operator: *Decidir* se algum lance ficou de fora (SR4)
   - Operator: *Clicar* para baixar a seleção e *Perceber* a confirmação
 
-- **Method M-CORR-1: Corrigir os limites no editor (sub-método de GOAL 1.1 em M1)**
+- **Method M-ENV: Enviar as partidas do dia para processamento (GOAL 1, uso proposto, A01)**
+  - Operator: *Perceber* as gravações das partidas na pasta do servidor
+  - Operator: *Verificar* se cada gravação está completa e identificada pela partida, porque um arquivo errado só apareceria horas depois (jornada, etapa 1)
+  - Operator: *Apontar* e *Clicar* para iniciar um novo envio
+  - Operator: *Clicar* nas gravações das partidas do dia para selecioná-las
+  - Operator: *Digitar* ou *Verificar* o nome e a data de cada partida (H24)
+  - Operator: *Perceber* o resultado da validação dos arquivos
+  - Operator: *Decidir* o que fazer com um arquivo recusado, se houver (substituir ou deixar a partida para M1)
+  - Operator: *Clicar* para iniciar o processamento
+  - Operator: *Perceber* a fila com o estado de cada partida e *Verificar* se todas entraram
+
+- **Method M-ACOMP: Acompanhar o processamento enquanto faz outras edições (GOAL 2, uso proposto, A02)**
+  - Operator: *Decidir* voltar a outro trabalho (entrevista ou bastidores) em vez de olhar a fila (H32)
+  - Repetir até não restar partida em processamento:
+    - Operator: *Perceber* um aviso sobre uma partida
+    - Operator: *Decidir* o que o aviso pede: se é conclusão, passar a GOAL 3 com M2; se é falha, passar a GOAL 2.1
+
+- **Method M-FALHA: Tratar a falha de uma partida (GOAL 2.1, uso proposto)**
+  - Operator: *Perceber* o aviso de falha e qual partida foi afetada
+  - Operator: *Apontar* e *Clicar* na partida com falha
+  - Operator: *Perceber* o motivo informado e o próximo passo indicado (ou a informação de que a causa não é conhecida)
+  - Operator: *Verificar* se as demais partidas continuam com seus resultados disponíveis (H16)
+  - Operator: *Decidir* entre reenviar a partida e selecioná-la manualmente (SR5)
+  - Operator: *Clicar* para reenviar a partida, que volta à fila, ou seguir para GOAL 3 com M1
+
+- **Method M-CORR-1: Corrigir os limites no editor (sub-método de GOAL 3.1 em M1)**
   - Operator: *Perceber* que o corte começa com o jogador já chutando
   - Operator: *Recuperar* em que parte da gravação a jogada aconteceu
   - Operator: *Arrastar* o cursor da gravação original até antes da troca de passes
@@ -194,13 +222,13 @@ A unidade de análise é uma partida. O plano 0 do HTA repete essa meta para cad
   - Operator: *Clicar* para atualizar o corte
   - Operator: *Perceber* o corte corrigido e *Verificar* se ficou claro
 
-- **Method M-CORR-2: Manter o corte e anotar o ajuste para o editor externo (sub-método de GOAL 1.1 em M2)**
+- **Method M-CORR-2: Manter o corte e anotar o ajuste para o editor externo (sub-método de GOAL 3.1 em M2)**
   - Operator: *Decidir* que o lance é relevante, embora o corte omita parte da construção
   - Operator: *Clicar* para manter o corte na seleção
   - Operator: *Recuperar* o tempo de jogo do lance exibido na lista
   - Operator: *Digitar* uma nota com o tempo de jogo e o ajuste necessário (onde a nota fica ainda não foi definido)
 
-- **Method M-OMIS: Recuperar um lance omitido na gravação original (sub-método de GOAL 1.2, fora da interface)**
+- **Method M-OMIS: Recuperar um lance omitido na gravação original (sub-método de GOAL 3.2, fora da interface)**
   - Operator: *Recuperar* o tempo de jogo aproximado do lance
   - Operator: *Apontar* e *Clicar* para abrir a gravação original no editor externo
   - Operator: *Arrastar* o cursor até o tempo aproximado
@@ -208,13 +236,13 @@ A unidade de análise é uma partida. O plano 0 do HTA repete essa meta para cad
   - Operator: *Pressionar* teclas de marca de início e de fim
   - Operator: *Clicar* para separar e exportar o corte
 
-- **Method M-ENT: Entregar a seleção (GOAL 2)**
+- **Method M-ENT: Entregar a seleção (GOAL 4)**
   - Operator: *Arrastar* os cortes da partida (separados em M1 ou baixados em M2) para a pasta da partida no servidor
   - Operator: *Apontar* para a janela do chat da produtora
   - Operator: *Digitar* o aviso: `"Seleção da partida [X] na pasta"`
   - Operator: *Pressionar* Enter
 
-- **Method M-INT: Atender a pergunta da supervisão e retomar (GOAL 3)**
+- **Method M-INT: Atender a pergunta da supervisão e retomar (GOAL 5)**
   - Operator: *Perceber* a mensagem de Arnaldo no chat
   - Operator: *Memorizar* o ponto em que estava (em M1, a posição na gravação; em M2, o corte da lista)
   - Operator: *Recuperar* em que parte da outra partida está o lance perguntado
@@ -229,13 +257,13 @@ A unidade de análise é uma partida. O plano 0 do HTA repete essa meta para cad
 
 | Tipo | Operador | Uso na tarefa |
 |---|---|---|
-| **Perceptivo** | *Perceber [estímulo]* | Ver a jogada em reprodução, a prévia de um corte, o aviso de conclusão, a lista de cortes ou uma mensagem no chat. |
+| **Perceptivo** | *Perceber [estímulo]* | Ver a jogada em reprodução, a prévia de um corte, a fila com o estado das partidas, um aviso de conclusão ou de falha, a lista de cortes ou uma mensagem no chat. |
 | **Motor** | *Apontar [alvo]* | Levar o cursor até uma gravação, um corte, uma partida ou a janela do chat. |
-| **Motor** | *Clicar [alvo]* | Abrir uma gravação ou partida, separar um trecho, manter ou excluir um corte, baixar a seleção. |
+| **Motor** | *Clicar [alvo]* | Selecionar as gravações a enviar, iniciar o processamento, reenviar uma partida, abrir uma gravação ou partida, separar um trecho, manter ou excluir um corte, baixar a seleção. |
 | **Motor** | *Arrastar [alvo]* | Mover o cursor de reprodução na linha do tempo ou mover arquivos para a pasta do servidor. |
 | **Motor** | *Pressionar [tecla]* | Reproduzir, pausar, marcar início e fim, enviar mensagem. |
-| **Motor** | *Digitar [texto]* | Escrever o aviso ou a resposta a Arnaldo e a nota de ajuste em M-CORR-2. |
-| **Cognitivo** | *Decidir [questão]* | Julgar se um trecho merece atenção, se é candidato, se um corte fica na seleção e se vale rever a gravação. |
+| **Motor** | *Digitar [texto]* | Identificar a partida no envio, escrever o aviso ou a resposta a Arnaldo e a nota de ajuste em M-CORR-2. |
+| **Cognitivo** | *Decidir [questão]* | Julgar se um trecho merece atenção, se é candidato, se um corte fica na seleção, se vale rever a gravação e como prosseguir com uma partida que falhou. |
 | **Cognitivo** | *Verificar [critério]* | Conferir se o corte mostra construção e desfecho e se os lances lembrados estão na seleção. |
 | **Cognitivo** | *Recuperar [informação]* | Trazer da memória os trechos avançados, o tempo de jogo de um lance ou o ponto de parada. |
 | **Cognitivo** | *Memorizar [informação]* | Guardar o ponto de parada antes de atender a supervisão. |
@@ -246,7 +274,8 @@ A unidade de análise é uma partida. O plano 0 do HTA repete essa meta para cad
 
 - **Selection Rule SR1 (como obter os candidatos de uma partida):**
   - **SE** a partida foi processada e o aviso de conclusão chegou, **ENTÃO usar Method M2**.
-  - **SE** o processamento da partida falhou e não há tempo para reenviar antes do prazo, ou a gravação não passou pelo processamento, **ENTÃO usar Method M1**. Os resultados das outras partidas continuam disponíveis em M2 (H16, H26).
+  - **SE** a partida ainda está na fila ou em processamento, **ENTÃO continuar em M-ACOMP** e revisar outra partida já concluída, se houver.
+  - **SE** o processamento da partida falhou e SR5 indica seleção manual, ou a gravação não passou pelo processamento, **ENTÃO usar Method M1**. Os resultados das outras partidas continuam disponíveis em M2 (H16, H26).
 - **Selection Rule SR2 (candidato duvidoso):**
   - **SE** o trecho ou corte é duvidoso, **ENTÃO mantê-lo** e decidir na revisão final da partida, porque Rafael prefere descartar depois a perder um lance (H30).
   - **SE** o trecho ou corte não tem interesse para contar o jogo, **ENTÃO descartar** (M1) ou **excluir da seleção** (M2).
@@ -257,6 +286,10 @@ A unidade de análise é uma partida. O plano 0 do HTA repete essa meta para cad
 - **Selection Rule SR4 (suspeita de omissão):**
   - **SE** Rafael suspeita que um lance ficou de fora (num trecho avançado em M1 ou ausente da lista em M2) **E** o prazo permite, **ENTÃO usar M-OMIS** (em M1, alternativamente, voltar a percorrer o trecho).
   - **SE** o prazo não permite, **ENTÃO registrar a pendência** e entregar a seleção.
+- **Selection Rule SR5 (partida com falha no processamento):**
+  - **SE** o motivo é conhecido e corrigível (arquivo incompatível, envio interrompido) **E** ainda há tempo para reprocessar antes do prazo, **ENTÃO reenviar a partida** (M-FALHA).
+  - **SE** o motivo não é conhecido, ou o reprocessamento não cabe no prazo, **ENTÃO selecionar a partida manualmente** com M1.
+  - Em qualquer caso, **continuar com as outras partidas**: a falha de uma não deve bloquear a revisão das demais (H16).
 
 ---
 
@@ -266,6 +299,8 @@ Não foram estimados tempos (KLM). As quantidades de C01 são parâmetros narrat
 
 | Aspecto | M1, trabalho atual | M2, uso proposto | O que isso indica para o projeto |
 |---|---|---|---|
+| Antes de revisar | Nada: Rafael abre a gravação e começa a busca | Enviar as partidas (M-ENV) e esperar o aviso (M-ACOMP) | Surge uma dependência nova: a partida só pode ser revisada depois de processada. A espera é aproveitada em outras edições (H32), mas, se o processamento demorar, o prazo aperta. Quanto tempo de espera é aceitável é pergunta para a Entrega 7 (H13). |
+| Quando algo dá errado | Só há o arquivo da gravação; um problema aparece durante a busca | O processamento de uma partida pode falhar (M-FALHA) | O aviso precisa identificar a partida, dizer o motivo conhecido e o próximo passo, e preservar as demais (H16, H26). Sem isso, SR5 não tem como ser aplicada e Rafael cai em M1 sem saber se precisava. |
 | O que se repete | O ciclo perceber > decidir > pausar > voltar > marcar, ao longo de toda a gravação | O ciclo clicar > perceber > verificar > decidir, uma vez por corte gerado | M2 troca a busca na gravação pela revisão de uma lista. O esforço passa a depender de quantos cortes o modelo gera, inclusive os sem interesse que H30 tolera. |
 | Onde está o risco de omissão | Nos trechos avançados, quando a atenção cai (H09) | Nos lances que o modelo não detectou e que, por isso, não aparecem na lista | Em M2 a omissão fica menos visível. M-OMIS continua necessário, e a conferência de cobertura continua sendo julgamento de Rafael (H10). |
 | Quem define os limites do corte | Rafael, com marcas de início e fim | O processamento; Rafael só avalia | A margem antes e depois do lance passa a ser condição para Rafael julgar o corte (SR3). |
@@ -274,17 +309,22 @@ Não foram estimados tempos (KLM). As quantidades de C01 são parâmetros narrat
 
 ---
 
-## CTT — T01: Revisar, selecionar e baixar os cortes de uma partida
+## CTT — T01: Obter, revisar e selecionar lances
 
 **Autor:** Pedro Alexandre Custódio Silva — 22.123.049-3  
 **Abordagem adotada:** ConcurTaskTrees (Paternò, 1999), com tarefas abstratas, de usuário, de interação e de sistema e operadores temporais.  
-**Modelo representado:** uso proposto, atividade A04, a partir do aviso de conclusão de A02. Algumas tarefas acontecem fora da interface (chat, pasta do servidor e editor externo) e estão marcadas no diagrama, porque fazem parte da mesma tarefa de Rafael.
+**Modelo representado:** uso proposto, atividades A01 (enviar), A02 (acompanhar) e A04 (revisar, selecionar e baixar). Algumas tarefas acontecem fora da interface (chat, pasta do servidor e editor externo) e estão marcadas no diagrama, porque fazem parte da mesma tarefa de Rafael. O modelo foi dividido em duas figuras para continuar legível: a Figura 2a mostra a visão geral e a Figura 2b expande a tarefa `Revisar partida concluída`.
 
 ### Descrição do modelo CTT
 
-A raiz é a tarefa abstrata `Revisar e baixar os cortes das partidas do dia [T01]`. No primeiro nível, `Tratar cada partida concluída *` corre em **concorrência independente** (`|||`) com a tarefa de sistema `Processar partidas restantes da fila`: enquanto o sistema processa as outras partidas, Rafael revisa a que terminou (H32). O `*` indica que o tratamento se repete a cada partida.
+**Visão geral (Figura 2a).** A raiz é a tarefa abstrata `Obter, revisar e selecionar lances das partidas do dia [T01]`. Ela começa por `Enviar partidas para processamento`, que **habilita** (`>>`) `Acompanhar e tratar as partidas`.
 
-Para cada partida, a sequência é:
+1. **Envio.** `Conferir gravações no servidor` acontece fora da interface e habilita `Selecionar gravações e identificar partidas` (interação, com nome e data, H24). As gravações escolhidas passam (`[]>>`) para `Validar arquivos` (sistema), que passa os arquivos aceitos para `Iniciar o processamento` (interação). O resultado é `Exibir fila com estado por partida` (sistema). O que fazer com um arquivo recusado não foi detalhado no diagrama: o GOMS (M-ENV) registra a decisão de substituir o arquivo ou deixar a partida para M1.
+2. **Acompanhamento.** `Processar partidas da fila` (sistema) corre em **concorrência independente** (`|||`) com `Tratar cada partida *`. Enquanto o sistema processa, Rafael trata as partidas que já saíram da fila e, no intervalo, faz outras edições que não pertencem a T01 (H32).
+3. **Cada partida.** `Tratar cada partida *` se repete até não restar partida. Cada repetição é uma **escolha** (`[]`) entre `Revisar partida concluída` (Figura 2b) e `Tratar falha da partida`. A alternativa não é escolhida por Rafael: depende do resultado do processamento, que chega como aviso.
+4. **Falha.** `Avisar falha e identificar a partida` (sistema) habilita `Consultar motivo e próximo passo` (interação). Essa consulta passa a informação para `Decidir como prosseguir` (usuário), que considera a causa e o prazo (SR5). Em seguida, Rafael escolhe (`[]`) entre `Reenviar partida`, que devolve a partida à fila e gera uma nova repetição de `Tratar cada partida`, e `Selecionar no editor (M1)`, fora da interface.
+
+**Revisão de uma partida concluída (Figura 2b).** A sequência é:
 
 1. `Avisar conclusão da partida` (sistema) **habilita** (`>>`) `Abrir resultados da partida` (interação).
 2. A abertura passa à revisão a partida escolhida (`[]>>`). `Revisar cortes da partida` é abstrata e contém o ciclo `Revisar um corte *`, que se repete até ser **desativado** (`[>`) por `Encerrar revisão da partida`.
@@ -292,13 +332,17 @@ Para cada partida, a sequência é:
 4. A revisão pode ser **suspensa e retomada** (`|>`) por `Atender pergunta da supervisão`, que acontece no chat. Esse operador representa a exigência de H41: a revisão volta ao ponto em que parou, e não ao começo.
 5. Encerrada a revisão, `Conferir cobertura da partida` é uma tarefa de usuário. Rafael compara a seleção com o que sabe do jogo, sem apoio do sistema nesse modelo.
 6. `Baixar seleção` encadeia `Conferir resumo da seleção`, `Solicitar download` e `Gerar arquivos de cortes e metadados` (sistema).
-7. `[Recuperar lance omitido]` é **opcional** e acontece no editor externo, quando a conferência de cobertura aponta uma ausência. `Entregar seleção (pasta e chat)` fecha a tarefa e é o ponto de início de T02.
+7. `[Recuperar lance omitido]` é **opcional** e acontece no editor externo, quando a conferência de cobertura aponta uma ausência. `Entregar seleção (pasta e chat)` fecha a revisão da partida e é o ponto de início de T02.
 
-### Diagrama CTT
+### Diagramas CTT
 
-![CTT T01 — Revisar, selecionar e baixar os cortes de uma partida](../assets/05_tarefas/ctt_t01.svg)
+![CTT T01 — Visão geral: enviar, acompanhar e tratar as partidas](../assets/05_tarefas/ctt_t01.svg)
 
-*Figura 2 — CTT da tarefa T01 no uso proposto (A04). Autor: Pedro Alexandre Custódio Silva. Notação de Paternò. Arquivo vetorial editável em [assets/05_tarefas/ctt_t01.svg](../assets/05_tarefas/ctt_t01.svg).*
+*Figura 2a — CTT da tarefa T01 no uso proposto, visão geral (A01, A02 e A04). Autor: Pedro Alexandre Custódio Silva. Notação de Paternò. Arquivo vetorial editável em [assets/05_tarefas/ctt_t01.svg](../assets/05_tarefas/ctt_t01.svg).*
+
+![CTT T01 — Revisar partida concluída](../assets/05_tarefas/ctt_t01_revisao.svg)
+
+*Figura 2b — Expansão da tarefa `Revisar partida concluída` da Figura 2a (A04). Autor: Pedro Alexandre Custódio Silva. Notação de Paternò. Arquivo vetorial editável em [assets/05_tarefas/ctt_t01_revisao.svg](../assets/05_tarefas/ctt_t01_revisao.svg).*
 
 ---
 
@@ -306,13 +350,13 @@ Para cada partida, a sequência é:
 
 | Operador / relação | Notação | Significado no modelo | Exemplo em T01 |
 |---|---|---|---|
-| **Concorrência independente** | `T1 \|\|\| T2` | As tarefas ocorrem em paralelo, sem ordem definida. | O sistema processa as partidas restantes enquanto Rafael revisa a partida concluída. |
-| **Habilitação** | `T1 >> T2` | T2 só começa quando T1 termina. | O aviso de conclusão habilita a abertura da partida; conferir o resumo habilita o pedido de download. |
-| **Habilitação com passagem de informação** | `T1 []>> T2` | T1 termina e passa a T2 a informação de que ela precisa. | O corte escolhido determina a prévia exibida; a prévia é o que Rafael avalia. |
-| **Escolha** | `T1 [] T2` | Só uma das alternativas é executada. | Manter ou excluir o corte da seleção. |
+| **Concorrência independente** | `T1 \|\|\| T2` | As tarefas ocorrem em paralelo, sem ordem definida. | O sistema processa a fila enquanto Rafael trata as partidas já concluídas (Figura 2a). |
+| **Habilitação** | `T1 >> T2` | T2 só começa quando T1 termina. | Enviar as partidas habilita o acompanhamento; o aviso de conclusão habilita a abertura da partida; conferir o resumo habilita o pedido de download. |
+| **Habilitação com passagem de informação** | `T1 []>> T2` | T1 termina e passa a T2 a informação de que ela precisa. | As gravações selecionadas passam à validação; o corte escolhido determina a prévia exibida; o motivo da falha informa a decisão de como prosseguir. |
+| **Escolha** | `T1 [] T2` | Só uma das alternativas é executada. | Manter ou excluir o corte; partida concluída ou com falha; reenviar ou selecionar no editor. |
 | **Desativação** | `T1 [> T2` | O início de T2 encerra T1. | Encerrar a revisão interrompe o ciclo `Revisar um corte *`. |
 | **Suspensão e retomada** | `T1 \|> T2` | T2 interrompe T1, que depois continua do ponto em que parou. | A pergunta de Arnaldo suspende a revisão, que é retomada no mesmo corte. |
-| **Iteração** | `T*` | A tarefa se repete até ser desativada ou até acabar o que tratar. | Um corte de cada vez; uma partida de cada vez. |
+| **Iteração** | `T*` | A tarefa se repete até ser desativada ou até acabar o que tratar. | Um corte de cada vez; uma partida de cada vez, inclusive a que foi reenviada. |
 | **Opcional** | `[T]` | A tarefa pode não ocorrer. | Recuperar um lance omitido, só quando a conferência aponta uma ausência. |
 
 ---
@@ -321,14 +365,16 @@ Para cada partida, a sequência é:
 
 | Tipo | Natureza | Ocorrência em T01 | Por que esse tipo |
 |---|---|---|---|
-| **Abstrata** | Agrupa subtarefas de tipos diferentes | `Revisar e baixar os cortes das partidas do dia`, `Tratar cada partida concluída`, `Revisar cortes da partida`, `Revisar um corte`, `Decidir sobre o corte`, `Baixar seleção` | Não são executadas por uma única ação; reúnem tarefas de usuário, interação e sistema. |
-| **Usuário** | Atividade mental, sem interação no momento | `Avaliar construção e desfecho`, `Conferir cobertura da partida` | São os julgamentos editoriais que o recorte mantém com Rafael. O sistema exibe o corte, mas não decide se ele se entende. |
-| **Interação** | Rafael age e o sistema (ou outra ferramenta) responde | `Abrir resultados`, `Escolher corte`, `Manter` / `Excluir`, `Encerrar revisão`, `Conferir resumo`, `Solicitar download`, `Atender pergunta da supervisão`, `Recuperar lance omitido`, `Entregar seleção` | As três últimas usam ferramentas externas (chat, editor e pasta do servidor). |
-| **Sistema** | Executada pela aplicação, sem ação de Rafael | `Processar partidas restantes da fila`, `Avisar conclusão da partida`, `Exibir prévia com margem antes e depois`, `Gerar arquivos de cortes e metadados` | Correspondem ao que o TCC produz (cortes e metadados) e ao acompanhamento de A02. |
+| **Abstrata** | Agrupa subtarefas de tipos diferentes | `Obter, revisar e selecionar lances das partidas do dia`, `Enviar partidas para processamento`, `Acompanhar e tratar as partidas`, `Tratar cada partida`, `Revisar partida concluída`, `Tratar falha da partida`, `Prosseguir com a partida`, `Revisar cortes da partida`, `Revisar um corte`, `Decidir sobre o corte`, `Baixar seleção` | Não são executadas por uma única ação; reúnem tarefas de usuário, interação e sistema. |
+| **Usuário** | Atividade mental, sem interação no momento | `Avaliar construção e desfecho`, `Conferir cobertura da partida`, `Decidir como prosseguir` | São os julgamentos que o recorte mantém com Rafael. O sistema exibe o corte, mas não decide se ele se entende; informa a falha, mas não decide se vale reenviar dentro do prazo. |
+| **Interação** | Rafael age e o sistema (ou outra ferramenta) responde | `Conferir gravações no servidor`, `Selecionar gravações e identificar partidas`, `Iniciar o processamento`, `Consultar motivo e próximo passo`, `Reenviar partida`, `Selecionar no editor (M1)`, `Abrir resultados`, `Escolher corte`, `Manter` / `Excluir`, `Encerrar revisão`, `Conferir resumo`, `Solicitar download`, `Atender pergunta da supervisão`, `Recuperar lance omitido`, `Entregar seleção` | `Conferir gravações`, `Selecionar no editor`, `Atender pergunta`, `Recuperar lance omitido` e `Entregar seleção` usam ferramentas externas (pasta do servidor, editor e chat). |
+| **Sistema** | Executada pela aplicação, sem ação de Rafael | `Validar arquivos`, `Exibir fila com estado por partida`, `Processar partidas da fila`, `Avisar falha e identificar a partida`, `Avisar conclusão da partida`, `Exibir prévia com margem antes e depois`, `Gerar arquivos de cortes e metadados` | Correspondem ao que o TCC produz (cortes e metadados) e ao envio e acompanhamento de A01 e A02. |
 
 ### O que a CTT mostra sobre o uso proposto
 
-- As duas tarefas de usuário (`Avaliar construção e desfecho` e `Conferir cobertura`) continuam com Rafael. A contribuição do TCC muda o que chega até ele, mas não substitui esses julgamentos.
+- O envio (Figura 2a) é a única parte da tarefa que acontece uma vez por dia; tudo o mais se repete por partida. A conferência das gravações antes do envio continua fora da interface e é o que evita descobrir um arquivo errado horas depois.
+- A falha de uma partida não interrompe as outras: `Tratar falha da partida` é uma alternativa dentro de `Tratar cada partida *`, e não uma desativação da tarefa inteira. Para isso, o aviso precisa identificar a partida, e `Decidir como prosseguir` só funciona se o motivo e o próximo passo forem informados (H16, H26).
+- As tarefas de usuário (`Avaliar construção e desfecho`, `Conferir cobertura` e `Decidir como prosseguir`) continuam com Rafael. A contribuição do TCC muda o que chega até ele, mas não substitui esses julgamentos.
 - `Conferir cobertura` não tem nenhuma tarefa de sistema que a apoie. É a necessidade de C01 que o modelo ainda deixa sem resposta. Se a interface deve oferecer algo aqui, e o quê, é pergunta para a coleta da Entrega 7, não requisito.
 - O `|>` só funciona se a interface preservar a posição da revisão. Isso vira critério para o protótipo e para o teste: depois de uma interrupção, Rafael consegue saber em que corte estava?
 - `[Recuperar lance omitido]` fica fora da interface. Os metadados baixados precisam trazer o tempo de jogo e a partida de origem, para que Rafael encontre o lance na gravação original (RC09). O mesmo vale para Arnaldo em T02.
@@ -549,7 +595,7 @@ A modelagem categoriza rigorosamente a natureza de cada nó segundo a taxonomia 
 
 ## Síntese da equipe e implicações para o projeto
 
-### T01 — Localizar, selecionar e revisar lances (Pedro)
+### T01 — Obter, revisar e selecionar lances (Pedro)
 
 A modelagem de T01 compara o trabalho atual (HTA e M1) com o uso proposto (M2 e CTT). Os achados abaixo são implicações a validar, e não requisitos confirmados:
 
@@ -557,7 +603,8 @@ A modelagem de T01 compara o trabalho atual (HTA e M1) com o uso proposto (M2 e 
 2. **A margem antes e depois do lance é condição para revisar.** Em C01, o corte que começa no chute exige uma nova busca (HTA 3.3). No uso proposto, Rafael não define os limites; só consegue julgar o corte se a prévia mostrar a construção da jogada (SR3). É o mesmo requisito que T02 identifica para Arnaldo.
 3. **A omissão muda de lugar.** Hoje o risco está nos trechos avançados; no uso proposto, está nos lances que o modelo não detecta e que não aparecem na lista. `Conferir cobertura` não tem apoio do sistema em nenhum dos modelos. Fica como questão para a coleta: o que ajudaria Rafael a saber quanto da partida está coberto?
 4. **A revisão precisa sobreviver a interrupções.** O plano 5 do HTA, o método M-INT e o operador `|>` da CTT apontam para o mesmo critério: depois de responder a Arnaldo, Rafael deve saber em que corte estava, sem depender da memória (H41).
-5. **O que vai para o protótipo e o teste.** O caminho da CTT (abrir a partida concluída, revisar cortes com prévia, manter ou excluir, retomar depois de uma interrupção, conferir o resumo e baixar) é a base para o cenário de interação, o MoLIC e as telas de A04. Uma tarefa de teste candidata é revisar uma partida com um corte sem construção e uma interrupção no meio, observando se o participante percebe o problema e retoma no ponto certo.
+5. **Obter os lances passa a depender do processamento.** No uso proposto, a tarefa começa com o envio das partidas e uma espera que não existe hoje (M-ENV, M-ACOMP e Figura 2a). A espera só vale a pena se Rafael puder fazer outras edições e for avisado quando cada partida terminar (H32). Quando uma partida falha, ele precisa saber qual foi, por quê e o que fazer, sem perder as outras; caso contrário, SR5 não tem como ser aplicada e a partida volta ao trabalho manual (M1). Validar os arquivos no envio, mostrar o estado por partida e explicar falhas são candidatos a requisito (RC02, RC03, H16, H26), a validar.
+6. **O que vai para o protótipo e o teste.** Os dois caminhos da CTT são a base para o cenário de interação, o MoLIC e as telas de A01, A02 e A04. O primeiro vai do envio até a fila com estado por partida. O segundo abre a partida concluída, revisa os cortes com prévia, mantém ou exclui, retoma depois de uma interrupção, confere o resumo e baixa. Tarefas de teste candidatas: (a) enviar as partidas do dia e, diante da falha de uma delas, decidir como prosseguir sem perder as outras; (b) revisar uma partida com um corte sem construção e uma interrupção no meio, observando se o participante percebe o problema e retoma no ponto certo.
 
 ### T02 — Supervisionar processo editorial (Lucas)
 
@@ -577,15 +624,15 @@ As duas tarefas se encontram na entrega da seleção: o fim de T01 (4.2) é o in
 ## Checklist da Entrega 5
 
 - [x] Cada integrante possui tarefa associada na tabela de seleção (T01: Pedro, T02: Lucas, T03: Giovanni).
-- [ ] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT (T01 e T02 concluídas; T03 aguarda Giovanni).
+- [ ] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT (T01 e T02 concluídas; T03 aguarda Giovanni). Em T01, a CTT foi dividida em duas figuras (2a e 2b) por legibilidade.
 - [x] Cada artefato identifica autor e tarefa (T01 por Pedro Alexandre Custódio Silva — 22.123.049-3; T02 por Lucas Roberto Boccia dos Santos — 22.123.012-1).
-- [x] Diagramas são legíveis, possuem padrão visual profissional e arquivos vetoriais SVG editáveis preservados em `assets/05_tarefas/` (`hta_t01.svg`, `ctt_t01.svg`, `hta_t02.svg` e `ctt_t02.svg`).
+- [x] Diagramas são legíveis, possuem padrão visual profissional e arquivos vetoriais SVG editáveis preservados em `assets/05_tarefas/` (`hta_t01.svg`, `ctt_t01.svg`, `ctt_t01_revisao.svg`, `hta_t02.svg` e `ctt_t02.svg`).
 - [x] HTA contém planos operacionais explícitos (T01: planos 0 a 5; T02: planos 0 a 4), indicando ordem, condição, alternativa, repetição e critério de parada, e não apenas lista de tópicos.
 - [x] GOMS distingue rigorosamente Goals, Operators (perceptivos, motores e cognitivos), Methods e Selection Rules fundamentadas. Em T01, M1 (trabalho atual) e M2 (uso proposto) são métodos alternativos para a mesma meta.
 - [x] CTT usa a taxonomia de Paternò com tipos de tarefas corretos (Abstrata, Usuário, Interação e Sistema) e operadores temporais formais (`>>`, `[]>>`, `[]`, `[>`, `|>`, `|||`, `*`, `[T]`).
 - [x] Cada modelo declara se representa o trabalho atual ou o uso proposto (exigência de C01).
 - [x] Há texto detalhado explicando e interpretando cada diagrama.
-- [x] As tarefas estão estritamente vinculadas às personas (P01, P02), cenários (C01, C02) e hipóteses na matriz de rastreabilidade (R01 e R03).
+- [x] As tarefas estão estritamente vinculadas às personas (P01, P02), cenários (C01, C02) e hipóteses na matriz de rastreabilidade (R01, R02 e R03).
 - [x] As tarefas descrevem o que a pessoa humana faz no mundo real com o resultado da contribuição técnica, evitando modelar passos internos do algoritmo de visão computacional.
 - [x] Síntese da equipe explicita como os achados da modelagem impactam os requisitos, o protótipo e o futuro teste de usabilidade.
 
@@ -598,3 +645,4 @@ As duas tarefas se encontram na entrega da seleção: o fim de T01 (4.2) é o in
 | 29/09/2026 | 0.1 | Criação do esqueleto base da Entrega 5 a partir do template da disciplina. | Equipe 16 |
 | 07/10/2026 | 1.0 | Elaboração completa da tarefa T02 (*Supervisionar processo editorial*): contextualização no escopo do TCC, tabela de seleção de tarefas, modelagem HTA com planos 0 a 4 e decisões de design, modelagem CMN-GOMS com métodos e regras de seleção, modelagem CTT com operadores formais e tipos de tarefas de Paternò, síntese de requisitos e criação dos diagramas vetoriais `hta_t02.svg` e `ctt_t02.svg`. T01 e T03 permanecem engatilhadas para seus respectivos autores. | Lucas Roberto Boccia dos Santos |
 | 08/10/2026 | 1.1 | Elaboração da tarefa T01 (*Localizar, selecionar e revisar lances*) a partir de C01: HTA do trabalho atual com planos 0 a 5, CMN-GOMS com métodos do trabalho atual (M1) e do uso proposto (M2), sub-métodos e regras de seleção SR1 a SR4, comparação qualitativa entre M1 e M2, CTT do uso proposto (A04) e diagramas `hta_t01.svg` e `ctt_t01.svg`. Síntese dividida por tarefa, com pontos comuns entre T01 e T02; checklist atualizado; matrícula de Pedro corrigida na tabela de seleção; figuras de T02 renumeradas para 3 e 4. | Pedro Alexandre Custódio Silva |
+| 08/10/2026 | 1.2 | T01 renomeada para *Obter, revisar e selecionar lances de melhores momentos* e ampliada para incluir o envio das partidas para processamento e o acompanhamento (A01 e A02): GOMS com as metas de enviar e acompanhar, os métodos M-ENV, M-ACOMP e M-FALHA e a regra SR5 para falhas; CTT dividida em visão geral (`ctt_t01.svg`, Figura 2a) e revisão de uma partida concluída (`ctt_t01_revisao.svg`, Figura 2b), com o caminho de falha; HTA mantido como trabalho atual, com nota sobre o ramo que o uso proposto substitui; síntese, checklist e R02 atualizados. | Pedro Alexandre Custódio Silva |
