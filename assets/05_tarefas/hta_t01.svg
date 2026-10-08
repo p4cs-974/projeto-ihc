@@ -33,7 +33,7 @@
     <rect width="620" height="80" rx="8" class="node-root"/>
     <text x="310.0" y="30" class="node-root-txt">0. Selecionar e revisar os melhores momentos das partidas do dia</text>
     <text x="310.0" y="50" class="node-root-sub">Trabalho atual (C01): sem a interface proposta</text>
-    <text x="310.0" y="68" class="node-root-sub" fill="#93c5fd">Plano 0: 1; para cada partida, 2 &gt; 3 &gt; 4; se houver pergunta da supervisão durante 2 ou 3, 5</text>
+    <text x="310.0" y="68" class="node-root-sub" fill="#93c5fd">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4 (2 a 4 por partida); 5 interrompe 2 ou 3</text>
   </g>
   <path d="M 750.0 175 L 750.0 215" class="line"/>
   <path d="M 175.0 215 L 1335.0 215" class="line"/>
@@ -52,6 +52,7 @@
   <path d="M 56 376.0 L 74 376.0" class="line"/>
   <g transform="translate(74, 349)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">1.1. Conferir gravações</text>
     <text x="12" y="35" class="node-lvl2-sub">Partida identificada e</text>
     <text x="12" y="47" class="node-lvl2-sub">arquivo completo no servidor</text>
@@ -59,6 +60,7 @@
   <path d="M 56 444.0 L 74 444.0" class="line"/>
   <g transform="translate(74, 417)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">1.2. Definir a ordem</text>
     <text x="12" y="35" class="node-lvl2-sub">Uma partida por vez,</text>
     <text x="12" y="47" class="node-lvl2-sub">revisada antes da próxima</text>
@@ -69,17 +71,19 @@
     <rect width="270" height="82" rx="6" class="node-lvl1"/>
     <text x="135.0" y="26" class="node-lvl1-title">2. Localizar e separar candidatos</text>
     <text x="135.0" y="45" class="node-lvl1-sub">Percorrer a gravação de uma partida</text>
-    <text x="135.0" y="67" class="node-lvl1-plan">Plano 2: 2.1 &gt; 2.2 &gt; (2.3 &gt; 2.4 &gt; 2.5?)*</text>
+    <text x="135.0" y="67" class="node-lvl1-plan">Plano 2: 2.1 &gt; 2.2 &gt; 2.3 &gt; 2.4 &gt; 2.5</text>
   </g>
   <path d="M 346 376.0 L 364 376.0" class="line"/>
   <g transform="translate(364, 349)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">2.1. Abrir a gravação</text>
     <text x="12" y="35" class="node-lvl2-sub">No editor que já utiliza</text>
   </g>
   <path d="M 346 444.0 L 364 444.0" class="line"/>
   <g transform="translate(364, 417)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">2.2. Percorrer a gravação</text>
     <text x="12" y="35" class="node-lvl2-sub">Avançar trechos pouco promissores;</text>
     <text x="12" y="47" class="node-lvl2-sub">atenção às chegadas à área</text>
@@ -87,6 +91,7 @@
   <path d="M 346 512.0 L 364 512.0" class="line"/>
   <g transform="translate(364, 485)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">2.3. Examinar a jogada</text>
     <text x="12" y="35" class="node-lvl2-sub">Pausar, voltar ao início</text>
     <text x="12" y="47" class="node-lvl2-sub">da jogada e assistir</text>
@@ -94,6 +99,7 @@
   <path d="M 346 580.0 L 364 580.0" class="line"/>
   <g transform="translate(364, 553)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">2.4. Decidir se é candidato</text>
     <text x="12" y="35" class="node-lvl2-sub">Relevante, duvidoso</text>
     <text x="12" y="47" class="node-lvl2-sub">ou descartado</text>
@@ -101,6 +107,7 @@
   <path d="M 346 648.0 L 364 648.0" class="line"/>
   <g transform="translate(364, 621)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">2.5. Delimitar e separar</text>
     <text x="12" y="35" class="node-lvl2-sub">Marcar início e fim</text>
     <text x="12" y="47" class="node-lvl2-sub">e separar o trecho</text>
@@ -111,17 +118,19 @@
     <rect width="270" height="82" rx="6" class="node-lvl1"/>
     <text x="135.0" y="26" class="node-lvl1-title">3. Revisar os cortes da partida</text>
     <text x="135.0" y="45" class="node-lvl1-sub">Antes de passar à partida seguinte</text>
-    <text x="135.0" y="67" class="node-lvl1-plan">Plano 3: (3.1 &gt; 3.2 &gt; 3.3? &gt; 3.4?)* &gt; 3.5</text>
+    <text x="135.0" y="67" class="node-lvl1-plan">Plano 3: 3.1 &gt; 3.2 &gt; (3.3 / 3.4) &gt; 3.5</text>
   </g>
   <path d="M 636 376.0 L 654 376.0" class="line"/>
   <g transform="translate(654, 349)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">3.1. Reproduzir o corte</text>
     <text x="12" y="35" class="node-lvl2-sub">Assistir ao trecho separado</text>
   </g>
   <path d="M 636 444.0 L 654 444.0" class="line"/>
   <g transform="translate(654, 417)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">3.2. Julgar o corte</text>
     <text x="12" y="35" class="node-lvl2-sub">Mostra a construção</text>
     <text x="12" y="47" class="node-lvl2-sub">e o desfecho da jogada?</text>
@@ -129,6 +138,7 @@
   <path d="M 636 512.0 L 654 512.0" class="line"/>
   <g transform="translate(654, 485)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">3.3. Corrigir os limites</text>
     <text x="12" y="35" class="node-lvl2-sub">Localizar a jogada na gravação</text>
     <text x="12" y="47" class="node-lvl2-sub">original e recuar ou avançar</text>
@@ -136,6 +146,7 @@
   <path d="M 636 580.0 L 654 580.0" class="line"/>
   <g transform="translate(654, 553)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">3.4. Resolver o duvidoso</text>
     <text x="12" y="35" class="node-lvl2-sub">Manter ou descartar</text>
     <text x="12" y="47" class="node-lvl2-sub">o candidato</text>
@@ -143,6 +154,7 @@
   <path d="M 636 648.0 L 654 648.0" class="line"/>
   <g transform="translate(654, 621)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">3.5. Avaliar a cobertura</text>
     <text x="12" y="35" class="node-lvl2-sub">Decidir se revê trechos</text>
     <text x="12" y="47" class="node-lvl2-sub">avançados ou registra pendência</text>
@@ -158,6 +170,7 @@
   <path d="M 926 376.0 L 944 376.0" class="line"/>
   <g transform="translate(944, 349)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">4.1. Copiar os cortes</text>
     <text x="12" y="35" class="node-lvl2-sub">Para a pasta da partida</text>
     <text x="12" y="47" class="node-lvl2-sub">no servidor</text>
@@ -165,6 +178,7 @@
   <path d="M 926 444.0 L 944 444.0" class="line"/>
   <g transform="translate(944, 417)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">4.2. Avisar Arnaldo</text>
     <text x="12" y="35" class="node-lvl2-sub">Mensagem no chat</text>
     <text x="12" y="47" class="node-lvl2-sub">da produtora</text>
@@ -180,12 +194,14 @@
   <path d="M 1216 376.0 L 1234 376.0" class="line-alert"/>
   <g transform="translate(1234, 349)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">5.1. Deixar a gravação</text>
     <text x="12" y="35" class="node-lvl2-sub">No ponto em que está</text>
   </g>
   <path d="M 1216 444.0 L 1234 444.0" class="line-alert"/>
   <g transform="translate(1234, 417)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">5.2. Responder ao pedido</text>
     <text x="12" y="35" class="node-lvl2-sub">Localizar o trecho de outra</text>
     <text x="12" y="47" class="node-lvl2-sub">partida e responder no chat</text>
@@ -193,6 +209,7 @@
   <path d="M 1216 512.0 L 1234 512.0" class="line-alert"/>
   <g transform="translate(1234, 485)">
     <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <line x1="4" y1="58" x2="232" y2="58" stroke="#64748b" stroke-width="1.5"/>
     <text x="12" y="19" class="node-lvl2-title">5.3. Retomar a busca</text>
     <text x="12" y="35" class="node-lvl2-sub">Voltar ao editor e encontrar</text>
     <text x="12" y="47" class="node-lvl2-sub">o ponto de parada</text>
@@ -223,7 +240,7 @@
     <text x="56" y="238" class="plan-txt" fill="#b91c1c">Plano 5</text>
     <text x="104" y="238" class="legend-txt">Fazer 5.1 &gt; 5.2 &gt; 5.3 e retornar ao passo de 2 ou 3 em que estava.</text>
     <line x1="20" y1="258" x2="1400" y2="258" stroke="#e2e8f0" stroke-width="1.5"/>
-    <text x="20" y="278" class="legend-txt">Leitura: &quot;&gt;&quot; indica sequência; &quot;?&quot; indica passo condicional; &quot;*&quot; indica repetição. O ramo 5 (tracejado) é uma interrupção externa, não uma etapa planejada.</text>
+    <text x="20" y="278" class="legend-txt">Notação: &quot;&gt;&quot; sequencial; &quot;/&quot; seleção conforme a circunstância; &quot;+&quot; paralelo (não ocorre em T01). Repetições estão descritas nos planos. Caixas com linha dupla embaixo são operações. O ramo 5 (tracejado) é uma interrupção externa.</text>
     <text x="20" y="296" class="legend-txt">O modelo descreve o trabalho atual hipotético de C01 (H01, H09, H11, H30, H39, H40, H41). Não representa uso observado nem a interface proposta; envio, acompanhamento e revisão propostos estão no GOMS (M2) e na CTT.</text>
   </g>
 </svg>
