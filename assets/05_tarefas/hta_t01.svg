@@ -1,5 +1,229 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1045" viewBox="0 0 1500 1045" role="img" aria-labelledby="title desc">
+  <title id="title">Diagrama HTA — Tarefa T01: Localizar, selecionar e revisar lances de melhores momentos</title>
+  <desc id="desc">Decomposição hierárquica (HTA) do trabalho atual de Rafael (P01) descrito no cenário C01: organizar o dia, localizar e separar candidatos na gravação, revisar os cortes, entregar a seleção e atender interrupções da supervisão.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 15px; fill: #475569; }
+      .node-root { fill: #1e293b; stroke: #0f172a; stroke-width: 2; }
+      .node-root-txt { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 16px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+      .node-root-sub { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #cbd5e1; text-anchor: middle; }
+      .node-lvl1 { fill: #ffffff; stroke: #2563eb; stroke-width: 2; }
+      .node-lvl1-alert { fill: #fef2f2; stroke: #dc2626; stroke-width: 2; stroke-dasharray: 6 4; }
+      .node-lvl1-title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13.5px; font-weight: 700; fill: #1e3a8a; text-anchor: middle; }
+      .node-lvl1-sub { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11.5px; fill: #475569; text-anchor: middle; }
+      .node-lvl1-plan { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11.5px; font-weight: 600; fill: #2563eb; text-anchor: middle; }
+      .node-lvl2 { fill: #ffffff; stroke: #64748b; stroke-width: 1.5; }
+      .node-lvl2-title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #1e293b; }
+      .node-lvl2-sub { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 10.5px; fill: #64748b; }
+      .line { stroke: #94a3b8; stroke-width: 2; fill: none; }
+      .line-alert { stroke: #ef4444; stroke-width: 2; stroke-dasharray: 4 4; fill: none; }
+      .legend-box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; }
+      .legend-head { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .legend-txt { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11px; fill: #334155; }
+      .plan-box { fill: #eff6ff; stroke: #93c5fd; stroke-width: 1.5; }
+      .plan-txt { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11.5px; font-weight: 600; fill: #1d4ed8; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="1500" height="1045" class="bg"/>
+  <text x="40" y="46" class="title">HTA — T01: Localizar, selecionar e revisar lances de melhores momentos</text>
+  <text x="40" y="72" class="subtitle">Autor: Pedro Alexandre Custódio Silva (22.123.049-3) • Persona: P01 (Rafael) • Cenário: C01 • Modelo do trabalho atual</text>
+  <g transform="translate(440.0, 95)">
+    <rect width="620" height="80" rx="8" class="node-root"/>
+    <text x="310.0" y="30" class="node-root-txt">0. Selecionar e revisar os melhores momentos das partidas do dia</text>
+    <text x="310.0" y="50" class="node-root-sub">Trabalho atual (C01): sem a interface proposta</text>
+    <text x="310.0" y="68" class="node-root-sub" fill="#93c5fd">Plano 0: 1; para cada partida, 2 &gt; 3 &gt; 4; se houver pergunta da supervisão durante 2 ou 3, 5</text>
+  </g>
+  <path d="M 750.0 175 L 750.0 215" class="line"/>
+  <path d="M 175.0 215 L 1335.0 215" class="line"/>
+  <path d="M 175.0 215 L 175.0 245" class="line"/>
+  <path d="M 465.0 215 L 465.0 245" class="line"/>
+  <path d="M 755.0 215 L 755.0 245" class="line"/>
+  <path d="M 1045.0 215 L 1045.0 245" class="line"/>
+  <path d="M 1335.0 215 L 1335.0 245" class="line-alert"/>
+  <!-- Ramo 1 -->
+  <g transform="translate(40, 245)">
+    <rect width="270" height="82" rx="6" class="node-lvl1"/>
+    <text x="135.0" y="26" class="node-lvl1-title">1. Organizar o trabalho do dia</text>
+    <text x="135.0" y="45" class="node-lvl1-sub">Antes de abrir a primeira gravação</text>
+    <text x="135.0" y="67" class="node-lvl1-plan">Plano 1: 1.1 &gt; 1.2</text>
+  </g>
+  <path d="M 56 376.0 L 74 376.0" class="line"/>
+  <g transform="translate(74, 349)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">1.1. Conferir gravações</text>
+    <text x="12" y="35" class="node-lvl2-sub">Partida identificada e</text>
+    <text x="12" y="47" class="node-lvl2-sub">arquivo completo no servidor</text>
+  </g>
+  <path d="M 56 444.0 L 74 444.0" class="line"/>
+  <g transform="translate(74, 417)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">1.2. Definir a ordem</text>
+    <text x="12" y="35" class="node-lvl2-sub">Uma partida por vez,</text>
+    <text x="12" y="47" class="node-lvl2-sub">revisada antes da próxima</text>
+  </g>
+  <path d="M 56 327 L 56 444.0" class="line"/>
+  <!-- Ramo 2 -->
+  <g transform="translate(330, 245)">
+    <rect width="270" height="82" rx="6" class="node-lvl1"/>
+    <text x="135.0" y="26" class="node-lvl1-title">2. Localizar e separar candidatos</text>
+    <text x="135.0" y="45" class="node-lvl1-sub">Percorrer a gravação de uma partida</text>
+    <text x="135.0" y="67" class="node-lvl1-plan">Plano 2: 2.1 &gt; 2.2 &gt; (2.3 &gt; 2.4 &gt; 2.5?)*</text>
+  </g>
+  <path d="M 346 376.0 L 364 376.0" class="line"/>
+  <g transform="translate(364, 349)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">2.1. Abrir a gravação</text>
+    <text x="12" y="35" class="node-lvl2-sub">No editor que já utiliza</text>
+  </g>
+  <path d="M 346 444.0 L 364 444.0" class="line"/>
+  <g transform="translate(364, 417)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">2.2. Percorrer a gravação</text>
+    <text x="12" y="35" class="node-lvl2-sub">Avançar trechos pouco promissores;</text>
+    <text x="12" y="47" class="node-lvl2-sub">atenção às chegadas à área</text>
+  </g>
+  <path d="M 346 512.0 L 364 512.0" class="line"/>
+  <g transform="translate(364, 485)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">2.3. Examinar a jogada</text>
+    <text x="12" y="35" class="node-lvl2-sub">Pausar, voltar ao início</text>
+    <text x="12" y="47" class="node-lvl2-sub">da jogada e assistir</text>
+  </g>
+  <path d="M 346 580.0 L 364 580.0" class="line"/>
+  <g transform="translate(364, 553)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">2.4. Decidir se é candidato</text>
+    <text x="12" y="35" class="node-lvl2-sub">Relevante, duvidoso</text>
+    <text x="12" y="47" class="node-lvl2-sub">ou descartado</text>
+  </g>
+  <path d="M 346 648.0 L 364 648.0" class="line"/>
+  <g transform="translate(364, 621)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">2.5. Delimitar e separar</text>
+    <text x="12" y="35" class="node-lvl2-sub">Marcar início e fim</text>
+    <text x="12" y="47" class="node-lvl2-sub">e separar o trecho</text>
+  </g>
+  <path d="M 346 327 L 346 648.0" class="line"/>
+  <!-- Ramo 3 -->
+  <g transform="translate(620, 245)">
+    <rect width="270" height="82" rx="6" class="node-lvl1"/>
+    <text x="135.0" y="26" class="node-lvl1-title">3. Revisar os cortes da partida</text>
+    <text x="135.0" y="45" class="node-lvl1-sub">Antes de passar à partida seguinte</text>
+    <text x="135.0" y="67" class="node-lvl1-plan">Plano 3: (3.1 &gt; 3.2 &gt; 3.3? &gt; 3.4?)* &gt; 3.5</text>
+  </g>
+  <path d="M 636 376.0 L 654 376.0" class="line"/>
+  <g transform="translate(654, 349)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">3.1. Reproduzir o corte</text>
+    <text x="12" y="35" class="node-lvl2-sub">Assistir ao trecho separado</text>
+  </g>
+  <path d="M 636 444.0 L 654 444.0" class="line"/>
+  <g transform="translate(654, 417)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">3.2. Julgar o corte</text>
+    <text x="12" y="35" class="node-lvl2-sub">Mostra a construção</text>
+    <text x="12" y="47" class="node-lvl2-sub">e o desfecho da jogada?</text>
+  </g>
+  <path d="M 636 512.0 L 654 512.0" class="line"/>
+  <g transform="translate(654, 485)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">3.3. Corrigir os limites</text>
+    <text x="12" y="35" class="node-lvl2-sub">Localizar a jogada na gravação</text>
+    <text x="12" y="47" class="node-lvl2-sub">original e recuar ou avançar</text>
+  </g>
+  <path d="M 636 580.0 L 654 580.0" class="line"/>
+  <g transform="translate(654, 553)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">3.4. Resolver o duvidoso</text>
+    <text x="12" y="35" class="node-lvl2-sub">Manter ou descartar</text>
+    <text x="12" y="47" class="node-lvl2-sub">o candidato</text>
+  </g>
+  <path d="M 636 648.0 L 654 648.0" class="line"/>
+  <g transform="translate(654, 621)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">3.5. Avaliar a cobertura</text>
+    <text x="12" y="35" class="node-lvl2-sub">Decidir se revê trechos</text>
+    <text x="12" y="47" class="node-lvl2-sub">avançados ou registra pendência</text>
+  </g>
+  <path d="M 636 327 L 636 648.0" class="line"/>
+  <!-- Ramo 4 -->
+  <g transform="translate(910, 245)">
+    <rect width="270" height="82" rx="6" class="node-lvl1"/>
+    <text x="135.0" y="26" class="node-lvl1-title">4. Entregar a seleção da partida</text>
+    <text x="135.0" y="45" class="node-lvl1-sub">Passar o material à supervisão</text>
+    <text x="135.0" y="67" class="node-lvl1-plan">Plano 4: 4.1 &gt; 4.2</text>
+  </g>
+  <path d="M 926 376.0 L 944 376.0" class="line"/>
+  <g transform="translate(944, 349)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">4.1. Copiar os cortes</text>
+    <text x="12" y="35" class="node-lvl2-sub">Para a pasta da partida</text>
+    <text x="12" y="47" class="node-lvl2-sub">no servidor</text>
+  </g>
+  <path d="M 926 444.0 L 944 444.0" class="line"/>
+  <g transform="translate(944, 417)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">4.2. Avisar Arnaldo</text>
+    <text x="12" y="35" class="node-lvl2-sub">Mensagem no chat</text>
+    <text x="12" y="47" class="node-lvl2-sub">da produtora</text>
+  </g>
+  <path d="M 926 327 L 926 444.0" class="line"/>
+  <!-- Ramo 5 -->
+  <g transform="translate(1200, 245)">
+    <rect width="270" height="82" rx="6" class="node-lvl1-alert"/>
+    <text x="135.0" y="26" class="node-lvl1-title" fill="#991b1b">5. Atender a supervisão</text>
+    <text x="135.0" y="45" class="node-lvl1-sub">Condicional: interrompe 2 ou 3 e retoma</text>
+    <text x="135.0" y="67" class="node-lvl1-plan" fill="#b91c1c">Plano 5: 5.1 &gt; 5.2 &gt; 5.3</text>
+  </g>
+  <path d="M 1216 376.0 L 1234 376.0" class="line-alert"/>
+  <g transform="translate(1234, 349)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">5.1. Deixar a gravação</text>
+    <text x="12" y="35" class="node-lvl2-sub">No ponto em que está</text>
+  </g>
+  <path d="M 1216 444.0 L 1234 444.0" class="line-alert"/>
+  <g transform="translate(1234, 417)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">5.2. Responder ao pedido</text>
+    <text x="12" y="35" class="node-lvl2-sub">Localizar o trecho de outra</text>
+    <text x="12" y="47" class="node-lvl2-sub">partida e responder no chat</text>
+  </g>
+  <path d="M 1216 512.0 L 1234 512.0" class="line-alert"/>
+  <g transform="translate(1234, 485)">
+    <rect width="236" height="54" rx="5" class="node-lvl2"/>
+    <text x="12" y="19" class="node-lvl2-title">5.3. Retomar a busca</text>
+    <text x="12" y="35" class="node-lvl2-sub">Voltar ao editor e encontrar</text>
+    <text x="12" y="47" class="node-lvl2-sub">o ponto de parada</text>
+  </g>
+  <path d="M 1216 327 L 1216 512.0" class="line-alert"/>
+  <g transform="translate(40, 705)">
+    <rect width="1420" height="318" rx="6" class="legend-box"/>
+    <text x="20" y="26" class="legend-head">Planos (ordem, condição, repetição e parada)</text>
+    <rect x="20" y="34" width="72" height="22" rx="4" class="plan-box"/>
+    <text x="56" y="50" class="plan-txt">Plano 0</text>
+    <text x="104" y="50" class="legend-txt">Fazer 1 uma vez no início do dia. Para cada partida, na ordem definida em 1.2, fazer 2 &gt; 3 &gt; 4. Se chegar pergunta da supervisão durante 2 ou 3, fazer 5 e voltar ao passo interrompido.</text>
+    <text x="104" y="66" class="legend-txt" font-weight="600">Parar quando a seleção da última partida tiver sido entregue (4.2).</text>
+    <rect x="20" y="78" width="72" height="22" rx="4" class="plan-box"/>
+    <text x="56" y="94" class="plan-txt">Plano 1</text>
+    <text x="104" y="94" class="legend-txt">Fazer 1.1 &gt; 1.2. Se uma gravação estiver incompleta ou sem identificação, resolver antes de definir a ordem.</text>
+    <rect x="20" y="106" width="72" height="22" rx="4" class="plan-box"/>
+    <text x="56" y="122" class="plan-txt">Plano 2</text>
+    <text x="104" y="122" class="legend-txt">Fazer 2.1 &gt; 2.2. Ao perceber uma possível jogada relevante, fazer 2.3 &gt; 2.4; se o trecho for candidato ou duvidoso, fazer 2.5 (o duvidoso é separado para decisão em 3.4).</text>
+    <text x="104" y="138" class="legend-txt" font-weight="600">Voltar a 2.2 até o fim da gravação.</text>
+    <rect x="20" y="150" width="72" height="22" rx="4" class="plan-box"/>
+    <text x="56" y="166" class="plan-txt">Plano 3</text>
+    <text x="104" y="166" class="legend-txt">Para cada corte separado, fazer 3.1 &gt; 3.2. Se faltar construção ou desfecho, fazer 3.3 e repetir 3.1. Se o candidato for duvidoso, fazer 3.4. Depois do último corte, fazer 3.5.</text>
+    <text x="104" y="182" class="legend-txt" font-weight="600">Se houver suspeita de lance em trecho avançado e o prazo permitir, voltar a 2.2 nesse trecho; senão, registrar a pendência e seguir para 4.</text>
+    <rect x="20" y="194" width="72" height="22" rx="4" class="plan-box"/>
+    <text x="56" y="210" class="plan-txt">Plano 4</text>
+    <text x="104" y="210" class="legend-txt">Fazer 4.1 &gt; 4.2.</text>
+    <rect x="20" y="222" width="72" height="22" rx="4" class="plan-box" fill="#fef2f2" stroke="#f87171"/>
+    <text x="56" y="238" class="plan-txt" fill="#b91c1c">Plano 5</text>
+    <text x="104" y="238" class="legend-txt">Fazer 5.1 &gt; 5.2 &gt; 5.3 e retornar ao passo de 2 ou 3 em que estava.</text>
+    <line x1="20" y1="258" x2="1400" y2="258" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="20" y="278" class="legend-txt">Leitura: &quot;&gt;&quot; indica sequência; &quot;?&quot; indica passo condicional; &quot;*&quot; indica repetição. O ramo 5 (tracejado) é uma interrupção externa, não uma etapa planejada.</text>
+    <text x="20" y="296" class="legend-txt">O modelo descreve o trabalho atual hipotético de C01 (H01, H09, H11, H30, H39, H40, H41). Não representa uso observado nem a interface proposta; esta aparece no GOMS (M2) e na CTT.</text>
+  </g>
 </svg>
