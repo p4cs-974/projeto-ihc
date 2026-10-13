@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1540" viewBox="0 0 1440 1540" role="img" aria-labelledby="title desc">
+<title id="title">GOMS — T03: Metas, métodos e regras de seleção</title><desc id="desc">Diagrama hierárquico de metas GOMS de T03 por Giovanni Chahin Morassi. Os métodos e regras de seleção são resumidos; operadores completos e condições no modelo textual da Entrega 5.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
+<rect width="1440" height="1540" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
+<text x="40" y="42" text-anchor="start" font-size="25" font-weight="700">GOMS — T03: Metas, métodos e regras de seleção</text>
+<text x="40" y="73" text-anchor="start" font-size="16" font-weight="400">Giovanni Chahin Morassi · 22.123.025-3 · P01, Rafael / aplicação a P03 · Uso proposto [H]</text>
+<rect x="320.0" y="120" width="800" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="146" text-anchor="middle" font-size="16" font-weight="400">GOAL 0: acompanhar o lote e definir a continuidade das partidas</text>
+<text x="720" y="169" text-anchor="middle" font-size="16" font-weight="400">METHOD 0.A: acompanhar uma sessão do lote já enviado</text>
+<text x="720" y="209" text-anchor="middle" font-size="14" font-weight="700">Regra: lote identificável e lista acessível; consulta pelo usuário ou aviso</text>
+<path d="M720 224 V245 H200 V275" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 224 V245 H545 V275" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 224 V245 H890 V275" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 224 V245 H1235 V275" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="45.0" y="275" width="310" height="165" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="200" y="301" text-anchor="middle" font-size="16" font-weight="400">GOAL 1: identificar lote</text>
+<text x="200" y="324" text-anchor="middle" font-size="16" font-weight="400">METHOD 1.A: consultar registros</text>
+<text x="200" y="347" text-anchor="middle" font-size="16" font-weight="400">Regra: lista acessível</text>
+<text x="200" y="370" text-anchor="middle" font-size="16" font-weight="400">OP.: abrir; ler referências;</text>
+<text x="200" y="393" text-anchor="middle" font-size="16" font-weight="400">relacionar registros ao lote</text>
+<rect x="390.0" y="275" width="310" height="165" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="545" y="301" text-anchor="middle" font-size="16" font-weight="400">GOAL 2: compreender situação</text>
+<text x="545" y="324" text-anchor="middle" font-size="16" font-weight="400">METHOD 2.A: consultar estado</text>
+<text x="545" y="347" text-anchor="middle" font-size="16" font-weight="400">Regra: partida identificada</text>
+<text x="545" y="370" text-anchor="middle" font-size="16" font-weight="400">OP.: selecionar; acessar; ler;</text>
+<text x="545" y="393" text-anchor="middle" font-size="16" font-weight="400">distinguir; escolher continuidade</text>
+<rect x="735.0" y="275" width="310" height="165" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="890" y="301" text-anchor="middle" font-size="16" font-weight="400">GOAL 3: dar continuidade</text>
+<text x="890" y="324" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.A / 3.B / 3.C</text>
+<text x="890" y="347" text-anchor="middle" font-size="16" font-weight="400">Regra: estado e acesso</text>
+<text x="890" y="370" text-anchor="middle" font-size="16" font-weight="400">selecionam o método</text>
+<text x="890" y="393" text-anchor="middle" font-size="16" font-weight="400">Detalhamento abaixo</text>
+<rect x="1080.0" y="275" width="310" height="165" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1235" y="301" text-anchor="middle" font-size="16" font-weight="400">GOAL 4: consolidar o lote</text>
+<text x="1235" y="324" text-anchor="middle" font-size="16" font-weight="400">METHOD 4.A: conferir o lote</text>
+<text x="1235" y="347" text-anchor="middle" font-size="16" font-weight="400">Regra: encaminhamentos definidos</text>
+<text x="1235" y="370" text-anchor="middle" font-size="16" font-weight="400">OP.: consultar demais; conferir;</text>
+<text x="1235" y="393" text-anchor="middle" font-size="16" font-weight="400">distinguir pendências; encerrar</text>
+<text x="40" y="480" text-anchor="start" font-size="16" font-weight="400">Metas 2–3 se repetem por partida; a sessão pode terminar com pendências em 4. Sem estimativa KLM.</text>
+<path d="M40 515 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="545" text-anchor="start" font-size="18" font-weight="700">Expansão da meta 3 — métodos alternativos segundo a situação da partida</text>
+<rect x="450.0" y="575" width="540" height="70" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="601" text-anchor="middle" font-size="16" font-weight="400">GOAL 3: dar continuidade à partida</text>
+<path d="M720 645 V675 H260 V710" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 645 V675 H720 V710" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 645 V675 H1180 V710" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="55.0" y="710" width="410" height="170" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="260" y="736" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.A: adiar e aguardar</text>
+<text x="260" y="759" text-anchor="middle" font-size="16" font-weight="400">Regra: ainda ativa ou informação</text>
+<text x="260" y="782" text-anchor="middle" font-size="16" font-weight="400">insuficiente para ação segura</text>
+<text x="260" y="805" text-anchor="middle" font-size="16" font-weight="400">OP.: reconhecer pendência; decidir</text>
+<text x="260" y="828" text-anchor="middle" font-size="16" font-weight="400">outra atividade; adiar consulta</text>
+<rect x="515.0" y="710" width="410" height="170" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="736" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.B: encaminhar à revisão</text>
+<text x="720" y="759" text-anchor="middle" font-size="16" font-weight="400">Regra: resultados acessíveis; limites</text>
+<text x="720" y="782" text-anchor="middle" font-size="16" font-weight="400">consultados em caso de falha parcial</text>
+<text x="720" y="805" text-anchor="middle" font-size="16" font-weight="400">OP.: abrir; conferir acesso/limites;</text>
+<text x="720" y="828" text-anchor="middle" font-size="16" font-weight="400">reconhecer passagem a T01/A04</text>
+<rect x="975.0" y="710" width="410" height="170" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1180" y="736" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.C: tratar falha informada</text>
+<text x="1180" y="759" text-anchor="middle" font-size="16" font-weight="400">Regra: falha de entrada, processamento</text>
+<text x="1180" y="782" text-anchor="middle" font-size="16" font-weight="400">ou acesso informada</text>
+<text x="1180" y="805" text-anchor="middle" font-size="16" font-weight="400">OP.: ler orientação; avaliar ação;</text>
+<text x="1180" y="828" text-anchor="middle" font-size="16" font-weight="400">GOAL 3.C.3; conferir encaminhamento</text>
+<path d="M40 940 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="970" text-anchor="start" font-size="18" font-weight="700">Expansão de GOAL 3.C.3 — mesma meta, métodos conforme causa e ação disponível</text>
+<rect x="390.0" y="1000" width="660" height="70" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="1026" text-anchor="middle" font-size="16" font-weight="400">GOAL 3.C.3: encaminhar recuperação ou pendência</text>
+<path d="M720 1070 V1100 H260 V1135" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 1070 V1100 H720 V1135" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 1070 V1100 H1180 V1135" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="55.0" y="1135" width="410" height="180" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="260" y="1161" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.C.3.A: corrigir e reenviar</text>
+<text x="260" y="1184" text-anchor="middle" font-size="16" font-weight="400">Regra: entrada corrigível, novo envio</text>
+<text x="260" y="1207" text-anchor="middle" font-size="16" font-weight="400">suportado e desejado</text>
+<text x="260" y="1230" text-anchor="middle" font-size="16" font-weight="400">OP.: selecionar arquivo; conferir</text>
+<text x="260" y="1253" text-anchor="middle" font-size="16" font-weight="400">identificação/validação; confirmar envio</text>
+<rect x="515.0" y="1135" width="410" height="180" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="1161" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.C.3.B: nova tentativa</text>
+<text x="720" y="1184" text-anchor="middle" font-size="16" font-weight="400">Regra: entrada adequada e repetição</text>
+<text x="720" y="1207" text-anchor="middle" font-size="16" font-weight="400">oferecida, orientada e aceita</text>
+<text x="720" y="1230" text-anchor="middle" font-size="16" font-weight="400">OP.: acessar ação; ler aviso;</text>
+<text x="720" y="1253" text-anchor="middle" font-size="16" font-weight="400">decidir; confirmar a tentativa</text>
+<rect x="975.0" y="1135" width="410" height="180" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1180" y="1161" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.C.3.C: manter pendência</text>
+<text x="1180" y="1184" text-anchor="middle" font-size="16" font-weight="400">Regra: orientação insuficiente, falha</text>
+<text x="1180" y="1207" text-anchor="middle" font-size="16" font-weight="400">persistente, ação indisponível ou adiamento</text>
+<text x="1180" y="1230" text-anchor="middle" font-size="16" font-weight="400">OP.: conservar referência; identificar</text>
+<text x="1180" y="1253" text-anchor="middle" font-size="16" font-weight="400">orientação existente; reconhecer pendência</text>
+<text x="40" y="1380" text-anchor="start" font-size="16" font-weight="400">As ligações representam a hierarquia de metas e métodos, sem operadores temporais CTT.</text>
+<text x="40" y="1409" text-anchor="start" font-size="16" font-weight="400">Operadores completos, ordem de execução e regras estão no modelo textual da Entrega 5.</text>
+<text x="40" y="1438" text-anchor="start" font-size="16" font-weight="400">Nova tentativa aceita exige novo acompanhamento; aceitação não comprova sucesso.</text>
+<text x="40" y="1467" text-anchor="start" font-size="16" font-weight="400">Diagnóstico insuficiente ou falha persistente: manter pendência e buscar orientação existente.</text>
+</g></svg>

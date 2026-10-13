@@ -1,5 +1,208 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2750" viewBox="0 0 1440 2750" role="img" aria-labelledby="title desc">
+<title id="title">HTA — T01: Localizar, selecionar e revisar lances</title><desc id="desc">HTA de T01 por Pedro Alexandre Custódio Silva. Objetivos retangulares, operações sublinhadas e planos. Uso proposto de revisão com contingências de original, correção externa e retomada H41. Condições completas na tabela da Entrega 5.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
+<rect width="1440" height="2750" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
+<text x="40" y="42" text-anchor="start" font-size="25" font-weight="700">HTA — T01: Localizar, selecionar e revisar lances</text>
+<text x="40" y="73" text-anchor="start" font-size="16" font-weight="400">Pedro Alexandre Custódio Silva · 22.123.049-3 · P01, Rafael · Uso proposto e contingências externas [H]</text>
+<rect x="440.0" y="125" width="560" height="94" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="151" text-anchor="middle" font-size="16" font-weight="400">0. Localizar, selecionar e revisar</text>
+<text x="720" y="174" text-anchor="middle" font-size="16" font-weight="400">lances de melhores momentos</text>
+<text x="720" y="204" text-anchor="middle" font-size="14" font-weight="700">1 &gt; (2 &gt; 3) &gt; 4; interrupção aciona 5</text>
+<path d="M720 219 V250 H176.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M176.0 250 H1264.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M176.0 250 V290" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="54.0" y="290" width="244.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="176.0" y="316" text-anchor="middle" font-size="16" font-weight="400">1. Preparar revisão</text>
+<text x="176.0" y="339" text-anchor="middle" font-size="16" font-weight="400">da partida</text>
+<text x="176.0" y="379" text-anchor="middle" font-size="14" font-weight="700">1.1 &gt; 1.2 &gt; 1.3</text>
+<path d="M448.0 250 V290" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="326.0" y="290" width="244.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="448.0" y="316" text-anchor="middle" font-size="16" font-weight="400">2. Localizar e examinar</text>
+<text x="448.0" y="339" text-anchor="middle" font-size="16" font-weight="400">um candidato</text>
+<text x="448.0" y="379" text-anchor="middle" font-size="14" font-weight="700">2.1 &gt; 2.2 &gt; 2.3</text>
+<path d="M720.0 250 V290" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="598.0" y="290" width="244.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720.0" y="316" text-anchor="middle" font-size="16" font-weight="400">3. Decidir destino</text>
+<text x="720.0" y="339" text-anchor="middle" font-size="16" font-weight="400">do candidato/lance</text>
+<text x="720.0" y="379" text-anchor="middle" font-size="14" font-weight="700">3.1 / 3.2 / 3.3 / 3.4</text>
+<path d="M992.0 250 V290" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="870.0" y="290" width="244.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="992.0" y="316" text-anchor="middle" font-size="16" font-weight="400">4. Consolidar seleção</text>
+<text x="992.0" y="339" text-anchor="middle" font-size="16" font-weight="400">e obter material</text>
+<text x="992.0" y="379" text-anchor="middle" font-size="14" font-weight="700">4.1 &gt; 4.2 &gt; 4.3 &gt; 4.4</text>
+<path d="M1264.0 250 V290" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="1142.0" y="290" width="244.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1264.0" y="316" text-anchor="middle" font-size="16" font-weight="400">5. Atender interrupção</text>
+<text x="1264.0" y="339" text-anchor="middle" font-size="16" font-weight="400">e retomar revisão</text>
+<text x="1264.0" y="379" text-anchor="middle" font-size="14" font-weight="700">5.1 &gt; 5.2 &gt; 5.3</text>
+<text x="40" y="445" text-anchor="start" font-size="16" font-weight="400">Repetir 2 &gt; 3 por candidato; plano 3.3 condiciona correção externa; seleção vazia dispensa download.</text>
+<path d="M40 475 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="505" text-anchor="start" font-size="18" font-weight="700">Expansões dos objetivos 1 e 2 — finalidade, origem e inspeção contextualizada</text>
+<rect x="70.0" y="530" width="560" height="94" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="350" y="556" text-anchor="middle" font-size="16" font-weight="400">1. Preparar revisão da partida</text>
+<text x="350" y="609" text-anchor="middle" font-size="14" font-weight="700">1.1 &gt; 1.2 &gt; 1.3</text>
+<path d="M350 624 V655 H146.66666666666669" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M146.66666666666669 655 H573.3333333333334" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M146.66666666666669 655 V695" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="54.000000000000014" y="695" width="185.33333333333334" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="146.66666666666669" y="721" text-anchor="middle" font-size="16" font-weight="400">1.1. Abrir resultados</text>
+<text x="146.66666666666669" y="744" text-anchor="middle" font-size="16" font-weight="400">da partida</text>
+<path d="M54.000000000000014 807 H239.33333333333337" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M360.0 655 V695" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="267.3333333333333" y="695" width="185.33333333333334" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="360.0" y="721" text-anchor="middle" font-size="16" font-weight="400">1.2. Conferir origem</text>
+<text x="360.0" y="744" text-anchor="middle" font-size="16" font-weight="400">e limites informados</text>
+<path d="M267.3333333333333 807 H452.6666666666667" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M573.3333333333334 655 V695" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="480.6666666666667" y="695" width="185.33333333333334" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="573.3333333333334" y="721" text-anchor="middle" font-size="16" font-weight="400">1.3. Recuperar critérios</text>
+<text x="573.3333333333334" y="744" text-anchor="middle" font-size="16" font-weight="400">finalidade e prazo</text>
+<path d="M480.6666666666667 807 H666.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="780.0" y="530" width="560" height="94" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1060" y="556" text-anchor="middle" font-size="16" font-weight="400">2. Localizar e examinar candidato</text>
+<text x="1060" y="609" text-anchor="middle" font-size="14" font-weight="700">2.1 &gt; 2.2 &gt; 2.3; rever 2.2 se necessário</text>
+<path d="M1060 624 V655 H833.3333333333334" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M833.3333333333334 655 H1286.6666666666665" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M833.3333333333334 655 V695" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="734.0" y="695" width="198.66666666666666" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="833.3333333333334" y="721" text-anchor="middle" font-size="16" font-weight="400">2.1. Localizar candidato</text>
+<text x="833.3333333333334" y="744" text-anchor="middle" font-size="16" font-weight="400">na lista de resultados</text>
+<path d="M734.0 807 H932.6666666666667" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1060.0 655 V695" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="960.6666666666666" y="695" width="198.66666666666666" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1060.0" y="721" text-anchor="middle" font-size="16" font-weight="400">2.2. Reproduzir e rever</text>
+<text x="1060.0" y="744" text-anchor="middle" font-size="16" font-weight="400">trecho com contexto</text>
+<path d="M960.6666666666666 807 H1159.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1286.6666666666665 655 V695" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="1187.3333333333333" y="695" width="198.66666666666666" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1286.6666666666665" y="721" text-anchor="middle" font-size="16" font-weight="400">2.3. Julgar pertinência</text>
+<text x="1286.6666666666665" y="744" text-anchor="middle" font-size="16" font-weight="400">e contexto</text>
+<path d="M1187.3333333333333 807 H1385.9999999999998" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 850 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="880" text-anchor="start" font-size="18" font-weight="700">Expansão do objetivo 3 — decisão humana segundo pertinência, contexto e recursos disponíveis</text>
+<rect x="440.0" y="905" width="560" height="94" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="931" text-anchor="middle" font-size="16" font-weight="400">3. Decidir destino do candidato ou lance suspeito</text>
+<text x="720" y="984" text-anchor="middle" font-size="14" font-weight="700">3.1 / 3.2 / 3.3 / 3.4</text>
+<path d="M720 999 V1030 H210.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M210.0 1030 H1230.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M210.0 1030 V1070" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="54.0" y="1070" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="210.0" y="1096" text-anchor="middle" font-size="16" font-weight="400">3.1. Incluir candidato</text>
+<text x="210.0" y="1119" text-anchor="middle" font-size="16" font-weight="400">na seleção para download</text>
+<path d="M54.0 1182 H366.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M550.0 1030 V1070" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="394.0" y="1070" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="550.0" y="1096" text-anchor="middle" font-size="16" font-weight="400">3.2. Excluir candidato</text>
+<text x="550.0" y="1119" text-anchor="middle" font-size="16" font-weight="400">da seleção para download</text>
+<path d="M394.0 1182 H706.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M890.0 1030 V1070" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="734.0" y="1070" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="890.0" y="1096" text-anchor="middle" font-size="16" font-weight="400">3.3. Conferir original e</text>
+<text x="890.0" y="1119" text-anchor="middle" font-size="16" font-weight="400">encaminhar correção</text>
+<text x="890.0" y="1159" text-anchor="middle" font-size="14" font-weight="700">Plano expandido abaixo</text>
+<path d="M1230.0 1030 V1070" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="1074.0" y="1070" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1230.0" y="1096" text-anchor="middle" font-size="16" font-weight="400">3.4. Manter dúvida ou</text>
+<text x="1230.0" y="1119" text-anchor="middle" font-size="16" font-weight="400">omissão como pendência</text>
+<path d="M1074.0 1182 H1386.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 1220 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1250" text-anchor="start" font-size="18" font-weight="700">Expansão de 3.3 — original externo; inserir 3.3.3 somente se houver necessidade, recursos e prazo</text>
+<rect x="440.0" y="1275" width="560" height="94" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="1301" text-anchor="middle" font-size="16" font-weight="400">3.3. Conferir original e encaminhar correção</text>
+<text x="720" y="1354" text-anchor="middle" font-size="14" font-weight="700">3.3.1 &gt; 3.3.2 &gt; 3.3.4; inserir 3.3.3 se necessário</text>
+<path d="M720 1369 V1400 H210.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M210.0 1400 H1230.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M210.0 1400 V1440" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="54.0" y="1440" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="210.0" y="1466" text-anchor="middle" font-size="16" font-weight="400">3.3.1. Localizar referência</text>
+<text x="210.0" y="1489" text-anchor="middle" font-size="16" font-weight="400">na gravação original</text>
+<path d="M54.0 1552 H366.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M550.0 1400 V1440" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="394.0" y="1440" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="550.0" y="1466" text-anchor="middle" font-size="16" font-weight="400">3.3.2. Assistir original e</text>
+<text x="550.0" y="1489" text-anchor="middle" font-size="16" font-weight="400">confrontar candidato</text>
+<path d="M394.0 1552 H706.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M890.0 1400 V1440" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="734.0" y="1440" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="890.0" y="1466" text-anchor="middle" font-size="16" font-weight="400">3.3.3. Preparar corte ou</text>
+<text x="890.0" y="1489" text-anchor="middle" font-size="16" font-weight="400">ajuste no editor externo</text>
+<text x="890.0" y="1529" text-anchor="middle" font-size="14" font-weight="700">3.3.3.1 &gt; 3.3.3.2 &gt; 3.3.3.3</text>
+<path d="M1230.0 1400 V1440" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="1074.0" y="1440" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1230.0" y="1466" text-anchor="middle" font-size="16" font-weight="400">3.3.4. Distinguir material</text>
+<text x="1230.0" y="1489" text-anchor="middle" font-size="16" font-weight="400">gerado, externo e pendente</text>
+<path d="M1074.0 1552 H1386.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 1590 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1620" text-anchor="start" font-size="18" font-weight="700">Expansão de 3.3.3 — correção detalhada na ferramenta externa, sem ampliar a interface do produto</text>
+<rect x="440.0" y="1645" width="560" height="94" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="1671" text-anchor="middle" font-size="16" font-weight="400">3.3.3. Preparar corte ou ajuste em editor externo</text>
+<text x="720" y="1724" text-anchor="middle" font-size="14" font-weight="700">3.3.3.1 &gt; 3.3.3.2 &gt; 3.3.3.3</text>
+<path d="M720 1739 V1770 H266.66666666666663" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M266.66666666666663 1770 H1173.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M266.66666666666663 1770 V1810" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="53.99999999999997" y="1810" width="425.3333333333333" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="266.66666666666663" y="1836" text-anchor="middle" font-size="16" font-weight="400">3.3.3.1. Definir início e fim</text>
+<text x="266.66666666666663" y="1859" text-anchor="middle" font-size="16" font-weight="400">que preservem o lance</text>
+<path d="M53.99999999999997 1922 H479.33333333333326" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720.0 1770 V1810" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="507.33333333333337" y="1810" width="425.3333333333333" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720.0" y="1836" text-anchor="middle" font-size="16" font-weight="400">3.3.3.2. Recortar e salvar</text>
+<text x="720.0" y="1859" text-anchor="middle" font-size="16" font-weight="400">em ferramenta externa</text>
+<path d="M507.33333333333337 1922 H932.6666666666666" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1173.3333333333333 1770 V1810" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="960.6666666666666" y="1810" width="425.3333333333333" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1173.3333333333333" y="1836" text-anchor="middle" font-size="16" font-weight="400">3.3.3.3. Reproduzir corte externo</text>
+<text x="1173.3333333333333" y="1859" text-anchor="middle" font-size="16" font-weight="400">e conferir contexto</text>
+<path d="M960.6666666666666 1922 H1386.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 1960 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1990" text-anchor="start" font-size="18" font-weight="700">Expansão do objetivo 4 — seleção não vazia; caso vazio: 4.1 &gt; 4.4, com pendências identificadas</text>
+<rect x="440.0" y="2015" width="560" height="94" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="2041" text-anchor="middle" font-size="16" font-weight="400">4. Consolidar seleção e obter material</text>
+<text x="720" y="2094" text-anchor="middle" font-size="14" font-weight="700">4.1 &gt; 4.2 &gt; 4.3 &gt; 4.4</text>
+<path d="M720 2109 V2140 H210.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M210.0 2140 H1230.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M210.0 2140 V2180" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="54.0" y="2180" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="210.0" y="2206" text-anchor="middle" font-size="16" font-weight="400">4.1. Rever seleção, cortes</text>
+<text x="210.0" y="2229" text-anchor="middle" font-size="16" font-weight="400">externos e pendências</text>
+<path d="M54.0 2292 H366.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M550.0 2140 V2180" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="394.0" y="2180" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="550.0" y="2206" text-anchor="middle" font-size="16" font-weight="400">4.2. Conferir resumo dos</text>
+<text x="550.0" y="2229" text-anchor="middle" font-size="16" font-weight="400">arquivos selecionados</text>
+<path d="M394.0 2292 H706.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M890.0 2140 V2180" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="734.0" y="2180" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="890.0" y="2206" text-anchor="middle" font-size="16" font-weight="400">4.3. Solicitar download de</text>
+<text x="890.0" y="2229" text-anchor="middle" font-size="16" font-weight="400">cortes e metadados</text>
+<path d="M734.0 2292 H1046.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1230.0 2140 V2180" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="1074.0" y="2180" width="312.0" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1230.0" y="2206" text-anchor="middle" font-size="16" font-weight="400">4.4. Conferir arquivos e</text>
+<text x="1230.0" y="2229" text-anchor="middle" font-size="16" font-weight="400">continuidade externa</text>
+<path d="M1074.0 2292 H1386.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 2330 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="2360" text-anchor="start" font-size="18" font-weight="700">Expansão do objetivo 5 — contingência por chamado externo; retomar o passo suspenso</text>
+<rect x="440.0" y="2385" width="560" height="94" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="2411" text-anchor="middle" font-size="16" font-weight="400">5. Atender interrupção e retomar revisão</text>
+<text x="720" y="2464" text-anchor="middle" font-size="14" font-weight="700">5.1 &gt; 5.2 &gt; 5.3; rever candidato se perdeu contexto</text>
+<path d="M720 2479 V2510 H266.66666666666663" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M266.66666666666663 2510 H1173.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M266.66666666666663 2510 V2550" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="53.99999999999997" y="2550" width="425.3333333333333" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="266.66666666666663" y="2576" text-anchor="middle" font-size="16" font-weight="400">5.1. Preservar referência</text>
+<text x="266.66666666666663" y="2599" text-anchor="middle" font-size="16" font-weight="400">e decisões da revisão</text>
+<path d="M53.99999999999997 2662 H479.33333333333326" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720.0 2510 V2550" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="507.33333333333337" y="2550" width="425.3333333333333" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720.0" y="2576" text-anchor="middle" font-size="16" font-weight="400">5.2. Atender pedido externo</text>
+<text x="720.0" y="2599" text-anchor="middle" font-size="16" font-weight="400">da supervisão</text>
+<path d="M507.33333333333337 2662 H932.6666666666666" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1173.3333333333333 2510 V2550" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="960.6666666666666" y="2550" width="425.3333333333333" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1173.3333333333333" y="2576" text-anchor="middle" font-size="16" font-weight="400">5.3. Recuperar posição e</text>
+<text x="1173.3333333333333" y="2599" text-anchor="middle" font-size="16" font-weight="400">retomar avaliação</text>
+<path d="M960.6666666666666 2662 H1386.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="2710" text-anchor="start" font-size="16" font-weight="400">Retângulos = objetivos; traço inferior = operações; &gt; = sequência; / = seleção. Condições na tabela HTA.</text>
+</g></svg>
