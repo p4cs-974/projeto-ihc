@@ -4,6 +4,7 @@
 **Revisão de T02:** 09/10/2026, adequação aos modelos dos slides do professor\
 **Preenchimento de T03:** 12/10/2026, acompanhamento de partidas em lote e tratamento de falhas\
 **Preenchimento de T01:** 13/10/2026, localização, seleção e revisão de lances de melhores momentos\
+**Revisão de coerência:** 13/10/2026, aplicação de AC-063 a AC-068 da análise das 15:11; caminhos CTT e referências sincronizados\
 **Status:** 🟩 T01 (Pedro), T02 (Lucas) e T03 (Giovanni) preenchidas nas três técnicas (HTA, GOMS e CTT); modelos hipotéticos a validar\
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT para sua tarefa prioritária. A associação entre tarefas e personas não é exclusiva: T03 tem P01 como referência principal e também atende necessidades de P03; T02 representa o consumo externo de resultados por P02.
 
@@ -19,7 +20,7 @@ Modelar tarefas importantes sob perspectivas complementares: decomposição hier
 
 Em conformidade com as diretrizes da disciplina, a modelagem foca nas **tarefas humanas relacionadas ao uso da contribuição técnica**, e não no processamento algorítmico interno dos modelos de visão computacional.
 
-O tema do TCC (*Identificação de Melhores Momentos em Partidas de Futebol Utilizando Sistemas Híbridos de Visão Computacional*, [Entrega 1, seção 0.2](01_conhecendo_o_problema.md#02-qual-é-o-tema-do-trabalho)) tem como saída computacional a detecção automatizada de eventos esportivos e a geração de cortes acompanhados de metadados ([RASTREABILIDADE.md, seção 1](../RASTREABILIDADE.md#1-derivação-do-escopo-de-ihc-a-partir-do-tcc)). As tarefas humanas analisadas descrevem:
+O tema do TCC (*Identificação de Melhores Momentos em Partidas de Futebol Utilizando Sistemas Híbridos de Visão Computacional*, [Entrega 1, seção 0.2](01_conhecendo_o_problema.md#02-título-atual-do-tcc)) tem como saída computacional a detecção automatizada de eventos esportivos e a geração de cortes acompanhados de metadados ([RASTREABILIDADE.md, seção 1](../RASTREABILIDADE.md#1-derivação-do-escopo-de-ihc-a-partir-do-tcc)). As tarefas humanas analisadas descrevem:
 
 - como o editor de vídeo esportivo localiza, seleciona e revisa lances de melhores momentos, com julgamento de pertinência e contexto (T01);
 - como o supervisor editorial / editor-chefe recebe, inspeciona e chancela esses resultados para publicação nas redes sociais da emissora, validando o contexto temporal dos lances capitais sob forte pressão de prazo (T02);
@@ -36,7 +37,7 @@ A tabela abaixo consolida as tarefas prioritárias a partir dos cenários de pro
 | ID | Tarefa | Persona / cenário de origem | Frequência / criticidade | Autor responsável | Status na entrega |
 |---|---|---|---|---|---|
 | **T01** | Localizar, selecionar e revisar lances de melhores momentos | [P01, Rafael](03_personas_contexto_jornada.md#persona-p01--rafael) / [C01](04_cenarios_problema.md#cenário-c01--seleção-manual-de-melhores-momentos-sob-pressão-de-prazo); jornada proposta, etapas 5–7. Aplicação ao fluxo de revisão de P03, sem filtro automático por jogador | [H] Repetida por candidato e por partida, H07/H39; frequência não medida. Prioridade alta por apoiar pertinência, contexto e continuidade; omissões podem causar retrabalho, H09/H10/H16 | Pedro Alexandre Custódio Silva — 22.123.049-3 | 🟩 Concluída (HTA, GOMS e CTT) |
-| **T02** | Supervisionar processo editorial e chancelar cortes esportivos | [P02, Arnaldo](03_personas_contexto_jornada.md#persona-p02--arnaldo) / [C02](04_cenarios_problema.md#cenário-c02--controle-do-processo-editorial-engessado) | Alta frequência em dias de rodada; altíssima criticidade editorial (portão final de controle antes do ar; risco de dano à reputação da emissora) | Lucas Roberto Boccia dos Santos — 22.123.012-1 | 🟩 Concluída (HTA, GOMS e CTT) |
+| **T02** | Supervisionar processo editorial e chancelar cortes esportivos | [P02, Arnaldo](03_personas_contexto_jornada.md#persona-p02--arnaldo) / [C02](04_cenarios_problema.md#cenário-c02--controle-do-processo-editorial-engessado) | [H] Recorrente em dias de rodada, C02/H33; frequência não medida. Prioridade alta como decisão inicial de projeto, pelo risco editorial narrado de aprovação sem contexto e retrabalho, H10/H14/H16/H23; criticidade a investigar | Lucas Roberto Boccia dos Santos — 22.123.012-1 | 🟩 Concluída (HTA, GOMS e CTT) |
 | **T03** | Acompanhar o processamento de partidas em lote e tratar falhas | [P01, Rafael](03_personas_contexto_jornada.md#persona-p01--rafael), jornada, etapas 3–4; [C01](04_cenarios_problema.md#cenário-c01--seleção-manual-de-melhores-momentos-sob-pressão-de-prazo) como contexto. Aplicação a P03, jornada, etapas 3–4, e C03 | [H] Recorrente a cada lote; frequência não medida. Prioridade alta por apoiar a continuidade do trabalho; falhas podem causar atraso, retrabalho e novo custo, H13/H16/H26 | Giovanni Chahin Morassi — 22.123.025-3 | 🟩 Concluída (HTA, GOMS e CTT) |
 
 ## Justificativa da prioridade de T01 (Localização, seleção e revisão)
@@ -224,17 +225,21 @@ GOAL 0: obter seleção revisada e identificar pendências da partida
 
 *Figura 8 — CTT de T01, por Pedro Alexandre Custódio Silva. Visão geral e expansões com relações entre irmãs; 5 suspende o percurso regular e permite retomada. [SVG editável](../assets/05_tarefas/ctt_t01.svg).*
 
-IDs acompanham o HTA. `R` agrupa o percurso regular e `C` o ciclo por candidato. `D` escolhe produzir corte externo (3.3.3) ou reconhecer sua dispensa/impossibilidade (`N`), segundo a conferência. `S` explicita preparação/disponibilização automática do download, implícita em 4.3 no HTA. Ligações descendentes representam decomposição; horizontais representam relações temporais entre irmãs.
+IDs numéricos acompanham o HTA. Os agrupamentos e decisões com letras tornam explícitos os casos, as saídas e os retornos antes resumidos em notas. Cada painel expande um nó da mesma árvore; IDs repetidos são referências ao mesmo objetivo. Condições de habilitação e resultados estão associados aos nós no diagrama e na leitura abaixo. As letras não representam novos controles da interface. `S` responde ao pedido de download com arquivos disponíveis ou falha informada. Ligações descendentes representam decomposição; horizontais representam relações temporais entre irmãs.
+
+A separação entre relações temporais e condições de tarefas segue os slides da disciplina; para iteração, opcionalidade e pré/pós-condições, consultou-se também [W3C, MBUI — Task Models, §§3.1 e 3.4](https://www.w3.org/TR/task-models/), nota de grupo de trabalho de 08/04/2014, acesso em 13/10/2026. Essa referência complementa a notação e não declara conformidade executável ou aprovação do professor.
 
 ### Leitura da árvore e condições
 
-1. **Tarefa global:** `R |> 5`, com `R = (1 []>> C* []>> 4)` e `C = (2 []>> 3)`. Repetir inspeção/decisão por candidato, incluindo nova conferência de dúvida resolvida. Prazo esgotado leva à consolidação parcial em 4, com não vistos identificados; lista vazia dispensa C. Suspeita de omissão permite entrar em 3.3 com referência disponível, mesmo sem candidato correspondente, conforme o plano HTA.
-2. **Preparação (1):** `1.1 []>> 1.2 []>> 1.3`. Resultados/origem/limites informam a recuperação da finalidade e prazo. Falha de acesso retorna a T03, sem iniciar inspeção sem prévia acessível.
-3. **Inspeção (2):** `2.1 []>> 2.2* []>> 2.3`. Candidato localizado é reproduzido e alimenta julgamento humano. Iteração em 2.2 significa rever o trecho quando necessário, não assistir a vários vídeos simultaneamente.
-4. **Decisão (3):** `3.1 [] 3.2 [] 3.3 [] 3.4`: incluir, excluir da seleção, conferir original ou manter pendência. Depois de 3.3, retornar à decisão conforme a informação obtida. Escolha não permite incluir corte inconclusivo como validado sem satisfazer 3.1.
-5. **Original/correção (3.3):** `3.3.1 []>> 3.3.2 []>> D []>> 3.3.4`, com `D = (3.3.3 [] N)`. Original informa se é necessário corte externo; N reconhece dispensa/impossibilidade, não aprova automaticamente. Dúvida persistente segue a 3.4. Produção externa: `3.3.3.1 []>> 3.3.3.2 []>> 3.3.3.3` (definir limites, recortar/salvar, conferir). Repetir se insuficiente e viável; falha de busca/acesso/salvamento mantém pendência, conforme HTA/GOMS.
-6. **Consolidação (4):** seleção não vazia usa `4.1 []>> 4.2 []>> 4.3 []>> S []>> 4.4`. Resumo precede pedido; S prepara/disponibiliza arquivos sem novo comando; 4.4 confere obtenção/origem, separando cortes externos. Seleção vazia dispensa 4.2, 4.3 e S, usando `4.1 []>> 4.4`. Falha na obtenção exige T03; não equivale a arquivo obtido. Esses desvios são condições dos planos, não operações de montagem ou publicação.
-7. **Interrupção (5):** `5.1 []>> 5.2 []>> 5.3`. Preservar referência informa atendimento externo e retorno. `|>` suspende R e o retoma após 5; `[>` encerraria a instância e não foi usado. Preservação é requisito hipotético H41; quando insuficiente, reinspecionar. O operador modela organização do trabalho humano, não pausa da inferência. Novos chamados podem reaplicar a regra durante R.
+1. **Tarefa global:** `R |> 5`, com `R = (1 []>> V []>> 4)` e `V = (C* [> E)`. `E` encerra a conferência quando há decisões suficientes para esta sessão, prazo encerrado, acesso inviável ou nenhum candidato/conferência possível. Ao iniciar E, a iteração é desativada e as pendências alimentam 4. Com lista vazia e sem omissão verificável, E pode acontecer antes do primeiro C; não se executa inspeção de candidato inexistente. A lista vazia não prova ausência de lances.
+2. **Casos do ciclo:** `C = (L [] O)`. `L = (2 []>> 3)` exige candidato gerado acessível. `O = (3.3 []>> X)` exige suspeita de omissão com referência, original e recursos/prazo; X reconhece o corte externo conferido ou a pendência, a partir da distinção de 3.3.4. O não executa inclusão/exclusão de candidato inexistente. Sem conferência viável, reconhecer a pendência em E/4.
+3. **Preparação e inspeção:** `1 = (1.1 []>> 1.2 []>> 1.3)` e `2 = (2.1 []>> B []>> 2.3)`, com `B = (2.2* [> J)`. J encerra a reprodução com informação para julgar, prazo encerrado ou prévia indisponível, reconhecendo o que foi visto e as lacunas. Só depois se executa o julgamento 2.3; não se presume inspeção bem-sucedida quando a prévia falha. Falha técnica encaminha a T03 e mantém o candidato como pendência.
+4. **Decisão sobre o gerado:** `3 = (F [] P)`, `F = (3.1 [] 3.2 [] 3.4)` e `P = (3.3 []>> F)`. F representa decisão direta ou manutenção de pendência sem conferência viável; P representa conferência no original seguida de nova decisão explícita. Incluir em 3.1 exige pertinência e contexto suficiente; 3.2 cobre irrelevância ou substituição por corte externo; 3.4 mantém inconclusivos fora da seleção utilizável. H30 admite candidatos extras para conferência, sem dispensar essas condições.
+5. **Original e correção:** `3.3 = (Q [> K)`, com `Q = (3.3.1 []>> 3.3.2 []>> D []>> 3.3.4)` e `D = (3.3.3 [] N)`. K só é habilitada quando busca, acesso ou salvamento ficam inviáveis, ou quando o prazo impede continuar; reconhece a pendência e encerra Q, alimentando F ou X. N reconhece dispensa/impossibilidade de novo corte, sem aprovar automaticamente. Uma tentativa externa é `3.3.3.1 []>> 3.3.3.2 []>> 3.3.3.3`; se insuficiente, manter a pendência e repetir a conferência em novo C enquanto viável. O painel da tentativa não representa edição dentro do produto.
+6. **Seleção não vazia ou vazia:** `4 = (4.1 []>> W []>> 4.4)`, `W = (A [] Z)` e `A = (4.2 []>> 4.3 []>> S)`. A exige seleção gerada não vazia; Z reconhece seleção vazia e dispensa resumo, pedido e preparação. S disponibiliza arquivos ou informa falha; 4.4 confere o resultado real, distingue externos e pendências e encaminha falha a T03. A sequência `4.1 []>> Z []>> 4.4` não executa download vazio. Obtenção parcial/falha não equivale a material completo.
+7. **Interrupção:** `5.1 []>> 5.2 []>> 5.3`. `|>` suspende R e permite retomá-lo após o atendimento externo; os operadores `[>` de E/J/K encerram apenas seus ciclos/subtarefas e não retomam o passo desativado. Preservação é hipótese H41; contexto perdido exige reinspeção antes da inclusão. Nenhum desses operadores pausa a inferência.
+
+**Correspondência com HTA/GOMS:** E explicita o término/pendências de 4.1; J explicita a avaliação após reproduzir; K é a inviabilidade já prevista em 3.3; X reconhece o resultado externo de 3.3.4; Z é o método GOMS 4.B. São refinamentos da organização humana, sem novas funcionalidades. As condições não garantem encontrar uma omissão, obter o arquivo ou concluir a revisão de todos os lances.
 
 ### Legenda e relações temporais usadas
 
@@ -243,7 +248,8 @@ IDs acompanham o HTA. `R` agrupa o percurso regular e `C` o ciclo por candidato.
 | Ativação com passagem de informação | `T1 []>> T2` | Informação alimenta a tarefa seguinte: candidato para inspeção, contexto para decisão e seleção para resumo. |
 | Escolha | `T1 [] T2` | Iniciar uma alternativa desabilita as demais naquela decisão, conforme as condições de pertinência/contexto. |
 | Suspensão/retomada | `T1 \|> T2` | T2 suspende T1, que retoma após T2. Percurso R e interrupção 5. |
-| Iteração | `T*` | Repetir ciclo C e reprodução 2.2; condições de término/retorno no texto. |
+| Desativação | `T1 [> T2` | T2 encerra T1; E termina o ciclo C, J termina a reprodução e K reconhece a inviabilidade de Q. |
+| Iteração | `T*` | Repetir C ou 2.2 até a saída explícita por E/J; não é, por si só, uma opção de pular a tarefa. |
 
 Não se presume inspeção concorrente de vários vídeos por Rafael. Processamento remoto de T03 não exige `|||` na revisão. A correção externa é interação com outra ferramenta, sem ampliar a interface do produto.
 
@@ -251,10 +257,10 @@ Não se presume inspeção concorrente de vários vídeos por Rafael. Processame
 
 | Símbolo no diagrama | Tipo nos slides | Aplicação no modelo |
 |---|---|---|
-| Nuvem | Abstrata | Objetivo global, R, C, ramos 1–5, conferência 3.3, decisão D e correção 3.3.3. |
-| Pessoa | Usuário | Recuperar critérios (1.3), julgar (2.3), reconhecer dispensa/impossibilidade (N), definir limites (3.3.3.1), distinguir versões/pendências (3.3.4), manter pendência (3.4) e avaliar seleção/pendências (4.1). |
+| Nuvem | Abstrata | Objetivo global, R/V/C/L/O/B, ramos 1–5, F/P/Q/D, correção 3.3.3 e W/A. |
+| Pessoa | Usuário | Recuperar critérios (1.3), julgar (2.3), reconhecer dispensa/impossibilidade (N), definir limites (3.3.3.1), distinguir versões/pendências (3.3.4), manter pendência (3.4), avaliar seleção/pendências (4.1) e reconhecer término/lacunas/resultado externo/seleção vazia (E/J/K/X/Z). |
 | Pessoa e computador, com seta dupla | Interativa | Consultar origem/resultados (1.1–2), localizar/reproduzir (2.1–2), marcar/desmarcar (3.1–2), localizar/assistir original (3.3.1–2), recortar/salvar/reproduzir externamente (3.3.3.2–3), conferir resumo/pedir download (4.2–3), conferir arquivos (4.4) e preservar/recuperar referência (5.1/5.3). 5.2 usa chat externo na variante desenhada; alternativa presencial no GOMS. |
-| Computador | Sistema | Preparar/disponibilizar arquivos selecionados (S), sem realizar decisão editorial. |
+| Computador | Sistema | Disponibilizar arquivos selecionados ou informar falha (S), sem realizar decisão editorial. |
 
 ---
 
@@ -439,12 +445,11 @@ As ligações descendentes mostram **decomposição**. As ligações horizontais
 
 ### Leitura da árvore e condições
 
-1. **Ciclo regular:** `1 []>> 2 []>> 3`. O lote identificado alimenta a inspeção; a avaliação alimenta a deliberação. O marcador `*` indica repetição do ciclo para cada lote recebido, incluindo novas versões após devolução. Encerrar quando não houver lotes pendentes de atendimento ou ao fim do turno, declarando as revisões ainda aguardadas.
-2. **Identificação e prioridade (1):** `1.1 >> 1.2 []>> 1.3`. Arnaldo consulta prioridades em suas anotações, consulta o aviso e a pasta externos, e escolhe o lote. Não se presume atenção simultânea a vários vídeos nem uma fila de supervisão no produto.
-3. **Inspeção (2):** `2.1 >> 2.2 []>> 2.3`. Consulta os metadados, reproduz os cortes e usa o que viu para julgar contexto, pertinência e suspeitas de omissão. Repetir a reprodução para os cortes da seleção e rever trechos duvidosos antes de concluir a avaliação. Essa repetição fica marcada em 2.2; não representa várias decisões finais independentes para o mesmo lote.
-4. **Deliberação (3):** `D []>> 3.3 []>> S`, com `D = (3.1 [] 3.2)`. A chancela e a devolução são decisões humanas; enviar a mensagem é interação; entregar a mensagem é processamento automático do chat. A opção 3.1 exige critérios atendidos e ausência de pendências; 3.2 cobre ajuste ou conferência necessária. A escolha não implica que uma seleção insuficiente possa ser aprovada indistintamente. Em 3.2, a próxima avaliação depende de nova versão recebida, conforme o plano 0 do HTA.
-5. **Contingência:** `Ciclo regular* [> 4`. Um alerta com falha que justifique retirada habilita 4 e **encerra a instância** do ciclo interrompido. O operador `[>` não guarda um ponto de retomada. Os demais lotes continuam pendentes; atendê-los depois exige iniciar um novo ciclo. Não se usou `|>`, que significaria suspensão e retomada automática do ponto interrompido.
-6. **Correção emergencial (4):** `4.1 >> 4.2 []>> 4.3 >> 4.4`, e `4.4 = (4.4.1 []>> 4.4.2)`. Solicitar retirada, examinar o erro e orientar a reedição são interações externas. A nova versão precisa chegar antes da reavaliação. Arnaldo confere a correção e comunica aprovação ou novo ajuste; repetir `4.3 > 4.4` se ainda insuficiente, conforme o plano HTA. A árvore não executa a despublicação nem a montagem pelo produto.
+1. **Sessão:** `C* [> V`, com `C = (1 []>> 2 []>> 3)` e `V = (E [] 4)`. E encerra o turno ou a sessão sem lote disponível para atender, reconhecendo pendências. 4 só é habilitada por alerta e falha que justifique retirada. A saída normal não exige uma crise. Nova versão recebida habilita novo C; enquanto espera, a chancela continua pendente.
+2. **Identificação e inspeção:** `1.1 >> 1.2 []>> 1.3` e `2 = (2.1 >> B []>> 2.3)`, com `B = (2.2* [> J)`. J encerra a reprodução quando os cortes foram conferidos, o prazo acaba ou o acesso é insuficiente, explicitando lacunas. O julgamento usa o que foi efetivamente visto; lacunas impedem chancela e levam à revisão. Pasta, chat e player são externos.
+3. **Deliberação:** `D []>> 3.3 []>> S`, com `D = (3.1 [] 3.2)`. Chancela exige critérios atendidos sem conferência pendente; devolução identifica o que revisar. S entrega a mensagem pelo chat, não é notificação do backend. Nova entrega exige nova inspeção; o envio da decisão não comprova que o ajuste ocorreu.
+4. **Contingência:** ao escolher 4 em V, a instância C é desativada, preservando os outros lotes como pendências. `4 = (4.1 >> 4.2 []>> R)`, com `R = (K* [> F)` e `K = (4.3 >> 4.4)`. 4.4 só é habilitada depois da nova versão recebida. Se insuficiente, repetir K; F encerra quando a decisão foi comunicada e a versão é suficiente, ou quando a continuidade precisa ser adiada/inviável, mantendo pendências explícitas.
+5. **Reavaliação:** `4.4.1 []>> 4.4.2`. Conferir precede comunicar aprovação ou novo ajuste. Concluir F não executa republicação nem retoma a instância regular interrompida; os outros lotes exigem nova sessão. E/J/F explicitam decisões de término já presentes nos planos HTA e no GOMS, sem novos controles no produto.
 
 ### Legenda e relações temporais usadas
 
@@ -453,8 +458,8 @@ As ligações descendentes mostram **decomposição**. As ligações horizontais
 | Ativação | `T1 >> T2` | T2 inicia após T1 terminar. Ex.: consultar prioridades antes de identificar o lote. |
 | Ativação com passagem de informação | `T1 []>> T2` | T1 termina e transmite informação a T2. Ex.: lote identificado para inspeção; avaliação para decisão. |
 | Escolha | `T1 [] T2` | Iniciar uma alternativa desabilita a outra naquela decisão. Ex.: chancelar ou solicitar revisão do mesmo lote. |
-| Desativação | `T1 [> T2` | T2 interrompe completamente T1. Ex.: contingência encerra o ciclo regular em andamento. |
-| Iteração | `T*` | Marcador de repetição, usado no ciclo por lote e na reprodução dos cortes, com condições descritas acima. |
+| Desativação | `T1 [> T2` | T2 interrompe completamente T1. Ex.: V encerra o ciclo regular, por E ou contingência; J termina a reprodução e F encerra os ciclos de correção. |
+| Iteração | `T*` | Repetição por lote, reprodução ou nova versão, com saídas explícitas por V/J/F. |
 
 `|||`, `|[]|`, `|=|` e `|>` aparecem nos slides, mas não são necessários neste recorte. A concorrência das ilhas de edição é parte do contexto; não comprova execução concorrente das ações de Arnaldo.
 
@@ -462,8 +467,8 @@ As ligações descendentes mostram **decomposição**. As ligações horizontais
 
 | Símbolo no diagrama | Tipo nos slides | Aplicação no modelo |
 |---|---|---|
-| Nuvem | Abstrata | Objetivo global, ciclo regular, ramos 1–4, decisão D e reavaliação 4.4; agrupam outras tarefas. |
-| Pessoa | Usuário | Consultar prioridades em anotações, escolher lote, julgar pertinência, chancelar ou solicitar revisão como decisões, conferir a correção. Atividades fora dos sistemas externos, incluindo julgamentos mentais. |
+| Nuvem | Abstrata | Objetivo global, C/V/B/R/K, ramos 1–4, decisão D e reavaliação 4.4; agrupam outras tarefas. |
+| Pessoa | Usuário | Consultar prioridades em anotações, escolher lote, julgar pertinência, chancelar ou solicitar revisão como decisões, conferir a correção e reconhecer término/pendências (E/J/F). Atividades fora dos sistemas externos, incluindo julgamentos mentais. |
 | Pessoa e computador, com seta dupla | Interativa | Consultar aviso e arquivos, ler metadados, reproduzir cortes, enviar decisão e orientações pelo chat. Há diálogo com aplicações externas. |
 | Computador | Sistema | Entregar a mensagem no chat, sem nova ação de Arnaldo. Ler ou perceber o aviso é ação do usuário, não tarefa automática do TCC. |
 
@@ -651,13 +656,13 @@ As ligações descendentes indicam decomposição; relações horizontais ligam 
 
 ### Leitura da árvore e condições
 
-1. **Sessão:** `1 []>> C* []>> 4`, com `C = (2 []>> 3)`. A identificação alimenta o acompanhamento; cada encaminhamento alimenta a consolidação. Repetir C por partida escolhida ou em nova consulta. O marcador `*` não obriga a tratar o lote inteiro antes de revisar uma partida pronta: é possível encerrar a sessão em 4 com pendências e iniciar outra depois.
-2. **Identificação (1):** `1.1 []>> 1.2`. Abrir a lista permite conferir partida e tentativa. A lista acessível é precondição da sessão; T03 não pode ser iniciada sem identificação do lote.
-3. **Compreensão (2):** `2.1 []>> S []>> 2.2 []>> 2.3`. A consulta transmite a referência da partida ao sistema, que devolve o estado disponível ou informa indisponibilidade. O usuário interpreta a resposta e escolhe o encaminhamento. `S` é uma resposta automática, não a leitura humana nem a execução completa do processamento da partida.
-4. **Continuidade (3):** `3.1 [] 3.2 [] 3.3`. Escolher 3.1 para espera/informação insuficiente, 3.2 para resultados acessíveis e 3.3 para falha informada. São alternativas naquela decisão por partida; não representam várias ações editoriais simultâneas. Em falha parcial, tratar a ocorrência e seus limites em 3.3 antes de um novo ciclo para resultados preservados, se acessíveis.
-5. **Acesso aos resultados (3.2):** `3.2.1 []>> 3.2.2 []>> 3.2.3`. Abrir, conferir acesso/limites e reconhecer a passagem à revisão. Se o acesso falhar, interromper esse encaminhamento e escolher 3.3 no próximo ciclo, conforme a condição do HTA. A avaliação editorial detalhada começa em T01/A04.
-6. **Falha (3.3):** `3.3.1 []>> 3.3.2 []>> 3.3.3 []>> 3.3.4`. A orientação alimenta a escolha da recuperação; a ação escolhida alimenta a conferência do encaminhamento. `3.3.3 = (3.3.3.1 [] 3.3.3.2 [] 3.3.3.3)`: corrigir e reenviar, confirmar nova tentativa orientada ou manter pendência. As precondições de cada alternativa são as do HTA/GOMS. As duas primeiras são interações compostas cujo detalhamento operacional está no GOMS; a terceira é decisão humana com eventual consulta externa de orientação.
-7. **Consolidação (4):** `4.1 []>> 4.2`. Conferir as demais partidas informa o reconhecimento das pendências e da próxima consulta. A falha de uma partida não encerra o acompanhamento das outras. Nova tentativa aceita retorna ao ciclo quando houver nova informação; nova falha sem orientação segue para pendência.
+1. **Sessão:** `1 []>> V []>> 4`, com `V = (C* [> E)` e `C = (2 []>> 3)`. E encerra as consultas com encaminhamentos definidos para esta sessão ou decisão de adiar, explicitando partidas não consultadas e pendências. Encerrar E habilita 4 sem exigir conclusão de todo o lote. Nova informação motiva outra sessão; não dispara processamento automático.
+2. **Identificação (1):** `1.1 []>> 1.2`. Lote já enviado e lista acessível são precondições; a indisponibilidade da lista não prova falha da execução.
+3. **Compreensão (2):** `2.1 []>> S []>> 2.2 []>> 2.3`. S devolve estado real ou informa indisponibilidade; o usuário interpreta e escolhe o encaminhamento. S não representa toda a inferência.
+4. **Continuidade (3):** `3.1 [] 3.2 [] 3.3`: aguardar/adiar quando ativo ou sem informação segura; conferir acesso quando há resultados; tratar falha informada. Em falha parcial, consultar ocorrência e limites antes de novo C para os resultados preservados, se acessíveis.
+5. **Acesso (3.2):** `3.2.1 []>> 3.2.2 []>> A`, com `A = (3.2.3 [] F)`. A escolhe 3.2.3 somente com acesso conferido, ou F quando o acesso falha. F reconhece a falha e mantém pendência, concluindo esse ciclo sem declarar passagem para revisão. Novo C pode escolher 3.3; se não houver recuperação segura, manter a pendência e encerrar consultas em E. O desvio não precisa executar 3.2.3 para alcançar o próximo ciclo.
+6. **Falha (3.3):** `3.3.1 []>> 3.3.2 []>> 3.3.3 []>> 3.3.4`, com `3.3.3 = (3.3.3.1 [] 3.3.3.2 [] 3.3.3.3)`. Correção exige entrada corrigível e reenvio suportado; repetição exige orientação e aceitação; orientação insuficiente, ação indisponível ou adiamento mantêm a pendência. Conferir aceitação/rejeição não comprova sucesso do processamento.
+7. **Consolidação (4):** `4.1 []>> 4.2`. Conferir as demais partidas alimenta o reconhecimento de pendências/próxima consulta. E/F explicitam o término e a falha de acesso já previstos no HTA/GOMS; não exigem botão de conclusão ou auditoria permanente.
 
 ### Legenda e relações temporais usadas
 
@@ -665,16 +670,17 @@ As ligações descendentes indicam decomposição; relações horizontais ligam 
 |---|---|---|
 | Ativação com passagem de informação | `T1 []>> T2` | T2 inicia após T1 e usa sua informação: identificação para consulta, estado para interpretação e ação para conferência. |
 | Escolha | `T1 [] T2` | Iniciar uma alternativa desabilita as outras naquele encaminhamento. Ex.: aguardar, acessar resultados ou tratar a falha. As condições são explicitadas acima. |
-| Iteração | `T*` | Repetição do ciclo C para partidas e consultas, com término por sessão e pendências identificadas. |
+| Desativação | `T1 [> T2` | E encerra C* e transmite pendências à consolidação 4; não desativa a inferência ou o lote. |
+| Iteração | `T*` | Repetição de C para partidas/consultas até encerramento explícito por E. |
 
-Não se usaram `|||`, `|[]|`, `|=|`, `[>` ou `|>`: o processamento remoto pode continuar durante outras atividades, mas o recorte representa as consultas e decisões por estado, sem modelar uma segunda tarefa externa completa. Falha de uma partida não desativa o lote inteiro, e aguardar outra consulta não significa suspensão/retomada automática pelo operador `|>`.
+Não se usaram `|||`, `|[]|`, `|=|` ou `|>`: o processamento remoto pode continuar durante outras atividades, mas o recorte representa as consultas e decisões por estado, sem modelar uma segunda tarefa externa completa. Falha de uma partida não desativa o lote inteiro, e aguardar outra consulta não significa suspensão/retomada automática pelo operador `|>`.
 
 ### Tipos de tarefas
 
 | Símbolo no diagrama | Tipo nos slides | Aplicação no modelo |
 |---|---|---|
-| Nuvem | Abstrata | Objetivo global, ciclo C, ramos 1–4 e agrupamentos 3.2, 3.3 e 3.3.3. |
-| Pessoa | Usuário | Interpretar estado (2.2), escolher encaminhamento (2.3), aguardar/continuar outra atividade (3.1), reconhecer passagem à revisão (3.2.3), avaliar recuperação (3.3.2), manter pendência (3.3.3.3) e identificar pendências (4.2). |
+| Nuvem | Abstrata | Objetivo global, V/C, ramos 1–4 e agrupamentos 3.2/A, 3.3 e 3.3.3. |
+| Pessoa | Usuário | Interpretar estado (2.2), escolher encaminhamento (2.3), aguardar/continuar outra atividade (3.1), reconhecer passagem à revisão (3.2.3), avaliar recuperação (3.3.2), manter pendência (3.3.3.3), identificar pendências (4.2), encerrar consultas (E) e reconhecer acesso falho (F). |
 | Pessoa e computador, com seta dupla | Interativa | Abrir/conferir lote, consultar estado (2.1), abrir/conferir resultados (3.2.1–2), ler orientação (3.3.1), corrigir/reenviar ou confirmar nova tentativa (3.3.3.1–2), conferir encaminhamento (3.3.4) e consultar demais partidas (4.1). |
 | Computador | Sistema | Disponibilizar a resposta à consulta (S), com estado ou indisponibilidade, sem novo comando humano. |
 
@@ -687,8 +693,25 @@ Os três modelos aprofundam uma necessidade já registrada e permanecem **propos
 1. **Visibilidade por partida:** identificação e estados em texto ajudam a distinguir espera, acesso e falha, H13/H25/RC03. Demora não basta para indicar travamento; a interface deve reconhecer consulta indisponível sem inventar o estado da execução.
 2. **Recuperação localizada:** tratar apenas a partida afetada, preservar as outras e conferir aceitação da tentativa, H08/H16/H26 e R02/R05. Corrigir entrada, repetir de forma orientada e manter pendência são alternativas condicionadas. Retomada automática e valores de custo dependem de dados técnicos ainda não confirmados.
 3. **Continuidade editorial:** abrir resultados acessíveis encaminha a T01/A04; resultado vazio, falha parcial e cobertura desconhecida precisam permanecer explícitos, RC05. T03 não aprova a seleção nem substitui T02.
-4. **Aplicação às duas primárias:** P01 precisa continuar outras edições durante a espera, H32; P03 precisa de processamento remoto e vocabulário acessível, H37/H38. O mesmo fluxo deve apoiar os dois sem exigir computador potente, parâmetros de IA ou histórico permanente.
+4. **Aplicação às duas primárias:** P01 precisa continuar outras edições durante a espera, H32; P03 precisa de processamento remoto e vocabulário acessível, H37/H38. O mesmo fluxo deve apoiar os dois sem exigir capacidade local para a inferência pesada, parâmetros de IA ou histórico permanente. O dispositivo continua precisando de espaço para entradas, cortes/metadados e edição externa; a viabilidade com pouco armazenamento permanece em investigação em H37.
 5. **Investigação na Entrega 7:** verificar frequência das consultas, percepção dos estados, meio de aviso, causas de falha compreensíveis, critérios para tentar novamente ou adiar e preservação efetiva dos resultados. Investigar com a equipe técnica estados, validação, recuperação e informações de custo disponíveis. Esses resultados poderão orientar metas de usabilidade e testes futuros; não há valores quantitativos fixados nesta modelagem.
+
+---
+
+## Conferência dos percursos após a revisão de coerência
+
+Verificação documental de correspondência entre CTT, HTA e GOMS; não é simulação em CTTE nem teste com usuários. E/J/K/X/Z/F são refinamentos de decisões já presentes, com significado local a cada tarefa.
+
+| Caso | Percurso CTT verificado | Resultado e correspondência |
+|---|---|---|
+| T01 sem candidatos e sem omissão verificável | `1 > V(E) > 4.1 > W(Z) > 4.4` | Reconhecer seleção vazia/pendências sem examinar candidato ou pedir download; HTA 1/4 e GOMS 4.B. |
+| T01 revisou candidatos, mas não selecionou cortes gerados | `V(C* [> E) > 4.1 > W(Z) > 4.4` | Seleção vazia após decisões; cortes externos permanecem separados; HTA plano 4 e GOMS 4.B. |
+| T01 esclareceu dúvida no original | `L(2 > 3(P(3.3 > F)))` | Nova decisão 3.1/3.2/3.4 com o resultado da conferência; HTA plano 3 e GOMS 3.C.6. |
+| T01 suspeita de omissão sem candidato gerado | `C(O(3.3 > X))` | Corte externo conferido ou pendência, sem inclusão de arquivo inexistente; HTA 3.3/3.3.4 e GOMS 3.C. |
+| T03 falhou ao abrir resultados | `3.2.1 > 3.2.2 > A(F)`; depois novo `C(2 > 3.3)` ou `E > 4` | Não executa 3.2.3; recuperação orientada ou pendência; HTA 3.2 e GOMS regra de 3.B. |
+| Sessão encerrada com pendências | T01/T03: `V(C* [> E) > 4`; T02: `C* [> V(E)` | Término explícito com não vistos/não consultados/nova versão aguardada; não declara cobertura ou chancela completa. |
+
+Na tabela, `>` abrevia a ordem de leitura do percurso; as relações formais e as condições estão nos respectivos CTT. Nenhuma interpretação desta conferência comprova aprovação do professor ou viabilidade técnica dos recursos.
 
 ---
 
@@ -714,3 +737,4 @@ Os três modelos aprofundam uma necessidade já registrada e permanecem **propos
 | 09/10/2026 | 1.1 | Adequação exclusiva de P02/T02 aos slides CC8122-HTA e CC8122-GOMS-CTT: operações sublinhadas e planos no HTA, tabela com Input/Ação/Feedback, hierarquia GOMS, ícones e relações entre irmãs no CTT. Corrigidos o consumo externo por Arnaldo, a reavaliação após ajustes e os limites das hipóteses de contexto, cobertura e auditoria. | Lucas Roberto Boccia dos Santos |
 | 12/10/2026 | 1.2 | Preenchimento de T03, Acompanhar o processamento de partidas em lote e tratar falhas: HTA com planos e tabela, GOMS hierárquico e diagrama, CTT com tipos e relações entre irmãs. P01 como referência principal, aplicação a P03, estados e recuperação condicionados à viabilidade técnica. Criados os SVGs de T03 e atualizadas R02/R05 e a ponte de uso proposto na Entrega 4. Delimitada a passagem para T01/A04; T01 permanece pendente. | Giovanni Chahin Morassi |
 | 13/10/2026 | 1.3 | Preenchimento de T01 por Pedro: HTA com planos/tabela, GOMS hierárquico e CTT com suspensão/retomada; três SVGs. R01/R04 vinculadas à revisão proposta, correção externa e pendências. Corrigida autoria/matrícula na seleção; os três modelos das três tarefas estão preenchidos, sem validação empírica. | Pedro Alexandre Custódio Silva |
+| 13/10/2026 | 1.4 | Aplicação de AC-063 a AC-068 da análise das 15:11: CTT com saídas e alternativas explícitas, retorno após conferência externa e falha de acesso; percursos conferidos contra HTA/GOMS; frequência e criticidade de T02 como hipóteses; âncora da seção 0.2 corrigida. Jornada de P01, implicações C02/C03, README e impacto de H37 sincronizados. Escopo e autoria dos modelos preservados, sem validação empírica. | Equipe 16, revisão assistida pelo Codex a pedido da equipe |

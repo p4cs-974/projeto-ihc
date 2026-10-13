@@ -1,440 +1,436 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="3410" viewBox="0 0 1440 3410" role="img" aria-labelledby="title desc">
-<title id="title">CTT — T01: Revisão, decisões e suspensão/retomada</title><desc id="desc">ConcurTaskTrees de T01 por Pedro Alexandre Custódio Silva. Nuvem abstrata, pessoa usuário, computador sistema, pessoa/computador com seta dupla interação. Relações entre irmãs, iteração de revisão, escolha de destino e suspensão/retomada por chamado externo. Contingências no editor externo e condições no texto.</desc>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
-<rect width="1440" height="3410" fill="white"/>
-<g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
-<text x="40" y="42" text-anchor="start" font-size="25" font-weight="700">CTT — T01: Revisão, decisões e suspensão/retomada</text>
-<text x="40" y="73" text-anchor="start" font-size="16" font-weight="400">Pedro Alexandre Custódio Silva · 22.123.049-3 · P01, Rafael · Uso proposto e contingências externas [H]</text>
-<path d="M720 180 L455.0 295" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 180 L985.0 295" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M503.0 326 H937.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="690.0" y="309" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720.0" y="330" text-anchor="middle" font-size="17" font-weight="700">|&gt;</text>
-<path transform="translate(677,125)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="435.0" y="188" width="570" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720" y="207" text-anchor="middle" font-size="16" font-weight="400">Localizar, selecionar e revisar</text>
-<text x="720" y="230" text-anchor="middle" font-size="16" font-weight="400">lances de melhores momentos (T01)</text>
-<path transform="translate(412.0,295)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="196.0" y="358" width="518.0" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="455.0" y="377" text-anchor="middle" font-size="16" font-weight="400">R. Percurso regular</text>
-<path transform="translate(942.0,295)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="726.0" y="358" width="518.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="985.0" y="377" text-anchor="middle" font-size="16" font-weight="400">5. Atender interrupção</text>
-<text x="985.0" y="400" text-anchor="middle" font-size="16" font-weight="400">e retomar revisão</text>
-<path d="M720 510 L266.66666666666663 625" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 510 L720.0 625" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 510 L1173.3333333333333 625" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M314.66666666666663 656 H672.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="463.3333333333333" y="639" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="493.3333333333333" y="660" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M768.0 656 H1125.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="916.6666666666666" y="639" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="946.6666666666666" y="660" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path transform="translate(677,455)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="550.0" y="518" width="340" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720" y="537" text-anchor="middle" font-size="16" font-weight="400">R. Percurso regular</text>
-<path transform="translate(223.66666666666663,625)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="45.99999999999997" y="688" width="441.3333333333333" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="266.66666666666663" y="707" text-anchor="middle" font-size="16" font-weight="400">1. Preparar revisão</text>
-<path transform="translate(677.0,625)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="499.33333333333337" y="688" width="441.3333333333333" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720.0" y="707" text-anchor="middle" font-size="16" font-weight="400">C*. Inspecionar e decidir</text>
-<path transform="translate(1130.3333333333333,625)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="952.6666666666666" y="688" width="441.3333333333333" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1173.3333333333333" y="707" text-anchor="middle" font-size="16" font-weight="400">4. Consolidar e obter</text>
-<text x="1173.3333333333333" y="730" text-anchor="middle" font-size="16" font-weight="400">material</text>
-<text x="40" y="765" text-anchor="start" font-size="16" font-weight="400">R = 1 []&gt;&gt; C* []&gt;&gt; 4. R |&gt; 5: atender ao chamado e retomar R; reinspecionar se perdeu contexto.</text>
-<path d="M40 800 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="830" text-anchor="start" font-size="18" font-weight="700">Expansões de 1 e C — preparação da partida e ciclo repetido por candidato</text>
-<path d="M350 910 L146.66666666666669 1025" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M350 910 L360.0 1025" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M350 910 L573.3333333333334 1025" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M194.66666666666669 1056 H312.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="223.33333333333334" y="1039" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="253.33333333333334" y="1060" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M408.0 1056 H525.3333333333334" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="436.6666666666667" y="1039" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="466.6666666666667" y="1060" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path transform="translate(307,855)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="230.0" y="918" width="240" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="350" y="937" text-anchor="middle" font-size="16" font-weight="400">1. Preparar revisão</text>
-<circle cx="176.66666666666669" cy="1035" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M156.66666666666669 1081 V1058 Q156.66666666666669 1047 176.66666666666669 1047 Q196.66666666666669 1047 196.66666666666669 1058 V1081 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M166.66666666666669 1063 V1081 M186.66666666666669 1063 V1081" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="93.66666666666669" y="1034" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="90.66666666666669" y="1071" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M116.66666666666669 1065 V1071" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M141.66666666666669 1053 H154.66666666666669" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M154.66666666666669 1062 H141.66666666666669" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="46.000000000000014" y="1088" width="201.33333333333334" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="146.66666666666669" y="1107" text-anchor="middle" font-size="16" font-weight="400">1.1. Abrir resultados</text>
-<text x="146.66666666666669" y="1130" text-anchor="middle" font-size="16" font-weight="400">da partida</text>
-<circle cx="390.0" cy="1035" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M370.0 1081 V1058 Q370.0 1047 390.0 1047 Q410.0 1047 410.0 1058 V1081 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M380.0 1063 V1081 M400.0 1063 V1081" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="307.0" y="1034" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="304.0" y="1071" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M330.0 1065 V1071" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M355.0 1053 H368.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M368.0 1062 H355.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="259.3333333333333" y="1088" width="201.33333333333334" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="360.0" y="1107" text-anchor="middle" font-size="16" font-weight="400">1.2. Conferir origem</text>
-<text x="360.0" y="1130" text-anchor="middle" font-size="16" font-weight="400">e limites</text>
-<circle cx="573.3333333333334" cy="1035" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M553.3333333333334 1081 V1058 Q553.3333333333334 1047 573.3333333333334 1047 Q593.3333333333334 1047 593.3333333333334 1058 V1081 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M563.3333333333334 1063 V1081 M583.3333333333334 1063 V1081" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="472.6666666666667" y="1088" width="201.33333333333334" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="573.3333333333334" y="1107" text-anchor="middle" font-size="16" font-weight="400">1.3. Recuperar critérios</text>
-<text x="573.3333333333334" y="1130" text-anchor="middle" font-size="16" font-weight="400">finalidade e prazo</text>
-<path d="M1060 910 L890.0 1025" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1060 910 L1230.0 1025" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M938.0 1056 H1182.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1030.0" y="1039" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1060.0" y="1060" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path transform="translate(1017,855)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<text x="1120" y="863" text-anchor="middle" font-size="25" font-weight="700">*</text>
-<rect x="940.0" y="918" width="240" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1060" y="937" text-anchor="middle" font-size="16" font-weight="400">C. Inspecionar e decidir</text>
-<path transform="translate(847.0,1025)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="726.0" y="1088" width="328.0" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="890.0" y="1107" text-anchor="middle" font-size="16" font-weight="400">2. Examinar candidato</text>
-<path transform="translate(1187.0,1025)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="1066.0" y="1088" width="328.0" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1230.0" y="1107" text-anchor="middle" font-size="16" font-weight="400">3. Decidir destino</text>
-<path d="M40 1200 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="1230" text-anchor="start" font-size="18" font-weight="700">Expansões de 2 e 3 — contexto alimenta decisão; alternativas condicionadas ao julgamento</text>
-<path d="M350 1310 L146.66666666666669 1425" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M350 1310 L360.0 1425" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M350 1310 L573.3333333333334 1425" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M194.66666666666669 1456 H312.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="223.33333333333334" y="1439" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="253.33333333333334" y="1460" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M408.0 1456 H525.3333333333334" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="436.6666666666667" y="1439" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="466.6666666666667" y="1460" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path transform="translate(307,1255)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="230.0" y="1318" width="240" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="350" y="1337" text-anchor="middle" font-size="16" font-weight="400">2. Examinar candidato</text>
-<circle cx="176.66666666666669" cy="1435" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M156.66666666666669 1481 V1458 Q156.66666666666669 1447 176.66666666666669 1447 Q196.66666666666669 1447 196.66666666666669 1458 V1481 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M166.66666666666669 1463 V1481 M186.66666666666669 1463 V1481" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="93.66666666666669" y="1434" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="90.66666666666669" y="1471" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M116.66666666666669 1465 V1471" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M141.66666666666669 1453 H154.66666666666669" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M154.66666666666669 1462 H141.66666666666669" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="46.000000000000014" y="1488" width="201.33333333333334" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="146.66666666666669" y="1507" text-anchor="middle" font-size="16" font-weight="400">2.1. Localizar</text>
-<text x="146.66666666666669" y="1530" text-anchor="middle" font-size="16" font-weight="400">candidato</text>
-<circle cx="390.0" cy="1435" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M370.0 1481 V1458 Q370.0 1447 390.0 1447 Q410.0 1447 410.0 1458 V1481 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M380.0 1463 V1481 M400.0 1463 V1481" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="307.0" y="1434" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="304.0" y="1471" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M330.0 1465 V1471" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M355.0 1453 H368.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M368.0 1462 H355.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="259.3333333333333" y="1488" width="201.33333333333334" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="360.0" y="1507" text-anchor="middle" font-size="16" font-weight="400">2.2*. Reproduzir</text>
-<text x="360.0" y="1530" text-anchor="middle" font-size="16" font-weight="400">e rever contexto</text>
-<circle cx="573.3333333333334" cy="1435" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M553.3333333333334 1481 V1458 Q553.3333333333334 1447 573.3333333333334 1447 Q593.3333333333334 1447 593.3333333333334 1458 V1481 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M563.3333333333334 1463 V1481 M583.3333333333334 1463 V1481" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="472.6666666666667" y="1488" width="201.33333333333334" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="573.3333333333334" y="1507" text-anchor="middle" font-size="16" font-weight="400">2.3. Julgar pertinência</text>
-<text x="573.3333333333334" y="1530" text-anchor="middle" font-size="16" font-weight="400">e contexto</text>
-<path d="M1060 1310 L805.0 1425" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1060 1310 L975.0 1425" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1060 1310 L1145.0 1425" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1060 1310 L1315.0 1425" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M853.0 1456 H927.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="860.0" y="1439" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="890.0" y="1460" text-anchor="middle" font-size="17" font-weight="700">[]</text>
-<path d="M1023.0 1456 H1097.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1030.0" y="1439" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1060.0" y="1460" text-anchor="middle" font-size="17" font-weight="700">[]</text>
-<path d="M1193.0 1456 H1267.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1200.0" y="1439" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1230.0" y="1460" text-anchor="middle" font-size="17" font-weight="700">[]</text>
-<path transform="translate(1017,1255)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="940.0" y="1318" width="240" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1060" y="1337" text-anchor="middle" font-size="16" font-weight="400">3. Decidir destino</text>
-<circle cx="835.0" cy="1435" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M815.0 1481 V1458 Q815.0 1447 835.0 1447 Q855.0 1447 855.0 1458 V1481 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M825.0 1463 V1481 M845.0 1463 V1481" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="752.0" y="1434" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="749.0" y="1471" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M775.0 1465 V1471" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M800.0 1453 H813.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M813.0 1462 H800.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="726.0" y="1488" width="158.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="805.0" y="1507" text-anchor="middle" font-size="16" font-weight="400">3.1. Incluir</text>
-<text x="805.0" y="1530" text-anchor="middle" font-size="16" font-weight="400">na seleção</text>
-<circle cx="1005.0" cy="1435" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M985.0 1481 V1458 Q985.0 1447 1005.0 1447 Q1025.0 1447 1025.0 1458 V1481 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M995.0 1463 V1481 M1015.0 1463 V1481" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="922.0" y="1434" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="919.0" y="1471" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M945.0 1465 V1471" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M970.0 1453 H983.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M983.0 1462 H970.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="896.0" y="1488" width="158.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="975.0" y="1507" text-anchor="middle" font-size="16" font-weight="400">3.2. Excluir</text>
-<text x="975.0" y="1530" text-anchor="middle" font-size="16" font-weight="400">da seleção</text>
-<path transform="translate(1102.0,1425)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="1066.0" y="1488" width="158.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1145.0" y="1507" text-anchor="middle" font-size="16" font-weight="400">3.3. Conferir</text>
-<text x="1145.0" y="1530" text-anchor="middle" font-size="16" font-weight="400">original</text>
-<circle cx="1315.0" cy="1435" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M1295.0 1481 V1458 Q1295.0 1447 1315.0 1447 Q1335.0 1447 1335.0 1458 V1481 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1305.0 1463 V1481 M1325.0 1463 V1481" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1236.0" y="1488" width="158.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1315.0" y="1507" text-anchor="middle" font-size="16" font-weight="400">3.4. Manter</text>
-<text x="1315.0" y="1530" text-anchor="middle" font-size="16" font-weight="400">pendência</text>
-<path d="M40 1600 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="1630" text-anchor="start" font-size="18" font-weight="700">Expansão de 3.3 — conferência no original e decisão condicionada sobre correção externa</text>
-<path d="M720 1710 L210.0 1825" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 1710 L550.0 1825" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 1710 L890.0 1825" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 1710 L1230.0 1825" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M258.0 1856 H502.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="350.0" y="1839" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="380.0" y="1860" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M598.0 1856 H842.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="690.0" y="1839" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720.0" y="1860" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M938.0 1856 H1182.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1030.0" y="1839" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1060.0" y="1860" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path transform="translate(677,1655)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="460.0" y="1718" width="520" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720" y="1737" text-anchor="middle" font-size="16" font-weight="400">3.3. Conferir original e encaminhar correção</text>
-<circle cx="240.0" cy="1835" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M220.0 1881 V1858 Q220.0 1847 240.0 1847 Q260.0 1847 260.0 1858 V1881 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M230.0 1863 V1881 M250.0 1863 V1881" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="157.0" y="1834" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="154.0" y="1871" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M180.0 1865 V1871" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M205.0 1853 H218.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M218.0 1862 H205.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="46.0" y="1888" width="328.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="210.0" y="1907" text-anchor="middle" font-size="16" font-weight="400">3.3.1. Localizar referência</text>
-<text x="210.0" y="1930" text-anchor="middle" font-size="16" font-weight="400">no original externo</text>
-<circle cx="580.0" cy="1835" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M560.0 1881 V1858 Q560.0 1847 580.0 1847 Q600.0 1847 600.0 1858 V1881 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M570.0 1863 V1881 M590.0 1863 V1881" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="497.0" y="1834" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="494.0" y="1871" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M520.0 1865 V1871" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M545.0 1853 H558.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M558.0 1862 H545.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="386.0" y="1888" width="328.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="550.0" y="1907" text-anchor="middle" font-size="16" font-weight="400">3.3.2. Assistir original</text>
-<text x="550.0" y="1930" text-anchor="middle" font-size="16" font-weight="400">e confrontar candidato</text>
-<path transform="translate(847.0,1825)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="726.0" y="1888" width="328.0" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="890.0" y="1907" text-anchor="middle" font-size="16" font-weight="400">D. Decidir corte externo</text>
-<circle cx="1230.0" cy="1835" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M1210.0 1881 V1858 Q1210.0 1847 1230.0 1847 Q1250.0 1847 1250.0 1858 V1881 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1220.0 1863 V1881 M1240.0 1863 V1881" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1066.0" y="1888" width="328.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1230.0" y="1907" text-anchor="middle" font-size="16" font-weight="400">3.3.4. Distinguir gerado,</text>
-<text x="1230.0" y="1930" text-anchor="middle" font-size="16" font-weight="400">externo e pendente</text>
-<path d="M40 2000 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="2030" text-anchor="start" font-size="18" font-weight="700">Expansões de D e 3.3.3 — dispensa/impossibilidade reconhecida; corte somente no editor externo</text>
-<path d="M340 2110 L192.5 2225" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M340 2110 L497.5 2225" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M240.5 2256 H449.5" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="315.0" y="2239" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="345.0" y="2260" text-anchor="middle" font-size="17" font-weight="700">[]</text>
-<path transform="translate(297,2055)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="220.0" y="2118" width="240" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="340" y="2137" text-anchor="middle" font-size="16" font-weight="400">D. Decidir corte externo</text>
-<path transform="translate(149.5,2225)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="46.0" y="2288" width="293.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="192.5" y="2307" text-anchor="middle" font-size="16" font-weight="400">3.3.3. Preparar corte</text>
-<text x="192.5" y="2330" text-anchor="middle" font-size="16" font-weight="400">ou ajuste externo</text>
-<circle cx="497.5" cy="2235" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M477.5 2281 V2258 Q477.5 2247 497.5 2247 Q517.5 2247 517.5 2258 V2281 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M487.5 2263 V2281 M507.5 2263 V2281" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="351.0" y="2288" width="293.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="497.5" y="2307" text-anchor="middle" font-size="16" font-weight="400">N. Reconhecer dispensa</text>
-<text x="497.5" y="2330" text-anchor="middle" font-size="16" font-weight="400">ou impossibilidade</text>
-<path d="M1060 2110 L833.3333333333334 2225" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1060 2110 L1060.0 2225" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1060 2110 L1286.6666666666665 2225" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M881.3333333333334 2256 H1012.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="916.6666666666667" y="2239" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="946.6666666666667" y="2260" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M1108.0 2256 H1238.6666666666665" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1143.3333333333333" y="2239" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1173.3333333333333" y="2260" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path transform="translate(1017,2055)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="875.0" y="2118" width="370" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1060" y="2137" text-anchor="middle" font-size="16" font-weight="400">3.3.3. Preparar corte externo</text>
-<circle cx="833.3333333333334" cy="2235" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M813.3333333333334 2281 V2258 Q813.3333333333334 2247 833.3333333333334 2247 Q853.3333333333334 2247 853.3333333333334 2258 V2281 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M823.3333333333334 2263 V2281 M843.3333333333334 2263 V2281" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="726.0" y="2288" width="214.66666666666666" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="833.3333333333334" y="2307" text-anchor="middle" font-size="16" font-weight="400">3.3.3.1. Definir limites</text>
-<text x="833.3333333333334" y="2330" text-anchor="middle" font-size="16" font-weight="400">de início e fim</text>
-<circle cx="1090.0" cy="2235" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M1070.0 2281 V2258 Q1070.0 2247 1090.0 2247 Q1110.0 2247 1110.0 2258 V2281 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1080.0 2263 V2281 M1100.0 2263 V2281" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1007.0" y="2234" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="1004.0" y="2271" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M1030.0 2265 V2271" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1055.0 2253 H1068.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M1068.0 2262 H1055.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="952.6666666666666" y="2288" width="214.66666666666666" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1060.0" y="2307" text-anchor="middle" font-size="16" font-weight="400">3.3.3.2. Recortar</text>
-<text x="1060.0" y="2330" text-anchor="middle" font-size="16" font-weight="400">e salvar externamente</text>
-<circle cx="1316.6666666666665" cy="2235" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M1296.6666666666665 2281 V2258 Q1296.6666666666665 2247 1316.6666666666665 2247 Q1336.6666666666665 2247 1336.6666666666665 2258 V2281 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1306.6666666666665 2263 V2281 M1326.6666666666665 2263 V2281" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1233.6666666666665" y="2234" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="1230.6666666666665" y="2271" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M1256.6666666666665 2265 V2271" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1281.6666666666665 2253 H1294.6666666666665" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M1294.6666666666665 2262 H1281.6666666666665" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="1179.3333333333333" y="2288" width="214.66666666666666" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1286.6666666666665" y="2307" text-anchor="middle" font-size="16" font-weight="400">3.3.3.3. Reproduzir corte</text>
-<text x="1286.6666666666665" y="2330" text-anchor="middle" font-size="16" font-weight="400">e conferir contexto</text>
-<path d="M40 2400 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="2430" text-anchor="start" font-size="18" font-weight="700">Expansão de 4 — seleção não vazia; seleção vazia usa 4.1 []&gt;&gt; 4.4, dispensando pedido/preparação</text>
-<path d="M720 2510 L176.0 2625" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 2510 L448.0 2625" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 2510 L720.0 2625" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 2510 L992.0 2625" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 2510 L1264.0 2625" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M224.0 2656 H400.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="282.0" y="2639" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="312.0" y="2660" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M496.0 2656 H672.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="554.0" y="2639" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="584.0" y="2660" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M768.0 2656 H944.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="826.0" y="2639" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="856.0" y="2660" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M1040.0 2656 H1216.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1098.0" y="2639" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1128.0" y="2660" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path transform="translate(677,2455)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="485.0" y="2518" width="470" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720" y="2537" text-anchor="middle" font-size="16" font-weight="400">4. Consolidar seleção e obter material</text>
-<circle cx="176.0" cy="2635" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M156.0 2681 V2658 Q156.0 2647 176.0 2647 Q196.0 2647 196.0 2658 V2681 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M166.0 2663 V2681 M186.0 2663 V2681" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="46.0" y="2688" width="260.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="176.0" y="2707" text-anchor="middle" font-size="16" font-weight="400">4.1. Rever seleção,</text>
-<text x="176.0" y="2730" text-anchor="middle" font-size="16" font-weight="400">externos e pendências</text>
-<circle cx="478.0" cy="2635" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M458.0 2681 V2658 Q458.0 2647 478.0 2647 Q498.0 2647 498.0 2658 V2681 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M468.0 2663 V2681 M488.0 2663 V2681" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="395.0" y="2634" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="392.0" y="2671" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M418.0 2665 V2671" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M443.0 2653 H456.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M456.0 2662 H443.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="318.0" y="2688" width="260.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="448.0" y="2707" text-anchor="middle" font-size="16" font-weight="400">4.2. Conferir resumo</text>
-<text x="448.0" y="2730" text-anchor="middle" font-size="16" font-weight="400">dos selecionados</text>
-<circle cx="750.0" cy="2635" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M730.0 2681 V2658 Q730.0 2647 750.0 2647 Q770.0 2647 770.0 2658 V2681 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M740.0 2663 V2681 M760.0 2663 V2681" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="667.0" y="2634" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="664.0" y="2671" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M690.0 2665 V2671" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M715.0 2653 H728.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M728.0 2662 H715.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="590.0" y="2688" width="260.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720.0" y="2707" text-anchor="middle" font-size="16" font-weight="400">4.3. Solicitar download</text>
-<text x="720.0" y="2730" text-anchor="middle" font-size="16" font-weight="400">de cortes/metadados</text>
-<rect x="969.0" y="2634" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="966.0" y="2671" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M992.0 2665 V2671" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="862.0" y="2688" width="260.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="992.0" y="2707" text-anchor="middle" font-size="16" font-weight="400">S. Preparar/disponibilizar</text>
-<text x="992.0" y="2730" text-anchor="middle" font-size="16" font-weight="400">arquivos selecionados</text>
-<circle cx="1294.0" cy="2635" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M1274.0 2681 V2658 Q1274.0 2647 1294.0 2647 Q1314.0 2647 1314.0 2658 V2681 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1284.0 2663 V2681 M1304.0 2663 V2681" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1211.0" y="2634" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="1208.0" y="2671" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M1234.0 2665 V2671" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1259.0 2653 H1272.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M1272.0 2662 H1259.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="1134.0" y="2688" width="260.0" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1264.0" y="2707" text-anchor="middle" font-size="16" font-weight="400">4.4. Conferir arquivos</text>
-<text x="1264.0" y="2730" text-anchor="middle" font-size="16" font-weight="400">e continuidade externa</text>
-<path d="M40 2800 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="2830" text-anchor="start" font-size="18" font-weight="700">Expansão de 5 — variante por chat externo; alternativa presencial detalhada no GOMS</text>
-<path d="M720 2910 L266.66666666666663 3025" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 2910 L720.0 3025" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 2910 L1173.3333333333333 3025" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M314.66666666666663 3056 H672.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="463.3333333333333" y="3039" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="493.3333333333333" y="3060" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path d="M768.0 3056 H1125.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="916.6666666666666" y="3039" width="60" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="946.6666666666666" y="3060" text-anchor="middle" font-size="17" font-weight="700">[]&gt;&gt;</text>
-<path transform="translate(677,2855)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<rect x="475.0" y="2918" width="490" height="30" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720" y="2937" text-anchor="middle" font-size="16" font-weight="400">5. Atender interrupção e retomar revisão</text>
-<circle cx="296.66666666666663" cy="3035" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M276.66666666666663 3081 V3058 Q276.66666666666663 3047 296.66666666666663 3047 Q316.66666666666663 3047 316.66666666666663 3058 V3081 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M286.66666666666663 3063 V3081 M306.66666666666663 3063 V3081" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="213.66666666666663" y="3034" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="210.66666666666663" y="3071" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M236.66666666666663 3065 V3071" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M261.66666666666663 3053 H274.66666666666663" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M274.66666666666663 3062 H261.66666666666663" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="45.99999999999997" y="3088" width="441.3333333333333" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="266.66666666666663" y="3107" text-anchor="middle" font-size="16" font-weight="400">5.1. Preservar referência</text>
-<text x="266.66666666666663" y="3130" text-anchor="middle" font-size="16" font-weight="400">e decisões</text>
-<circle cx="750.0" cy="3035" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M730.0 3081 V3058 Q730.0 3047 750.0 3047 Q770.0 3047 770.0 3058 V3081 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M740.0 3063 V3081 M760.0 3063 V3081" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="667.0" y="3034" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="664.0" y="3071" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M690.0 3065 V3071" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M715.0 3053 H728.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M728.0 3062 H715.0" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="499.33333333333337" y="3088" width="441.3333333333333" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="720.0" y="3107" text-anchor="middle" font-size="16" font-weight="400">5.2. Atender pedido</text>
-<text x="720.0" y="3130" text-anchor="middle" font-size="16" font-weight="400">externo da supervisão</text>
-<circle cx="1203.3333333333333" cy="3035" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M1183.3333333333333 3081 V3058 Q1183.3333333333333 3047 1203.3333333333333 3047 Q1223.3333333333333 3047 1223.3333333333333 3058 V3081 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1193.3333333333333 3063 V3081 M1213.3333333333333 3063 V3081" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1120.3333333333333" y="3034" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="1117.3333333333333" y="3071" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M1143.3333333333333 3065 V3071" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1168.3333333333333 3053 H1181.3333333333333" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M1181.3333333333333 3062 H1168.3333333333333" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="952.6666666666666" y="3088" width="441.3333333333333" height="54" fill="white" stroke="none" stroke-width="1.6"/>
-<text x="1173.3333333333333" y="3107" text-anchor="middle" font-size="16" font-weight="400">5.3. Recuperar posição</text>
-<text x="1173.3333333333333" y="3130" text-anchor="middle" font-size="16" font-weight="400">e retomar avaliação</text>
-<path d="M40 3200 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="3230" text-anchor="start" font-size="18" font-weight="700">Legenda e condições de leitura</text>
-<path transform="translate(67,3250)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<text x="175" y="3283" text-anchor="start" font-size="16" font-weight="400">Abstrata</text>
-<circle cx="430" cy="3260" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M410 3306 V3283 Q410 3272 430 3272 Q450 3272 450 3283 V3306 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M420 3288 V3306 M440 3288 V3306" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="495" y="3283" text-anchor="start" font-size="16" font-weight="400">Usuário</text>
-<circle cx="790" cy="3260" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M770 3306 V3283 Q770 3272 790 3272 Q810 3272 810 3283 V3306 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M780 3288 V3306 M800 3288 V3306" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="707" y="3259" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="704" y="3296" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M730 3290 V3296" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M755 3278 H768" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<path d="M768 3287 H755" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
-<text x="825" y="3283" text-anchor="start" font-size="16" font-weight="400">Interativa</text>
-<rect x="1087" y="3259" width="46" height="31" fill="white" stroke="#333" stroke-width="1.6"/>
-<rect x="1084" y="3296" width="52" height="8" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M1110 3290 V3296" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="1175" y="3283" text-anchor="start" font-size="16" font-weight="400">Sistema</text>
-<text x="40" y="3340" text-anchor="start" font-size="16" font-weight="400">[]&gt;&gt; = passagem de informação; [] = escolha; |&gt; = suspensão/retomada; * = iteração. Condições no texto.</text>
-<text x="40" y="3370" text-anchor="start" font-size="16" font-weight="400">Sem cobertura completa presumida: cortes gerados, cortes externos e pendências são distintos.</text>
-</g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="8584" viewBox="0 0 1440 8584" role="img" aria-labelledby="title desc">
+<title id="title">CTT T01 — Revisão, alternativas e término da sessão</title><desc id="desc">Árvore com painéis de decomposição, tipos de tarefas, alternativas condicionadas e encerramentos explícitos. Revisão de AC-063. Pedro Alexandre Custódio Silva · 22.123.049-3 · P01; aplicação a P03. Modelo hipotético a validar.</desc>
+<rect width="1440" height="8584" fill="white"/><g font-family="DejaVu Sans, Arial, sans-serif" fill="#222"><text x="40" y="40" font-size="25" text-anchor="start" font-weight="700">CTT — T01: Revisão, alternativas e término da sessão</text>
+<text x="40" y="73" font-size="16" text-anchor="start" font-weight="400">Pedro Alexandre Custódio Silva · 22.123.049-3 · P01; aplicação a P03 · [H]</text>
+<path d="M40 110 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="139" font-size="18" text-anchor="start" font-weight="700">Objetivo global e interrupção humana</text>
+<path transform="translate(677,163)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="237" font-size="16" text-anchor="middle" font-weight="400">T01. Localizar, selecionar e revisar lances</text>
+<path d="M720 263 L380.0 310" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,310)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 263 L1060.0 310" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1017.0,310)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="380.0" y="389" font-size="16" text-anchor="middle" font-weight="400">R. Percurso da revisão</text>
+<path d="M437.0 340 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="323" width="68" height="32" fill="white"/>
+<text x="720.0" y="345" font-size="18" text-anchor="middle" font-weight="700">|&gt;</text>
+<text x="1060.0" y="389" font-size="16" text-anchor="middle" font-weight="400">5. Atender interrupção e retomar</text>
+<text x="40" y="479" font-size="15" text-anchor="start" font-weight="400">5 somente quando houver chamado externo; a conclusão de 5 retoma R.</text>
+<path d="M40 525 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="554" font-size="18" text-anchor="start" font-weight="700">R — preparação, conferência delimitada e consolidação</text>
+<path transform="translate(677,578)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="652" font-size="16" text-anchor="middle" font-weight="400">R. Percurso da revisão</text>
+<path d="M720 678 L266.66666666666663 725" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(223.66666666666663,725)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 678 L720.0 725" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(677.0,725)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 678 L1173.3333333333333 725" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1130.3333333333333,725)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="266.66666666666663" y="804" font-size="16" text-anchor="middle" font-weight="400">1. Preparar revisão</text>
+<path d="M323.66666666666663 755 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="459.3333333333333" y="738" width="68" height="32" fill="white"/>
+<text x="493.3333333333333" y="760" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="720.0" y="804" font-size="16" text-anchor="middle" font-weight="400">V. Conferir candidatos e omissões</text>
+<path d="M777.0 755 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="912.6666666666666" y="738" width="68" height="32" fill="white"/>
+<text x="946.6666666666666" y="760" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1173.3333333333333" y="804" font-size="16" text-anchor="middle" font-weight="400">4. Consolidar e obter material</text>
+<path d="M40 919 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="948" font-size="18" text-anchor="start" font-weight="700">V — término explícito, inclusive sem candidatos</text>
+<path transform="translate(677,972)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="1046" font-size="16" text-anchor="middle" font-weight="400">V. Conferir candidatos e omissões</text>
+<path d="M720 1072 L380.0 1119" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,1119)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 1072 L1060.0 1119" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1060.0" cy="1129" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1041.0 1175 V1152 Q1041.0 1142 1060.0 1142 Q1079.0 1142 1079.0 1152 V1175 Z M1051.0 1158 V1175 M1069.0 1158 V1175" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="380.0" y="1198" font-size="16" text-anchor="middle" font-weight="400">C*. Ciclo de conferência</text>
+<path d="M437.0 1149 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="1132" width="68" height="32" fill="white"/>
+<text x="720.0" y="1154" font-size="18" text-anchor="middle" font-weight="700">[&gt;</text>
+<text x="1060.0" y="1198" font-size="16" text-anchor="middle" font-weight="400">E. Encerrar conferência e reconhecer pendências</text>
+<text x="40" y="1288" font-size="15" text-anchor="start" font-weight="400">E: revisão suficiente para esta sessão, prazo encerrado, acesso inviável ou lista vazia sem conferência possível.</text>
+<text x="40" y="1309" font-size="15" text-anchor="start" font-weight="400">C só inicia com candidato acessível ou suspeita de omissão verificável. E pode encerrar antes do primeiro C.</text>
+<path d="M40 1355 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1384" font-size="18" text-anchor="start" font-weight="700">C — escolher o caso sem inventar um candidato gerado</text>
+<path transform="translate(677,1408)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="1482" font-size="16" text-anchor="middle" font-weight="400">C. Um ciclo de conferência</text>
+<path d="M720 1508 L380.0 1555" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,1555)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 1508 L1060.0 1555" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1017.0,1555)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="380.0" y="1634" font-size="16" text-anchor="middle" font-weight="400">L. Revisar candidato gerado</text>
+<path d="M437.0 1585 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="1568" width="68" height="32" fill="white"/>
+<text x="720.0" y="1590" font-size="18" text-anchor="middle" font-weight="700">[]</text>
+<text x="1060.0" y="1634" font-size="16" text-anchor="middle" font-weight="400">O. Conferir omissão sem candidato</text>
+<text x="40" y="1724" font-size="15" text-anchor="start" font-weight="400">L exige candidato acessível; O exige referência de omissão, original e recursos/prazo para conferência.</text>
+<path d="M40 1770 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1799" font-size="18" text-anchor="start" font-weight="700">L — inspeção alimenta decisão sobre o candidato</text>
+<path transform="translate(677,1823)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="1897" font-size="16" text-anchor="middle" font-weight="400">L. Revisar candidato gerado</text>
+<path d="M720 1923 L380.0 1970" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,1970)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 1923 L1060.0 1970" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1017.0,1970)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="380.0" y="2049" font-size="16" text-anchor="middle" font-weight="400">2. Examinar candidato</text>
+<path d="M437.0 2000 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="1983" width="68" height="32" fill="white"/>
+<text x="720.0" y="2005" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1060.0" y="2049" font-size="16" text-anchor="middle" font-weight="400">3. Decidir destino</text>
+<path d="M40 2164 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="2193" font-size="18" text-anchor="start" font-weight="700">O — original e reconhecimento do resultado externo</text>
+<path transform="translate(677,2217)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="2291" font-size="16" text-anchor="middle" font-weight="400">O. Conferir omissão sem candidato</text>
+<path d="M720 2317 L380.0 2364" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,2364)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 2317 L1060.0 2364" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1060.0" cy="2374" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1041.0 2420 V2397 Q1041.0 2387 1060.0 2387 Q1079.0 2387 1079.0 2397 V2420 Z M1051.0 2403 V2420 M1069.0 2403 V2420" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="380.0" y="2443" font-size="16" text-anchor="middle" font-weight="400">3.3. Conferir original e encaminhar correção</text>
+<path d="M437.0 2394 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="2377" width="68" height="32" fill="white"/>
+<text x="720.0" y="2399" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1060.0" y="2443" font-size="16" text-anchor="middle" font-weight="400">X. Reconhecer corte externo ou pendência</text>
+<text x="40" y="2533" font-size="15" text-anchor="start" font-weight="400">X conserva a distinção de 3.3.4; não marca um corte inexistente nem adiciona arquivo externo ao produto.</text>
+<path d="M40 2579 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="2608" font-size="18" text-anchor="start" font-weight="700">1 — preparar revisão da partida</text>
+<path transform="translate(677,2632)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="2706" font-size="16" text-anchor="middle" font-weight="400">1. Preparar revisão</text>
+<path d="M720 2732 L266.66666666666663 2779" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="288.66666666666663" cy="2789" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M269.66666666666663 2835 V2812 Q269.66666666666663 2802 288.66666666666663 2802 Q307.66666666666663 2802 307.66666666666663 2812 V2835 Z M279.66666666666663 2818 V2835 M297.66666666666663 2818 V2835" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="214.66666666666663" y="2788" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M238.66666666666663 2820 V2827 M210.66666666666663 2827 H266.66666666666663 V2835 H210.66666666666663 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M263.66666666666663 2805 H276.66666666666663 M276.66666666666663 2805 l-5 -4 M276.66666666666663 2805 l-5 4 M276.66666666666663 2814 H263.66666666666663 M263.66666666666663 2814 l5 -4 M263.66666666666663 2814 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 2732 L720.0 2779" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="742.0" cy="2789" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M723.0 2835 V2812 Q723.0 2802 742.0 2802 Q761.0 2802 761.0 2812 V2835 Z M733.0 2818 V2835 M751.0 2818 V2835" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="668.0" y="2788" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M692.0 2820 V2827 M664.0 2827 H720.0 V2835 H664.0 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M717.0 2805 H730.0 M730.0 2805 l-5 -4 M730.0 2805 l-5 4 M730.0 2814 H717.0 M717.0 2814 l5 -4 M717.0 2814 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 2732 L1173.3333333333333 2779" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1173.3333333333333" cy="2789" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1154.3333333333333 2835 V2812 Q1154.3333333333333 2802 1173.3333333333333 2802 Q1192.3333333333333 2802 1192.3333333333333 2812 V2835 Z M1164.3333333333333 2818 V2835 M1182.3333333333333 2818 V2835" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="266.66666666666663" y="2858" font-size="16" text-anchor="middle" font-weight="400">1.1. Abrir resultados da partida</text>
+<path d="M323.66666666666663 2809 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="459.3333333333333" y="2792" width="68" height="32" fill="white"/>
+<text x="493.3333333333333" y="2814" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="720.0" y="2858" font-size="16" text-anchor="middle" font-weight="400">1.2. Conferir origem e limites</text>
+<path d="M777.0 2809 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="912.6666666666666" y="2792" width="68" height="32" fill="white"/>
+<text x="946.6666666666666" y="2814" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1173.3333333333333" y="2858" font-size="16" text-anchor="middle" font-weight="400">1.3. Recuperar critérios e prazo</text>
+<path d="M40 2973 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="3002" font-size="18" text-anchor="start" font-weight="700">2 — localizar, reproduzir e julgar</text>
+<path transform="translate(677,3026)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="3100" font-size="16" text-anchor="middle" font-weight="400">2. Examinar candidato</text>
+<path d="M720 3126 L266.66666666666663 3173" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="288.66666666666663" cy="3183" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M269.66666666666663 3229 V3206 Q269.66666666666663 3196 288.66666666666663 3196 Q307.66666666666663 3196 307.66666666666663 3206 V3229 Z M279.66666666666663 3212 V3229 M297.66666666666663 3212 V3229" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="214.66666666666663" y="3182" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M238.66666666666663 3214 V3221 M210.66666666666663 3221 H266.66666666666663 V3229 H210.66666666666663 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M263.66666666666663 3199 H276.66666666666663 M276.66666666666663 3199 l-5 -4 M276.66666666666663 3199 l-5 4 M276.66666666666663 3208 H263.66666666666663 M263.66666666666663 3208 l5 -4 M263.66666666666663 3208 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 3126 L720.0 3173" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(677.0,3173)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 3126 L1173.3333333333333 3173" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1173.3333333333333" cy="3183" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1154.3333333333333 3229 V3206 Q1154.3333333333333 3196 1173.3333333333333 3196 Q1192.3333333333333 3196 1192.3333333333333 3206 V3229 Z M1164.3333333333333 3212 V3229 M1182.3333333333333 3212 V3229" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="266.66666666666663" y="3252" font-size="16" text-anchor="middle" font-weight="400">2.1. Localizar candidato</text>
+<path d="M323.66666666666663 3203 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="459.3333333333333" y="3186" width="68" height="32" fill="white"/>
+<text x="493.3333333333333" y="3208" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="720.0" y="3252" font-size="16" text-anchor="middle" font-weight="400">B. Reproduzir até encerrar a conferência</text>
+<path d="M777.0 3203 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="912.6666666666666" y="3186" width="68" height="32" fill="white"/>
+<text x="946.6666666666666" y="3208" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1173.3333333333333" y="3252" font-size="16" text-anchor="middle" font-weight="400">2.3. Julgar pertinência e contexto</text>
+<path d="M40 3367 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="3396" font-size="18" text-anchor="start" font-weight="700">B — término da reprodução repetida</text>
+<path transform="translate(677,3420)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="3494" font-size="16" text-anchor="middle" font-weight="400">B. Reproduzir até encerrar a conferência</text>
+<path d="M720 3520 L380.0 3567" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="402.0" cy="3577" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M383.0 3623 V3600 Q383.0 3590 402.0 3590 Q421.0 3590 421.0 3600 V3623 Z M393.0 3606 V3623 M411.0 3606 V3623" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="328.0" y="3576" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M352.0 3608 V3615 M324.0 3615 H380.0 V3623 H324.0 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M377.0 3593 H390.0 M390.0 3593 l-5 -4 M390.0 3593 l-5 4 M390.0 3602 H377.0 M377.0 3602 l5 -4 M377.0 3602 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 3520 L1060.0 3567" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1060.0" cy="3577" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1041.0 3623 V3600 Q1041.0 3590 1060.0 3590 Q1079.0 3590 1079.0 3600 V3623 Z M1051.0 3606 V3623 M1069.0 3606 V3623" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="380.0" y="3646" font-size="16" text-anchor="middle" font-weight="400">2.2*. Reproduzir e rever trecho</text>
+<path d="M437.0 3597 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="3580" width="68" height="32" fill="white"/>
+<text x="720.0" y="3602" font-size="18" text-anchor="middle" font-weight="700">[&gt;</text>
+<text x="1060.0" y="3646" font-size="16" text-anchor="middle" font-weight="400">J. Encerrar reprodução e reconhecer o que foi visto</text>
+<text x="40" y="3736" font-size="15" text-anchor="start" font-weight="400">J habilitada com informação para julgar, prazo encerrado ou reprodução indisponível; dúvida permanece explícita.</text>
+<path d="M40 3782 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="3811" font-size="18" text-anchor="start" font-weight="700">3 — decisão direta ou conferência seguida de nova decisão</text>
+<path transform="translate(677,3835)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="3909" font-size="16" text-anchor="middle" font-weight="400">3. Decidir destino</text>
+<path d="M720 3935 L380.0 3982" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,3982)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 3935 L1060.0 3982" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1017.0,3982)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="380.0" y="4061" font-size="16" text-anchor="middle" font-weight="400">F. Decisão sobre o gerado</text>
+<path d="M437.0 4012 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="3995" width="68" height="32" fill="white"/>
+<text x="720.0" y="4017" font-size="18" text-anchor="middle" font-weight="700">[]</text>
+<text x="1060.0" y="4061" font-size="16" text-anchor="middle" font-weight="400">P. Conferir antes de decidir</text>
+<text x="40" y="4151" font-size="15" text-anchor="start" font-weight="400">F: informação suficiente para inclusão/exclusão ou pendência sem conferência viável; P: dúvida verificável.</text>
+<path d="M40 4197 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="4226" font-size="18" text-anchor="start" font-weight="700">P — retorno representado após a conferência</text>
+<path transform="translate(677,4250)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="4324" font-size="16" text-anchor="middle" font-weight="400">P. Conferir antes de decidir</text>
+<path d="M720 4350 L380.0 4397" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,4397)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 4350 L1060.0 4397" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1017.0,4397)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="380.0" y="4476" font-size="16" text-anchor="middle" font-weight="400">3.3. Conferir original e encaminhar correção</text>
+<path d="M437.0 4427 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="4410" width="68" height="32" fill="white"/>
+<text x="720.0" y="4432" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1060.0" y="4476" font-size="16" text-anchor="middle" font-weight="400">F. Decisão sobre o gerado</text>
+<path d="M40 4591 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="4620" font-size="18" text-anchor="start" font-weight="700">F — destino do candidato, sem incluir inconclusivos</text>
+<path transform="translate(677,4644)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="4718" font-size="16" text-anchor="middle" font-weight="400">F. Decisão sobre o gerado</text>
+<path d="M720 4744 L266.66666666666663 4791" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="288.66666666666663" cy="4801" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M269.66666666666663 4847 V4824 Q269.66666666666663 4814 288.66666666666663 4814 Q307.66666666666663 4814 307.66666666666663 4824 V4847 Z M279.66666666666663 4830 V4847 M297.66666666666663 4830 V4847" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="214.66666666666663" y="4800" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M238.66666666666663 4832 V4839 M210.66666666666663 4839 H266.66666666666663 V4847 H210.66666666666663 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M263.66666666666663 4817 H276.66666666666663 M276.66666666666663 4817 l-5 -4 M276.66666666666663 4817 l-5 4 M276.66666666666663 4826 H263.66666666666663 M263.66666666666663 4826 l5 -4 M263.66666666666663 4826 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 4744 L720.0 4791" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="742.0" cy="4801" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M723.0 4847 V4824 Q723.0 4814 742.0 4814 Q761.0 4814 761.0 4824 V4847 Z M733.0 4830 V4847 M751.0 4830 V4847" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="668.0" y="4800" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M692.0 4832 V4839 M664.0 4839 H720.0 V4847 H664.0 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M717.0 4817 H730.0 M730.0 4817 l-5 -4 M730.0 4817 l-5 4 M730.0 4826 H717.0 M717.0 4826 l5 -4 M717.0 4826 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 4744 L1173.3333333333333 4791" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1173.3333333333333" cy="4801" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1154.3333333333333 4847 V4824 Q1154.3333333333333 4814 1173.3333333333333 4814 Q1192.3333333333333 4814 1192.3333333333333 4824 V4847 Z M1164.3333333333333 4830 V4847 M1182.3333333333333 4830 V4847" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="266.66666666666663" y="4870" font-size="16" text-anchor="middle" font-weight="400">3.1. Incluir na seleção</text>
+<path d="M323.66666666666663 4821 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="459.3333333333333" y="4804" width="68" height="32" fill="white"/>
+<text x="493.3333333333333" y="4826" font-size="18" text-anchor="middle" font-weight="700">[]</text>
+<text x="720.0" y="4870" font-size="16" text-anchor="middle" font-weight="400">3.2. Excluir da seleção</text>
+<path d="M777.0 4821 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="912.6666666666666" y="4804" width="68" height="32" fill="white"/>
+<text x="946.6666666666666" y="4826" font-size="18" text-anchor="middle" font-weight="700">[]</text>
+<text x="1173.3333333333333" y="4870" font-size="16" text-anchor="middle" font-weight="400">3.4. Manter pendência</text>
+<text x="40" y="4960" font-size="15" text-anchor="start" font-weight="400">3.1 exige pertinência e contexto suficiente; 3.2 cobre irrelevância/substituição; inconclusivo segue 3.4.</text>
+<path d="M40 5006 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="5035" font-size="18" text-anchor="start" font-weight="700">3.3 — conferência ou reconhecimento de inviabilidade</text>
+<path transform="translate(677,5059)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="5133" font-size="16" text-anchor="middle" font-weight="400">3.3. Conferir original e encaminhar correção</text>
+<path d="M720 5159 L380.0 5206" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,5206)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 5159 L1060.0 5206" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1060.0" cy="5216" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1041.0 5262 V5239 Q1041.0 5229 1060.0 5229 Q1079.0 5229 1079.0 5239 V5262 Z M1051.0 5245 V5262 M1069.0 5245 V5262" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="380.0" y="5285" font-size="16" text-anchor="middle" font-weight="400">Q. Conferência no original</text>
+<path d="M437.0 5236 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="5219" width="68" height="32" fill="white"/>
+<text x="720.0" y="5241" font-size="18" text-anchor="middle" font-weight="700">[&gt;</text>
+<text x="1060.0" y="5285" font-size="16" text-anchor="middle" font-weight="400">K. Reconhecer conferência inviável</text>
+<text x="40" y="5375" font-size="15" text-anchor="start" font-weight="400">K só habilitada diante de busca/acesso/salvamento inviável ou prazo; informa pendência a F ou X.</text>
+<path d="M40 5421 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="5450" font-size="18" text-anchor="start" font-weight="700">Q — uma conferência no original externo</text>
+<path transform="translate(677,5474)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="5548" font-size="16" text-anchor="middle" font-weight="400">Q. Conferência no original</text>
+<path d="M720 5574 L210.0 5621" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="232.0" cy="5631" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M213.0 5677 V5654 Q213.0 5644 232.0 5644 Q251.0 5644 251.0 5654 V5677 Z M223.0 5660 V5677 M241.0 5660 V5677" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="158.0" y="5630" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M182.0 5662 V5669 M154.0 5669 H210.0 V5677 H154.0 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M207.0 5647 H220.0 M220.0 5647 l-5 -4 M220.0 5647 l-5 4 M220.0 5656 H207.0 M207.0 5656 l5 -4 M207.0 5656 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 5574 L550.0 5621" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="572.0" cy="5631" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M553.0 5677 V5654 Q553.0 5644 572.0 5644 Q591.0 5644 591.0 5654 V5677 Z M563.0 5660 V5677 M581.0 5660 V5677" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="498.0" y="5630" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M522.0 5662 V5669 M494.0 5669 H550.0 V5677 H494.0 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M547.0 5647 H560.0 M560.0 5647 l-5 -4 M560.0 5647 l-5 4 M560.0 5656 H547.0 M547.0 5656 l5 -4 M547.0 5656 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 5574 L890.0 5621" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(847.0,5621)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 5574 L1230.0 5621" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1230.0" cy="5631" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1211.0 5677 V5654 Q1211.0 5644 1230.0 5644 Q1249.0 5644 1249.0 5654 V5677 Z M1221.0 5660 V5677 M1239.0 5660 V5677" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="210.0" y="5700" font-size="16" text-anchor="middle" font-weight="400">3.3.1. Localizar referência no</text>
+<text x="210.0" y="5721" font-size="16" text-anchor="middle" font-weight="400">original</text>
+<path d="M267.0 5651 H493.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="346.0" y="5634" width="68" height="32" fill="white"/>
+<text x="380.0" y="5656" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="550.0" y="5700" font-size="16" text-anchor="middle" font-weight="400">3.3.2. Assistir e confrontar</text>
+<path d="M607.0 5651 H833.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="5634" width="68" height="32" fill="white"/>
+<text x="720.0" y="5656" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="890.0" y="5700" font-size="16" text-anchor="middle" font-weight="400">D. Decidir corte externo</text>
+<path d="M947.0 5651 H1173.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="1026.0" y="5634" width="68" height="32" fill="white"/>
+<text x="1060.0" y="5656" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1230.0" y="5700" font-size="16" text-anchor="middle" font-weight="400">3.3.4. Distinguir versões e pendências</text>
+<path d="M40 5815 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="5844" font-size="18" text-anchor="start" font-weight="700">D — correção condicionada ou dispensa reconhecida</text>
+<path transform="translate(677,5868)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="5942" font-size="16" text-anchor="middle" font-weight="400">D. Decidir corte externo</text>
+<path d="M720 5968 L380.0 6015" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,6015)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 5968 L1060.0 6015" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1060.0" cy="6025" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1041.0 6071 V6048 Q1041.0 6038 1060.0 6038 Q1079.0 6038 1079.0 6048 V6071 Z M1051.0 6054 V6071 M1069.0 6054 V6071" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="380.0" y="6094" font-size="16" text-anchor="middle" font-weight="400">3.3.3. Preparar corte externo</text>
+<path d="M437.0 6045 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="6028" width="68" height="32" fill="white"/>
+<text x="720.0" y="6050" font-size="18" text-anchor="middle" font-weight="700">[]</text>
+<text x="1060.0" y="6094" font-size="16" text-anchor="middle" font-weight="400">N. Reconhecer dispensa ou impossibilidade</text>
+<text x="40" y="6184" font-size="15" text-anchor="start" font-weight="400">Corte externo só se necessário, com recursos/prazo. N não aprova automaticamente o candidato.</text>
+<path d="M40 6230 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="6259" font-size="18" text-anchor="start" font-weight="700">3.3.3 — uma tentativa de corte em ferramenta externa</text>
+<path transform="translate(677,6283)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="6357" font-size="16" text-anchor="middle" font-weight="400">3.3.3. Preparar corte externo</text>
+<path d="M720 6383 L266.66666666666663 6430" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="266.66666666666663" cy="6440" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M247.66666666666663 6486 V6463 Q247.66666666666663 6453 266.66666666666663 6453 Q285.66666666666663 6453 285.66666666666663 6463 V6486 Z M257.66666666666663 6469 V6486 M275.66666666666663 6469 V6486" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 6383 L720.0 6430" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="742.0" cy="6440" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M723.0 6486 V6463 Q723.0 6453 742.0 6453 Q761.0 6453 761.0 6463 V6486 Z M733.0 6469 V6486 M751.0 6469 V6486" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="668.0" y="6439" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M692.0 6471 V6478 M664.0 6478 H720.0 V6486 H664.0 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M717.0 6456 H730.0 M730.0 6456 l-5 -4 M730.0 6456 l-5 4 M730.0 6465 H717.0 M717.0 6465 l5 -4 M717.0 6465 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 6383 L1173.3333333333333 6430" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1195.3333333333333" cy="6440" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1176.3333333333333 6486 V6463 Q1176.3333333333333 6453 1195.3333333333333 6453 Q1214.3333333333333 6453 1214.3333333333333 6463 V6486 Z M1186.3333333333333 6469 V6486 M1204.3333333333333 6469 V6486" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="1121.3333333333333" y="6439" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M1145.3333333333333 6471 V6478 M1117.3333333333333 6478 H1173.3333333333333 V6486 H1117.3333333333333 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1170.3333333333333 6456 H1183.3333333333333 M1183.3333333333333 6456 l-5 -4 M1183.3333333333333 6456 l-5 4 M1183.3333333333333 6465 H1170.3333333333333 M1170.3333333333333 6465 l5 -4 M1170.3333333333333 6465 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="266.66666666666663" y="6509" font-size="16" text-anchor="middle" font-weight="400">3.3.3.1. Definir limites</text>
+<path d="M323.66666666666663 6460 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="459.3333333333333" y="6443" width="68" height="32" fill="white"/>
+<text x="493.3333333333333" y="6465" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="720.0" y="6509" font-size="16" text-anchor="middle" font-weight="400">3.3.3.2. Recortar e salvar</text>
+<path d="M777.0 6460 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="912.6666666666666" y="6443" width="68" height="32" fill="white"/>
+<text x="946.6666666666666" y="6465" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1173.3333333333333" y="6509" font-size="16" text-anchor="middle" font-weight="400">3.3.3.3. Reproduzir e conferir</text>
+<text x="40" y="6599" font-size="15" text-anchor="start" font-weight="400">Arquivo insuficiente mantém pendência; nova conferência pode repetir C. Falha inviável habilita K em 3.3.</text>
+<path d="M40 6645 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="6674" font-size="18" text-anchor="start" font-weight="700">4 — avaliar, escolher obtenção e conferir continuidade</text>
+<path transform="translate(677,6698)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="6772" font-size="16" text-anchor="middle" font-weight="400">4. Consolidar e obter material</text>
+<path d="M720 6798 L266.66666666666663 6845" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="266.66666666666663" cy="6855" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M247.66666666666663 6901 V6878 Q247.66666666666663 6868 266.66666666666663 6868 Q285.66666666666663 6868 285.66666666666663 6878 V6901 Z M257.66666666666663 6884 V6901 M275.66666666666663 6884 V6901" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 6798 L720.0 6845" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(677.0,6845)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 6798 L1173.3333333333333 6845" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1195.3333333333333" cy="6855" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1176.3333333333333 6901 V6878 Q1176.3333333333333 6868 1195.3333333333333 6868 Q1214.3333333333333 6868 1214.3333333333333 6878 V6901 Z M1186.3333333333333 6884 V6901 M1204.3333333333333 6884 V6901" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="1121.3333333333333" y="6854" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M1145.3333333333333 6886 V6893 M1117.3333333333333 6893 H1173.3333333333333 V6901 H1117.3333333333333 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1170.3333333333333 6871 H1183.3333333333333 M1183.3333333333333 6871 l-5 -4 M1183.3333333333333 6871 l-5 4 M1183.3333333333333 6880 H1170.3333333333333 M1170.3333333333333 6880 l5 -4 M1170.3333333333333 6880 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="266.66666666666663" y="6924" font-size="16" text-anchor="middle" font-weight="400">4.1. Rever seleção e pendências</text>
+<path d="M323.66666666666663 6875 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="459.3333333333333" y="6858" width="68" height="32" fill="white"/>
+<text x="493.3333333333333" y="6880" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="720.0" y="6924" font-size="16" text-anchor="middle" font-weight="400">W. Escolher obtenção ou seleção vazia</text>
+<path d="M777.0 6875 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="912.6666666666666" y="6858" width="68" height="32" fill="white"/>
+<text x="946.6666666666666" y="6880" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1173.3333333333333" y="6924" font-size="16" text-anchor="middle" font-weight="400">4.4. Conferir arquivos e continuidade</text>
+<path d="M40 7039 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="7068" font-size="18" text-anchor="start" font-weight="700">W — seleção vazia é alternativa explícita</text>
+<path transform="translate(677,7092)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="7166" font-size="16" text-anchor="middle" font-weight="400">W. Escolher obtenção ou seleção vazia</text>
+<path d="M720 7192 L380.0 7239" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,7239)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M720 7192 L1060.0 7239" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1060.0" cy="7249" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1041.0 7295 V7272 Q1041.0 7262 1060.0 7262 Q1079.0 7262 1079.0 7272 V7295 Z M1051.0 7278 V7295 M1069.0 7278 V7295" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="380.0" y="7318" font-size="16" text-anchor="middle" font-weight="400">A. Obter seleção gerada não vazia</text>
+<path d="M437.0 7269 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686.0" y="7252" width="68" height="32" fill="white"/>
+<text x="720.0" y="7274" font-size="18" text-anchor="middle" font-weight="700">[]</text>
+<text x="1060.0" y="7318" font-size="16" text-anchor="middle" font-weight="400">Z. Reconhecer seleção gerada vazia</text>
+<text x="40" y="7408" font-size="15" text-anchor="start" font-weight="400">A exige ao menos um corte gerado selecionado; Z dispensa resumo, pedido e preparação de download.</text>
+<path d="M40 7454 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="7483" font-size="18" text-anchor="start" font-weight="700">A — solicitar e receber resposta real do download</text>
+<path transform="translate(677,7507)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="7581" font-size="16" text-anchor="middle" font-weight="400">A. Obter seleção gerada não vazia</text>
+<path d="M720 7607 L266.66666666666663 7654" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="288.66666666666663" cy="7664" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M269.66666666666663 7710 V7687 Q269.66666666666663 7677 288.66666666666663 7677 Q307.66666666666663 7677 307.66666666666663 7687 V7710 Z M279.66666666666663 7693 V7710 M297.66666666666663 7693 V7710" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="214.66666666666663" y="7663" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M238.66666666666663 7695 V7702 M210.66666666666663 7702 H266.66666666666663 V7710 H210.66666666666663 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M263.66666666666663 7680 H276.66666666666663 M276.66666666666663 7680 l-5 -4 M276.66666666666663 7680 l-5 4 M276.66666666666663 7689 H263.66666666666663 M263.66666666666663 7689 l5 -4 M263.66666666666663 7689 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 7607 L720.0 7654" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="742.0" cy="7664" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M723.0 7710 V7687 Q723.0 7677 742.0 7677 Q761.0 7677 761.0 7687 V7710 Z M733.0 7693 V7710 M751.0 7693 V7710" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="668.0" y="7663" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M692.0 7695 V7702 M664.0 7702 H720.0 V7710 H664.0 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M717.0 7680 H730.0 M730.0 7680 l-5 -4 M730.0 7680 l-5 4 M730.0 7689 H717.0 M717.0 7689 l5 -4 M717.0 7689 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 7607 L1173.3333333333333 7654" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="1149.3333333333333" y="7663" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M1173.3333333333333 7695 V7702 M1145.3333333333333 7702 H1201.3333333333333 V7710 H1145.3333333333333 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="266.66666666666663" y="7733" font-size="16" text-anchor="middle" font-weight="400">4.2. Conferir resumo</text>
+<path d="M323.66666666666663 7684 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="459.3333333333333" y="7667" width="68" height="32" fill="white"/>
+<text x="493.3333333333333" y="7689" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="720.0" y="7733" font-size="16" text-anchor="middle" font-weight="400">4.3. Solicitar download</text>
+<path d="M777.0 7684 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="912.6666666666666" y="7667" width="68" height="32" fill="white"/>
+<text x="946.6666666666666" y="7689" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1173.3333333333333" y="7733" font-size="16" text-anchor="middle" font-weight="400">S. Disponibilizar arquivos ou informar falha</text>
+<text x="40" y="7823" font-size="15" text-anchor="start" font-weight="400">4.4 confere o resultado de S; falha mantém obtenção pendente e encaminha a T03.</text>
+<path d="M40 7869 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="7898" font-size="18" text-anchor="start" font-weight="700">5 — atendimento externo e retomada</text>
+<path transform="translate(677,7922)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="7996" font-size="16" text-anchor="middle" font-weight="400">5. Atender interrupção e retomar</text>
+<path d="M720 8022 L266.66666666666663 8069" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="288.66666666666663" cy="8079" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M269.66666666666663 8125 V8102 Q269.66666666666663 8092 288.66666666666663 8092 Q307.66666666666663 8092 307.66666666666663 8102 V8125 Z M279.66666666666663 8108 V8125 M297.66666666666663 8108 V8125" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="214.66666666666663" y="8078" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M238.66666666666663 8110 V8117 M210.66666666666663 8117 H266.66666666666663 V8125 H210.66666666666663 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M263.66666666666663 8095 H276.66666666666663 M276.66666666666663 8095 l-5 -4 M276.66666666666663 8095 l-5 4 M276.66666666666663 8104 H263.66666666666663 M263.66666666666663 8104 l5 -4 M263.66666666666663 8104 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 8022 L720.0 8069" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="742.0" cy="8079" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M723.0 8125 V8102 Q723.0 8092 742.0 8092 Q761.0 8092 761.0 8102 V8125 Z M733.0 8108 V8125 M751.0 8108 V8125" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="668.0" y="8078" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M692.0 8110 V8117 M664.0 8117 H720.0 V8125 H664.0 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M717.0 8095 H730.0 M730.0 8095 l-5 -4 M730.0 8095 l-5 4 M730.0 8104 H717.0 M717.0 8104 l5 -4 M717.0 8104 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 8022 L1173.3333333333333 8069" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1195.3333333333333" cy="8079" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M1176.3333333333333 8125 V8102 Q1176.3333333333333 8092 1195.3333333333333 8092 Q1214.3333333333333 8092 1214.3333333333333 8102 V8125 Z M1186.3333333333333 8108 V8125 M1204.3333333333333 8108 V8125" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="1121.3333333333333" y="8078" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M1145.3333333333333 8110 V8117 M1117.3333333333333 8117 H1173.3333333333333 V8125 H1117.3333333333333 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1170.3333333333333 8095 H1183.3333333333333 M1183.3333333333333 8095 l-5 -4 M1183.3333333333333 8095 l-5 4 M1183.3333333333333 8104 H1170.3333333333333 M1170.3333333333333 8104 l5 -4 M1170.3333333333333 8104 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="266.66666666666663" y="8148" font-size="16" text-anchor="middle" font-weight="400">5.1. Preservar referência e decisões</text>
+<path d="M323.66666666666663 8099 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="459.3333333333333" y="8082" width="68" height="32" fill="white"/>
+<text x="493.3333333333333" y="8104" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="720.0" y="8148" font-size="16" text-anchor="middle" font-weight="400">5.2. Atender pedido externo</text>
+<path d="M777.0 8099 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="912.6666666666666" y="8082" width="68" height="32" fill="white"/>
+<text x="946.6666666666666" y="8104" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1173.3333333333333" y="8148" font-size="16" text-anchor="middle" font-weight="400">5.3. Recuperar posição e avaliação</text>
+<text x="40" y="8238" font-size="15" text-anchor="start" font-weight="400">Variante por chat; alternativa presencial no GOMS. Se perdeu contexto, reinspecionar antes de incluir.</text>
+<path d="M40 8284 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="8314" font-size="18" text-anchor="start" font-weight="700">Legenda e leitura</text>
+<path transform="translate(127,8339)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="170" y="8424" font-size="16" text-anchor="middle" font-weight="400">Abstrata</text>
+<circle cx="500" cy="8349" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M481 8395 V8372 Q481 8362 500 8362 Q519 8362 519 8372 V8395 Z M491 8378 V8395 M509 8378 V8395" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="500" y="8424" font-size="16" text-anchor="middle" font-weight="400">Usuário</text>
+<circle cx="872" cy="8349" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M853 8395 V8372 Q853 8362 872 8362 Q891 8362 891 8372 V8395 Z M863 8378 V8395 M881 8378 V8395" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="798" y="8348" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M822 8380 V8387 M794 8387 H850 V8395 H794 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M847 8365 H860 M860 8365 l-5 -4 M860 8365 l-5 4 M860 8374 H847 M847 8374 l5 -4 M847 8374 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="850" y="8424" font-size="16" text-anchor="middle" font-weight="400">Interativa</text>
+<rect x="1176" y="8348" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
+<path d="M1200 8380 V8387 M1172 8387 H1228 V8395 H1172 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="1200" y="8424" font-size="16" text-anchor="middle" font-weight="400">Sistema</text>
+<text x="40" y="8464" font-size="15" text-anchor="start" font-weight="400">Painéis expandem nós da mesma árvore; repetir um ID no detalhamento é uma referência ao mesmo objetivo.</text>
+<text x="40" y="8488" font-size="15" text-anchor="start" font-weight="400">E/J/K são saídas humanas; X/Z reconhecem resultado ou seleção vazia. Não exigem novos botões.</text>
+<text x="40" y="8512" font-size="15" text-anchor="start" font-weight="400">[]&gt;&gt; passagem de informação; &gt;&gt; sequência; [] escolha; [&gt; desativação; |&gt; suspensão/retomada; * iteração.</text>
+<text x="40" y="8536" font-size="15" text-anchor="start" font-weight="400">Uma resposta técnica pode informar falha. Concluir uma interação não comprova obtenção nem aprovação.</text></g></svg>

@@ -195,7 +195,7 @@ O valor esperado da contribuição do TCC para P02 é receber trechos localizáv
 
 - Investigar a necessidade de identificar e filtrar lances por jogador para compilações centradas em um atleta, H36. A viabilidade técnica não está confirmada; o filtro não é uma capacidade assegurada do TCC nem um requisito fechado do protótipo.
 
-- Manter o processamento no servidor e a troca por upload e download, para não exigir hardware potente nem armazenamento local do usuário, H37 e RC12.
+- Manter o processamento pesado de detecção no servidor e a troca por upload e download, para reduzir a exigência de processamento local, H37 e RC12. O dispositivo ainda precisa de espaço para as gravações obtidas, os cortes e metadados selecionados e os arquivos da edição externa. A necessidade de armazenamento e a viabilidade do fluxo com pouco espaço permanecem hipóteses a investigar; processamento remoto não elimina armazenamento local.
 
 - Preservar revisão, seleção e download dos cortes pelo próprio criador, com contexto temporal, conforme RC04, RC05, H10 e H25.
 
@@ -369,7 +369,7 @@ Com as gravações conferidas, envia as cinco de uma vez. Enviar tudo no começo
 
 Se uma partida falha, a decisão é prática: entender se o problema está no arquivo ou no processamento, reenviar se for o caso e seguir com as outras quatro. Rafael não aceita perder os resultados já prontos por causa de uma falha isolada (etapa 4).
 
-Quando chega o aviso, revisa uma partida por vez. Assiste aos cortes com alguns segundos antes e depois de cada lance e decide o que entra no download. Mantém os candidatos duvidosos, pela mesma razão de sempre: prefere sobrar a faltar. Se Arnaldo o chama no meio da revisão, para e depois retoma a partida no ponto em que estava, H41 (etapa 5).
+Quando chega o aviso, revisa uma partida por vez. Assiste aos cortes com alguns segundos antes e depois de cada lance e decide o que entra no download. Conserva na lista para nova conferência os candidatos cuja relevância ainda é duvidosa, pela mesma razão de sempre: prefere conferir candidatos extras a perder um lance importante, H30. Isso não os inclui automaticamente no download. Se o contexto continuar insuficiente ou a avaliação permanecer inconclusiva, identifica a pendência e mantém o corte fora da seleção utilizável, conforme T01, operações 3.1 e 3.4. Se Arnaldo o chama no meio da revisão, para e depois retoma a partida no ponto em que estava, H41 (etapa 5).
 
 Com a seleção fechada, baixa os cortes e metadados da partida para a pasta do servidor e avisa Arnaldo pelo chat, H40 (etapa 6). Quando Arnaldo responde que a seleção pode seguir, Rafael abre o material no editor que já usa e monta o compacto. Se nota que falta um lance, volta à gravação original, encontra o trecho pelo tempo de jogo e faz o corte à mão (etapa 7).
 
@@ -558,3 +558,5 @@ H35, auditoria editorial, e H36, recorte por jogador, continuam exploratórias. 
 
 - 03/10/2026: a ficha de P01 passa a citar, em Comportamentos relevantes, a estratégia atual detalhada no cenário C01 durante a aplicação do feedback da Entrega 04. É escolha narrativa do cenário, sem evidência empírica.
 - 07/10/2026: aplicação do feedback do professor da Entrega 03 por Lucas (P02, mapas de empatia e jornadas de P02 e P03). P02 formalizada como persona atendida com justificativa; adicionadas idade (46 anos) e biografia de Arnaldo Rocha; adicionados relatos narrativos das jornadas de P02 e P03; mapas de empatia de P02 e P03 estruturados com separação de hoje e uso proposto e tabelas ligando dores a necessidades; ajustadas formulações de interface e oportunidades de design nas jornadas; atualizados os SVGs mapa_empatia_p02.svg e mapa_empatia_p03.svg. A ficha de P03 permanece sob responsabilidade de Giovanni.
+
+- 13/10/2026: aplicação de AC-064 e AC-068 da análise de coerência das 15:11. Na jornada de P01, candidatos para nova conferência foram distinguidos de seleção utilizável; na diretriz de P03, processamento pesado remoto foi separado do armazenamento local de entradas, resultados e edição externa. Hipóteses H30/H37 preservadas, sem validação empírica.
