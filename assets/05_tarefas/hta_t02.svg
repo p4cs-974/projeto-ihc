@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1370" viewBox="0 0 1440 1370" role="img" aria-labelledby="title desc">
+<title id="title">HTA T02 — P02, Arnaldo Rocha</title><desc id="desc">Árvore HTA em visão geral e quatro detalhamentos, com objetivos retangulares, operações sublinhadas, IDs e planos. Autor: Lucas Roberto Boccia dos Santos. Uso proposto externo e contingência de C02.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
+<rect width="1440" height="1370" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
+<text x="40" y="42" text-anchor="start" font-size="28" font-weight="700" fill="#222">HTA — T02: Supervisionar processo editorial</text>
+<text x="40" y="73" text-anchor="start" font-size="16" font-weight="400" fill="#222">Lucas Roberto Boccia dos Santos · 22.123.012-1 · P02, Arnaldo Rocha · Uso proposto externo [H]</text>
+<path d="M720 223 V256.5 H180" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M180 256.5 H1260" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M180 256.5 V290" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M540 256.5 V290" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M900 256.5 V290" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M1260 256.5 V290" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="400.0" y="125" width="640" height="98" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="150" text-anchor="middle" font-size="16" font-weight="400" fill="#222">0. Supervisionar processo editorial</text>
+<text x="720" y="172" text-anchor="middle" font-size="16" font-weight="400" fill="#222">e chancelar cortes</text>
+<text x="720" y="209" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Plano 0: 1 &gt; 2 &gt; 3; se houver contingência, executar 4</text>
+<rect x="45.0" y="290" width="270" height="94" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="180" y="315" text-anchor="middle" font-size="16" font-weight="400" fill="#222">1. Identificar e priorizar</text>
+<text x="180" y="337" text-anchor="middle" font-size="16" font-weight="400" fill="#222">lote recebido</text>
+<text x="180" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#222">1.1 &gt; 1.2 &gt; 1.3</text>
+<rect x="405.0" y="290" width="270" height="94" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="540" y="315" text-anchor="middle" font-size="16" font-weight="400" fill="#222">2. Inspecionar seleção</text>
+<text x="540" y="337" text-anchor="middle" font-size="16" font-weight="400" fill="#222">e contexto dos cortes</text>
+<text x="540" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#222">2.1 &gt; 2.2 &gt; 2.3</text>
+<rect x="765.0" y="290" width="270" height="94" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="900" y="315" text-anchor="middle" font-size="16" font-weight="400" fill="#222">3. Deliberar e comunicar</text>
+<text x="900" y="337" text-anchor="middle" font-size="16" font-weight="400" fill="#222">decisão editorial</text>
+<text x="900" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#222">(3.1 / 3.2) &gt; 3.3</text>
+<rect x="1125.0" y="290" width="270" height="94" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1260" y="315" text-anchor="middle" font-size="16" font-weight="400" fill="#222">4. Conduzir contingência</text>
+<text x="1260" y="337" text-anchor="middle" font-size="16" font-weight="400" fill="#222">pós-publicação</text>
+<text x="1260" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#222">4.1 &gt; 4.2 &gt; 4.3 &gt; 4.4</text>
+<text x="40" y="416" text-anchor="start" font-size="16" font-weight="400" fill="#222">Abaixo: detalhamento dos mesmos objetivos 1–4 da visão geral.</text>
+<text x="45" y="454" text-anchor="start" font-size="17" font-weight="700" fill="#222">1. Identificar e priorizar lote</text>
+<path d="M360 566 V600.5 H130" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M130 600.5 H590" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M130 600.5 V635" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M360 600.5 V635" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M590 600.5 V635" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="170.0" y="480" width="380" height="86" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="360" y="505" text-anchor="middle" font-size="16" font-weight="400" fill="#222">1. Identificar e priorizar lote</text>
+<text x="360" y="552" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Plano 1: 1.1 &gt; 1.2 &gt; 1.3</text>
+<rect x="33.0" y="635" width="194" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="130" y="660" text-anchor="middle" font-size="16" font-weight="400" fill="#222">1.1. Consultar</text>
+<text x="130" y="682" text-anchor="middle" font-size="16" font-weight="400" fill="#222">prioridades e prazos</text>
+<text x="130" y="704" text-anchor="middle" font-size="16" font-weight="400" fill="#222">da rodada</text>
+<path d="M33.0 744 H227.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="263.0" y="635" width="194" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="360" y="660" text-anchor="middle" font-size="16" font-weight="400" fill="#222">1.2. Consultar aviso</text>
+<text x="360" y="682" text-anchor="middle" font-size="16" font-weight="400" fill="#222">e identificar lote</text>
+<text x="360" y="704" text-anchor="middle" font-size="16" font-weight="400" fill="#222">da partida</text>
+<path d="M263.0 744 H457.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="493.0" y="635" width="194" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="590" y="660" text-anchor="middle" font-size="16" font-weight="400" fill="#222">1.3. Escolher</text>
+<text x="590" y="682" text-anchor="middle" font-size="16" font-weight="400" fill="#222">lote prioritário</text>
+<path d="M493.0 744 H687.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<text x="765" y="454" text-anchor="start" font-size="17" font-weight="700" fill="#222">2. Inspecionar seleção e contexto</text>
+<path d="M1080 566 V600.5 H850" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M850 600.5 H1310" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M850 600.5 V635" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M1080 600.5 V635" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M1310 600.5 V635" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="890.0" y="480" width="380" height="86" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1080" y="505" text-anchor="middle" font-size="16" font-weight="400" fill="#222">2. Inspecionar seleção e contexto</text>
+<text x="1080" y="552" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Plano 2: 2.1 &gt; 2.2 &gt; 2.3</text>
+<rect x="753.0" y="635" width="194" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="850" y="660" text-anchor="middle" font-size="16" font-weight="400" fill="#222">2.1. Conferir</text>
+<text x="850" y="682" text-anchor="middle" font-size="16" font-weight="400" fill="#222">identificação</text>
+<text x="850" y="704" text-anchor="middle" font-size="16" font-weight="400" fill="#222">e timecodes</text>
+<path d="M753.0 744 H947.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="983.0" y="635" width="194" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1080" y="660" text-anchor="middle" font-size="16" font-weight="400" fill="#222">2.2. Assistir aos</text>
+<text x="1080" y="682" text-anchor="middle" font-size="16" font-weight="400" fill="#222">cortes com</text>
+<text x="1080" y="704" text-anchor="middle" font-size="16" font-weight="400" fill="#222">contexto temporal</text>
+<path d="M983.0 744 H1177.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="1213.0" y="635" width="194" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1310" y="660" text-anchor="middle" font-size="16" font-weight="400" fill="#222">2.3. Avaliar pertinência,</text>
+<text x="1310" y="682" text-anchor="middle" font-size="16" font-weight="400" fill="#222">contexto e possíveis</text>
+<text x="1310" y="704" text-anchor="middle" font-size="16" font-weight="400" fill="#222">omissões</text>
+<path d="M1213.0 744 H1407.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<text x="45" y="786" text-anchor="start" font-size="15" font-weight="400" fill="#222">Plano 1: sem lote, aguardar entrega. Plano 2: conferir todos os cortes; rever dúvidas e apontar pendências.</text>
+<text x="45" y="829" text-anchor="start" font-size="17" font-weight="700" fill="#222">3. Deliberar e comunicar decisão</text>
+<path d="M360 941 V975.5 H130" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M130 975.5 H590" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M130 975.5 V1010" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M360 975.5 V1010" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M590 975.5 V1010" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="170.0" y="855" width="380" height="86" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="360" y="880" text-anchor="middle" font-size="16" font-weight="400" fill="#222">3. Deliberar e comunicar decisão</text>
+<text x="360" y="927" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Plano 3: (3.1 / 3.2) &gt; 3.3</text>
+<rect x="33.0" y="1010" width="194" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="130" y="1035" text-anchor="middle" font-size="16" font-weight="400" fill="#222">3.1. Chancelar</text>
+<text x="130" y="1057" text-anchor="middle" font-size="16" font-weight="400" fill="#222">seleção para</text>
+<text x="130" y="1079" text-anchor="middle" font-size="16" font-weight="400" fill="#222">montagem externa</text>
+<path d="M33.0 1119 H227.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="263.0" y="1010" width="194" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="360" y="1035" text-anchor="middle" font-size="16" font-weight="400" fill="#222">3.2. Solicitar revisão</text>
+<text x="360" y="1057" text-anchor="middle" font-size="16" font-weight="400" fill="#222">com referência</text>
+<text x="360" y="1079" text-anchor="middle" font-size="16" font-weight="400" fill="#222">ao lance</text>
+<path d="M263.0 1119 H457.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="493.0" y="1010" width="194" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="590" y="1035" text-anchor="middle" font-size="16" font-weight="400" fill="#222">3.3. Comunicar</text>
+<text x="590" y="1057" text-anchor="middle" font-size="16" font-weight="400" fill="#222">decisão ao editor</text>
+<text x="590" y="1079" text-anchor="middle" font-size="16" font-weight="400" fill="#222">responsável</text>
+<path d="M493.0 1119 H687.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<text x="45" y="1160" text-anchor="start" font-size="15" font-weight="400" fill="#222">Seleção em 3: critérios atendidos e sem pendências → 3.1;</text>
+<text x="45" y="1181" text-anchor="start" font-size="15" font-weight="400" fill="#222">caso contrário → 3.2. Após nova entrega, repetir 2 &gt; 3.</text>
+<text x="765" y="829" text-anchor="start" font-size="17" font-weight="700" fill="#222">4. Conduzir contingência pós-publicação</text>
+<path d="M1080 941 V975.5 H800" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M800 975.5 H1340" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M800 975.5 V1010" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M980 975.5 V1010" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M1160 975.5 V1010" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M1340 975.5 V1010" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="855.0" y="855" width="450" height="86" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1080" y="880" text-anchor="middle" font-size="16" font-weight="400" fill="#222">4. Conduzir contingência pós-publicação</text>
+<text x="1080" y="927" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Plano 4: 4.1 &gt; 4.2 &gt; 4.3 &gt; 4.4</text>
+<rect x="718.0" y="1010" width="164" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="800" y="1035" text-anchor="middle" font-size="16" font-weight="400" fill="#222">4.1. Solicitar</text>
+<text x="800" y="1057" text-anchor="middle" font-size="16" font-weight="400" fill="#222">retirada à equipe</text>
+<text x="800" y="1079" text-anchor="middle" font-size="16" font-weight="400" fill="#222">de publicação</text>
+<path d="M718.0 1119 H882.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="898.0" y="1010" width="164" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="980" y="1035" text-anchor="middle" font-size="16" font-weight="400" fill="#222">4.2. Examinar corte</text>
+<text x="980" y="1057" text-anchor="middle" font-size="16" font-weight="400" fill="#222">e localizar falha</text>
+<text x="980" y="1079" text-anchor="middle" font-size="16" font-weight="400" fill="#222">de contexto</text>
+<path d="M898.0 1119 H1062.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="1078.0" y="1010" width="164" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1160" y="1035" text-anchor="middle" font-size="16" font-weight="400" fill="#222">4.3. Orientar</text>
+<text x="1160" y="1057" text-anchor="middle" font-size="16" font-weight="400" fill="#222">correção e solicitar</text>
+<text x="1160" y="1079" text-anchor="middle" font-size="16" font-weight="400" fill="#222">nova versão</text>
+<path d="M1078.0 1119 H1242.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="1258.0" y="1010" width="164" height="100" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1340" y="1035" text-anchor="middle" font-size="16" font-weight="400" fill="#222">4.4. Reavaliar</text>
+<text x="1340" y="1057" text-anchor="middle" font-size="16" font-weight="400" fill="#222">versão corrigida</text>
+<text x="1340" y="1096" text-anchor="middle" font-size="14" font-weight="700" fill="#222">4.4.1 &gt; 4.4.2</text>
+<path d="M1340 1110 V1140.0 H1180" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M1180 1140.0 H1340" fill="none" stroke="#333" stroke-width="1.7"/>
+<path d="M1180 1140.0 V1170" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M1340 1140.0 V1170" fill="none" stroke="#333" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="1103.0" y="1170" width="154" height="95" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1180" y="1195" text-anchor="middle" font-size="16" font-weight="400" fill="#222">4.4.1. Conferir</text>
+<text x="1180" y="1217" text-anchor="middle" font-size="16" font-weight="400" fill="#222">correção e</text>
+<text x="1180" y="1239" text-anchor="middle" font-size="16" font-weight="400" fill="#222">pertinência editorial</text>
+<path d="M1103.0 1274 H1257.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<rect x="1263.0" y="1170" width="154" height="95" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1340" y="1195" text-anchor="middle" font-size="16" font-weight="400" fill="#222">4.4.2. Comunicar</text>
+<text x="1340" y="1217" text-anchor="middle" font-size="16" font-weight="400" fill="#222">aprovação ou</text>
+<text x="1340" y="1239" text-anchor="middle" font-size="16" font-weight="400" fill="#222">novo ajuste</text>
+<path d="M1263.0 1274 H1417.0" fill="none" stroke="#333" stroke-width="1.7"/>
+<text x="765" y="1140" text-anchor="start" font-size="14" font-weight="400" fill="#222">4.4 só após nova entrega;</text>
+<text x="765" y="1161" text-anchor="start" font-size="14" font-weight="400" fill="#222">se insuficiente, repetir 4.3 &gt; 4.4.</text>
+<path d="M40 1295 H1400" fill="none" stroke="#333" stroke-width="1.7"/>
+<text x="40" y="1320" text-anchor="start" font-size="15" font-weight="400" fill="#222">Legenda: retângulo = objetivo; traço sob o retângulo = operação; &gt; = sequência; / = seleção; + = paralelismo (não usado).</text>
+<text x="40" y="1347" text-anchor="start" font-size="15" font-weight="400" fill="#222">Planos completos, condições de parada e pendências: tabela HTA em docs/05. Referência: CC8122-HTA, slides 5–8.</text>
+</g></svg>

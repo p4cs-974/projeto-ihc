@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2000" viewBox="0 0 1440 2000" role="img" aria-labelledby="title desc">
+<title id="title">GOMS — T01: Metas, métodos e regras de seleção</title><desc id="desc">GOMS de T01 por Pedro Alexandre Custódio Silva. Metas de revisão, métodos de decisão editorial, conferência e correção externas, obtenção da seleção e retomada de interrupção. Operadores e regras completos no modelo textual da Entrega 5.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
+<rect width="1440" height="2000" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
+<text x="40" y="42" text-anchor="start" font-size="25" font-weight="700">GOMS — T01: Metas, métodos e regras de seleção</text>
+<text x="40" y="73" text-anchor="start" font-size="16" font-weight="400">Pedro Alexandre Custódio Silva · 22.123.049-3 · P01, Rafael · Uso proposto e contingências externas [H]</text>
+<rect x="310.0" y="120" width="820" height="104" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="146" text-anchor="middle" font-size="16" font-weight="400">GOAL 0: obter seleção revisada e identificar pendências</text>
+<text x="720" y="169" text-anchor="middle" font-size="16" font-weight="400">METHOD 0.A: revisar candidatos e obter seleção</text>
+<text x="720" y="209" text-anchor="middle" font-size="14" font-weight="700">Regra: resultados acessíveis e finalidade definida</text>
+<path d="M720 224 V245 H176 V275" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 224 V245 H448 V275" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 224 V245 H720 V275" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 224 V245 H992 V275" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 224 V245 H1264 V275" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="54.0" y="275" width="244" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="176" y="301" text-anchor="middle" font-size="16" font-weight="400">GOAL 1: preparar revisão</text>
+<text x="176" y="324" text-anchor="middle" font-size="16" font-weight="400">METHOD 1.A: conferir origem</text>
+<text x="176" y="347" text-anchor="middle" font-size="16" font-weight="400">Regra: partida de T03</text>
+<text x="176" y="370" text-anchor="middle" font-size="16" font-weight="400">OP.: abrir; ler limites;</text>
+<text x="176" y="393" text-anchor="middle" font-size="16" font-weight="400">recuperar finalidade/prazo</text>
+<rect x="326.0" y="275" width="244" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="448" y="301" text-anchor="middle" font-size="16" font-weight="400">GOAL 2: examinar candidato</text>
+<text x="448" y="324" text-anchor="middle" font-size="16" font-weight="400">METHOD 2.A: lista e prévia</text>
+<text x="448" y="347" text-anchor="middle" font-size="16" font-weight="400">Regra: candidato acessível</text>
+<text x="448" y="370" text-anchor="middle" font-size="16" font-weight="400">OP.: identificar; reproduzir;</text>
+<text x="448" y="393" text-anchor="middle" font-size="16" font-weight="400">retornar; julgar contexto</text>
+<rect x="598.0" y="275" width="244" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="301" text-anchor="middle" font-size="16" font-weight="400">GOAL 3: definir destino</text>
+<text x="720" y="324" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.A / B / C / D</text>
+<text x="720" y="347" text-anchor="middle" font-size="16" font-weight="400">Regra: pertinência, contexto</text>
+<text x="720" y="370" text-anchor="middle" font-size="16" font-weight="400">e recursos para conferir</text>
+<text x="720" y="393" text-anchor="middle" font-size="16" font-weight="400">Alternativas abaixo</text>
+<rect x="870.0" y="275" width="244" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="992" y="301" text-anchor="middle" font-size="16" font-weight="400">GOAL 4: obter material</text>
+<text x="992" y="324" text-anchor="middle" font-size="16" font-weight="400">METHOD 4.A / 4.B</text>
+<text x="992" y="347" text-anchor="middle" font-size="16" font-weight="400">Regra: seleção não vazia</text>
+<text x="992" y="370" text-anchor="middle" font-size="16" font-weight="400">ou seleção gerada vazia</text>
+<text x="992" y="393" text-anchor="middle" font-size="16" font-weight="400">Alternativas abaixo</text>
+<rect x="1142.0" y="275" width="244" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1264" y="301" text-anchor="middle" font-size="16" font-weight="400">GOAL 5: atender e retomar</text>
+<text x="1264" y="324" text-anchor="middle" font-size="16" font-weight="400">METHOD 5.A: preservar contexto</text>
+<text x="1264" y="347" text-anchor="middle" font-size="16" font-weight="400">Regra: chamado externo</text>
+<text x="1264" y="370" text-anchor="middle" font-size="16" font-weight="400">Suspender método em curso;</text>
+<text x="1264" y="393" text-anchor="middle" font-size="16" font-weight="400">retomar após atendimento</text>
+<text x="40" y="490" text-anchor="start" font-size="16" font-weight="400">Metas 2–3 repetem por candidato; 5 é contingência. Sem previsão de tempo por KLM.</text>
+<path d="M40 525 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="555" text-anchor="start" font-size="18" font-weight="700">Expansão de GOAL 3 — alternativas de destino, com pertinência e contexto como condições</text>
+<rect x="440.0" y="580" width="560" height="70" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="606" text-anchor="middle" font-size="16" font-weight="400">GOAL 3: definir destino do candidato/lance</text>
+<path d="M720 650 V680 H210 V715" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 650 V680 H550 V715" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 650 V680 H890 V715" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 650 V680 H1230 V715" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="55.0" y="715" width="310" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="210" y="741" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.A: incluir</text>
+<text x="210" y="764" text-anchor="middle" font-size="16" font-weight="400">Regra: pertinente e</text>
+<text x="210" y="787" text-anchor="middle" font-size="16" font-weight="400">contexto suficiente</text>
+<text x="210" y="810" text-anchor="middle" font-size="16" font-weight="400">OP.: marcar; conferir</text>
+<rect x="395.0" y="715" width="310" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="550" y="741" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.B: excluir</text>
+<text x="550" y="764" text-anchor="middle" font-size="16" font-weight="400">Regra: sem interesse ou</text>
+<text x="550" y="787" text-anchor="middle" font-size="16" font-weight="400">substituído por externo conferido</text>
+<text x="550" y="810" text-anchor="middle" font-size="16" font-weight="400">OP.: desmarcar; conferir</text>
+<rect x="735.0" y="715" width="310" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="890" y="741" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.C: original</text>
+<text x="890" y="764" text-anchor="middle" font-size="16" font-weight="400">Regra: dúvida verificável,</text>
+<text x="890" y="787" text-anchor="middle" font-size="16" font-weight="400">original e prazo disponíveis</text>
+<text x="890" y="810" text-anchor="middle" font-size="16" font-weight="400">OP.: localizar; assistir;</text>
+<text x="890" y="833" text-anchor="middle" font-size="16" font-weight="400">GOAL 3.C.4; distinguir; decidir</text>
+<rect x="1075.0" y="715" width="310" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1230" y="741" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.D: pendência</text>
+<text x="1230" y="764" text-anchor="middle" font-size="16" font-weight="400">Regra: contexto insuficiente</text>
+<text x="1230" y="787" text-anchor="middle" font-size="16" font-weight="400">sem conferência viável</text>
+<text x="1230" y="810" text-anchor="middle" font-size="16" font-weight="400">OP.: conservar referência;</text>
+<text x="1230" y="833" text-anchor="middle" font-size="16" font-weight="400">deixar fora; manter pendente</text>
+<path d="M40 950 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="980" text-anchor="start" font-size="18" font-weight="700">Expansão de GOAL 3.C.4 — decidir continuidade com ou sem produção de corte externo</text>
+<rect x="360.0" y="1005" width="720" height="70" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="720" y="1031" text-anchor="middle" font-size="16" font-weight="400">GOAL 3.C.4: definir necessidade e continuidade do corte</text>
+<path d="M720 1075 V1110 H365 V1150" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720 1075 V1110 H1075 V1150" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="70.0" y="1150" width="590" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="365" y="1176" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.C.4.A: corrigir/criar externamente</text>
+<text x="365" y="1199" text-anchor="middle" font-size="16" font-weight="400">Regra: lance relevante truncado/omitido confirmado;</text>
+<text x="365" y="1222" text-anchor="middle" font-size="16" font-weight="400">recursos e prazo para corte externo</text>
+<text x="365" y="1245" text-anchor="middle" font-size="16" font-weight="400">OP.: definir limites; aplicar; salvar com origem;</text>
+<text x="365" y="1268" text-anchor="middle" font-size="16" font-weight="400">reproduzir versão salva e julgar contexto</text>
+<rect x="780.0" y="1150" width="590" height="175" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1075" y="1176" text-anchor="middle" font-size="16" font-weight="400">METHOD 3.C.4.B: decidir sem novo corte externo</text>
+<text x="1075" y="1199" text-anchor="middle" font-size="16" font-weight="400">Regra: dúvida resolvida sem ajuste ou conferência</text>
+<text x="1075" y="1222" text-anchor="middle" font-size="16" font-weight="400">ainda inconclusiva/sem recursos (manter pendência)</text>
+<text x="1075" y="1245" text-anchor="middle" font-size="16" font-weight="400">OP.: reconhecer adequação, irrelevância</text>
+<text x="1075" y="1268" text-anchor="middle" font-size="16" font-weight="400">ou dúvida persistente</text>
+<path d="M40 1385 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1415" text-anchor="start" font-size="18" font-weight="700">Expansões de 4 e 5 — seleção vazia não exige download; interrupção não é etapa obrigatória</text>
+<rect x="125.0" y="1445" width="530" height="70" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="390" y="1471" text-anchor="middle" font-size="16" font-weight="400">GOAL 4: consolidar seleção e obter material</text>
+<path d="M390 1515 V1545 H210 V1580" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M390 1515 V1545 H570 V1580" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="50.0" y="1580" width="320" height="180" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="210" y="1606" text-anchor="middle" font-size="16" font-weight="400">METHOD 4.A: baixar seleção</text>
+<text x="210" y="1629" text-anchor="middle" font-size="16" font-weight="400">Regra: seleção gerada não vazia</text>
+<text x="210" y="1652" text-anchor="middle" font-size="16" font-weight="400">OP.: rever; ler resumo; confirmar;</text>
+<text x="210" y="1675" text-anchor="middle" font-size="16" font-weight="400">conferir obtenção e origem;</text>
+<text x="210" y="1698" text-anchor="middle" font-size="16" font-weight="400">distinguir continuidade/pendências</text>
+<rect x="410.0" y="1580" width="320" height="180" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="570" y="1606" text-anchor="middle" font-size="16" font-weight="400">METHOD 4.B: seleção vazia</text>
+<text x="570" y="1629" text-anchor="middle" font-size="16" font-weight="400">Regra: nenhum corte selecionado</text>
+<text x="570" y="1652" text-anchor="middle" font-size="16" font-weight="400">OP.: reconhecer motivo;</text>
+<text x="570" y="1675" text-anchor="middle" font-size="16" font-weight="400">distinguir material externo;</text>
+<text x="570" y="1698" text-anchor="middle" font-size="16" font-weight="400">definir continuidade sem download</text>
+<rect x="805.0" y="1445" width="570" height="70" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1090" y="1471" text-anchor="middle" font-size="16" font-weight="400">GOAL 5: atender interrupção e retomar revisão</text>
+<path d="M1090 1515 V1580" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="805.0" y="1580" width="570" height="180" fill="white" stroke="#333" stroke-width="1.6"/>
+<text x="1090" y="1606" text-anchor="middle" font-size="16" font-weight="400">METHOD 5.A: preservar, atender e recuperar avaliação</text>
+<text x="1090" y="1629" text-anchor="middle" font-size="16" font-weight="400">Regra: chamado externo durante método em curso</text>
+<text x="1090" y="1652" text-anchor="middle" font-size="16" font-weight="400">OP.: pausar/conferir referência; anotar se necessário;</text>
+<text x="1090" y="1675" text-anchor="middle" font-size="16" font-weight="400">atender externamente; voltar e conferir decisões;</text>
+<text x="1090" y="1698" text-anchor="middle" font-size="16" font-weight="400">rever trecho se necessário; retomar passo suspenso</text>
+<text x="40" y="1850" text-anchor="start" font-size="16" font-weight="400">As ligações mostram hierarquia, não relações temporais CTT. Operadores completos no texto.</text>
+<text x="40" y="1878" text-anchor="start" font-size="16" font-weight="400">Corte externo permanece separado dos resultados do backend; H36 não é filtro disponível.</text>
+<text x="40" y="1906" text-anchor="start" font-size="16" font-weight="400">Falha de acesso/obtenção encaminha a T03; corte inconclusivo não é declarado validado.</text>
+<text x="40" y="1934" text-anchor="start" font-size="16" font-weight="400">H41 é hipótese de organização da retomada; preservação automática precisa de validação.</text>
+</g></svg>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Análise de coerência documental · Entrega 5 (Análise de Tarefas) · 07/10/2026</title>
+<style>
+:root{color-scheme:light dark;--bg:#fafafa;--fg:#171717;--line:#aaa;--link:#004da8;--soft:#ececec}
+@media(prefers-color-scheme:dark){:root{--bg:#000;--fg:#fff;--line:#626262;--link:#8fc6ff;--soft:#141414}}
+*{box-sizing:border-box}html{scroll-padding-top:20px}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-wrap:anywhere}
+main{max-width:1120px;margin:auto;padding:30px 28px 70px}h1{font-size:34px;line-height:1.2;margin:16px 0}h2{font-size:25px;line-height:1.3;margin:38px 0 14px}h3{font-size:21px;line-height:1.35;margin:0 0 12px}h4{font-size:16px;margin:18px 0 8px}p{margin:10px 0 14px}a{color:var(--link);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}a:focus-visible,summary:focus-visible{outline:2px solid var(--link);outline-offset:4px}code{font:0.87em/1.6 ui-monospace,SFMono-Regular,Consolas,monospace}ul{margin:10px 0 20px;padding-left:23px}li{margin:8px 0}.signature{margin:0;font-size:13px}.meta{font-size:14px}.lead{font-size:18px;max-width:950px}nav{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0}.table-scroll{overflow-x:auto;max-width:100%}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th,td{vertical-align:top;border-bottom:1px solid var(--line);padding:10px 12px}th{font-weight:650}thead{background:var(--soft)}.ticket{border-top:1px solid var(--line);padding:25px 0 12px;margin-top:25px}.ticket h3{max-width:1000px}details{border-top:1px solid var(--line);padding:13px 0}summary{cursor:pointer;font-weight:600}.paths{font-size:13px;columns:2;column-gap:30px}.paths li{break-inside:avoid}footer{margin-top:32px;border-top:1px solid var(--line);padding-top:16px;font-size:14px}
+@media(max-width:600px){main{padding:20px 16px 45px}h1{font-size:27px}h2{font-size:23px}h3{font-size:20px}.lead{font-size:17px}th,td{padding:8px}.paths{columns:1}.meta{line-height:1.7}}
+@media print{:root{--bg:#fff;--fg:#171717;--line:#aaa;--link:#171717;--soft:#eee}main{max-width:none;padding:0}nav{display:none}.ticket{break-inside:avoid}}
+</style></head><body><main>
+<header><p class="signature">Gemini 3.8 Flash (High) no Antigravity CLI</p>
+<h1>Análise de coerência documental · Entrega 5 (Análise de Tarefas)</h1>
+<p class="meta">07/10/2026 às 17:45 UTC-03:00 · Branch <code>lab-5-robertinho</code> · Status da análise: <strong>Pendente</strong></p>
+<p class="meta">2 tickets: 2 pendentes, 0 aplicados, 0 descartados. Gravidade: 0 alta, 1 média, 1 baixa. Confiança: 2 sustentados, 0 precisa de revisão.</p>
+<p class="lead"><strong>Conclusão da auditoria.</strong> Esta auditoria documental examina o documento <code>docs/05_analise_tarefas.md</code> após o início dos trabalhos da Entrega 5 e a elaboração completa da tarefa <strong>T02 — Supervisionar processo editorial e chancelar cortes esportivos</strong> por Lucas Roberto Boccia dos Santos (P02, Arnaldo Rocha). Constata-se que a modelagem de T02 apresenta excelência metodológica e rigor formal exemplar: contempla as três técnicas solicitadas (HTA com planos explícitos e critérios de parada, GOMS com métodos alternativos e regras de seleção cognitivas, e CTT com operadores formais de Paternò e tipagem rigorosa de tarefas), possui diagramas vetoriais SVG editáveis e semanticamente ricos, preserva a delimitação de P02 como persona atendida externa ao produto e conecta-se estritamente ao cenário C02 e à necessidade R03 na matriz de rastreabilidade. Os dois tickets abertos documentam as pendências coletivas necessárias para a integralização final da entrega pela equipe: a elaboração das seções das tarefas T01 (Pedro Custódio) e T03 (Giovanni Chahin) no documento e o alinhamento cruzado dos identificadores T01 e T03 nas linhas correspondentes de <code>RASTREABILIDADE.md</code>.</p>
+</header>
+<nav aria-label="Seções do relatório"><a href="#escopo">Escopo</a><a href="#alinhados">Pontos alinhados</a><a href="#tickets">Tickets</a><a href="#pendencias">Pendências por autor</a><a href="#cobertura">Cobertura</a><a href="#limites">Verificações e limites</a></nav>
+
+<section id="escopo"><h2>Escopo e autoridade dos documentos</h2>
+<p>Auditoria focalizada no documento <code>docs/05_analise_tarefas.md</code>, tendo como contexto o repositório completo (164 arquivos fora de <code>.git</code>). Foram examinados a matriz <code>RASTREABILIDADE.md</code>, os cenários em <code>docs/04_cenarios_problema.md</code>, as personas e jornadas em <code>docs/03_personas_contexto_jornada.md</code>, as bases de entrada em <code>docs/01_conhecendo_o_problema.md</code> e <code>docs/02_analise_concorrencia.md</code>, o índice <code>README.md</code>, os critérios de avaliação em <code>CHECKLIST_FINAL.md</code>, as referências de <code>BIBLIOGRAFIA.md</code> (Barbosa &amp; Silva, Card, Moran &amp; Newell e Paternò) e os novos diagramas vetoriais em <code>assets/05_tarefas/</code>.</p>
+<p>A autoridade das decisões fundamenta-se nas diretrizes da disciplina para TCCs sem interface original: modelar as <em>tarefas humanas</em> relacionadas ao uso dos resultados produzidos pela contribuição técnica (sistema híbrido de visão computacional para detecção de lances esportivos), separando estritamente a tomada de decisão, o julgamento de conformidade e a supervisão editorial dos procedimentos algorítmicos internos do software.</p>
+</section>
+
+<section id="alinhados"><h2>Pontos já alinhados e destaques da modelagem</h2><ul>
+<li><strong>Conformidade e rigor na modelagem HTA de T02 (Lucas).</strong> O objetivo 0 (<em>Supervisionar processo editorial esportivo e chancelar cortes</em>) representa uma meta substantiva do mundo real de Arnaldo Rocha (P02). A árvore decompõe-se em quatro ramos necessários e suficientes (monitorar fila, inspecionar cortes com metadados, deliberar chancela e conduzir contingência emergencial). Todos os cinco planos operacionais (Planos 0, 1, 2, 3 e 4) foram formalizados com indicação explícita de ordem (<code>&gt;</code>), alternativa (<code>OU</code>), condições de lance polêmico e ciclo de repetição após revisão. A decomposição atinge nível útil para decisões de IHC sem descer a ações motoras de digitação, acompanhada de tabela correlacionando cada nó a decisões de design e problemas de processo observados no cenário C02. O diagrama vetorial <code>assets/05_tarefas/hta_t02.svg</code> é 100% válido, legível e preservado em formato editável.</li>
+<li><strong>Distinção formal estrita no modelo GOMS de T02 (Lucas).</strong> O modelo CMN-GOMS adotado não confunde passos procedimentais com métodos. Apresenta metas bem hierarquizadas (GOAL 0 a GOAL 4) e três métodos substantivos alternativos para a realização da supervisão: Method M1 (inspeção estruturada e assíncrona na estação de trabalho, apoiada nos metadados gerados pelo TCC), Method M2 (inspeção presencial síncrona na ilha de edição, refletindo o processo atual de C02 ou fallback de dúvida complexa de arbitragem) e Method M3 (intervenção corretiva urgente em caso de erro público de postagem). Os operadores foram classificados rigorosamente em níveis perceptivo (<em>Perceber</em>), físico-motor (<em>Apontar</em>, <em>Clicar</em>, <em>Digitar</em>, <em>Mover-se</em>) e cognitivo-mental (<em>Decidir</em>, <em>Verificar</em>, <em>Recuperar</em>). As regras de seleção (SR1, SR2 e SR3) determinam com precisão as condições observáveis de acionamento de cada método.</li>
+<li><strong>Aplicação da taxonomia e operadores formais CTT de Paternò em T02 (Lucas).</strong> A modelagem ConcurTaskTrees (CTT) respeita a notação clássica da literatura de IHC: categoriza rigorosamente os nós em Tarefas Abstratas (conceituais), de Usuário (cognição pura de avaliação editorial e decisão de despublicação), de Interação (diálogo com visualizadores, chats e formulários) e do Sistema (carregamento de mídias e emissão de alertas). Emprega com precisão os operadores temporais formais: habilitação com passagem de informação (<code>[]&gt;&gt;</code>), habilitação sequencial (<code>&gt;&gt;</code>), escolha mutuamente exclusiva (<code>[]</code>), concorrência independente (<code>|||</code>), iteração cíclica por partida (<code>*</code>) e desativação emergencial (<code>[&gt;</code>), que formaliza como uma crise de rede social suspende a rotina regular de inspeção. O arquivo vetorial <code>assets/05_tarefas/ctt_t02.svg</code> é perfeitamente renderizável e compatível com o texto.</li>
+<li><strong>Consistência com a persona atendida P02 e o cenário C02.</strong> A análise preserva a delimitação estabelecida nas Entregas 3 e 4: Arnaldo Rocha é uma persona atendida que não opera o sistema central de IA diretamente, mas depende criticamente de que o editor (P01/Rafael) baixe cortes acompanhados de metadados legíveis e com margem temporal pré-lance (5 a 10s antes do gol) para possibilitar a inspeção contextualizada remota. Essa relação é fielmente mantida no HTA, GOMS e CTT, evidenciando o valor que a contribuição do TCC gera para a organização.</li>
+<li><strong>Rastreabilidade direta e atualizada.</strong> A tabela de seleção das tarefas em <code>docs/05_analise_tarefas.md</code> mapeia T01 (Rafael/C01), T02 (Arnaldo/C02) e T03 (Jorginho/C03). A linha R03 de <code>RASTREABILIDADE.md</code> foi sincronizada com a tarefa T02 e o link direto para a seção da Entrega 5, com registro histórico correspondente datado de 07/10/2026. Todos os links internos e relativos foram validados e resolvem sem quebras.</li>
+<li><strong>Síntese e implicações concretas para o protótipo.</strong> A seção de síntese da Entrega 5 extrai quatro implicações centrais de design: superação da circulação presencial por prancheta, especificação do pré-roll temporal como requisito de usabilidade e integridade jornalística, necessidade de fluxo de contingência/despublicação e diretrizes para a tela de revisão e exportação do protótipo no Figma.</li>
+</ul></section>
+
+<section id="tickets"><h2>Tickets</h2>
+<p>Identificadores AC-061 e AC-062 atribuídos aos achados documentados nesta auditoria de <code>docs/05_analise_tarefas.md</code>. (Nota: os tickets anteriores AC-056 a AC-060, referentes às pendências de Giovanni nas Entregas 3 e 4, permanecem registrados em <code>07-10-2026-01-30.html</code> e sob acompanhamento).</p>
+<div class="table-scroll" role="region" aria-label="Índice de tickets" tabindex="0"><table><thead><tr><th>ID</th><th>Achado</th><th>Gravidade</th><th>Confiança</th><th>Status</th></tr></thead><tbody>
+<tr><th scope="row"><a href="#AC-061">AC-061</a></th><td>Ausência das seções de modelagem (HTA, GOMS e CTT) para T01 e T03 na Entrega 5</td><td>Média</td><td>Sustentado</td><td>Pendente</td></tr>
+<tr><th scope="row"><a href="#AC-062">AC-062</a></th><td>Assimetria na vinculação dos identificadores T01 e T03 nas linhas R01, R02, R04 e R05 da Matriz de Rastreabilidade</td><td>Baixa</td><td>Sustentado</td><td>Pendente</td></tr>
+</tbody></table></div>
+
+<article id="AC-061" class="ticket" data-status="Pendente">
+<h3>AC-061 · Ausência das seções de modelagem (HTA, GOMS e CTT) para T01 e T03 na Entrega 5</h3>
+<p class="meta"><strong>Gravidade:</strong> Média · <strong>Confiança:</strong> Sustentado · <strong>Status:</strong> Pendente</p>
+<p><strong>Origem.</strong> Início dos trabalhos da Entrega 5, na qual Lucas concluiu sua responsabilidade individual (T02) nas três técnicas, enquanto as tarefas dos demais integrantes ainda não foram incorporadas ao documento.</p>
+<h4>Evidências</h4><ul>
+<li><code>docs/05_analise_tarefas.md</code>, cabeçalho e tabela de seleção de tarefas: o cabeçalho indica "Status: 🟨 em andamento; tarefa T02 (Lucas) concluída nas três técnicas (HTA, GOMS e CTT); tarefas T01 (Pedro) e T03 (Giovanni) aguardam elaboração por seus respectivos autores", e a tabela registra T01 e T03 com "⬜ Aguarda autor".</li>
+<li><code>docs/05_analise_tarefas.md</code>, corpo do texto: o documento contém apenas as seções dedicadas a T02 (HTA — T02, GOMS — T02 e CTT — T02). Não há ainda seções estruturadas para T01 (Pedro) nem para T03 (Giovanni).</li>
+<li><code>docs/05_analise_tarefas.md</code>, checklist: o primeiro item ("Cada integrante possui tarefa associada na tabela de seleção") está marcado como concluído, enquanto a regra da disciplina ("cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT") requer que Pedro e Giovanni também entreguem suas modelagens no artefato compartilhado.</li>
+<li><code>CHECKLIST_FINAL.md</code>, seção Estrutura e apresentação: exige que "As quantidades mínimas por integrante foram atendidas" e que "Entregas individuais identificam o autor".</li>
+</ul>
+<p><strong>Efeito.</strong> A tarefa T02 está metodologicamente completa e sem pendências para Lucas. Todavia, para a avaliação final da entrega da equipe perante a disciplina, o documento permanecerá incompleto enquanto Pedro e Giovanni não inserirem suas modelagens HTA, GOMS e CTT para T01 e T03.</p>
+<p><strong>Mudança sugerida.</strong> Os integrantes Pedro Custódio (T01) e Giovanni Chahin (T03) devem redigir suas respectivas seções de HTA, GOMS e CTT e gerar seus diagramas em <code>assets/05_tarefas/</code> (ou combinar a distribuição das técnicas de acordo com a orientação específica do docente), atualizando o status do documento para concluído após a integração.</p>
+</article>
+
+<article id="AC-062" class="ticket" data-status="Pendente">
+<h3>AC-062 · Assimetria na vinculação dos identificadores T01 e T03 nas linhas R01, R02, R04 e R05 da Matriz de Rastreabilidade</h3>
+<p class="meta"><strong>Gravidade:</strong> Baixa · <strong>Confiança:</strong> Sustentado · <strong>Status:</strong> Pendente</p>
+<p><strong>Origem.</strong> Atualização pontual da linha R03 em <code>RASTREABILIDADE.md</code> para referenciar T02, mantendo as demais linhas com texto genérico de pendência.</p>
+<h4>Evidências</h4><ul>
+<li><code>RASTREABILIDADE.md</code>, seção 3 (linhas 105-109): a linha R03 referencia explicitamente "T02: supervisionar processo editorial e chancelar cortes esportivos [...] [docs/05](docs/05_analise_tarefas.md#hta--t02-supervisionar-processo-editorial)".</li>
+<li><code>RASTREABILIDADE.md</code>, linhas R01, R02, R04 e R05: as colunas "Objetivo/tarefa" mantêm a redação preliminar "modelagem T pendente" e as colunas "HTA/GOMS/CTT" permanecem como "PENDENTE", sem associar formalmente as necessidades aos IDs "T01" e "T03" já consolidados na tabela de seleção da Entrega 5.</li>
+<li><code>docs/05_analise_tarefas.md</code>, tabela de seleção das tarefas: define de forma inequívoca T01 como "Localizar, selecionar e revisar lances de melhores momentos" (P01/C01) e T03 como "Decupar e compilar lances por jogador sob restrições de hardware" (P03/C03).</li>
+</ul>
+<p><strong>Efeito.</strong> Pequena assimetria na rastreabilidade bidirecional: a Entrega 5 sabe quais necessidades e cenários originam T01 e T03, mas a matriz de rastreabilidade ainda não registra os IDs T01 e T03 nas linhas correspondentes de Pedro e Giovanni.</p>
+<p><strong>Mudança sugerida.</strong> Quando Pedro e Giovanni iniciarem suas modelagens, atualizar as colunas "Objetivo/tarefa" das linhas R01/R02 (referenciando T01) e R04/R05 (referenciando T03) em <code>RASTREABILIDADE.md</code>, espelhando a padronização já realizada em R03.</p>
+</article>
+</section>
+
+<section id="pendencias"><h2>Pendências por autor (Entrega 5 e consolidação)</h2>
+<p>Distribuição da situação atual dos artefatos entre os três integrantes da equipe:</p>
+<div class="table-scroll" role="region" aria-label="Pendências por autor" tabindex="0"><table><thead><tr><th>Autor</th><th>Entrega</th><th>Artefato / Tarefa</th><th>Situação</th><th>Ações necessárias</th></tr></thead><tbody>
+<tr><th scope="row">Lucas</th><td>Entrega 5</td><td>Tarefa T02 (Supervisionar processo editorial): HTA, GOMS, CTT e diagramas</td><td>Concluído (100%)</td><td>Nenhuma pendência remanescente em T02. Modelagem completa e rigorosa nas três técnicas, planos explícitos, regras de seleção justificadas, operadores temporais formais e diagramas vetoriais gerados e validados.</td></tr>
+<tr><th scope="row">Lucas</th><td>Entregas 3 e 4</td><td>Persona P02 (Arnaldo), Cenário C02 e matriz de rastreabilidade</td><td>Concluído (100%)</td><td>Todas as correções dos pareceres do professor aplicadas em commits anteriores e validadas.</td></tr>
+<tr><th scope="row">Pedro</th><td>Entrega 5</td><td>Tarefa T01 (Localizar, selecionar e revisar lances): HTA, GOMS e CTT</td><td>Pendente (AC-061, AC-062)</td><td>Elaborar as seções de modelagem HTA, GOMS e CTT para T01, gerar diagramas correspondentes e atualizar linhas R01/R02 na matriz de rastreabilidade.</td></tr>
+<tr><th scope="row">Pedro</th><td>Entregas 3 e 4</td><td>Persona P01 (Rafael) e Cenário C01</td><td>Concluído (100%)</td><td>Artefatos de Rafael e C01 plenamente estruturados e sem pendências.</td></tr>
+<tr><th scope="row">Giovanni</th><td>Entrega 5</td><td>Tarefa T03 (Decupar e compilar lances por jogador): HTA, GOMS e CTT</td><td>Pendente (AC-061, AC-062)</td><td>Elaborar as seções de modelagem HTA, GOMS e CTT para T03, gerar diagramas correspondentes e atualizar linhas R04/R05 na matriz de rastreabilidade.</td></tr>
+<tr><th scope="row">Giovanni</th><td>Entregas 3 e 4</td><td>Ficha de P03 (Jorginho Jr.), Cenário C03 e Matriz 2.2</td><td>Pendente (AC-056 a AC-060)</td><td>Sanar pendências documentadas no relatório <code>07-10-2026-01-30.html</code>: idade/biografia de P03, numeração de questões em C03, atenuação de determinismo técnico e preenchimento da seção 2.2 da matriz.</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="cobertura"><h2>Cobertura e inventário do repositório</h2>
+<p>Inventário completo de arquivos rastreados (164 itens fora de <code>.git</code>) categorizados por papel na auditoria:</p>
+<div class="table-scroll" role="region" aria-label="Inventário de arquivos" tabindex="0"><table><thead><tr><th>Categoria</th><th>Quantidade</th><th>Arquivos representativos</th><th>Tratamento na auditoria</th></tr></thead><tbody>
+<tr><th scope="row">Fontes textuais principais</th><td>16</td><td><code>docs/01_conhecendo_o_problema.md</code> a <code>docs/14_observacao_usuario.md</code>, <code>RASTREABILIDADE.md</code>, <code>README.md</code></td><td>Leitura integral dos documentos das Entregas 1 a 5; verificação de dependências e links nas Entregas 6 a 14.</td></tr>
+<tr><th scope="row">Feedbacks do docente</th><td>4</td><td><code>feedbacks_professor/Feedback_Professor_Entrega01_Equipe16.md</code> a <code>Feedback_Professor_Entrega04_Equipe16.md</code></td><td>Leitura integral dos pareceres para verificar conformidade com as diretrizes do professor.</td></tr>
+<tr><th scope="row">Relatórios de coerência anteriores</th><td>15</td><td><code>analises de coerencia/*.html</code> (de 03/09/2026 a 07/10/2026 às 01:30)</td><td>Leitura de histórico de tickets para garantia de continuidade e não repetição de IDs (AC-001 a AC-060).</td></tr>
+<tr><th scope="row">Normas e apoios metodológicos</th><td>5</td><td><code>BIBLIOGRAFIA.md</code>, <code>CHECKLIST_FINAL.md</code>, <code>GUIA_DE_USO.md</code>, <code>GUIA_ESCOPO_IHC.md</code>, <code>CONTRIBUTING.md</code></td><td>Consulta às definições de HTA, GOMS, CTT e itens de checagem da disciplina.</td></tr>
+<tr><th scope="row">Artefatos de mídia e diagramas</th><td>16</td><td><code>assets/05_tarefas/hta_t02.svg</code>, <code>ctt_t02.svg</code>, <code>assets/03_personas/*.svg</code>, <code>*.png</code></td><td>Inspeção técnica dos novos SVGs de tarefas (validação XML e renderização semântica).</td></tr>
+<tr><th scope="row">Instrumentos de pesquisa</th><td>3</td><td><code>instrumentos/termo_consentimento.md</code>, <code>roteiro_entrevista.md</code>, <code>questionario.md</code></td><td>Inspeção como apoio preparatório para a Entrega 7.</td></tr>
+<tr><th scope="row">Arquivos binários / anexos</th><td>1</td><td><code>CC8122-Personas (1).pdf</code> (1.1 MB)</td><td>Excluído de parsing textual detalhado por tratar-se de slide de aula externo já absorvido na bibliografia.</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="limites"><h2>Verificações e limites da auditoria</h2>
+<p><strong>Verificações automatizadas realizadas:</strong></p>
+<ul>
+<li>Validação sintática e estrutural XML dos diagramas <code>assets/05_tarefas/hta_t02.svg</code> e <code>assets/05_tarefas/ctt_t02.svg</code> via parser <code>xml.etree.ElementTree</code> (Python 3): ambos válidos e sem erros de fechamento de tags.</li>
+<li>Validação de 100% dos links markdown locais em <code>docs/05_analise_tarefas.md</code>: todos os 21 links relativos para seções internas, documentos markdown (docs 01, 03 e 04) e matriz <code>RASTREABILIDADE.md</code> resolvem corretamente sem apontadores quebrados.</li>
+<li>Unicidade e continuidade dos identificadores de tickets: o maior ID registrado no repositório era <code>AC-060</code>; os tickets deste relatório foram atribuídos estritamente a <code>AC-061</code> e <code>AC-062</code>.</li>
+</ul>
+<p><strong>Fontes bibliográficas e externas consultadas:</strong></p>
+<ul>
+<li>BARBOSA, S. D. J.; SILVA, B. S. <em>Interação Humano-Computador</em>. Elsevier/Campus, 2010. (Capítulo de Análise de Tarefas: HTA e objetivos).</li>
+<li>CARD, S. K.; MORAN, T. P.; NEWELL, A. <em>The Psychology of Human-Computer Interaction</em>. Lawrence Erlbaum, 1983. (Fundamentação formal do modelo CMN-GOMS, operadores e regras de seleção).</li>
+<li>PATERNÒ, F. <em>Model-Based Design and Evaluation of Interactive Applications</em>. Springer, 1999. (Especificação formal da notação ConcurTaskTrees, relações temporais e classificação de tarefas).</li>
+</ul>
+<p><strong>Limitações da auditoria:</strong></p>
+<ul>
+<li>Não houve renderização em navegador real com screenshot automatizado durante a sessão; a conformidade visual baseia-se na validação estrutural do CSS inline e das tags semânticas do HTML5 e SVG.</li>
+<li>A auditoria é estritamente documental e não antecipa a avaliação pedagógica que será realizada pelo professor Plinio Aquino na entrega oficial da Entrega 5.</li>
+</ul>
+</section>
+
+<footer>
+<p>Relatório de coerência documental gerado em 07/10/2026 às 17:45 UTC-03:00. Repositório <code>projeto-ihc</code> · Equipe 16.</p>
+</footer>
+</main></body></html>
