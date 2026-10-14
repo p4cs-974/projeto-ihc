@@ -1,8 +1,8 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 **Data:** 16/9/2026 (versão original)  
-**Revisão:** 07/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md) por Lucas (P02, mapas e jornadas de P02 e P03)  
-**Status:** 🟨 em revisão após feedback; P01, P02 e mapas e jornadas de P02 e P03 revisados; ficha individual de P03 aguarda Giovanni; validação com usuários pendente
+**Revisão:** 14/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md) nas partes de Giovanni  
+**Status:** 🟩 revisão documental do feedback concluída em P01/P02/P03 e artefatos consolidados; proto-personas e jornadas ainda sem validação com usuários
 
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
@@ -564,3 +564,5 @@ H35, auditoria editorial, e H36, recorte por jogador, continuam exploratórias. 
 - 07/10/2026: aplicação do feedback do professor da Entrega 03 por Lucas (P02, mapas de empatia e jornadas de P02 e P03). P02 formalizada como persona atendida com justificativa; adicionadas idade (46 anos) e biografia de Arnaldo Rocha; adicionados relatos narrativos das jornadas de P02 e P03; mapas de empatia de P02 e P03 estruturados com separação de hoje e uso proposto e tabelas ligando dores a necessidades; ajustadas formulações de interface e oportunidades de design nas jornadas; atualizados os SVGs mapa_empatia_p02.svg e mapa_empatia_p03.svg. A ficha de P03 permanece sob responsabilidade de Giovanni.
 
 - 13/10/2026: aplicação de AC-064 e AC-068 da análise de coerência das 15:11. Na jornada de P01, candidatos para nova conferência foram distinguidos de seleção utilizável; na diretriz de P03, processamento pesado remoto foi separado do armazenamento local de entradas, resultados e edição externa. Hipóteses H30/H37 preservadas, sem validação empírica.
+
+- 14/10/2026: P03 caracterizada com idade de 19 anos, biografia hipotética e H42; contexto e idade do mapa sincronizados; representação temporal delimitada como hipótese de revisão. Responsável: Giovanni Chahin Morassi. Hipóteses permanecem abertas; sem validação empírica ou aprovação do professor inferidas.
