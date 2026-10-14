@@ -209,7 +209,7 @@ O valor esperado da contribuição do TCC para P02 é receber trechos localizáv
 
 - Manter a edição detalhada e a publicação fora da interface, prevendo a continuidade em ferramentas externas, inclusive mobile, conforme RC05 e o recorte da Entrega 1.
 
-- É uma boa ideia ter um elemento visualmente semelhante às linhas do tempo dos softwares de edição de vídeo para capturar familiaridade dos usuários. talvez na tela de processamento?
+- [H] Investigar uma representação temporal na revisão para situar o lance na partida, RC04 e H38. A familiaridade com essa representação não foi confirmada. O acompanhamento de T03 deve comunicar estados por partida; uma linha do tempo de edição não é requisito desse acompanhamento.
 
 Essas decisões são iniciais e deverão ser revistas com a coleta de dados.
 
