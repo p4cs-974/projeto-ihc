@@ -1,5 +1,14 @@
 # Feedback do Professor > Entrega 03 > Equipe 16
 
+> **Atualização da aplicação (14/10/2026), Giovanni:** revisão das minhas partes concluída documentalmente. As revisões anteriores de Pedro e Lucas foram preservadas. Idade e biografia de P03 são escolhas fictícias [H], abertas a ajuste por Giovanni. Os registros anteriores permanecem como histórico.
+>
+> | Item | Situação | Commit |
+> |---|---|---|
+> | caracterizar Jorginho com biografia e hipótese H42 | Aplicado nas partes de Giovanni | [`005737d`](https://github.com/p4cs-974/projeto-ihc/commit/005737d03b52b877b025a874d3b31285d11c9336) |
+> | delimitar a hipótese de representação temporal de P03 | Aplicado nas partes de Giovanni | [`cd6a4c7`](https://github.com/p4cs-974/projeto-ihc/commit/cd6a4c78b2f07c4973505371dcd37ad311c9f6c9) |
+>
+> \- Giovanni
+
 > **Status da aplicação (03/10/2026):** esta revisão cobre a persona de Pedro (P01, Rafael), o mapa de empatia e a jornada de P01 e as partes de grupo da entrega: composição das personas, contexto de uso, lacunas e matriz de rastreabilidade. As fichas de Lucas (P02, Arnaldo) e Giovanni (P03, Jorginho Jr.) ficam com seus autores, assim como os mapas e jornadas de P02 e P03, escritos por Lucas. Cada comentário abaixo traz uma anotação com o link para o commit correspondente, na branch `aplicar-feedback`. O texto original do professor foi preservado; as anotações aparecem em blocos de citação logo após cada item.
 >
 > | Item do parecer | Situação | Commit(s) |
@@ -72,6 +81,10 @@ As fichas são estruturadas, mas a caracterização ainda se concentra na ocupa�
 
 Sugiro que vocês construam uma identidade fictícia mais definida para cada personagem, com nome identificável, idade ou recorte de vida coerente e uma breve biografia que conecte trajetória, rotina, experiência, responsabilidades e motivações. Isso não significa inventar resultados de entrevistas: características escolhidas para compor a proto-persona devem continuar explicitamente hipotéticas.
 
+> **✅ Como foi tratado por Giovanni** ([`005737d`](https://github.com/p4cs-974/projeto-ihc/commit/005737d03b52b877b025a874d3b31285d11c9336)): P03 tem 19 anos e biografia de estudante e criador amador sem renda própria. H42 registra origem fictícia, investigação e implicações. O contexto doméstico acompanha a ficha; no mapa de Lucas, somente a idade e a data foram sincronizadas, preservando as seis dimensões e sua autoria.
+>
+> \- Giovanni
+
 Em Rafael, expliquem como sua experiência e sua rotina se relacionam com a revisão de várias partidas. Em Arnaldo, deem consistência à trajetória e à responsabilidade editorial, além da expressão genérica de supervisão “engessada”. Em Jorginho Jr., delimitem o momento de vida e a relação entre produção de conteúdo, tempo disponível e recursos. Incluam somente detalhes que ajudem a compreender comportamentos e decisões de interação; uma biografia extensa, sem consequência para o projeto, também não resolve o problema.
 
 > **🟨 Tratado em parte** ([`84e1398`](https://github.com/p4cs-974/projeto-ihc/commit/84e1398)): Rafael ganhou nome completo, Rafael Moura, idade, 31 anos, e uma biografia curta. Ela cobre a trajetória, a rotina em dia de rodada, de quatro a seis partidas, a responsabilidade pela seleção e a motivação ligada a uma omissão já cobrada por um clube. A biografia explica por que a experiência não reduz o esforço: o gargalo é o volume de partidas e a atenção que cai ao longo do dia, não a habilidade com a ferramenta. Todos os traços estão marcados como escolhas da proto-persona; o volume de partidas virou H39. A idade também entrou no mapa de empatia. As biografias de Arnaldo e de Jorginho Jr., incluindo a faixa de 12 a 24 anos, ficam com Lucas e Giovanni.
@@ -111,6 +124,10 @@ Em Rafael, alinhem o encerramento declarado da jornada com a etapa de edição e
 > \- Lucas
 
 ### 5. Separar necessidades, hipóteses de experiência e decisões de solução
+
+> **✅ Como foi tratado por Giovanni** ([`cd6a4c7`](https://github.com/p4cs-974/projeto-ihc/commit/cd6a4c78b2f07c4973505371dcd37ad311c9f6c9)): A sugestão de linha do tempo é hipótese para revisão contextual, sem presumir familiaridade nem impor edição ao acompanhamento de T03. Mantida a correção de 13/10: processamento remoto reduz esforço local de detecção, mas entradas, resultados e edição externa exigem armazenamento. Mapas e jornadas já revisados por Lucas permanecem preservados.
+>
+> \- Giovanni
 
 Nos mapas de empatia, alguns campos de comportamento já descrevem a solução pretendida, como enviar partidas e aguardar o processamento remoto. Isso pode representar uma experiência futura proposta, mas não deve parecer evidência de comportamento atual. Identifiquem essa diferença para evitar que a solução imaginada seja usada como justificativa de si mesma.
 
