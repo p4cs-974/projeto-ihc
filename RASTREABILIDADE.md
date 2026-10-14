@@ -96,8 +96,12 @@ Os cenários de problema são hipotéticos. Os aspectos abaixo orientam a coleta
 | C02 | 5, 6 | Frequência de interrupções por dúvidas de editores, tempo ao lado da ilha e impacto de chamados concorrentes | H14, H33, H40, H41 | Observação ou entrevista sobre interrupções presenciais e por chat durante o fechamento de lotes | Atendimento a dúvidas e inspeção pontual |
 | C02 | 6 | Ocorrência de postagens com falha de contexto, questionamento da audiência e crises de despublicação | H04, H10, H16, H20 | Entrevista sobre episódios reais de retrabalho emergencial, remoção de vídeos e cobrança da diretoria | Tratamento de divergências e contingência |
 | C02 | 7 | Como o supervisor avalia lotes aprovados às pressas, o que considera concluído e o que fica pendente de conferência | H14, H22, H23, H35 | Entrevista sobre conferência posterior, aprovação com incerteza e necessidade de registro de auditoria | Avaliação ao final do ciclo editorial |
-
-[?] Os aspectos de C03 ficam com Giovanni, autor desse cenário.
+| [C03](docs/04_cenarios_problema.md#cenário-c03--decupagem-manual-de-lances-por-jogador-sob-restrições-de-hardware) | 1, 2 | Rotina de produção, experiência, autonomia e compartilhamento do equipamento | H13, H38, H42 | Entrevistar criadores amadores sobre tempo disponível, aplicativos e responsabilidades, sem exigir correspondência com a idade fictícia | Contexto e vocabulário de T01/T03 aplicados a P03 |
+| C03 | 3 | Critério de corte aproveitável e diferença entre resumo geral e compilado por atleta | H10, H11, H36 | Entrevista com exemplos de cortes e discussão de ações relevantes não incluídas em destaques gerais | Julgamento manual de pertinência em T01; filtro por atleta não assegurado |
+| C03 | 4 | Ordem das partidas, liberação de espaço e preservação de entradas e resultados | H24, H25, H37 | Percurso guiado de organização de arquivos, incluindo conferência antes de exclusão | Precondições de T03 e obtenção em T01; envio inicial A01 ainda fora destes modelos |
+| C03 | 5 | Estratégia de busca visual, margem temporal e conferência do arquivo exportado | H11, H36, H38 | Observar uma seleção temática em editor acessível e perguntar pelos critérios de contexto | Revisão contextual de T01; montagem e cortes adicionais externos |
+| C03 | 6 | Frequência de interrupções locais, perda percebida e possibilidades de recuperação | H13, H16, H37 | Entrevistar sobre episódios reais e observar respostas; não inferir causa técnica nem falha remota a partir de travamento local | Necessidade de continuidade que motiva T03; estados e recuperação remotos a validar separadamente |
+| C03 | 7 | Critérios de encerramento, pendências e incerteza sobre a cobertura do atleta | H10, H11, H36 | Entrevista após seleção de exemplos sobre o que está pronto, falta ou precisa de nova revisão | Encerramento de T01 e encaminhamento de pendências de T03 |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
