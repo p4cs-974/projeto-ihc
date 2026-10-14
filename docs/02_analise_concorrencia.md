@@ -53,7 +53,9 @@ O público-alvo proposto é formado por profissionais responsáveis pelo corte e
 **Autor(a):** Giovanni Chahin Morassi — 22.123.025-3  
 **Tipo:** concorrente indireto / ferramenta cotidiana  
 **Link oficial:** [Adobe Premiere](https://www.adobe.com/br/products/premiere.html)  
-**Data de acesso:** 03/09/2026
+**Data de acesso:** 03/09/2026  
+**Versão e plataforma:** [?] Versão não identificada nas figuras utilizadas. [F] A Figura 1 mostra o Explorador do Windows. [?] A versão das figuras não foi verificada; default.png não integra as evidências analisadas. Data de acesso não identifica versão do produto.  
+**Modelo de acesso:** ver a tabela consolidada de [modelo de acesso](#modelo-de-acesso-dos-produtos-analisados); os prints não comprovam licença ou modalidade de acesso.
 
 #### Contexto e proposta
 
@@ -112,7 +114,9 @@ A Adobe permite rearranjar, redimensionar e salvar painéis em espaços de traba
 **Autor(a):** Giovanni Chahin Morassi — 22.123.025-3  
 **Tipo:** concorrente indireto / ferramenta cotidiana  
 **Link oficial:** [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)  
-**Data de acesso:** 03/09/2026
+**Data de acesso:** 03/09/2026  
+**Versão e plataforma:** [?] Versão não identificada nas figuras utilizadas. [F] Análise documental de imagens oficiais, sem instalação testada ou versão/plataforma operacional confirmada. Data de acesso não identifica versão do produto.  
+**Modelo de acesso:** ver a tabela consolidada de [modelo de acesso](#modelo-de-acesso-dos-produtos-analisados); os prints não comprovam licença ou modalidade de acesso.
 
 #### Contexto e proposta
 
