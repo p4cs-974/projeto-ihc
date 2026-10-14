@@ -1,5 +1,19 @@
 # Feedback do Professor > Entrega 04 > Equipe 16
 
+> **Atualização da aplicação (14/10/2026), Giovanni:** revisão das minhas partes concluída documentalmente. C01/Pedro e C02/Lucas foram preservados. A revisão completa as pendências documentais de C03; validação com usuários continua futura. Os registros anteriores permanecem como histórico.
+>
+> | Item | Situação | Commit |
+> |---|---|---|
+> | numerar questões e respostas do cenário C03 | Aplicado nas partes de Giovanni | [`2713e20`](https://github.com/p4cs-974/projeto-ihc/commit/2713e2030374800d999216f9cb7d74ad93ebb2c3) |
+> | formular questões de C03 a partir das lacunas da premissa | Aplicado nas partes de Giovanni | [`18a077b`](https://github.com/p4cs-974/projeto-ihc/commit/18a077b45e07df51e5685a92b238e9f0c196e8d5) |
+> | distinguir decisões ações e eventos na análise de C03 | Aplicado nas partes de Giovanni | [`96f2705`](https://github.com/p4cs-974/projeto-ihc/commit/96f2705613cf8945fe05b8b779dbc44acacb43d7) |
+> | descrever sintomas de C03 sem diagnóstico técnico presumido | Aplicado nas partes de Giovanni | [`8b6b2ed`](https://github.com/p4cs-974/projeto-ihc/commit/8b6b2ed309db1eadf06575e5ee930eb2fa95744f) |
+> | centrar desfecho de C03 na necessidade e delimitar alternativas | Aplicado nas partes de Giovanni | [`12698bc`](https://github.com/p4cs-974/projeto-ihc/commit/12698bc077071008474f9b9631efc9e94f37530a) |
+> | concretizar o episódio inicial e sincronizar C03 com P03 | Aplicado nas partes de Giovanni | [`f056b40`](https://github.com/p4cs-974/projeto-ihc/commit/f056b403e923222cb87f83c9bb30e1e02f1a4c31) |
+> | rastrear investigação de C03 e sua continuidade em T01 e T03 | Aplicado nas partes de Giovanni | [`2dc7568`](https://github.com/p4cs-974/projeto-ihc/commit/2dc7568d5383cadca7de8ea5dd6592988d4b5400) |
+>
+> \- Giovanni
+
 > **Status da aplicação (03/10/2026):** esta revisão cobre o cenário de Pedro (C01, Rafael) e as partes de grupo da entrega: cabeçalho, ligação com a ficha e o contexto de P01 e matriz de rastreabilidade. C02, de Lucas, e C03, de Giovanni, ficam com seus autores. Cada comentário abaixo traz uma anotação com o link para o commit correspondente, na branch `aplicar-feedback`. O texto original do professor foi preservado; as anotações aparecem em blocos de citação logo após cada item.
 >
 > | Item do parecer | Situação | Commit(s) |
@@ -55,6 +69,10 @@ O trabalho consegue mostrar dificuldades atuais de seleção de lances, supervis
 
 ### 1. Numerar as questões e indicar suas respostas na narrativa
 
+> **✅ Como foi tratado por Giovanni** ([`2713e20`](https://github.com/p4cs-974/projeto-ihc/commit/2713e2030374800d999216f9cb7d74ad93ebb2c3)): As sete questões de C03 têm identificadores de 1 a 7, e cada trecho refinado indica as questões correspondentes. Marcadores genéricos [NOVO] foram retirados da narrativa.
+>
+> \- Giovanni
+
 Nas seções “Questões de refinamento”, as perguntas estão identificadas pelo elemento, mas não por números. Nas três narrativas refinadas, os parágrafos recebem apenas **[NOVO]**. Essa marca informa que houve desenvolvimento do texto, porém não permite verificar qual pergunta motivou cada informação acrescentada.
 
 Numerem as perguntas de cada cenário e insiram o número correspondente entre colchetes no ponto da narrativa em que a resposta aparece. Se um trecho responder a mais de uma questão, indiquem as referências necessárias. Uma seção posterior de elementos extraídos não substitui essa ligação dentro do relato.
@@ -81,6 +99,10 @@ Em C02, o cenário inicial já informa que Arnaldo circula entre salas, acompanh
 
 Em C03, o equipamento limitado, o pouco armazenamento e o interesse por lances de um atleta já aparecem inicialmente. O refinamento pode explorar a organização de vários jogos, a estratégia de liberação de espaço e a forma de reconhecer uma seleção satisfatória. Há acréscimos efetivos na versão refinada; o problema é que algumas perguntas ainda são amplas demais para evidenciar a lacuna correspondente.
 
+> **✅ Como foi tratado por Giovanni** ([`18a077b`](https://github.com/p4cs-974/projeto-ihc/commit/18a077b45e07df51e5685a92b238e9f0c196e8d5)): A tabela distingue informação inicial e lacuna para cada elemento. As perguntas investigam rotina, experiência, critérios de corte, ordem de trabalho, ações, interrupção e julgamento final. O critério de seleção pronta está explícito na narrativa; respostas permanecem hipotéticas.
+>
+> \- Giovanni
+
 Revisem cada uma das sete perguntas de cada cenário. Mantenham pelo menos uma questão válida por elemento e verifiquem se sua resposta acrescenta informação que realmente não constava da narrativa inicial.
 
 > **🟨 Tratado em parte** ([`3e7d960`](https://github.com/p4cs-974/projeto-ihc/commit/3e7d960), [`68a2bf2`](https://github.com/p4cs-974/projeto-ihc/commit/68a2bf2)): a tabela de C01 ganhou a coluna "Já informado na versão inicial", e cada questão parte do que a premissa não dizia. A questão 3 deixou de retomar o objetivo e passou a investigar o critério: lance relevante, corte aceitável (mostra a construção e o desfecho da jogada) e seleção de partida pronta. As questões 1 e 2 perguntam pelo que faltava: com quem e com que equipamento Rafael trabalha, o que depende da seleção e se a experiência explica a demora. As questões 4 a 7 foram reescritas no commit da correção 3.
@@ -101,6 +123,10 @@ A própria narrativa refinada oferece ações observáveis, como assistir a trec
 
 Em todos os cenários, diferenciem o plano que o personagem formula, aquilo que efetivamente faz e a avaliação que realiza depois de perceber uma situação. Por exemplo, descrever que alguém percorre as salas informa uma ação; explicar por que escolhe essa estratégia e como pretende distribuir sua atenção explicita planejamento. Essa distinção será necessária para modelar tarefas sem reduzir atividades cognitivas a uma lista de movimentos.
 
+> **✅ Como foi tratado por Giovanni** ([`96f2705`](https://github.com/p4cs-974/projeto-ihc/commit/96f2705613cf8945fe05b8b779dbc44acacb43d7)): Tabela de elementos vinculada às questões. Planejamento explicita estratégia e motivo; ações descrevem operações observáveis; eventos são acontecimentos que interrompem o fluxo; avaliação registra julgamento e decisão. A conferência de exportações não equivale à cobertura editorial.
+>
+> \- Giovanni
+
 > **🟨 Tratado em parte** ([`68a2bf2`](https://github.com/p4cs-974/projeto-ihc/commit/68a2bf2)): em C01, o planejamento traz a decisão e o motivo (uma partida por vez para não acumular dúvidas, onde concentrar a atenção, por que adiar os candidatos duvidosos, H30). As ações são só comportamentos observáveis no editor. Os eventos passaram a ser acontecimentos externos: a pergunta de Arnaldo pelo chat que interrompe a busca, H41, e a reprodução do corte que começa no chute. A avaliação inclui o julgamento final. A tabela de elementos indica a questão de origem de cada linha, e o parágrafo seguinte explica a diferença com um exemplo do próprio cenário.
 >
 > **⏭️ Fora desta revisão:** a resposta de ações e a linha de eventos de C02 ficam com Lucas.
@@ -116,6 +142,10 @@ Em todos os cenários, diferenciem o plano que o personagem formula, aquilo que 
 C03 acrescenta muitos detalhes: tamanho elevado das gravações, aquecimento, esgotamento de memória, cache, corrupção do projeto e perdas de tempo. Detalhes hipotéticos podem enriquecer um cenário. O cuidado é não apresentar uma cadeia causal técnica específica como consequência inevitável de possuir um computador modesto.
 
 Para esta análise, os sintomas percebidos pelo usuário e seus efeitos sobre a atividade são centrais: reprodução interrompida, dificuldade de identificar o atleta, fechamento inesperado, perda de trabalho e necessidade de refazer a seleção. Atribuir a ocorrência a uma causa técnica determinada exige fundamentação adicional ou uma indicação clara de que essa causa faz parte da situação fictícia adotada. A descrição do problema não depende de diagnosticar o computador.
+
+> **✅ Como foi tratado por Giovanni** ([`8b6b2ed`](https://github.com/p4cs-974/projeto-ihc/commit/8b6b2ed309db1eadf06575e5ee930eb2fa95744f)): C03 descreve alertas, reprodução interrompida, fechamento inesperado e marcações indisponíveis. Causas de memória, cache e corrupção não são afirmadas. Tempos, volumes e episódios são declarados parâmetros hipotéticos, sem equivaler a dados de usuários.
+>
+> \- Giovanni
 
 Ajustem também a expressão de que o relato “reflete a realidade”, presente na apresentação de C03, para manter coerência com a declaração de cenário hipotético. Os tempos e volumes podem ser parâmetros narrativos, mas não devem ser reutilizados nas próximas entregas como medições obtidas com usuários. O mesmo cuidado vale para a sequência de reações da audiência e da direção em C02: é uma situação possível construída pela equipe, não um caso observado.
 
@@ -137,6 +167,10 @@ O objetivo de localizar ações de um jogador não equivale automaticamente a re
 
 No encerramento de C03, a referência a receber lances já recortados aproxima o desfecho de uma solução específica. Centrem o fechamento na dificuldade de manter a produção, no retrabalho e no resultado insuficiente; discutam alternativas na seção de implicações.
 
+> **✅ Como foi tratado por Giovanni** ([`12698bc`](https://github.com/p4cs-974/projeto-ihc/commit/12698bc077071008474f9b9631efc9e94f37530a)): O desfecho informa material obtido, trabalho pendente e julgamento de insuficiência. As implicações separam necessidades de alternativas; destaques gerais podem não cobrir o atleta, e processamento remoto não elimina armazenamento local. H36/H37 permanecem abertas; T01/T03 são modelos hipotéticos.
+>
+> \- Giovanni
+
 C02, por sua vez, é válido para compreender o problema editorial mesmo com a participação externa de Arnaldo no produto proposto. Não é necessário inserir telas futuras para justificar o cenário. Esclareçam quais necessidades podem ser apoiadas pelos cortes e metadados entregues, sem presumir que o projeto passará a administrar toda a supervisão da emissora.
 
 > **🟨 Tratado em parte** ([`0173b0c`](https://github.com/p4cs-974/projeto-ihc/commit/0173b0c)): as implicações de C01 listam três necessidades derivadas do problema, sem solução associada: localizar candidatos com menos esforço, preservar construção e desfecho e saber quanto da partida foi conferido. A ligação com A04 por R01 aparece como questão de adequação: a detecção automática pode omitir lances ou cortá-los sem a construção da jogada, e a revisão de cortes gerados pode deslocar o esforço em vez de reduzi-lo.
@@ -152,6 +186,10 @@ C02, por sua vez, é válido para compreender o problema editorial mesmo com a p
 ## Recomendações de melhoria
 
 - Aproximem as versões iniciais de episódios concretos, com início, atividade e dificuldade identificáveis. Elas já são narrativas, mas algumas passagens descrevem a rotina de forma bastante geral. A versão refinada deverá aprofundar o mesmo episódio.
+
+> **✅ Como foi tratado por Giovanni** ([`f056b40`](https://github.com/p4cs-974/projeto-ihc/commit/f056b403e923222cb87f83c9bb30e1e02f1a4c31)): A premissa descreve o início de uma sessão, atividade e dificuldade. O refinamento aprofunda o mesmo episódio; idade, estudo e rotina remetem à biografia hipotética de P03/H42, sem atribuir dados a usuários reais.
+>
+> \- Giovanni
 
   > **🟨 Tratado em parte** ([`06dd91a`](https://github.com/p4cs-974/projeto-ihc/commit/06dd91a)): a versão inicial de C01 narra um dia de trabalho com início, atividade e dificuldade, sem antecipar o que as questões investigam. As de C02 e C03 ficam com Lucas e Giovanni.
   >
@@ -196,6 +234,10 @@ C02, por sua vez, é válido para compreender o problema editorial mesmo com a p
 C01 deve apoiar a análise das tarefas de localizar, selecionar e revisar lances, incluindo decisões diante de dúvidas e omissões. C02 deve contribuir para compreender o repasse de informações, os critérios de aprovação e a responsabilidade editorial. C03 deve alimentar a investigação sobre seleção temática por atleta, restrições de equipamento e continuidade do trabalho em ferramentas externas.
 
 A investigação com usuários deverá testar a plausibilidade e a relevância dessas situações, sem precisar confirmar exatamente os episódios fictícios narrados. Registrem os aspectos a investigar em `RASTREABILIDADE.md` e mantenham separados o problema humano, as necessidades decorrentes e as alternativas de interação que serão elaboradas posteriormente.
+
+> **✅ Como foi tratado por Giovanni** ([`2dc7568`](https://github.com/p4cs-974/projeto-ihc/commit/2dc7568d5383cadca7de8ea5dd6592988d4b5400)): Seção 2.2 preenchida para as questões 1 a 7 de C03, com hipóteses, procedimentos futuros e relações com T01/T03. Ficha de P03 identifica a origem narrativa da estratégia de arquivos. R02/R04/R05 e os modelos existentes do Lab 5 foram preservados; coleta com usuários pertence à etapa futura.
+>
+> \- Giovanni
 
 > **🟨 Tratado em parte** ([`d696e16`](https://github.com/p4cs-974/projeto-ihc/commit/d696e16)): a matriz ganhou a seção 2.2, com os aspectos de C01 a investigar na Entrega 7, ligados às questões numeradas, às hipóteses e à tarefa afetada na Entrega 5. As implicações de C01 apontam para essa seção e separam problema, necessidades e alternativas. A tarefa de origem passou a ser localizar, selecionar e revisar lances, incluindo decisões diante de dúvidas e omissões. As linhas de C02 e C03 ficam com Lucas e Giovanni.
 >
