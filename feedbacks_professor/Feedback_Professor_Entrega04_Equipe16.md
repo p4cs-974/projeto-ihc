@@ -14,6 +14,10 @@
 >
 > \- Giovanni
 
+> **Conferência final de Giovanni** ([`fd3cf44`](https://github.com/p4cs-974/projeto-ihc/commit/fd3cf447a63114c1d4f0f1c7ff5574b543013c42)): Conferência final da novidade das questões de C03 e remoção de repetições. P03 distingue comportamento atual e expectativa de processamento remoto. README diferencia revisão documental, validação futura e pendências de Lucas no Lab 2.
+>
+> \- Giovanni
+
 > **Status da aplicação (03/10/2026):** esta revisão cobre o cenário de Pedro (C01, Rafael) e as partes de grupo da entrega: cabeçalho, ligação com a ficha e o contexto de P01 e matriz de rastreabilidade. C02, de Lucas, e C03, de Giovanni, ficam com seus autores. Cada comentário abaixo traz uma anotação com o link para o commit correspondente, na branch `aplicar-feedback`. O texto original do professor foi preservado; as anotações aparecem em blocos de citação logo após cada item.
 >
 > | Item do parecer | Situação | Commit(s) |
