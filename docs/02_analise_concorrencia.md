@@ -63,26 +63,26 @@ O Premiere Pro é um concorrente indireto: não detecta melhores momentos como o
 
 | Funcionalidade          | Como é realizada                                                                     | Evidência/print                                                                                                         | Observação de IHC                                                                                                          |
 | ----------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Importação e biblioteca | O usuário seleciona arquivos e os adiciona ao painel do projeto.                     | ![Importação](../assets/02_concorrencia/premiere-pro/abrir%20video.png)                                                 | O seletor do sistema é familiar. Nomes e miniaturas apoiam reconhecimento, mas projetos grandes exigem organização manual. |
+| Importação e biblioteca | [F] A imagem mostra arraste de um arquivo de imagem do Explorador para o painel do projeto; não registra a conclusão da importação de vídeo.                     | ![Importação](../assets/02_concorrencia/premiere-pro/abrir%20video.png)                                                 | [H] Arraste, nomes e miniaturas podem apoiar reconhecimento. A familiaridade com essa interação precisa ser investigada. |
 | Pré-visualização        | O monitor de origem exibe o clipe; o monitor do programa mostra a sequência.         | ![Pré-visualização](../assets/02_concorrencia/premiere-pro/preview%20scene.png)                                         | Preserva a diferença entre fonte e resultado, embora exija compreender clipe e sequência.                                  |
 | Linha do tempo          | Vídeos e áudios são arrastados para pistas; o eixo horizontal representa tempo.      | ![Linha do tempo](../assets/02_concorrencia/premiere-pro/timeline.png)                                                  | Ordem e duração ficam visíveis, mas pistas e botões aumentam a carga cognitiva.                                            |
-| Corte e ajuste          | Razor divide o clipe; ripple, roll, slip e slide fazem ajustes diferentes.           | ![Corte](../assets/02_concorrencia/premiere-pro/cortar%20video.png)                                                     | O cursor oferece feedback, mas ícones próximos ocultam consequências. Devemos expor início, fim, duração e desfazer.       |
+| Corte e ajuste          | [F] O registro mostra duas linhas do tempo multipista; não identifica comando, ponto de corte ou resultado de uma operação.           | ![Corte](../assets/02_concorrencia/premiere-pro/cortar%20video.png)                                                     | [H] A densidade visual sugere custo de aprendizagem. O print não comprova feedback de corte; início, fim e duração podem contextualizar a revisão, sem edição na interface proposta.       |
 | Marcadores              | Pontos ou intervalos recebem comentário, cor e duração e aparecem no painel Markers. | [Documentação oficial](https://helpx.adobe.com/premiere/desktop/organize-media/apply-labeling/overview-of-markers.html) | Liga uma anotação à coordenada temporal sem cortar o vídeo; é uma boa referência para eventos detectados.                  |
 | Exportação              | A tela reúne destino, nome, formato e resumo antes da renderização.                  | [Recursos do Premiere](https://www.adobe.com/products/premiere/features.html)                                           | Antecipar propriedades reduz erros; nosso produto precisa mostrar duração, formato, tamanho e momentos incluídos.          |
 
 #### Evidências de interface
 
-![Janela de seleção de mídia do Premiere](../assets/02_concorrencia/premiere-pro/abrir%20video.png)
+![Arraste de uma imagem do Explorador para o painel do Premiere](../assets/02_concorrencia/premiere-pro/abrir%20video.png)
 
-_Figura 1. Entrada de mídia pelo seletor de arquivos. Captura local de Giovanni, 03/09/2026._
+_Figura 1. [F] Explorador de Arquivos e indicação de arraste de uma imagem com ícone do Premiere para o painel do projeto. Não demonstra importação de vídeo concluída. Arquivo reunido na análise de Giovanni em 03/09/2026; [?] autoria e origem da captura não verificadas._
 
 ![Premiere com painel de mídia, player e linha do tempo](../assets/02_concorrencia/premiere-pro/timeline.png)
 
-_Figura 2. Espaço de trabalho com mídia, player e pistas. Captura local de Giovanni, 03/09/2026._
+_Figura 2. [F] Espaço de trabalho com mídia, player e pistas. Arquivo reunido na análise de Giovanni em 03/09/2026; [?] autoria e origem da captura não verificadas._
 
-![Divisão de um clipe na linha do tempo](../assets/02_concorrencia/premiere-pro/cortar%20video.png)
+![Duas visões de linhas do tempo multipista](../assets/02_concorrencia/premiere-pro/cortar%20video.png)
 
-_Figura 3. Corte em um ponto temporal. Captura local de Giovanni, 03/09/2026._
+_Figura 3. [F] Duas visões densas de linhas do tempo multipista. O ponto, comando e resultado de um corte não estão identificados. Arquivo reunido na análise de Giovanni em 03/09/2026; [?] autoria e origem da captura não verificadas._
 
 #### Experiência do usuário e opiniões
 
@@ -122,8 +122,8 @@ O DaVinci Resolve reúne gestão de mídia, edição, cor, efeitos, áudio e ent
 
 | Funcionalidade         | Como é realizada                                                                           | Evidência/print                                                                 | Observação de IHC                                                                                 |
 | ---------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Importação e metadados | Media importa arquivos, organiza bins e edita metadados; Smart Bins agrupam por critérios. | ![Media](../assets/02_concorrencia/davinci-resolve/01-pagina-media.jpg)         | Miniaturas e atributos apoiam escala. Devemos preencher dados e usar vocabulário do futebol.      |
-| Cut Page               | Media Pool, viewer, ferramentas e duas visões temporais ficam na mesma tela.               | ![Cut](../assets/02_concorrencia/davinci-resolve/02-pagina-cut.jpg)             | Reduz trocas de tela, mas mantém comandos demais. A lição é reunir resultados, player e contexto. |
+| Importação e metadados | [F] O recorte mostra o painel Media Pool com miniaturas. Não exibe player, edição de metadados nem criação de Smart Bins. | ![Media](../assets/02_concorrencia/davinci-resolve/01-pagina-media.jpg)         | [H] Miniaturas podem ajudar a reconhecer arquivos. Organização por atributos é referência documental, não operação demonstrada neste print.      |
+| Cut Page               | [F] Fotografia de um notebook com interface de edição e equipamento físico. Os comandos não são legíveis para análise detalhada.               | ![Cut](../assets/02_concorrencia/davinci-resolve/02-pagina-cut.jpg)             | [?] A fotografia não permite avaliar comandos ou medir trocas de tela. As Figuras 6 e 7 apoiam a discussão visual específica; a reunião de resultados e contexto é hipótese de design. |
 | Source Tape            | Mostra clipes de uma pasta como sequência contínua.                                        | ![Source Tape](../assets/02_concorrencia/davinci-resolve/03-source-tape.jpg)    | Evita abrir itens um a um; limites e origem ainda precisam ser explícitos.                        |
 | Linha do tempo dupla   | Uma faixa mostra tudo e outra amplia o ponto atual.                                        | ![Linha dupla](../assets/02_concorrencia/davinci-resolve/04-duas-timelines.jpg) | Visão global e detalhe evitam perda de posição em gravações longas.                               |
 | Edição precisa         | Edit usa pistas, monitores e trims para inserir, dividir e aparar.                         | ![Edit](../assets/02_concorrencia/davinci-resolve/05-pagina-edit.jpg)           | É familiar a profissionais, mas excessiva para validar cortes; controles de início e fim bastam.  |
@@ -131,13 +131,13 @@ O DaVinci Resolve reúne gestão de mídia, edição, cor, efeitos, áudio e ent
 
 #### Evidências de interface
 
-![Página Media com biblioteca, player e metadados](../assets/02_concorrencia/davinci-resolve/01-pagina-media.jpg)
+![Recorte do Media Pool com miniaturas](../assets/02_concorrencia/davinci-resolve/01-pagina-media.jpg)
 
-_Figura 4. Preparação de arquivos. Fonte: [Blackmagic Design, Edit](https://www.blackmagicdesign.com/products/davinciresolve/edit), acesso em 03/09/2026._
+_Figura 4. [F] Recorte do painel Media Pool com miniaturas; player e campos de metadados não estão visíveis. Fonte: [Blackmagic Design, Edit](https://www.blackmagicdesign.com/products/davinciresolve/edit), acesso em 03/09/2026._
 
-![Página Cut com Media Pool, viewer e linhas do tempo](../assets/02_concorrencia/davinci-resolve/02-pagina-cut.jpg)
+![Fotografia de notebook com interface de edição e controle físico](../assets/02_concorrencia/davinci-resolve/02-pagina-cut.jpg)
 
-_Figura 5. Edição rápida. Fonte: [Blackmagic Design, Cut](https://www.blackmagicdesign.com/products/davinciresolve/cut), acesso em 03/09/2026._
+_Figura 5. [F] Fotografia promocional do ambiente de edição, com notebook e controle físico. Serve como contexto; não comprova rapidez nem permite inspecionar os comandos da Cut Page. Fonte: [Blackmagic Design, Cut](https://www.blackmagicdesign.com/products/davinciresolve/cut), acesso em 03/09/2026._
 
 ![Source Tape exibindo vários clipes continuamente](../assets/02_concorrencia/davinci-resolve/03-source-tape.jpg)
 
