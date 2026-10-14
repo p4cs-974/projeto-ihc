@@ -101,8 +101,8 @@ A Adobe permite rearranjar, redimensionar e salvar painéis em espaços de traba
 | Ponto                           | Evidência                                           | Implicação para nosso projeto                                               |
 | ------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------- |
 | Contexto verificável            | Player, playhead e timecode mostram o quadro exato. | Abrir cada resultado com contexto anterior e posterior, instante e duração. |
-| Marcadores estruturam a revisão | Pontos e intervalos recebem tipo e comentário.      | Mostrar evento, tempo, confiança e acesso ao original.                      |
-| Feedback imediato               | Cortes atualizam player e linha do tempo.           | Atualizar prévia e duração ao ajustar limites e oferecer desfazer.          |
+| Marcadores estruturam a revisão | Pontos e intervalos recebem tipo e comentário.      | [H] Mostrar evento, tempo e origem. Confiança somente se existir medida disponível, calibrada e compreensível, conforme RC05/RC08.                      |
+| Feedback imediato               | [?] A Figura 3 não registra atualização após corte; o efeito dessa operação não foi comprovado pelas capturas.           | [H] Atualizar o resumo ao incluir ou excluir cortes da seleção para download; ajuste de limites e edição detalhada permanecem externos, RC05.          |
 | Flexibilidade cobra aprendizado | Painéis, pistas e trims atendem fluxos distintos.   | Manter o fluxo guiado: envio, processamento, revisão e download.            |
 | Organização é manual            | Pastas, nomes e metadados dependem do editor.       | Preencher automaticamente partida, origem, evento e horário.                |
 | Exportação antecipa o resultado | A tela resume arquivo e configurações.              | Mostrar o que será baixado e estados como preparando, pronto e erro.        |
@@ -126,7 +126,7 @@ O DaVinci Resolve reúne gestão de mídia, edição, cor, efeitos, áudio e ent
 | Cut Page               | [F] Fotografia de um notebook com interface de edição e equipamento físico. Os comandos não são legíveis para análise detalhada.               | ![Cut](../assets/02_concorrencia/davinci-resolve/02-pagina-cut.jpg)             | [?] A fotografia não permite avaliar comandos ou medir trocas de tela. As Figuras 6 e 7 apoiam a discussão visual específica; a reunião de resultados e contexto é hipótese de design. |
 | Source Tape            | Mostra clipes de uma pasta como sequência contínua.                                        | ![Source Tape](../assets/02_concorrencia/davinci-resolve/03-source-tape.jpg)    | Evita abrir itens um a um; limites e origem ainda precisam ser explícitos.                        |
 | Linha do tempo dupla   | Uma faixa mostra tudo e outra amplia o ponto atual.                                        | ![Linha dupla](../assets/02_concorrencia/davinci-resolve/04-duas-timelines.jpg) | Visão global e detalhe evitam perda de posição em gravações longas.                               |
-| Edição precisa         | Edit usa pistas, monitores e trims para inserir, dividir e aparar.                         | ![Edit](../assets/02_concorrencia/davinci-resolve/05-pagina-edit.jpg)           | É familiar a profissionais, mas excessiva para validar cortes; controles de início e fim bastam.  |
+| Edição precisa         | Edit usa pistas, monitores e trims para inserir, dividir e aparar.                         | ![Edit](../assets/02_concorrencia/davinci-resolve/05-pagina-edit.jpg)           | [H] A familiaridade deve ser investigada. No projeto, início e fim informam contexto; editar limites continua fora do recorte, RC05.  |
 | Exportação e fila      | Deliver separa configurações, fila e andamento da renderização.                            | [Página oficial](https://www.blackmagicdesign.com/products/davinciresolve)      | Torna espera observável e permite acompanhar trabalhos demorados.                                 |
 
 #### Evidências de interface
@@ -170,10 +170,10 @@ A [documentação da Cut Page](https://www.blackmagicdesign.com/products/davinci
 | ---------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | Visão global e detalhe       | Cut mostra tudo e a região do playhead.                | Usar barra da partida com eventos e player do trecho selecionado.                |
 | Triagem contínua             | Source Tape percorre vários clipes como uma faixa.     | Navegar resultados em sequência, preservando origem e limites.                   |
-| Organização automática       | Smart Bins agrupam por metadados.                      | Filtrar por partida, evento, período, status e confiança.                        |
-| Caminhos rápido e avançado   | Cut e Edit atendem ritmos diferentes.                  | Mostrar ações essenciais e revelar ajuste fino sob demanda.                      |
+| Organização automática       | Smart Bins agrupam por metadados.                      | [H] Investigar filtros por partida, evento, período e estado; confiança depende de medida disponível, calibrada e compreensível, RC05/RC08.                        |
+| Caminhos rápido e avançado   | Cut e Edit atendem ritmos diferentes.                  | [H] Priorizar revisão, seleção e download; ajuste fino de edição permanece em ferramenta externa, RC05.                      |
 | Páginas podem desorientar    | Media, Cut, Edit e Deliver distribuem o trabalho.      | Manter etapas visíveis e indicar a etapa atual.                                  |
-| Complexidade e hardware      | Avaliações citam aprendizagem e demanda computacional. | Processar no servidor e omitir controles supérfluos.                             |
+| Complexidade e hardware      | Avaliações citam aprendizagem e demanda computacional. | [H] Investigar processamento remoto e controles necessários, preservando armazenamento local para entradas e saídas; decisão de escopo RC12, não resultado de teste.                             |
 | Fila torna espera observável | Deliver separa configuração, fila e renderização.      | Exibir estado por arquivo, permitir retorno, explicar falhas e liberar download. |
 
 ### Análise C03 — CapCut
