@@ -1,5 +1,15 @@
 # Feedback do Professor > Entrega 02 > Equipe 16
 
+> **Atualização da aplicação (14/10/2026), Giovanni:** revisão das minhas partes concluída documentalmente. C06/C07 permanecem com Lucas; análises de Pedro foram preservadas. Não houve novo teste com usuários ou produtos. Os registros anteriores permanecem como histórico.
+>
+> | Item | Situação | Commit |
+> |---|---|---|
+> | delimitar evidências visuais de Premiere e DaVinci | Aplicado nas partes de Giovanni | [`128adbe`](https://github.com/p4cs-974/projeto-ihc/commit/128adbec31894a8a47dea58d38e1731e59ca95aa) |
+> | alinhar lições individuais ao recorte de revisão e download | Aplicado nas partes de Giovanni | [`39b8195`](https://github.com/p4cs-974/projeto-ihc/commit/39b819505a8b41b653acf83b4a81a97ff88a9dd9) |
+> | explicitar versões e limites do percurso analisado | Aplicado nas partes de Giovanni | [`c8100fd`](https://github.com/p4cs-974/projeto-ihc/commit/c8100fde8d1a3db20b0f2884a39a4465eff3181f) |
+>
+> \- Giovanni
+
 > **Status da aplicação (02/10/2026):** esta revisão cobre as análises de Pedro (C03, C04 e C05) e as partes de grupo da entrega: mapa de alternativas, seções 3, 4 e 5 e a matriz de rastreabilidade. As análises individuais de Giovanni (C01, C02) e Lucas (C06, C07) ficam com seus autores. Cada comentário abaixo traz uma anotação com o link para o commit correspondente, na branch `aplicar-feedback`. O texto original do professor foi preservado; as anotações aparecem em blocos de citação logo após cada item.
 >
 > | Item do parecer | Situação | Commit(s) |
@@ -64,6 +74,10 @@ A autoria acima é a atribuição declarada na entrega. Ela permite verificar o 
 
 A conferência de `assets/02_concorrencia/` encontrou exemplos concretos que precisam de ajuste:
 
+> **✅ Como foi tratado por Giovanni** ([`128adbe`](https://github.com/p4cs-974/projeto-ihc/commit/128adbec31894a8a47dea58d38e1731e59ca95aa)): Figuras 1 e 3 descrevem arraste de imagem e linhas do tempo, sem alegar importação de vídeo ou corte comprovado. Figura 4 descreve somente o Media Pool; Figura 5 identifica a fotografia promocional e seu limite. Tabelas e textos alternativos acompanham as legendas. A procedência dos arquivos do Premiere permanece como lacuna, sem atribuir capturas não verificadas ao autor.
+>
+> \- Giovanni
+
 | Arquivo | O que é possível observar | Correção necessária |
 |---|---|---|
 | `premiere-pro/abrir video.png` | Janela do Explorador de Arquivos e indicação de arraste/cópia de uma imagem com ícone do Premiere para o painel do projeto. | A Figura 1 é descrita como seleção de mídia por seletor de arquivos. Diferenciem arraste a partir do explorador de uma janela de importação e não apresentem essa imagem como demonstração de importação de vídeo. |
@@ -104,6 +118,10 @@ As recomendações finais são mais cuidadosas do que alguns trechos que as ante
 - C04 recomenda “manter o fluxo principal acessível pelo navegador”, mas RC12 preserva a escolha entre web, Electron e aplicação nativa. Convertam a lição local em preocupação com acesso e compatibilidade, sem antecipar a plataforma.
 - C01, C02, C04 e C05 sugerem exibição ou filtro de confiança sem sempre repetir a condição presente em RC05/RC08. A confiança só deve ser proposta quando houver uma medida disponível e compreensível; não é um campo obrigatório apenas porque parece útil.
 - C05 deriva da CLI mensagens e identificadores que permitiriam “automação sem depender da tela”. A lição de comunicar estados é pertinente à IHC. Já a criação de uma interface para agentes ou automação exige outro usuário e outra tarefa, que não foram definidos no recorte do editor.
+
+> **✅ Como foi tratado por Giovanni** ([`39b8195`](https://github.com/p4cs-974/projeto-ihc/commit/39b819505a8b41b653acf83b4a81a97ff88a9dd9)): C01/C02 distinguem seleção para download de edição externa. Confiança e filtros são propostas condicionadas à disponibilidade e compreensão dos dados. A fotografia e as linhas do tempo não sustentam resultados de uso não observados.
+>
+> \- Giovanni
 
 O objetivo não é apagar as ideias exploratórias, mas distinguir o que foi observado, o que pode inspirar o projeto, o que foi descartado e o que será efetivamente investigado. As próximas entregas não devem encontrar duas orientações diferentes para a mesma decisão.
 
@@ -179,6 +197,10 @@ Não é necessário que toda recomendação tenha sido copiada de uma função e
 ## Recomendações de melhoria
 
 - **Registrar versão, plataforma e percurso observado.** Em CapCut, diferenciem a interface web inspecionada das opiniões obtidas em lojas de aplicativos móveis. Relatos mobile podem trazer pistas, mas não comprovam o comportamento da versão web. Nos demais produtos, indiquem versão quando conhecida; se não for conhecida, explicitem a limitação.
+
+> **✅ Como foi tratado por Giovanni** ([`c8100fd`](https://github.com/p4cs-974/projeto-ihc/commit/c8100fde8d1a3db20b0f2884a39a4465eff3181f)): Cabeçalhos de C01/C02 distinguem data de acesso, versão desconhecida e plataforma observável. O modelo de acesso remete à tabela já existente. Não foram inventados testes ou versões.
+>
+> \- Giovanni
 
   > **✅ Como foi tratado** ([`930b3c2`](https://github.com/p4cs-974/projeto-ihc/commit/930b3c2)): C03, C04 e C05 ganharam a linha **Versão e plataforma** no cabeçalho: CapCut para navegador, com versão não exibida; Final Cut Pro para Mac, com versão não identificada; Cap Desktop 0.5.9 e CLI 0.1.0 em macOS. Em C03, as avaliações das lojas passaram a ser apresentadas como relatos dos aplicativos móveis, que servem como pistas e não comprovam o comportamento da versão web. As versões de C01, C02, C06 e C07 ficam com seus autores.
   >
