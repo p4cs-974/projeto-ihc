@@ -1,8 +1,8 @@
 # Entrega 4 — Cenários de análise/problema
 
 **Data:** 17/09/2026 (versão original)  
-**Revisão:** 07/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md) em C01 (Pedro) e C02 (Lucas)  
-**Status:** 🟨 C01 e C02 revisados após o feedback; C03 aguarda Giovanni; cenários desenvolvidos como hipótese
+**Revisão:** 14/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md) nas partes de Giovanni  
+**Status:** 🟩 revisão documental do feedback concluída em C01, C02 e C03; cenários hipotéticos, ainda sem validação com usuários
 **Responsabilidade:** 1 análise de cenário por integrante
 
 **OBS: O Histórico de commits recentes pode parecer um pouco "bagunçado", foi analisado 1 cenário por integrante conforme as personas desenvolvidas na entrega 03**
@@ -284,3 +284,5 @@ Checklist da equipe. Os três cenários (C01, C02 e C03) contêm narrativa refin
 - 13/10/2026: Pedro Alexandre Custódio Silva vinculou as implicações de C01 à modelagem de T01, explicitando o uso proposto, a correção externa e a retomada H41. Narrativa atual preservada; hipóteses continuam abertas.
 
 - 13/10/2026: AC-066 aplicado nas implicações de C02/C03: referências futuras substituídas pelos modelos existentes de T02 e T01/T03, com autoria, datas e limites; A01 permanece pendente. Explicitada a necessidade de armazenamento local na aplicação a P03, em coerência com AC-068/H37. Narrativas atuais dos cenários preservadas.
+
+- 14/10/2026: C03 revisado com questões numeradas e lacunas explícitas, categorias distintas, sintomas sem diagnóstico, desfecho sem solução presumida e investigação na seção 2.2; sincronizado com P03/H42 e T01/T03. Responsável: Giovanni Chahin Morassi. Hipóteses permanecem abertas; sem validação empírica ou aprovação do professor inferidas.

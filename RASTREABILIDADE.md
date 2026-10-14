@@ -137,6 +137,7 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 | 07/10/2026 | Revisão da Entrega 4 em C02 por Lucas: questões de refinamento numeradas de 1 a 7 com a coluna "Já informado", narrativa com respostas entre colchetes ([1] a [7]), separação estrita de ações observáveis e eventos externos, desfecho estruturado (concluído, pendente e avaliação), necessidades derivadas sem solução presumida, hipóteses H40 e H41 no cabeçalho e aspectos a investigar preenchidos na seção 2.2. O recorte de IHC não mudou: P02 atua como persona atendida fora da interface | Feedback do professor da Entrega 04 e análise de coerência | Entrega 4, C02; seção 2.2 desta matriz | Lucas |
 | 14/10/2026 | Revisadas evidências, legendas e limites de C01/C02; lições alinhadas a RC05/RC08/RC12 e versões declaradas como desconhecidas quando não comprovadas. O recorte de IHC foi preservado | [Feedback da Entrega 02](feedbacks_professor/Feedback_Professor_Entrega02_Equipe16.md) | Entrega 2; matriz de rastreabilidade | Giovanni |
 | 14/10/2026 | P03 caracterizada com idade de 19 anos, biografia hipotética e H42; contexto e idade do mapa sincronizados; representação temporal delimitada como hipótese de revisão. O recorte de IHC foi preservado | [Feedback da Entrega 03](feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md) | Entrega 3; matriz de rastreabilidade | Giovanni |
+| 14/10/2026 | C03 revisado com questões numeradas e lacunas explícitas, categorias distintas, sintomas sem diagnóstico, desfecho sem solução presumida e investigação na seção 2.2; sincronizado com P03/H42 e T01/T03. O recorte de IHC foi preservado | [Feedback da Entrega 04](feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md) | Entrega 4; matriz de rastreabilidade | Giovanni |
 
 ## Como usar
 
@@ -188,3 +189,5 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 - 14/10/2026: Entrega 2, revisão de Giovanni. Revisadas evidências, legendas e limites de C01/C02; lições alinhadas a RC05/RC08/RC12 e versões declaradas como desconhecidas quando não comprovadas. Hipóteses abertas, sem validação empírica.
 
 - 14/10/2026: Entrega 3, revisão de Giovanni. P03 caracterizada com idade de 19 anos, biografia hipotética e H42; contexto e idade do mapa sincronizados; representação temporal delimitada como hipótese de revisão. Hipóteses abertas, sem validação empírica.
+
+- 14/10/2026: Entrega 4, revisão de Giovanni. C03 revisado com questões numeradas e lacunas explícitas, categorias distintas, sintomas sem diagnóstico, desfecho sem solução presumida e investigação na seção 2.2; sincronizado com P03/H42 e T01/T03. Hipóteses abertas, sem validação empírica.
