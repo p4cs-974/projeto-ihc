@@ -1,8 +1,8 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
 **Data:** 19/08/2026 (versão original)  
-**Revisão:** 02/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe16.md)  
-**Status:** `🟨 em revisão após feedback`; partes de Pedro e do grupo revisadas; C01 e C02, de Giovanni, e C06 e C07, de Lucas, aguardam seus autores
+**Revisão:** 14/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe16.md) nas partes de Giovanni  
+**Status:** 🟨 partes de Giovanni (C01/C02), Pedro e síntese revisadas; pendências de C06/C07 permanecem com Lucas
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -673,3 +673,7 @@ As fontes específicas estão ligadas junto às afirmações e figuras de cada a
 - [x] Opiniões de UX têm fonte e os materiais promocionais estão identificados como limitação.
 - [x] A síntese compara critérios comuns e produz recomendações.
 - [x] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
+
+## Histórico de revisões
+
+- 14/10/2026: Revisadas evidências, legendas e limites de C01/C02; lições alinhadas a RC05/RC08/RC12 e versões declaradas como desconhecidas quando não comprovadas. Responsável: Giovanni Chahin Morassi. Hipóteses permanecem abertas; sem validação empírica ou aprovação do professor inferidas.
