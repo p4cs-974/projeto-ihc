@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protótipo interativo · Entrega 06</title>
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --panel: #171717;
+    --panel-2: #222;
+    --line: rgba(255, 255, 255, .12);
+    --text: #f3f3f3;
+    --muted: #9b9b9b;
+    --danger: #f87171;
+    --radius: 14px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.4 var(--font);
+  }
+  button, input, select { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  button:disabled { cursor: default; }
+  :focus { outline: none; }
+  :focus-visible { outline: 2px solid #f3f3f3; outline-offset: 2px; }
+  .sr {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+  }
+  .app { min-height: 100%; display: grid; grid-template-columns: 240px 1fr; }
+  .banner {
+    grid-column: 1 / -1;
+    background: #141414;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+  .side {
+    display: flex; flex-direction: column; gap: 8px;
+    padding: 16px 12px;
+    border-right: 1px solid var(--line);
+    background: #111;
+  }
+  .side-kicker { margin: 0 8px 8px; color: var(--muted); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+  .steps { display: flex; flex-direction: column; gap: 4px; }
+  .step {
+    display: flex; align-items: center; gap: 10px;
+    width: 100%; text-align: left;
+    background: transparent; border: 1px solid transparent; border-radius: 12px;
+    padding: 8px; color: var(--text);
+  }
+  .step:hover:not(:disabled) { background: #1c1c1c; }
+  .step.on { background: var(--panel-2); border-color: var(--line); }
+  .step:disabled { opacity: .38; }
+  .num {
+    flex: none; width: 26px; height: 26px; border-radius: 50%;
+    display: grid; place-items: center;
+    border: 1px solid var(--line); font-size: 12px; color: var(--muted);
+  }
+  .step.on .num { color: var(--text); border-color: #555; }
+  .step.done .num { color: #0e0e0e; background: #d8d8d8; border-color: #d8d8d8; }
+  .step-txt { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+  .step-title { font-size: 14px; }
+  .step-sub { color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .step-count {
+    flex: none; min-width: 22px; text-align: center;
+    font-size: 12px; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px; padding: 1px 6px;
+  }
+  .side-foot { margin-top: auto; padding: 12px 8px 4px; color: var(--muted); font-size: 12px; }
+  .main { min-width: 0; padding: 28px 28px 48px; }
+  .screen-h { margin: 0 0 6px; font-size: 28px; font-weight: 600; letter-spacing: -.02em; }
+  .lead { margin: 0 0 18px; color: var(--muted); }
+  .drop {
+    max-width: 640px; min-height: 280px; margin: 8px 0 16px;
+    border: 1px dashed rgba(255,255,255,.28); border-radius: var(--radius);
+    background: var(--panel);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    text-align: center; padding: 24px;
+  }
+  .drop.drag { border-color: #fff; background: #202020; }
+  .drop.disabled { opacity: .45; }
+  .drop-title { font-size: 20px; }
+  .btn {
+    background: transparent; border: 1px solid var(--line); border-radius: 999px;
+    padding: 8px 14px; color: var(--text);
+  }
+  .btn:hover:not(:disabled) { background: #262626; }
+  .btn:disabled { opacity: .4; }
+  .btn.primary { background: #f3f3f3; color: #111; border-color: #f3f3f3; }
+  .btn.primary:hover:not(:disabled) { background: #fff; }
+  .btn.small { padding: 4px 10px; font-size: 13px; }
+  .btn.danger { border-color: rgba(248,113,113,.5); color: #fecaca; }
+  .row-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .note, .msg {
+    max-width: 720px; margin: 12px 0;
+    padding: 10px 12px; border-radius: 12px;
+    border: 1px solid var(--line); background: var(--panel); color: var(--muted); font-size: 14px;
+  }
+  .msg.bad { color: #fecaca; border-color: rgba(248,113,113,.4); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+  .vcard {
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 10px; display: flex; flex-direction: column; gap: 8px; min-width: 0;
+  }
+  .vthumb {
+    position: relative; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden;
+    background: #111; border: 1px solid var(--line);
+  }
+  .vthumb img, .vthumb canvas { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .vdur {
+    position: absolute; right: 6px; bottom: 6px;
+    background: rgba(0,0,0,.72); border-radius: 6px; padding: 1px 6px; font-size: 12px;
+  }
+  .vname { font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .vmeta { color: var(--muted); font-size: 12px; }
+  .field { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+  .field input, .search, select.field-input {
+    width: 100%; background: #101010; color: var(--text);
+    border: 1px solid var(--line); border-radius: 8px; padding: 7px 8px; font-size: 14px;
+  }
+  .vcard-top { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+  .actions {
+    display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    margin-top: 18px; max-width: 1100px;
+  }
+  .empty {
+    max-width: 520px; margin: 48px auto; text-align: center;
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 36px 24px;
+  }
+  .empty p { color: var(--muted); }
+  .modal-back {
+    position: fixed; inset: 0; background: rgba(0,0,0,.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 30;
+  }
+  .modal {
+    width: min(440px, 100%); background: #1a1a1a; border: 1px solid var(--line);
+    border-radius: 16px; padding: 18px;
+  }
+  .modal h2 { margin: 0 0 8px; font-size: 18px; }
+  .modal p { margin: 0 0 16px; color: var(--muted); }
+  .toast {
+    position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+    background: #f3f3f3; color: #111; border-radius: 999px; padding: 8px 14px;
+    z-index: 40; font-size: 14px;
+  }
+  @media (max-width: 860px) {
+    .app { grid-template-columns: 1fr; }
+    .side { border-right: 0; border-bottom: 1px solid var(--line); padding: 8px; position: sticky; top: 0; z-index: 5; background: #111; }
+    .side-kicker { display: none; }
+    .steps { flex-direction: row; overflow-x: auto; }
+    .step { min-width: 168px; }
+    .side-foot { display: none; }
+    .main { padding: 18px 14px 40px; }
+    .screen-h { font-size: 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="banner" id="banner">Partidas, times, jogadores e lances são fictícios. A análise é simulada e não processa os vídeos de verdade.</div>
+  <aside class="side">
+    <p class="side-kicker">Entrega 06</p>
+    <nav class="steps" id="steps" aria-label="Etapas"></nav>
+    <p class="side-foot">Protótipo de interação, Entrega 06. Análise simulada.</p>
+  </aside>
+  <main class="main" id="main"></main>
+</div>
+<div id="modal-root"></div>
+<div id="toast" class="toast" hidden></div>
+<div id="live" class="sr" aria-live="polite"></div>
+<input id="file" type="file" accept="video/*" multiple hidden>
+<script>
+const COLORS = ['#34d399', '#60a5fa', '#fbbf24', '#f87171', '#c084fc', '#a3e635', '#fb923c', '#38bdf8'];
+const PARTIDAS = [
+  { nome: 'Atlético Vale x União Serra', a: 'Atlético Vale', b: 'União Serra', slug: 'vale_serra' },
+  { nome: 'Rio Claro x Ferroviário Sul', a: 'Rio Claro', b: 'Ferroviário Sul', slug: 'rioclaro_ferroviario' },
+  { nome: 'Real Planalto x Grêmio Litoral', a: 'Real Planalto', b: 'Grêmio Litoral', slug: 'planalto_litoral' },
+  { nome: 'Operário Norte x Nacional Campos', a: 'Operário Norte', b: 'Nacional Campos', slug: 'operario_nacional' },
+];
+const TIPOS = ['Gol', 'Finalização', 'Defesa', 'Falta', 'Cartão', 'Escanteio', 'Drible'];
+const SIGLA = { Gol: 'G', Finalização: 'F', Defesa: 'D', Falta: 'Fa', Cartão: 'C', Escanteio: 'E', Drible: 'Dr' };
+const STATUS_LABEL = { pendente: 'Pendente', detectado: '1. Detectado', extraido: '2. Extraído', trilha: '3. Na trilha' };
+const ROUTES = [
+  { id: 'enviar', n: '1', title: 'Enviar vídeos' },
+  { id: 'selecionados', n: '2', title: 'Vídeos selecionados' },
+  { id: 'analise', n: '3', title: 'Análise' },
+  { id: 'base', n: '4', title: 'Base de highlights' },
+];
+
+let seq = 1;
+const S = {
+  videos: [],
+  msg: '',
+  msgBad: false,
+  modal: null,
+  toast: '',
+  q: '',
+  view: 'mapa',
+  tipoOn: new Set(),
+  partidaFilter: '',
+  detailId: null,
+  focusId: null,
+  sim: {
+    started: false,
+    running: false,
+    paused: false,
+    speed: 1,
+    clock: 0,
+    queue: [],
+    slots: [null, null],
+    slotStart: [0, 0],
+    progress: {},
+    state: {},
+    flashes: [{ text: '', until: 0 }, { text: '', until: 0 }],
+  },
+};
+
+const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+}
+function fmtTC(sec) {
+  sec = Math.max(0, Number(sec) || 0);
+  const h = Math.floor(sec / 3600);
+  const m = Math.floor((sec % 3600) / 60);
+  const s = Math.floor(sec % 60);
+  if (h) return h + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+  return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+}
+function fmtSize(n) {
+  n = Number(n) || 0;
+  if (n < 1024) return n + ' B';
+  if (n < 1048576) return Math.round(n / 1024) + ' KB';
+  if (n < 1073741824) return (n / 1048576).toFixed(n >= 10485760 ? 0 : 1) + ' MB';
+  return (n / 1073741824).toFixed(2) + ' GB';
+}
+function videoById(id) { return S.videos.find(v => v.id === id); }
+function allHls() { return S.videos.flatMap(v => v.hls); }
+function readyVideos() { return S.videos.filter(v => v.status === 'ready'); }
+function say(text) { document.getElementById('live').textContent = text; }
+
+function makeRng(seed) {
+  let s = seed;
+  const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  const pick = a => a[Math.floor(rnd() * a.length)];
+  return { rnd, pick };
+}
+
+function pushHighlight(v, tMin, tipo, time, jogador, minuto, dur, teams) {
+  v.hls.push({
+    id: 'h' + (seq++),
+    videoId: v.id,
+    t: tMin,
+    tipo, time, jogador, minuto, dur,
+    status: 'pendente',
+    at: 0,
+    sel: false,
+  });
+}
+
+/* Mesmo gerador do protótipo de baixa fidelidade: semente 11, Park-Miller. */
+function buildMockVideos() {
+  const { rnd, pick } = makeRng(11);
+  const tipoBag = ['Gol', 'Gol', 'Finalização', 'Finalização', 'Finalização', 'Defesa', 'Falta', 'Cartão', 'Escanteio', 'Drible'];
+  const out = [];
+  PARTIDAS.forEach((p, i) => {
+    [1, 2].forEach(tempo => {
+      const k = i * 2 + tempo - 1;
+      const durMin = 46 + (k % 3);
+      const v = {
+        id: 'mock-' + p.slug + '-' + tempo,
+        mock: true,
+        nome: p.slug + '_' + tempo + 'T.mp4',
+        partida: p.nome,
+        tempo,
+        teams: [p.a, p.b],
+        durMin,
+        durationSec: durMin * 60,
+        size: Math.round(durMin * 22.5 * 1024 * 1024),
+        color: COLORS[k],
+        status: 'ready',
+        thumb: '',
+        url: '',
+        hls: [],
+        failKey: p.slug === 'planalto_litoral' && tempo === 2,
+        retried: false,
+        error: '',
+      };
+      const n = 3 + Math.floor(rnd() * 3);
+      const times = Array.from({ length: n }, () => 2 + rnd() * (durMin - 4)).sort((a, b) => a - b);
+      times.forEach(t => {
+        const tipo = pick(tipoBag);
+        const m = Math.floor(t) + 1;
+        const base = tempo === 1 ? 0 : 45;
+        const minuto = m > 45 ? (base + 45) + '+' + (m - 45) + "'" : (base + m) + "'";
+        const time = rnd() < .5 ? p.a : p.b;
+        const jogador = 'Camisa ' + (tipo === 'Defesa' ? 1 : pick([5, 7, 8, 9, 10, 11]));
+        const dur = 8 + Math.floor(rnd() * 18);
+        pushHighlight(v, t, tipo, time, jogador, minuto, dur);
+      });
+      v.thumb = mockThumb(v.color);
+      out.push(v);
+    });
+  });
+  return out;
+}
+
+function hashSeed(str) {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  h = Math.abs(h) % 2147483646;
+  return h < 2 ? 2 : h;
+}
+
+function makeRealHighlights(v) {
+  const { rnd, pick } = makeRng(hashSeed(v.nome + ':' + v.size + ':' + Math.round(v.durationSec || 0)));
+  const n = 2 + Math.floor(rnd() * 5);
+  const durMin = Math.max(0.2, (v.durationSec || 1) / 60);
+  const span = Math.max(0.02, durMin - 0.08);
+  const times = Array.from({ length: n }, () => 0.02 + rnd() * span).sort((a, b) => a - b);
+  v.hls = [];
+  times.forEach(t => {
+    const tipo = pick(TIPOS);
+    const dur = Math.min(8 + Math.floor(rnd() * 18), Math.max(4, Math.floor(v.durationSec - t * 60 - 0.3)));
+    const time = rnd() < .5 ? 'Time A' : 'Time B';
+    const jogador = 'Camisa ' + (tipo === 'Defesa' ? 1 : pick([5, 7, 8, 9, 10, 11]));
+    pushHighlight(v, t, tipo, time, jogador, fmtTC(t * 60), Math.max(4, dur));
+  });
+}
+
+function drawPitch(canvas, color, seconds, still) {
+  const ctx = canvas.getContext('2d');
+  const w = canvas.width, h = canvas.height;
+  ctx.clearRect(0, 0, w, h);
+  ctx.fillStyle = '#102418';
+  ctx.fillRect(0, 0, w, h);
+  ctx.save();
+  ctx.globalAlpha = 0.22;
+  ctx.fillStyle = color;
+  for (let i = 0; i < 8; i += 2) ctx.fillRect(0, (h / 8) * i, w, h / 8);
+  ctx.restore();
+  const x0 = w * 0.06, y0 = h * 0.08, pw = w * 0.88, ph = h * 0.84;
+  ctx.strokeStyle = 'rgba(255,255,255,.8)';
+  ctx.lineWidth = Math.max(1, w / 180);
+  ctx.strokeRect(x0, y0, pw, ph);
+  ctx.beginPath();
+  ctx.moveTo(x0 + pw / 2, y0);
+  ctx.lineTo(x0 + pw / 2, y0 + ph);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(x0 + pw / 2, y0 + ph / 2, Math.min(pw, ph) * 0.14, 0, Math.PI * 2);
+  ctx.stroke();
+  const boxW = pw * 0.16, boxH = ph * 0.42;
+  ctx.strokeRect(x0, y0 + (ph - boxH) / 2, boxW, boxH);
+  ctx.strokeRect(x0 + pw - boxW, y0 + (ph - boxH) / 2, boxW, boxH);
+  const home = [
+    [.08, .5], [.22, .18], [.22, .38], [.22, .62], [.22, .82],
+    [.38, .22], [.4, .42], [.4, .58], [.38, .78], [.52, .36], [.52, .64],
+  ];
+  const away = home.map(([x, y]) => [1 - x, y]);
+  const t = still || reducedMotion() ? 0 : seconds;
+  const amp = still || reducedMotion() ? 0 : 1;
+  function dots(list, fill, shift) {
+    list.forEach(([px, py], i) => {
+      const x = x0 + (px + Math.sin(t * 0.8 + i + shift) * 0.012 * amp) * pw;
+      const y = y0 + (py + Math.cos(t * 0.62 + i * 1.2) * 0.016 * amp) * ph;
+      ctx.beginPath();
+      ctx.fillStyle = fill;
+      ctx.arc(x, y, Math.max(3, w / 70), 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
+  dots(home, '#f4f4f5', 0);
+  dots(away, color, 3);
+  const bx = still || reducedMotion()
+    ? x0 + pw * (0.15 + 0.7 * ((seconds % 90) / 90))
+    : x0 + pw * (0.5 + Math.sin(t * 0.37) * 0.28 + Math.sin(t * 0.13) * 0.06);
+  const by = still || reducedMotion()
+    ? y0 + ph * 0.5
+    : y0 + ph * (0.5 + Math.cos(t * 0.29) * 0.22);
+  ctx.beginPath();
+  ctx.fillStyle = '#f8fafc';
+  ctx.arc(bx, by, Math.max(2.5, w / 90), 0, Math.PI * 2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.strokeStyle = '#111';
+  ctx.lineWidth = 1;
+  ctx.arc(bx, by, Math.max(2.5, w / 90), 0, Math.PI * 2);
+  ctx.stroke();
+}
+
+function mockThumb(color) {
+  const c = document.createElement('canvas');
+  c.width = 320;
+  c.height = 180;
+  drawPitch(c, color, 18, true);
+  return c.toDataURL('image/jpeg', 0.72);
+}
+
+function routeId() {
+  const h = (location.hash || '').replace(/^#\/?/, '');
+  return ROUTES.some(r => r.id === h) ? h : 'enviar';
+}
+function reachable(id) {
+  if (id === 'enviar') return true;
+  if (id === 'selecionados') return S.videos.length > 0;
+  return S.sim.started;
+}
+function go(id) {
+  if (!ROUTES.some(r => r.id === id)) return;
+  if (!reachable(id)) return;
+  const hash = '#/' + id;
+  if (location.hash !== hash) location.hash = hash;
+  else paint();
+}
+
+function stepInfo() {
+  const n = S.videos.length;
+  const ready = readyVideos().length;
+  const done = S.videos.filter(v => S.sim.state[v.id] === 'concluido').length;
+  const failed = S.videos.filter(v => S.sim.state[v.id] === 'falhou').length;
+  const onTrack = allHls().filter(h => h.status === 'trilha').length;
+  const detected = allHls().filter(h => h.status !== 'pendente').length;
+  let analiseSub = 'aguardando';
+  if (S.sim.started && S.sim.running) analiseSub = S.sim.paused ? 'pausada' : 'em andamento';
+  else if (S.sim.started) analiseSub = failed ? 'encerrada com falha' : 'encerrada';
+  return {
+    enviar: { sub: n ? n + ' vídeo(s)' : 'nenhum arquivo', count: n || '', done: n > 0 },
+    selecionados: { sub: n ? ready + ' pronto(s)' : '—', count: n || '', done: S.sim.started },
+    analise: {
+      sub: analiseSub,
+      count: S.sim.started ? done + '/' + S.videos.length : '',
+      done: S.sim.started && !S.sim.running && S.videos.length > 0 && S.videos.every(v => S.sim.state[v.id] === 'concluido'),
+    },
+    base: { sub: S.sim.started ? onTrack + ' na trilha' : '—', count: detected || '', done: false },
+  };
+}
+
+function renderSteps() {
+  const cur = routeId();
+  const info = stepInfo();
+  document.getElementById('steps').innerHTML = ROUTES.map(r => {
+    const meta = info[r.id];
+    const dis = !reachable(r.id);
+    return '<button type="button" class="step' + (cur === r.id ? ' on' : '') + (meta.done ? ' done' : '') + '" data-act="goto" data-route="' + r.id + '"'
+      + (dis ? ' disabled' : '') + (cur === r.id ? ' aria-current="page"' : '') + '>'
+      + '<span class="num">' + (meta.done ? '✓' : r.n) + '</span>'
+      + '<span class="step-txt"><span class="step-title">' + esc(r.title) + '</span><span class="step-sub">' + esc(meta.sub) + '</span></span>'
+      + (meta.count !== '' && meta.count != null ? '<span class="step-count">' + esc(meta.count) + '</span>' : '')
+      + '</button>';
+  }).join('');
+}
+
+function emptyState(title, text, label, dest) {
+  const btn = label && dest && reachable(dest)
+    ? '<button type="button" class="btn primary" data-act="goto" data-route="' + dest + '">' + esc(label) + '</button>'
+    : '';
+  return '<div class="empty"><h1 class="screen-h">' + esc(title) + '</h1><p>' + esc(text) + '</p>' + btn + '</div>';
+}
+
+function viewEnviar() {
+  const locked = S.sim.running;
+  return '<h1 class="screen-h">Enviar vídeos</h1>'
+    + '<p class="lead">Arraste os arquivos da partida ou carregue um conjunto fictício para percorrer o fluxo.</p>'
+    + (locked ? '<p class="note">A análise está em andamento. Cancele a análise para enviar outros vídeos.</p>' : '')
+    + '<div id="drop" class="drop' + (locked ? ' disabled' : '') + '" tabindex="0" role="button" aria-disabled="' + (locked ? 'true' : 'false') + '">'
+    + '<div class="drop-title">Arraste ou selecione os vídeos</div>'
+    + '<div class="vmeta">Arquivos de vídeo. O mesmo nome e tamanho não entra duas vezes.</div>'
+    + '<button type="button" class="btn" data-act="pick" ' + (locked ? 'disabled' : '') + '>Selecionar arquivos</button>'
+    + '</div>'
+    + '<div class="row-actions"><button type="button" class="btn primary" data-act="examples" ' + (locked ? 'disabled' : '') + '>Usar vídeos de exemplo</button></div>'
+    + (S.msg ? '<p class="msg' + (S.msgBad ? ' bad' : '') + '">' + esc(S.msg) + '</p>' : '');
+}
+
+function viewSelecionados() {
+  if (!S.videos.length) {
+    return emptyState('Vídeos selecionados', 'Nenhum vídeo selecionado.', 'Enviar vídeos', 'enviar');
+  }
+  const locked = S.sim.running;
+  const reading = S.videos.some(v => v.status === 'reading');
+  const ready = readyVideos().length;
+  const partidas = new Set(S.videos.map(v => v.partida || 'Sem partida')).size;
+  const label = S.sim.started ? 'Reiniciar análise' : 'Iniciar análise';
+  const cards = S.videos.map(v => {
+    const thumb = v.thumb
+      ? '<img alt="" src="' + v.thumb + '">'
+      : '<canvas width="320" height="180" data-color="' + esc(v.color) + '"></canvas>';
+    const stateLine = v.status === 'reading'
+      ? 'Lendo duração e miniatura…'
+      : v.status === 'error'
+        ? esc(v.error || 'Não foi possível ler este vídeo.')
+        : esc(fmtTC(v.durationSec)) + ' · ' + esc(fmtSize(v.size));
+    return '<article class="vcard">'
+      + '<div class="vthumb" style="box-shadow: inset 0 0 0 2px ' + esc(v.color) + '">' + thumb
+      + (v.durationSec ? '<span class="vdur">' + esc(fmtTC(v.durationSec)) + '</span>' : '') + '</div>'
+      + '<div class="vcard-top"><div class="vname" title="' + esc(v.nome) + '">' + esc(v.nome) + '</div>'
+      + '<button type="button" class="btn small" data-act="remove" data-id="' + esc(v.id) + '"' + (locked ? ' disabled' : '') + '>Remover</button></div>'
+      + '<div class="vmeta">' + stateLine + '</div>'
+      + '<label class="field">Partida<input id="partida-' + esc(v.id) + '" data-act="partida" data-id="' + esc(v.id) + '" value="' + esc(v.partida) + '" maxlength="80"' + (v.status === 'reading' ? ' disabled' : '') + '></label>'
+      + '</article>';
+  }).join('');
+  return '<h1 class="screen-h">Vídeos selecionados</h1>'
+    + '<p class="lead">' + S.videos.length + ' vídeo(s) de ' + partidas + ' partida(s). O campo Partida agrupa os lances na base.</p>'
+    + (locked ? '<p class="note">A análise está em andamento. Remover ou acrescentar vídeos fica desligado até cancelar ou terminar.</p>' : '')
+    + (S.msg ? '<p class="msg' + (S.msgBad ? ' bad' : '') + '">' + esc(S.msg) + '</p>' : '')
+    + '<div class="grid">' + cards + '</div>'
+    + '<div class="actions"><button type="button" class="btn" data-act="pick"' + (locked ? ' disabled' : '') + '>Adicionar vídeos</button>'
+    + '<button type="button" class="btn primary" data-act="start"' + (reading || ready === 0 || locked ? ' disabled' : '') + '>' + label + '</button></div>'
+    + (reading ? '<p class="note">Iniciar análise fica desligado enquanto algum arquivo ainda está sendo lido.</p>' : '');
+}
+
+function viewAnalise() {
+  if (!S.sim.started) {
+    const dest = S.videos.length ? 'selecionados' : 'enviar';
+    const label = S.videos.length ? 'Ver vídeos selecionados' : 'Enviar vídeos';
+    return emptyState('Análise', 'A análise ainda não começou.', label, dest);
+  }
+  return '<h1 class="screen-h">Análise</h1><div class="empty"><p>A simulação da análise entra na próxima etapa deste protótipo. Os vídeos já estão na fila.</p>'
+    + '<button type="button" class="btn" data-act="goto" data-route="base">Abrir base de highlights</button></div>';
+}
+
+function viewBase() {
+  if (!S.sim.started) {
+    const dest = S.videos.length ? 'selecionados' : 'enviar';
+    const label = S.videos.length ? 'Ver vídeos selecionados' : 'Enviar vídeos';
+    return emptyState('Base de highlights', 'A base recebe os lances depois que a análise começa.', label, dest);
+  }
+  const n = allHls().filter(h => h.status !== 'pendente').length;
+  return '<h1 class="screen-h">Base de highlights</h1><div class="empty"><p>'
+    + (n ? n + ' lance(s) já detectados.' : 'Nenhum lance na base ainda.')
+    + '</p><button type="button" class="btn primary" data-act="goto" data-route="analise">Voltar à análise</button></div>';
+}
+
+const VIEWS = { enviar: viewEnviar, selecionados: viewSelecionados, analise: viewAnalise, base: viewBase };
+let mounted = '';
+
+function paint(force) {
+  const id = routeId();
+  renderSteps();
+  renderModal();
+  if (!force && mounted === id && (id === 'analise' || id === 'base') && S.sim.started && document.getElementById('screen-root')) {
+    return;
+  }
+  const main = document.getElementById('main');
+  const active = document.activeElement;
+  const focusKey = active && active.id ? active.id : '';
+  const selStart = active && typeof active.selectionStart === 'number' ? active.selectionStart : null;
+  const scroll = main.scrollTop;
+  main.innerHTML = '<div id="screen-root">' + VIEWS[id]() + '</div>';
+  mounted = id;
+  document.querySelectorAll('.vthumb canvas').forEach(c => drawPitch(c, c.dataset.color || '#888', 12, true));
+  if (focusKey) {
+    const el = document.getElementById(focusKey);
+    if (el) {
+      el.focus();
+      if (selStart != null && el.setSelectionRange) {
+        const pos = Math.min(selStart, el.value.length);
+        el.setSelectionRange(pos, pos);
+      }
+    }
+  }
+  if (scroll) main.scrollTop = scroll;
+}
+
+function renderModal() {
+  const root = document.getElementById('modal-root');
+  if (!S.modal) { root.innerHTML = ''; return; }
+  const restart = S.modal === 'restart';
+  root.innerHTML = '<div class="modal-back" data-act="modal-dismiss"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">'
+    + '<h2 id="modal-title">' + (restart ? 'Reiniciar análise?' : 'Cancelar análise?') + '</h2>'
+    + '<p>' + (restart
+      ? 'A simulação volta ao início. Cortes marcados para download são desmarcados.'
+      : 'O progresso simulado é descartado e a tela volta para os vídeos selecionados.') + '</p>'
+    + '<div class="row-actions"><button type="button" class="btn" data-act="modal-dismiss">Voltar</button>'
+    + '<button type="button" class="btn ' + (restart ? 'primary' : 'danger') + '" data-act="modal-ok">'
+    + (restart ? 'Reiniciar análise' : 'Cancelar análise') + '</button></div></div></div>';
+  const ok = root.querySelector('[data-act="modal-ok"]');
+  if (ok) ok.focus();
+}
+
+function toast(msg) {
+  S.toast = msg;
+  const el = document.getElementById('toast');
+  el.hidden = false;
+  el.textContent = msg;
+  say(msg);
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => { el.hidden = true; S.toast = ''; }, 2400);
+}
+
+function resetHighlights() {
+  S.videos.forEach(v => {
+    v.retried = false;
+    v.hls.forEach(h => { h.status = 'pendente'; h.at = 0; h.sel = false; });
+  });
+  const sim = S.sim;
+  sim.clock = 0;
+  sim.queue = [];
+  sim.slots = [null, null];
+  sim.slotStart = [0, 0];
+  sim.progress = {};
+  sim.state = {};
+  sim.flashes = [{ text: '', until: 0 }, { text: '', until: 0 }];
+  sim.paused = false;
+  sim.running = false;
+  S.focusId = null;
+}
+
+function beginSim() {
+  resetHighlights();
+  const ready = readyVideos();
+  ready.forEach(v => {
+    S.sim.state[v.id] = 'fila';
+    S.sim.progress[v.id] = 0;
+    S.sim.queue.push(v.id);
+  });
+  S.sim.started = true;
+  S.sim.running = false;
+  S.detailId = null;
+  mounted = '';
+  go('analise');
+  say('Análise iniciada.');
+}
+
+function addMockVideos() {
+  if (S.sim.running) return;
+  const mocks = buildMockVideos();
+  let added = 0;
+  let skipped = 0;
+  mocks.forEach(v => {
+    if (S.videos.some(x => x.nome === v.nome && x.size === v.size)) { skipped++; return; }
+    S.videos.push(v);
+    added++;
+  });
+  S.msgBad = false;
+  const entrou = added === 1 ? 'Entrou 1 vídeo de exemplo.' : 'Entraram ' + added + ' vídeos de exemplo.';
+  const ja = skipped === 1 ? ' 1 já estava na lista.' : skipped ? ' ' + skipped + ' já estavam na lista.' : '';
+  S.msg = added ? entrou + ja : 'Os 8 vídeos de exemplo já estavam na lista.';
+  say(S.msg);
+  if (S.videos.length) go('selecionados');
+  else paint(true);
+}
+
+function addFiles(list) {
+  if (S.sim.running) return;
+  const notes = [];
+  let bad = false;
+  let added = 0;
+  Array.from(list || []).forEach(file => {
+    const typeOk = (file.type || '').startsWith('video/') || /\.(mp4|webm|mov|mkv|ogg|m4v|ogv)$/i.test(file.name);
+    if (!typeOk) {
+      bad = true;
+      notes.push(file.name + ' não é um vídeo e foi recusado.');
+      return;
+    }
+    if (S.videos.some(v => v.nome === file.name && v.size === file.size)) {
+      notes.push(file.name + ' já estava na lista.');
+      return;
+    }
+    const v = {
+      id: 'file-' + (seq++),
+      mock: false,
+      nome: file.name,
+      partida: file.name.replace(/\.[^.]+$/, '') || 'Partida não informada',
+      tempo: null,
+      teams: ['Time A', 'Time B'],
+      durMin: 0,
+      durationSec: 0,
+      size: file.size,
+      color: COLORS[S.videos.length % COLORS.length],
+      status: 'reading',
+      thumb: '',
+      url: URL.createObjectURL(file),
+      hls: [],
+      failKey: false,
+      retried: false,
+      error: '',
+    };
+    S.videos.push(v);
+    added++;
+    readFile(v);
+  });
+  S.msg = notes.join(' ');
+  S.msgBad = bad;
+  if (notes.length) say(notes.join(' '));
+  if (added && routeId() === 'enviar') go('selecionados');
+  else paint(true);
+}
+
+function readFile(v) {
+  const el = document.createElement('video');
+  el.preload = 'auto';
+  el.muted = true;
+  el.playsInline = true;
+  let settled = false;
+  const fail = (message) => {
+    if (settled) return;
+    settled = true;
+    v.status = 'error';
+    v.error = message;
+    paint(true);
+    say(v.nome + ': ' + message);
+  };
+  const timer = setTimeout(() => fail('Não foi possível ler este vídeo.'), 8000);
+  el.addEventListener('error', () => { clearTimeout(timer); fail('Não foi possível ler este vídeo.'); });
+  el.addEventListener('loadedmetadata', () => {
+    const dur = el.duration;
+    if (!Number.isFinite(dur) || dur <= 0) { clearTimeout(timer); fail('Não foi possível ler a duração.'); return; }
+    v.durationSec = dur;
+    v.durMin = dur / 60;
+    const t = Math.min(Math.max(dur * 0.1, 0), Math.max(dur - 0.05, 0));
+    try { el.currentTime = t; } catch (err) { clearTimeout(timer); fail('Não foi possível ler este vídeo.'); }
+  });
+  el.addEventListener('seeked', () => {
+    if (settled) return;
+    try {
+      const c = document.createElement('canvas');
+      c.width = 320; c.height = 180;
+      c.getContext('2d').drawImage(el, 0, 0, 320, 180);
+      v.thumb = c.toDataURL('image/jpeg', 0.72);
+      makeRealHighlights(v);
+      v.status = 'ready';
+      settled = true;
+      clearTimeout(timer);
+      paint(true);
+    } catch (err) {
+      clearTimeout(timer);
+      fail('Não foi possível gerar a miniatura.');
+    }
+  });
+  el.src = v.url;
+}
+
+function removeVideo(id) {
+  if (S.sim.running) return;
+  const v = videoById(id);
+  if (!v) return;
+  if (v.url) URL.revokeObjectURL(v.url);
+  S.videos = S.videos.filter(x => x.id !== id);
+  if (S.detailId && !allHls().some(h => h.id === S.detailId)) S.detailId = null;
+  say(v.nome + ' removido.');
+  if (!S.videos.length) go('enviar');
+  else paint(true);
+}
+
+function onStart() {
+  if (S.sim.running) return;
+  if (S.videos.some(v => v.status === 'reading')) return;
+  if (!readyVideos().length) return;
+  if (S.sim.started) { S.modal = 'restart'; renderModal(); return; }
+  beginSim();
+}
+
+document.addEventListener('click', e => {
+  const el = e.target.closest?.('[data-act]');
+  if (!el) {
+    if (e.target.id === 'drop' || e.target.closest?.('#drop')) {
+      if (!S.sim.running) document.getElementById('file').click();
+    }
+    return;
+  }
+  const act = el.dataset.act;
+  if (act === 'goto') go(el.dataset.route);
+  else if (act === 'pick') { if (!S.sim.running) document.getElementById('file').click(); }
+  else if (act === 'examples') addMockVideos();
+  else if (act === 'remove') removeVideo(el.dataset.id);
+  else if (act === 'start') onStart();
+  else if (act === 'modal-dismiss') { S.modal = null; renderModal(); }
+  else if (act === 'modal-ok') {
+    const kind = S.modal;
+    S.modal = null;
+    renderModal();
+    if (kind === 'restart') beginSim();
+  }
+});
+
+document.addEventListener('input', e => {
+  const el = e.target.closest?.('[data-act="partida"]');
+  if (!el) return;
+  const v = videoById(el.dataset.id);
+  if (v) v.partida = el.value;
+});
+
+document.addEventListener('change', e => {
+  if (e.target.id !== 'file') return;
+  addFiles(e.target.files);
+  e.target.value = '';
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && S.modal) { S.modal = null; renderModal(); return; }
+  const drop = e.target.closest?.('#drop');
+  if (drop && (e.key === 'Enter' || e.key === ' ')) {
+    e.preventDefault();
+    if (!S.sim.running) document.getElementById('file').click();
+  }
+});
+
+document.addEventListener('dragover', e => {
+  if (![...e.dataTransfer?.types || []].includes('Files')) return;
+  e.preventDefault();
+  const drop = e.target.closest?.('#drop');
+  document.querySelectorAll('.drop').forEach(d => d.classList.remove('drag'));
+  if (drop && !S.sim.running) drop.classList.add('drag');
+});
+document.addEventListener('dragleave', e => {
+  const drop = e.target.closest?.('#drop');
+  if (drop && !drop.contains(e.relatedTarget)) drop.classList.remove('drag');
+});
+document.addEventListener('drop', e => {
+  if (![...e.dataTransfer?.types || []].includes('Files')) return;
+  e.preventDefault();
+  document.querySelectorAll('.drop').forEach(d => d.classList.remove('drag'));
+  if (e.target.closest?.('#drop') && !S.sim.running) addFiles(e.dataTransfer.files);
+});
+
+window.addEventListener('hashchange', () => { mounted = ''; paint(true); });
+
+if (!location.hash) location.replace('#/enviar');
+paint(true);
+window.__S = S;
+window.__buildMockVideos = buildMockVideos;
+</script>
+</body>
+</html>
