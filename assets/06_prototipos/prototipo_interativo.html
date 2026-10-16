@@ -271,7 +271,7 @@
     .screen-h { font-size: 24px; }
     .previews { grid-template-columns: 1fr; }
     .handle { height: 72px; min-height: 0; top: auto; bottom: 12px; transform: none; }
-    .analise { padding-right: 0; padding-bottom: 64px; }
+    .analise { padding-right: 0; padding-bottom: 108px; }
     .base-body { grid-template-columns: 1fr; }
     .detail { position: static; }
   }
@@ -287,7 +287,7 @@
 </head>
 <body>
 <div class="app">
-  <div class="banner" id="banner">Partidas, times, jogadores e lances são fictícios. A análise é simulada e não processa os vídeos de verdade.</div>
+  <div class="banner" id="banner">Protótipo de interação, Entrega 06. Análise simulada. Partidas, times, jogadores e lances são fictícios; nenhum vídeo é processado de verdade.</div>
   <aside class="side">
     <p class="side-kicker">Entrega 06</p>
     <nav class="steps" id="steps" aria-label="Etapas"></nav>
@@ -988,6 +988,14 @@ document.addEventListener('click', e => {
   }
   else if (act === 'see') { S.focusId = el.dataset.id; go('analise'); }
   else if (act === 'download') downloadCSV();
+  else if (act === 'clear-filters') {
+    S.tipoOn.clear();
+    S.partidaFilter = '';
+    S.q = '';
+    const q = document.getElementById('q');
+    if (q) q.value = '';
+    patchBase();
+  }
   else if (act === 'sel' || act === 'sel-all') return;
 });
 
@@ -1552,7 +1560,9 @@ function renderLista() {
   const table = rows.length
     ? '<div class="table-wrap"><table class="list-table"><thead><tr><th><input type="checkbox" data-act="sel-all"' + (allOn ? ' checked' : '') + (selectable.length ? '' : ' disabled') + ' aria-label="Selecionar lances visíveis na trilha"></th><th></th><th>Lance</th><th>Partida</th><th>Instante</th><th>Duração</th><th>Estado</th></tr></thead><tbody>' + body + '</tbody></table></div>'
     : '<div class="empty"><p>' + (visibleHls().length ? 'Nenhum lance com esses filtros.' : 'Nenhum lance detectado ainda.') + '</p>'
-      + (visibleHls().length ? '' : '<button type="button" class="btn primary" data-act="goto" data-route="analise">Voltar à análise</button>') + '</div>';
+      + (visibleHls().length
+        ? '<button type="button" class="btn" data-act="clear-filters">Limpar filtros</button>'
+        : '<button type="button" class="btn primary" data-act="goto" data-route="analise">Voltar à análise</button>') + '</div>';
   return '<div class="filters"><div class="row-actions">' + (chips || '<span class="vmeta">Sem tipos ainda</span>') + '</div>' + select + '</div>' + table;
 }
 function renderDetail() {
