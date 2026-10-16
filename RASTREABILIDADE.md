@@ -113,13 +113,27 @@ Os cenários de problema são hipotéticos. Os aspectos abaixo orientam a coleta
 | R04 | Identificação automática de melhores momentos e geração de cortes e metadados, Entrega 1, seção 1.3 | Reduzir busca manual e obter cortes para produção amadora, H01/H06/H10/H25/H28; vocabulário adequado H38; interesse por atleta H36 ainda a investigar | [P03 — Jorginho Jr.](docs/03_personas_contexto_jornada.md#persona-p03--jorginho-jr), aplicação compartilhada da revisão de T01 | [C03](docs/04_cenarios_problema.md#cenário-c03--decupagem-manual-de-lances-por-jogador-sob-restrições-de-hardware), contexto atual; jornada proposta de P03, etapas 5–6 | A04 coberta pelo fluxo de revisão/seleção/download de T01; identificação de participação do atleta é manual. Montagem permanece externa e filtro automático por jogador não foi modelado como capacidade disponível | [T01: HTA](docs/05_analise_tarefas.md#hta--t01-localizar-selecionar-e-revisar-lances-de-melhores-momentos), [GOMS](docs/05_analise_tarefas.md#goms--t01-localizar-selecionar-e-revisar-lances-de-melhores-momentos) e [CTT](docs/05_analise_tarefas.md#ctt--t01-localizar-selecionar-e-revisar-lances-de-melhores-momentos), Pedro; aplicação a P03, sem presumir ferramentas profissionais ou interrupções da supervisão para esse perfil | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Selecionar somente cortes pertinentes, com origem identificável e linguagem acessível, RC04/RC05/RC07/RC09. Conferência/edição externa depende dos recursos do criador; H36/H38 continuam abertas |
 | R05 | Processamento das gravações para gerar cortes e metadados, Entrega 1, seção 0.4 | Preparar material de várias partidas com equipamento limitado e acompanhar processamento/falhas, H08/H13/H16/H24/H25/H26/H37/H38 | [P03 — Jorginho Jr.](docs/03_personas_contexto_jornada.md#persona-p03--jorginho-jr), aplicação compartilhada de T03 | [C03](docs/04_cenarios_problema.md#cenário-c03--decupagem-manual-de-lances-por-jogador-sob-restrições-de-hardware) como contexto atual; jornada proposta de P03, etapas 3–4, e [ponte para T03](docs/04_cenarios_problema.md#ponte-para-t03--acompanhamento-no-uso-proposto) | A02 coberta por T03: acompanhar partidas e tratar falhas; A01, envio inicial, permanece precondição e com modelagem própria pendente | [T03: HTA](docs/05_analise_tarefas.md#hta--t03-acompanhar-o-processamento-de-partidas-em-lote-e-tratar-falhas), [GOMS](docs/05_analise_tarefas.md#goms--t03-acompanhar-o-processamento-de-partidas-em-lote-e-tratar-falhas) e [CTT](docs/05_analise_tarefas.md#ctt--t03-acompanhar-o-processamento-de-partidas-em-lote-e-tratar-falhas), Giovanni; aplicação a P03, sem modelagem do envio inicial | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Estado e falhas por partida, RC03/RC07; preservação das demais, processamento remoto H37 e linguagem acessível H38. Recuperação depende de suporte técnico; não requer hardware local potente |
 
+### 3.1 Cobertura no protótipo da Entrega 6
+
+A [Entrega 6](docs/06_prototipacao_papel.md) documenta a versão principal e sua cobertura parcial. Os IDs abaixo pertencem à prototipação inicial, sem antecipar MoLIC, Figma ou validação com participantes.
+
+| Relação | Fluxos e telas | Cobertura e pendências |
+|---|---|---|
+| R01/R04, revisão por P01/P03 | PF03/PF04; E06-P04A, B, C, D, V e S | Localização, prévia com contexto, seleção e CSV com intervalo do corte completo e intervalo separado do lance. Contexto limitado ao vídeo de origem, conforme decisão de Pedro em 16/10/2026. Pausa/retorno, dúvidas, retomada e resumo para obtenção pendentes |
+| R02/R05, acompanhamento por P01/P03 | PF01/PF02; E06-P01, P02, P03 e P03E | Preparação fictícia das entradas, progresso e lacuna de análise. Recuperação localizada e acesso a resultados prontos enquanto o restante continua não estão representados |
+| R03, recebimento externo por P02 | Continuidade de PF04, após E06-P04S | CSV preserva identificação e timecodes do corte com contexto e do lance. Transferência dos vídeos e comunicação das pendências para supervisão externa ainda precisam ser representadas. Sem tela de aprovação |
+
+As três alternativas da base permanecem em exploração para o walkthrough. A sessão com pessoa que não desenhou as telas e as revisões decorrentes estão pendentes, conforme confirmação de Pedro em 16/10/2026.
+
 ## 4. Rastreabilidade de padrões de interface
 
 Use esta tabela quando o projeto incorporar padrões como dashboard, relatório, histórico, filtros ou administração. O objetivo é **justificar o padrão**, não apenas listar telas.
 
 | ID da tela/fluxo | Padrão de interface | Objetivo/tarefa que justifica | Informação/ação principal | Evidência de necessidade | Artefatos relacionados |
 |---|---|---|---|---|---|
-| PENDENTE | dashboard/visão geral | A02/T03: acompanhar partidas e tratar falhas; T03 justifica consulta por partida, mas não exige dashboard com métricas ou trabalhos antigos | Identificação, estados reais e orientações de recuperação por partida; trabalhos recentes somente se validados | H13/H16/H25/H26/H32; H29 continua aberta para o padrão dashboard | Entrega 1, seção 8; Entrega 5, T03 (R02/R05) |
+| E06-P01/P02 | entrada e conferência de arquivos | A01, precondição de T03 | Selecionar gravações, conferir e retirar entradas antes de iniciar; dados e validação limitados à demonstração | H08/H13/H16; preparo das entradas para R02/R05 | Entrega 6, PF01 |
+| E06-P03/P03E | acompanhamento do lote | A02/T03: acompanhar partidas e tratar falhas, com cobertura parcial | Espera, progresso e intervalo não analisado; recuperação localizada pendente | H13/H16/H25/H26/H32; H29 continua aberta para um dashboard com métricas ou trabalhos antigos | Entrega 5, T03 (R02/R05); Entrega 6, PF02 |
+| E06-P04A/B/C/D/V/S | lista, trilhas e mosaico de resultados, com seleção | T01/A04: localizar, revisar e obter material | Busca e filtros na alternativa A, detalhe com origem/contexto, seleção e CSV; alternativas em exploração | H10/H25/H28; RC04/RC05/RC08/RC09 | Entrega 5, T01 (R01/R04); Entrega 6, PF03/PF04 |
 | PENDENTE | histórico com busca/filtros | A03: consultar o histórico de resultados; T pendente | Localizar resultados anteriores, falhas e reprocessamentos | H15 aberta; validar nas Entregas 5 e 7 | Entrega 1, seção 8 |
 | não adotado | administração/CRUD | Nenhuma tarefa do editor identificada | não se aplica | Exemplo do template; administração e parâmetros técnicos estão fora do recorte (Entrega 1, seções 8 e 11) | não se aplica |
 
@@ -150,6 +164,10 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
 
 ## Histórico de atualização da rastreabilidade
+
+- 16/10/2026: corrigida a divergência entre contexto na prévia e intervalo no CSV. Detalhe, prévia, durações e exportação agora usam o corte com até cinco segundos de contexto de cada lado, limitado ao vídeo de origem; o lance mantém timecodes próprios. Correção por Opus a pedido de Pedro e documentação sincronizada após verificações técnicas. Walkthrough e revisões formativas continuam pendentes.
+
+- 16/10/2026: registrada a cobertura parcial da Entrega 6 em R01 a R05 e os padrões efetivamente representados. As três alternativas seguem em exploração. Contexto nos clipes baixados é decisão de Pedro ainda não refletida no CSV; walkthrough e revisões formativas permanecem pendentes. Não houve validação empírica nem ampliação do recorte.
 
 - 09/09/2026 às 21:40: AC-013 aplicado. Registrados H30–H32, refinamentos hipotéticos de P01 e relações R01/R02. As afirmações iniciais foram preservadas; não houve validação empírica nem mudança do recorte de IHC.
 - 10/09/2026: revisão de P03 (Jorginho Jr), tipificada como persona secundária. Registrados H33–H35, originados da elaboração de P03 com o autor, ainda sem evidência empírica. O perfil prioritário (editor de vídeo esportivo, H27) foi preservado.

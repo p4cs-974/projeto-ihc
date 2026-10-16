@@ -1,5 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730" role="img" aria-labelledby="title desc">
+  <title id="title">Entrega 6: telas e transições do protótipo de highlights</title>
+  <desc id="desc">O envio leva à conferência dos vídeos. Iniciar abre a análise. As setas do teclado alternam entre análise e base, onde três alternativas permitem revisar e selecionar candidatos. O download da demonstração gera somente um CSV. A recuperação localizada e a sessão formativa continuam pendentes.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" fill="#475569"/></marker>
+  </defs>
+  <rect width="1120" height="730" fill="#fff"/>
+  <g font-family="Arial, sans-serif" fill="#172033">
+    <text x="36" y="42" font-size="23" font-weight="700">Fluxo do protótipo principal</text>
+    <text x="36" y="69" font-size="15" fill="#475569">PROTOTIPO_fluxo_highlights.html · dados fictícios · documentação de 16/10/2026</text>
+    <g fill="#f8fafc" stroke="#64748b" stroke-width="1.5">
+      <rect x="36" y="110" width="472" height="144" rx="12"/>
+      <rect x="612" y="110" width="472" height="144" rx="12"/>
+      <rect x="612" y="344" width="472" height="186" rx="12"/>
+      <rect x="36" y="344" width="472" height="186" rx="12"/>
+    </g>
+    <g font-size="19" font-weight="700">
+      <text x="58" y="143">E06-P01 · Envio</text>
+      <text x="634" y="143">E06-P02 · Vídeos selecionados</text>
+      <text x="634" y="378">E06-P03 · Análise</text>
+      <text x="58" y="378">E06-P04 · Base de highlights</text>
+    </g>
+    <g font-size="16">
+      <text x="58" y="177">Selecionar ou arrastar gravações</text>
+      <text x="58" y="204">Alternativa: oito vídeos de exemplo</text>
+      <text x="58" y="231" fill="#475569">Entrada não reconhecida: mensagem e permanência</text>
+      <text x="634" y="177">Conferir nomes, origem e durações fictícias</text>
+      <text x="634" y="204">Remover entradas antes de iniciar</text>
+      <text x="634" y="231" fill="#475569">Adicionar retorna ao envio e substitui o lote</text>
+      <text x="634" y="412">Duas prévias e progresso por vídeo e do lote</text>
+      <text x="634" y="441">Aguardando · processando · pronto</text>
+      <text x="634" y="470">E06-P03E: intervalo não analisado</text>
+      <text x="634" y="503" fill="#475569">Reiniciar análise afeta o lote inteiro</text>
+      <text x="58" y="412">A: busca · B: trilhas · C: mosaico</text>
+      <text x="58" y="441">E06-P04D: detalhe, origem e contexto</text>
+      <text x="58" y="470">Incluir ou retirar candidatos da seleção</text>
+      <text x="58" y="503" fill="#475569">E06-P04S: seleção e exportação somente em CSV</text>
+    </g>
+    <g fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M508 166 H612"/>
+      <path d="M848 254 V344" marker-start="url(#arrow)"/>
+      <path d="M612 425 H508" marker-start="url(#arrow)"/>
+      <path d="M272 530 V577"/>
+    </g>
+    <g font-size="14" fill="#475569">
+      <text x="520" y="151">Escolher</text>
+      <text x="861" y="293">Iniciar</text>
+      <text x="861" y="316">Retorno: ←</text>
+      <text x="529" y="405">← / →</text>
+      <text x="289" y="559">Baixar cortes</text>
+    </g>
+    <rect x="36" y="578" width="1048" height="117" rx="12" fill="#fff7ed" stroke="#c29152" stroke-width="1.5"/>
+    <text x="58" y="608" font-size="17" font-weight="700">Limites da demonstração</text>
+    <g font-size="15" fill="#4b4339">
+      <text x="58" y="634">Abrir a base conclui a análise restante. O CSV contém metadados; não há arquivos dos cortes.</text>
+      <text x="58" y="657">Edição, montagem e supervisão T02 são externas. Recuperação localizada ainda não está representada.</text>
+      <text x="58" y="680">Sessão com pessoa que não desenhou as telas e revisões a partir dessa observação permanecem pendentes.</text>
+    </g>
+  </g>
 </svg>
