@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROTÓTIPO · baixa fidelidade · Entrega 06</title>
+<!--
+  PROTÓTIPO DESCARTÁVEL da Entrega 06. Não é código de produção e não deve ir para a main.
+  Pergunta: o que deve ocupar o "? ? ?" da "Base de dados de highlights" no rascunho?
+  Plano: o fluxo do rascunho (Tela 1 Enviar → Tela 2 Selecionados → Tela 3 Análise → Tela 4 Base)
+  em baixa fidelidade, com 4 variantes da Base trocáveis por ?variant=A|B|C|D, pela barra
+  flutuante ou pelas setas ← →. Todos os dados são fictícios (partidas, times e jogadores inventados).
+  Abrir: duplo clique no arquivo.
+-->
+<style>
+  :root { --ink:#222; --mute:#777; --line:#bbb; --bg:#f6f7f9; --paper:#fff; --accent:#d9783a; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.35 "Chalkboard SE","Comic Neue","Comic Sans MS",system-ui,sans-serif; }
+  button, input, select { font:inherit; color:inherit; }
+  button { cursor:pointer; background:var(--paper); border:2px solid var(--ink); border-radius:8px; padding:6px 12px; }
+  button.primary { background:var(--ink); color:#fff; }
+  button:disabled { opacity:.4; cursor:default; }
+  .banner { background:#fff3c4; border-bottom:2px dashed #c9a227; padding:6px 16px; font-size:13px; }
+  .steps { display:flex; gap:8px; padding:12px 16px 0; }
+  .steps button { border-radius:999px; font-size:13px; padding:3px 12px; border-color:var(--line); }
+  .steps button.on { border-color:var(--ink); background:var(--ink); color:#fff; }
+  .frame { position:relative; margin:12px 16px 90px; background:var(--paper); border:3px solid var(--ink); border-radius:14px; min-height:620px; overflow:hidden; }
+  .center { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:614px; gap:16px; }
+  .drop { width:min(520px,80%); height:300px; border:3px dashed var(--ink); border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; cursor:pointer; }
+  .drop:hover { background:#fafafa; }
+  .drop .icon { font-size:46px; border:2px solid var(--ink); border-radius:6px; width:56px; height:66px; display:grid; place-items:center; }
+  .muted { color:var(--mute); font-size:13px; }
+  .thumb { position:relative; border:2px solid var(--s,#999); border-radius:8px; background:
+      linear-gradient(to top right, transparent calc(50% - 1px), rgba(0,0,0,.18) 50%, transparent calc(50% + 1px)),
+      linear-gradient(to bottom right, transparent calc(50% - 1px), rgba(0,0,0,.18) 50%, transparent calc(50% + 1px)),
+      var(--f,#eee); }
+  .grid8 { display:grid; grid-template-columns:repeat(4,150px); gap:14px; }
+  .grid8 .thumb { height:110px; }
+  .grid8 .cap { font-size:12px; margin-top:4px; width:150px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .x { position:absolute; top:4px; right:4px; border:none; background:#fff; border-radius:50%; width:22px; height:22px; padding:0; font-size:13px; }
+
+  .analise { padding:26px 90px 26px 60px; }
+  .previews { display:flex; gap:60px; justify-content:center; }
+  .preview { width:300px; height:170px; border-width:3px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; text-align:center; }
+  .preview .t { font-weight:bold; background:rgba(255,255,255,.85); padding:0 6px; border-radius:4px; }
+  .preview .tag { position:absolute; left:14px; right:14px; bottom:12px; background:#f7e3d4; border:2px solid var(--accent); color:var(--accent); border-radius:4px; font-size:13px; padding:2px 6px; }
+  .pipe { display:flex; gap:6px; align-items:center; justify-content:center; margin:12px 0 4px; font-size:13px; color:var(--mute); }
+  .pipe .st { border:2px solid var(--line); border-radius:999px; padding:1px 10px; }
+  .pipe .st.on { border-color:var(--accent); color:var(--accent); background:#f7e3d4; }
+  .tlabel { font-size:13px; color:var(--mute); margin:14px 0 4px; display:flex; justify-content:space-between; }
+  .track { position:relative; height:62px; border:3px solid var(--ink); border-radius:10px; overflow:hidden; }
+  .mk { position:absolute; top:6px; bottom:6px; width:14px; margin-left:-7px; border:2px solid var(--s); background:var(--f); border-radius:3px; cursor:pointer; padding:0; }
+  .mk.ghost { border-style:dashed; background:transparent; }
+  .mk.focus { outline:3px solid var(--ink); outline-offset:1px; }
+  .seg { position:absolute; top:0; bottom:0; border-right:2px solid var(--ink); }
+  .seg .done { position:absolute; inset:0 auto 0 0; background:var(--f); }
+  .seg.proc { background:repeating-linear-gradient(45deg, var(--s) 0 2px, transparent 2px 7px); opacity:.85; }
+  .overall > div { height:100%; background:#dde1f5; border-right:2px solid #4a63d6; }
+  .handle { position:absolute; right:14px; top:20px; bottom:20px; width:44px; border:3px solid #9aa0a6; background:#eceef0; border-radius:8px; font-size:30px; color:#888; }
+
+  .backdrop { position:absolute; inset:0; background:rgba(0,0,0,.18); }
+  .drawer { position:absolute; top:0; right:0; bottom:0; width:82%; background:var(--paper); border-left:3px solid var(--ink); display:flex; flex-direction:column; }
+  .dhead { display:flex; align-items:center; gap:12px; padding:14px 18px 10px; border-bottom:2px solid var(--line); }
+  .dhead h2 { margin:0; font-size:19px; flex:1; }
+  .search { border:2px solid var(--ink); border-radius:6px; padding:5px 10px; width:260px; }
+  .dbody { flex:1; overflow:auto; padding:14px 18px; }
+  .dfoot { border-top:2px solid var(--line); padding:10px 18px; display:flex; align-items:center; gap:12px; }
+  .dfoot .sp { flex:1; }
+  .badge { display:inline-block; font-size:11px; border:1.5px solid var(--mute); border-radius:999px; padding:0 7px; color:var(--mute); white-space:nowrap; }
+  .badge.trilha { border-color:#3b8a64; color:#3b8a64; }
+  .badge.extraido { border-color:var(--accent); color:var(--accent); }
+  .chip { border:2px solid var(--line); border-radius:999px; padding:1px 10px; font-size:13px; background:#fff; }
+  .chip.on { border-color:var(--ink); background:var(--ink); color:#fff; }
+  .row-actions { display:flex; gap:8px; flex-wrap:wrap; }
+  .empty { color:var(--mute); padding:40px; text-align:center; }
+
+  /* A: lista */
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th { text-align:left; font-weight:normal; color:var(--mute); font-size:12px; border-bottom:2px solid var(--ink); padding:4px 6px; }
+  td { border-bottom:1px solid #e3e3e3; padding:6px; vertical-align:middle; }
+  tr.r { cursor:pointer; } tr.r:hover td { background:#fafafa; }
+  tr.exp td { background:#fafafa; }
+  .ctx { position:relative; height:20px; border:2px solid var(--ink); border-radius:4px; margin:6px 0; background:#fff; }
+  .ctx .half { position:absolute; top:0; bottom:0; left:50%; border-left:2px dashed var(--line); }
+  .ctx .pin { position:absolute; top:-5px; bottom:-5px; width:6px; margin-left:-3px; background:var(--accent); border-radius:2px; }
+  /* B: galeria */
+  .gal { display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px; margin-bottom:22px; }
+  .card { cursor:pointer; }
+  .card .thumb { height:100px; display:flex; align-items:center; justify-content:center; font-weight:bold; }
+  .card .thumb span { background:rgba(255,255,255,.85); padding:0 6px; border-radius:4px; }
+  .card .thumb .min { position:absolute; right:6px; bottom:6px; background:var(--ink); color:#fff; font-size:11px; border-radius:4px; padding:0 5px; }
+  .card .ck { position:absolute; left:6px; top:6px; }
+  .card.on .thumb { outline:3px solid var(--ink); outline-offset:2px; }
+  .player { display:grid; grid-template-columns:320px 1fr; gap:18px; border:2px solid var(--ink); border-radius:10px; padding:12px; margin-bottom:18px; }
+  .player .thumb { height:180px; display:flex; align-items:center; justify-content:center; font-size:22px; }
+  h3 { font-size:15px; margin:4px 0 8px; }
+  /* C: facetas */
+  .facets { display:grid; grid-template-columns:240px 1fr; gap:20px; }
+  .facets aside { border-right:2px solid var(--line); padding-right:14px; font-size:13px; }
+  .facets aside h4 { margin:10px 0 4px; font-size:13px; color:var(--mute); font-weight:normal; text-transform:uppercase; letter-spacing:.04em; }
+  .facets label { display:flex; gap:6px; align-items:center; padding:1px 0; cursor:pointer; }
+  .facets label .n { margin-left:auto; color:var(--mute); }
+  .grp { border:2px solid var(--ink); border-radius:10px; margin-bottom:12px; }
+  .grp header { display:flex; align-items:center; gap:10px; padding:6px 10px; border-bottom:2px solid var(--line); }
+  .grp header b { flex:1; }
+  .line { display:flex; gap:10px; align-items:center; padding:5px 10px; font-size:14px; border-bottom:1px solid #eee; }
+  .line:last-child { border-bottom:none; }
+  .line .thumb { width:44px; height:28px; flex:none; }
+  /* D: mapa */
+  .legend { display:flex; gap:14px; flex-wrap:wrap; font-size:12px; color:var(--mute); margin-bottom:12px; }
+  .lg { display:inline-grid; place-items:center; width:22px; height:22px; border:2px solid var(--ink); border-radius:50%; font-size:11px; background:#fff; color:var(--ink); }
+  .match { margin-bottom:22px; }
+  .match .bar { position:relative; height:44px; margin:22px 0 4px; display:flex; }
+  .match .half { flex:1; border:2px solid var(--ink); position:relative; }
+  .match .half + .half { border-left:none; }
+  .match .pinD { position:absolute; top:-14px; width:26px; height:26px; margin-left:-13px; padding:0; border-radius:50%; font-size:11px; z-index:1; }
+  .match .pinD.dim { opacity:.18; }
+  .match .pinD.on { background:var(--ink); color:#fff; }
+  .scale { display:flex; justify-content:space-between; font-size:11px; color:var(--mute); }
+  .detail { position:sticky; bottom:0; z-index:2; background:#fff; border:2px solid var(--ink); border-radius:10px; padding:10px; display:flex; gap:14px; align-items:center; }
+  .detail .thumb { width:150px; height:84px; flex:none; }
+
+  .toast { position:fixed; top:16px; left:50%; transform:translateX(-50%); background:var(--ink); color:#fff; padding:8px 16px; border-radius:8px; font-size:14px; z-index:20; }
+  /* barra do protótipo: não faz parte do design avaliado */
+  #switcher { position:fixed; left:50%; bottom:18px; transform:translateX(-50%); z-index:30; background:#111; color:#fff; border-radius:999px; padding:6px 8px; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 24px rgba(0,0,0,.35); font:13px/1.3 system-ui,sans-serif; }
+  #switcher .row { display:flex; align-items:center; gap:8px; }
+  #switcher button { background:#333; color:#fff; border:none; border-radius:999px; width:30px; height:30px; padding:0; }
+  #switcher .lbl { min-width:220px; text-align:center; font-weight:600; }
+  #switcher .state { font-size:11px; color:#aaa; padding:0 12px 2px; }
+</style>
+</head>
+<body>
+<div class="banner"><b>PROTÓTIPO DESCARTÁVEL</b>, em baixa fidelidade, para a Entrega 06. Partidas, times e jogadores são fictícios. A barra preta embaixo troca a variante da “Base de dados de highlights” (atalhos ← →).</div>
+<div id="app"></div>
+<div id="switcher"></div>
+<script>
+const VARIANTS = { A:'Lista com filtros', B:'Galeria por partida', C:'Facetas por jogador', D:'Mapa das partidas' };
+const KEYS = Object.keys(VARIANTS);
+const FILL = ['#cfe8dc','#d6dcf5','#fbe9c9','#f8d6d3','#ecdcf7','#d7efd2','#f7d9bf','#d3e6f8'];
+const STROKE = ['#3b8a64','#4a63d6','#d9a441','#d9625b','#a35bd6','#5aa64e','#d9783a','#4a8fd6'];
+const PARTIDAS = [
+  { nome:'Atlético Vale x União Serra', a:'Atlético Vale', b:'União Serra', slug:'vale_serra' },
+  { nome:'Rio Claro x Ferroviário Sul', a:'Rio Claro', b:'Ferroviário Sul', slug:'rioclaro_ferroviario' },
+  { nome:'Real Planalto x Grêmio Litoral', a:'Real Planalto', b:'Grêmio Litoral', slug:'planalto_litoral' },
+  { nome:'Operário Norte x Nacional Campos', a:'Operário Norte', b:'Nacional Campos', slug:'operario_nacional' },
+];
+const VIDEOS = PARTIDAS.flatMap((p, i) => [1, 2].map(tempo => {
+  const k = i * 2 + tempo - 1;
+  return { k, partida:p, tempo, nome:`${p.slug}_${tempo}T.mp4`, dur:46 + (k % 3), f:FILL[k], s:STROKE[k] };
+}));
+const TIPOS = ['Gol','Finalização','Defesa','Falta','Cartão','Escanteio','Drible'];
+const SIGLA = { Gol:'G', Finalização:'F', Defesa:'D', Falta:'Fa', Cartão:'C', Escanteio:'E', Drible:'Dr' };
+const STATUS = { detectado:'1. Detectado', extraido:'2. Extraído', trilha:'3. Na trilha' };
+
+let seed = 11;
+const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const pick = a => a[Math.floor(rnd() * a.length)];
+const HL = [];
+VIDEOS.forEach(v => {
+  const n = 3 + Math.floor(rnd() * 3);
+  Array.from({ length:n }, () => 2 + rnd() * (v.dur - 4)).sort((x, y) => x - y).forEach(t => {
+    const tipo = pick(['Gol','Gol','Finalização','Finalização','Finalização','Defesa','Falta','Cartão','Escanteio','Drible']);
+    const m = Math.floor(t) + 1, base = v.tempo === 1 ? 0 : 45;
+    HL.push({
+      id:'h' + (HL.length + 1), v, t, tipo,
+      time: rnd() < .5 ? v.partida.a : v.partida.b,
+      jogador: 'Camisa ' + (tipo === 'Defesa' ? 1 : pick([5, 7, 8, 9, 10, 11])),
+      minuto: m > 45 ? `${base + 45}+${m - 45}'` : `${base + m}'`,
+      dur: 8 + Math.floor(rnd() * 18), status:'pendente', at:0, sel:false,
+    });
+  });
+});
+
+const params = new URLSearchParams(location.search);
+const S = {
+  screen: +params.get('screen') || 1, drawer: params.get('drawer') === '1',
+  variant: KEYS.includes(params.get('variant')) ? params.get('variant') : 'A',
+  videos: [], q:'', focus:null, open:null, toast:'',
+  tipo:new Set(), partida:'', jog:new Set(), st:new Set(),
+  sim:{ tick:0, analyzed:{}, slots:[null, null], queue:[], timer:null },
+};
+if (params.has('variant')) { S.screen = 3; S.drawer = true; }
+
+// ---------- simulação da análise ----------
+const inRun = h => S.videos.includes(h.v);
+function startSim() {
+  const sim = S.sim;
+  clearInterval(sim.timer);
+  HL.forEach(h => { h.status = 'pendente'; h.sel = false; });
+  sim.tick = 0; sim.queue = S.videos.map(v => v.k);
+  S.videos.forEach(v => sim.analyzed[v.k] = 0);
+  sim.slots = [sim.queue.shift() ?? null, sim.queue.shift() ?? null];
+  sim.timer = setInterval(step, 150);
+}
+function step() {
+  const sim = S.sim;
+  sim.tick++;
+  sim.slots.forEach((k, i) => {
+    if (k == null) return;
+    const v = VIDEOS[k];
+    sim.analyzed[k] = Math.min(1, sim.analyzed[k] + 0.025);
+    HL.filter(h => h.v === v && h.status === 'pendente' && h.t / v.dur <= sim.analyzed[k])
+      .forEach(h => { h.status = 'detectado'; h.at = sim.tick; });
+    if (sim.analyzed[k] >= 1) sim.slots[i] = sim.queue.shift() ?? null;
+  });
+  HL.filter(inRun).forEach(h => {
+    if (h.status === 'detectado' && sim.tick - h.at >= 8) h.status = 'extraido';
+    else if (h.status === 'extraido' && sim.tick - h.at >= 16) h.status = 'trilha';
+  });
+  if (sim.slots.every(s => s == null) && HL.filter(inRun).every(h => h.status === 'trilha')) clearInterval(sim.timer);
+  render();
+}
+function finishSim() {
+  clearInterval(S.sim.timer);
+  S.videos.forEach(v => S.sim.analyzed[v.k] = 1);
+  S.sim.slots = [null, null]; S.sim.queue = [];
+  HL.filter(inRun).forEach(h => h.status = 'trilha');
+  render();
+}
+const running = () => S.sim.slots.some(s => s != null) || HL.some(h => inRun(h) && h.status !== 'trilha' && h.status !== 'pendente');
+
+// ---------- ações ----------
+const A = {
+  go(n) { if (n > 1 && !S.videos.length) S.videos = [...VIDEOS]; if (n === 3 && !S.sim.tick && !running()) finishSim(); S.screen = n; S.drawer = false; sync(); },
+  pickFiles() { S.videos = [...VIDEOS]; S.screen = 2; sync(); },
+  removeVideo(k) { S.videos = S.videos.filter(v => v.k !== k); render(); },
+  start() { S.screen = 3; startSim(); sync(); },
+  openDrawer() { S.drawer = true; sync(); },
+  closeDrawer() { S.drawer = false; sync(); },
+  focusHL(id) { S.focus = id; S.drawer = false; sync(); },
+  toggleSel(id, ev) { ev && ev.stopPropagation(); const h = HL.find(x => x.id === id); h.sel = !h.sel; render(); },
+  toggleOpen(id) { S.open = S.open === id ? null : id; render(); },
+  toggleSet(name, val) { S[name].has(val) ? S[name].delete(val) : S[name].add(val); render(); },
+  setPartida(v) { S.partida = v; render(); },
+  setQ(v) { S.q = v; render(); },
+  selectAll(ids) { const hs = HL.filter(h => ids.includes(h.id)); const all = hs.every(h => h.sel); hs.forEach(h => h.sel = !all); render(); },
+  download() { const n = HL.filter(h => h.sel).length; toast(n ? `Download simulado de ${n} corte(s), sem arquivo real.` : 'Nenhum corte selecionado.'); },
+  variant(d) { const i = (KEYS.indexOf(S.variant) + d + KEYS.length) % KEYS.length; S.variant = KEYS[i]; if (!S.drawer) A.go(3), S.drawer = true; S.open = null; sync(); },
+};
+function toast(msg) { S.toast = msg; render(); setTimeout(() => { S.toast = ''; render(); }, 2200); }
+function sync() {
+  const p = new URLSearchParams({ screen:S.screen, variant:S.variant });
+  if (S.drawer) p.set('drawer', '1');
+  history.replaceState(null, '', '?' + p);
+  render();
+}
+
+// ---------- helpers de visual ----------
+const css = v => `--f:${v.f};--s:${v.s}`;
+const tc = min => `${String(Math.floor(min)).padStart(2, '0')}:${String(Math.floor((min % 1) * 60)).padStart(2, '0')}`;
+const badge = h => `<span class="badge ${h.status}">${STATUS[h.status]}</span>`;
+const ck = h => `<input type="checkbox" ${h.sel ? 'checked' : ''} onclick="A.toggleSel('${h.id}', event)" title="Incluir no download">`;
+const matchMin = h => (h.v.tempo - 1) * 45 + Math.min(h.t, 45);
+const ctxBar = h => `<div class="ctx" title="Posição do lance na partida"><div class="half"></div><div class="pin" style="left:${matchMin(h) / 90 * 100}%"></div></div>
+  <div class="scale"><span>0'</span><span>45'</span><span>90'</span></div>`;
+const info = h => `<b>${h.tipo}</b> · ${h.jogador} (${h.time}) · ${h.minuto}<br><span class="muted">${h.v.partida.nome} · ${h.v.tempo}º tempo · ${h.v.nome}<br>início ${tc(h.t)} · fim ${tc(h.t + h.dur / 60)} · duração ${h.dur}s</span>`;
+
+function pool() {
+  const q = S.q.trim().toLowerCase();
+  return HL.filter(h => inRun(h) && h.status !== 'pendente')
+    .filter(h => !q || `${h.tipo} ${h.jogador} ${h.time} ${h.v.partida.nome} ${h.minuto}`.toLowerCase().includes(q));
+}
+
+// ---------- telas ----------
+function telaEnviar() {
+  return `<div class="center">
+    <div class="drop" onclick="A.pickFiles()">
+      <div class="icon">⬆</div>
+      <div>Arraste ou selecione<br>os vídeos</div>
+      <div class="muted">clique para carregar 8 vídeos de exemplo</div>
+    </div></div>`;
+}
+function telaSelecionados() {
+  return `<div class="center">
+    <div class="grid8">${S.videos.map(v => `<div>
+      <div class="thumb" style="${css(v)}"><button class="x" onclick="A.removeVideo(${v.k})" title="Remover">×</button></div>
+      <div class="cap">${v.nome}</div><div class="muted">${v.dur} min · ${v.tempo}º tempo</div></div>`).join('')}
+    </div>
+    <div class="muted">${S.videos.length} vídeo(s) de ${new Set(S.videos.map(v => v.partida)).size} partida(s)</div>
+    <button class="primary" onclick="A.start()" ${S.videos.length ? '' : 'disabled'}>Iniciar</button>
+  </div>`;
+}
+function previewSlot(i) {
+  const sim = S.sim;
+  let h = i === 0 && S.focus ? HL.find(x => x.id === S.focus) : null;
+  const v = h ? h.v : (sim.slots[i] != null ? VIDEOS[sim.slots[i]] : null);
+  if (!h && v) h = HL.filter(x => x.v === v && (x.status === 'detectado' || x.status === 'extraido')).sort((a, b) => b.at - a.at)[0];
+  if (!v) return `<div class="thumb preview" style="--f:#f1f1f1;--s:#aaa"><span class="t">Preview ${i + 1}</span><span class="muted">${running() ? 'aguardando vídeo' : 'análise concluída'}</span></div>`;
+  return `<div class="thumb preview" style="${css(v)}"><span class="t">Preview ${i + 1}</span><span class="muted" style="background:#fffc;padding:0 4px">${v.nome}</span>
+    ${h ? `<div class="tag">${STATUS[h.status]}: ${h.tipo} ${h.minuto}</div>` : ''}</div>`;
+}
+function telaAnalise() {
+  const vids = S.videos, total = vids.reduce((a, v) => a + v.dur, 0);
+  let off = 0; const offs = {}; vids.forEach(v => { offs[v.k] = off; off += v.dur; });
+  const hs = HL.filter(h => inRun(h) && h.status !== 'pendente');
+  const focusH = HL.find(h => h.id === S.focus);
+  const latest = focusH || hs.filter(h => h.status !== 'trilha').sort((a, b) => b.at - a.at)[0] || hs[hs.length - 1];
+  const done = vids.filter(v => S.sim.analyzed[v.k] >= 1).length;
+  const proc = S.sim.slots.filter(s => s != null).length;
+  const statusTxt = done === vids.length ? 'concluído' : proc ? `processando · ${done} de ${vids.length} vídeos concluídos` : 'na fila';
+  return `<div class="analise">
+    <div class="previews">${previewSlot(0)}${previewSlot(1)}</div>
+    <div class="pipe">${latest ? Object.entries(STATUS).map(([k, l]) => `<span class="st ${latest.status === k ? 'on' : ''}">${l}</span>`).join('→') + `<span style="margin-left:8px">${latest.tipo} ${latest.minuto}</span>` : 'nenhum lance detectado ainda'}</div>
+    <div class="tlabel"><span>Highlights detectados · ${hs.filter(h => h.status === 'trilha').length} na trilha, ${hs.filter(h => h.status !== 'trilha').length} em extração</span><span>clique num marcador para ver no Preview 1</span></div>
+    <div class="track">${hs.map(h => `<button class="mk ${h.status !== 'trilha' ? 'ghost' : ''} ${S.focus === h.id ? 'focus' : ''}" style="${css(h.v)};left:${(offs[h.v.k] + h.t) / total * 100}%" title="${h.tipo} ${h.minuto} · ${STATUS[h.status]}" onclick="A.focusHL('${h.id}')"></button>`).join('')}</div>
+    <div class="tlabel"><span>Progresso da análise por vídeo</span><span>cheio = concluído · hachurado = processando · branco = na fila</span></div>
+    <div class="track">${vids.map(v => { const a = S.sim.analyzed[v.k] || 0, p = S.sim.slots.includes(v.k);
+      return `<div class="seg ${p ? 'proc' : ''}" style="${css(v)};left:${offs[v.k] / total * 100}%;width:${v.dur / total * 100}%" title="${v.nome}: ${a >= 1 ? 'concluído' : p ? 'processando' : 'na fila'}"><div class="done" style="width:${a * 100}%"></div></div>`; }).join('')}</div>
+    <div class="tlabel"><span>Progresso geral da análise · ${statusTxt}</span>${running() ? `<button onclick="finishSim()" style="font-size:12px;padding:1px 8px">pular simulação ⏩</button>` : ''}</div>
+    <div class="track overall"><div style="width:${vids.reduce((a, v) => a + (S.sim.analyzed[v.k] || 0) * v.dur, 0) / total * 100}%"></div></div>
+    <button class="handle" onclick="A.openDrawer()" title="Abrir base de dados de highlights">›</button>
+    ${S.drawer ? drawer() : ''}
+  </div>`;
+}
+function drawer() {
+  const sel = HL.filter(h => h.sel).length;
+  return `<div class="backdrop" onclick="A.closeDrawer()"></div>
+  <div class="drawer">
+    <div class="dhead"><h2>“Base de dados” de highlights</h2>
+      <input id="q" class="search" placeholder="buscar (lance, jogador, time, partida)" value="${S.q}" oninput="A.setQ(this.value)">
+      <button onclick="A.closeDrawer()" title="Fechar">×</button></div>
+    <div class="dbody" id="dbody">${({ A:varA, B:varB, C:varC, D:varD })[S.variant]()}</div>
+    <div class="dfoot"><span>${pool().length} lance(s) na base ${running() ? '· análise em andamento, a lista cresce' : ''}</span><span class="sp"></span>
+      <span>${sel} selecionado(s)</span><button class="primary" onclick="A.download()">Baixar selecionados</button></div>
+  </div>`;
+}
+
+// ---------- variantes do "? ? ?" ----------
+// A: tabela densa + filtros em chips; linha expande com prévia e contexto temporal.
+function varA() {
+  let hs = pool();
+  const tipos = TIPOS.filter(t => hs.some(h => h.tipo === t));
+  if (S.tipo.size) hs = hs.filter(h => S.tipo.has(h.tipo));
+  if (S.partida) hs = hs.filter(h => h.v.partida.nome === S.partida);
+  return `<div class="row-actions" style="margin-bottom:12px;align-items:center">
+      <span class="muted">Tipo:</span>${tipos.map(t => `<button class="chip ${S.tipo.has(t) ? 'on' : ''}" onclick="A.toggleSet('tipo','${t}')">${t}</button>`).join('')}
+      <select onchange="A.setPartida(this.value)" style="margin-left:auto"><option value="">Todas as partidas</option>${PARTIDAS.map(p => `<option ${S.partida === p.nome ? 'selected' : ''}>${p.nome}</option>`).join('')}</select></div>
+    ${hs.length ? `<table><tr><th></th><th></th><th>Lance</th><th>Partida</th><th>Minuto</th><th>Duração</th><th>Status</th></tr>
+    ${hs.map(h => `<tr class="r" onclick="A.toggleOpen('${h.id}')"><td>${ck(h)}</td><td><div class="thumb" style="${css(h.v)};width:52px;height:32px"></div></td>
+      <td><b>${h.tipo}</b> · ${h.jogador} <span class="muted">${h.time}</span></td><td>${h.v.partida.nome} <span class="muted">${h.v.tempo}ºT</span></td>
+      <td>${h.minuto}</td><td>${h.dur}s</td><td>${badge(h)}</td></tr>
+      ${S.open === h.id ? `<tr class="exp"><td></td><td colspan="6"><div style="display:flex;gap:16px;align-items:center">
+        <div class="thumb" style="${css(h.v)};width:200px;height:112px;flex:none"></div>
+        <div style="flex:1">${info(h)}${ctxBar(h)}<div class="row-actions" style="margin-top:6px"><button onclick="A.focusHL('${h.id}')">Ver na trilha</button></div></div></div></td></tr>` : ''}`).join('')}
+    </table>` : `<div class="empty">Nenhum lance com esses filtros.</div>`}`;
+}
+// B: galeria visual agrupada por partida; clique abre um "player" no topo.
+function varB() {
+  const hs = pool(), open = hs.find(h => h.id === S.open);
+  const groups = PARTIDAS.map(p => [p, hs.filter(h => h.v.partida === p)]).filter(([, l]) => l.length);
+  return `${open ? `<div class="player"><div class="thumb" style="${css(open.v)}"><span style="background:#fffc;padding:0 8px;border-radius:4px">▶ ${open.tipo} ${open.minuto}</span></div>
+      <div>${info(open)}${ctxBar(open)}<div class="row-actions" style="margin-top:10px">
+        <button onclick="A.toggleSel('${open.id}')">${open.sel ? '✓ No download' : '+ Incluir no download'}</button>
+        <button onclick="A.focusHL('${open.id}')">Ver na trilha</button><button onclick="A.toggleOpen('${open.id}')">Fechar prévia</button></div></div></div>` : ''}
+    ${groups.length ? groups.map(([p, l]) => `<h3>${p.nome} <span class="muted">· ${l.length} lances</span></h3>
+      <div class="gal">${l.map(h => `<div class="card ${S.open === h.id ? 'on' : ''}" onclick="A.toggleOpen('${h.id}')">
+        <div class="thumb" style="${css(h.v)}"><span class="ck">${ck(h)}</span><span>${h.tipo}</span><span class="min">${h.minuto}</span></div>
+        <div style="font-size:13px;margin-top:3px">${h.jogador} · ${h.time}</div>${badge(h)}</div>`).join('')}</div>`).join('')
+      : `<div class="empty">Nada encontrado.</div>`}`;
+}
+// C: facetas à esquerda; resultados agrupados por jogador (decupagem por jogador).
+function varC() {
+  let hs = pool();
+  const count = (list, f) => list.reduce((m, h) => (m[f(h)] = (m[f(h)] || 0) + 1, m), {});
+  const jogKey = h => `${h.jogador} · ${h.time}`;
+  const facet = (title, name, counts) => `<h4>${title}</h4>${Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([k, n]) =>
+    `<label><input type="checkbox" ${S[name].has(k) ? 'checked' : ''} onchange="A.toggleSet('${name}', this.value)" value="${k}">${name === 'st' ? STATUS[k] : k}<span class="n">${n}</span></label>`).join('')}`;
+  const side = `${facet('Tipo de lance', 'tipo', count(hs, h => h.tipo))}${facet('Status', 'st', count(hs, h => h.status))}${facet('Jogador', 'jog', count(hs, jogKey))}`;
+  if (S.tipo.size) hs = hs.filter(h => S.tipo.has(h.tipo));
+  if (S.st.size) hs = hs.filter(h => S.st.has(h.status));
+  if (S.jog.size) hs = hs.filter(h => S.jog.has(jogKey(h)));
+  const groups = Object.entries(hs.reduce((m, h) => ((m[jogKey(h)] ||= []).push(h), m), {})).sort((a, b) => b[1].length - a[1].length);
+  const active = [...S.tipo, ...[...S.st].map(s => STATUS[s]), ...S.jog];
+  return `<div class="facets"><aside>${side}</aside><div>
+    ${active.length ? `<div class="row-actions" style="margin-bottom:10px"><span class="muted">Filtros:</span>${active.map(a => `<span class="chip on">${a}</span>`).join('')}</div>` : ''}
+    ${groups.length ? groups.map(([k, l]) => `<div class="grp"><header><b>${k}</b><span class="muted">${l.length} lance(s)</span>
+      <button style="font-size:12px;padding:1px 8px" onclick="A.selectAll(${JSON.stringify(l.map(h => h.id)).replace(/"/g, "'")})">selecionar todos</button></header>
+      ${l.map(h => `<div class="line">${ck(h)}<div class="thumb" style="${css(h.v)}"></div><span style="width:90px">${h.minuto} ${h.tipo}</span>
+        <span class="muted" style="flex:1">${h.v.partida.nome} · ${h.dur}s</span>${badge(h)}<button style="font-size:12px;padding:1px 8px" onclick="A.focusHL('${h.id}')">ver</button></div>`).join('')}</div>`).join('')
+      : `<div class="empty">Nenhum lance com esses filtros.</div>`}
+  </div></div>`;
+}
+// D: cada partida vira uma régua 0'–90' com marcadores; a busca apaga o que não bate.
+function varD() {
+  const all = HL.filter(h => inRun(h) && h.status !== 'pendente'), hit = new Set(pool().map(h => h.id));
+  const open = all.find(h => h.id === S.open);
+  const matches = PARTIDAS.filter(p => S.videos.some(v => v.partida === p));
+  return `<div class="legend">${TIPOS.map(t => `<span><span class="lg">${SIGLA[t]}</span> ${t}</span>`).join('')}</div>
+    ${matches.map(p => { const l = all.filter(h => h.v.partida === p);
+      return `<div class="match"><b>${p.nome}</b> <span class="muted">· ${l.filter(h => hit.has(h.id)).length} de ${l.length} lances</span>
+      <div class="bar">${[1, 2].map(tp => { const v = VIDEOS.find(x => x.partida === p && x.tempo === tp);
+        return `<div class="half" style="background:${v.f};border-color:var(--ink)">${l.filter(h => h.v.tempo === tp).map(h =>
+          `<button class="pinD ${hit.has(h.id) ? '' : 'dim'} ${S.open === h.id ? 'on' : ''}" style="left:${Math.min(h.t, 45) / 45 * 100}%" title="${h.tipo} ${h.minuto} · ${h.jogador}" onclick="A.toggleOpen('${h.id}')">${SIGLA[h.tipo]}</button>`).join('')}</div>`; }).join('')}</div>
+      <div class="scale"><span>0'</span><span>1º tempo</span><span>45'</span><span>2º tempo</span><span>90'</span></div></div>`; }).join('')}
+    ${open ? `<div class="detail"><div class="thumb" style="${css(open.v)}"></div><div style="flex:1">${info(open)} ${badge(open)}</div>
+      <div class="row-actions" style="flex-direction:column"><button onclick="A.toggleSel('${open.id}')">${open.sel ? '✓ No download' : '+ Incluir no download'}</button><button onclick="A.focusHL('${open.id}')">Ver na trilha</button></div></div>`
+      : `<div class="muted" style="text-align:center">Clique num marcador para ver o lance.</div>`}`;
+}
+
+// ---------- render ----------
+const app = document.getElementById('app');
+function render() {
+  const a = document.activeElement, id = a && a.id, pos = a && a.selectionStart;
+  const scroll = document.getElementById('dbody')?.scrollTop;
+  const screens = ['Tela 1 · Enviar', 'Tela 2 · Selecionados', 'Tela 3 · Análise'];
+  app.innerHTML = `<div class="steps">${screens.map((s, i) => `<button class="${S.screen === i + 1 ? 'on' : ''}" onclick="A.go(${i + 1})">${s}</button>`).join('')}
+      <button class="${S.drawer ? 'on' : ''}" onclick="A.go(3);A.openDrawer()">Tela 4 · Base de highlights</button></div>
+    <div class="frame">${[telaEnviar, telaSelecionados, telaAnalise][S.screen - 1]()}</div>
+    ${S.toast ? `<div class="toast">${S.toast}</div>` : ''}`;
+  if (id) { const el = document.getElementById(id); if (el) { el.focus(); if (pos != null) el.setSelectionRange(pos, pos); } }
+  if (scroll != null && document.getElementById('dbody')) document.getElementById('dbody').scrollTop = scroll;
+  renderSwitcher();
+}
+function renderSwitcher() {
+  const filtros = [...S.tipo, ...S.st, ...S.jog, S.partida].filter(Boolean).length;
+  document.getElementById('switcher').innerHTML = `<div class="row">
+      <button onclick="A.variant(-1)" title="Variante anterior (←)">←</button>
+      <span class="lbl">${S.variant} · ${VARIANTS[S.variant]}</span>
+      <button onclick="A.variant(1)" title="Próxima variante (→)">→</button></div>
+    <div class="state">tela ${S.screen}${S.drawer ? ' + base aberta' : ''} · ${HL.filter(h => inRun(h) && h.status !== 'pendente').length} lances · ${HL.filter(h => h.sel).length} selecionados · busca “${S.q}” · ${filtros} filtro(s)</div>`;
+}
+document.addEventListener('keydown', e => {
+  if (e.target.closest?.('input, textarea, select, [contenteditable]')) return;
+  if (e.key === 'ArrowLeft') A.variant(-1);
+  if (e.key === 'ArrowRight') A.variant(1);
+  if (e.key === 'Escape' && S.drawer) A.closeDrawer();
+});
+
+if (S.screen > 1) { S.videos = [...VIDEOS]; if (S.screen === 3) finishSim(); }
+sync();
+</script>
+</body>
+</html>
