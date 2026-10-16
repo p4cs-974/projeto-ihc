@@ -152,6 +152,114 @@
     background: #f3f3f3; color: #111; border-radius: 999px; padding: 8px 14px;
     z-index: 40; font-size: 14px;
   }
+  .btn.on { background: #f3f3f3; color: #111; border-color: #f3f3f3; }
+  .analise { position: relative; padding-right: 18px; }
+  .analise-head { display: flex; justify-content: space-between; gap: 16px; align-items: flex-end; flex-wrap: wrap; }
+  .previews { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .preview { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; min-width: 0; }
+  .pv-top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin-bottom: 8px; }
+  .pv-name { font-size: 13px; }
+  .pv-file { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .pv-stage { position: relative; aspect-ratio: 16/9; background: #0b0b0b; border-radius: 10px; overflow: hidden; border: 2px solid transparent; }
+  .pv-canvas, .pv-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .is-hidden { display: none !important; }
+  .tc {
+    position: absolute; left: 8px; bottom: 8px; background: rgba(0,0,0,.72);
+    border-radius: 6px; padding: 2px 6px; font-size: 12px; font-variant-numeric: tabular-nums;
+  }
+  .pill {
+    position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%);
+    background: #111; color: #fff; border: 1px solid #fff; border-radius: 999px;
+    padding: 3px 10px; font-size: 13px; white-space: nowrap; max-width: 92%;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+  .preview.flash .pv-stage { animation: flash .6s ease; }
+  @keyframes flash { 0% { box-shadow: 0 0 0 3px #fff; } 100% { box-shadow: 0 0 0 0 transparent; } }
+  .pv-back { margin-top: 8px; }
+  .lane {
+    position: relative; height: 140px; margin: 16px 0;
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  }
+  .lane-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 100%; }
+  .lane-col { padding: 8px 12px; color: var(--muted); font-size: 12px; border-right: 1px solid var(--line); }
+  .chip-layer { position: absolute; inset: 0; pointer-events: none; }
+  .hl-chip {
+    position: absolute; height: 26px; max-width: 30%; padding: 3px 8px; border-radius: 999px;
+    font-size: 12px; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    transition: left .45s ease, top .45s ease, opacity .4s ease;
+  }
+  .hl-chip.out { opacity: 0; }
+  .tlabel { display: flex; justify-content: space-between; gap: 12px; margin: 14px 0 6px; font-size: 13px; color: var(--muted); }
+  .track { position: relative; height: 58px; background: #141414; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .track-overall { height: 16px; }
+  .seg { position: absolute; top: 0; bottom: 0; }
+  .seg-fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--c); }
+  .seg-stripes {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    background: repeating-linear-gradient(-45deg, transparent 0 6px, rgba(255,255,255,.5) 6px 10px);
+    background-size: 28px 28px; animation: stripes .55s linear infinite;
+  }
+  .seg.failed .seg-fill { opacity: .4; }
+  @keyframes stripes { to { background-position: 28px 0; } }
+  .scan { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; pointer-events: none; display: none; }
+  .mk {
+    position: absolute; top: 10px; width: 12px; height: 38px; border: 0; border-radius: 4px; padding: 0;
+    transform: translateX(-50%); animation: pop .35s ease;
+  }
+  .mk.focus { outline: 2px solid #fff; outline-offset: 2px; }
+  @keyframes pop { from { transform: translateX(-50%) scaleY(.2); opacity: 0; } to { transform: translateX(-50%) scaleY(1); opacity: 1; } }
+  .overall-fill { height: 100%; width: 0; background: #d8d8d8; }
+  .queue-title { font-size: 16px; margin: 18px 0 8px; }
+  .table-wrap { border: 1px solid var(--line); border-radius: 12px; overflow: auto; }
+  .queue { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .queue th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12px; padding: 8px; border-bottom: 1px solid var(--line); }
+  .queue td { padding: 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  .q-name { max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .handle {
+    position: fixed; right: 0; top: 50%; transform: translateY(-50%);
+    width: 34px; height: 38%; min-height: 120px;
+    border-radius: 10px 0 0 10px; border: 1px solid var(--line); border-right: 0;
+    background: #1c1c1c; color: #ddd; font-size: 22px; z-index: 6;
+  }
+  .handle:hover { background: #2a2a2a; }
+  .base-head { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+  .base-head .search { flex: 1; min-width: 220px; }
+  .base-body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 16px; align-items: start; }
+  .detail { position: sticky; top: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; }
+  .detail-stage { position: relative; aspect-ratio: 16/9; background: #0b0b0b; border-radius: 10px; overflow: hidden; margin-bottom: 10px; border: 2px solid transparent; }
+  .detail-stage canvas, .detail-stage video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pill-status { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; font-size: 12px; color: var(--muted); }
+  .pill-status.trilha { color: #34d399; border-color: rgba(52, 211, 153, .55); }
+  .kv { display: grid; grid-template-columns: 88px 1fr; gap: 4px 8px; font-size: 13px; margin: 10px 0; }
+  .kv dt { color: var(--muted); }
+  .kv dd { margin: 0; overflow-wrap: anywhere; }
+  .ctx { position: relative; height: 14px; border: 1px solid var(--line); border-radius: 6px; background: #101010; }
+  .ctx-range { position: absolute; top: 0; bottom: 0; background: #f3f3f3; border-radius: 4px; }
+  .scale { position: relative; display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; margin-top: 4px; }
+  .scale-mid { position: absolute; left: 50%; transform: translateX(-50%); }
+  .match { margin: 0 0 20px; }
+  .match-name { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .pin-area { position: relative; height: 112px; }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 32px; display: flex; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
+  .bar-seg { height: 100%; }
+  .pin {
+    position: absolute; width: 28px; height: 28px; margin-left: -14px; border-radius: 50%;
+    border: 1px solid rgba(0,0,0,.45); background: #f4f4f5; color: #111; font-size: 11px; font-weight: 650; padding: 0; z-index: 1;
+  }
+  .pin.dim { opacity: .18; }
+  .pin.on { background: #111; color: #fff; border-color: #fff; }
+  .pin.r0 { top: 46px; }
+  .pin.r1 { top: 10px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; color: var(--muted); font-size: 12px; margin-bottom: 14px; }
+  .lg { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--line); color: var(--text); margin-right: 4px; font-size: 10px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+  .thumb-sm { width: 72px; height: 40px; object-fit: cover; border-radius: 6px; display: block; background: #111; }
+  .list-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .list-table th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12px; padding: 8px; border-bottom: 1px solid var(--line); }
+  .list-table td { padding: 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  .list-table tr.pick { cursor: pointer; }
+  .list-table tr.row-on td { background: #222; }
+  .detail-empty { color: var(--muted); min-height: 120px; }
   @media (max-width: 860px) {
     .app { grid-template-columns: 1fr; }
     .side { border-right: 0; border-bottom: 1px solid var(--line); padding: 8px; position: sticky; top: 0; z-index: 5; background: #111; }
@@ -161,6 +269,11 @@
     .side-foot { display: none; }
     .main { padding: 18px 14px 40px; }
     .screen-h { font-size: 24px; }
+    .previews { grid-template-columns: 1fr; }
+    .handle { height: 72px; min-height: 0; top: auto; bottom: 12px; transform: none; }
+    .analise { padding-right: 0; padding-bottom: 64px; }
+    .base-body { grid-template-columns: 1fr; }
+    .detail { position: static; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -272,6 +385,7 @@ function pushHighlight(v, tMin, tipo, time, jogador, minuto, dur, teams) {
     tipo, time, jogador, minuto, dur,
     status: 'pendente',
     at: 0,
+    seq: 0,
     sel: false,
   });
 }
@@ -427,12 +541,16 @@ function reachable(id) {
   if (id === 'selecionados') return S.videos.length > 0;
   return S.sim.started;
 }
+let suppressHash = 0;
 function go(id) {
   if (!ROUTES.some(r => r.id === id)) return;
   if (!reachable(id)) return;
   const hash = '#/' + id;
-  if (location.hash !== hash) location.hash = hash;
-  else paint();
+  if (location.hash !== hash) {
+    suppressHash++;
+    location.hash = hash;
+  }
+  paint(true);
 }
 
 function stepInfo() {
@@ -530,14 +648,48 @@ function viewSelecionados() {
     + (reading ? '<p class="note">Iniciar análise fica desligado enquanto algum arquivo ainda está sendo lido.</p>' : '');
 }
 
+function previewBox(i) {
+  const back = i === 0 ? '<button type="button" class="btn small pv-back" id="pv-back" data-act="live"' + (S.focusId ? '' : ' hidden') + '>Voltar ao vivo</button>' : '';
+  return '<section class="preview" id="pv' + i + '">'
+    + '<div class="pv-top"><span class="pv-name">Preview ' + (i + 1) + '</span><span class="pv-file" id="pv-file-' + i + '"></span></div>'
+    + '<div class="pv-stage" id="pv-stage-' + i + '">'
+    + '<canvas class="pv-canvas" id="pv-c-' + i + '" width="640" height="360"></canvas>'
+    + '<video class="pv-video is-hidden" id="pv-v-' + i + '" muted playsinline></video>'
+    + '<div class="tc" id="pv-tc-' + i + '">00:00</div>'
+    + '<div class="pill" id="pv-pill-' + i + '" hidden></div>'
+    + '</div>' + back + '</section>';
+}
 function viewAnalise() {
   if (!S.sim.started) {
     const dest = S.videos.length ? 'selecionados' : 'enviar';
     const label = S.videos.length ? 'Ver vídeos selecionados' : 'Enviar vídeos';
     return emptyState('Análise', 'A análise ainda não começou.', label, dest);
   }
-  return '<h1 class="screen-h">Análise</h1><div class="empty"><p>A simulação da análise entra na próxima etapa deste protótipo. Os vídeos já estão na fila.</p>'
-    + '<button type="button" class="btn" data-act="goto" data-route="base">Abrir base de highlights</button></div>';
+  if (!readyVideos().length) {
+    return emptyState('Análise', 'Nenhum vídeo pronto para analisar.', 'Enviar vídeos', 'enviar');
+  }
+  return '<div class="analise">'
+    + '<div class="analise-head"><div><h1 class="screen-h">Análise</h1>'
+    + '<p class="lead">Dois vídeos seguem em paralelo. Cada lance passa por detectado, extraído e na trilha.</p></div>'
+    + '<div class="row-actions" role="group" aria-label="Controles da análise">'
+    + '<button type="button" class="btn small' + (S.sim.speed === 1 ? ' on' : '') + '" data-act="speed" data-speed="1" aria-pressed="' + (S.sim.speed === 1) + '">1×</button>'
+    + '<button type="button" class="btn small' + (S.sim.speed === 4 ? ' on' : '') + '" data-act="speed" data-speed="4" aria-pressed="' + (S.sim.speed === 4) + '">4×</button>'
+    + '<button type="button" class="btn small" id="btn-pause" data-act="pause">Pausar</button>'
+    + '<button type="button" class="btn small danger" data-act="cancel">Cancelar</button></div></div>'
+    + '<div class="previews">' + previewBox(0) + previewBox(1) + '</div>'
+    + '<div class="lane" id="lane"><div class="lane-cols">'
+    + '<div class="lane-col">1. Detectado</div><div class="lane-col">2. Extraído</div><div class="lane-col">3. Na trilha</div>'
+    + '</div><div class="chip-layer" id="chips"></div></div>'
+    + '<div class="tlabel"><span>Highlights detectados</span><span id="hl-meta"></span></div>'
+    + '<div class="track" id="track-hl"></div>'
+    + '<div class="tlabel"><span>Progresso da análise por vídeo</span><span>cheio = concluído · listrado = processando · vazio = na fila</span></div>'
+    + '<div class="track" id="track-seg"></div>'
+    + '<div class="tlabel"><span>Progresso geral da análise</span><span id="overall-txt"></span></div>'
+    + '<div class="track track-overall" id="track-all"><div class="overall-fill" id="overall-fill"></div></div>'
+    + '<h2 class="queue-title">Fila de vídeos</h2>'
+    + '<div class="table-wrap"><table class="queue" id="queue-table"></table></div>'
+    + '<button type="button" class="handle" data-act="goto" data-route="base" aria-label="Abrir base de highlights">›</button>'
+    + '</div>';
 }
 
 function viewBase() {
@@ -546,10 +698,16 @@ function viewBase() {
     const label = S.videos.length ? 'Ver vídeos selecionados' : 'Enviar vídeos';
     return emptyState('Base de highlights', 'A base recebe os lances depois que a análise começa.', label, dest);
   }
-  const n = allHls().filter(h => h.status !== 'pendente').length;
-  return '<h1 class="screen-h">Base de highlights</h1><div class="empty"><p>'
-    + (n ? n + ' lance(s) já detectados.' : 'Nenhum lance na base ainda.')
-    + '</p><button type="button" class="btn primary" data-act="goto" data-route="analise">Voltar à análise</button></div>';
+  return '<div class="base"><header class="base-head">'
+    + '<div><h1 class="screen-h">Base de highlights</h1><p class="lead" id="base-count"></p></div>'
+    + '<input id="q" class="search" placeholder="Buscar por lance, jogador, time ou partida" value="' + esc(S.q) + '" autocomplete="off">'
+    + '<div class="row-actions" role="group" aria-label="Visualização">'
+    + '<button type="button" class="btn small' + (S.view === 'mapa' ? ' on' : '') + '" data-act="view" data-view="mapa" aria-pressed="' + (S.view === 'mapa') + '">Mapa</button>'
+    + '<button type="button" class="btn small' + (S.view === 'lista' ? ' on' : '') + '" data-act="view" data-view="lista" aria-pressed="' + (S.view === 'lista') + '">Lista</button>'
+    + '</div>'
+    + '<button type="button" class="btn primary" id="btn-dl" data-act="download">Baixar selecionados (0)</button>'
+    + '</header><p class="note" id="base-live" hidden></p>'
+    + '<div class="base-body"><div id="base-view"></div><aside class="detail" id="base-detail"></aside></div></div>';
 }
 
 const VIEWS = { enviar: viewEnviar, selecionados: viewSelecionados, analise: viewAnalise, base: viewBase };
@@ -569,6 +727,7 @@ function paint(force) {
   const scroll = main.scrollTop;
   main.innerHTML = '<div id="screen-root">' + VIEWS[id]() + '</div>';
   mounted = id;
+  lastSig = '';
   document.querySelectorAll('.vthumb canvas').forEach(c => drawPitch(c, c.dataset.color || '#888', 12, true));
   if (focusKey) {
     const el = document.getElementById(focusKey);
@@ -581,6 +740,11 @@ function paint(force) {
     }
   }
   if (scroll) main.scrollTop = scroll;
+  if (id === 'base' && S.sim.started) {
+    lastBaseSig = '';
+    lastDetailSig = '';
+    patchBase();
+  }
 }
 
 function renderModal() {
@@ -636,7 +800,9 @@ function beginSim() {
     S.sim.queue.push(v.id);
   });
   S.sim.started = true;
-  S.sim.running = false;
+  S.sim.running = true;
+  S.sim.paused = false;
+  S.sim.speed = S.sim.speed === 4 ? 4 : 1;
   S.detailId = null;
   mounted = '';
   go('analise');
@@ -792,10 +958,41 @@ document.addEventListener('click', e => {
     S.modal = null;
     renderModal();
     if (kind === 'restart') beginSim();
+    else if (kind === 'cancel') cancelSim();
   }
+  else if (act === 'pause') { if (S.sim.running) S.sim.paused = !S.sim.paused; }
+  else if (act === 'speed') {
+    const sp = Number(el.dataset.speed);
+    if (sp === 1 || sp === 4) S.sim.speed = sp;
+  }
+  else if (act === 'cancel') {
+    if (!S.sim.started) return;
+    S.modal = 'cancel';
+    renderModal();
+  }
+  else if (act === 'retry') retryVideo(el.dataset.id);
+  else if (act === 'marker') S.focusId = el.dataset.id;
+  else if (act === 'live') S.focusId = null;
+  else if (act === 'view') { S.view = el.dataset.view === 'lista' ? 'lista' : 'mapa'; patchBase(); }
+  else if (act === 'tipo') {
+    const t = el.dataset.tipo;
+    if (S.tipoOn.has(t)) S.tipoOn.delete(t); else S.tipoOn.add(t);
+    patchBase();
+  }
+  else if (act === 'pick-hl') { S.detailId = el.dataset.id; patchBase(); }
+  else if (act === 'nav') stepDetail(Number(el.dataset.dir) || 1);
+  else if (act === 'toggle-sel') {
+    const h = allHls().find(x => x.id === el.dataset.id);
+    if (h && h.status === 'trilha') h.sel = !h.sel;
+    patchBase();
+  }
+  else if (act === 'see') { S.focusId = el.dataset.id; go('analise'); }
+  else if (act === 'download') downloadCSV();
+  else if (act === 'sel' || act === 'sel-all') return;
 });
 
 document.addEventListener('input', e => {
+  if (e.target.id === 'q') { S.q = e.target.value; patchBase(); return; }
   const el = e.target.closest?.('[data-act="partida"]');
   if (!el) return;
   const v = videoById(el.dataset.id);
@@ -803,13 +1000,34 @@ document.addEventListener('input', e => {
 });
 
 document.addEventListener('change', e => {
-  if (e.target.id !== 'file') return;
-  addFiles(e.target.files);
-  e.target.value = '';
+  if (e.target.id === 'file') {
+    addFiles(e.target.files);
+    e.target.value = '';
+    return;
+  }
+  if (e.target.id === 'partida-select') { S.partidaFilter = e.target.value; patchBase(); return; }
+  if (e.target.dataset.act === 'sel') {
+    const h = allHls().find(x => x.id === e.target.dataset.id);
+    if (h && h.status === 'trilha') h.sel = e.target.checked;
+    patchBase();
+    return;
+  }
+  if (e.target.dataset.act === 'sel-all') {
+    const rows = listaRows().filter(h => h.status === 'trilha');
+    const allOn = rows.length > 0 && rows.every(h => h.sel);
+    rows.forEach(h => { h.sel = !allOn; });
+    patchBase();
+  }
 });
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && S.modal) { S.modal = null; renderModal(); return; }
+  const typing = e.target.closest?.('input, textarea, select, [contenteditable]');
+  if (!typing && routeId() === 'base' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+    e.preventDefault();
+    stepDetail(e.key === 'ArrowRight' ? 1 : -1);
+    return;
+  }
   const drop = e.target.closest?.('#drop');
   if (drop && (e.key === 'Enter' || e.key === ' ')) {
     e.preventDefault();
@@ -835,7 +1053,653 @@ document.addEventListener('drop', e => {
   if (e.target.closest?.('#drop') && !S.sim.running) addFiles(e.dataTransfer.files);
 });
 
-window.addEventListener('hashchange', () => { mounted = ''; paint(true); });
+function cancelSim() {
+  resetHighlights();
+  S.sim.started = false;
+  mounted = '';
+  lastSig = '';
+  if (S.videos.length) go('selecionados');
+  else go('enviar');
+  say('Análise cancelada.');
+}
+
+function retryVideo(id) {
+  const v = videoById(id);
+  if (!v || S.sim.state[id] !== 'falhou') return;
+  v.retried = true;
+  S.sim.state[id] = 'fila';
+  S.sim.progress[id] = 0;
+  if (!S.sim.queue.includes(id)) S.sim.queue.push(id);
+  const stopped = !S.sim.running;
+  S.sim.running = true;
+  if (stopped) S.sim.paused = false;
+  say(v.nome + ' voltou para a fila.');
+}
+
+const VIDEO_MS = 12000;
+const STAGE_MS = 1000;
+const VIDEO_LABEL = { fila: 'na fila', processando: 'processando', concluido: 'concluído', falhou: 'falhou' };
+let chipSeq = 1;
+let animClock = 0;
+let lastFrame = 0;
+let lastSig = '';
+let lastBaseSig = '';
+let lastDetailSig = '';
+
+function timeline() {
+  const vids = S.videos.filter(v => S.sim.state[v.id]);
+  const total = vids.reduce((a, v) => a + (v.durationSec || 1), 0) || 1;
+  let off = 0;
+  const map = {};
+  vids.forEach(v => {
+    const dur = v.durationSec || 1;
+    map[v.id] = { off, dur };
+    off += dur;
+  });
+  return { vids, total, map };
+}
+
+function ensureSlots() {
+  const sim = S.sim;
+  for (let i = 0; i < 2; i++) {
+    if (sim.slots[i]) continue;
+    const next = sim.queue.shift();
+    if (!next) continue;
+    sim.slots[i] = next;
+    sim.slotStart[i] = sim.clock;
+    sim.state[next] = 'processando';
+    if (sim.progress[next] == null) sim.progress[next] = 0;
+  }
+}
+
+function markDetected(v, p, slot) {
+  v.hls.forEach(h => {
+    if (h.status !== 'pendente') return;
+    const pos = (h.t * 60) / (v.durationSec || 1);
+    if (pos <= p + 1e-6) {
+      h.status = 'detectado';
+      h.at = S.sim.clock;
+      h.seq = ++chipSeq;
+      if (slot >= 0) {
+        S.sim.flashes[slot] = { text: h.tipo + ' detectado em ' + h.minuto, until: performance.now() + 1700 };
+      }
+    }
+  });
+}
+
+function advance(dt) {
+  const sim = S.sim;
+  sim.clock += dt * sim.speed;
+  ensureSlots();
+  for (let i = 0; i < 2; i++) {
+    const id = sim.slots[i];
+    if (!id) continue;
+    const v = videoById(id);
+    if (!v) { sim.slots[i] = null; continue; }
+    const p = Math.min(1, (sim.clock - sim.slotStart[i]) / VIDEO_MS);
+    if (v.failKey && !v.retried && p >= 0.57) {
+      markDetected(v, 0.57, i);
+      sim.progress[id] = 0.57;
+      sim.state[id] = 'falhou';
+      sim.slots[i] = null;
+      continue;
+    }
+    sim.progress[id] = p;
+    markDetected(v, p, i);
+    if (p >= 1) {
+      sim.progress[id] = 1;
+      sim.state[id] = 'concluido';
+      sim.slots[i] = null;
+    }
+  }
+  allHls().forEach(h => {
+    if ((h.status === 'detectado' || h.status === 'extraido') && sim.clock - h.at >= STAGE_MS) {
+      h.status = h.status === 'detectado' ? 'extraido' : 'trilha';
+      h.at = sim.clock;
+      h.seq = ++chipSeq;
+    }
+  });
+  ensureSlots();
+  const busy = sim.slots.some(Boolean) || sim.queue.length > 0;
+  const pipeline = allHls().some(h => h.status === 'detectado' || h.status === 'extraido');
+  if (!busy && !pipeline) sim.running = false;
+}
+
+function simSignature() {
+  const sim = S.sim;
+  return [
+    sim.running ? 1 : 0, sim.paused ? 1 : 0, sim.speed, sim.queue.join(','), sim.slots.join(','),
+    S.videos.map(v => (sim.state[v.id] || '-') + v.hls.map(h => h.status[0]).join('')).join('|'),
+    S.focusId || ''
+  ].join('~');
+}
+
+function ensureTracks() {
+  const seg = document.getElementById('track-seg');
+  const hl = document.getElementById('track-hl');
+  if (!seg || !hl || seg.dataset.built) return;
+  const { vids, total, map } = timeline();
+  seg.innerHTML = vids.map(v => {
+    const left = map[v.id].off / total * 100;
+    const width = map[v.id].dur / total * 100;
+    return '<div class="seg" data-id="' + esc(v.id) + '" style="left:' + left + '%;width:' + width + '%;--c:' + esc(v.color) + '" title="' + esc(v.nome) + '">'
+      + '<div class="seg-fill"></div><div class="seg-stripes"></div></div>';
+  }).join('') + '<div class="scan" id="scan-seg-0"></div><div class="scan" id="scan-seg-1"></div>';
+  seg.dataset.built = '1';
+  hl.innerHTML = '<div class="scan" id="scan-hl-0"></div><div class="scan" id="scan-hl-1"></div>';
+  hl.dataset.built = '1';
+}
+
+function syncMarkers() {
+  const hl = document.getElementById('track-hl');
+  if (!hl) return;
+  const { total, map } = timeline();
+  allHls().forEach(h => {
+    if (h.status !== 'trilha') return;
+    if (hl.querySelector('.mk[data-id="' + CSS.escape(h.id) + '"]')) return;
+    const v = videoById(h.videoId);
+    const slot = map[v.id];
+    if (!slot) return;
+    const left = (slot.off + Math.min(h.t * 60, slot.dur)) / total * 100;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'mk';
+    btn.dataset.id = h.id;
+    btn.dataset.act = 'marker';
+    btn.style.left = left + '%';
+    btn.style.background = v.color;
+    btn.title = h.tipo + ' ' + h.minuto + ' · ' + v.nome;
+    btn.setAttribute('aria-label', h.tipo + ' em ' + h.minuto);
+    hl.appendChild(btn);
+  });
+  hl.querySelectorAll('.mk').forEach(el => el.classList.toggle('focus', el.dataset.id === S.focusId));
+}
+
+function syncChips() {
+  const layer = document.getElementById('chips');
+  if (!layer) return;
+  const recent = allHls()
+    .filter(h => h.status === 'detectado' || h.status === 'extraido' || h.status === 'trilha')
+    .sort((a, b) => b.seq - a.seq)
+    .slice(0, 3);
+  const ids = new Set(recent.map(h => h.id));
+  layer.querySelectorAll('.hl-chip').forEach(el => {
+    if (ids.has(el.dataset.id)) return;
+    el.classList.add('out');
+    const remove = () => el.remove();
+    el.addEventListener('transitionend', remove, { once: true });
+    if (reducedMotion()) remove();
+  });
+  recent.forEach((h, i) => {
+    let el = layer.querySelector('.hl-chip[data-id="' + CSS.escape(h.id) + '"]');
+    const v = videoById(h.videoId);
+    if (!el) {
+      el = document.createElement('div');
+      el.className = 'hl-chip';
+      el.dataset.id = h.id;
+      el.style.background = v.color;
+      el.style.color = '#111';
+      layer.appendChild(el);
+    }
+    const label = h.tipo + ' · ' + h.minuto;
+    if (el.textContent !== label) el.textContent = label;
+    const col = h.status === 'detectado' ? 0 : h.status === 'extraido' ? 1 : 2;
+    el.style.left = 'calc(' + (col * 33.333) + '% + 10px)';
+    el.style.top = (34 + i * 30) + 'px';
+  });
+}
+
+function renderQueue() {
+  const table = document.getElementById('queue-table');
+  if (!table) return;
+  const rows = S.videos.filter(v => S.sim.state[v.id]).map(v => {
+    const st = S.sim.state[v.id];
+    const lances = v.hls.filter(h => h.status !== 'pendente').length;
+    const retry = st === 'falhou'
+      ? ' <button type="button" class="btn small" data-act="retry" data-id="' + esc(v.id) + '">Tentar novamente</button>'
+      : '';
+    return '<tr><td class="q-name" title="' + esc(v.nome) + '">' + esc(v.nome) + '</td><td>' + esc(v.partida) + '</td><td>'
+      + esc(VIDEO_LABEL[st] || st) + retry + '</td><td>' + lances + '</td></tr>';
+  }).join('');
+  table.innerHTML = '<thead><tr><th>Vídeo</th><th>Partida</th><th>Estado</th><th>Lances</th></tr></thead><tbody>' + rows + '</tbody>';
+}
+
+function syncStaticAnalise() {
+  const pause = document.getElementById('btn-pause');
+  if (pause) {
+    pause.textContent = S.sim.paused ? 'Retomar' : 'Pausar';
+    pause.disabled = !S.sim.running;
+  }
+  document.querySelectorAll('[data-act="speed"]').forEach(b => {
+    const on = Number(b.dataset.speed) === S.sim.speed;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    b.disabled = !S.sim.running && !S.sim.paused;
+  });
+  const { vids } = timeline();
+  const done = vids.filter(v => S.sim.state[v.id] === 'concluido').length;
+  const failed = vids.filter(v => S.sim.state[v.id] === 'falhou').length;
+  const onTrack = allHls().filter(h => h.status === 'trilha').length;
+  const meta = document.getElementById('hl-meta');
+  if (meta) meta.textContent = onTrack + ' na trilha · clique num marcador para ver no Preview 1';
+  const overall = document.getElementById('overall-txt');
+  if (overall) {
+    let txt = done + ' de ' + vids.length + ' vídeos concluídos';
+    if (failed) txt += ' · ' + failed + (failed === 1 ? ' falhou' : ' falharam');
+    if (S.sim.paused) txt += ' · pausada';
+    else if (!S.sim.running && S.sim.started) txt += ' · encerrada';
+    if (overall.textContent !== txt) overall.textContent = txt;
+  }
+  syncChips();
+  syncMarkers();
+  renderQueue();
+}
+
+function placeScan(id, left, color) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (left == null) { el.style.display = 'none'; return; }
+  el.style.display = 'block';
+  el.style.left = left + '%';
+  el.style.background = color;
+}
+
+function syncVideo(el, mode, target, loopStart, loopEnd, now) {
+  if (!el || el.readyState < 1) return;
+  if (mode === 'loop') {
+    if (el.currentTime < loopStart || el.currentTime >= loopEnd - 0.08) {
+      if (!el._seeked || now - el._seeked > 80) {
+        try { el.currentTime = loopStart; } catch (err) {}
+        el._seeked = now;
+      }
+    }
+    if (el.paused) el.play().catch(() => {});
+  } else {
+    if (!el.paused) el.pause();
+    if (!el._seeked || now - el._seeked > 120) {
+      if (Math.abs((el.currentTime || 0) - target) > 0.25) {
+        try { el.currentTime = target; } catch (err) {}
+      }
+      el._seeked = now;
+    }
+  }
+}
+
+function paintPreview(i, now) {
+  const canvas = document.getElementById('pv-c-' + i);
+  const video = document.getElementById('pv-v-' + i);
+  const stage = document.getElementById('pv-stage-' + i);
+  const box = document.getElementById('pv' + i);
+  if (!canvas || !box) return;
+  const reviewing = i === 0 && S.focusId;
+  const h = reviewing ? allHls().find(x => x.id === S.focusId) : null;
+  const liveId = S.sim.slots[i];
+  const v = h ? videoById(h.videoId) : (liveId ? videoById(liveId) : null);
+  const file = document.getElementById('pv-file-' + i);
+  if (file) {
+    const name = v ? v.nome : (S.sim.running || S.sim.paused ? 'aguardando vídeo' : 'livre');
+    if (file.textContent !== name) file.textContent = name;
+  }
+  if (stage) stage.style.borderColor = v ? v.color : 'transparent';
+  const back = document.getElementById('pv-back');
+  if (back) back.hidden = !S.focusId;
+  const flash = S.sim.flashes[i];
+  const pill = document.getElementById('pv-pill-' + i);
+  const showFlash = !!(flash && flash.until > now && !reviewing);
+  if (showFlash !== box.classList.contains('flash')) box.classList.toggle('flash', showFlash);
+  if (pill) {
+    const text = reviewing && h ? h.tipo + ' · ' + h.minuto : showFlash ? flash.text : '';
+    pill.hidden = !text;
+    if (text && pill.textContent !== text) pill.textContent = text;
+  }
+  let sec = 0;
+  if (reviewing && h && v) {
+    const start = h.t * 60;
+    const end = Math.min(v.durationSec || start + h.dur, start + h.dur);
+    const span = Math.max(0.4, end - start);
+    sec = reducedMotion() ? start : start + ((animClock / 1000) % span);
+  } else if (v) {
+    sec = (S.sim.progress[v.id] || 0) * (v.durationSec || 0);
+  }
+  const tc = document.getElementById('pv-tc-' + i);
+  const label = fmtTC(sec);
+  if (tc && tc.textContent !== label) tc.textContent = label;
+  const useFile = v && !v.mock && v.url;
+  canvas.classList.toggle('is-hidden', !!useFile);
+  video.classList.toggle('is-hidden', !useFile);
+  if (useFile) {
+    if (video.dataset.src !== v.url) {
+      video.dataset.src = v.url;
+      video.src = v.url;
+    }
+    if (reviewing && h) {
+      const start = h.t * 60;
+      const end = Math.min(v.durationSec || start + h.dur, start + h.dur);
+      syncVideo(video, 'loop', sec, start, end, now);
+    } else syncVideo(video, 'seek', sec, 0, 0, now);
+  } else if (v) {
+    drawPitch(canvas, v.color, reviewing || !reducedMotion() ? animClock / 1000 : sec, reducedMotion() && !reviewing);
+  } else {
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#141414';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+}
+
+function syncMotion(now) {
+  const { vids, total, map } = timeline();
+  document.querySelectorAll('#track-seg .seg').forEach(seg => {
+    const id = seg.dataset.id;
+    const p = S.sim.progress[id] || 0;
+    const st = S.sim.state[id];
+    const fill = seg.querySelector('.seg-fill');
+    const stripes = seg.querySelector('.seg-stripes');
+    const width = ((st === 'concluido' ? 1 : p) * 100) + '%';
+    if (fill && fill.style.width !== width) fill.style.width = width;
+    const sw = st === 'processando' ? width : '0%';
+    if (stripes && stripes.style.width !== sw) stripes.style.width = sw;
+    seg.classList.toggle('failed', st === 'falhou');
+  });
+  S.sim.slots.forEach((id, i) => {
+    if (!id || !map[id]) {
+      placeScan('scan-hl-' + i, null);
+      placeScan('scan-seg-' + i, null);
+      return;
+    }
+    const left = (map[id].off + (S.sim.progress[id] || 0) * map[id].dur) / total * 100;
+    const color = videoById(id).color;
+    placeScan('scan-hl-' + i, left, color);
+    placeScan('scan-seg-' + i, left, color);
+  });
+  const doneW = vids.reduce((a, v) => a + (S.sim.progress[v.id] || 0) * (v.durationSec || 1), 0);
+  const bar = document.getElementById('overall-fill');
+  if (bar) bar.style.width = (doneW / total * 100) + '%';
+  paintPreview(0, now);
+  paintPreview(1, now);
+}
+
+function paintAnalise(now) {
+  if (!document.getElementById('pv-c-0')) return;
+  ensureTracks();
+  const sig = simSignature();
+  if (sig !== lastSig) {
+    lastSig = sig;
+    renderSteps();
+    syncStaticAnalise();
+  }
+  syncMotion(now);
+}
+
+function visibleHls() { return allHls().filter(h => h.status !== 'pendente'); }
+function simVideos() { return S.videos.filter(v => S.sim.state[v.id]); }
+function queryMatch(h) {
+  const q = S.q.trim().toLowerCase();
+  if (!q) return true;
+  const v = videoById(h.videoId);
+  return (h.tipo + ' ' + h.jogador + ' ' + h.time + ' ' + v.partida + ' ' + v.nome + ' ' + h.minuto).toLowerCase().includes(q);
+}
+function groups() {
+  const map = new Map();
+  simVideos().forEach(v => {
+    const key = v.partida || 'Partida não informada';
+    if (!map.has(key)) map.set(key, []);
+    map.get(key).push(v);
+  });
+  return [...map.entries()];
+}
+function listaPool() {
+  let hs = visibleHls().filter(queryMatch);
+  if (S.partidaFilter) hs = hs.filter(h => (videoById(h.videoId).partida || '') === S.partidaFilter);
+  return hs;
+}
+function listaRows() {
+  let hs = listaPool();
+  if (S.tipoOn.size) hs = hs.filter(h => S.tipoOn.has(h.tipo));
+  return hs;
+}
+function navList() {
+  if (S.view === 'lista') return listaRows();
+  const list = [];
+  groups().forEach(([, vids]) => {
+    visibleHls().filter(h => vids.some(v => v.id === h.videoId))
+      .sort((a, b) => a.t - b.t)
+      .forEach(h => list.push(h));
+  });
+  return list;
+}
+function stepDetail(dir) {
+  const list = navList();
+  if (!list.length) return;
+  let i = list.findIndex(h => h.id === S.detailId);
+  if (i < 0) i = dir > 0 ? -1 : 0;
+  S.detailId = list[(i + dir + list.length) % list.length].id;
+  patchBase();
+}
+function statusPill(h) {
+  return '<span class="pill-status ' + h.status + '">' + esc(STATUS_LABEL[h.status] || h.status) + '</span>';
+}
+function renderMap() {
+  const all = visibleHls();
+  if (!simVideos().length) {
+    return '<div class="empty"><p>Nenhum vídeo nesta análise.</p><button type="button" class="btn primary" data-act="goto" data-route="selecionados">Ver vídeos selecionados</button></div>';
+  }
+  if (!all.length) {
+    return '<div class="empty"><p>Nenhum lance detectado ainda.</p><button type="button" class="btn primary" data-act="goto" data-route="analise">Voltar à análise</button></div>';
+  }
+  const legend = '<div class="legend">' + TIPOS.map(t => '<span class="lg-item"><span class="lg">' + SIGLA[t] + '</span>' + esc(t) + '</span>').join('') + '</div>';
+  const rows = groups().map(([name, vids]) => {
+    const total = vids.reduce((a, v) => a + (v.durationSec || 1), 0) || 1;
+    let off = 0;
+    const segs = vids.map(v => {
+      const dur = v.durationSec || 1;
+      const seg = { v, left: off / total * 100, w: dur / total * 100 };
+      off += dur;
+      return seg;
+    });
+    const pins = all.filter(h => vids.some(v => v.id === h.videoId)).map(h => {
+      const v = videoById(h.videoId);
+      const seg = segs.find(s => s.v.id === v.id);
+      const frac = Math.max(0, Math.min(1, (h.t * 60) / (v.durationSec || 1)));
+      return { h, x: seg.left + frac * seg.w, hit: queryMatch(h) };
+    }).sort((a, b) => a.x - b.x);
+    const last = [null, null];
+    pins.forEach(p => {
+      let row = 0;
+      if (last[0] != null && Math.abs(p.x - last[0]) < 3.2) row = 1;
+      if (row === 1 && last[1] != null && Math.abs(p.x - last[1]) < 3.2) {
+        row = Math.abs(p.x - last[0]) >= Math.abs(p.x - last[1]) ? 0 : 1;
+      }
+      p.row = row;
+      last[row] = p.x;
+    });
+    const mockRow = vids.every(v => v.mock);
+    const boundary = segs.length > 1 ? segs[0].w : 50;
+    const scale = mockRow
+      ? '<div class="scale"><span>0\'</span><span class="scale-mid" style="left:' + boundary + '%">45\'</span><span>90\'</span></div>'
+      : '<div class="scale"><span>0:00</span><span>' + esc(fmtTC(total)) + '</span></div>';
+    const hits = pins.filter(p => p.hit).length;
+    const bar = '<div class="bar">' + segs.map(s => '<div class="bar-seg" style="width:' + s.w + '%;background:' + esc(s.v.color) + '" title="' + esc(s.v.nome) + '"></div>').join('') + '</div>';
+    const pinHtml = pins.map(p => '<button type="button" class="pin r' + p.row + (p.hit ? '' : ' dim') + (S.detailId === p.h.id ? ' on' : '') + '" style="left:' + p.x + '%" data-act="pick-hl" data-id="' + esc(p.h.id) + '" title="' + esc(p.h.tipo + ' ' + p.h.minuto + ' · ' + p.h.jogador) + '">' + SIGLA[p.h.tipo] + '</button>').join('');
+    return '<section class="match"><div class="match-name"><b>' + esc(name) + '</b><span class="vmeta">' + hits + ' de ' + pins.length + ' lances</span></div>'
+      + '<div class="pin-area">' + pinHtml + bar + '</div>' + scale + '</section>';
+  }).join('');
+  return legend + rows;
+}
+function renderLista() {
+  const pool = listaPool();
+  const rows = listaRows();
+  const partidas = [...new Set(simVideos().map(v => v.partida || 'Partida não informada'))];
+  const chips = TIPOS.map(t => {
+    const n = pool.filter(h => h.tipo === t).length;
+    if (!n) return '';
+    return '<button type="button" class="btn small' + (S.tipoOn.has(t) ? ' on' : '') + '" data-act="tipo" data-tipo="' + esc(t) + '">' + esc(t) + ' ' + n + '</button>';
+  }).join('');
+  const select = '<select id="partida-select" class="field-input" aria-label="Partida"><option value="">Todas as partidas</option>'
+    + partidas.map(p => '<option value="' + esc(p) + '"' + (S.partidaFilter === p ? ' selected' : '') + '>' + esc(p) + '</option>').join('')
+    + '</select>';
+  const selectable = rows.filter(h => h.status === 'trilha');
+  const allOn = selectable.length > 0 && selectable.every(h => h.sel);
+  const body = rows.map(h => {
+    const v = videoById(h.videoId);
+    const thumb = v.thumb ? '<img class="thumb-sm" alt="" src="' + v.thumb + '">' : '<span class="thumb-sm" style="background:' + esc(v.color) + '"></span>';
+    const on = S.detailId === h.id ? ' row-on' : '';
+    return '<tr class="pick' + on + '" data-act="pick-hl" data-id="' + esc(h.id) + '">'
+      + '<td><input type="checkbox" data-act="sel" data-id="' + esc(h.id) + '"' + (h.sel ? ' checked' : '') + (h.status === 'trilha' ? '' : ' disabled') + ' aria-label="Incluir no download"></td>'
+      + '<td>' + thumb + '</td>'
+      + '<td><b>' + esc(h.tipo) + '</b><div class="vmeta">' + esc(h.jogador) + ' · ' + esc(h.time) + '</div></td>'
+      + '<td>' + esc(v.partida) + '</td><td>' + esc(h.minuto) + '</td><td>' + h.dur + 's</td><td>' + statusPill(h) + '</td></tr>';
+  }).join('');
+  const table = rows.length
+    ? '<div class="table-wrap"><table class="list-table"><thead><tr><th><input type="checkbox" data-act="sel-all"' + (allOn ? ' checked' : '') + (selectable.length ? '' : ' disabled') + ' aria-label="Selecionar lances visíveis na trilha"></th><th></th><th>Lance</th><th>Partida</th><th>Instante</th><th>Duração</th><th>Estado</th></tr></thead><tbody>' + body + '</tbody></table></div>'
+    : '<div class="empty"><p>' + (visibleHls().length ? 'Nenhum lance com esses filtros.' : 'Nenhum lance detectado ainda.') + '</p>'
+      + (visibleHls().length ? '' : '<button type="button" class="btn primary" data-act="goto" data-route="analise">Voltar à análise</button>') + '</div>';
+  return '<div class="filters"><div class="row-actions">' + (chips || '<span class="vmeta">Sem tipos ainda</span>') + '</div>' + select + '</div>' + table;
+}
+function renderDetail() {
+  const h = allHls().find(x => x.id === S.detailId && x.status !== 'pendente');
+  if (!h) return '<div class="detail-empty"><p>Selecione um lance no mapa ou na lista.</p></div>';
+  const v = videoById(h.videoId);
+  const start = h.t * 60;
+  const end = Math.min(v.durationSec || start + h.dur, start + h.dur);
+  const left = (start / (v.durationSec || 1)) * 100;
+  const width = Math.max(0.8, ((end - start) / (v.durationSec || 1)) * 100);
+  const media = (!v.mock && v.url)
+    ? '<video id="detail-v" class="pv-video" muted playsinline data-src="' + esc(v.url) + '"></video>'
+    : '<canvas id="detail-c" width="640" height="360"></canvas>';
+  const can = h.status === 'trilha';
+  return '<div class="detail-stage" id="detail-stage" style="border-color:' + esc(v.color) + '">' + media + '<div class="tc" id="detail-tc">' + esc(fmtTC(start)) + '</div></div>'
+    + '<div class="match-name"><b>' + esc(h.tipo) + '</b>' + statusPill(h) + '</div>'
+    + '<p class="vmeta">' + esc(h.jogador) + ' · ' + esc(h.time) + '</p>'
+    + '<dl class="kv"><dt>Partida</dt><dd>' + esc(v.partida) + '</dd><dt>Arquivo</dt><dd>' + esc(v.nome) + '</dd>'
+    + '<dt>Instante</dt><dd>' + esc(h.minuto) + '</dd><dt>Trecho</dt><dd>' + esc(fmtTC(start)) + '–' + esc(fmtTC(end)) + ' · ' + h.dur + 's</dd></dl>'
+    + '<div class="ctx" title="Trecho dentro do vídeo"><div class="ctx-range" style="left:' + left + '%;width:' + width + '%"></div></div>'
+    + '<div class="scale"><span>0:00</span><span>' + esc(fmtTC(v.durationSec || 0)) + '</span></div>'
+    + '<div class="row-actions" style="margin-top:10px">'
+    + '<button type="button" class="btn small" data-act="toggle-sel" data-id="' + esc(h.id) + '"' + (can ? '' : ' disabled') + '>'
+    + (h.sel ? 'Remover do download' : 'Incluir no download') + '</button>'
+    + '<button type="button" class="btn small" data-act="see" data-id="' + esc(h.id) + '">Ver na análise</button></div>'
+    + (can ? '' : '<p class="vmeta">Incluir no download fica disponível quando o lance está na trilha.</p>')
+    + '<div class="row-actions" style="margin-top:8px"><button type="button" class="btn small" data-act="nav" data-dir="-1">Anterior</button>'
+    + '<button type="button" class="btn small" data-act="nav" data-dir="1">Próximo</button></div>';
+}
+function baseSignature() {
+  return [
+    S.q, S.view, S.partidaFilter, [...S.tipoOn].join(','), S.detailId || '',
+    S.sim.running ? 1 : 0,
+    allHls().map(h => h.status[0] + (h.sel ? 's' : '')).join(''),
+    S.videos.map(v => v.partida).join('|')
+  ].join('~');
+}
+function detailSignature() {
+  const h = allHls().find(x => x.id === S.detailId);
+  if (!h || h.status === 'pendente') return '';
+  return h.id + '|' + h.status + '|' + (h.sel ? 1 : 0) + '|' + (videoById(h.videoId)?.partida || '');
+}
+function patchBase() {
+  if (routeId() !== 'base' || !document.getElementById('base-view')) return;
+  const sig = baseSignature();
+  const changed = sig !== lastBaseSig;
+  if (changed) {
+    lastBaseSig = sig;
+    const main = document.getElementById('main');
+    const scroll = main ? main.scrollTop : 0;
+    const n = visibleHls().length;
+    const count = document.getElementById('base-count');
+    if (count) count.textContent = n + (n === 1 ? ' lance' : ' lances');
+    const live = document.getElementById('base-live');
+    if (live) {
+      live.hidden = !S.sim.running;
+      live.textContent = 'A análise ainda está em andamento. Novos lances aparecem aqui.';
+    }
+    document.getElementById('base-view').innerHTML = S.view === 'lista' ? renderLista() : renderMap();
+    document.querySelectorAll('[data-act="view"]').forEach(b => {
+      const on = b.dataset.view === S.view;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    const dSig = detailSignature();
+    if (dSig !== lastDetailSig) {
+      lastDetailSig = dSig;
+      document.getElementById('base-detail').innerHTML = renderDetail();
+    }
+    const sel = allHls().filter(h => h.sel && h.status === 'trilha').length;
+    const dl = document.getElementById('btn-dl');
+    if (dl) dl.textContent = 'Baixar selecionados (' + sel + ')';
+    renderSteps();
+    if (main) main.scrollTop = scroll;
+  }
+}
+function paintDetailMedia(now) {
+  const h = allHls().find(x => x.id === S.detailId && x.status !== 'pendente');
+  if (!h) return;
+  const v = videoById(h.videoId);
+  const start = h.t * 60;
+  const end = Math.min(v.durationSec || start + h.dur, start + h.dur);
+  const span = Math.max(0.4, end - start);
+  const sec = reducedMotion() ? start : start + ((animClock / 1000) % span);
+  const tc = document.getElementById('detail-tc');
+  const label = fmtTC(sec);
+  if (tc && tc.textContent !== label) tc.textContent = label;
+  const canvas = document.getElementById('detail-c');
+  if (canvas) drawPitch(canvas, v.color, reducedMotion() ? 0 : animClock / 1000, reducedMotion());
+  const video = document.getElementById('detail-v');
+  if (video) {
+    if (video.dataset.src && video.src !== video.dataset.src && !video.dataset.bound) {
+      video.src = video.dataset.src;
+      video.dataset.bound = '1';
+    }
+    syncVideo(video, 'loop', sec, start, end, now);
+  }
+}
+function csvCell(value) {
+  const s = String(value ?? '');
+  if (/[;"\r\n]/.test(s)) return '"' + s.replace(/"/g, '""') + '"';
+  return s;
+}
+function downloadCSV() {
+  const rows = allHls().filter(h => h.sel && h.status === 'trilha');
+  if (!rows.length) { toast('Nenhum corte selecionado.'); return; }
+  const header = ['partida', 'tempo', 'arquivo', 'lance', 'jogador', 'time', 'instante', 'inicio', 'fim', 'duracao_s'];
+  const lines = [header.join(';')];
+  rows.forEach(h => {
+    const v = videoById(h.videoId);
+    const inicio = h.t * 60;
+    const fim = Math.min(v.durationSec || inicio + h.dur, inicio + h.dur);
+    const tempo = v.tempo ? v.tempo + 'º tempo' : '';
+    lines.push([v.partida, tempo, v.nome, h.tipo, h.jogador, h.time, h.minuto, fmtTC(inicio), fmtTC(fim), String(h.dur)].map(csvCell).join(';'));
+  });
+  const blob = new Blob(['\uFEFF' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8' });
+  const a = document.createElement('a');
+  const url = URL.createObjectURL(blob);
+  a.href = url;
+  a.download = 'cortes_selecionados.csv';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1500);
+  toast('Arquivo cortes_selecionados.csv gerado, com ' + rows.length + ' corte(s).');
+}
+
+function frame(now) {
+  const dt = lastFrame ? Math.min(80, now - lastFrame) : 16;
+  lastFrame = now;
+  const reviewing = !!S.focusId && routeId() === 'analise';
+  if (!(reducedMotion() || (S.sim.paused && !reviewing))) animClock += dt;
+  if (S.sim.running && !S.sim.paused) advance(dt);
+  if (routeId() === 'analise' && S.sim.started) paintAnalise(now);
+  else if (routeId() === 'base' && S.sim.started) {
+    patchBase();
+    paintDetailMedia(now);
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+window.addEventListener('hashchange', () => {
+  if (suppressHash) { suppressHash--; return; }
+  mounted = '';
+  paint(true);
+});
 
 if (!location.hash) location.replace('#/enviar');
 paint(true);
