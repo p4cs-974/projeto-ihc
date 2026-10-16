@@ -39,11 +39,13 @@ Os objetivos desta iteração são:
 
 | Artefato | Papel nesta entrega |
 |---|---|
-| [Protótipo principal: fluxo de highlights](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) | Versão de referência confirmada por Pedro em 16/10/2026. Quatro telas e três alternativas para a base de resultados |
+| [Protótipo principal: fluxo de highlights](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) ([versão publicada](https://ihc.p4cs.com.br)) | Versão de referência confirmada por Pedro em 16/10/2026. Quatro telas e três alternativas para a base de resultados |
 | [Exploração anterior em baixa fidelidade](../assets/06_prototipos/PROTOTIPO_baixa_fidelidade_base_highlights.html) | Registro das alternativas anteriores: lista com filtros, galeria por partida, facetas por jogador e mapa das partidas. As facetas fictícias não confirmam a capacidade de identificar jogadores |
 | [Mapa do fluxo documentado](../assets/06_prototipos/prototipo_fluxo_01.svg) | Identificação das quatro telas, transições e limites da demonstração |
 
-Para executar a versão principal, baixe o HTML e abra-o no navegador. O botão **ou use 8 vídeos de exemplo** permite explorar o fluxo sem fornecer gravações. As setas esquerda e direita alternam as telas. Os parâmetros `?tela=1` até `?tela=4` abrem uma etapa diretamente; na tela 4, `&variant=A`, `B` ou `C` escolhe a visualização.
+A versão principal está publicada em <https://ihc.p4cs.com.br>. Também é possível baixar o HTML e abri-lo no navegador. O botão **ou use 8 vídeos de exemplo** permite explorar o fluxo sem fornecer gravações. As setas esquerda e direita alternam as telas. Os parâmetros `?tela=1` até `?tela=4` abrem uma etapa diretamente; na tela 4, `&variant=A`, `B` ou `C` escolhe a visualização. Os mesmos parâmetros funcionam na versão publicada, por exemplo `https://ihc.p4cs.com.br/?tela=4&variant=B`.
+
+Na tela 3, passar o mouse sobre um marcador da trilha **Highlights detectados** mostra a miniatura, o tipo, a partida, o tempo de jogo e o timecode do lance. Nomes longos são abreviados no meio, mantendo o tempo e o timecode visíveis. O botão **Ir para o lance** abre esse item na tela 4, na visualização A.
 
 Partidas, durações, eventos e prévias são fictícios. Mesmo ao selecionar arquivos locais, a demonstração usa seus nomes e gera os demais dados, com limite de oito vídeos. Não há envio ao backend nem análise das imagens. A associação entre arquivo, partida e tempo é definida pelos exemplos, sem reconhecimento do conteúdo do arquivo.
 
