@@ -8,10 +8,11 @@
 <h1>Análise de coerência da branch <code>lab-6</code></h1>
 <p><strong>16/10/2026 às 17:21</strong> · America/Sao_Paulo, UTC−03:00.</p>
 <p>Foco: documentação da Entrega 6, protótipos, mapa do fluxo, índice e rastreabilidade. Foram considerados os dois commits da branch e as alterações locais existentes no início da auditoria, com o restante do repositório como contexto.</p>
-<div class="status"><strong>Status da análise: Pendente.</strong> 1 ticket: 1 Pendente, 0 Aplicado e 0 Descartado. Gravidade: 0 Alta, 0 Média e 1 Baixa. Confiança: 1 Sustentado e 0 Precisa de revisão.</div>
+<div class="status"><strong>Status da análise: Aplicada.</strong> 1 ticket: 0 Pendente, 1 Aplicado e 0 Descartado. Gravidade: 0 Alta, 0 Média e 1 Baixa. Confiança: 1 Sustentado e 0 Precisa de revisão.</div>
+<p><strong>Aplicação em 16/10/2026 às 19:19:</strong> por sugestão de Pedro, “em sequência” foi substituído por “em paralelo” na mensagem inicial do protótipo principal, linha 228. A alteração foi conferida e AC-075 está Aplicado. As conclusões e evidências originais abaixo preservam o estado encontrado na auditoria.</p>
 <nav aria-label="Seções"><a href="#conclusao">Conclusão</a><a href="#escopo">Escopo</a><a href="#alinhados">Alinhamentos</a><a href="#tickets">Ticket</a><a href="#cobertura">Cobertura</a><a href="#verificacao">Verificação e limites</a></nav>
 
-<section id="conclusao"><h2>Conclusão geral</h2>
+<section id="conclusao"><h2>Conclusão geral da auditoria inicial</h2>
 <p><strong>A documentação representa o protótipo principal com seus limites reais.</strong> Não foi encontrada contradição de escopo, público ou exportação no trabalho desta branch. A diferença entre contexto da prévia e do CSV foi corrigida: ambos usam o corte com contexto, limitado ao vídeo de origem, e distinguem o intervalo do lance.</p>
 <p>Resta uma divergência localizada: a mensagem da tela inicial promete análise “em sequência”, enquanto a simulação inicia dois vídeos simultaneamente e a documentação descreve duas prévias simultâneas. AC-075 recomenda ajustar essa mensagem, preservando o fluxo atual.</p>
 <p>Recuperação localizada, controles de reprodução, consolidação da seleção e outros estados ainda ausentes estão declarados em <code>docs/06</code>, §3.3. São lacunas funcionais reconhecidas, sem promessa documental de que já foram atendidas. Não foram transformadas em novos tickets de coerência.</p>
@@ -47,9 +48,9 @@
 
 <section id="tickets"><h2>Ticket para acompanhamento</h2>
 <p>Os 18 relatórios locais chegam a <code>AC-068</code>. O relatório <code>14-10-2026-21-44.html</code>, consultado em <code>origin/main</code>, já reserva <code>AC-069</code> a <code>AC-074</code>. Por isso, o novo identificador é <code>AC-075</code>. O achado abaixo é novo e não reapresenta uma pendência anterior.</p>
-<article id="AC-075" data-ticket="AC-075" data-status="Pendente" data-severity="Baixa" data-confidence="Sustentado">
+<article id="AC-075" data-ticket="AC-075" data-status="Aplicado" data-severity="Baixa" data-confidence="Sustentado">
 <h3>AC-075 · A mensagem inicial descreve uma sequência, mas a simulação inicia dois vídeos ao mesmo tempo</h3>
-<p><strong>Gravidade:</strong> Baixa · <strong>Confiança:</strong> Sustentado · <strong>Acompanhamento:</strong> Pendente.</p>
+<p><strong>Gravidade:</strong> Baixa · <strong>Confiança:</strong> Sustentado · <strong>Acompanhamento:</strong> Aplicado.</p>
 <h4>Evidências localizáveis</h4>
 <ol>
 <li><code>assets/06_prototipos/PROTOTIPO_fluxo_highlights.html</code>, linha 228, tela E06-P01: <q>Os vídeos são analisados em sequência.</q></li>
@@ -61,6 +62,7 @@
 <dt>Efeito sobre a coerência</dt><dd>A explicação antes de iniciar sugere processamento de um vídeo por vez, mas a demonstração e seu registro apresentam dois ativos. É uma divergência localizada na explicação da espera; não invalida os fluxos ou o trabalho documental.</dd>
 <dt>Mudança sugerida</dt><dd>Em E06-P01 do HTML principal, retirar a afirmação de análise “em sequência” e usar uma mensagem compatível com a experiência, por exemplo: <q>Acompanhe a análise das gravações. No fim, você revisa e baixa os melhores momentos.</q> A documentação pode manter a descrição atual das duas prévias. Não é necessário alterar a simulação para satisfazer este ticket.</dd>
 <dt>Registro de acompanhamento</dt><dd>Aberto em 16/10/2026 às 17:21. Nenhuma correção aplicada nesta auditoria, conforme o caráter somente de leitura da skill.</dd>
+<dt>Aplicação verificada em 16/10/2026 às 19:19</dt><dd>Por sugestão de Pedro, a frase de E06-P01 passou a <q>Os vídeos são analisados em paralelo.</q> em <code>assets/06_prototipos/PROTOTIPO_fluxo_highlights.html</code>, linha 228. Foi alterada somente essa expressão no protótipo, mantendo a simulação e o restante da mensagem. A conferência do diff confirmou a aplicação; status alterado de Pendente para Aplicado.</dd>
 </dl>
 </article></section>
 
@@ -79,10 +81,10 @@
 <li>O registro da tarefa anterior de Opus foi consultado: ele relata conferência de detalhe, prévia e CSV nas três alternativas. É evidência atribuída àquela tarefa; não se declarou uma nova sessão de usuário nem uma repetição completa de seus testes nesta auditoria.</li>
 <li>A automação do preview colaborativo falhou: <q>Preview automation evaluate timed out after 15000ms.</q> A tentativa de reabrir a aba também não retornou e foi interrompida. A inspeção atual do protótipo foi feita pelo código e pela reprodução técnica descrita acima.</li>
 <li id="visual-verification">Relatório renderizado no html_preview em 728 px e 360 px; conteúdo visível, navegação interna e leitura estreita conferidos. A tabela usa blocos empilhados em tela estreita, sem transbordamento horizontal. O tema escuro foi inspecionado ativando o mesmo bloco CSS em uma cópia de verificação, pois o renderizador não emulou a preferência escura do sistema. A parte inferior e o ticket também foram conferidos em recortes de verificação. Não foi validada a abertura pelo visualizador de arquivos locais do usuário.</li>
-<li id="source-preservation">Os 195 arquivos do inventário inicial foram preservados byte a byte, verificados por SHA-256. Somente este relatório foi acrescentado ao repositório. IDs e links internos foram conferidos; há um ticket único, AC-075, Pendente.</li>
+<li id="source-preservation">Na emissão original, os 195 arquivos do inventário inicial foram preservados byte a byte, verificados por SHA-256, e somente este relatório foi acrescentado ao repositório. IDs e links internos foram conferidos; o ticket único AC-075 estava Pendente. A aplicação posterior, registrada acima, altera a frase inicial do protótipo e o acompanhamento neste relatório.</li>
 <li>Não houve pesquisa externa nesta rodada. Bibliografia e referências dos documentos foram consideradas quanto ao papel atribuído pelo projeto; não se verificaram novamente preços, versões, alegações comerciais ou resultados científicos externos.</li>
 <li>A auditoria avalia coerência documental no estágio atual. Não comprova usabilidade, acessibilidade integral, viabilidade do backend ou atendimento final de todas as entregas.</li>
 </ul>
 </section>
-<footer>Produzido conforme <code>.agents/skills/analise-de-coerencia/SKILL.md</code>, com apresentação orientada por <code>.agents/skills/html-communication/SKILL.md</code>. Documentos analisados e relatórios anteriores preservados. O acompanhamento persiste apenas neste HTML.</footer>
+<footer>Produzido conforme <code>.agents/skills/analise-de-coerencia/SKILL.md</code>, com apresentação orientada por <code>.agents/skills/html-communication/SKILL.md</code>. Arquivos preservados na emissão original. Aplicação posterior limitada à frase inicial do protótipo e a este relatório. O acompanhamento persiste neste HTML.</footer>
 </main></body></html>

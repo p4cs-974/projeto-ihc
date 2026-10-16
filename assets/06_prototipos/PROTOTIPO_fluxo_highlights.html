@@ -72,7 +72,7 @@ h3{margin:0;font-size:16px;font-weight:500}
 
 /* Tela 3 */
 /* ocupa a janela inteira: prévias crescem no espaço livre, trilhas presas embaixo */
-#t3{position:fixed;inset:0;display:flex;flex-direction:column;gap:16px;padding:16px 24px 24px;background:var(--bg)}
+#t3{position:fixed;inset:0;display:flex;flex-direction:column;gap:16px;padding:16px 48px 40px;background:var(--bg)}
 .t3-top{display:flex;align-items:center;gap:12px;flex:none}
 .t3-warn{position:absolute;z-index:2;left:50%;top:calc((100cqh - 48px - min(100cqh - 48px, (100cqw - 12px) * 9 / 32)) / 2);translate:-50% 0;margin:0;display:flex;align-items:center;gap:8px;height:36px;padding:0 16px 0 12px;border-radius:9999px;background:rgba(229,72,77,.08);color:#a3262b;font-size:13.5px;white-space:nowrap;animation:rise .25s}
 .t3-warn b{font-weight:500}
@@ -100,6 +100,14 @@ h3{margin:0;font-size:16px;font-weight:500}
 .track{position:relative;height:48px;border-radius:16px;background:var(--s1);overflow:hidden}
 .track .div{position:absolute;top:0;bottom:0;border-left:1px solid var(--line)}
 .mk{position:absolute;top:9px;bottom:9px;width:5px;margin-left:-2.5px;border-radius:3px;background:var(--c);transform-origin:50% 50%}
+.mk::before{content:'';position:absolute;inset:-9px -6px}
+.mk:hover,.mk.hov{transform:scaleY(1.2);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--c)}
+.hlpop{position:fixed;z-index:60;transform:translate(-50%,-100%);animation:fade .15s}
+.hlpop{width:264px;padding:8px;border-radius:20px;background:#fff;box-shadow:0 0 0 1px var(--line),0 18px 50px rgba(0,0,0,.14)}
+.hlpop .th{position:relative;overflow:hidden;border-radius:14px}
+.hlpop-t{display:flex;align-items:center;gap:8px;margin:10px 6px 0;font-weight:500;font-size:14px}
+.hlpop .meta{margin:0 6px 10px 23px;font-size:12.5px}
+.hlpop .btn{width:100%;height:38px;font-size:13.5px}
 .mk.pop-in{animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
 @keyframes pop{from{transform:scaleY(0)}}
 #tr-vid{display:flex}
@@ -225,7 +233,7 @@ h3{margin:0;font-size:16px;font-weight:500}
 <main>
   <!-- Tela 1: envio -->
   <section class="screen" id="t1">
-    <div class="hero"><h1>Envie as gravações da partida</h1><p class="sub">Os vídeos são analisados em sequência. No fim, você revisa e baixa os melhores momentos.</p></div>
+    <div class="hero"><h1>Envie as gravações da partida</h1><p class="sub">Os vídeos são analisados em paralelo. No fim, você revisa e baixa os melhores momentos.</p></div>
     <label class="drop" id="drop">
       <input type="file" id="file" accept="video/*" multiple hidden>
       <span class="drop-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span>
@@ -389,7 +397,29 @@ function fly(el,h){
   const g=A.gen;setTimeout(()=>{d.remove();if(g!==A.gen)return;h.done=true;addMk(h,true);el.classList.add('out');setTimeout(()=>el.remove(),320)},780);
 }
 const mkX=h=>(off(h.v)+h.t)/total()*100;
-const mk=(h,pop)=>`<i class="mk${pop?' pop-in':''}" id="mk-${h.id}" style="left:${mkX(h)}%;--c:${h.v.c}" title="${h.type.k} · ${esc(h.v.m.name)} · ${h.v.half}º tempo · ${tc(h.t)}"></i>`;
+const mk=(h,pop)=>`<i class="mk${pop?' pop-in':''}" id="mk-${h.id}" data-mk="${h.id}" style="left:${mkX(h)}%;--c:${h.v.c}"></i>`;
+// popup de hover nos marcadores: miniatura + atalho para o lance na Tela 4
+let hlT=null;
+function hlShow(el){
+  clearTimeout(hlT);hlHide(true);
+  const h=HM[el.dataset.mk],r=el.getBoundingClientRect();
+  el.classList.add('hov');
+  const d=document.createElement('div');d.className='hlpop';d.id='hlpop';d.dataset.for=h.id;d.style.setProperty('--c',h.v.c);
+  d.innerHTML=`<div class="th"><canvas data-thumb="${h.id}" width="320" height="180"></canvas><span class="ab">${h.type.a}</span></div><div class="hlpop-t"><i class="dot"></i>${mid(h.type.k,5)}</div><div class="meta mid" title="${esc(h.v.m.name)} · ${h.v.half}º tempo · ${tc(h.t)}"><span>${esc(h.v.m.name)}</span><span>&nbsp;· ${h.v.half}º tempo · <span class="mono">${tc(h.t)}</span></span></div><button class="btn pri" data-goto="${h.id}">Ir para o lance →</button>`;
+  document.body.append(d);paintThumbs(d);
+  const x=Math.min(innerWidth-12-d.offsetWidth/2,Math.max(12+d.offsetWidth/2,r.left+r.width/2));
+  d.style.left=x+'px';d.style.top=(r.top-8)+'px';
+}
+function hlHide(now){
+  const f=()=>{const d=$('#hlpop');if(d){document.getElementById('mk-'+d.dataset.for)?.classList.remove('hov');d.remove()}};
+  clearTimeout(hlT);now?f():hlT=setTimeout(f,180);
+}
+document.addEventListener('mouseover',e=>{
+  if(S.tela!==3)return;
+  const m=e.target.closest('[data-mk]');
+  if(m){if($('#hlpop')?.dataset.for!==m.dataset.mk)hlShow(m);else clearTimeout(hlT);return}
+  if(e.target.closest('#hlpop'))clearTimeout(hlT);else if($('#hlpop'))hlHide();
+});
 function addMk(h,pop){if(S.tela===3&&!document.getElementById('mk-'+h.id))$('#tr-hl').insertAdjacentHTML('beforeend',mk(h,pop))}
 function buildTracks(){
   const tot=total();let acc=0;
@@ -456,8 +486,8 @@ function paintLive(now){
 }
 
 // ---------- Variante A: busca primeiro (lista única, detalhe abre na própria linha) ----------
-function VA(root){
-  let q='',ty='',half=0,open=null;
+function VA(root,focus){
+  let q='',ty='',half=0,open=focus;
   root.innerHTML=`<div class="va-search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8d8d8d" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="va-q" placeholder="Buscar por lance, partida, time ou arquivo" autocomplete="off"></div><div class="chips" id="va-chips"></div><div class="va-list" id="va-list"></div>`;
   const chip=(k,label,n,on)=>`<button class="chip${on?' on':''}" data-chip="${k}">${label}${n!==''?`<span>${n}</span>`:''}</button>`;
   const list=()=>done().filter(h=>(!ty||h.type.k===ty)&&(!half||h.v.half===half)&&(!q||norm(`${h.type.k} ${h.v.m.name} ${h.v.m.teams.join(' ')} ${h.v.name} ${h.v.half}º tempo ${tc(h.t)}`).includes(norm(q))));
@@ -483,6 +513,7 @@ function VA(root){
     if(r){open=open===r.dataset.row?null:r.dataset.row;draw();if(open)$(`[data-row="${open}"]`).scrollIntoView({block:'nearest',behavior:'smooth'})}
   };
   draw();
+  if(open)$(`[data-row="${open}"]`).scrollIntoView({block:'center'});
   return{key(e){
     if(e.key==='/'&&document.activeElement?.id!=='va-q'){e.preventDefault();$('#va-q').focus();return true}
     if(e.key==='Escape'&&open){open=null;draw();return true}
@@ -492,8 +523,8 @@ function VA(root){
 }
 
 // ---------- Variante B: trilhas por partida (mesma linguagem da Tela 3) ----------
-function VB(root){
-  const on=new Set(TYPES.map(t=>t.k));let act=null;
+function VB(root,focus){
+  const on=new Set(TYPES.map(t=>t.k));let act=focus;
   const vis=()=>done().filter(h=>on.has(h.type.k));
   const draw=()=>{
     const all=done(),L=vis();
@@ -520,6 +551,7 @@ function VB(root){
     const r=p.getBoundingClientRect(),c=p.closest('.vb-card').getBoundingClientRect();
     const dx=r.left<c.left+12?c.left+12-r.left:r.right>c.right-12?c.right-12-r.right:0;
     p.style.transform=`translateX(calc(-50% + ${dx}px))`;
+    if(focus){focus=null;p.scrollIntoView({block:'center'})}
     const b=p.getBoundingClientRect();if(b.bottom>innerHeight-80)scrollBy({top:b.bottom-innerHeight+90,behavior:'smooth'});
   };
   const nav=d=>{const L=vis(),i=L.findIndex(h=>h.id===act),n=L[(i+d+L.length)%L.length];if(n){act=n.id;draw()}};
@@ -541,8 +573,8 @@ function VB(root){
 }
 
 // ---------- Variante C: mosaico por tipo (fileiras de miniaturas, detalhe em tela cheia) ----------
-function VC(root){
-  let open=null;
+function VC(root,focus){
+  let open=focus;
   const groups=()=>TYPES.map(t=>[t,done().filter(h=>h.type===t)]).filter(g=>g[1].length);
   const flat=()=>groups().flatMap(g=>g[1]);
   root.innerHTML=groups().map(([t,hs])=>`<section class="vc-row"><h3>${t.k}<span>${hs.length}</span></h3><div class="vc-strip">${hs.map(h=>`<div class="tile" data-tile="${h.id}" style="--c:${h.v.c}"><canvas data-thumb="${h.id}" width="320" height="180"></canvas><button class="tick-btn${SEL.has(h.id)?' on':''}" data-incl="${h.id}" aria-label="Incluir no download">✓</button><div class="tile-ov"><b class="mono">${tc(h.t)}</b> · ${h.v.half}º tempo · corte de ${clip(h).dur} s<span>${esc(h.v.m.name)}</span></div></div>`).join('')}</div></section>`).join('')+'<div id="vc-m"></div>';
@@ -560,6 +592,7 @@ function VC(root){
     const n=e.target.closest('[data-nav]');if(n){nav(+n.dataset.nav);return}
     if(e.target.closest('[data-close]')||e.target.matches('[data-backdrop]')){open=null;modal()}
   };
+  modal();
   return{key(e){
     if(!open)return false;
     if(e.key==='Escape'){open=null;modal();return true}
@@ -584,7 +617,7 @@ function renderBase(){
   $('#t4-warn').hidden=!gv||S.warnOff;
   if(gv)$('#t4-warn').innerHTML=`<span><b>1 trecho não analisado</b> em ${esc(gv.m.name)}, ${gv.half}º tempo (${tc(gv.gap[0])}–${tc(gv.gap[1])}). Pode haver lances nesse intervalo.</span><button class="warn-x" data-warn-x aria-label="Dispensar aviso" title="Dispensar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>`;
   const fn=VARIANTS[S.variant][1];
-  cur=fn($('#vroot'));
+  cur=fn($('#vroot'),S.focus);S.focus=null;
   $('#vt').innerHTML=Object.entries(VARIANTS).map(([k,[n]])=>`<button data-vt="${k}" class="${k===S.variant?'on':''}" aria-pressed="${k===S.variant}" aria-label="${n}" title="${n}">${VICON[k]}</button>`).join('');
   updDL();
 }
@@ -629,7 +662,7 @@ $('#start').onclick=()=>go(3);
 $('#restart').onclick=()=>{startAnalysis();buildTracks()};
 
 // ---------- navegação ----------
-const S={tela:1,variant:'A',warnOff:false};
+const S={tela:1,variant:'A',warnOff:false,focus:null};
 function url(){
   const p=new URLSearchParams({tela:S.tela});if(S.tela===4)p.set('variant',S.variant);
   try{history.replaceState(null,'','?'+p)}catch{}
@@ -638,15 +671,17 @@ function go(n){
   if(n>=2&&!V.length)load(MOCK_NAMES);
   if(n===3&&A.state==='idle')startAnalysis();
   if(n===4&&A.state!=='done'){const was=A.state==='running';finishAll();if(was)toast('Para revisar a base, a análise restante foi concluída na hora (simulação).')}
-  S.tela=n;
+  hlHide(true);S.tela=n;
   $$('.screen').forEach((e,i)=>e.hidden=i+1!==n);
+  scrollTo(0,0);
   if(n===2)renderGrid();
   if(n===3)buildTracks();
   if(n===4)renderBase();else cur=null;
-  url();scrollTo(0,0);
+  url();
 }
 document.addEventListener('click',e=>{
   const g=e.target.closest('[data-go]');if(g){go(+g.dataset.go);return}
+  const h=e.target.closest('[data-goto]');if(h){S.focus=h.dataset.goto;S.variant='A';go(4);return}
   const i=e.target.closest('[data-incl]');if(i){toggle(i.dataset.incl);return}
   if(e.target.closest('[data-warn-x]')){S.warnOff=true;$('#t4-warn').hidden=true;return}
   const t=e.target.closest('[data-vt]');if(t&&t.dataset.vt!==S.variant)setVariant(t.dataset.vt);
