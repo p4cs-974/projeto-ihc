@@ -1,0 +1,17 @@
+{
+  "name": "ihc-prototipo",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  // build.sh copia o protótipo e o guia de assets/06_prototipos para public/
+  "build": { "command": "sh build.sh" },
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "routes": [{ "pattern": "ihc.p4cs.com.br", "custom_domain": true }],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ihc-feedback",
+      "database_id": "PENDENTE",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
