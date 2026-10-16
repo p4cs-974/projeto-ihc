@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PROTÓTIPO descartável · Fluxo de highlights</title>
+<!--
+  PROTÓTIPO DESCARTÁVEL (Entrega 06). Não é código de produção.
+  Plano: as 4 telas do esboço em tldraw (Enviar → Vídeos → Análise → Base), com dados fictícios.
+  A Tela 4 ("???" no esboço, "Base de dados de highlights") tem 3 variantes, trocadas por
+  ?variant=A|B|C ou pelo seletor ao lado de "Baixar cortes". Abrir com duplo clique; nada é salvo.
+  As setas ← → trocam de tela. Atalho de URL: ?tela=1..4
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Linguagem visual de referência: Grok Bot (x.ai/bot). Claro, cartões marfim sem borda, pílulas, peso 500. */
+:root{--bg:#fff;--s1:#f8f7f5;--s2:#f2f2f2;--s3:#ebebeb;--btn2:#edece9;--fill:rgba(10,10,10,.045);--line:rgba(37,37,37,.08);--line2:rgba(37,37,37,.14);--text:#0a0a0a;--muted:#7d8187;--dim:#a6aab1;--accent:#ff6a08;--hover:#1f2328}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 Geist,Inter,ui-sans-serif,-apple-system,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0}
+input{font:inherit;color:inherit}
+.mono{font-family:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+
+.proto{position:fixed;top:16px;right:16px;z-index:20;font-size:13px;color:var(--muted);background:var(--s2);padding:6px 12px;border-radius:9999px}
+.tip{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:20;margin:0;display:flex;align-items:center;gap:6px;height:32px;padding:0 14px;border-radius:9999px;background:var(--s2);font-size:13px;color:var(--muted);white-space:nowrap}
+
+main{max-width:1024px;margin:0 auto;padding:48px 24px 130px}
+h1{font-size:36px;letter-spacing:-.01em;font-weight:500;margin:0;line-height:1.12}
+h3{margin:0;font-size:16px;font-weight:500}
+.sub{color:var(--muted);margin:10px 0 0}
+.sub b{color:var(--text);font-weight:500}
+.meta{color:var(--muted);font-size:13.5px}
+.dim{color:var(--dim)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+.center{display:flex;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 24px;border-radius:9999px;background:var(--btn2);white-space:nowrap;transition:background .14s}
+.btn:hover{background:#e3e2de}
+.btn.pri{background:var(--text);color:#fff}
+.btn.pri:hover{background:var(--hover)}
+.btn:disabled{opacity:.3;cursor:default}
+.btn.big{height:52px;padding:0 40px}
+.link{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:4px}
+.link:hover{color:var(--text)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--c);flex:none;display:inline-block}
+
+/* Tela 1 */
+.hero{text-align:center;margin:40px 0 40px}
+.hero h1{font-size:60px;letter-spacing:-.01em;line-height:1}
+.hero .sub{font-size:18px;max-width:560px;margin:20px auto 0}
+.drop{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;max-width:672px;height:340px;margin:0 auto;border:1.5px dashed var(--line2);border-radius:24px;background:var(--s1);cursor:pointer;transition:border-color .14s,background .14s}
+.drop:hover,.drop.over{border-color:var(--text);background:#f3f2ef}
+.drop strong{font-size:18px;font-weight:500;margin-top:14px}
+.drop-ico{width:64px;height:64px;border-radius:50%;background:var(--text);display:grid;place-items:center}
+
+/* Tela 2 */
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:32px 0 40px}
+.vcard{background:var(--s1);border-radius:24px;padding:8px 8px 16px;position:relative;display:flex;flex-direction:column}
+.th{position:relative;border-radius:16px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.th canvas{width:100%;aspect-ratio:16/9;display:block}
+.dur{position:absolute;right:8px;bottom:8px;font-size:12px;background:rgba(255,255,255,.9);padding:2px 8px;border-radius:9999px}
+.vname{display:flex;gap:8px;align-items:center;margin:12px 8px 2px;font-weight:500;font-size:14px;min-width:0}
+/* reticências no meio, como no Finder: o fim do nome (tempo e extensão) fica sempre visível */
+.mid{display:flex;min-width:0;white-space:nowrap}
+.mid>span:first-child{overflow:hidden;text-overflow:ellipsis;min-width:0}
+.mid>span:last-child{flex:none}
+.vmeta{margin:0 8px 10px;color:var(--muted);font-size:13px}
+.vstate{margin:auto 8px 0;align-self:flex-start;font-size:12.5px;padding:3px 10px;border-radius:9999px;background:#fff;color:var(--muted)}
+.rm{position:absolute;top:14px;right:14px;width:28px;height:28px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.12);opacity:0;transition:opacity .14s;font-size:16px}
+.vcard:hover .rm{opacity:1}
+.empty{text-align:center;color:var(--muted);padding:60px 0}
+
+/* Tela 3 */
+/* ocupa a janela inteira: prévias crescem no espaço livre, trilhas presas embaixo */
+#t3{position:fixed;inset:0;display:flex;flex-direction:column;gap:16px;padding:16px 24px 24px;background:var(--bg)}
+.t3-top{display:flex;align-items:center;gap:12px;flex:none}
+.t3-warn{position:absolute;z-index:2;left:50%;top:calc((100cqh - 48px - min(100cqh - 48px, (100cqw - 12px) * 9 / 32)) / 2);translate:-50% 0;margin:0;display:flex;align-items:center;gap:8px;height:36px;padding:0 16px 0 12px;border-radius:9999px;background:rgba(229,72,77,.08);color:#a3262b;font-size:13.5px;white-space:nowrap;animation:rise .25s}
+.t3-warn b{font-weight:500}
+.previews{position:relative;flex:1;min-height:0;container-type:size}
+.pvg{height:100%;padding-top:48px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1fr);gap:12px}
+.pvg .pv{width:min(100%,calc((100cqh - 48px) * 16 / 9));align-self:center}
+.pvg .pv:first-child{justify-self:end}
+.pvg .pv:last-child{justify-self:start}
+.pv{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 0 0 2px var(--c,transparent);background:var(--s1);transition:box-shadow .4s}
+.pv canvas{width:100%;aspect-ratio:16/9;display:block}
+.pv-top{position:absolute;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;gap:8px}
+.pill{background:rgba(255,255,255,.88);backdrop-filter:blur(8px);padding:5px 12px;border-radius:9999px;font-size:12.5px;display:flex;gap:7px;align-items:center;max-width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pv-tc{position:absolute;left:12px;bottom:14px}
+.pv-chips{position:absolute;left:0;right:0;bottom:54px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:0 12px}
+.chip2{display:flex;align-items:center;gap:10px;padding:6px 14px;border-radius:9999px;background:#fff;box-shadow:0 0 0 1px var(--c),0 6px 18px rgba(0,0,0,.08);font-size:13px;animation:rise .3s ease-out;transition:opacity .3s,transform .3s}
+.chip2.out{opacity:0;transform:translateY(6px)}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+.pv-bar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(10,10,10,.06)}
+.pv-bar i{display:block;height:100%;width:0;background:var(--c)}
+.pv-idle{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px}
+.tracks{flex:none}
+.tl{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin:14px 4px 6px}
+.tl:first-child{margin-top:0}
+.tl span:first-child{color:var(--text);font-weight:500}
+.track{position:relative;height:48px;border-radius:16px;background:var(--s1);overflow:hidden}
+.track .div{position:absolute;top:0;bottom:0;border-left:1px solid var(--line)}
+.mk{position:absolute;top:9px;bottom:9px;width:5px;margin-left:-2.5px;border-radius:3px;background:var(--c);transform-origin:50% 50%}
+.mk.pop-in{animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{from{transform:scaleY(0)}}
+#tr-vid{display:flex}
+.seg{position:relative;background:color-mix(in srgb,var(--c) 12%,#fff);border-right:2px solid #fff}
+.seg:last-child{border-right:0}
+.seg>i{position:absolute;inset:0 auto 0 0;width:0;background:var(--c)}
+.seg>span{position:absolute;left:8px;top:6px;font-size:11px;font-weight:600;color:var(--text);opacity:.55}
+.seg .gap{position:absolute;top:0;bottom:0;background:#fff;box-shadow:inset 2px 0 #e5484d,inset -2px 0 #e5484d}
+#tr-all>i{position:absolute;inset:0 auto 0 0;width:0;background:var(--text)}
+#tr-all>span{position:absolute;inset:0;display:grid;place-items:center;font-weight:500;font-size:14px;color:#fff;mix-blend-mode:difference}
+.fly{position:fixed;z-index:50;width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 25%,transparent),0 0 20px color-mix(in srgb,var(--c) 60%,transparent);transition:transform .75s cubic-bezier(.55,0,.2,1);pointer-events:none}
+
+/* Tela 4: comum */
+.warn>span{flex:1}
+.warn-x{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;flex:none;transition:background .14s}
+.warn-x:hover{background:rgba(229,72,77,.1)}
+.warn{display:flex;align-items:center;gap:12px;margin:20px 0 0;padding:6px 6px 6px 18px;border-radius:16px;background:rgba(229,72,77,.06);font-size:13.5px;color:#a3262b}
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.chips.left{justify-content:flex-start}
+.chip{height:34px;padding:0 14px;border-radius:9999px;background:var(--s2);font-size:13.5px;display:flex;align-items:center;gap:7px;transition:background .14s}
+.chip:hover{background:var(--s3)}
+.chip span{color:var(--muted)}
+.chip.on{background:var(--text);color:#fff}
+.chip.on span{color:rgba(255,255,255,.55)}
+.chips .sep{width:1px;background:var(--line2);margin:6px 6px}
+.incl{height:34px;padding:0 14px;border-radius:9999px;font-size:13px;background:var(--btn2);white-space:nowrap;transition:background .14s}
+.incl:hover{background:#e3e2de}
+.incl.on{background:var(--text);color:#fff}
+.ib{width:32px;height:32px;border-radius:50%;background:var(--fill)}
+.ib:hover{background:rgba(10,10,10,.09)}
+.bar-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.bar-h>div{display:flex;gap:6px}
+.det{display:grid;gap:14px}
+.det.wide{grid-template-columns:1.45fr 1fr;gap:24px;align-items:start}
+.det-pv{position:relative;border-radius:16px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.det-pv canvas{width:100%;aspect-ratio:16/9;display:block}
+.det-tc{position:absolute;left:10px;bottom:10px;font-size:12px;background:rgba(255,255,255,.9);padding:3px 9px;border-radius:9999px}
+.det-ph{position:absolute;right:10px;top:10px;font-size:11px;font-weight:600;letter-spacing:.04em;padding:3px 10px;border-radius:9999px;background:var(--c);color:#fff}
+.det-ph.ctxt{background:rgba(255,255,255,.9);color:var(--muted)}
+.det-k{display:flex;align-items:center;gap:8px;font-size:24px;font-weight:500;letter-spacing:-.01em}
+.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:16px 0}
+.kv div{background:var(--fill);border-radius:12px;padding:8px 12px}
+.kv dt{font-size:11.5px;color:var(--muted)}
+.kv dd{margin:0;font-weight:500}
+.ctx{position:relative;display:flex;height:10px;border-radius:9999px;overflow:hidden;background:var(--fill)}
+.ctx .a,.ctx .b{background:rgba(10,10,10,.1)}
+.ctx .c{background:var(--c)}
+.ctx i{position:absolute;top:0;bottom:0;width:2px;background:var(--text);box-shadow:0 0 0 1px #fff}
+.ctx-l{display:flex;justify-content:space-between;font-size:11.5px;color:var(--dim);margin-top:6px}
+.det-act{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap}
+.file{font-size:12.5px;color:var(--dim);word-break:break-all}
+
+/* Variante A: busca primeiro */
+.va-search{max-width:672px;margin:32px auto 14px;display:flex;align-items:center;gap:12px;height:56px;padding:0 20px;border-radius:9999px;background:var(--s2);transition:background .14s,box-shadow .14s}
+.va-search:focus-within{background:#fff;box-shadow:0 0 0 1px var(--line2),0 6px 24px rgba(0,0,0,.06)}
+.va-search input{flex:1;background:none;border:0;outline:0;font-size:16px}
+.va-search input::placeholder{color:var(--muted)}
+.va-list{max-width:820px;margin:28px auto 0}
+.grp{margin:28px 12px 6px;font-size:13px;display:flex;gap:8px;align-items:baseline}
+.grp b{font-weight:500}
+.row{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;padding:8px;border-radius:20px;cursor:pointer;transition:background .14s}
+.row b{font-weight:500}
+.row:hover,.row.open{background:var(--s1)}
+.row .th{border-radius:12px}
+.ab{position:absolute;left:6px;bottom:6px;font-size:10px;font-weight:600;letter-spacing:.04em;background:var(--c);padding:2px 7px;border-radius:9999px;color:#fff}
+.expand{padding:8px 12px 24px;margin-bottom:6px;background:var(--s1);border-radius:0 0 20px 20px;margin-top:-12px}
+.row.open{border-radius:20px 20px 0 0}
+
+/* Variante B: trilhas por partida */
+.vb-card{background:var(--s1);border-radius:24px;padding:20px 24px 24px;margin-top:12px;position:relative}
+.vb-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.lane{display:grid;grid-template-columns:86px 1fr;gap:14px;align-items:center;margin-top:12px}
+.lane-l{font-size:13px;display:flex;flex-direction:column;gap:2px}
+.lane-l span{display:flex;align-items:center;gap:7px}
+.lane-l small{color:var(--dim);margin-left:16px}
+.lane-t{position:relative;height:48px;border-radius:14px;background:#fff}
+.tk{position:absolute;top:0;bottom:0;border-left:1px solid var(--line)}
+.tk span{position:absolute;top:4px;left:5px;font-size:10px;color:var(--dim)}
+.gapz{position:absolute;top:0;bottom:0;background:rgba(229,72,77,.07);box-shadow:inset 1px 0 #e5484d,inset -1px 0 #e5484d}
+.bm{position:absolute;top:50%;transform:translate(-50%,-50%);height:28px;padding:0 10px;border-radius:9999px;background:color-mix(in srgb,var(--c) 12%,#fff);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 55%,#fff);color:color-mix(in srgb,var(--c) 75%,#000);font-size:10.5px;font-weight:600;letter-spacing:.04em;z-index:1;transition:background .14s}
+.bm:hover{background:color-mix(in srgb,var(--c) 24%,#fff)}
+.bm.sel{background:var(--c);color:#fff;box-shadow:none}
+.bm.act{outline:2px solid var(--text);outline-offset:3px;z-index:2}
+.pop{position:absolute;top:calc(100% + 12px);z-index:10;width:440px;background:#fff;border-radius:24px;padding:16px;box-shadow:0 0 0 1px var(--line),0 24px 60px rgba(0,0,0,.12)}
+.pop .det-k{font-size:20px}
+
+/* Variante C: mosaico por tipo */
+.vc-row{margin-top:32px}
+.vc-row h3{display:flex;gap:10px;align-items:baseline;margin-bottom:12px;font-size:20px}
+.vc-row h3 span{color:var(--muted);font-size:15px;font-weight:400}
+.vc-strip{display:flex;gap:12px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#d5d9e2 transparent}
+.tile{flex:0 0 272px;position:relative;border-radius:20px;overflow:hidden;cursor:pointer;scroll-snap-align:start;background:var(--s1)}
+.tile canvas{width:100%;aspect-ratio:16/9;display:block;transition:transform .3s cubic-bezier(.25,1,.5,1)}
+.tile:hover canvas{transform:scale(1.04)}
+.tile::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--c)}
+.tile-ov{position:absolute;left:0;right:0;bottom:0;padding:30px 12px 11px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.94) 55%);font-size:13px}
+.tile-ov span{display:block;color:var(--muted);font-size:12px}
+.tick-btn{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.85);box-shadow:inset 0 0 0 1.5px rgba(10,10,10,.18);color:transparent;font-size:14px;font-weight:700}
+.tick-btn:hover{color:rgba(10,10,10,.4)}
+.tick-btn.on{background:var(--text);color:#fff;box-shadow:none}
+.modal{position:fixed;inset:0;z-index:40;background:rgba(255,255,255,.6);backdrop-filter:blur(12px);display:grid;place-items:center;padding:24px;animation:fade .2s}
+@keyframes fade{from{opacity:0}}
+.sheet{width:min(1024px,100%);background:#fff;border-radius:24px;padding:20px 24px 24px;box-shadow:0 0 0 1px var(--line),0 30px 80px rgba(0,0,0,.14)}
+
+/* seletor de visualização da Tela 4 */
+.shell{position:relative;margin-top:28px}
+.shell>.vt{position:absolute;top:0;right:0;z-index:2}
+#vroot>:first-child{margin-top:0}
+#vroot>.chips:first-child{min-height:44px;align-items:center;padding-right:136px;margin-bottom:20px}
+#vroot>.vc-row:first-child h3{min-height:44px;align-items:center;padding-right:136px;margin-bottom:20px}
+.vt{display:flex;gap:2px;padding:4px;background:var(--s2);border-radius:9999px;font-size:13px}
+.vt button{width:36px;height:36px;border-radius:9999px;color:var(--muted);display:grid;place-items:center;transition:color .14s,background .14s}
+.vt button:hover{color:var(--text)}
+.vt svg{flex:none}
+.vt .on{background:#fff;color:var(--text);box-shadow:0 0 0 1px var(--line),0 1px 3px rgba(0,0,0,.06)}
+.toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%);z-index:70;background:var(--text);color:#fff;padding:10px 18px;border-radius:9999px;font-size:13.5px;box-shadow:0 10px 30px rgba(0,0,0,.18);animation:rise .25s;max-width:90vw}
+</style>
+</head>
+<body>
+<span class="proto">Protótipo · dados fictícios</span>
+<p class="tip">Use ← → para navegar entre as telas</p>
+
+<main>
+  <!-- Tela 1: envio -->
+  <section class="screen" id="t1">
+    <div class="hero"><h1>Envie as gravações da partida</h1><p class="sub">Os vídeos são analisados em sequência. No fim, você revisa e baixa os melhores momentos.</p></div>
+    <label class="drop" id="drop">
+      <input type="file" id="file" accept="video/*" multiple hidden>
+      <span class="drop-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span>
+      <strong>Arraste ou selecione os vídeos</strong>
+      <span class="meta">Vários arquivos de uma vez</span>
+    </label>
+    <p class="center" style="margin-top:20px"><button class="link" id="use-mock">ou use 8 vídeos de exemplo</button></p>
+  </section>
+
+  <!-- Tela 2: vídeos selecionados -->
+  <section class="screen" id="t2" hidden>
+    <div class="head">
+      <div><h1>Vídeos selecionados</h1><p class="sub" id="t2-sub"></p></div>
+      <button class="btn" data-go="1">Adicionar vídeos</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="center"><button class="btn pri big" id="start">Iniciar</button></div>
+  </section>
+
+  <!-- Tela 3: só prévias e trilhas -->
+  <section class="screen" id="t3" hidden>
+    <div class="t3-top"><button class="btn pri" id="restart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>Reiniciar análise</button></div>
+    <div class="previews"><p class="t3-warn" id="t3-warn" role="status" hidden></p><div class="pvg">
+      <div class="pv" id="pv0"><canvas width="640" height="360"></canvas><div class="pv-idle" hidden>Sem vídeo nesta prévia</div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-tc mono" data-t></span><div class="pv-bar"><i></i></div></div>
+      <div class="pv" id="pv1"><canvas width="640" height="360"></canvas><div class="pv-idle" hidden>Sem vídeo nesta prévia</div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-tc mono" data-t></span><div class="pv-bar"><i></i></div></div>
+    </div></div>
+    <div class="tracks">
+      <div class="tl"><span>Highlights detectados</span><span id="k-hl"></span></div>
+      <div class="track" id="tr-hl"></div>
+      <div class="tl"><span>Progresso da análise por vídeo</span><span id="k-vid"></span></div>
+      <div class="track" id="tr-vid"></div>
+      <div class="tl"><span>Progresso geral da análise</span><span id="k-all"></span></div>
+      <div class="track" id="tr-all"><i></i><span></span></div>
+    </div>
+  </section>
+
+  <!-- Tela 4: base de highlights (variantes) -->
+  <section class="screen" id="t4" hidden>
+    <div class="head">
+      <div><h1>Base de highlights</h1><p class="sub" id="t4-sub"></p></div>
+      <button class="btn pri" id="dl" disabled>Baixar cortes (0)</button>
+    </div>
+    <div class="warn" id="t4-warn" hidden></div>
+    <div class="shell"><nav class="vt" id="vt" aria-label="Visualização"></nav><div id="vroot"></div></div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+// ---------- utilidades ----------
+const $=s=>document.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const mid=(s,k=12)=>s.length<=k+3?esc(s):`<span class="mid" title="${esc(s)}"><span>${esc(s.slice(0,-k))}</span><span>${esc(s.slice(-k))}</span></span>`;
+const tc=s=>{s=Math.max(0,Math.round(s));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
+const hm=s=>`${Math.floor(s/3600)} h ${String(Math.round(s%3600/60)).padStart(2,'0')} min`;
+const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const hexA=(h,a)=>{const n=parseInt(h.slice(1),16);return `rgba(${n>>16},${n>>8&255},${n&255},${a})`};
+const hash=s=>{let h=2166136261;for(const c of String(s))h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0};
+const rng=s=>()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+const WARN_I='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>';
+let toastT;
+function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,3200)}
+
+// ---------- dados fictícios ----------
+const COLORS=['#14a37f','#3b6cf6','#e8a317','#e5484d','#8b5cf6','#5c9e0f','#ff6a08','#0ea5c6'];
+const MATCHES=[
+  {name:'Final Estadual',teams:['Tigres','Leões'],slug:'Final_Estadual'},
+  {name:'Semifinal · ida',teams:['Porto','Vila Nova'],slug:'Semifinal_ida'},
+  {name:'Amistoso Sub-17',teams:['Atlético Sul','União'],slug:'Amistoso_Sub17'},
+  {name:'Rodada 7',teams:['Ferroviário','Estrela'],slug:'Rodada7_Ferroviario_x_Estrela'},
+];
+const DURS=[2832,2885,2790,2911,2744,2860,2805,2938];
+const TYPES=[{k:'Gol',a:'GOL',w:2},{k:'Finalização',a:'FIN',w:4},{k:'Defesa',a:'DEF',w:3},{k:'Escanteio',a:'ESC',w:2},{k:'Falta',a:'FAL',w:2},{k:'Cartão',a:'CAR',w:1}];
+const MOCK_NAMES=MATCHES.flatMap(m=>[`${m.slug}_1T.mp4`,`${m.slug}_2T.mp4`]);
+const CTX=5, PROC=6500; // segundos de contexto; ms simulados por vídeo
+let V=[], H=[], HM={};
+const SEL=new Set();
+
+function load(names){
+  V=names.slice(0,8).map((name,i)=>({i,name,m:MATCHES[i>>1],half:i%2+1,dur:DURS[i],c:COLORS[i],gap:i===3?[720,890]:null,prog:0,st:'aguardando'}));
+  const r=rng(16), tw=TYPES.reduce((a,t)=>a+t.w,0);
+  const pick=()=>{let x=r()*tw;for(const t of TYPES){if((x-=t.w)<0)return t}return TYPES[0]};
+  H=[];
+  V.forEach(v=>{
+    const n=4+Math.floor(r()*3), ts=[];
+    for(let g=0;ts.length<n&&g<300;g++){const t=90+r()*(v.dur-180);if(ts.every(x=>Math.abs(x-t)>150)&&!(v.gap&&t>v.gap[0]-30&&t<v.gap[1]))ts.push(Math.round(t))}
+    ts.sort((a,b)=>a-b).forEach((t,k)=>H.push({id:`h${v.i}-${k}`,v,type:pick(),t,dur:8+Math.floor(r()*13),found:false,done:false}));
+  });
+  HM=Object.fromEntries(H.map(h=>[h.id,h]));
+  SEL.clear(); resetAnalysis();
+}
+const total=()=>V.reduce((a,v)=>a+v.dur,0);
+const off=v=>{let a=0;for(const x of V){if(x===v)return a;a+=x.dur}return a};
+const done=()=>H.filter(h=>h.done);
+
+// ---------- prévia desenhada (campo + jogadores) ----------
+function drawPitch(ctx,W,H_,c,t,seed){
+  ctx.fillStyle='#f1f2ee';ctx.fillRect(0,0,W,H_);
+  for(let i=0;i<12;i++){ctx.fillStyle=i%2?'rgba(10,10,10,.012)':'rgba(10,10,10,.035)';ctx.fillRect(i*W/12,0,W/12+1,H_)}
+  ctx.fillStyle=hexA(c,.07);ctx.fillRect(0,0,W,H_);
+  const fx=W*.06,fy=H_*.1,fw=W-2*fx,fh=H_-2*fy;
+  ctx.strokeStyle='rgba(10,10,10,.14)';ctx.lineWidth=Math.max(1,W/400);
+  ctx.strokeRect(fx,fy,fw,fh);
+  ctx.beginPath();ctx.moveTo(W/2,fy);ctx.lineTo(W/2,fy+fh);ctx.stroke();
+  ctx.beginPath();ctx.arc(W/2,H_/2,fh*.17,0,7);ctx.stroke();
+  ctx.strokeRect(fx,H_/2-fh*.23,fw*.13,fh*.46);ctx.strokeRect(fx+fw*.87,H_/2-fh*.23,fw*.13,fh*.46);
+  const r=rng(seed);
+  for(let i=0;i<20;i++){
+    const bx=fx+fw*(.08+.84*r()),by=fy+fh*(.1+.8*r()),ph=r()*6.28,sp=.25+r()*.6;
+    ctx.fillStyle=i<10?c:'#2b2f36';
+    ctx.beginPath();ctx.arc(bx+Math.sin(t*sp+ph)*W*.05,by+Math.cos(t*sp*.8+ph)*H_*.05,Math.max(2,W/130),0,7);ctx.fill();
+  }
+  ctx.fillStyle='#0a0a0a';ctx.beginPath();ctx.arc(W/2+Math.sin(t*.7+seed%7)*fw*.3,H_/2+Math.cos(t*.9)*fh*.25,Math.max(1.5,W/220),0,7);ctx.fill();
+}
+function paintThumbs(root){
+  $$('canvas[data-thumb]',root).forEach(c=>{const h=HM[c.dataset.thumb];drawPitch(c.getContext('2d'),c.width,c.height,h.v.c,h.t,hash(h.id))});
+  $$('canvas[data-vthumb]',root).forEach(c=>{const v=V.find(x=>x.i===+c.dataset.vthumb);drawPitch(c.getContext('2d'),c.width,c.height,v.c,v.i*3,hash(v.name))});
+}
+
+// ---------- simulação da análise ----------
+const A={state:'idle',slots:[null,null],last:[null,null],gen:0};
+function resetAnalysis(){A.gen++;$$('.chip2,.fly').forEach(e=>e.remove());A.state='idle';A.slots=[null,null];A.last=[null,null];V.forEach(v=>{v.prog=0;v.st='aguardando'});H.forEach(h=>{h.found=h.done=false})}
+function startAnalysis(){resetAnalysis();A.state='running';fill()}
+function fill(){
+  for(let s=0;s<2;s++)if(!A.slots[s]){const n=V.find(v=>v.st==='aguardando');if(n){n.st='processando';A.slots[s]=A.last[s]=n}}
+  if(A.state==='running'&&!A.slots[0]&&!A.slots[1])A.state='done';
+}
+function step(dt){
+  A.slots.forEach((v,s)=>{
+    if(!v)return;
+    v.prog=Math.min(1,v.prog+dt/PROC);
+    H.forEach(h=>{if(h.v===v&&!h.found&&h.t/v.dur<=v.prog)detect(h,s)});
+    if(v.prog>=1){v.st='pronto';A.slots[s]=null}
+  });
+  fill();
+}
+function finishAll(){
+  V.forEach(v=>{v.prog=1;v.st='pronto'});H.forEach(h=>h.found=h.done=true);
+  A.slots=[null,null];A.state='done';$$('.chip2').forEach(e=>e.remove());
+}
+// detectado na prévia → voa até a trilha
+function detect(h,s){
+  h.found=true;
+  if(S.tela!==3){h.done=true;return}
+  const el=document.createElement('div');el.className='chip2';el.style.setProperty('--c',h.v.c);
+  el.textContent=`${h.type.k} · ${tc(h.t)}`;
+  $(`#pv${s} .pv-chips`).append(el);
+  const g=A.gen;setTimeout(()=>{if(g===A.gen)fly(el,h)},1350);
+}
+function fly(el,h){
+  if(h.done){el.remove();return}
+  if(S.tela!==3||!el.isConnected){h.done=true;el.remove();addMk(h,false);return}
+  const a=el.getBoundingClientRect(),tr=$('#tr-hl').getBoundingClientRect();
+  const sx=a.left+a.width/2-6,sy=a.top+a.height/2-6,tx=tr.left+tr.width*mkX(h)/100-6,ty=tr.top+tr.height/2-6;
+  const d=document.createElement('div');d.className='fly';d.style.setProperty('--c',h.v.c);d.style.left=sx+'px';d.style.top=sy+'px';
+  document.body.append(d);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>d.style.transform=`translate(${tx-sx}px,${ty-sy}px) scale(.6)`));
+  const g=A.gen;setTimeout(()=>{d.remove();if(g!==A.gen)return;h.done=true;addMk(h,true);el.classList.add('out');setTimeout(()=>el.remove(),320)},780);
+}
+const mkX=h=>(off(h.v)+h.t)/total()*100;
+const mk=(h,pop)=>`<i class="mk${pop?' pop-in':''}" id="mk-${h.id}" style="left:${mkX(h)}%;--c:${h.v.c}" title="${h.type.k} · ${esc(h.v.m.name)} · ${h.v.half}º tempo · ${tc(h.t)}"></i>`;
+function addMk(h,pop){if(S.tela===3&&!document.getElementById('mk-'+h.id))$('#tr-hl').insertAdjacentHTML('beforeend',mk(h,pop))}
+function buildTracks(){
+  const tot=total();let acc=0;
+  $('#tr-hl').innerHTML=V.map(v=>{const x=acc/tot*100;acc+=v.dur;return `<i class="div" style="left:${x}%"></i>`}).join('')+done().map(h=>mk(h)).join('');
+  $('#tr-vid').innerHTML=V.map((v,k)=>`<div class="seg" style="flex:${v.dur};--c:${v.c}" title="${esc(v.name)}"><i id="sf${v.i}"></i>${v.gap?`<b class="gap" id="gp${v.i}" style="left:${v.gap[0]/v.dur*100}%;width:${(v.gap[1]-v.gap[0])/v.dur*100}%" title="Trecho não analisado ${tc(v.gap[0])}–${tc(v.gap[1])}" hidden></b>`:''}<span>${k+1}</span></div>`).join('');
+}
+function paintT3(now){
+  [0,1].forEach(s=>{
+    const v=A.slots[s]||A.last[s],pv=$('#pv'+s),ctx=pv.querySelector('canvas').getContext('2d');
+    pv.querySelector('.pv-idle').hidden=!!v;
+    $$('.pv-top,.pv-tc,.pv-bar',pv).forEach(e=>e.hidden=!v);
+    if(!v){ctx.fillStyle='#f8f7f5';ctx.fillRect(0,0,640,360);pv.style.removeProperty('--c');return}
+    pv.style.setProperty('--c',v.c);
+    drawPitch(ctx,640,360,v.c,v.st==='processando'?now/1000:v.dur*v.prog/60,hash(v.name));
+    const st=v.st==='processando'?'Processando':v.gap?'Pronto · 1 trecho não analisado':'Pronto';
+    pv.querySelector('[data-n]').innerHTML=`<i class="dot"></i>${mid(v.name)}`;
+    pv.querySelector('[data-s]').textContent=st;
+    pv.querySelector('[data-t]').textContent=`${tc(v.prog*v.dur)} / ${tc(v.dur)}`;
+    pv.querySelector('.pv-bar i').style.width=v.prog*100+'%';
+  });
+  V.forEach(v=>{const f=document.getElementById('sf'+v.i);if(f)f.style.width=v.prog*100+'%';const g=document.getElementById('gp'+v.i);if(g)g.hidden=v.prog*v.dur<v.gap[1]});
+  const err=V.map((v,k)=>[v,k]).filter(([v])=>v.gap&&v.prog*v.dur>=v.gap[1]),ek=err.map(([v])=>v.i).join(),w=$('#t3-warn');
+  if(w.dataset.k!==ek){w.dataset.k=ek;w.hidden=!err.length;w.innerHTML=WARN_I+(err.length===1?(([v,k])=>`<span><b>Vídeo ${k+1}</b> · trecho ${tc(v.gap[0])}–${tc(v.gap[1])} não pôde ser analisado</span>`)(err[0]):`<span><b>${err.length} trechos</b> não puderam ser analisados</span>`)}
+  const n=done().length,c={pronto:0,processando:0,aguardando:0};V.forEach(v=>c[v.st]++);
+  $('#k-hl').textContent=`${n} ${n===1?'lance':'lances'}`;
+  $('#k-vid').textContent=[c.pronto&&`${c.pronto} pronto${c.pronto>1?'s':''}`,c.processando&&`${c.processando} processando`,c.aguardando&&`${c.aguardando} aguardando`].filter(Boolean).join(' · ');
+  const p=V.reduce((a,v)=>a+v.prog*v.dur,0)/total();
+  $('#tr-all>i').style.width=p*100+'%';
+  $('#tr-all>span').textContent=A.state==='done'?'Análise concluída':Math.floor(p*100)+'%';
+  $('#k-all').textContent=A.state==='done'?`${V.length} vídeos · ${hm(total())}`:`${c.pronto} de ${V.length} vídeos`;
+}
+
+// ---------- detalhe de um lance (compartilhado pelas variantes) ----------
+const inclLabel=on=>on?'✓ No download':'+ Incluir';
+const inclBtn=h=>`<button class="incl${SEL.has(h.id)?' on':''}" data-incl="${h.id}">${inclLabel(SEL.has(h.id))}</button>`;
+function toggle(id){
+  SEL.has(id)?SEL.delete(id):SEL.add(id);updDL();
+  $$(`[data-incl="${id}"]`).forEach(b=>{b.classList.toggle('on',SEL.has(id));if(b.classList.contains('incl'))b.textContent=inclLabel(SEL.has(id))});
+  $$(`[data-selmark="${id}"]`).forEach(e=>e.classList.toggle('sel',SEL.has(id)));
+}
+function detail(h,wide){
+  const v=h.v;
+  return `<div class="det${wide?' wide':''}" style="--c:${v.c}">
+    <div class="det-pv"><canvas data-live="${h.id}" width="640" height="360"></canvas><span class="det-ph" data-phase></span><span class="det-tc mono" data-tc></span></div>
+    <div>
+      <div class="det-k"><i class="dot"></i>${h.type.k}</div>
+      <div class="meta">${esc(v.m.name)} · ${esc(v.m.teams.join(' x '))} · ${v.half}º tempo</div>
+      <dl class="kv"><div><dt>Início</dt><dd class="mono">${tc(h.t)}</dd></div><div><dt>Fim</dt><dd class="mono">${tc(h.t+h.dur)}</dd></div><div><dt>Duração</dt><dd class="mono">${h.dur} s</dd></div></dl>
+      <div class="ctx"><span class="a" style="flex:${CTX}"></span><span class="c" style="flex:${h.dur}"></span><span class="b" style="flex:${CTX}"></span><i data-ph></i></div>
+      <div class="ctx-l"><span>${CTX} s antes</span><span>corte</span><span>${CTX} s depois</span></div>
+      <div class="det-act">${inclBtn(h)}<span class="file">${esc(v.name)}</span></div>
+    </div></div>`;
+}
+function paintLive(now){
+  $$('canvas[data-live]').forEach(c=>{
+    if(!c.offsetParent)return;
+    const h=HM[c.dataset.live];c._t0??=now;
+    const T=CTX*2+h.dur,el=((now-c._t0)/1000)%T,vt=h.t-CTX+el,inCut=el>=CTX&&el<CTX+h.dur,d=c.closest('.det');
+    drawPitch(c.getContext('2d'),640,360,h.v.c,vt,hash(h.id));
+    d.querySelector('[data-tc]').textContent=`${tc(vt)} · ${h.v.half}º tempo`;
+    const p=d.querySelector('[data-phase]');p.textContent=inCut?'CORTE':'CONTEXTO';p.classList.toggle('ctxt',!inCut);
+    d.querySelector('[data-ph]').style.left=el/T*100+'%';
+  });
+}
+
+// ---------- Variante A: busca primeiro (lista única, detalhe abre na própria linha) ----------
+function VA(root){
+  let q='',ty='',half=0,open=null;
+  root.innerHTML=`<div class="va-search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8d8d8d" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="va-q" placeholder="Buscar por lance, partida, time ou arquivo" autocomplete="off"></div><div class="chips" id="va-chips"></div><div class="va-list" id="va-list"></div>`;
+  const chip=(k,label,n,on)=>`<button class="chip${on?' on':''}" data-chip="${k}">${label}${n!==''?`<span>${n}</span>`:''}</button>`;
+  const list=()=>done().filter(h=>(!ty||h.type.k===ty)&&(!half||h.v.half===half)&&(!q||norm(`${h.type.k} ${h.v.m.name} ${h.v.m.teams.join(' ')} ${h.v.name} ${h.v.half}º tempo ${tc(h.t)}`).includes(norm(q))));
+  const draw=()=>{
+    const all=done();
+    $('#va-chips').innerHTML=chip('','Todos',all.length,!ty&&!half)+TYPES.map(t=>{const n=all.filter(h=>h.type===t).length;return n?chip('t:'+t.k,t.k,n,ty===t.k):''}).join('')+'<i class="sep"></i>'+[1,2].map(n=>chip('h:'+n,n+'º tempo','',half===n)).join('');
+    let html='',lm=null;
+    list().forEach(h=>{
+      if(h.v.m!==lm){lm=h.v.m;html+=`<div class="grp"><b>${esc(lm.name)}</b><span class="dim">${esc(lm.teams.join(' x '))}</span></div>`}
+      html+=`<div class="row${open===h.id?' open':''}" data-row="${h.id}" style="--c:${h.v.c}"><div class="th"><canvas data-thumb="${h.id}" width="240" height="135"></canvas><span class="ab">${h.type.a}</span></div><div><b>${h.type.k}</b> <span class="meta">· ${h.v.half}º tempo · <span class="mono">${tc(h.t)}</span></span><div class="meta">${h.dur} s · ${esc(h.v.name)}</div></div>${inclBtn(h)}</div>`;
+      if(open===h.id)html+=`<div class="expand">${detail(h,true)}</div>`;
+    });
+    $('#va-list').innerHTML=html||`<div class="empty">Nenhum lance encontrado. <button class="link" data-clear>Limpar busca e filtros</button></div>`;
+    paintThumbs(root);
+  };
+  root.oninput=e=>{if(e.target.id==='va-q'){q=e.target.value;open=null;draw()}};
+  root.onclick=e=>{
+    if(e.target.closest('[data-incl]'))return;
+    const c=e.target.closest('[data-chip]');
+    if(c){const k=c.dataset.chip;if(!k){ty='';half=0}else if(k[0]==='t')ty=ty===k.slice(2)?'':k.slice(2);else{const n=+k.slice(2);half=half===n?0:n}open=null;draw();return}
+    if(e.target.closest('[data-clear]')){q='';ty='';half=0;$('#va-q').value='';draw();return}
+    const r=e.target.closest('[data-row]');
+    if(r){open=open===r.dataset.row?null:r.dataset.row;draw();if(open)$(`[data-row="${open}"]`).scrollIntoView({block:'nearest',behavior:'smooth'})}
+  };
+  draw();
+  return{key(e){
+    if(e.key==='/'&&document.activeElement?.id!=='va-q'){e.preventDefault();$('#va-q').focus();return true}
+    if(e.key==='Escape'&&open){open=null;draw();return true}
+    if(open&&(e.key==='ArrowDown'||e.key==='ArrowUp')){e.preventDefault();const L=list(),i=L.findIndex(h=>h.id===open),n=L[i+(e.key==='ArrowDown'?1:-1)];if(n){open=n.id;draw();$(`[data-row="${open}"]`).scrollIntoView({block:'nearest'})}return true}
+    return false;
+  }};
+}
+
+// ---------- Variante B: trilhas por partida (mesma linguagem da Tela 3) ----------
+function VB(root){
+  const on=new Set(TYPES.map(t=>t.k));let act=null;
+  const vis=()=>done().filter(h=>on.has(h.type.k));
+  const draw=()=>{
+    const all=done(),L=vis();
+    let html=`<div class="chips left">${TYPES.map(t=>{const n=all.filter(h=>h.type===t).length;return n?`<button class="chip${on.has(t.k)?' on':''}" data-ty="${t.k}">${t.k}<span>${n}</span></button>`:''}).join('')}</div>`;
+    MATCHES.forEach(m=>{
+      const vs=V.filter(v=>v.m===m);if(!vs.length)return;
+      const hs=L.filter(h=>h.v.m===m);
+      html+=`<section class="vb-card"><div class="vb-head"><div><h3>${esc(m.name)}</h3><span class="meta">${esc(m.teams.join(' x '))}</span></div><span class="meta">${hs.length} ${hs.length===1?'lance':'lances'}</span></div>`;
+      vs.forEach(v=>{
+        html+=`<div class="lane" style="--c:${v.c}"><div class="lane-l"><span><i class="dot"></i>${v.half}º tempo</span><small class="mono">${tc(v.dur)}</small></div><div class="lane-t">`
+          +[15,30,45].filter(mn=>mn*60<v.dur).map(mn=>`<i class="tk" style="left:${mn*60/v.dur*100}%"><span>${mn}'</span></i>`).join('')
+          +(v.gap?`<i class="gapz" style="left:${v.gap[0]/v.dur*100}%;width:${(v.gap[1]-v.gap[0])/v.dur*100}%" title="Trecho não analisado ${tc(v.gap[0])}–${tc(v.gap[1])}"></i>`:'')
+          +hs.filter(h=>h.v===v).map(h=>`<button class="bm${SEL.has(h.id)?' sel':''}${act===h.id?' act':''}" data-selmark="${h.id}" data-bm="${h.id}" style="left:${h.t/v.dur*100}%" title="${h.type.k} · ${tc(h.t)}">${h.type.a}</button>`).join('')
+          +(act&&HM[act].v===v?pop(HM[act],L):'')+`</div></div>`;
+      });
+      html+='</section>';
+    });
+    root.innerHTML=html;place();
+  };
+  const pop=(h,L)=>{const i=L.indexOf(h);return `<div class="pop" style="left:${h.t/h.v.dur*100}%"><div class="bar-h"><span class="meta">${i+1} de ${L.length} · ← → para navegar</span><div><button class="ib" data-nav="-1" aria-label="Anterior">←</button><button class="ib" data-nav="1" aria-label="Próximo">→</button><button class="ib" data-close aria-label="Fechar">×</button></div></div>${detail(h,false)}</div>`};
+  const place=()=>{
+    const p=root.querySelector('.pop');if(!p)return;
+    p.style.transform='translateX(-50%)';
+    const r=p.getBoundingClientRect(),c=p.closest('.vb-card').getBoundingClientRect();
+    const dx=r.left<c.left+12?c.left+12-r.left:r.right>c.right-12?c.right-12-r.right:0;
+    p.style.transform=`translateX(calc(-50% + ${dx}px))`;
+    const b=p.getBoundingClientRect();if(b.bottom>innerHeight-80)scrollBy({top:b.bottom-innerHeight+90,behavior:'smooth'});
+  };
+  const nav=d=>{const L=vis(),i=L.findIndex(h=>h.id===act),n=L[(i+d+L.length)%L.length];if(n){act=n.id;draw()}};
+  root.oninput=null;
+  root.onclick=e=>{
+    if(e.target.closest('[data-incl]'))return;
+    const t=e.target.closest('[data-ty]');if(t){on.has(t.dataset.ty)?on.delete(t.dataset.ty):on.add(t.dataset.ty);if(act&&!on.has(HM[act].type.k))act=null;draw();return}
+    const b=e.target.closest('[data-bm]');if(b){act=act===b.dataset.bm?null:b.dataset.bm;draw();return}
+    const n=e.target.closest('[data-nav]');if(n){nav(+n.dataset.nav);return}
+    if(e.target.closest('[data-close]')||(act&&!e.target.closest('.pop'))){act=null;draw()}
+  };
+  draw();
+  return{key(e){
+    if(!act)return false;
+    if(e.key==='Escape'){act=null;draw();return true}
+    if(e.key==='ArrowLeft'||e.key==='ArrowRight'){nav(e.key==='ArrowRight'?1:-1);return true}
+    return false;
+  }};
+}
+
+// ---------- Variante C: mosaico por tipo (fileiras de miniaturas, detalhe em tela cheia) ----------
+function VC(root){
+  let open=null;
+  const groups=()=>TYPES.map(t=>[t,done().filter(h=>h.type===t)]).filter(g=>g[1].length);
+  const flat=()=>groups().flatMap(g=>g[1]);
+  root.innerHTML=groups().map(([t,hs])=>`<section class="vc-row"><h3>${t.k}<span>${hs.length}</span></h3><div class="vc-strip">${hs.map(h=>`<div class="tile" data-tile="${h.id}" style="--c:${h.v.c}"><canvas data-thumb="${h.id}" width="320" height="180"></canvas><button class="tick-btn${SEL.has(h.id)?' on':''}" data-incl="${h.id}" aria-label="Incluir no download">✓</button><div class="tile-ov"><b class="mono">${tc(h.t)}</b> · ${h.v.half}º tempo · ${h.dur} s<span>${esc(h.v.m.name)}</span></div></div>`).join('')}</div></section>`).join('')+'<div id="vc-m"></div>';
+  paintThumbs(root);
+  const modal=()=>{
+    const m=$('#vc-m');if(!open){m.innerHTML='';return}
+    const F=flat(),i=F.findIndex(h=>h.id===open),h=F[i];
+    m.innerHTML=`<div class="modal" data-backdrop><div class="sheet"><div class="bar-h"><span class="meta">${h.type.k} · ${i+1} de ${F.length} · ← → para navegar · Esc fecha</span><div><button class="ib" data-nav="-1" aria-label="Anterior">←</button><button class="ib" data-nav="1" aria-label="Próximo">→</button><button class="ib" data-close aria-label="Fechar">×</button></div></div>${detail(h,true)}</div></div>`;
+  };
+  const nav=d=>{const F=flat(),i=F.findIndex(h=>h.id===open);open=F[(i+d+F.length)%F.length].id;modal()};
+  root.oninput=null;
+  root.onclick=e=>{
+    if(e.target.closest('[data-incl]'))return;
+    const t=e.target.closest('[data-tile]');if(t){open=t.dataset.tile;modal();return}
+    const n=e.target.closest('[data-nav]');if(n){nav(+n.dataset.nav);return}
+    if(e.target.closest('[data-close]')||e.target.matches('[data-backdrop]')){open=null;modal()}
+  };
+  return{key(e){
+    if(!open)return false;
+    if(e.key==='Escape'){open=null;modal();return true}
+    if(e.key==='ArrowLeft'||e.key==='ArrowRight'){nav(e.key==='ArrowRight'?1:-1);return true}
+    return false;
+  }};
+}
+
+// ---------- Tela 4: casca comum + troca de variantes ----------
+const VARIANTS={A:['Busca primeiro',VA],B:['Trilhas por partida',VB],C:['Mosaico por tipo',VC]};
+const VICON={
+  A:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/></svg>',
+  B:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="5" rx="1.5"/><rect x="3" y="14" width="18" height="5" rx="1.5"/></svg>',
+  C:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
+};
+let cur=null;
+function updDL(){const n=SEL.size;$('#dl').textContent=`Baixar cortes (${n})`;$('#dl').disabled=!n}
+function renderBase(){
+  const hs=done(),nm=new Set(hs.map(h=>h.v.m)).size;
+  $('#t4-sub').innerHTML=`<b>${hs.length}</b> ${hs.length===1?'Highlight':'Highlights'} em <b>${nm}</b> ${nm===1?'Partida':'Partidas'}`;
+  const gv=V.find(v=>v.gap);
+  $('#t4-warn').hidden=!gv||S.warnOff;
+  if(gv)$('#t4-warn').innerHTML=`<span><b>1 trecho não analisado</b> em ${esc(gv.m.name)}, ${gv.half}º tempo (${tc(gv.gap[0])}–${tc(gv.gap[1])}). Pode haver lances nesse intervalo.</span><button class="warn-x" data-warn-x aria-label="Dispensar aviso" title="Dispensar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>`;
+  const fn=VARIANTS[S.variant][1];
+  cur=fn($('#vroot'));
+  $('#vt').innerHTML=Object.entries(VARIANTS).map(([k,[n]])=>`<button data-vt="${k}" class="${k===S.variant?'on':''}" aria-pressed="${k===S.variant}" aria-label="${n}" title="${n}">${VICON[k]}</button>`).join('');
+  updDL();
+}
+function setVariant(k){S.variant=k;renderBase();url()}
+$('#dl').onclick=()=>{
+  const hs=done().filter(h=>SEL.has(h.id));if(!hs.length)return;
+  const rows=[['partida','tempo','arquivo','lance','inicio','fim','duracao_s'],...hs.map(h=>[h.v.m.name,h.v.half+'º',h.v.name,h.type.k,tc(h.t),tc(h.t+h.dur),h.dur])];
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob(['﻿'+rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(';')).join('\r\n')],{type:'text/csv;charset=utf-8'}));
+  a.download='PROTOTIPO_cortes_selecionados.csv';a.click();
+  toast(`${hs.length} ${hs.length===1?'corte listado':'cortes listados'} em CSV. Neste protótipo os vídeos dos cortes não existem.`);
+};
+
+// ---------- telas 1 e 2 ----------
+function addFiles(list){
+  const f=[...list].filter(x=>x.type.startsWith('video')||/\.(mp4|mov|mkv|avi|webm|m4v)$/i.test(x.name));
+  if(!f.length){toast('Nenhum vídeo reconhecido nesses arquivos.');return}
+  load(f.map(x=>x.name));
+  toast(`${Math.min(8,f.length)} vídeo(s) adicionados. Duração e lances são fictícios.`);
+  go(2);
+}
+$('#file').onchange=e=>addFiles(e.target.files);
+const drop=$('#drop');
+drop.ondragover=e=>{e.preventDefault();drop.classList.add('over')};
+drop.ondragleave=()=>drop.classList.remove('over');
+drop.ondrop=e=>{e.preventDefault();drop.classList.remove('over');addFiles(e.dataTransfer.files)};
+$('#use-mock').onclick=()=>{load(MOCK_NAMES);go(2)};
+function renderGrid(){
+  const started=A.state!=='idle';
+  $('#t2-sub').textContent=V.length?`${V.length} ${V.length===1?'vídeo':'vídeos'} · ${hm(total())} de gravação`:'Nenhum vídeo';
+  $('#grid').innerHTML=V.length?V.map(v=>`<article class="vcard" style="--c:${v.c}"><div class="th"><canvas data-vthumb="${v.i}" width="320" height="180"></canvas><span class="dur mono">${tc(v.dur)}</span></div>${started?'':`<button class="rm" data-rm="${v.i}" aria-label="Remover ${esc(v.name)}">×</button>`}<div class="vname"><i class="dot"></i>${mid(v.name)}</div><div class="vmeta">${esc(v.m.name)} · ${v.half}º tempo</div><span class="vstate">${started?v.st[0].toUpperCase()+v.st.slice(1):'Pronto para análise'}</span></article>`).join(''):'';
+  $('#grid').style.display=V.length?'':'none';
+  paintThumbs($('#grid'));
+  $('#start').textContent=started?'Ver análise':'Iniciar';
+  $('#start').disabled=!V.length;
+}
+$('#grid').onclick=e=>{
+  const b=e.target.closest('[data-rm]');if(!b)return;
+  const v=V.find(x=>x.i===+b.dataset.rm);V=V.filter(x=>x!==v);H=H.filter(h=>h.v!==v);renderGrid();
+};
+$('#start').onclick=()=>go(3);
+$('#restart').onclick=()=>{startAnalysis();buildTracks()};
+
+// ---------- navegação ----------
+const S={tela:1,variant:'A',warnOff:false};
+function url(){
+  const p=new URLSearchParams({tela:S.tela});if(S.tela===4)p.set('variant',S.variant);
+  try{history.replaceState(null,'','?'+p)}catch{}
+}
+function go(n){
+  if(n>=2&&!V.length)load(MOCK_NAMES);
+  if(n===3&&A.state==='idle')startAnalysis();
+  if(n===4&&A.state!=='done'){const was=A.state==='running';finishAll();if(was)toast('Para revisar a base, a análise restante foi concluída na hora (simulação).')}
+  S.tela=n;
+  $$('.screen').forEach((e,i)=>e.hidden=i+1!==n);
+  if(n===2)renderGrid();
+  if(n===3)buildTracks();
+  if(n===4)renderBase();else cur=null;
+  url();scrollTo(0,0);
+}
+document.addEventListener('click',e=>{
+  const g=e.target.closest('[data-go]');if(g){go(+g.dataset.go);return}
+  const i=e.target.closest('[data-incl]');if(i){toggle(i.dataset.incl);return}
+  if(e.target.closest('[data-warn-x]')){S.warnOff=true;$('#t4-warn').hidden=true;return}
+  const t=e.target.closest('[data-vt]');if(t&&t.dataset.vt!==S.variant)setVariant(t.dataset.vt);
+});
+document.addEventListener('keydown',e=>{
+  if(S.tela===4&&cur?.key(e))return;
+  const a=document.activeElement;
+  if(a&&(/INPUT|TEXTAREA|SELECT/.test(a.tagName)||a.isContentEditable))return;
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  if(e.key==='ArrowLeft'||e.key==='ArrowRight'){const n=S.tela+(e.key==='ArrowRight'?1:-1);if(n>=1&&n<=4)go(n)}
+});
+
+let lastT=performance.now();
+function frame(now){
+  const dt=Math.min(100,now-lastT);lastT=now;
+  if(A.state==='running')step(dt);
+  if(S.tela===3)paintT3(now);
+  if(S.tela===4)paintLive(now);
+  requestAnimationFrame(frame);
+}
+const P=new URLSearchParams(location.search);
+if(VARIANTS[P.get('variant')])S.variant=P.get('variant');
+go(Math.min(4,Math.max(1,+P.get('tela')||1)));
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
