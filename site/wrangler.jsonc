@@ -10,7 +10,7 @@
     {
       "binding": "DB",
       "database_name": "ihc-feedback",
-      "database_id": "PENDENTE",
+      "database_id": "271ea0aa-2f11-48d8-9aef-455811b50e2a",
       "migrations_dir": "migrations"
     }
   ]
