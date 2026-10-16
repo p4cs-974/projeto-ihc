@@ -10,7 +10,7 @@
 
 05 - Preenchimento concluído; revisão de coerência aplicada em 13/10/2026; modelos hipotéticos a validar
 
-06 - Protótipo principal e lacunas documentados em 16/10/2026; walkthrough e revisões formativas pendentes
+06 - Protótipo principal e lacunas documentados e guia da simulação publicado em 16/10/2026; walkthrough e revisões formativas pendentes
 
 # Projeto de Interação Humano-Computador (IHC)  - Equipe 16
 

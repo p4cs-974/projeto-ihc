@@ -43,8 +43,9 @@ Os objetivos desta iteração são:
 | [Protótipo principal: fluxo de highlights](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) ([versão publicada](https://ihc.p4cs.com.br)) | Versão de referência confirmada por Pedro em 16/10/2026. Quatro telas e três alternativas para a base de resultados |
 | [Exploração anterior em baixa fidelidade](../assets/06_prototipos/PROTOTIPO_baixa_fidelidade_base_highlights.html) | Registro das alternativas anteriores: lista com filtros, galeria por partida, facetas por jogador e mapa das partidas. As facetas fictícias não confirmam a capacidade de identificar jogadores |
 | [Mapa do fluxo documentado](../assets/06_prototipos/prototipo_fluxo_01.svg) | Identificação das quatro telas, transições e limites da demonstração |
+| [Guia da simulação](../assets/06_prototipos/GUIA_simulacao.html) ([versão publicada](https://ihc.p4cs.com.br/guia)) | Material enviado a quem participa da simulação: contexto do projeto, fluxo, particularidades da demonstração, tarefas e formulário de feedback. Ver seção 4.1 |
 
-A versão principal está publicada em <https://ihc.p4cs.com.br>. Também é possível baixar o HTML e abri-lo no navegador. O botão **ou use 8 vídeos de exemplo** permite explorar o fluxo sem fornecer gravações. As setas esquerda e direita alternam as telas. Os parâmetros `?tela=1` até `?tela=4` abrem uma etapa diretamente; na tela 4, `&variant=A`, `B` ou `C` escolhe a visualização. Os mesmos parâmetros funcionam na versão publicada, por exemplo `https://ihc.p4cs.com.br/?tela=4&variant=B`.
+A versão principal está publicada em <https://ihc.p4cs.com.br>, a partir da pasta [`site/`](../site/README.md) do repositório. Também é possível baixar o HTML e abri-lo no navegador. O botão **ou use 8 vídeos de exemplo** permite explorar o fluxo sem fornecer gravações. As setas esquerda e direita alternam as telas. Os parâmetros `?tela=1` até `?tela=4` abrem uma etapa diretamente; na tela 4, `&variant=A`, `B` ou `C` escolhe a visualização. Os mesmos parâmetros funcionam na versão publicada, por exemplo `https://ihc.p4cs.com.br/?tela=4&variant=B`.
 
 Na tela 3, passar o mouse sobre um marcador da trilha **Highlights detectados** mostra a miniatura, o tipo, a partida, o tempo de jogo e o timecode do lance. Nomes longos são abreviados no meio, mantendo o tempo e o timecode visíveis. O botão **Ir para o lance** abre esse item na tela 4, na visualização A.
 
@@ -141,6 +142,18 @@ A sessão formativa está pendente, conforme confirmação de Pedro em 16/10/202
 
 A sessão deve envolver uma pessoa que não participou da elaboração das telas. Um colega pode participar desta iteração formativa, sem substituir os participantes finais da Entrega 14.
 
+Em 16/10/2026 foi publicado o [guia da simulação](https://ihc.p4cs.com.br/guia), destinado às pessoas convidadas. As decisões abaixo foram tomadas por Pedro na mesma data:
+
+| Decisão | Consequência para a sessão |
+|---|---|
+| Sessões ao vivo, com um integrante acompanhando, ou assíncronas, com a pessoa sozinha | O guia funciona nos dois casos. O formulário registra o modo, porque a sessão assíncrona produz apenas relato da pessoa, sem observação do uso |
+| O guia revela só as particularidades da demonstração | Vídeos de exemplo, setas ← →, dados fictícios, três visualizações, download limitado ao CSV e ausência de persistência são informados antes do uso. O uso das setas passa a ser instrução recebida, e não descoberta espontânea. O próprio protótipo já exibe a dica das setas |
+| Público misto, de leigos a pessoas que editam vídeo | O contexto evita jargão e traz um glossário curto. O formulário pergunta a experiência com edição |
+| Papel genérico em vez de persona | As tarefas pedem que a pessoa imagine editar vídeos de futebol, sem apresentar Rafael (P01) |
+| Aviso curto de consentimento | O guia informa que a atividade é da disciplina, que a pessoa pode parar a qualquer momento e que as respostas aparecem nos documentos sem o nome. O termo formal continua previsto para a Entrega 14 |
+
+As respostas do formulário são gravadas no banco D1 `ihc-feedback`, tabela `feedback`, com data, versão do guia e respostas. Não são guardados IP nem navegador, e o nome é opcional. Os campos de texto são opcionais. São obrigatórios o perfil, o modo da sessão, o resultado de cada tarefa (conseguiu, com dificuldade, não conseguiu) e a visualização preferida. A consulta está descrita em [`site/README.md`](../site/README.md).
+
 ### 4.2 Roteiro proposto
 
 O roteiro prepara a próxima sessão. As situações não foram aplicadas e os resultados permanecem abertos.
@@ -153,6 +166,8 @@ O roteiro prepara a próxima sessão. As situações não foram aplicadas e os r
 | 4 | Incluir dois candidatos, retirar um e repetir a localização nas alternativas A, B e C | Se distingue seleção de descarte e mantém a referência da partida nos agrupamentos |
 | 5 | Fazer uma busca sem correspondência na alternativa A e recuperar a lista | Se diferencia ausência de correspondência de ausência de lances na partida |
 | 6 | Obter a seleção e explicar o que enviaria a Arnaldo ou abriria no editor externo | Se percebe que o HTML fornece só um CSV e quais arquivos, informações e pendências ainda faltam |
+
+O guia usa uma versão curta deste roteiro, com quatro tarefas: preparar a análise deixando uma gravação de fora (passo 1), acompanhar a análise (passo 2), escolher três lances conferindo partida e momento nas três visualizações (passos 3 e 4) e baixar a seleção (passo 6). O passo 5, busca sem correspondência, e a retirada de um item já incluído ficam fora do guia. Nas sessões ao vivo, o facilitador pode propô-los à parte.
 
 Na comparação, variar a ordem de apresentação entre sessões, se houver mais de uma. Registrar a ajuda do facilitador, inclusive o ensino das setas entre telas, para distinguir descoberta espontânea de instrução recebida.
 
@@ -190,3 +205,4 @@ A exploração anterior e a versão principal registram uma evolução do artefa
 | 16/10/2026 | 0.3 | Registrada a confirmação de Pedro de que o professor aceita o formato digital clicável. Encerrada essa pendência no checklist; walkthrough e revisões a partir da observação continuam pendentes. | Equipe 16, documentação assistida pelo Codex a pedido de Pedro |
 | 16/10/2026 | 0.4 | Contexto incorporado ao intervalo e à duração do corte no detalhe, na prévia e no CSV, com limites do vídeo respeitados e intervalo do lance separado. Correção por Opus a pedido de Pedro, com verificações técnicas. Registradas as decisões de manter a terminologia e tratar cada vídeo como partida; sessão formativa continua pendente. | Equipe 16, implementação assistida por Opus e documentação assistida pelo Codex a pedido de Pedro |
 | 16/10/2026 | 0.5 | Incluído o esboço original do tldraw, com imagem, fonte editável preservada e descrição de sua relação com o protótipo principal. | Equipe 16, documentação assistida pelo Codex a pedido de Pedro |
+| 16/10/2026 | 0.6 | Publicado o guia da simulação em ihc.p4cs.com.br/guia, com formulário de feedback gravado em D1. Registradas as decisões de Pedro sobre modo das sessões, informações reveladas, público, papel e consentimento, e a relação das tarefas do guia com o roteiro 4.2. Sessões continuam pendentes. | Equipe 16, implementação e documentação assistidas por Opus a pedido de Pedro |
