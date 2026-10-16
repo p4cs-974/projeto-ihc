@@ -575,7 +575,7 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 ## 4. Síntese comparativa da equipe
 
-A tabela resume os contrastes por critério. O detalhe de cada produto está nas tabelas "Pontos positivos, limitações e lições" das análises C01 a C07. As conclusões sobre C06 e C07 se baseiam em materiais promocionais: não foi possível testar os produtos nem observar estados de erro, acessibilidade ou tempo de execução. Nesses casos, a tabela registra "não observado". C02 e C04 são análises documentais; C01, C03 e C05 usam capturas próprias da equipe.
+A tabela resume os contrastes por critério. O detalhe de cada produto está nas tabelas "Pontos positivos, limitações e lições" das análises C01 a C07. As conclusões sobre C06 e C07 se baseiam em materiais promocionais: não foi possível testar os produtos nem observar estados de erro, acessibilidade ou tempo de execução. Nesses casos, a tabela registra "não observado". C02 e C04 são análises documentais; C03 e C05 usam capturas próprias da equipe. C01 usa arquivos reunidos pela equipe na análise de Giovanni, com autoria e origem das capturas não verificadas; a autoria da análise não comprova a autoria das imagens.
 
 | Critério | O que se repete | Contrastes e limites | Oportunidade para o projeto |
 |---|---|---|---|
@@ -677,3 +677,5 @@ As fontes específicas estão ligadas junto às afirmações e figuras de cada a
 ## Histórico de revisões
 
 - 14/10/2026: Revisadas evidências, legendas e limites de C01/C02; lições alinhadas a RC05/RC08/RC12 e versões declaradas como desconhecidas quando não comprovadas. Responsável: Giovanni Chahin Morassi. Hipóteses permanecem abertas; sem validação empírica ou aprovação do professor inferidas.
+
+- 14/10/2026: AC-069 da [análise de coerência das 21:44](../analises%20de%20coerencia/14-10-2026-21-44.html#AC-069) aplicado com assistência do Codex a pedido da equipe. A síntese distingue as capturas próprias de C03/C05 dos arquivos reunidos em C01, cuja procedência continua não verificada, preservando a autoria da análise.
