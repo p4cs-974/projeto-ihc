@@ -76,6 +76,64 @@
         "sampleRate": 48000,
         "channels": 2
       }
+    },
+    {
+      "id": "bayern-real-2017-1t",
+      "match": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid",
+      "matchName": "Bayern de Munique 1 x 2 Real Madrid",
+      "date": "2017-04-12",
+      "teams": [
+        "Bayern de Munique",
+        "Real Madrid"
+      ],
+      "half": 1,
+      "file": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid/1_224p.mkv",
+      "labelsFile": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid/Labels-v2.json",
+      "labelsSha256": "ca73031d7930c408dd5a67debb48b2ad5adcad77fef84c49a72f6e12a14ee117",
+      "annotationToVideoOffsetSeconds": 0,
+      "durationSeconds": 2813.003,
+      "sizeBytes": 187736200,
+      "video": {
+        "codec": "h264",
+        "width": 398,
+        "height": 224,
+        "fps": 25,
+        "pixelFormat": "yuv420p"
+      },
+      "audio": {
+        "codec": "vorbis",
+        "sampleRate": 48000,
+        "channels": 2
+      }
+    },
+    {
+      "id": "bayern-real-2017-2t",
+      "match": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid",
+      "matchName": "Bayern de Munique 1 x 2 Real Madrid",
+      "date": "2017-04-12",
+      "teams": [
+        "Bayern de Munique",
+        "Real Madrid"
+      ],
+      "half": 2,
+      "file": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid/2_224p.mkv",
+      "labelsFile": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid/Labels-v2.json",
+      "labelsSha256": "ca73031d7930c408dd5a67debb48b2ad5adcad77fef84c49a72f6e12a14ee117",
+      "annotationToVideoOffsetSeconds": 0,
+      "durationSeconds": 2781.003,
+      "sizeBytes": 174269113,
+      "video": {
+        "codec": "h264",
+        "width": 398,
+        "height": 224,
+        "fps": 25,
+        "pixelFormat": "yuv420p"
+      },
+      "audio": {
+        "codec": "vorbis",
+        "sampleRate": 48000,
+        "channels": 2
+      }
     }
   ],
   "clips": [
@@ -186,6 +244,114 @@
       "sizeBytes": 1885059,
       "sha256": "5664c8ab01067c81a317b1cb5ed7d9bf8464d4855a9a6b6c0a43be8ed8107db8",
       "posterSizeBytes": 17877
+    },
+    {
+      "id": "vidal",
+      "sourceId": "bayern-real-2017-1t",
+      "title": "Gol de Arturo Vidal",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "1 - 24:43",
+        "label": "Goal",
+        "position": "1483960",
+        "team": "home",
+        "visibility": "visible"
+      },
+      "matchTime": "24:43",
+      "cutStartSeconds": 1470,
+      "cutEndSeconds": 1498,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 1483.96,
+      "eventClipSeconds": 13.96,
+      "posterClipSeconds": 12.46,
+      "src": "media/vidal.mp4",
+      "poster": "media/vidal.jpg",
+      "verifiedAction": "Ribéry cobra a bola parada pela direita e Vidal cabeceia para o gol. Ele corre para comemorar com os companheiros.",
+      "verification": "Quadros da fonte conferidos no T3 a cada 1,5 s em torno da anotação (0,5 s no pênalti) e corte publicado reproduzido no navegador T3.",
+      "sizeBytes": 2386647,
+      "sha256": "f5d8dac4c6b6af6f35322158dfdcc85115a987c6f2865c18101c41204be35f7d",
+      "posterSizeBytes": 25508
+    },
+    {
+      "id": "vidal-penalti",
+      "sourceId": "bayern-real-2017-1t",
+      "title": "Pênalti perdido por Vidal",
+      "type": "Pênalti",
+      "annotation": {
+        "gameTime": "1 - 45:53",
+        "label": "Penalty",
+        "position": "2753000",
+        "team": "home",
+        "visibility": "visible"
+      },
+      "matchTime": "45:53",
+      "cutStartSeconds": 2739,
+      "cutEndSeconds": 2767,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 2753.0,
+      "eventClipSeconds": 14.0,
+      "posterClipSeconds": 12.5,
+      "src": "media/vidal-penalti.mp4",
+      "poster": "media/vidal-penalti.jpg",
+      "verifiedAction": "Vidal bate o pênalti, Navas cai para um lado e a bola passa por cima do gol. Vidal leva as mãos à cabeça.",
+      "verification": "Quadros da fonte conferidos no T3 a cada 1,5 s em torno da anotação (0,5 s no pênalti) e corte publicado reproduzido no navegador T3.",
+      "sizeBytes": 1722172,
+      "sha256": "ad0cf8090a5b9d8914fad595a0d224247fd40e50ca2a02ffe8e552ddfd32210c",
+      "posterSizeBytes": 29434
+    },
+    {
+      "id": "ronaldo-1",
+      "sourceId": "bayern-real-2017-2t",
+      "title": "Gol de Cristiano Ronaldo",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "2 - 01:35",
+        "label": "Goal",
+        "position": "95440",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "46:35",
+      "cutStartSeconds": 81,
+      "cutEndSeconds": 109,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 95.44,
+      "eventClipSeconds": 14.44,
+      "posterClipSeconds": 12.94,
+      "src": "media/ronaldo-1.mp4",
+      "poster": "media/ronaldo-1.jpg",
+      "verifiedAction": "Real Madrid ataca pela direita e Cristiano Ronaldo finaliza na área para empatar. O time comemora junto à placa.",
+      "verification": "Quadros da fonte conferidos no T3 a cada 1,5 s em torno da anotação (0,5 s no pênalti) e corte publicado reproduzido no navegador T3.",
+      "sizeBytes": 1832449,
+      "sha256": "c49f02b190fa90faba6c1e249398af0725835a63cd477c3da23beecd8da1f4cc",
+      "posterSizeBytes": 17221
+    },
+    {
+      "id": "ronaldo-2",
+      "sourceId": "bayern-real-2017-2t",
+      "title": "Segundo gol de Cristiano Ronaldo",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "2 - 31:03",
+        "label": "Goal",
+        "position": "1863440",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "76:03",
+      "cutStartSeconds": 1849,
+      "cutEndSeconds": 1877,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 1863.44,
+      "eventClipSeconds": 14.44,
+      "posterClipSeconds": 12.94,
+      "src": "media/ronaldo-2.mp4",
+      "poster": "media/ronaldo-2.jpg",
+      "verifiedAction": "Real Madrid avança pela esquerda e Cristiano Ronaldo finaliza na área para virar. Ele corre para a lateral e é abraçado pelos companheiros.",
+      "verification": "Quadros da fonte conferidos no T3 a cada 1,5 s em torno da anotação (0,5 s no pênalti) e corte publicado reproduzido no navegador T3.",
+      "sizeBytes": 2109983,
+      "sha256": "c183a2aa4a7076f2d6b9f84787642bb9d8944db7eff8521be121606b698a58b3",
+      "posterSizeBytes": 15687
     }
   ]
 }
