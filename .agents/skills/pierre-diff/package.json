@@ -1,0 +1,13 @@
+{
+  "name": "pierre-diff",
+  "private": true,
+  "type": "module",
+  "description": "Renderiza diffs autocontidos com @pierre/diffs e o realçador Highlights.",
+  "dependencies": {
+    "@pierre/diffs": "1.6.0",
+    "@pierre/highlights": "0.2.0"
+  },
+  "overrides": {
+    "@pierre/highlights": "0.2.0"
+  }
+}

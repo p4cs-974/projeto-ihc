@@ -67,14 +67,15 @@ Envie com `git push -u origin <branch>`.
 
 ## 6. Gerar o HTML de diffs
 
-Gere o HTML com os diffs renderizados (markdown à esquerda e à direita, palavras removidas e acrescentadas destacadas). No topo de cada commit vai o trecho literal do parecer que o motivou:
+Gere o HTML com os diffs renderizados por `@pierre/diffs` e o realçador Highlights (`preferredHighlighter: 'highlights'`). Cada arquivo de texto aparece em visão dividida, o anterior à esquerda e o novo à direita, com as palavras alteradas destacadas e a sintaxe colorida. No topo de cada commit vai o trecho literal do parecer que o motivou.
 
 ```bash
-pip install markdown   # uma vez
+npm install --prefix .agents/skills/pierre-diff   # uma vez
+pip install markdown   # uma vez, para as citações do parecer
 python3 .agents/skills/aplicar-feedback-professor/scripts/gerar_diffs.py <spec.json> <saida.html>
 ```
 
-O formato do `spec.json` e como escolher as âncoras das citações estão em [references/diff-html.md](references/diff-html.md), com um exemplo completo da Entrega 3. Informe no spec o `base` e o `fim` da rodada (o último commit, normalmente o das anotações). O script recusa gerar o HTML se algum commit desse intervalo ficar sem item. Salve o spec e o HTML fora do repositório (área temporária ou scratchpad): o HTML passa de 1 MB porque embute as imagens. Confira se nenhum commit ficou sem citação ou nota e envie o arquivo para a pessoa.
+O script chama [`.agents/skills/pierre-diff/render-diff.mjs`](../pierre-diff/render-diff.mjs). Imagens raster novas e SVGs continuam lado a lado, embutidos. Trechos iguais longos ficam recolhidos no diff. Se o realçador não puder rodar, o script grava um diff unificado em texto no lugar daquele arquivo e avisa no stderr. O formato do `spec.json` e como escolher as âncoras das citações estão em [references/diff-html.md](references/diff-html.md), com um exemplo completo da Entrega 3. Informe no spec o `base` e o `fim` da rodada (o último commit, normalmente o das anotações). O script recusa gerar o HTML se algum commit desse intervalo ficar sem item. Salve o spec e o HTML fora do repositório (área temporária ou scratchpad): o HTML pode passar de 1 MB quando embute imagens. Confira se nenhum commit ficou sem citação ou nota e envie o arquivo para a pessoa.
 
 ## 7. Fechar com a pessoa
 

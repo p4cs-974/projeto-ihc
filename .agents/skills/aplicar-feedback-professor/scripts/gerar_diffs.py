@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
-"""Gera um HTML com os diffs de uma rodada de feedback, lado a lado, em markdown renderizado.
+"""Gera um HTML com os diffs de uma rodada de feedback.
 
-Cada commit aparece com o trecho literal do parecer do professor que o motivou.
+Arquivos de texto saem em visão dividida pelo @pierre/diffs, com o realçador
+Highlights. Imagens e SVGs continuam lado a lado. Cada commit aparece com o
+trecho literal do parecer do professor que o motivou.
 
 Uso (na raiz do repositório):
     python3 .agents/skills/aplicar-feedback-professor/scripts/gerar_diffs.py spec.json saida.html
 
-Formato do spec.json: veja references/diff-html.md. Requer `pip install markdown`;
-ImageMagick (`convert`) é usado para comprimir imagens raster, se disponível.
+Formato do spec.json: veja references/diff-html.md. Requer `pip install markdown`
+para as citações e `npm install` em `.agents/skills/pierre-diff` para o diff.
+Se o realçador não puder rodar, o arquivo correspondente vira um diff unificado em texto.
 """
-import base64, difflib, html, json, re, shutil, subprocess, sys
+import base64, difflib, html, json, os, re, subprocess, sys, tempfile
+from pathlib import Path
 import markdown
 
 SPEC_PATH, OUT = sys.argv[1:3]
@@ -38,136 +42,76 @@ def git(*a, binary=False):
     return r.stdout if binary else r.stdout.decode('utf-8')
 
 
-# ---------------------------------------------------------------- blocos
-LIST_RE = re.compile(r'^(\s*)([-*+]|\d+\.)\s')
+def git_text(rev, path):
+    data = git('show', f'{rev}:{path}', binary=True)
+    if data is None:
+        return None
+    try:
+        return data.decode('utf-8')
+    except UnicodeDecodeError:
+        return None
 
 
-def split_blocks(text):
-    """Divide o markdown em blocos. Linhas de tabela viram blocos próprios."""
-    lines = text.split('\n')
-    blocks = []
-    cur = []
-    i = 0
-
-    def flush():
-        nonlocal cur
-        if cur:
-            blocks.append({'kind': 'text', 'src': '\n'.join(cur)})
-            cur = []
-
-    while i < len(lines):
-        ln = lines[i]
-        if ln.strip() == '':
-            flush(); i += 1; continue
-        if ln.lstrip().startswith('|'):
-            flush()
-            tbl = []
-            while i < len(lines) and lines[i].lstrip().startswith('|'):
-                tbl.append(lines[i]); i += 1
-            if len(tbl) >= 2 and re.match(r'^\s*\|[\s:|-]+\|\s*$', tbl[1]):
-                header = tbl[0] + '\n' + tbl[1]
-                # tabela só com cabeçalho: uma linha vazia mantém o cabeçalho visível no diff
-                for r in tbl[2:] or ['']:
-                    blocks.append({'kind': 'row', 'src': r, 'header': header})
-            else:
-                blocks.append({'kind': 'text', 'src': '\n'.join(tbl)})
-            continue
-        if ln.startswith('#'):
-            flush(); blocks.append({'kind': 'text', 'src': ln}); i += 1; continue
-        m = LIST_RE.match(ln)
-        if m and len(m.group(1)) == 0 and cur:
-            flush()
-        cur.append(ln); i += 1
-    flush()
-    return blocks
+PIERRE_JOBS = []
+PIERRE_HELPER = Path(__file__).resolve().parents[2] / 'pierre-diff' / 'render-diff.mjs'
 
 
-# ---------------------------------------------------------------- diff de palavras
-TOK = re.compile(r'!?\[[^\]\n]*\]\([^)\n]*\)|`[^`\n]*`|\*\*[^*\n]+\*\*|\s+|[^\s]+')
-NOWRAP = re.compile(r'^(\||#+|>|[-*+]|\d+\.|\\-)$')
+def queue_pierre(before, after, path):
+    jid = f'p{len(PIERRE_JOBS)}'
+    PIERRE_JOBS.append({'id': jid, 'name': path, 'before': before, 'after': after, 'header': False})
+    return f'<div data-pierre="{jid}"></div>'
 
 
-def tokens(s):
-    return TOK.findall(s)
+def plain_diff_html(job):
+    before = job['before'] or ''
+    after = job['after'] or ''
+    lines = difflib.unified_diff(before.splitlines(), after.splitlines(),
+                                 fromfile=job['name'], tofile=job['name'], lineterm='')
+    body = html.escape('\n'.join(lines) or '(sem diferença de linhas)')
+    return f'<pre class="fallback">{body}</pre>'
 
 
-def mark(toks, spans, tag):
-    out = []
-    for i, t in enumerate(toks):
-        on = spans[i]
-        if on and not t.isspace() and not NOWRAP.match(t):
-            out.append(f'<{tag}>{t}</{tag}>')
-        else:
-            out.append(t)
-    return ''.join(out)
+def line_changes(before, after):
+    sm = difflib.SequenceMatcher(None, (before or '').splitlines(), (after or '').splitlines(), autojunk=False)
+    return sum(max(i2 - i1, j2 - j1) for op, i1, i2, j1, j2 in sm.get_opcodes() if op != 'equal')
 
 
-def word_diff(a, b):
-    ta, tb = tokens(a), tokens(b)
-    sm = difflib.SequenceMatcher(None, ta, tb, autojunk=False)
-    sa = [False] * len(ta)
-    sb = [False] * len(tb)
-    for op, i1, i2, j1, j2 in sm.get_opcodes():
-        if op in ('replace', 'delete'):
-            for k in range(i1, i2): sa[k] = True
-        if op in ('replace', 'insert'):
-            for k in range(j1, j2): sb[k] = True
-    return mark(ta, sa, 'del'), mark(tb, sb, 'ins')
+def pierre_html_by_id():
+    if not PIERRE_JOBS:
+        return {}
+    if not PIERRE_HELPER.is_file():
+        print(f'Helper ausente: {PIERRE_HELPER}', file=sys.stderr)
+        return {}
+    fd, spec = tempfile.mkstemp(suffix='.json')
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8') as fh:
+            json.dump({'files': PIERRE_JOBS}, fh)
+        run = subprocess.run(['node', str(PIERRE_HELPER), '--json', spec], capture_output=True, text=True)
+    finally:
+        os.remove(spec)
+    if run.returncode != 0:
+        sys.stderr.write(run.stderr or run.stdout or 'Falha ao renderizar diffs com Pierre.\n')
+        return {}
+    if run.stderr.strip():
+        sys.stderr.write(run.stderr if run.stderr.endswith('\n') else run.stderr + '\n')
+    try:
+        data = json.loads(run.stdout)
+    except json.JSONDecodeError:
+        print('Resposta inválida do helper de diffs.', file=sys.stderr)
+        return {}
+    return {item['id']: item.get('html', '') for item in data.get('files', []) if item.get('html')}
 
 
-# ---------------------------------------------------------------- alinhamento
-def ratio(a, b):
-    return difflib.SequenceMatcher(None, a, b, autojunk=False).ratio()
+def apply_pierre(page):
+    rendered = pierre_html_by_id()
+    for job in PIERRE_JOBS:
+        frag = rendered.get(job['id']) or plain_diff_html(job)
+        token = f'<div data-pierre="{job["id"]}"></div>'
+        page = page.replace(token, f'<div class="pierre">{frag}</div>', 1)
+    return page
 
 
-def align_group(old, new):
-    """Alinhamento monótono por similaridade (DP)."""
-    n, m = len(old), len(new)
-    if n * m > 4000:
-        pairs = [(o, None) for o in old] + [(None, x) for x in new]
-        return pairs
-    sim = [[0.0] * m for _ in range(n)]
-    for i in range(n):
-        for j in range(m):
-            if old[i]['kind'] == new[j]['kind']:
-                r = ratio(old[i]['src'], new[j]['src'])
-                sim[i][j] = r if r >= 0.3 else 0.0
-    dp = [[0.0] * (m + 1) for _ in range(n + 1)]
-    for i in range(n - 1, -1, -1):
-        for j in range(m - 1, -1, -1):
-            best = max(dp[i + 1][j], dp[i][j + 1])
-            if sim[i][j] > 0:
-                best = max(best, sim[i][j] + dp[i + 1][j + 1])
-            dp[i][j] = best
-    pairs = []
-    i = j = 0
-    while i < n or j < m:
-        if i < n and j < m and sim[i][j] > 0 and abs(dp[i][j] - (sim[i][j] + dp[i + 1][j + 1])) < 1e-9:
-            pairs.append((old[i], new[j])); i += 1; j += 1
-        elif i < n and (j >= m or dp[i][j] == dp[i + 1][j]):
-            pairs.append((old[i], None)); i += 1
-        else:
-            pairs.append((None, new[j])); j += 1
-    return pairs
-
-
-def diff_pairs(old_text, new_text):
-    ob, nb = split_blocks(old_text), split_blocks(new_text)
-    sm = difflib.SequenceMatcher(None, [b['src'] for b in ob], [b['src'] for b in nb], autojunk=False)
-    pairs = []
-    for op, i1, i2, j1, j2 in sm.get_opcodes():
-        if op == 'equal':
-            for k in range(i2 - i1):
-                o, x = ob[i1 + k], nb[j1 + k]
-                # mesma linha sob outro cabeçalho: a tabela mudou
-                pairs.append(('eq' if o.get('header') == x.get('header') else 'ch', o, x))
-        else:
-            for o, x in align_group(ob[i1:i2], nb[j1:j2]):
-                pairs.append(('ch', o, x))
-    return pairs
-
-
-# ---------------------------------------------------------------- renderização
+# ---------------------------------------------------------------- citações e imagens
 MD = markdown.Markdown(extensions=['tables', 'sane_lists'])
 
 
@@ -176,163 +120,7 @@ def md(src):
     return MD.convert(src)
 
 
-IMG_CACHE = {}
 IMG_IDS = {}
-
-
-def embed_images(h, rev, doc_path):
-    base_dir = doc_path.rsplit('/', 1)[0] if '/' in doc_path else ''
-
-    def repl(m):
-        src = html.unescape(m.group(1))
-        if src.startswith('http') or src.startswith('data:'):
-            return m.group(0)
-        parts = (base_dir + '/' + src).split('/') if base_dir else src.split('/')
-        norm = []
-        for p in parts:
-            if p == '..':
-                norm and norm.pop()
-            elif p and p != '.':
-                norm.append(p)
-        path = '/'.join(norm).replace('%20', ' ')
-        key = (rev, path)
-        if key not in IMG_CACHE:
-            data = git('show', f'{rev}:{path}', binary=True)
-            if data is None:
-                IMG_CACHE[key] = None
-            else:
-                if path.lower().endswith('.svg'):
-                    IMG_CACHE[key] = 'data:image/svg+xml;base64,' + base64.b64encode(data).decode()
-                elif shutil.which('convert'):
-                    r = subprocess.run(['convert', '-', '-resize', '900x>', '-quality', '72', 'jpg:-'],
-                                       input=data, capture_output=True)
-                    IMG_CACHE[key] = 'data:image/jpeg;base64,' + base64.b64encode(r.stdout).decode()
-                else:
-                    ext = path.rsplit('.', 1)[-1].lower().replace('jpg', 'jpeg')
-                    IMG_CACHE[key] = f'data:image/{ext};base64,' + base64.b64encode(data).decode()
-        uri = IMG_CACHE[key]
-        if uri is None:
-            return f'src="" data-missing="{html.escape(path)}"'
-        if uri not in IMG_IDS:
-            IMG_IDS[uri] = f'i{len(IMG_IDS)}'
-        return f'data-img="{IMG_IDS[uri]}" loading="lazy"'
-    h = re.sub(r'src="([^"]+)"', repl, h)
-    h = re.sub(r'<a href="(http[^"]+)"', r'<a target="_blank" rel="noopener" href="\1"', h)
-    return h
-
-
-def render_cell(blocks_src, rev, path):
-    if not blocks_src:
-        return ''
-    h = md(blocks_src)
-    # Python-Markdown acrescenta uma linha vazia a tabelas só com cabeçalho
-    h = re.sub(r'\s*<tbody>\s*<tr>(?:\s*<td></td>)+\s*</tr>\s*</tbody>', '', h)
-    return embed_images(h, rev, path)
-
-
-def build_rows(pairs, old_rev, new_rev, path, ctx=1):
-    n = len(pairs)
-    show = [False] * n
-    for i, (k, _, _) in enumerate(pairs):
-        if k == 'ch':
-            for d in range(-ctx, ctx + 1):
-                if 0 <= i + d < n:
-                    show[i + d] = True
-    out = []
-    i = 0
-    while i < n:
-        if not show[i]:
-            j = i
-            while j < n and not show[j]:
-                j += 1
-            hidden = pairs[i:j]
-            # linhas de tabela ocultas: agrupa com o cabeçalho
-            segs = []  # textos e [cabeçalho, linhas] de tabelas
-            cur = None  # tabela em andamento
-            for _, _, b in hidden:
-                if b['kind'] == 'row':
-                    if cur is None or cur[0] != b['header']:
-                        cur = [b['header'], []]; segs.append(cur)
-                    if b['src']:
-                        cur[1].append(b['src'])
-                else:
-                    cur = None
-                    segs.append(b['src'])
-            segs = [sg if isinstance(sg, str) else '\n'.join([sg[0]] + sg[1]) for sg in segs]
-            inner = render_cell('\n\n'.join(segs), new_rev, path)
-            label = f'{j - i} bloco{"s" if j - i > 1 else ""} sem mudança'
-            out.append(f'<details class="fold"><summary>⋯ {label}</summary><div class="md same">{inner}</div></details>')
-            i = j
-            continue
-        k, o, x = pairs[i]
-        # agrupa linhas de tabela consecutivas com os mesmos cabeçalhos (antigo e novo)
-        if (o or x)['kind'] == 'row':
-            j = i
-            group = []
-            ho = hn = None
-            while j < n and show[j]:
-                kk, oo, xx = pairs[j]
-                if (oo or xx)['kind'] != 'row':
-                    break
-                if (oo and ho not in (None, oo['header'])) or (xx and hn not in (None, xx['header'])):
-                    break
-                ho = oo['header'] if oo else ho
-                hn = xx['header'] if xx else hn
-                group.append(pairs[j]); j += 1
-            left_rows, right_rows = [], []
-            changed = False
-            for kk, oo, xx in group:
-                if kk == 'eq':
-                    left_rows.append(oo['src']); right_rows.append(xx['src'])
-                else:
-                    changed = True
-                    if oo and xx:
-                        a, b = word_diff(oo['src'], xx['src'])
-                        left_rows.append(a); right_rows.append(b)
-                    elif oo:
-                        left_rows.append(mark_whole_row(oo['src'], 'del'))
-                    else:
-                        right_rows.append(mark_whole_row(xx['src'], 'ins'))
-            hl, hr = ho, hn
-            if ho and hn and ho != hn:
-                hl, hr = header_diff(ho, hn)
-            has_old = any(oo for _, oo, _ in group)
-            has_new = any(xx for _, _, xx in group)
-            L = render_table(hl, left_rows, old_rev, path) if has_old else ''
-            R = render_table(hr, right_rows, new_rev, path) if has_new else ''
-            out.append(row_html(L, R, 'tbl' + (' mod' if changed else ' ctx')))
-            i = j
-            continue
-        if k == 'eq':
-            h = render_cell(o['src'], new_rev, path)
-            out.append(f'<div class="r ctx"><div class="md same full">{h}</div></div>')
-        elif o and x:
-            a, b = word_diff(o['src'], x['src'])
-            out.append(row_html(render_cell(a, old_rev, path), render_cell(b, new_rev, path), 'mod'))
-        elif o:
-            out.append(row_html(render_cell(o['src'], old_rev, path), '', 'del'))
-        else:
-            out.append(row_html('', render_cell(x['src'], new_rev, path), 'add'))
-        i += 1
-    return '\n'.join(out)
-
-
-def header_diff(old, new):
-    """Destaca só a linha de títulos; a linha de separadores (|---|) fica intacta."""
-    (ol, osep), (nl, nsep) = old.split('\n'), new.split('\n')
-    a, b = word_diff(ol, nl)
-    return a + '\n' + osep, b + '\n' + nsep
-
-
-def render_table(hdr, rows, rev, path):
-    return render_cell('\n'.join([hdr] + [r for r in rows if r]), rev, path)
-
-
-def mark_whole_row(src, tag):
-    if not src:
-        return src
-    cells = src.strip().strip('|').split('|')
-    return '| ' + ' | '.join(f'<{tag}>{c.strip()}</{tag}>' if c.strip() else '' for c in cells) + ' |'
 
 
 def row_html(L, R, cls):
@@ -355,14 +143,17 @@ def changed_files(a, b):
 
 def file_section(a, b, st, path):
     title = html.escape(path)
-    if path.endswith('.md'):
-        old = git('show', f'{a}:{path}') or '' if st != 'A' else ''
-        new = git('show', f'{b}:{path}') or '' if st != 'D' else ''
-        pairs = diff_pairs(old, new)
-        nch = sum(1 for p in pairs if p[0] == 'ch')
-        body = build_rows(pairs, a, b, path)
+    if not re.search(r'\.(png|jpe?g|gif|webp|svg)$', path, re.I):
+        old = git_text(a, path) if st != 'A' else ''
+        new = git_text(b, path) if st != 'D' else ''
+        if old is None or new is None:
+            return f'<section class="file"><header><span class="fname">{title}</span><span class="badge">{st}</span></header></section>'
+        before = None if st == 'A' else old
+        after = None if st == 'D' else new
+        nch = line_changes(old, new)
+        body = queue_pierre(before, after, path)
         return (f'<section class="file"><header><span class="fname">{title}</span>'
-                f'<span class="badge">{nch} bloco{"s" if nch != 1 else ""} alterado{"s" if nch != 1 else ""}</span></header>'
+                f'<span class="badge">{nch} linha{"s" if nch != 1 else ""} alterada{"s" if nch != 1 else ""}</span></header>'
                 f'<div class="cols"><div>Antes</div><div>Depois</div></div>{body}</section>')
     if re.search(r'\.(png|jpe?g|gif)$', path, re.I) and st == 'A':
         data = git('show', f'{b}:{path}', binary=True)
@@ -520,11 +311,8 @@ nav .k-a .lbl{background:#e8ddff;color:#5b2fb0} nav .k-m .lbl{background:#d9f2e3
 nav code{display:block;font-size:11px;color:var(--mut);margin-top:2px}
 nav .ttl{display:inline}
 main{padding:20px 24px 80px;min-width:0}
-.tools{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 10px;display:flex;gap:8px;align-items:center;border-bottom:1px solid var(--line);margin-bottom:12px}
-.tools button{font:inherit;font-size:13px;padding:5px 10px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:8px;cursor:pointer}
-.tools button[aria-pressed=true]{border-color:var(--acc);color:var(--acc)}
-.tools .leg{font-size:12px;color:var(--mut);margin-left:auto}
-.tools .leg del,.tools .leg ins{padding:0 4px}
+.tools{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 10px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.tools .leg{font-size:12px;color:var(--mut)}
 article{margin:0 0 48px}
 article h2{font-size:19px;margin:8px 0 2px}
 article h2 .lbl{font-size:11px;vertical-align:middle;padding:2px 7px;border-radius:999px;background:var(--code);color:var(--mut);text-transform:uppercase}
@@ -566,22 +354,21 @@ details.fold .md{padding:6px 14px;opacity:.75}
 .why blockquote.prof{margin:0 0 6px;padding:4px 14px;border-left:3px solid var(--acc);background:var(--code);border-radius:0 8px 8px 0;font-size:14px}
 .why .note{font-size:13px;color:var(--mut);margin:8px 0 2px}
 .why table{font-size:12.5px}.why td,.why th{max-width:520px}
-body.only .r.ctx,body.only details.fold{display:none}
+.pierre{min-width:0}
+.pierre diffs-container{display:block}
+.fallback{margin:0;padding:12px 14px;overflow:auto;font:12.5px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;background:var(--code);color:var(--fg)}
 @media (max-width:900px){.wrap{grid-template-columns:1fr}nav{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}
 main{padding:12px 16px}}
 """
 
 JS = r"""
 document.querySelectorAll('img[data-img]').forEach(i=>{i.src=IM[i.dataset.img]});
-const b=document.getElementById('only');
-b.onclick=()=>{const on=document.body.classList.toggle('only');b.setAttribute('aria-pressed',on)};
 """
 
-page = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+page = apply_pierre(f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(TITLE)}</title><style>{CSS}</style></head><body>
-<div class="wrap"><nav><h1>{html.escape(TITLE)}</h1><p>Markdown renderizado, antes × depois. {html.escape(stat)}</p>{nav_html}</nav>
-<main><div class="tools"><button id="only" aria-pressed="false">Só mudanças</button>
-<span class="leg"><del>removido</del> <ins>acrescentado</ins> · blocos esmaecidos são contexto</span></div>
-{sec_html}</main></div><script>const IM={json.dumps({v: k for k, v in IMG_IDS.items()})};{JS}</script></body></html>"""
+<div class="wrap"><nav><h1>{html.escape(TITLE)}</h1><p>Diff com Highlights, antes × depois. {html.escape(stat)}</p>{nav_html}</nav>
+<main><div class="tools"><span class="leg">À esquerda o texto anterior, à direita o novo. Palavras alteradas ficam destacadas. Trechos iguais longos ficam recolhidos.</span></div>
+{sec_html}</main></div><script>const IM={json.dumps({v: k for k, v in IMG_IDS.items()})};{JS}</script></body></html>""")
 open(OUT, 'w').write(page)
 print(OUT, len(page) // 1024, 'KB')
