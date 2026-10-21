@@ -35,3 +35,16 @@ npx wrangler d1 execute ihc-feedback --remote --json \
 ```
 
 Para testar localmente, rode `npx wrangler d1 migrations apply ihc-feedback --local` e depois `npx wrangler dev`.
+
+## Preview de uma branch
+
+O bloco `previews` usa o D1 `ihc-feedback-preview`, separado do banco de produção. Os previews compartilham esse banco de teste. Os assets vêm do build da branch, sem publicar no domínio de produção.
+
+Com Wrangler 4.135.0 ou mais recente, execute em `site/`:
+
+```sh
+npx wrangler d1 migrations apply ihc-feedback --remote --preview
+npx wrangler preview --name real-soccernet-clips
+```
+
+O comando de preview executa `build.sh` e retorna as URLs da branch e da implantação. Use um nome diferente para outra branch. A publicação de preview é manual; não há workflow de GitHub Actions neste repositório.
