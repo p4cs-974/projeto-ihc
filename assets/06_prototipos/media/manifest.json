@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "dataset": "SoccerNet-v2",
+  "discovery": {
+    "t3ProjectId": "5d2d166a-c2bb-4b54-980a-eed034c8bce1",
+    "projectRoot": "/home/pedro/tcc",
+    "datasetRootRelativeToProject": "benchmark/downloads"
+  },
+  "timebase": "annotation.position / 1000 + source.annotationToVideoOffsetSeconds gives seconds within the half video. gameTime is half-relative, matchTime adds 45 minutes for half 2. eventClipSeconds subtracts cutStartSeconds. The broadcast overlay is about one second behind annotation gameTime; no extra seek offset is applied.",
+  "encoding": {
+    "videoCodec": "libx264",
+    "crf": 23,
+    "preset": "slow",
+    "pixelFormat": "yuv420p",
+    "keyframeInterval": 50,
+    "audioCodec": "aac",
+    "audioBitrate": "64k",
+    "movflags": "+faststart",
+    "resize": false
+  },
+  "sources": [
+    {
+      "id": "clasico-2015-1t",
+      "match": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona",
+      "matchName": "Real Madrid 0 x 4 Barcelona",
+      "date": "2015-11-21",
+      "teams": [
+        "Real Madrid",
+        "Barcelona"
+      ],
+      "half": 1,
+      "file": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona/1_224p.mkv",
+      "labelsFile": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona/Labels-v2.json",
+      "labelsSha256": "7816351997dc12ba965d3563362a44aa1cbfc3ccddad10d2485ee0f6475bc346",
+      "annotationToVideoOffsetSeconds": 0,
+      "durationSeconds": 2700.003,
+      "sizeBytes": 190470781,
+      "video": {
+        "codec": "h264",
+        "width": 398,
+        "height": 224,
+        "fps": 25,
+        "pixelFormat": "yuv420p"
+      },
+      "audio": {
+        "codec": "vorbis",
+        "sampleRate": 48000,
+        "channels": 2
+      }
+    },
+    {
+      "id": "clasico-2015-2t",
+      "match": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona",
+      "matchName": "Real Madrid 0 x 4 Barcelona",
+      "date": "2015-11-21",
+      "teams": [
+        "Real Madrid",
+        "Barcelona"
+      ],
+      "half": 2,
+      "file": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona/2_224p.mkv",
+      "labelsFile": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona/Labels-v2.json",
+      "labelsSha256": "7816351997dc12ba965d3563362a44aa1cbfc3ccddad10d2485ee0f6475bc346",
+      "annotationToVideoOffsetSeconds": 0,
+      "durationSeconds": 2849.003,
+      "sizeBytes": 204988194,
+      "video": {
+        "codec": "h264",
+        "width": 398,
+        "height": 224,
+        "fps": 25,
+        "pixelFormat": "yuv420p"
+      },
+      "audio": {
+        "codec": "vorbis",
+        "sampleRate": 48000,
+        "channels": 2
+      }
+    }
+  ],
+  "clips": [
+    {
+      "id": "suarez",
+      "sourceId": "clasico-2015-1t",
+      "title": "Gol de Luis Suárez",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "1 - 10:04",
+        "label": "Goal",
+        "position": "604240",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "10:04",
+      "cutStartSeconds": 590,
+      "cutEndSeconds": 618,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 604.24,
+      "eventClipSeconds": 14.24,
+      "posterClipSeconds": 12.74,
+      "src": "media/suarez.mp4",
+      "poster": "media/suarez.jpg",
+      "verifiedAction": "Barcelona avança pelo meio, Suárez recebe na área e finaliza cruzado. A bola entra e ele comemora.",
+      "verification": "Inspecionado no navegador T3, reprodução completa e quadros da construção, finalização e desfecho.",
+      "sizeBytes": 2051038,
+      "sha256": "619ec7fa533a5b96ad9d83dba6c6e72ccab0f4d317e857626a35554c0df73f26",
+      "posterSizeBytes": 17810
+    },
+    {
+      "id": "neymar",
+      "sourceId": "clasico-2015-1t",
+      "title": "Gol de Neymar",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "1 - 38:35",
+        "label": "Goal",
+        "position": "2315370",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "38:35",
+      "cutStartSeconds": 2302,
+      "cutEndSeconds": 2330,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 2315.37,
+      "eventClipSeconds": 13.37,
+      "posterClipSeconds": 11.87,
+      "src": "media/neymar.mp4",
+      "poster": "media/neymar.jpg",
+      "verifiedAction": "Barcelona recupera a bola, avança e encontra Neymar à esquerda da área. Ele finaliza, marca e comemora.",
+      "verification": "Inspecionado no navegador T3, reprodução completa e quadros da construção, finalização e desfecho.",
+      "sizeBytes": 2118067,
+      "sha256": "7a2c5bc0610623357ed36ba6e5eb92427f39e336135a16078f987bb8f65ad8a5",
+      "posterSizeBytes": 20985
+    },
+    {
+      "id": "bravo",
+      "sourceId": "clasico-2015-2t",
+      "title": "Defesa do Barcelona",
+      "type": "Defesa",
+      "annotation": {
+        "gameTime": "2 - 02:55",
+        "label": "Shots on target",
+        "position": "175605",
+        "team": "home",
+        "visibility": "visible"
+      },
+      "matchTime": "47:55",
+      "cutStartSeconds": 163,
+      "cutEndSeconds": 190,
+      "durationSeconds": 27,
+      "eventSourceSeconds": 175.605,
+      "eventClipSeconds": 12.605,
+      "posterClipSeconds": 11.105,
+      "src": "media/bravo.mp4",
+      "poster": "media/bravo.jpg",
+      "verifiedAction": "Real Madrid avança e finaliza de fora da área. O goleiro do Barcelona espalma a bola.",
+      "verification": "Inspecionado no navegador T3, reprodução completa e quadros da construção, finalização e desfecho.",
+      "sizeBytes": 2128284,
+      "sha256": "db04a5a7f84e764d7289acb427fe83f2a6d2c37670f71efb4ba83e2bdfdbe791",
+      "posterSizeBytes": 17341
+    },
+    {
+      "id": "iniesta",
+      "sourceId": "clasico-2015-2t",
+      "title": "Gol de Andrés Iniesta",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "2 - 07:17",
+        "label": "Goal",
+        "position": "437840",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "52:17",
+      "cutStartSeconds": 423,
+      "cutEndSeconds": 451,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 437.84,
+      "eventClipSeconds": 14.84,
+      "posterClipSeconds": 13.34,
+      "src": "media/iniesta.mp4",
+      "poster": "media/iniesta.jpg",
+      "verifiedAction": "Barcelona constrói pela esquerda, Iniesta combina na entrada da área e marca. O corte inclui a comemoração.",
+      "verification": "Inspecionado no navegador T3, reprodução completa e quadros da construção, finalização e desfecho.",
+      "sizeBytes": 1885059,
+      "sha256": "5664c8ab01067c81a317b1cb5ed7d9bf8464d4855a9a6b6c0a43be8ed8107db8",
+      "posterSizeBytes": 17877
+    }
+  ]
+}
