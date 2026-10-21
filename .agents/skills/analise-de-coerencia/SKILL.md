@@ -33,6 +33,8 @@ Faça uma auditoria documental somente de leitura. Entregue o diagnóstico em HT
 
 6. **Escrever cada ticket.** Inclua gravidade, confiança na conclusão, status de acompanhamento, evidências localizáveis, efeito sobre a coerência e mudança sugerida no documento que fizer mais sentido para a proposta do projeto. Use os critérios abaixo. Para cada recomendação analisada, verifique se é possível relacioná-la a alguma seção, atividade, hipótese ou decisão de um documento de base. Quando a relação não existir, apresente a recomendação como exploratória e sujeita a validação.
 
+   Quando a mudança sugerida for uma troca concreta de texto, mostre o trecho original e o trecho proposto com o helper [pierre-diff](../pierre-diff/render-diff.mjs), logo depois da prosa da mudança. A prosa continua obrigatória. O comando e o fallback estão na seção "Diff da mudança sugerida".
+
 7. **Gerar o HTML.** Crie o relatório em `analises de coerencia/DD-MM-YYYY-HH-MM.html`, usando a data, hora e fuso locais. Use hífen entre hora e minuto no nome do arquivo; reserve `HH:MM` para o texto do relatório. Isso evita caracteres problemáticos em links locais e visualizadores. Se o nome já existir, acrescente `-02`, `-03` e assim por diante, sem sobrescrever relatórios. Coloque no começo do documento a assinatura `modelo (nível de raciocínio) no harness`, com os dados reais da execução. Quando algum dado não estiver disponível, escreva `não informado` em seu lugar.
 
 8. **Verificar.** Valide a estrutura do HTML, os tickets e a preservação dos arquivos analisados. Quando houver navegador disponível e permitido, abra o arquivo pelo mecanismo de preview que será entregue ao usuário e confira conteúdo visível e leitura em uma largura estreita. Um parser HTML não comprova renderização nem funcionamento do link. Se a verificação visual estiver indisponível ou bloqueada, registre essa limitação e não declare que o preview foi verificado. Confira a continuidade e a unicidade dos IDs. A execução termina quando o relatório existe, todas as fontes do escopo foram contabilizadas e cada conclusão está sustentada ou marcada para revisão.
@@ -69,7 +71,7 @@ O acompanhamento persiste no arquivo versionado. Uma atualização de status mod
 
 ## Conteúdo do relatório
 
-O HTML deve ser autocontido, sem scripts ou folhas de estilo externas. Use HTML semântico, CSS inline, tema claro e escuro conforme o sistema, contraste legível e tabelas responsivas.
+O HTML deve ser autocontido, sem scripts ou folhas de estilo externas. Use HTML semântico, CSS inline, tema claro e escuro conforme o sistema, contraste legível e tabelas responsivas. O fragmento do diff Pierre entra no próprio arquivo: ele traz o estilo dentro de um shadow root declarativo e não pede script nem arquivo externo.
 
 Inclua no mínimo:
 
@@ -78,10 +80,40 @@ Inclua no mínimo:
 - conclusão geral;
 - cobertura com caminhos relativos dos documentos lidos e materiais inspecionados, materiais inacessíveis e exclusões justificadas por categoria; materiais inacessíveis são limitações, não fontes verificadas;
 - pontos que já estão alinhados;
-- tickets `AC-###`, organizados para leitura rápida;
+- tickets `AC-###`, organizados para leitura rápida, com o diff Pierre na mudança sugerida quando houver trecho original e trecho proposto;
 - limitações da análise e fontes externas usadas.
 
 Use nomes relativos ao repositório e seções para localizar evidências. Não exponha caminhos absolutos da máquina. Recomendações devem dizer qual documento mudaria e o que mudaria, sem editar o documento.
+
+## Diff da mudança sugerida
+
+A comparação entre o que o documento diz e o que se propõe no lugar fica no diff da mudança sugerida. Use o helper compartilhado, que renderiza `@pierre/diffs` com o realçador Highlights (`preferredHighlighter: 'highlights'`), em visão dividida, com tema claro e escuro conforme o sistema.
+
+Na primeira vez, ou quando `node_modules` não existir em `.agents/skills/pierre-diff`:
+
+```bash
+npm install --prefix .agents/skills/pierre-diff
+```
+
+Grave o trecho original e o proposto em arquivos temporários e peça só o fragmento:
+
+```bash
+node .agents/skills/pierre-diff/render-diff.mjs \
+  --before /tmp/antes.md --after /tmp/depois.md \
+  --name docs/03_personas_contexto_jornada.md \
+  --fragment
+```
+
+`--name` é o caminho do documento no repositório, para a linguagem do realce. Cole a saída no ticket, dentro da mudança sugerida. O elemento `diffs-container` já inclui o estilo.
+
+Se o ambiente não tiver WebAssembly, o helper usa Shiki (`shiki-js`). Se o realce falhar, a saída ainda é HTML, num `<pre>` com o diff unificado. Se `node` ou as dependências não estiverem disponíveis, inclua um bloco markdown com o mesmo par:
+
+```diff
+- trecho original
++ trecho proposto
+```
+
+e registre essa limitação no relatório. Uma sugestão que não tenha os dois textos (por exemplo, só uma instrução de onde incluir um dado que ainda não existe) permanece em prosa.
 
 ## Revisão de um relatório existente
 

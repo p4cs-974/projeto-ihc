@@ -5,7 +5,14 @@
 - uma aba "Total", com o diff de todos os commits da rodada (de `base` até `fim`) e um índice "qual comentário levou a cada commit";
 - uma seção por commit, com o trecho literal do parecer que o motivou e o diff renderizado de cada arquivo alterado.
 
-Nos arquivos `.md`, o diff é feito por blocos: parágrafos, itens de lista e linhas de tabela. Cada lado da tabela usa o próprio cabeçalho, e uma mudança só nos títulos das colunas conta como mudança e aparece em "Só mudanças". Dentro de cada bloco, palavras removidas e acrescentadas aparecem destacadas, e o markdown é renderizado nos dois lados. Imagens novas e SVGs alterados aparecem lado a lado. Há um botão "Só mudanças" que esconde o contexto.
+Arquivos de texto (markdown, código e o restante que o git entrega em UTF-8) são renderizados por `.agents/skills/pierre-diff/render-diff.mjs`. O helper usa `@pierre/diffs` com `preferredHighlighter: 'highlights'`, visão dividida e os temas `pierre-light` e `pierre-dark` conforme o sistema. As palavras alteradas ficam destacadas e a sintaxe sai colorida pelo Highlights. Trechos iguais longos ficam recolhidos: o separador informa quantas linhas ficaram de fora. O HTML é estático, então esse separador não expande ao clique. Imagens raster novas e SVGs alterados continuam lado a lado, embutidos. Se o `node` ou o realçador falhar, o arquivo correspondente aparece como diff unificado em texto e o script avisa no stderr.
+
+Na primeira vez:
+
+```bash
+npm install --prefix .agents/skills/pierre-diff
+pip install markdown
+```
 
 ## Formato do spec.json
 
@@ -51,6 +58,7 @@ Exemplo completo, que reproduz o HTML da Entrega 3 (`538c3dd..25fc482`, 9 itens)
 
 Abra o HTML e confira:
 
+- se o diff de texto mostra o realce (títulos, código ou palavras alteradas com cor) e os lados antes e depois;
 - se nenhuma imagem quebrou;
 - se cada commit tem citação ou nota;
 - se o console do navegador está sem erros.
