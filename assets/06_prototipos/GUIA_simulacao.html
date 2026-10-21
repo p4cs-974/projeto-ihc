@@ -161,8 +161,8 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
     <dl class="gloss">
       <div><dt>Highlight ou lance</dt><dd>Um momento da partida que merece entrar num vídeo de melhores momentos.</dd></div>
       <div><dt>Corte</dt><dd>O trecho recortado da gravação com aquele lance.</dd></div>
-      <div><dt>Timecode</dt><dd>A posição dentro do arquivo de vídeo, como <span class="mono">1:12:30</span>. Não é o mesmo que o minuto do jogo.</dd></div>
-      <div><dt>Contexto</dt><dd>Alguns segundos antes e depois do lance, incluídos no corte para ele não começar seco.</dd></div>
+      <div><dt>Tempo no arquivo</dt><dd>A posição dentro do arquivo de vídeo de um tempo, como <span class="mono">2:55</span> no arquivo do 2º tempo. Não é o mesmo que o relógio do jogo, que nesse ponto marca <span class="mono">47:55</span>.</dd></div>
+      <div><dt>Anotação</dt><dd>O instante do lance marcado à mão por pessoas no conjunto de dados SoccerNet. Cada corte tem cerca de 14 s antes e 14 s depois desse instante.</dd></div>
     </dl>
   </section>
 
@@ -183,11 +183,12 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
     <p class="sub">O protótipo é uma demonstração e tem algumas diferenças de um sistema de verdade. Estas são as que você precisa saber.</p>
     <ul class="tips">
       <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><p><b>Use um computador com mouse e teclado.</b><span class="meta">Abra o protótipo numa janela grande. No celular ele não funciona direito.</span></p></li>
-      <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></span><p><b>Não precisa ter vídeos.</b><span class="meta">Na primeira tela, clique em “ou use 8 vídeos de exemplo”. Se escolher arquivos seus, nada é enviado: o protótipo só lê os nomes.</span></p></li>
-      <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8L4 8.8h6.1z"/></svg></span><p><b>Tudo é inventado.</b><span class="meta">Partidas, times, lances e tempos são fictícios. As prévias são animações de um campo desenhado, sem som e sem botão de pausa.</span></p></li>
+      <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></span><p><b>Não precisa ter vídeos.</b><span class="meta">Na primeira tela, clique em “ou use os 2 tempos de exemplo”. O envio de arquivos seus não funciona nesta demonstração, e o protótipo avisa isso se você tentar.</span></p></li>
+      <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8L4 8.8h6.1z"/></svg></span><p><b>Os vídeos são reais, a análise é simulada.</b><span class="meta">Os exemplos são os dois tempos de Real Madrid 0 x 4 Barcelona (LaLiga, 21/11/2015), do conjunto de dados SoccerNet, em baixa resolução (224p). Os lances são quatro cortes reais de 27 a 28 s: gols de Suárez, Neymar e Iniesta e uma defesa do Barcelona. A tela de análise não roda nenhum modelo. Ela só revela, aos poucos, lances que já estavam anotados no SoccerNet.</span></p></li>
+      <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg></span><p><b>Os cortes têm som.</b><span class="meta">Cada vídeo só carrega quando você clica em “Reproduzir corte”, e toca uma vez, com os controles normais do navegador.</span></p></li>
       <li><span class="ico"><kbd style="min-width:0;height:auto;padding:0;box-shadow:none;background:none;font-size:14px">←→</kbd></span><p><b>As setas <kbd>←</kbd> <kbd>→</kbd> do teclado trocam de tela.</b><span class="meta">É um atalho da demonstração. Se pular a análise com a seta, ela termina na hora.</span></p></li>
       <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><p><b>Os resultados aparecem de três formas.</b><span class="meta">Na última tela, os ícones no canto direito trocam a visualização. Os lances que você já escolheu continuam escolhidos.</span></p></li>
-      <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M7 11l5 5 5-5"/><path d="M4 20h16"/></svg></span><p><b>O download é só uma planilha.</b><span class="meta">Em vez dos vídeos, você recebe um arquivo CSV com a lista dos cortes. Os vídeos não existem nesta demonstração.</span></p></li>
+      <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M7 11l5 5 5-5"/><path d="M4 20h16"/></svg></span><p><b>O download principal é uma planilha.</b><span class="meta">O botão “Baixar CSV” entrega um arquivo com os dados e o link de cada corte escolhido. Para baixar o vídeo de um lance, use “Baixar MP4” no detalhe dele.</span></p></li>
       <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span><p><b>Nada fica salvo.</b><span class="meta">Recarregar a página volta tudo ao começo. Se algo travar, é só recarregar.</span></p></li>
       <li><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><p><b>Se alguém da equipe estiver acompanhando, pense em voz alta.</b><span class="meta">Diga o que está procurando, o que espera que aconteça e o que te surpreendeu.</span></p></li>
     </ul>
@@ -205,10 +206,10 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
     </div>
     <p class="scene">Imagine que você edita vídeos de futebol e precisa montar um vídeo com os melhores momentos das partidas da rodada. As gravações já estão no seu computador.</p>
     <ol class="tasks">
-      <li><div><h3>Prepare a análise</h3><p>Coloque as gravações da rodada para analisar, mas deixe uma delas de fora. Depois, comece a análise.</p></div></li>
-      <li><div><h3>Acompanhe a análise</h3><p>Enquanto ela roda, descubra o que já terminou, o que ainda falta e se aconteceu algum problema.</p></div></li>
-      <li><div><h3>Escolha três lances</h3><p>Escolha três lances que você colocaria no vídeo. Antes de escolher cada um, confira de qual partida ele é e em que momento acontece. Passe pelas três formas de ver os resultados.</p></div></li>
-      <li><div><h3>Baixe o que escolheu</h3><p>Obtenha os cortes dos lances que você escolheu.</p></div></li>
+      <li><div><h3>Prepare a análise</h3><p>Coloque as gravações de exemplo para analisar, confira o que vai entrar e comece a análise.</p></div></li>
+      <li><div><h3>Acompanhe a análise</h3><p>Enquanto ela roda, descubra o que já terminou, o que ainda falta e quais lances já apareceram.</p></div></li>
+      <li><div><h3>Escolha três lances</h3><p>Escolha três lances que você colocaria no vídeo. Antes de escolher cada um, confira de qual tempo ele é, em que minuto do jogo acontece e assista ao corte. Passe pelas três formas de ver os resultados.</p></div></li>
+      <li><div><h3>Baixe o que escolheu</h3><p>Obtenha a lista dos cortes que você escolheu e o vídeo de pelo menos um deles.</p></div></li>
     </ol>
   </section>
 
@@ -296,7 +297,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
 
 <script>
 const $=s=>document.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const form=$('#fb'), status=$('#status'), KEY='guia-e06-rascunho', VERSAO='2026-10-16';
+const form=$('#fb'), status=$('#status'), KEY='guia-e06-rascunho', VERSAO='2026-10-21';
 
 const NIVEIS=[['sim','Consegui'],['dificil','Com dificuldade'],['nao','Não consegui']];
 for(const box of $$('[data-q]'))
