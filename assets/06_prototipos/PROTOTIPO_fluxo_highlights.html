@@ -7,9 +7,10 @@
 <!--
   PROTÓTIPO DESCARTÁVEL (Entrega 06). Não é código de produção.
   Plano: as 4 telas do esboço em tldraw (Enviar → Vídeos → Análise → Base).
-  Clipes reais, análise simulada: media/manifest.json descreve os dois tempos de Real Madrid 0 x 4 Barcelona
-  (SoccerNet-v2, 224p) e os 4 cortes publicados em media/. A Tela 3 só revela anotações que já existem no
-  SoccerNet; nenhum modelo roda aqui. Os tempos completos nunca são publicados nem baixados.
+  Clipes reais, análise simulada: media/manifest.json descreve os quatro tempos de duas partidas do SoccerNet-v2
+  (224p) e os 8 cortes publicados em media/. A Tela 3 toca os cortes de cada tempo em 2× e revela a anotação do
+  SoccerNet quando o vídeo passa pelo instante anotado; nenhum modelo roda aqui. Os tempos completos nunca são
+  publicados nem baixados. Os cortes são baixados a partir do clique nos exemplos e guardados na Cache API.
   Precisa ser servido por HTTP (o manifesto é lido com fetch): python3 -m http.server nesta pasta, ou o site/.
   A Tela 4 ("???" no esboço, "Base de dados de highlights") tem 3 variantes, trocadas por
   ?variant=A|B|C ou pelo seletor ao lado de "Baixar CSV". Nada é salvo.
@@ -84,17 +85,16 @@ h3{margin:0;font-size:16px;font-weight:500}
 .pvg .pv:first-child{justify-self:end}
 .pvg .pv:last-child{justify-self:start}
 .pv{position:relative;aspect-ratio:16/9;border-radius:24px;overflow:hidden;box-shadow:0 0 0 2px var(--c,transparent);background:var(--s1);transition:box-shadow .4s}
-.pv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pv img,.pv video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pv video{background:#000}
+.t3-note{position:absolute;top:12px;left:0;right:0;margin:0;text-align:center}
 .pv-top{position:absolute;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;gap:8px}
 .pill{background:rgba(255,255,255,.88);backdrop-filter:blur(8px);padding:5px 12px;border-radius:9999px;font-size:12.5px;display:flex;gap:7px;align-items:center;max-width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pv-tc{position:absolute;left:12px;bottom:14px}
 .pv-fr{position:absolute;right:12px;bottom:14px}
 .pv-chips{position:absolute;left:0;right:0;bottom:54px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:0 12px}
 .chip2{display:flex;align-items:center;gap:10px;padding:6px 14px;border-radius:9999px;background:#fff;box-shadow:0 0 0 1px var(--c),0 6px 18px rgba(0,0,0,.08);font-size:13px;animation:rise .3s ease-out;transition:opacity .3s,transform .3s}
 .chip2.out{opacity:0;transform:translateY(6px)}
 @keyframes rise{from{opacity:0;transform:translateY(8px)}}
-.pv-bar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(10,10,10,.06)}
-.pv-bar i{display:block;height:100%;width:0;background:var(--c)}
 .pv-idle{position:absolute;inset:0;display:grid;place-items:center;padding:0 24px;text-align:center;color:var(--muted);font-size:14px}
 .tracks{flex:none}
 .tl{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin:14px 4px 6px}
@@ -256,9 +256,9 @@ h3{margin:0;font-size:16px;font-weight:500}
   <!-- Tela 3: só prévias e trilhas -->
   <section class="screen" id="t3" hidden>
     <div class="t3-top"><button class="btn pri" id="restart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>Reiniciar análise</button></div>
-    <div class="previews"><div class="pvg">
-      <div class="pv" id="pv0"><img alt="" hidden><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-tc mono" data-t></span><span class="pill pv-fr" data-f></span><div class="pv-bar"><i></i></div></div>
-      <div class="pv" id="pv1"><img alt="" hidden><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-tc mono" data-t></span><span class="pill pv-fr" data-f></span><div class="pv-bar"><i></i></div></div>
+    <div class="previews"><p class="meta t3-note">Simulação: nenhum modelo assiste ao vídeo. As prévias tocam em 2× os trechos anotados no SoccerNet e revelam cada lance no instante anotado.</p><div class="pvg">
+      <div class="pv" id="pv0"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-fr" data-f></span></div>
+      <div class="pv" id="pv1"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-fr" data-f></span></div>
     </div></div>
     <div class="tracks">
       <div class="tl"><span>Highlights revelados · anotações do SoccerNet</span><span id="k-hl"></span></div>
@@ -299,7 +299,7 @@ function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeou
 // ---------- dados reais: media/manifest.json ----------
 const MANIFEST='media/manifest.json';
 const COLORS=['#14a37f','#3b6cf6','#e8a317','#e5484d'];
-const PROC=6500; // ms simulados por vídeo
+const RATE=2; // velocidade dos cortes na Tela 3
 let MF=null, MF_ERR=null, MATCHES=[], TYPES=[];
 let V=[], H=[], HM={};
 const SEL=new Set();
@@ -314,7 +314,7 @@ async function loadManifest(){
     if(!MF.sources?.length||!MF.clips?.length)throw new Error('manifesto sem sources ou clips');
   }catch(e){MF=null;MF_ERR=e.message||String(e)}
   const b=$('#use-mock');
-  if(MF){b.disabled=false;b.textContent=`ou use os ${MF.sources.length} tempos de exemplo · ${MF.sources[0].matchName}`;return}
+  if(MF){pruneCache().catch(()=>{});b.disabled=false;b.textContent=`ou use os ${MF.sources.length} tempos de exemplo · ${new Set(MF.sources.map(s=>s.match)).size} partidas do SoccerNet`;return}
   b.hidden=true;
   $('#mf-err').hidden=false;
   $('#mf-err').textContent=`Não foi possível carregar ${MANIFEST} (${MF_ERR}). Sirva a pasta do protótipo por HTTP, por exemplo com python3 -m http.server, em vez de abrir o arquivo direto.`;
@@ -329,7 +329,7 @@ function load(){
   TYPES=[...new Set(MF.clips.map(c=>c.type))].map(k=>({k,a:k.slice(0,3).toUpperCase()}));
   H=MF.clips.map(c=>({id:c.id,v:V.find(v=>v.id===c.sourceId),media:c,type:TYPES.find(t=>t.k===c.type),t:c.eventSourceSeconds,found:false,done:false}));
   HM=Object.fromEntries(H.map(h=>[h.id,h]));
-  SEL.clear(); resetAnalysis();
+  SEL.clear(); resetAnalysis(); prefetch();
 }
 const total=()=>V.reduce((a,v)=>a+v.dur,0);
 const off=v=>{let a=0;for(const x of V){if(x===v)return a;a+=x.dur}return a};
@@ -337,71 +337,158 @@ const done=()=>H.filter(h=>h.done);
 const when=h=>`${h.v.half}º tempo · jogo <span class="mono">${esc(h.media.matchTime)}</span>`;
 const poster=(h,alt='')=>`<img src="${esc(h.media.poster)}" alt="${esc(alt)}" width="398" height="224">`;
 
-// ---------- reprodução: um corte por vez, baixado inteiro como blob ----------
-// O wrangler dev local responde MP4 sem Content-Length e o Chrome não deixa buscar no vídeo;
-// um blob do corte (cerca de 2 MB) restaura a busca. Nenhum MP4 é pedido antes do clique.
+// ---------- mídia: cada corte é baixado uma vez e guardado na Cache API ----------
+// O blob inteiro contorna o wrangler dev local, que responde MP4 sem Content-Length (sem ele o Chrome não deixa
+// buscar no vídeo). A chave leva o sha256 do manifesto, então um corte reextraído vira outra entrada.
+const CACHE='ihc-cortes';
+const BLOBS=new Map(),READY=new Map();
+const ckey=c=>new URL(`${c.src}?sha256=${c.sha256}`,location.href).href;
+const openCache=()=>'caches' in self?caches.open(CACHE).catch(()=>null):Promise.resolve(null);
+function clipBlob(c){
+  if(!BLOBS.has(c.id))BLOBS.set(c.id,(async()=>{
+    const cache=await openCache(),key=ckey(c);
+    const hit=await cache?.match(key).then(r=>r?.blob()).catch(()=>null);
+    if(hit?.size===c.sizeBytes)return hit;
+    const r=await fetch(c.src);
+    if(!r.ok)throw new Error(`HTTP ${r.status}`);
+    const b=await r.blob();
+    if(b.size!==c.sizeBytes)throw new Error(`${b.size} de ${c.sizeBytes} bytes`);
+    await cache?.put(key,new Response(b,{headers:{'content-type':'video/mp4'}})).catch(()=>{});
+    return b;
+  })().then(b=>(READY.set(c.id,b),b),e=>{BLOBS.delete(c.id);throw e}));
+  return BLOBS.get(c.id);
+}
+async function pruneCache(){
+  const cache=await openCache();if(!cache)return;
+  const keep=new Set(MF.clips.map(ckey));
+  for(const r of await cache.keys())if(!keep.has(r.url))await cache.delete(r);
+}
+const route=v=>H.filter(h=>h.v===v).sort((a,b)=>a.media.cutStartSeconds-b.media.cutStartSeconds);
+// baixa na ordem em que a Tela 3 vai precisar (rodada de prévias, corte, prévia), dois por vez
+function prefetch(){
+  const q=V.flatMap((v,k)=>route(v).map((h,j)=>({h,o:[k>>1,j,k]}))).sort((a,b)=>a.o[0]-b.o[0]||a.o[1]-b.o[1]||a.o[2]-b.o[2]).map(x=>x.h);
+  const pull=()=>{const h=q.shift();if(h)clipBlob(h.media).catch(()=>{}).then(pull)};
+  pull();pull();
+}
+
+// ---------- reprodução na Tela 4: um corte por vez ----------
 const PLAY='▶ Reproduzir corte';
-const P={gen:0,ctl:null,url:null,video:null,box:null};
+const P={gen:0,url:null,video:null,box:null};
 function stopMedia(){
-  P.gen++;P.ctl?.abort();
+  P.gen++;
   if(P.video){P.video.pause();P.video.removeAttribute('src');P.video.load();P.video.remove()}
   if(P.url)URL.revokeObjectURL(P.url);
   if(P.box?.isConnected){P.box.querySelector('img').hidden=false;const b=P.box.querySelector('[data-play]');b.hidden=false;b.disabled=false;b.textContent=PLAY}
-  Object.assign(P,{ctl:null,url:null,video:null,box:null});
+  Object.assign(P,{url:null,video:null,box:null});
 }
 async function play(btn){
   const box=btn.closest('[data-player]'),c=HM[box.dataset.player].media;
   stopMedia();
-  const g=P.gen,ctl=new AbortController();Object.assign(P,{ctl,box});
+  const g=P.gen;P.box=box;
   btn.disabled=true;btn.textContent=`Carregando corte (${mb(c.sizeBytes)})…`;
   let blob;
-  try{
-    const r=await fetch(c.src,{signal:ctl.signal});
-    if(!r.ok)throw new Error(`HTTP ${r.status}`);
-    blob=await r.blob();
-  }catch(e){
+  try{blob=await clipBlob(c)}catch(e){
     if(g!==P.gen)return;
-    Object.assign(P,{ctl:null,box:null});
+    P.box=null;
     btn.disabled=false;btn.textContent=`Não deu para carregar (${e.message}). Tentar de novo`;
     return;
   }
   if(g!==P.gen)return;
   if(!box.isConnected||!box.getClientRects().length||document.hidden){stopMedia();return}
-  P.ctl=null;P.url=URL.createObjectURL(blob);
+  P.url=URL.createObjectURL(blob);
   const v=P.video=document.createElement('video');
-  v.controls=true;v.playsInline=true;v.preload='none';v.poster=c.poster;v.src=P.url;
+  v.controls=true;v.playsInline=true;v.poster=c.poster;v.src=P.url;
   btn.hidden=true;box.querySelector('img').hidden=true;box.prepend(v);
   v.play().catch(()=>{});
 }
 new MutationObserver(()=>{if(P.box&&!P.box.isConnected)stopMedia()}).observe($('#t4'),{childList:true,subtree:true});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stopMedia()});
-document.addEventListener('play',e=>$$('video').forEach(v=>v!==e.target&&v.pause()),true);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopMedia();sync()});
 
 // ---------- simulação da análise: revela as anotações do manifesto ----------
-const A={state:'idle',slots:[null,null],last:[null,null],gen:0,raf:0,t:0};
-function resetAnalysis(){A.gen++;cancelAnimationFrame(A.raf);A.raf=0;$$('.chip2,.fly').forEach(e=>e.remove());A.state='idle';A.slots=[null,null];A.last=[null,null];V.forEach(v=>{v.prog=0;v.st='aguardando'});H.forEach(h=>{h.found=h.done=false})}
-function startAnalysis(){resetAnalysis();A.state='running';fill();A.t=performance.now();A.raf=requestAnimationFrame(tick)}
-function tick(now){
-  const dt=Math.min(100,now-A.t);A.t=now;
-  step(dt);
+// Cada prévia percorre um tempo tocando, em RATE×, só os cortes anotados, na ordem do arquivo. O relógio é o
+// próprio vídeo: progresso e lances leem currentTime.
+const A={state:'idle',slots:[null,null],last:[null,null],gen:0,raf:0};
+// O progresso não segue o tempo do arquivo, que saltaria entre os cortes. Ele é linear por partes no tempo já
+// tocado e passa pela posição de cada anotação no instante em que ela é revelada, então enche sem saltos e
+// alcança cada marcador junto com o lance.
+function knots(v,segs){
+  let T=0;const k=[[0,0]];
+  for(const h of segs){k.push([T+h.media.eventClipSeconds,h.t/v.dur]);T+=h.media.durationSeconds}
+  k.push([T,1]);
+  return k;
+}
+function along(k,x){
+  for(let j=1;j<k.length;j++)if(x<k[j][0]){const [a,p]=k[j-1],[b,q]=k[j];return p+(q-p)*(x-a)/(b-a)}
+  return 1;
+}
+function lane(v,s){
+  const el=$('#pv'+s+' video'),segs=route(v);
+  el.defaultPlaybackRate=RATE;
+  const l={v,s,segs,el,k:knots(v,segs),i:-1,ph:'load',played:0,blob:null,err:null,url:null};
+  el.onerror=()=>{if(el.getAttribute('src'))l.err='o vídeo não pôde ser reproduzido'};
+  next(l);
+  return l;
+}
+// passa ao próximo corte, ou ao fim do arquivo depois do último
+function next(l){
+  if(l.i>=0)l.played+=l.segs[l.i].media.durationSeconds;
+  unload(l);l.i++;l.blob=l.err=null;
+  const h=l.segs[l.i];
+  if(!h){l.ph='done';return}
+  l.ph='load';
+  // um corte já baixado entra no mesmo quadro em que o anterior termina
+  l.blob=READY.get(h.id)||null;
+  const g=A.gen;
+  if(!l.blob)clipBlob(h.media).then(b=>{if(g===A.gen)l.blob=b},e=>{if(g===A.gen)l.err=e.message});
+}
+const BLOCKED='o navegador bloqueou a reprodução automática';
+function play3(l){
+  const g=A.gen;
+  l.el.play().then(()=>{if(g===A.gen&&l.err===BLOCKED)l.err=null},e=>{if(g===A.gen&&e.name==='NotAllowedError')l.err=BLOCKED});
+}
+function unload(l){
+  l.el.pause();l.el.removeAttribute('src');l.el.load();l.el.hidden=true;
+  if(l.url)URL.revokeObjectURL(l.url);l.url=null;
+}
+function advance(l){
+  if(l.ph==='play'&&l.el.ended)next(l);
+  if(l.ph==='load'&&l.blob){
+    l.url=URL.createObjectURL(l.blob);l.el.src=l.url;l.el.hidden=false;l.ph='play';
+    play3(l);
+  }
+  const h=l.segs[l.i],ct=l.ph==='play'?l.el.currentTime:0;
+  if(l.ph==='play'&&!h.found&&ct>=h.media.eventClipSeconds)detect(h,l.s);
+  l.v.prog=l.ph==='done'?1:along(l.k,l.played+ct);
+}
+function resetAnalysis(){
+  A.gen++;cancelAnimationFrame(A.raf);A.raf=0;
+  [...A.slots,...A.last].forEach(l=>l&&unload(l));
+  $$('.chip2,.fly').forEach(e=>e.remove());A.state='idle';A.slots=[null,null];A.last=[null,null];
+  V.forEach(v=>{v.prog=0;v.st='aguardando'});H.forEach(h=>{h.found=h.done=false});
+}
+function startAnalysis(){resetAnalysis();A.state='running';fill();sync()}
+// toca só com a Tela 3 à vista; sair dela ou esconder a aba pausa vídeo e relógio juntos
+function sync(){
+  const on=A.state==='running'&&S.tela===3&&!document.hidden;
+  A.slots.forEach(l=>{if(l?.ph==='play')on?play3(l):l.el.pause()});
+  if(on&&!A.raf)A.raf=requestAnimationFrame(tick);
+  if(!on&&A.raf){cancelAnimationFrame(A.raf);A.raf=0}
+}
+function tick(){
+  A.slots.forEach(l=>{if(!l)return;advance(l);if(l.ph==='done'){l.v.st='pronto';A.slots[l.s]=null}});
+  fill();
+  A.slots.forEach(l=>{if(l?.ph==='load')advance(l)});
   if(S.tela===3)paintT3();
   A.raf=A.state==='running'?requestAnimationFrame(tick):0;
 }
 function fill(){
-  for(let s=0;s<2;s++)if(!A.slots[s]){const n=V.find(v=>v.st==='aguardando');if(n){n.st='processando';A.slots[s]=A.last[s]=n}}
+  // vídeos pares à esquerda, ímpares à direita: com os quatro tempos, os dois de cada partida ficam lado a lado
+  for(let s=0;s<2;s++)if(!A.slots[s]){const n=V.find((v,k)=>k%2===s&&v.st==='aguardando');if(n){n.st='processando';A.slots[s]=A.last[s]=lane(n,s)}}
   if(A.state==='running'&&!A.slots[0]&&!A.slots[1])A.state='done';
 }
-function step(dt){
-  A.slots.forEach((v,s)=>{
-    if(!v)return;
-    v.prog=Math.min(1,v.prog+dt/PROC);
-    H.forEach(h=>{if(h.v===v&&!h.found&&h.t/v.dur<=v.prog)detect(h,s)});
-    if(v.prog>=1){v.st='pronto';A.slots[s]=null}
-  });
-  fill();
-}
 function finishAll(){
-  cancelAnimationFrame(A.raf);A.raf=0;
+  A.gen++;cancelAnimationFrame(A.raf);A.raf=0;
+  A.last.forEach(l=>{if(l){unload(l);Object.assign(l,{ph:'done',i:l.segs.length,err:null})}});
   V.forEach(v=>{v.prog=1;v.st='pronto'});H.forEach(h=>h.found=h.done=true);
   A.slots=[null,null];A.state='done';$$('.chip2').forEach(e=>e.remove());
 }
@@ -410,7 +497,7 @@ function detect(h,s){
   h.found=true;
   if(S.tela!==3){h.done=true;return}
   const el=document.createElement('div');el.className='chip2';el.style.setProperty('--c',h.v.c);
-  el.textContent=`${h.media.title} · jogo ${h.media.matchTime}`;
+  el.textContent=`${h.media.title} · jogo ${h.media.matchTime} · anotação “${h.media.annotation.label}”`;
   $(`#pv${s} .pv-chips`).append(el);
   const g=A.gen;setTimeout(()=>{if(g===A.gen)fly(el,h)},1350);
 }
@@ -452,25 +539,22 @@ function addMk(h,pop){if(S.tela===3&&!document.getElementById('mk-'+h.id))$('#tr
 function buildTracks(){
   const tot=total();let acc=0;
   $('#tr-hl').innerHTML=V.map(v=>{const x=acc/tot*100;acc+=v.dur;return `<i class="div" style="left:${x}%"></i>`}).join('')+done().map(h=>mk(h)).join('');
-  $('#tr-vid').innerHTML=V.map((v,k)=>`<div class="seg" style="flex:${v.dur};--c:${v.c}" title="${esc(v.name)}"><i id="sf${v.i}"></i><span>${k+1}</span></div>`).join('');
+  $('#tr-vid').innerHTML=V.map((v,k)=>`<div class="seg" style="flex:${v.dur};--c:${v.c}" title="${esc(v.m.name)} · ${v.half}º tempo"><i id="sf${v.i}"></i><span>${k+1}</span></div>`).join('');
 }
 function paintT3(){
   [0,1].forEach(s=>{
-    const v=A.slots[s]||A.last[s],pv=$('#pv'+s),img=pv.querySelector('img'),idle=pv.querySelector('.pv-idle');
-    const h=v&&H.filter(x=>x.v===v&&x.found).at(-1);
-    $$('.pv-top,.pv-tc,.pv-bar',pv).forEach(e=>e.hidden=!v);
-    pv.querySelector('[data-f]').hidden=!h;
-    img.hidden=!h;idle.hidden=!!h;
-    if(!v){idle.textContent='Sem vídeo nesta prévia';pv.style.removeProperty('--c');return}
+    const l=A.slots[s]||A.last[s],pv=$('#pv'+s),img=pv.querySelector('img'),idle=pv.querySelector('.pv-idle'),f=pv.querySelector('[data-f]');
+    pv.querySelector('.pv-top').hidden=!l;
+    idle.hidden=!!l;
+    if(!l){idle.textContent='Sem vídeo nesta prévia';pv.style.removeProperty('--c');img.hidden=f.hidden=true;return}
+    const v=l.v,h=l.segs[l.i]||l.segs.at(-1),n=l.segs.length;
     pv.style.setProperty('--c',v.c);
-    if(h){
-      if(img.dataset.id!==h.id){img.dataset.id=h.id;img.src=h.media.poster;img.alt=`Quadro do corte: ${h.media.title}`}
-      pv.querySelector('[data-f]').textContent=`Quadro do corte · ${tc(h.media.cutStartSeconds+h.media.posterClipSeconds)} no arquivo`;
-    }else idle.textContent='Nenhuma anotação revelada ainda neste vídeo';
-    pv.querySelector('[data-n]').innerHTML=`<i class="dot"></i>${mid(v.name)}`;
-    pv.querySelector('[data-s]').textContent=v.st==='processando'?'Processando':'Pronto';
-    pv.querySelector('[data-t]').textContent=`${tc(v.prog*v.dur)} / ${tc(v.dur)}`;
-    pv.querySelector('.pv-bar i').style.width=v.prog*100+'%';
+    img.hidden=l.ph==='play'||!h;
+    if(h&&img.dataset.id!==h.id){img.dataset.id=h.id;img.src=h.media.poster;img.alt=`Quadro do corte: ${h.media.title}`}
+    f.hidden=l.ph!=='play';
+    if(l.ph==='play')f.textContent=`Corte anotado ${l.i+1} de ${n} · ${RATE}×`;
+    pv.querySelector('[data-n]').innerHTML=`<i class="dot"></i>${esc(v.m.name)} · ${v.half}º tempo`;
+    pv.querySelector('[data-s]').textContent=l.err?`Erro · ${l.err}`:{load:'Carregando trecho',play:'Processando',done:'Pronto'}[l.ph];
   });
   V.forEach(v=>{const f=document.getElementById('sf'+v.i);if(f)f.style.width=v.prog*100+'%'});
   const n=done().length,c={pronto:0,processando:0,aguardando:0};V.forEach(v=>c[v.st]++);
@@ -679,7 +763,7 @@ function go(n){
   stopMedia();
   if(n===3&&A.state==='idle')startAnalysis();
   if(n===4&&A.state!=='done'){const was=A.state==='running';finishAll();if(was)toast('Para revisar a base, a análise restante foi concluída na hora (simulação).')}
-  hlHide(true);S.tela=n;
+  hlHide(true);S.tela=n;sync();
   $$('.screen').forEach((e,i)=>e.hidden=i+1!==n);
   scrollTo(0,0);
   if(n===2)renderGrid();
