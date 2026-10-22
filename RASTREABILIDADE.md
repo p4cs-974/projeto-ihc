@@ -115,7 +115,7 @@ Os cenários de problema são hipotéticos. Os aspectos abaixo orientam a coleta
 
 ### 3.1 Cobertura no protótipo da Entrega 6
 
-A [Entrega 6](docs/06_prototipacao_papel.md) documenta a versão principal e sua cobertura parcial. Os IDs abaixo pertencem à prototipação inicial, sem antecipar MoLIC, Figma ou validação com participantes.
+A [Entrega 6](docs/06_prototipacao_papel.md) documenta a versão principal e sua cobertura parcial. Os IDs abaixo pertencem à prototipação inicial, sem antecipar MoLIC ou Figma. A sessão acompanhada de 22/10/2026 com U01 fornece evidência formativa sobre a interface. O perfil sem experiência em edição não valida as personas nem o contexto profissional.
 
 | Relação | Fluxos e telas | Cobertura e pendências |
 |---|---|---|
@@ -123,7 +123,11 @@ A [Entrega 6](docs/06_prototipacao_papel.md) documenta a versão principal e sua
 | R02/R05, acompanhamento por P01/P03 | PF01/PF02; E06-P01, P02 e P03 | Quatro tempos reais de duas partidas, remoção de entradas de exemplo e análise simulada das anotações com progresso. Envio próprio, falhas de processamento e recuperação localizada não são representados |
 | R03, recebimento externo por P02 | Continuidade de PF04, após E06-P04S | CSV preserva identificação e timecodes; os MP4 podem ser baixados individualmente. Transferência dos arquivos e comunicação das pendências para supervisão externa ainda precisam ser representadas. Sem tela de aprovação |
 
-As três alternativas da base permanecem em exploração para o walkthrough. A sessão com pessoa que não desenhou as telas e as revisões decorrentes continuam pendentes. A sincronização documental de 22/10/2026 não acrescenta evidência de participante.
+O walkthrough com uma pessoa de fora do desenho foi realizado em 22/10/2026. A [transcrição automática](artifacts/entrega6/sessao-2026-10-22/transcricao.txt) e o [feedback de produção anonimizado](artifacts/entrega6/sessao-2026-10-22/feedback-producao.json) fundamentam E06-O01 a E06-O06 e E06-D01 a E06-D06, nas seções 4 e 5 da entrega. O formulário registra sucesso nas quatro tarefas; o diálogo inclui ajuda e não comprova o download de um MP4.
+
+E06-O01 liga a dúvida ao final da análise a R02/R05 e à decisão D01 de rever a sinalização e testar a passagem para os resultados. O02/O05/O06 ligam legibilidade, preferência por A e compreensão dos metadados a R01/R04 e a D02/D03/D06. O03 registra uma preocupação de escala em C, com investigação prevista em D04. O04 liga a expectativa de obtenção a R01/R03/R04 e a D05, que separa no roteiro a obtenção do CSV e a do MP4, preservando a montagem externa.
+
+A Entrega 6 está concluída nesta iteração, com sessão e decisões documentadas. A permanece como entrada; B e C continuam em exploração. Os passos 2 e 6 do roteiro foram revisados. As melhorias de interface e a nova avaliação continuam previstas para a próxima iteração, sem registro de implementação. As hipóteses sobre necessidades e desempenho do público profissional permanecem abertas.
 
 ## 4. Rastreabilidade de padrões de interface
 
@@ -164,6 +168,8 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
 
 ## Histórico de atualização da rastreabilidade
+
+- 22/10/2026: encerrada a Entrega 6 nesta iteração após o walkthrough conduzido por Pedro com U01. Registrados transcrição automática, feedback anonimizado, ajuda durante o uso e limite da evidência sobre MP4. E06-O01 a E06-O06 fundamentam D01 a D06, com revisões documentais do roteiro aplicadas e melhorias de interface previstas para a próxima iteração. Índice e checklist atualizados; hipóteses do público profissional continuam abertas.
 
 - 22/10/2026: sincronizada a cobertura da Entrega 6 com o protótipo no commit 74041d3e. Registrados os quatro tempos SoccerNet de duas partidas, a análise simulada, a ausência de envio de arquivos próprios, os controles nativos no player e os downloads de MP4 e CSV. A sessão com participante permanece pendente; não houve mudança de status da entrega.
 

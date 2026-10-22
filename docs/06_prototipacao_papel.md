@@ -2,7 +2,7 @@
 
 **Data da documentação:** 22/10/2026
 
-**Status:** em elaboração; protótipo documentado e simulação formativa pendente
+**Status:** concluída nesta iteração; protótipo, walkthrough formativo e decisões de revisão documentados
 
 **Responsabilidade:** 1 solução integrada por equipe, Equipe 16
 
@@ -10,7 +10,7 @@
 
 Explorar a interação para preparar gravações, acompanhar uma análise simulada e escolher melhores momentos para download. A equipe usa um protótipo digital descartável antes da consolidação no Figma.
 
-O ciclo da atividade compreende construir, simular, observar e revisar. A sessão com uma pessoa que não participou do desenho continua pendente. As verificações técnicas registradas aqui não substituem essa atividade.
+O ciclo da atividade compreende construir, simular, observar e revisar. Em 22/10/2026, Pedro conduziu uma sessão acompanhada com um colega que não participou do desenho e não conhecia o projeto. A transcrição do áudio, o feedback e as decisões estão nas seções 4 e 5. As melhorias de interface registradas para a próxima iteração ainda não foram implementadas nem reavaliadas.
 
 ## 1. Escopo do protótipo
 
@@ -121,7 +121,7 @@ As setas entre telas são atalhos de demonstração. Na alternativa B, com detal
 | B, Trilhas por partida | A posição temporal ajuda a compreender a distribuição dos candidatos entre os tempos? | Leitura dos marcadores, identificação do arquivo e distinção entre tempo do arquivo e minuto do jogo |
 | C, Mosaico por tipo | Miniaturas e agrupamento por evento ajudam a percorrer candidatos? | Recuperação da partida de origem e continuidade ao abrir e fechar o detalhe |
 
-A é a visualização inicial do HTML. Pedro confirmou em 16/10/2026 que as três alternativas permanecem em exploração para o walkthrough. Ainda não há resultado de avaliação que justifique declarar uma vencedora.
+A é a visualização inicial do HTML. Na sessão de 22/10/2026, U01 declarou preferência por A. A decisão desta iteração é manter essa entrada e preservar B e C para exploração. A preferência de uma pessoa sem experiência em edição não estabelece uma vencedora para o público profissional. O resultado e suas limitações estão na seção 4.3.
 
 ### 3.3 Cobertura e lacunas identificadas na revisão
 
@@ -131,7 +131,7 @@ A conferência documental e a inspeção do protótipo em 16/10/2026 incluíram 
 |---|---|---|
 | Alta, T03, recuperação localizada | Espera, progresso e reprodução simulada das anotações do manifesto | A demonstração não representa falhas de processamento nem recuperação localizada de uma entrada. **Reiniciar análise** reinicia o lote inteiro, conforme controle da tela 3 e função `startAnalysis` |
 | Alta, T03 → T01, resultados disponíveis | Base com candidatos ao final da demonstração | Falta abrir resultados de uma partida pronta enquanto outras continuam. A função `go` força `finishAll` ao entrar na tela 4 |
-| Alta, T01, inspeção do contexto | Origem, timecodes, vídeo real e player com controles nativos | A suficiência do contexto e a utilidade dos controles para a revisão editorial ainda não foram avaliadas com participantes |
+| Alta, T01, inspeção do contexto | Origem, timecodes, vídeo real e player com controles nativos; primeira exploração por U01 na seção 4.3 | A suficiência do contexto e a utilidade dos controles para o julgamento editorial profissional continuam sem avaliação com editores |
 | Alta, T01/T02, consolidação e obtenção | Contagem de selecionados, CSV com metadados e download de cada MP4 | Falta representar preparação, transferência, falha e retorno do material para Arnaldo ou para o editor externo. O controle `#dl` exporta o CSV diretamente |
 | Média, T01, dúvidas e retomada | Inclusão/retirada e seleção mantida ao trocar de visualização | Não distingue não vistos, descartados e dúvidas; filtro e detalhe aberto se perdem ao reconstruir a base. T01 admite anotação externa, que pode ser demonstrada sem criar um sistema próprio |
 | Média, T01/T03, vazio e indisponibilidade | Busca sem correspondência, download bloqueado com seleção vazia e mensagens de erro no carregamento da mídia | Faltam cenários simulados de análise sem candidatos e falha de acesso aos resultados. A função `load` sempre carrega os exemplos do manifesto |
@@ -144,9 +144,13 @@ Essas lacunas podem ser exploradas com estados e transições simulados. Não ex
 
 ### 4.1 Situação da atividade
 
-A sessão formativa está pendente, conforme confirmação de Pedro em 16/10/2026. Ainda não há participante, data de sessão, evidência de observação nem resultado de comparação das alternativas.
+A sessão formativa foi realizada em 22/10/2026, com Pedro como facilitador e um colega da turma identificado como **U01** neste documento. Conforme o relato de Pedro, U01 não participou da elaboração das telas nem conhecia o projeto. No formulário, declarou nunca ter editado vídeos e ter realizado a sessão com alguém da equipe acompanhando.
 
-A sessão deve envolver uma pessoa que não participou da elaboração das telas. Um colega pode participar desta iteração formativa, sem substituir os participantes finais da Entrega 14.
+Foram usados o protótipo publicado com clipes reais, o guia da simulação e as três visualizações da base. As evidências preservadas são a [transcrição automática do áudio](../artifacts/entrega6/sessao-2026-10-22/transcricao.txt) e o [feedback de produção anonimizado](../artifacts/entrega6/sessao-2026-10-22/feedback-producao.json). A [nota de procedência](../artifacts/entrega6/sessao-2026-10-22/README.md) descreve as fontes e seus limites. O formulário corresponde ao registro 1 do D1, versão do guia `2026-10-21`, enviado em `2026-10-22T22:45:39.868Z`.
+
+O áudio tem aproximadamente 4min36s e não inclui uma gravação da tela. Sua transcrição tem tempos aproximados, trechos incertos e falantes sem identificação automática. A análise abaixo usa os relatos do formulário e os trechos compreensíveis do diálogo. Não extrai contagens de erros nem tempos por tarefa. As falas de orientação mostram que o percurso foi acompanhado e teve ajuda.
+
+Esta sessão atende à exploração formativa com alguém de fora do desenho. O perfil acadêmico e sem experiência em edição limita as conclusões sobre o público profissional. A atividade não substitui a coleta da Entrega 7 nem a avaliação com participantes finais da Entrega 14. As hipóteses de personas, frequência das tarefas, contexto profissional e ganhos de produtividade continuam abertas.
 
 Em 16/10/2026 foi publicado o [guia da simulação](https://ihc.p4cs.com.br/guia), destinado às pessoas convidadas. As decisões de Pedro sobre a sessão foram registradas naquela data. A tabela descreve suas consequências no guia atual, já com os clipes reais:
 
@@ -160,38 +164,59 @@ Em 16/10/2026 foi publicado o [guia da simulação](https://ihc.p4cs.com.br/guia
 
 As respostas do formulário são gravadas no banco D1 `ihc-feedback`, tabela `feedback`, com data, versão do guia e respostas. Não são guardados IP nem navegador, e o nome é opcional. Os campos de texto são opcionais. São obrigatórios o perfil, o modo da sessão, o resultado de cada tarefa (conseguiu, com dificuldade, não conseguiu) e a visualização preferida. A consulta está descrita em [`site/README.md`](../site/README.md).
 
-### 4.2 Roteiro proposto
+### 4.2 Roteiro de referência e uso na sessão
 
-O roteiro prepara a próxima sessão. As situações não foram aplicadas e os resultados permanecem abertos.
+O roteiro completo orientou a preparação. U01 usou a versão curta de quatro tarefas do guia. A tabela abaixo preserva o roteiro de referência, com duas revisões após a sessão: incluir a passagem da análise para a base no passo 2 e separar a obtenção do CSV da obtenção do MP4 no passo 6. Essas revisões documentais preparam a próxima sessão; não são resultados de uma reaplicação.
 
 | Passo | Situação proposta à pessoa | O que observar |
 |---|---|---|
 | 1 | Carregar os exemplos, retirar uma gravação e iniciar a análise | Se distingue o carregamento dos exemplos do envio de arquivos e consegue conferir o lote |
-| 2 | Identificar o progresso e acompanhar a revelação dos lances anotados | Se compreende os estados de espera e conclusão da análise simulada |
+| 2 | Identificar o progresso, acompanhar os lances e abrir os resultados ao terminar a análise | Se reconhece a conclusão e encontra a continuidade sem ajuda do facilitador |
 | 3 | Localizar um candidato, conferir a origem e explicar se o trecho permite decidir sobre sua inclusão | Compreensão dos timecodes, contexto percebido e limites da prévia |
 | 4 | Incluir dois candidatos, retirar um e repetir a localização nas alternativas A, B e C | Se distingue seleção de descarte e mantém a referência da partida nos agrupamentos |
 | 5 | Fazer uma busca sem correspondência na alternativa A e recuperar a lista | Se diferencia ausência de correspondência de ausência de lances na partida |
-| 6 | Baixar o CSV e o MP4 de um lance; explicar como continuaria o trabalho no editor externo | Se distingue os metadados do vídeo e identifica o que ainda falta para transferir o material a Arnaldo |
+| 6 | Obter a lista dos escolhidos, abrir o CSV e identificar suas informações; depois baixar e reproduzir o MP4 de um lance | Registrar separadamente a obtenção dos metadados e do vídeo, a ajuda recebida e o que falta para continuar a edição externa |
 
 O guia usa uma versão curta deste roteiro, com quatro tarefas: preparar a análise com os exemplos e conferir o lote (passo 1), acompanhar a análise (passo 2), escolher três lances conferindo partida e momento nas três visualizações (passos 3 e 4) e baixar o CSV e pelo menos um MP4 (passo 6). O guia não pede a remoção de uma gravação. O passo 5, a retirada de um item já incluído e a continuidade externa ficam fora das tarefas curtas. Nas sessões ao vivo, o facilitador pode propô-los à parte.
 
-Na comparação, variar a ordem de apresentação entre sessões, se houver mais de uma. Registrar a ajuda do facilitador, inclusive o ensino das setas entre telas, para distinguir descoberta espontânea de instrução recebida.
+A era a entrada inicial do protótipo, e o diálogo identifica B como a segunda visualização, por volta de 02:42. O percurso registrado é compatível com a ordem A, B, C, sem comparação entre ordens de apresentação. Em sessões futuras, variar a ordem quando houver mais participantes e registrar a ajuda do facilitador, inclusive o ensino das setas entre telas.
 
-### 4.3 Registro de observações
+### 4.3 Resultados e observações
 
-| Observação | Tela ou ação | Evidência | Consequência para o design |
+U01 marcou **Consegui** nas quatro tarefas. A coluna de evidência abaixo distingue esse autorrelato do que o áudio permite reconhecer. Não se atribui sucesso independente quando houve explicação durante o percurso.
+
+| Tarefa do guia | Resposta no formulário | Evidência complementar e ajuda registrada |
+|---|---|---|
+| Preparar a análise, `t1` | Consegui | O áudio começa com a escolha dos exemplos e a identificação da tela 2, de 00:00 a 00:21. Não permite conferir cada clique ou a remoção de uma entrada |
+| Acompanhar a análise, `t2` | Consegui | De 01:01 a 01:36 há dúvida sobre navegação e explicação de que a tela serve para acompanhar e depois passar à próxima. O formulário confirma a dúvida ao final do processamento |
+| Escolher três lances e explorar as visualizações, `t3` | Consegui | O diálogo registra seleção por categoria, de 02:03 a 02:23, apresentação de B pelo facilitador em 02:42 e explicações sobre a timeline e a inclusão, de 03:04 a 03:17. Não há registro visual para conferir todos os itens selecionados |
+| Obter lista e vídeo, `t4` | Consegui | De 03:46 a 04:20 há referência ao download de metadados e discussão dos campos do CSV. A obtenção de um MP4 não fica comprovada no áudio. A explicação de que o download entrega apenas CSV pode ter influenciado a expectativa registrada |
+
+As observações abaixo têm identificadores próprios para ligar evidência e decisão. Os tempos se referem à transcrição e são aproximados. As propriedades `travou`, `variante`, `variante_porque` e `download` podem ser consultadas no JSON do feedback.
+
+| ID | Tela ou ação | Evidência | Interpretação e limite |
 |---|---|---|---|
-| Pendente de sessão com pessoa que não desenhou as telas | A definir pelo roteiro | Nenhuma evidência de participante disponível | Preencher após observar o uso; ainda não há decisão baseada nessa sessão |
+| E06-O01 | E06-P03, passagem para a base | `travou` relata dúvida entre mudar de página com as setas e esperar outra ação; diálogo de 01:01 a 01:36 inclui ajuda para avançar | A conclusão e o próximo passo não ficaram claros nesta sessão; o percurso contou com explicação para continuar |
+| E06-O02 | E06-P04B, labels e trilhas | `variante_porque` descreve labels confusas; de 02:50 a 03:10 o diálogo menciona botões escuros, contraste e explicação da timeline | Rever legibilidade e significado das marcações. Não houve medição de contraste nem avaliação de severidade |
+| E06-O03 | E06-P04C, quantidade de lances | `variante_porque` considera o mosaico bom, mas antecipa dificuldade no carrossel se houver muitos lances | É uma preocupação declarada. Não demonstra falha de uso com grande volume, pois a sessão usou o conjunto pequeno de exemplos |
+| E06-O04 | E06-P04S e detalhe, obtenção | `download` informa a expectativa de um vídeo único com todos os highlights ou dos highlights separados; o diálogo, em 02:23 e de 03:46 a 04:20, trata do CSV | Existe diferença entre a expectativa e a obtenção descrita na sessão. O protótipo já oferece MP4 individual; sua descoberta e uso não ficam comprovados. A orientação do facilitador é uma possível influência |
+| E06-O05 | E06-P04A, comparação das alternativas | `variante` é A; a justificativa contrapõe a confusão das labels de B e o possível limite do carrossel de C | É a preferência de U01 nesta sessão. A entrada inicial em A, a ausência de comparação entre ordens e a ausência de experiência em edição limitam sua generalização |
+| E06-O06 | Identificação temporal, cores e campos exportados | De 03:04 a 03:17 há explicação da timeline; de 03:37 a 03:42 há pergunta sobre cores; de 04:08 a 04:20 há pergunta sobre ID e explicação dos títulos | São pontos para verificar compreensão de metadados. O áudio sem tela não permite determinar exatamente qual marcador ou cor motivou cada fala |
 
-## 5. Alterações após a simulação
+## 5. Decisões após a simulação
 
-Não há alterações decorrentes de simulação com participante, pois a sessão ainda não ocorreu.
+O fechamento desta iteração registra as decisões abaixo a partir de U01. As revisões do roteiro foram aplicadas à seção 4.2. As mudanças de interface estão indicadas para a próxima iteração e não são apresentadas como implementadas ou verificadas com uma nova sessão.
 
-| Antes | Problema observado | Depois | Justificativa |
+| ID e evidência | Antes ou problema | Decisão e justificativa | Situação |
 |---|---|---|---|
-| Versão principal documentada nesta entrega | Pendente de observação | Pendente | Registrar evidência e decisão após a sessão, inclusive se a equipe decidir manter o desenho |
+| E06-D01, O01 | Ao terminar a análise, U01 não soube se deveria esperar ou avançar | Revisar a indicação de conclusão e de acesso à base. O próximo teste deve verificar se a pessoa encontra essa continuidade sem ajuda | Roteiro do passo 2 revisado; alteração de interface para a próxima iteração |
+| E06-D02, O02 e O06 | Labels, contraste e significado temporal exigiram esclarecimento em B | Revisar legibilidade e identificação de tempo, origem e cores antes de repetir a comparação. As falas justificam investigar esses elementos, sem atribuir uma gravidade numérica | Revisão de interface e nova verificação previstas para a próxima iteração |
+| E06-D03, O05 | A já era a entrada inicial e foi a preferência declarada | Manter A como entrada e conservar B e C como alternativas exploratórias. A sessão dá um motivo para manter o padrão atual, mas não para encerrar a comparação com o público profissional | Organização atual mantida |
+| E06-D04, O03 | U01 antecipa dificuldade no carrossel com mais lances | Manter C nesta versão e investigar um conjunto maior em avaliação futura. A preocupação sozinha não justifica descartar o mosaico | Investigação futura; sem mudança na interface |
+| E06-D05, O04 | O autorrelato de obtenção não permite confirmar a diferença entre lista e vídeo | Manter CSV e MP4 individuais, já disponíveis. Separar no roteiro a abertura do CSV e o download com reprodução do MP4; o facilitador deve descrever as duas saídas. A montagem de vídeo único permanece na edição externa | Roteiro do passo 6 revisado; obtenção independente de MP4 a verificar em nova sessão |
+| E06-D06, O06 | Metadados foram explicados durante o uso | Em nova sessão, pedir que a pessoa identifique origem e momento do lance e explique os campos usados, registrando sua resposta antes de oferecer ajuda. Não inferir compreensão pelo preenchimento do formulário | Orientação de condução documentada para a próxima avaliação |
 
-A exploração anterior e a versão principal registram uma evolução do artefato. Sem relato de uma sessão, essa diferença não comprova revisão motivada por observação de outra pessoa. A inclusão do contexto nos metadados dos clipes e na prévia foi aplicada antes da sessão, por decisão de Pedro, e conferida tecnicamente. Sua adequação ao uso permanece sem avaliação com participantes.
+O protótipo documentado, o walkthrough acompanhado, as observações e as decisões encerram a Entrega 6 nesta iteração. Permanecem as lacunas técnicas da seção 3.3 e as revisões de interface acima. A sessão não demonstra ganho de produtividade, cobertura completa dos lances ou adequação ao trabalho editorial profissional. As versões anteriores e a inclusão de contexto nos clipes ocorreram antes desta sessão e continuam identificadas como evolução técnica, não como correções motivadas por U01.
 
 ## Checklist
 
@@ -199,8 +224,8 @@ A exploração anterior e a versão principal registram uma evolução do artefa
 - [x] Cada tela e estado documentado tem uma tarefa, decisão ou informação que o justifica.
 - [x] O projeto mantém o recorte de envio, acompanhamento, revisão e obtenção, sem acrescentar login ou administração.
 - [x] Telas e estados estão numerados, com controles e retornos descritos.
-- [ ] Há pelo menos uma simulação ou walkthrough com pessoa que não desenhou as telas.
-- [ ] As observações da simulação geraram decisões de revisão documentadas.
+- [x] Há pelo menos uma simulação ou walkthrough com pessoa que não desenhou as telas, registrada em 22/10/2026 com U01.
+- [x] As observações da simulação geraram decisões de revisão documentadas, E06-D01 a E06-D06, com aplicação e próximos passos distinguidos.
 - [x] O formato digital clicável do protótipo principal foi confirmado como aceito para a Entrega 6, conforme informação de Pedro em 16/10/2026.
 
 ## Histórico de revisões
@@ -213,3 +238,4 @@ A exploração anterior e a versão principal registram uma evolução do artefa
 | 16/10/2026 | 0.5 | Incluído o esboço original do tldraw, com imagem, fonte editável preservada e descrição de sua relação com o protótipo principal. | Equipe 16, documentação assistida pelo Codex a pedido de Pedro |
 | 16/10/2026 | 0.6 | Publicado o guia da simulação em ihc.p4cs.com.br/guia, com formulário de feedback gravado em D1. Registradas as decisões de Pedro sobre modo das sessões, informações reveladas, público, papel e consentimento, e a relação das tarefas do guia com o roteiro 4.2. Sessões continuam pendentes. | Equipe 16, implementação e documentação assistidas por Opus a pedido de Pedro |
 | 22/10/2026 | 0.7 | Documentação sincronizada com o protótipo atual após o commit 74041d3e. Corrigidas origem e quantidade dos vídeos, suporte a envio, comportamento da análise, controles de reprodução, downloads, tempos e roteiro. A sessão com pessoa que não desenhou as telas continua pendente. Esta atualização documental não registra observação com participante. | Equipe 16, documentação assistida pelo Codex |
+| 22/10/2026 | 0.8 | Registrados o walkthrough acompanhado por Pedro com U01, a transcrição automática e o feedback do D1 anonimizado. Separados autorrelato, diálogo e ajuda; documentadas O01 a O06 e D01 a D06. Revisados os passos 2 e 6 do roteiro. Checklist encerrado nesta iteração, com melhorias futuras e limites da evidência explícitos. | Pedro Alexandre Custódio Silva, condução da sessão e fechamento documental assistido pelo Codex |

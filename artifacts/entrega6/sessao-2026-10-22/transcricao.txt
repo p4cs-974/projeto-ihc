@@ -1,0 +1,76 @@
+Transcrição do áudio da sessão da Entrega 6
+
+Fonte: áudio anexado em 22/10/2026, duração aproximada de 4min36s.
+Reconhecimento automático em português, faster-whisper large-v3-turbo.
+Tempos aproximados, com correções pontuais a partir da comparação das transcrições.
+Falantes não identificados. Trechos pouco claros marcados como [trecho incerto].
+
+[00:00–00:10] Bom, eu vou usar os exemplos, tá, não sei se é para eu selecionar.
+[00:10–00:21] Estamos na tela 2, um para cada vídeo.
+[00:21–00:39] [Trecho incerto.]
+[00:39–00:43] Esse aqui, imagino que seja tipo um minuto onde a gente pega um highlight.
+[00:43–00:44] Uhum.
+[00:44–00:45] Tá.
+[00:45–01:01] [Trecho incerto.]
+[01:01–01:08] Não me permite navegar entre as telas daqui. Eu vou quebrar alguma coisa?
+[01:08–01:11] Não. Calma.
+[01:11–01:18] Tá, eu não tenho nenhum botão aqui, né?
+[01:18–01:23] Não, essa tela é só para você acompanhar a análise e aí passar para a próxima tela.
+[01:23–01:24] Beleza.
+[01:24–01:28] Aquele alertazinho aqui embaixo deveria estar dizendo isso.
+[01:28–01:32] Aquele alerta diz o seguinte, como você [trecho incerto] para a tela de base de highlights,
+[01:32–01:36] antes de terminar a análise ele simulou o resto para você ver toda a base de dados aí.
+[01:36–01:37] Beleza.
+[01:37–01:42] Tá, aí aqui tem todos os lances.
+[01:42–01:44] Ah, achei legal que ele colocou ali.
+[01:44–01:45] Uhum.
+[01:45–01:48] Se eu clicar aqui dá para ver?
+[01:48–01:49] Aqui.
+[01:49–01:50] Tem som, né?
+[01:50–01:54] Meu computador tá sem som.
+[02:01–02:03] Se eu clicar aqui ele fecha.
+[02:03–02:13] Tá, aqui eu vou então selecionar, eu entendo que eu vou selecionar quais os lances aqui que eu quero que vão para o meu vídeo.
+[02:13–02:14] Uhum.
+[02:14–02:15] Tá.
+[02:15–02:22] Eu vou pegar um de cada categoria, eu vou pegar um gol, uma defesa, um pênalti, pegar [trecho incerto].
+[02:22–02:23] Certo.
+[02:23–02:28] Por agora, o que o nosso download faz, ele só baixa um CSV com os metadados [trecho incerto], ele não baixa os bits.
+[02:28–02:29] Tá.
+[02:29–02:30] Aí.
+[02:30–02:42] Mas é por conta de questão de estágio de protótipo, que é só mudar a função do botão de download.
+[02:42–02:49] Agora você tá vendo a segunda visualização da base de highlight da tela 4, a variante B, que mostra a trilha dos lances.
+[02:49–02:50] Tá.
+[02:50–02:58] Cara, na minha visão, essa tela pelo menos eu achei bem escuro esses botões.
+[02:58–03:03] O contraste das labels na trilha.
+[03:03–03:04] Certo.
+[03:04–03:07] Ah, isso aqui é um minuto, né?
+[03:07–03:10] Exato, a timeline do vídeo.
+[03:10–03:13] Tá, eu posso selecionar por aqui, se eu quiser esse gol, por exemplo.
+[03:13–03:14] Pode.
+[03:14–03:16] Aí ele abre, e eu incluo aqui.
+[03:16–03:17] Aham.
+[03:17–03:20] Deixa eu ver aqui, pra outra visão.
+[03:20–03:21] Tá.
+[03:27–03:28] [Trecho incerto.]
+[03:29–03:31] Não tá faltando o lance de defesa aqui?
+[03:31–03:32] Não.
+[03:33–03:34] Faltando o lance de...
+[03:34–03:35] Não, tá certo.
+[03:36–03:37] Eu...
+[03:37–03:39] Então o que que significam as cores?
+[03:39–03:40] É...
+[03:40–03:41] No vídeo?
+[03:41–03:42] Exato.
+[03:42–03:43] Tá.
+[03:43–03:46] Beleza, tem uns filtrozinhos aqui, ó.
+[03:46–03:47] Vou baixar.
+[03:47–03:54] Quando você baixa, ele pega só os metadados.
+[03:54–03:57] Mas, na vida real, ele baixaria os vídeos [trecho incerto].
+[04:08–04:10] O que seria o ID aqui?
+[04:11–04:15] Um ID genérico que o bagulho criou para identificar este vídeo.
+[04:16–04:18] Os títulos aqui é a mesma coisa que tava aparecendo lá.
+[04:18–04:20] A mesma labelzinha aqui.
+[04:20–04:24] [Trecho incerto.]
+[04:24–04:25] Legal.
+[04:29–04:33] Ok, mas se você puder preencher a fichinha de feedback lá no site do guia, eu agradeço.
+[04:34–04:35] Ah, no guia?
