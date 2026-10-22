@@ -115,15 +115,19 @@ Os cenários de problema são hipotéticos. Os aspectos abaixo orientam a coleta
 
 ### 3.1 Cobertura no protótipo da Entrega 6
 
-A [Entrega 6](docs/06_prototipacao_papel.md) documenta a versão principal e sua cobertura parcial. Os IDs abaixo pertencem à prototipação inicial, sem antecipar MoLIC, Figma ou validação com participantes.
+A [Entrega 6](docs/06_prototipacao_papel.md) documenta a versão principal e sua cobertura parcial. Os IDs abaixo pertencem à prototipação inicial, sem antecipar MoLIC ou Figma. A sessão acompanhada de 22/10/2026 com U01 fornece evidência formativa sobre a interface. O perfil sem experiência em edição não valida as personas nem o contexto profissional.
 
 | Relação | Fluxos e telas | Cobertura e pendências |
 |---|---|---|
-| R01/R04, revisão por P01/P03 | PF03/PF04; E06-P04A, B, C, D, V e S | Localização, prévia com contexto, seleção e CSV com intervalo do corte completo e intervalo separado do lance. Contexto limitado ao vídeo de origem, conforme decisão de Pedro em 16/10/2026. Pausa/retorno, dúvidas, retomada e resumo para obtenção pendentes |
-| R02/R05, acompanhamento por P01/P03 | PF01/PF02; E06-P01, P02, P03 e P03E | Preparação fictícia das entradas, progresso e lacuna de análise. Recuperação localizada e acesso a resultados prontos enquanto o restante continua não estão representados |
-| R03, recebimento externo por P02 | Continuidade de PF04, após E06-P04S | CSV preserva identificação e timecodes do corte com contexto e do lance. Transferência dos vídeos e comunicação das pendências para supervisão externa ainda precisam ser representadas. Sem tela de aprovação |
+| R01/R04, revisão por P01/P03 | PF03/PF04; E06-P04A, B, C, D, V e S | Localização, vídeo real com controles do navegador, seleção, download individual de MP4 e CSV com metadados e endereço dos cortes. Dúvidas, retomada e resumo para transferência pendentes |
+| R02/R05, acompanhamento por P01/P03 | PF01/PF02; E06-P01, P02 e P03 | Quatro tempos reais de duas partidas, remoção de entradas de exemplo e análise simulada das anotações com progresso. Envio próprio, falhas de processamento e recuperação localizada não são representados |
+| R03, recebimento externo por P02 | Continuidade de PF04, após E06-P04S | CSV preserva identificação e timecodes; os MP4 podem ser baixados individualmente. Transferência dos arquivos e comunicação das pendências para supervisão externa ainda precisam ser representadas. Sem tela de aprovação |
 
-As três alternativas da base permanecem em exploração para o walkthrough. A sessão com pessoa que não desenhou as telas e as revisões decorrentes estão pendentes, conforme confirmação de Pedro em 16/10/2026.
+O walkthrough com uma pessoa de fora do desenho foi realizado em 22/10/2026. A [transcrição automática](artifacts/entrega6/sessao-2026-10-22/transcricao.txt) e o [feedback de produção anonimizado](artifacts/entrega6/sessao-2026-10-22/feedback-producao.json) fundamentam E06-O01 a E06-O06 e E06-D01 a E06-D06, nas seções 4 e 5 da entrega. O formulário registra sucesso nas quatro tarefas; o diálogo inclui ajuda e não comprova o download de um MP4.
+
+E06-O01 liga a dúvida ao final da análise a R02/R05 e à decisão D01 de rever a sinalização e testar a passagem para os resultados. O02/O05/O06 ligam legibilidade, preferência por A e compreensão dos metadados a R01/R04 e a D02/D03/D06. O03 registra uma preocupação de escala em C, com investigação prevista em D04. O04 liga a expectativa de obtenção a R01/R03/R04 e a D05, que separa no roteiro a obtenção do CSV e a do MP4, preservando a montagem externa.
+
+A Entrega 6 está concluída nesta iteração, com sessão e decisões documentadas. A permanece como entrada; B e C continuam em exploração. Os passos 2 e 6 do roteiro foram revisados. As melhorias de interface e a nova avaliação continuam previstas para a próxima iteração, sem registro de implementação. As hipóteses sobre necessidades e desempenho do público profissional permanecem abertas.
 
 ## 4. Rastreabilidade de padrões de interface
 
@@ -131,9 +135,9 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 
 | ID da tela/fluxo | Padrão de interface | Objetivo/tarefa que justifica | Informação/ação principal | Evidência de necessidade | Artefatos relacionados |
 |---|---|---|---|---|---|
-| E06-P01/P02 | entrada e conferência de arquivos | A01, precondição de T03 | Selecionar gravações, conferir e retirar entradas antes de iniciar; dados e validação limitados à demonstração | H08/H13/H16; preparo das entradas para R02/R05 | Entrega 6, PF01 |
-| E06-P03/P03E | acompanhamento do lote | A02/T03: acompanhar partidas e tratar falhas, com cobertura parcial | Espera, progresso e intervalo não analisado; recuperação localizada pendente | H13/H16/H25/H26/H32; H29 continua aberta para um dashboard com métricas ou trabalhos antigos | Entrega 5, T03 (R02/R05); Entrega 6, PF02 |
-| E06-P04A/B/C/D/V/S | lista, trilhas e mosaico de resultados, com seleção | T01/A04: localizar, revisar e obter material | Busca e filtros na alternativa A, detalhe com origem/contexto, seleção e CSV; alternativas em exploração | H10/H25/H28; RC04/RC05/RC08/RC09 | Entrega 5, T01 (R01/R04); Entrega 6, PF03/PF04 |
+| E06-P01/P02 | entrada e conferência de arquivos de exemplo | A01, precondição de T03 | Carregar os quatro tempos de exemplo, conferir e retirar entradas antes de iniciar; envio de arquivos próprios não é suportado | H08/H13/H16; preparo das entradas para R02/R05 | Entrega 6, PF01 |
+| E06-P03 | acompanhamento do lote | A02/T03: acompanhar a análise, com cobertura parcial | Espera, progresso e revelação simulada dos eventos anotados; falhas de processamento e recuperação localizada não estão representadas | H13/H16/H25/H26/H32; H29 continua aberta para um dashboard com métricas ou trabalhos antigos | Entrega 5, T03 (R02/R05); Entrega 6, PF02 |
+| E06-P04A/B/C/D/V/S | lista, trilhas e mosaico de resultados, com seleção | T01/A04: localizar, revisar e obter material | Busca e filtros na alternativa A, detalhe com origem, player nativo, seleção, download de MP4 e exportação de CSV; alternativas em exploração | H10/H25/H28; RC04/RC05/RC08/RC09 | Entrega 5, T01 (R01/R04); Entrega 6, PF03/PF04 |
 | PENDENTE | histórico com busca/filtros | A03: consultar o histórico de resultados; T pendente | Localizar resultados anteriores, falhas e reprocessamentos | H15 aberta; validar nas Entregas 5 e 7 | Entrega 1, seção 8 |
 | não adotado | administração/CRUD | Nenhuma tarefa do editor identificada | não se aplica | Exemplo do template; administração e parâmetros técnicos estão fora do recorte (Entrega 1, seções 8 e 11) | não se aplica |
 
@@ -164,6 +168,10 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
 
 ## Histórico de atualização da rastreabilidade
+
+- 22/10/2026: encerrada a Entrega 6 nesta iteração após o walkthrough conduzido por Pedro com U01. Registrados transcrição automática, feedback anonimizado, ajuda durante o uso e limite da evidência sobre MP4. E06-O01 a E06-O06 fundamentam D01 a D06, com revisões documentais do roteiro aplicadas e melhorias de interface previstas para a próxima iteração. Índice e checklist atualizados; hipóteses do público profissional continuam abertas.
+
+- 22/10/2026: sincronizada a cobertura da Entrega 6 com o protótipo no commit 74041d3e. Registrados os quatro tempos SoccerNet de duas partidas, a análise simulada, a ausência de envio de arquivos próprios, os controles nativos no player e os downloads de MP4 e CSV. A sessão com participante permanece pendente; não houve mudança de status da entrega.
 
 - 16/10/2026: corrigida a divergência entre contexto na prévia e intervalo no CSV. Detalhe, prévia, durações e exportação agora usam o corte com até cinco segundos de contexto de cada lado, limitado ao vídeo de origem; o lance mantém timecodes próprios. Correção por Opus a pedido de Pedro e documentação sincronizada após verificações técnicas. Walkthrough e revisões formativas continuam pendentes.
 

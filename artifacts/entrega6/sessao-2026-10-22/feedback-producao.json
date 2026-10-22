@@ -1,0 +1,30 @@
+{
+  "consultado_em": "2026-10-22T22:47:49.260805+00:00",
+  "banco": "ihc-feedback",
+  "ambiente": "producao",
+  "feedbacks": [
+    {
+      "id": 1,
+      "criado_em": "2026-10-22T22:45:39.868Z",
+      "versao": "2026-10-21",
+      "respostas": {
+        "perfil": "nunca",
+        "modo": "acompanhado",
+        "t1": "sim",
+        "t2": "sim",
+        "t3": "sim",
+        "t4": "sim",
+        "travou": "Após o processamento dos lances ser terminado não ficou claro para mim se deveria mudar de página manualmente usando as setas ou se alguma coisa ainda iria acontecer na página.",
+        "variante": "A",
+        "variante_porque": "Achei as labels de Trilhas por partida um pouco confusas. O Mosaico estava bom, mas imagino que possa ser difícil selecionar os vídeos caso tenha muitos lances devido ao carrossel.",
+        "download": "Um único vídeo com todos os Highlights ou, pelo menos, os Highlights separados.",
+        "geral": ""
+      },
+      "participante": "U01"
+    }
+  ],
+  "anonimizado": true,
+  "campos_omitidos": [
+    "nome"
+  ]
+}
