@@ -90,7 +90,6 @@ h3{margin:0;font-size:16px;font-weight:500}
 .t3-note{position:absolute;top:12px;left:0;right:0;margin:0;text-align:center}
 .pv-top{position:absolute;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;gap:8px}
 .pill{background:rgba(255,255,255,.88);backdrop-filter:blur(8px);padding:5px 12px;border-radius:9999px;font-size:12.5px;display:flex;gap:7px;align-items:center;max-width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pv-fr{position:absolute;right:12px;bottom:14px}
 .pv-chips{position:absolute;left:0;right:0;bottom:54px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:0 12px}
 .chip2{display:flex;align-items:center;gap:10px;padding:6px 14px;border-radius:9999px;background:#fff;box-shadow:0 0 0 1px var(--c),0 6px 18px rgba(0,0,0,.08);font-size:13px;animation:rise .3s ease-out;transition:opacity .3s,transform .3s}
 .chip2.out{opacity:0;transform:translateY(6px)}
@@ -257,8 +256,8 @@ h3{margin:0;font-size:16px;font-weight:500}
   <section class="screen" id="t3" hidden>
     <div class="t3-top"><button class="btn pri" id="restart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>Reiniciar análise</button></div>
     <div class="previews"><p class="meta t3-note">Simulação: nenhum modelo assiste ao vídeo. As prévias tocam em 2× os trechos anotados no SoccerNet e revelam cada lance no instante anotado.</p><div class="pvg">
-      <div class="pv" id="pv0"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-fr" data-f></span></div>
-      <div class="pv" id="pv1"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-fr" data-f></span></div>
+      <div class="pv" id="pv0"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div></div>
+      <div class="pv" id="pv1"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div></div>
     </div></div>
     <div class="tracks">
       <div class="tl"><span>Highlights revelados · anotações do SoccerNet</span><span id="k-hl"></span></div>
@@ -477,13 +476,12 @@ function sync(){
 function tick(){
   A.slots.forEach(l=>{if(!l)return;advance(l);if(l.ph==='done'){l.v.st='pronto';A.slots[l.s]=null}});
   fill();
-  A.slots.forEach(l=>{if(l?.ph==='load')advance(l)});
   if(S.tela===3)paintT3();
   A.raf=A.state==='running'?requestAnimationFrame(tick):0;
 }
 function fill(){
   // vídeos pares à esquerda, ímpares à direita: com os quatro tempos, os dois de cada partida ficam lado a lado
-  for(let s=0;s<2;s++)if(!A.slots[s]){const n=V.find((v,k)=>k%2===s&&v.st==='aguardando');if(n){n.st='processando';A.slots[s]=A.last[s]=lane(n,s)}}
+  for(let s=0;s<2;s++)if(!A.slots[s]){const n=V.find((v,k)=>k%2===s&&v.st==='aguardando');if(n){n.st='processando';advance(A.slots[s]=A.last[s]=lane(n,s))}}
   if(A.state==='running'&&!A.slots[0]&&!A.slots[1])A.state='done';
 }
 function finishAll(){
@@ -543,18 +541,17 @@ function buildTracks(){
 }
 function paintT3(){
   [0,1].forEach(s=>{
-    const l=A.slots[s]||A.last[s],pv=$('#pv'+s),img=pv.querySelector('img'),idle=pv.querySelector('.pv-idle'),f=pv.querySelector('[data-f]');
+    const l=A.slots[s]||A.last[s],pv=$('#pv'+s),img=pv.querySelector('img'),idle=pv.querySelector('.pv-idle'),st=pv.querySelector('[data-s]');
     pv.querySelector('.pv-top').hidden=!l;
     idle.hidden=!!l;
-    if(!l){idle.textContent='Sem vídeo nesta prévia';pv.style.removeProperty('--c');img.hidden=f.hidden=true;return}
-    const v=l.v,h=l.segs[l.i]||l.segs.at(-1),n=l.segs.length;
+    if(!l){idle.textContent='Sem vídeo nesta prévia';pv.style.removeProperty('--c');img.hidden=true;return}
+    const v=l.v,h=l.segs[l.i]||l.segs.at(-1);
     pv.style.setProperty('--c',v.c);
     img.hidden=l.ph==='play'||!h;
     if(h&&img.dataset.id!==h.id){img.dataset.id=h.id;img.src=h.media.poster;img.alt=`Quadro do corte: ${h.media.title}`}
-    f.hidden=l.ph!=='play';
-    if(l.ph==='play')f.textContent=`Corte anotado ${l.i+1} de ${n} · ${RATE}×`;
     pv.querySelector('[data-n]').innerHTML=`<i class="dot"></i>${esc(v.m.name)} · ${v.half}º tempo`;
-    pv.querySelector('[data-s]').textContent=l.err?`Erro · ${l.err}`:{load:'Carregando trecho',play:'Processando',done:'Pronto'}[l.ph];
+    st.hidden=l.ph==='play'&&!l.err;
+    st.textContent=l.err?`Erro · ${l.err}`:{load:'Carregando trecho',play:'',done:'Pronto'}[l.ph];
   });
   V.forEach(v=>{const f=document.getElementById('sf'+v.i);if(f)f.style.width=v.prog*100+'%'});
   const n=done().length,c={pronto:0,processando:0,aguardando:0};V.forEach(v=>c[v.st]++);
