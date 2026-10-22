@@ -6,9 +6,14 @@
 <title>PROTÓTIPO descartável · Fluxo de highlights</title>
 <!--
   PROTÓTIPO DESCARTÁVEL (Entrega 06). Não é código de produção.
-  Plano: as 4 telas do esboço em tldraw (Enviar → Vídeos → Análise → Base), com dados fictícios.
+  Plano: as 4 telas do esboço em tldraw (Enviar → Vídeos → Análise → Base).
+  Clipes reais, análise simulada: media/manifest.json descreve os quatro tempos de duas partidas do SoccerNet-v2
+  (224p) e os 8 cortes publicados em media/. A Tela 3 toca os cortes de cada tempo em 2× e revela a anotação do
+  SoccerNet quando o vídeo passa pelo instante anotado; nenhum modelo roda aqui. Os tempos completos nunca são
+  publicados nem baixados. Os cortes são baixados a partir do clique nos exemplos e guardados na Cache API.
+  Precisa ser servido por HTTP (o manifesto é lido com fetch): python3 -m http.server nesta pasta, ou o site/.
   A Tela 4 ("???" no esboço, "Base de dados de highlights") tem 3 variantes, trocadas por
-  ?variant=A|B|C ou pelo seletor ao lado de "Baixar cortes". Abrir com duplo clique; nada é salvo.
+  ?variant=A|B|C ou pelo seletor ao lado de "Baixar CSV". Nada é salvo.
   As setas ← → trocam de tela. Atalho de URL: ?tela=1..4
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -57,7 +62,7 @@ h3{margin:0;font-size:16px;font-weight:500}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:32px 0 40px}
 .vcard{background:var(--s1);border-radius:24px;padding:8px 8px 16px;position:relative;display:flex;flex-direction:column}
 .th{position:relative;border-radius:16px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
-.th canvas{width:100%;aspect-ratio:16/9;display:block}
+.th img{width:100%;height:auto;aspect-ratio:16/9;display:block;object-fit:cover;background:var(--s2)}
 .dur{position:absolute;right:8px;bottom:8px;font-size:12px;background:rgba(255,255,255,.9);padding:2px 8px;border-radius:9999px}
 .vname{display:flex;gap:8px;align-items:center;margin:12px 8px 2px;font-weight:500;font-size:14px;min-width:0}
 /* reticências no meio, como no Finder: o fim do nome (tempo e extensão) fica sempre visível */
@@ -74,25 +79,22 @@ h3{margin:0;font-size:16px;font-weight:500}
 /* ocupa a janela inteira: prévias crescem no espaço livre, trilhas presas embaixo */
 #t3{position:fixed;inset:0;display:flex;flex-direction:column;gap:16px;padding:16px 48px 40px;background:var(--bg)}
 .t3-top{display:flex;align-items:center;gap:12px;flex:none}
-.t3-warn{position:absolute;z-index:2;left:50%;top:calc((100cqh - 48px - min(100cqh - 48px, (100cqw - 12px) * 9 / 32)) / 2);translate:-50% 0;margin:0;display:flex;align-items:center;gap:8px;height:36px;padding:0 16px 0 12px;border-radius:9999px;background:rgba(229,72,77,.08);color:#a3262b;font-size:13.5px;white-space:nowrap;animation:rise .25s}
-.t3-warn b{font-weight:500}
 .previews{position:relative;flex:1;min-height:0;container-type:size}
 .pvg{height:100%;padding-top:48px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1fr);gap:12px}
 .pvg .pv{width:min(100%,calc((100cqh - 48px) * 16 / 9));align-self:center}
 .pvg .pv:first-child{justify-self:end}
 .pvg .pv:last-child{justify-self:start}
-.pv{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 0 0 2px var(--c,transparent);background:var(--s1);transition:box-shadow .4s}
-.pv canvas{width:100%;aspect-ratio:16/9;display:block}
+.pv{position:relative;aspect-ratio:16/9;border-radius:24px;overflow:hidden;box-shadow:0 0 0 2px var(--c,transparent);background:var(--s1);transition:box-shadow .4s}
+.pv img,.pv video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pv video{background:#000}
+.t3-note{position:absolute;top:12px;left:0;right:0;margin:0;text-align:center}
 .pv-top{position:absolute;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;gap:8px}
 .pill{background:rgba(255,255,255,.88);backdrop-filter:blur(8px);padding:5px 12px;border-radius:9999px;font-size:12.5px;display:flex;gap:7px;align-items:center;max-width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pv-tc{position:absolute;left:12px;bottom:14px}
 .pv-chips{position:absolute;left:0;right:0;bottom:54px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:0 12px}
 .chip2{display:flex;align-items:center;gap:10px;padding:6px 14px;border-radius:9999px;background:#fff;box-shadow:0 0 0 1px var(--c),0 6px 18px rgba(0,0,0,.08);font-size:13px;animation:rise .3s ease-out;transition:opacity .3s,transform .3s}
 .chip2.out{opacity:0;transform:translateY(6px)}
 @keyframes rise{from{opacity:0;transform:translateY(8px)}}
-.pv-bar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(10,10,10,.06)}
-.pv-bar i{display:block;height:100%;width:0;background:var(--c)}
-.pv-idle{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px}
+.pv-idle{position:absolute;inset:0;display:grid;place-items:center;padding:0 24px;text-align:center;color:var(--muted);font-size:14px}
 .tracks{flex:none}
 .tl{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin:14px 4px 6px}
 .tl:first-child{margin-top:0}
@@ -115,16 +117,12 @@ h3{margin:0;font-size:16px;font-weight:500}
 .seg:last-child{border-right:0}
 .seg>i{position:absolute;inset:0 auto 0 0;width:0;background:var(--c)}
 .seg>span{position:absolute;left:8px;top:6px;font-size:11px;font-weight:600;color:var(--text);opacity:.55}
-.seg .gap{position:absolute;top:0;bottom:0;background:#fff;box-shadow:inset 2px 0 #e5484d,inset -2px 0 #e5484d}
 #tr-all>i{position:absolute;inset:0 auto 0 0;width:0;background:var(--text)}
 #tr-all>span{position:absolute;inset:0;display:grid;place-items:center;font-weight:500;font-size:14px;color:#fff;mix-blend-mode:difference}
 .fly{position:fixed;z-index:50;width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 25%,transparent),0 0 20px color-mix(in srgb,var(--c) 60%,transparent);transition:transform .75s cubic-bezier(.55,0,.2,1);pointer-events:none}
 
 /* Tela 4: comum */
-.warn>span{flex:1}
-.warn-x{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;flex:none;transition:background .14s}
-.warn-x:hover{background:rgba(229,72,77,.1)}
-.warn{display:flex;align-items:center;gap:12px;margin:20px 0 0;padding:6px 6px 6px 18px;border-radius:16px;background:rgba(229,72,77,.06);font-size:13.5px;color:#a3262b}
+.warn{display:block;max-width:672px;margin:20px auto 0;padding:10px 18px;border-radius:16px;background:rgba(229,72,77,.06);font-size:13.5px;color:#a3262b}
 .chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .chips.left{justify-content:flex-start}
 .chip{height:34px;padding:0 14px;border-radius:9999px;background:var(--s2);font-size:13.5px;display:flex;align-items:center;gap:7px;transition:background .14s}
@@ -143,20 +141,21 @@ h3{margin:0;font-size:16px;font-weight:500}
 .det{display:grid;gap:14px}
 .det.wide{grid-template-columns:1.45fr 1fr;gap:24px;align-items:start}
 .det-pv{position:relative;border-radius:16px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
-.det-pv canvas{width:100%;aspect-ratio:16/9;display:block}
-.det-tc{position:absolute;left:10px;bottom:10px;font-size:12px;background:rgba(255,255,255,.9);padding:3px 9px;border-radius:9999px}
-.det-ph{position:absolute;right:10px;top:10px;font-size:11px;font-weight:600;letter-spacing:.04em;padding:3px 10px;border-radius:9999px;background:var(--c);color:#fff}
-.det-ph.ctxt{background:rgba(255,255,255,.9);color:var(--muted)}
+.det-pv img,.det-pv video{width:100%;height:auto;aspect-ratio:16/9;display:block;object-fit:cover;background:#000}
+.play{position:absolute;left:50%;top:50%;translate:-50% -50%;max-width:calc(100% - 24px);min-height:40px;padding:8px 18px;border-radius:9999px;background:rgba(10,10,10,.82);color:#fff;font-size:14px;transition:background .14s}
+.play:hover{background:#0a0a0a}
+.play:disabled{cursor:default}
+.det-tc{position:absolute;left:10px;top:10px;font-size:12px;background:rgba(255,255,255,.9);padding:3px 9px;border-radius:9999px}
 .det-k{display:flex;align-items:center;gap:8px;font-size:24px;font-weight:500;letter-spacing:-.01em}
+.det-desc{margin:10px 0 0;font-size:14.5px}
 .kv{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:16px 0}
 .kv div{background:var(--fill);border-radius:12px;padding:8px 12px}
 .kv dt{font-size:11.5px;color:var(--muted)}
 .kv dd{margin:0;font-weight:500}
 .ctx{position:relative;display:flex;height:10px;border-radius:9999px;overflow:hidden;background:var(--fill)}
-.ctx .a,.ctx .b{background:rgba(10,10,10,.1)}
-.ctx .c{background:var(--c)}
-.ctx i{position:absolute;top:0;bottom:0;width:2px;background:var(--text);box-shadow:0 0 0 1px #fff}
-.ctx-l{display:flex;justify-content:space-between;font-size:11.5px;color:var(--dim);margin-top:6px}
+.ctx i{position:absolute;top:0;bottom:0;width:4px;margin-left:-2px;background:var(--c)}
+.ctx-l{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;font-size:11.5px;color:var(--dim);margin-top:6px}
+.ctx-l>span:nth-child(2){text-align:center}
 .det-act{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap}
 .file{font-size:12.5px;color:var(--dim);word-break:break-all}
 
@@ -186,7 +185,6 @@ h3{margin:0;font-size:16px;font-weight:500}
 .lane-t{position:relative;height:48px;border-radius:14px;background:#fff}
 .tk{position:absolute;top:0;bottom:0;border-left:1px solid var(--line)}
 .tk span{position:absolute;top:4px;left:5px;font-size:10px;color:var(--dim)}
-.gapz{position:absolute;top:0;bottom:0;background:rgba(229,72,77,.07);box-shadow:inset 1px 0 #e5484d,inset -1px 0 #e5484d}
 .bm{position:absolute;top:50%;transform:translate(-50%,-50%);height:28px;padding:0 10px;border-radius:9999px;background:color-mix(in srgb,var(--c) 12%,#fff);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 55%,#fff);color:color-mix(in srgb,var(--c) 75%,#000);font-size:10.5px;font-weight:600;letter-spacing:.04em;z-index:1;transition:background .14s}
 .bm:hover{background:color-mix(in srgb,var(--c) 24%,#fff)}
 .bm.sel{background:var(--c);color:#fff;box-shadow:none}
@@ -200,11 +198,11 @@ h3{margin:0;font-size:16px;font-weight:500}
 .vc-row h3 span{color:var(--muted);font-size:15px;font-weight:400}
 .vc-strip{display:flex;gap:12px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#d5d9e2 transparent}
 .tile{flex:0 0 272px;position:relative;border-radius:20px;overflow:hidden;cursor:pointer;scroll-snap-align:start;background:var(--s1)}
-.tile canvas{width:100%;aspect-ratio:16/9;display:block;transition:transform .3s cubic-bezier(.25,1,.5,1)}
-.tile:hover canvas{transform:scale(1.04)}
+.tile img{width:100%;height:auto;aspect-ratio:16/9;display:block;object-fit:cover;transition:transform .3s cubic-bezier(.25,1,.5,1)}
+.tile:hover img{transform:scale(1.04)}
 .tile::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--c)}
 .tile-ov{position:absolute;left:0;right:0;bottom:0;padding:30px 12px 11px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.94) 55%);font-size:13px}
-.tile-ov span{display:block;color:var(--muted);font-size:12px}
+.tile-ov>span{display:block;color:var(--muted);font-size:12px}
 .tick-btn{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.85);box-shadow:inset 0 0 0 1.5px rgba(10,10,10,.18);color:transparent;font-size:14px;font-weight:700}
 .tick-btn:hover{color:rgba(10,10,10,.4)}
 .tick-btn.on{background:var(--text);color:#fff;box-shadow:none}
@@ -227,7 +225,7 @@ h3{margin:0;font-size:16px;font-weight:500}
 </style>
 </head>
 <body>
-<span class="proto">Protótipo · dados fictícios</span>
+<span class="proto">Clipes reais · análise simulada</span>
 <p class="tip">Use ← → para navegar entre as telas</p>
 
 <main>
@@ -238,9 +236,10 @@ h3{margin:0;font-size:16px;font-weight:500}
       <input type="file" id="file" accept="video/*" multiple hidden>
       <span class="drop-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span>
       <strong>Arraste ou selecione os vídeos</strong>
-      <span class="meta">Vários arquivos de uma vez</span>
+      <span class="meta">Envio de arquivos não é suportado nesta demonstração</span>
     </label>
-    <p class="center" style="margin-top:20px"><button class="link" id="use-mock">ou use 8 vídeos de exemplo</button></p>
+    <p class="center" style="margin-top:20px"><button class="link" id="use-mock" disabled>Carregando vídeos de exemplo…</button></p>
+    <p class="warn" id="mf-err" role="alert" hidden></p>
   </section>
 
   <!-- Tela 2: vídeos selecionados -->
@@ -256,16 +255,16 @@ h3{margin:0;font-size:16px;font-weight:500}
   <!-- Tela 3: só prévias e trilhas -->
   <section class="screen" id="t3" hidden>
     <div class="t3-top"><button class="btn pri" id="restart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>Reiniciar análise</button></div>
-    <div class="previews"><p class="t3-warn" id="t3-warn" role="status" hidden></p><div class="pvg">
-      <div class="pv" id="pv0"><canvas width="640" height="360"></canvas><div class="pv-idle" hidden>Sem vídeo nesta prévia</div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-tc mono" data-t></span><div class="pv-bar"><i></i></div></div>
-      <div class="pv" id="pv1"><canvas width="640" height="360"></canvas><div class="pv-idle" hidden>Sem vídeo nesta prévia</div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div><span class="pill pv-tc mono" data-t></span><div class="pv-bar"><i></i></div></div>
+    <div class="previews"><p class="meta t3-note">Simulação: nenhum modelo assiste ao vídeo. As prévias tocam em 2× os trechos anotados no SoccerNet e revelam cada lance no instante anotado.</p><div class="pvg">
+      <div class="pv" id="pv0"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div></div>
+      <div class="pv" id="pv1"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div></div>
     </div></div>
     <div class="tracks">
-      <div class="tl"><span>Highlights detectados</span><span id="k-hl"></span></div>
+      <div class="tl"><span>Highlights revelados · anotações do SoccerNet</span><span id="k-hl"></span></div>
       <div class="track" id="tr-hl"></div>
-      <div class="tl"><span>Progresso da análise por vídeo</span><span id="k-vid"></span></div>
+      <div class="tl"><span>Progresso da análise simulada por vídeo</span><span id="k-vid"></span></div>
       <div class="track" id="tr-vid"></div>
-      <div class="tl"><span>Progresso geral da análise</span><span id="k-all"></span></div>
+      <div class="tl"><span>Progresso geral da análise simulada</span><span id="k-all"></span></div>
       <div class="track" id="tr-all"><i></i><span></span></div>
     </div>
   </section>
@@ -274,9 +273,8 @@ h3{margin:0;font-size:16px;font-weight:500}
   <section class="screen" id="t4" hidden>
     <div class="head">
       <div><h1>Base de highlights</h1><p class="sub" id="t4-sub"></p></div>
-      <button class="btn pri" id="dl" disabled>Baixar cortes (0)</button>
+      <button class="btn pri" id="dl" disabled>Baixar CSV (0)</button>
     </div>
-    <div class="warn" id="t4-warn" hidden></div>
     <div class="shell"><nav class="vt" id="vt" aria-label="Visualização"></nav><div id="vroot"></div></div>
   </section>
 </main>
@@ -288,125 +286,240 @@ h3{margin:0;font-size:16px;font-weight:500}
 const $=s=>document.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const mid=(s,k=12)=>s.length<=k+3?esc(s):`<span class="mid" title="${esc(s)}"><span>${esc(s.slice(0,-k))}</span><span>${esc(s.slice(-k))}</span></span>`;
-const tc=s=>{s=Math.max(0,Math.round(s));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
+// arredonda para baixo, como o relógio da anotação: 604,24 s vira 10:04, igual ao gameTime
+const tc=s=>{s=Math.max(0,Math.floor(s));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
 const hm=s=>`${Math.floor(s/3600)} h ${String(Math.round(s%3600/60)).padStart(2,'0')} min`;
+const mb=b=>(b/1e6).toLocaleString('pt-BR',{maximumFractionDigits:1})+' MB';
+const day=d=>d.split('-').reverse().join('/');
 const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
-const hexA=(h,a)=>{const n=parseInt(h.slice(1),16);return `rgba(${n>>16},${n>>8&255},${n&255},${a})`};
-const hash=s=>{let h=2166136261;for(const c of String(s))h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0};
-const rng=s=>()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
-const WARN_I='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>';
 let toastT;
-function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,3200)}
+function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,4200)}
 
-// ---------- dados fictícios ----------
-const COLORS=['#14a37f','#3b6cf6','#e8a317','#e5484d','#8b5cf6','#5c9e0f','#ff6a08','#0ea5c6'];
-const MATCHES=[
-  {name:'Final Estadual',teams:['Tigres','Leões'],slug:'Final_Estadual'},
-  {name:'Semifinal · ida',teams:['Porto','Vila Nova'],slug:'Semifinal_ida'},
-  {name:'Amistoso Sub-17',teams:['Atlético Sul','União'],slug:'Amistoso_Sub17'},
-  {name:'Rodada 7',teams:['Ferroviário','Estrela'],slug:'Rodada7_Ferroviario_x_Estrela'},
-];
-const DURS=[2832,2885,2790,2911,2744,2860,2805,2938];
-const TYPES=[{k:'Gol',a:'GOL',w:2},{k:'Finalização',a:'FIN',w:4},{k:'Defesa',a:'DEF',w:3},{k:'Escanteio',a:'ESC',w:2},{k:'Falta',a:'FAL',w:2},{k:'Cartão',a:'CAR',w:1}];
-const MOCK_NAMES=MATCHES.flatMap(m=>[`${m.slug}_1T.mp4`,`${m.slug}_2T.mp4`]);
-const CTX=5, PROC=6500; // segundos de contexto; ms simulados por vídeo
-// O corte baixado inclui o contexto, limitado ao início e ao fim do vídeo de origem.
-const clip=h=>{const a=Math.max(0,h.t-CTX),b=Math.min(h.v.dur,h.t+h.dur+CTX);return {a,b,dur:b-a,pre:h.t-a,post:b-h.t-h.dur}};
+// ---------- dados reais: media/manifest.json ----------
+const MANIFEST='media/manifest.json';
+const COLORS=['#14a37f','#3b6cf6','#e8a317','#e5484d'];
+const RATE=2; // velocidade dos cortes na Tela 3
+let MF=null, MF_ERR=null, MATCHES=[], TYPES=[];
 let V=[], H=[], HM={};
 const SEL=new Set();
+// limites exatos do corte publicado, em segundos do arquivo de origem; a anotação é um instante dentro dele
+const clip=h=>({a:h.media.cutStartSeconds,b:h.media.cutEndSeconds,dur:h.media.durationSeconds,ev:h.media.eventClipSeconds});
 
-function load(names){
-  V=names.slice(0,8).map((name,i)=>({i,name,m:MATCHES[i>>1],half:i%2+1,dur:DURS[i],c:COLORS[i],gap:i===3?[720,890]:null,prog:0,st:'aguardando'}));
-  const r=rng(16), tw=TYPES.reduce((a,t)=>a+t.w,0);
-  const pick=()=>{let x=r()*tw;for(const t of TYPES){if((x-=t.w)<0)return t}return TYPES[0]};
-  H=[];
-  V.forEach(v=>{
-    const n=4+Math.floor(r()*3), ts=[];
-    for(let g=0;ts.length<n&&g<300;g++){const t=90+r()*(v.dur-180);if(ts.every(x=>Math.abs(x-t)>150)&&!(v.gap&&t>v.gap[0]-30&&t<v.gap[1]))ts.push(Math.round(t))}
-    ts.sort((a,b)=>a-b).forEach((t,k)=>H.push({id:`h${v.i}-${k}`,v,type:pick(),t,dur:8+Math.floor(r()*13),found:false,done:false}));
+async function loadManifest(){
+  try{
+    const r=await fetch(MANIFEST);
+    if(!r.ok)throw new Error(`HTTP ${r.status}`);
+    MF=await r.json();
+    if(!MF.sources?.length||!MF.clips?.length)throw new Error('manifesto sem sources ou clips');
+  }catch(e){MF=null;MF_ERR=e.message||String(e)}
+  const b=$('#use-mock');
+  if(MF){pruneCache().catch(()=>{});b.disabled=false;b.textContent=`ou use os ${MF.sources.length} tempos de exemplo · ${new Set(MF.sources.map(s=>s.match)).size} partidas do SoccerNet`;return}
+  b.hidden=true;
+  $('#mf-err').hidden=false;
+  $('#mf-err').textContent=`Não foi possível carregar ${MANIFEST} (${MF_ERR}). Sirva a pasta do protótipo por HTTP, por exemplo com python3 -m http.server, em vez de abrir o arquivo direto.`;
+}
+function load(){
+  const byMatch=new Map();
+  V=MF.sources.map((s,i)=>{
+    if(!byMatch.has(s.match))byMatch.set(s.match,{name:s.matchName,teams:s.teams,date:s.date});
+    return {i,id:s.id,name:s.file.split('/').pop(),m:byMatch.get(s.match),half:s.half,dur:s.durationSeconds,c:COLORS[i%COLORS.length],src:s,prog:0,st:'aguardando'};
   });
+  MATCHES=[...byMatch.values()];
+  TYPES=[...new Set(MF.clips.map(c=>c.type))].map(k=>({k,a:k.slice(0,3).toUpperCase()}));
+  H=MF.clips.map(c=>({id:c.id,v:V.find(v=>v.id===c.sourceId),media:c,type:TYPES.find(t=>t.k===c.type),t:c.eventSourceSeconds,found:false,done:false}));
   HM=Object.fromEntries(H.map(h=>[h.id,h]));
-  SEL.clear(); resetAnalysis();
+  SEL.clear(); resetAnalysis(); prefetch();
 }
 const total=()=>V.reduce((a,v)=>a+v.dur,0);
 const off=v=>{let a=0;for(const x of V){if(x===v)return a;a+=x.dur}return a};
 const done=()=>H.filter(h=>h.done);
+const when=h=>`${h.v.half}º tempo · jogo <span class="mono">${esc(h.media.matchTime)}</span>`;
+const poster=(h,alt='')=>`<img src="${esc(h.media.poster)}" alt="${esc(alt)}" width="398" height="224">`;
 
-// ---------- prévia desenhada (campo + jogadores) ----------
-function drawPitch(ctx,W,H_,c,t,seed){
-  ctx.fillStyle='#f1f2ee';ctx.fillRect(0,0,W,H_);
-  for(let i=0;i<12;i++){ctx.fillStyle=i%2?'rgba(10,10,10,.012)':'rgba(10,10,10,.035)';ctx.fillRect(i*W/12,0,W/12+1,H_)}
-  ctx.fillStyle=hexA(c,.07);ctx.fillRect(0,0,W,H_);
-  const fx=W*.06,fy=H_*.1,fw=W-2*fx,fh=H_-2*fy;
-  ctx.strokeStyle='rgba(10,10,10,.14)';ctx.lineWidth=Math.max(1,W/400);
-  ctx.strokeRect(fx,fy,fw,fh);
-  ctx.beginPath();ctx.moveTo(W/2,fy);ctx.lineTo(W/2,fy+fh);ctx.stroke();
-  ctx.beginPath();ctx.arc(W/2,H_/2,fh*.17,0,7);ctx.stroke();
-  ctx.strokeRect(fx,H_/2-fh*.23,fw*.13,fh*.46);ctx.strokeRect(fx+fw*.87,H_/2-fh*.23,fw*.13,fh*.46);
-  const r=rng(seed);
-  for(let i=0;i<20;i++){
-    const bx=fx+fw*(.08+.84*r()),by=fy+fh*(.1+.8*r()),ph=r()*6.28,sp=.25+r()*.6;
-    ctx.fillStyle=i<10?c:'#2b2f36';
-    ctx.beginPath();ctx.arc(bx+Math.sin(t*sp+ph)*W*.05,by+Math.cos(t*sp*.8+ph)*H_*.05,Math.max(2,W/130),0,7);ctx.fill();
+// ---------- mídia: cada corte é baixado uma vez e guardado na Cache API ----------
+// O blob inteiro contorna o wrangler dev local, que responde MP4 sem Content-Length (sem ele o Chrome não deixa
+// buscar no vídeo). A chave leva o sha256 do manifesto, então um corte reextraído vira outra entrada.
+const CACHE='ihc-cortes';
+const BLOBS=new Map(),READY=new Map();
+const ckey=c=>new URL(`${c.src}?sha256=${c.sha256}`,location.href).href;
+const openCache=()=>'caches' in self?caches.open(CACHE).catch(()=>null):Promise.resolve(null);
+function clipBlob(c){
+  if(!BLOBS.has(c.id))BLOBS.set(c.id,(async()=>{
+    const cache=await openCache(),key=ckey(c);
+    const hit=await cache?.match(key).then(r=>r?.blob()).catch(()=>null);
+    if(hit?.size===c.sizeBytes)return hit;
+    const r=await fetch(c.src);
+    if(!r.ok)throw new Error(`HTTP ${r.status}`);
+    const b=await r.blob();
+    if(b.size!==c.sizeBytes)throw new Error(`${b.size} de ${c.sizeBytes} bytes`);
+    await cache?.put(key,new Response(b,{headers:{'content-type':'video/mp4'}})).catch(()=>{});
+    return b;
+  })().then(b=>(READY.set(c.id,b),b),e=>{BLOBS.delete(c.id);throw e}));
+  return BLOBS.get(c.id);
+}
+async function pruneCache(){
+  const cache=await openCache();if(!cache)return;
+  const keep=new Set(MF.clips.map(ckey));
+  for(const r of await cache.keys())if(!keep.has(r.url))await cache.delete(r);
+}
+const route=v=>H.filter(h=>h.v===v).sort((a,b)=>a.media.cutStartSeconds-b.media.cutStartSeconds);
+// baixa na ordem em que a Tela 3 vai precisar (rodada de prévias, corte, prévia), dois por vez
+function prefetch(){
+  const q=V.flatMap((v,k)=>route(v).map((h,j)=>({h,o:[k>>1,j,k]}))).sort((a,b)=>a.o[0]-b.o[0]||a.o[1]-b.o[1]||a.o[2]-b.o[2]).map(x=>x.h);
+  const pull=()=>{const h=q.shift();if(h)clipBlob(h.media).catch(()=>{}).then(pull)};
+  pull();pull();
+}
+
+// ---------- reprodução na Tela 4: um corte por vez ----------
+const PLAY='▶ Reproduzir corte';
+const P={gen:0,url:null,video:null,box:null};
+function stopMedia(){
+  P.gen++;
+  if(P.video){P.video.pause();P.video.removeAttribute('src');P.video.load();P.video.remove()}
+  if(P.url)URL.revokeObjectURL(P.url);
+  if(P.box?.isConnected){P.box.querySelector('img').hidden=false;const b=P.box.querySelector('[data-play]');b.hidden=false;b.disabled=false;b.textContent=PLAY}
+  Object.assign(P,{url:null,video:null,box:null});
+}
+async function play(btn){
+  const box=btn.closest('[data-player]'),c=HM[box.dataset.player].media;
+  stopMedia();
+  const g=P.gen;P.box=box;
+  btn.disabled=true;btn.textContent=`Carregando corte (${mb(c.sizeBytes)})…`;
+  let blob;
+  try{blob=await clipBlob(c)}catch(e){
+    if(g!==P.gen)return;
+    P.box=null;
+    btn.disabled=false;btn.textContent=`Não deu para carregar (${e.message}). Tentar de novo`;
+    return;
   }
-  ctx.fillStyle='#0a0a0a';ctx.beginPath();ctx.arc(W/2+Math.sin(t*.7+seed%7)*fw*.3,H_/2+Math.cos(t*.9)*fh*.25,Math.max(1.5,W/220),0,7);ctx.fill();
+  if(g!==P.gen)return;
+  if(!box.isConnected||!box.getClientRects().length||document.hidden){stopMedia();return}
+  P.url=URL.createObjectURL(blob);
+  const v=P.video=document.createElement('video');
+  v.controls=true;v.playsInline=true;v.poster=c.poster;v.src=P.url;
+  btn.hidden=true;box.querySelector('img').hidden=true;box.prepend(v);
+  v.play().catch(()=>{});
 }
-function paintThumbs(root){
-  $$('canvas[data-thumb]',root).forEach(c=>{const h=HM[c.dataset.thumb];drawPitch(c.getContext('2d'),c.width,c.height,h.v.c,h.t,hash(h.id))});
-  $$('canvas[data-vthumb]',root).forEach(c=>{const v=V.find(x=>x.i===+c.dataset.vthumb);drawPitch(c.getContext('2d'),c.width,c.height,v.c,v.i*3,hash(v.name))});
-}
+new MutationObserver(()=>{if(P.box&&!P.box.isConnected)stopMedia()}).observe($('#t4'),{childList:true,subtree:true});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopMedia();sync()});
 
-// ---------- simulação da análise ----------
-const A={state:'idle',slots:[null,null],last:[null,null],gen:0};
-function resetAnalysis(){A.gen++;$$('.chip2,.fly').forEach(e=>e.remove());A.state='idle';A.slots=[null,null];A.last=[null,null];V.forEach(v=>{v.prog=0;v.st='aguardando'});H.forEach(h=>{h.found=h.done=false})}
-function startAnalysis(){resetAnalysis();A.state='running';fill()}
+// ---------- simulação da análise: revela as anotações do manifesto ----------
+// Cada prévia percorre um tempo tocando, em RATE×, só os cortes anotados, na ordem do arquivo. O relógio é o
+// próprio vídeo: progresso e lances leem currentTime.
+const A={state:'idle',slots:[null,null],last:[null,null],gen:0,raf:0};
+// O progresso não segue o tempo do arquivo, que saltaria entre os cortes. Ele é linear por partes no tempo já
+// tocado e passa pela posição de cada anotação no instante em que ela é revelada, então enche sem saltos e
+// alcança cada marcador junto com o lance.
+function knots(v,segs){
+  let T=0;const k=[[0,0]];
+  for(const h of segs){k.push([T+h.media.eventClipSeconds,h.t/v.dur]);T+=h.media.durationSeconds}
+  k.push([T,1]);
+  return k;
+}
+function along(k,x){
+  for(let j=1;j<k.length;j++)if(x<k[j][0]){const [a,p]=k[j-1],[b,q]=k[j];return p+(q-p)*(x-a)/(b-a)}
+  return 1;
+}
+function lane(v,s){
+  const el=$('#pv'+s+' video'),segs=route(v);
+  el.defaultPlaybackRate=RATE;
+  const l={v,s,segs,el,k:knots(v,segs),i:-1,ph:'load',played:0,blob:null,err:null,url:null};
+  el.onerror=()=>{if(el.getAttribute('src'))l.err='o vídeo não pôde ser reproduzido'};
+  next(l);
+  return l;
+}
+// passa ao próximo corte, ou ao fim do arquivo depois do último
+function next(l){
+  if(l.i>=0)l.played+=l.segs[l.i].media.durationSeconds;
+  unload(l);l.i++;l.blob=l.err=null;
+  const h=l.segs[l.i];
+  if(!h){l.ph='done';return}
+  l.ph='load';
+  // um corte já baixado entra no mesmo quadro em que o anterior termina
+  l.blob=READY.get(h.id)||null;
+  const g=A.gen;
+  if(!l.blob)clipBlob(h.media).then(b=>{if(g===A.gen)l.blob=b},e=>{if(g===A.gen)l.err=e.message});
+}
+const BLOCKED='o navegador bloqueou a reprodução automática';
+function play3(l){
+  const g=A.gen;
+  l.el.play().then(()=>{if(g===A.gen&&l.err===BLOCKED)l.err=null},e=>{if(g===A.gen&&e.name==='NotAllowedError')l.err=BLOCKED});
+}
+function unload(l){
+  l.el.pause();l.el.removeAttribute('src');l.el.load();l.el.hidden=true;
+  if(l.url)URL.revokeObjectURL(l.url);l.url=null;
+}
+function advance(l){
+  if(l.ph==='play'&&l.el.ended)next(l);
+  if(l.ph==='load'&&l.blob){
+    l.url=URL.createObjectURL(l.blob);l.el.src=l.url;l.el.hidden=false;l.ph='play';
+    play3(l);
+  }
+  const h=l.segs[l.i],ct=l.ph==='play'?l.el.currentTime:0;
+  if(l.ph==='play'&&!h.found&&ct>=h.media.eventClipSeconds)detect(h,l.s);
+  l.v.prog=l.ph==='done'?1:along(l.k,l.played+ct);
+}
+function resetAnalysis(){
+  A.gen++;cancelAnimationFrame(A.raf);A.raf=0;
+  [...A.slots,...A.last].forEach(l=>l&&unload(l));
+  $$('.chip2,.fly').forEach(e=>e.remove());A.state='idle';A.slots=[null,null];A.last=[null,null];
+  V.forEach(v=>{v.prog=0;v.st='aguardando'});H.forEach(h=>{h.found=h.done=false});
+}
+function startAnalysis(){resetAnalysis();A.state='running';fill();sync()}
+// toca só com a Tela 3 à vista; sair dela ou esconder a aba pausa vídeo e relógio juntos
+function sync(){
+  const on=A.state==='running'&&S.tela===3&&!document.hidden;
+  A.slots.forEach(l=>{if(l?.ph==='play')on?play3(l):l.el.pause()});
+  if(on&&!A.raf)A.raf=requestAnimationFrame(tick);
+  if(!on&&A.raf){cancelAnimationFrame(A.raf);A.raf=0}
+}
+function tick(){
+  A.slots.forEach(l=>{if(!l)return;advance(l);if(l.ph==='done'){l.v.st='pronto';A.slots[l.s]=null}});
+  fill();
+  if(S.tela===3)paintT3();
+  A.raf=A.state==='running'?requestAnimationFrame(tick):0;
+}
 function fill(){
-  for(let s=0;s<2;s++)if(!A.slots[s]){const n=V.find(v=>v.st==='aguardando');if(n){n.st='processando';A.slots[s]=A.last[s]=n}}
+  // vídeos pares à esquerda, ímpares à direita: com os quatro tempos, os dois de cada partida ficam lado a lado
+  for(let s=0;s<2;s++)if(!A.slots[s]){const n=V.find((v,k)=>k%2===s&&v.st==='aguardando');if(n){n.st='processando';advance(A.slots[s]=A.last[s]=lane(n,s))}}
   if(A.state==='running'&&!A.slots[0]&&!A.slots[1])A.state='done';
 }
-function step(dt){
-  A.slots.forEach((v,s)=>{
-    if(!v)return;
-    v.prog=Math.min(1,v.prog+dt/PROC);
-    H.forEach(h=>{if(h.v===v&&!h.found&&h.t/v.dur<=v.prog)detect(h,s)});
-    if(v.prog>=1){v.st='pronto';A.slots[s]=null}
-  });
-  fill();
-}
 function finishAll(){
+  A.gen++;cancelAnimationFrame(A.raf);A.raf=0;
+  A.last.forEach(l=>{if(l){unload(l);Object.assign(l,{ph:'done',i:l.segs.length,err:null})}});
   V.forEach(v=>{v.prog=1;v.st='pronto'});H.forEach(h=>h.found=h.done=true);
   A.slots=[null,null];A.state='done';$$('.chip2').forEach(e=>e.remove());
 }
-// detectado na prévia → voa até a trilha
+// revelado na prévia → voa até a trilha
 function detect(h,s){
   h.found=true;
   if(S.tela!==3){h.done=true;return}
   const el=document.createElement('div');el.className='chip2';el.style.setProperty('--c',h.v.c);
-  el.textContent=`${h.type.k} · ${tc(h.t)}`;
+  el.textContent=`${h.media.title} · jogo ${h.media.matchTime} · anotação “${h.media.annotation.label}”`;
   $(`#pv${s} .pv-chips`).append(el);
   const g=A.gen;setTimeout(()=>{if(g===A.gen)fly(el,h)},1350);
 }
 function fly(el,h){
   if(h.done){el.remove();return}
-  if(S.tela!==3||!el.isConnected){h.done=true;el.remove();addMk(h,false);return}
+  if(S.tela!==3||!el.isConnected){h.done=true;el.remove();addMk(h,false);paintT3();return}
   const a=el.getBoundingClientRect(),tr=$('#tr-hl').getBoundingClientRect();
   const sx=a.left+a.width/2-6,sy=a.top+a.height/2-6,tx=tr.left+tr.width*mkX(h)/100-6,ty=tr.top+tr.height/2-6;
   const d=document.createElement('div');d.className='fly';d.style.setProperty('--c',h.v.c);d.style.left=sx+'px';d.style.top=sy+'px';
   document.body.append(d);
   requestAnimationFrame(()=>requestAnimationFrame(()=>d.style.transform=`translate(${tx-sx}px,${ty-sy}px) scale(.6)`));
-  const g=A.gen;setTimeout(()=>{d.remove();if(g!==A.gen)return;h.done=true;addMk(h,true);el.classList.add('out');setTimeout(()=>el.remove(),320)},780);
+  const g=A.gen;setTimeout(()=>{d.remove();if(g!==A.gen)return;h.done=true;addMk(h,true);paintT3();el.classList.add('out');setTimeout(()=>el.remove(),320)},780);
 }
 const mkX=h=>(off(h.v)+h.t)/total()*100;
 const mk=(h,pop)=>`<i class="mk${pop?' pop-in':''}" id="mk-${h.id}" data-mk="${h.id}" style="left:${mkX(h)}%;--c:${h.v.c}"></i>`;
-// popup de hover nos marcadores: miniatura + atalho para o lance na Tela 4
+// popup de hover nos marcadores: quadro do corte + atalho para o lance na Tela 4
 let hlT=null;
 function hlShow(el){
   clearTimeout(hlT);hlHide(true);
   const h=HM[el.dataset.mk],r=el.getBoundingClientRect();
   el.classList.add('hov');
   const d=document.createElement('div');d.className='hlpop';d.id='hlpop';d.dataset.for=h.id;d.style.setProperty('--c',h.v.c);
-  d.innerHTML=`<div class="th"><canvas data-thumb="${h.id}" width="320" height="180"></canvas><span class="ab">${h.type.a}</span></div><div class="hlpop-t"><i class="dot"></i>${mid(h.type.k,5)}</div><div class="meta mid" title="${esc(h.v.m.name)} · ${h.v.half}º tempo · ${tc(h.t)}"><span>${esc(h.v.m.name)}</span><span>&nbsp;· ${h.v.half}º tempo · <span class="mono">${tc(h.t)}</span></span></div><button class="btn pri" data-goto="${h.id}">Ir para o lance →</button>`;
-  document.body.append(d);paintThumbs(d);
+  d.innerHTML=`<div class="th">${poster(h)}<span class="ab">${h.type.a}</span></div><div class="hlpop-t"><i class="dot"></i>${mid(h.media.title,8)}</div><div class="meta">${esc(h.v.m.name)} · ${when(h)}</div><button class="btn pri" data-goto="${h.id}">Ir para o lance →</button>`;
+  document.body.append(d);
   const x=Math.min(innerWidth-12-d.offsetWidth/2,Math.max(12+d.offsetWidth/2,r.left+r.width/2));
   d.style.left=x+'px';d.style.top=(r.top-8)+'px';
 }
@@ -424,25 +537,23 @@ function addMk(h,pop){if(S.tela===3&&!document.getElementById('mk-'+h.id))$('#tr
 function buildTracks(){
   const tot=total();let acc=0;
   $('#tr-hl').innerHTML=V.map(v=>{const x=acc/tot*100;acc+=v.dur;return `<i class="div" style="left:${x}%"></i>`}).join('')+done().map(h=>mk(h)).join('');
-  $('#tr-vid').innerHTML=V.map((v,k)=>`<div class="seg" style="flex:${v.dur};--c:${v.c}" title="${esc(v.name)}"><i id="sf${v.i}"></i>${v.gap?`<b class="gap" id="gp${v.i}" style="left:${v.gap[0]/v.dur*100}%;width:${(v.gap[1]-v.gap[0])/v.dur*100}%" title="Trecho não analisado ${tc(v.gap[0])}–${tc(v.gap[1])}" hidden></b>`:''}<span>${k+1}</span></div>`).join('');
+  $('#tr-vid').innerHTML=V.map((v,k)=>`<div class="seg" style="flex:${v.dur};--c:${v.c}" title="${esc(v.m.name)} · ${v.half}º tempo"><i id="sf${v.i}"></i><span>${k+1}</span></div>`).join('');
 }
-function paintT3(now){
+function paintT3(){
   [0,1].forEach(s=>{
-    const v=A.slots[s]||A.last[s],pv=$('#pv'+s),ctx=pv.querySelector('canvas').getContext('2d');
-    pv.querySelector('.pv-idle').hidden=!!v;
-    $$('.pv-top,.pv-tc,.pv-bar',pv).forEach(e=>e.hidden=!v);
-    if(!v){ctx.fillStyle='#f8f7f5';ctx.fillRect(0,0,640,360);pv.style.removeProperty('--c');return}
+    const l=A.slots[s]||A.last[s],pv=$('#pv'+s),img=pv.querySelector('img'),idle=pv.querySelector('.pv-idle'),st=pv.querySelector('[data-s]');
+    pv.querySelector('.pv-top').hidden=!l;
+    idle.hidden=!!l;
+    if(!l){idle.textContent='Sem vídeo nesta prévia';pv.style.removeProperty('--c');img.hidden=true;return}
+    const v=l.v,h=l.segs[l.i]||l.segs.at(-1);
     pv.style.setProperty('--c',v.c);
-    drawPitch(ctx,640,360,v.c,v.st==='processando'?now/1000:v.dur*v.prog/60,hash(v.name));
-    const st=v.st==='processando'?'Processando':v.gap?'Pronto · 1 trecho não analisado':'Pronto';
-    pv.querySelector('[data-n]').innerHTML=`<i class="dot"></i>${mid(v.name)}`;
-    pv.querySelector('[data-s]').textContent=st;
-    pv.querySelector('[data-t]').textContent=`${tc(v.prog*v.dur)} / ${tc(v.dur)}`;
-    pv.querySelector('.pv-bar i').style.width=v.prog*100+'%';
+    img.hidden=l.ph==='play'||!h;
+    if(h&&img.dataset.id!==h.id){img.dataset.id=h.id;img.src=h.media.poster;img.alt=`Quadro do corte: ${h.media.title}`}
+    pv.querySelector('[data-n]').innerHTML=`<i class="dot"></i>${esc(v.m.name)} · ${v.half}º tempo`;
+    st.hidden=l.ph==='play'&&!l.err;
+    st.textContent=l.err?`Erro · ${l.err}`:{load:'Carregando trecho',play:'',done:'Pronto'}[l.ph];
   });
-  V.forEach(v=>{const f=document.getElementById('sf'+v.i);if(f)f.style.width=v.prog*100+'%';const g=document.getElementById('gp'+v.i);if(g)g.hidden=v.prog*v.dur<v.gap[1]});
-  const err=V.map((v,k)=>[v,k]).filter(([v])=>v.gap&&v.prog*v.dur>=v.gap[1]),ek=err.map(([v])=>v.i).join(),w=$('#t3-warn');
-  if(w.dataset.k!==ek){w.dataset.k=ek;w.hidden=!err.length;w.innerHTML=WARN_I+(err.length===1?(([v,k])=>`<span><b>Vídeo ${k+1}</b> · trecho ${tc(v.gap[0])}–${tc(v.gap[1])} não pôde ser analisado</span>`)(err[0]):`<span><b>${err.length} trechos</b> não puderam ser analisados</span>`)}
+  V.forEach(v=>{const f=document.getElementById('sf'+v.i);if(f)f.style.width=v.prog*100+'%'});
   const n=done().length,c={pronto:0,processando:0,aguardando:0};V.forEach(v=>c[v.st]++);
   $('#k-hl').textContent=`${n} ${n===1?'lance':'lances'}`;
   $('#k-vid').textContent=[c.pronto&&`${c.pronto} pronto${c.pronto>1?'s':''}`,c.processando&&`${c.processando} processando`,c.aguardando&&`${c.aguardando} aguardando`].filter(Boolean).join(' · ');
@@ -453,7 +564,7 @@ function paintT3(now){
 }
 
 // ---------- detalhe de um lance (compartilhado pelas variantes) ----------
-const inclLabel=on=>on?'✓ No download':'+ Incluir';
+const inclLabel=on=>on?'✓ No CSV':'+ Incluir';
 const inclBtn=h=>`<button class="incl${SEL.has(h.id)?' on':''}" data-incl="${h.id}">${inclLabel(SEL.has(h.id))}</button>`;
 function toggle(id){
   SEL.has(id)?SEL.delete(id):SEL.add(id);updDL();
@@ -461,47 +572,36 @@ function toggle(id){
   $$(`[data-selmark="${id}"]`).forEach(e=>e.classList.toggle('sel',SEL.has(id)));
 }
 function detail(h,wide){
-  const v=h.v,k=clip(h);
+  const v=h.v,c=h.media,k=clip(h);
   return `<div class="det${wide?' wide':''}" style="--c:${v.c}">
-    <div class="det-pv"><canvas data-live="${h.id}" width="640" height="360"></canvas><span class="det-ph" data-phase></span><span class="det-tc mono" data-tc></span></div>
+    <div class="det-pv" data-player="${h.id}">${poster(h,'Quadro do corte: '+c.title)}<button class="play" data-play>${PLAY}</button><span class="det-tc mono">arquivo ${tc(k.a)}–${tc(k.b)}</span></div>
     <div>
-      <div class="det-k"><i class="dot"></i>${h.type.k}</div>
-      <div class="meta">${esc(v.m.name)} · ${esc(v.m.teams.join(' x '))} · ${v.half}º tempo</div>
-      <dl class="kv"><div><dt>Início do corte</dt><dd class="mono">${tc(k.a)}</dd></div><div><dt>Fim do corte</dt><dd class="mono">${tc(k.b)}</dd></div><div><dt>Duração do corte</dt><dd class="mono">${k.dur} s</dd></div></dl>
-      <div class="ctx"><span class="a" style="flex:${k.pre}"></span><span class="c" style="flex:${h.dur}"></span><span class="b" style="flex:${k.post}"></span><i data-ph></i></div>
-      <div class="ctx-l"><span>${k.pre} s antes${k.pre<CTX?' (início do vídeo)':''}</span><span>lance <span class="mono">${tc(h.t)}–${tc(h.t+h.dur)}</span></span><span>${k.post} s depois${k.post<CTX?' (fim do vídeo)':''}</span></div>
-      <div class="det-act">${inclBtn(h)}<span class="file">${esc(v.name)}</span></div>
+      <div class="det-k"><i class="dot"></i>${esc(c.title)}</div>
+      <div class="meta">${esc(v.m.name)} · ${day(v.m.date)} · ${when(h)}</div>
+      <p class="det-desc">${esc(c.verifiedAction)}</p>
+      <dl class="kv"><div><dt>Início no arquivo</dt><dd class="mono">${tc(k.a)}</dd></div><div><dt>Fim no arquivo</dt><dd class="mono">${tc(k.b)}</dd></div><div><dt>Duração do corte</dt><dd class="mono">${k.dur} s</dd></div></dl>
+      <div class="ctx"><i style="left:${k.ev/k.dur*100}%"></i></div>
+      <div class="ctx-l"><span class="mono">0:00</span><span>anotação “${esc(c.annotation.label)}” em <span class="mono">${tc(k.ev)}</span> do corte · <span class="mono">${tc(h.t)}</span> do arquivo</span><span class="mono">${tc(k.dur)}</span></div>
+      <div class="det-act">${inclBtn(h)}<a class="link" href="${esc(c.src)}" download>Baixar MP4 (${mb(c.sizeBytes)})</a><span class="file">${esc(v.name)}</span></div>
     </div></div>`;
-}
-function paintLive(now){
-  $$('canvas[data-live]').forEach(c=>{
-    if(!c.offsetParent)return;
-    const h=HM[c.dataset.live];c._t0??=now;
-    const k=clip(h),el=((now-c._t0)/1000)%k.dur,vt=k.a+el,inEv=vt>=h.t&&vt<h.t+h.dur,d=c.closest('.det');
-    drawPitch(c.getContext('2d'),640,360,h.v.c,vt,hash(h.id));
-    d.querySelector('[data-tc]').textContent=`${tc(vt)} · ${h.v.half}º tempo`;
-    const p=d.querySelector('[data-phase]');p.textContent=inEv?'LANCE':'CONTEXTO';p.classList.toggle('ctxt',!inEv);
-    d.querySelector('[data-ph]').style.left=el/k.dur*100+'%';
-  });
 }
 
 // ---------- Variante A: busca primeiro (lista única, detalhe abre na própria linha) ----------
 function VA(root,focus){
   let q='',ty='',half=0,open=focus;
-  root.innerHTML=`<div class="va-search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8d8d8d" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="va-q" placeholder="Buscar por lance, partida, time ou arquivo" autocomplete="off"></div><div class="chips" id="va-chips"></div><div class="va-list" id="va-list"></div>`;
+  root.innerHTML=`<div class="va-search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8d8d8d" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="va-q" placeholder="Buscar por lance, jogador, partida, time ou arquivo" autocomplete="off"></div><div class="chips" id="va-chips"></div><div class="va-list" id="va-list"></div>`;
   const chip=(k,label,n,on)=>`<button class="chip${on?' on':''}" data-chip="${k}">${label}${n!==''?`<span>${n}</span>`:''}</button>`;
-  const list=()=>done().filter(h=>(!ty||h.type.k===ty)&&(!half||h.v.half===half)&&(!q||norm(`${h.type.k} ${h.v.m.name} ${h.v.m.teams.join(' ')} ${h.v.name} ${h.v.half}º tempo ${tc(h.t)}`).includes(norm(q))));
+  const list=()=>done().filter(h=>(!ty||h.type.k===ty)&&(!half||h.v.half===half)&&(!q||norm(`${h.media.title} ${h.type.k} ${h.media.verifiedAction} ${h.v.m.name} ${h.v.m.teams.join(' ')} ${h.v.name} ${h.v.half}º tempo ${h.media.matchTime} ${tc(h.t)}`).includes(norm(q))));
   const draw=()=>{
     const all=done();
     $('#va-chips').innerHTML=chip('','Todos',all.length,!ty&&!half)+TYPES.map(t=>{const n=all.filter(h=>h.type===t).length;return n?chip('t:'+t.k,t.k,n,ty===t.k):''}).join('')+'<i class="sep"></i>'+[1,2].map(n=>chip('h:'+n,n+'º tempo','',half===n)).join('');
     let html='',lm=null;
     list().forEach(h=>{
-      if(h.v.m!==lm){lm=h.v.m;html+=`<div class="grp"><b>${esc(lm.name)}</b><span class="dim">${esc(lm.teams.join(' x '))}</span></div>`}
-      html+=`<div class="row${open===h.id?' open':''}" data-row="${h.id}" style="--c:${h.v.c}"><div class="th"><canvas data-thumb="${h.id}" width="240" height="135"></canvas><span class="ab">${h.type.a}</span></div><div><b>${h.type.k}</b> <span class="meta">· ${h.v.half}º tempo · <span class="mono">${tc(h.t)}</span></span><div class="meta">corte de ${clip(h).dur} s · ${esc(h.v.name)}</div></div>${inclBtn(h)}</div>`;
+      if(h.v.m!==lm){lm=h.v.m;html+=`<div class="grp"><b>${esc(lm.name)}</b><span class="dim">${day(lm.date)}</span></div>`}
+      html+=`<div class="row${open===h.id?' open':''}" data-row="${h.id}" style="--c:${h.v.c}"><div class="th">${poster(h)}<span class="ab">${h.type.a}</span></div><div><b>${esc(h.media.title)}</b> <span class="meta">· ${when(h)}</span><div class="meta">corte de ${clip(h).dur} s · arquivo ${tc(clip(h).a)}–${tc(clip(h).b)} · ${esc(h.v.name)}</div></div>${inclBtn(h)}</div>`;
       if(open===h.id)html+=`<div class="expand">${detail(h,true)}</div>`;
     });
     $('#va-list').innerHTML=html||`<div class="empty">Nenhum lance encontrado. <button class="link" data-clear>Limpar busca e filtros</button></div>`;
-    paintThumbs(root);
   };
   root.oninput=e=>{if(e.target.id==='va-q'){q=e.target.value;open=null;draw()}};
   root.onclick=e=>{
@@ -532,12 +632,11 @@ function VB(root,focus){
     MATCHES.forEach(m=>{
       const vs=V.filter(v=>v.m===m);if(!vs.length)return;
       const hs=L.filter(h=>h.v.m===m);
-      html+=`<section class="vb-card"><div class="vb-head"><div><h3>${esc(m.name)}</h3><span class="meta">${esc(m.teams.join(' x '))}</span></div><span class="meta">${hs.length} ${hs.length===1?'lance':'lances'}</span></div>`;
+      html+=`<section class="vb-card"><div class="vb-head"><div><h3>${esc(m.name)}</h3><span class="meta">${day(m.date)} · marcas em tempo do arquivo</span></div><span class="meta">${hs.length} ${hs.length===1?'lance':'lances'}</span></div>`;
       vs.forEach(v=>{
         html+=`<div class="lane" style="--c:${v.c}"><div class="lane-l"><span><i class="dot"></i>${v.half}º tempo</span><small class="mono">${tc(v.dur)}</small></div><div class="lane-t">`
-          +[15,30,45].filter(mn=>mn*60<v.dur).map(mn=>`<i class="tk" style="left:${mn*60/v.dur*100}%"><span>${mn}'</span></i>`).join('')
-          +(v.gap?`<i class="gapz" style="left:${v.gap[0]/v.dur*100}%;width:${(v.gap[1]-v.gap[0])/v.dur*100}%" title="Trecho não analisado ${tc(v.gap[0])}–${tc(v.gap[1])}"></i>`:'')
-          +hs.filter(h=>h.v===v).map(h=>`<button class="bm${SEL.has(h.id)?' sel':''}${act===h.id?' act':''}" data-selmark="${h.id}" data-bm="${h.id}" style="left:${h.t/v.dur*100}%" title="${h.type.k} · ${tc(h.t)}">${h.type.a}</button>`).join('')
+          +[15,30,45].filter(mn=>mn*60<v.dur).map(mn=>`<i class="tk" style="left:${mn*60/v.dur*100}%"><span>${mn}:00</span></i>`).join('')
+          +hs.filter(h=>h.v===v).map(h=>`<button class="bm${SEL.has(h.id)?' sel':''}${act===h.id?' act':''}" data-selmark="${h.id}" data-bm="${h.id}" style="left:${h.t/v.dur*100}%" title="${esc(h.media.title)} · jogo ${esc(h.media.matchTime)}">${h.type.a}</button>`).join('')
           +(act&&HM[act].v===v?pop(HM[act],L):'')+`</div></div>`;
       });
       html+='</section>';
@@ -577,8 +676,7 @@ function VC(root,focus){
   let open=focus;
   const groups=()=>TYPES.map(t=>[t,done().filter(h=>h.type===t)]).filter(g=>g[1].length);
   const flat=()=>groups().flatMap(g=>g[1]);
-  root.innerHTML=groups().map(([t,hs])=>`<section class="vc-row"><h3>${t.k}<span>${hs.length}</span></h3><div class="vc-strip">${hs.map(h=>`<div class="tile" data-tile="${h.id}" style="--c:${h.v.c}"><canvas data-thumb="${h.id}" width="320" height="180"></canvas><button class="tick-btn${SEL.has(h.id)?' on':''}" data-incl="${h.id}" aria-label="Incluir no download">✓</button><div class="tile-ov"><b class="mono">${tc(h.t)}</b> · ${h.v.half}º tempo · corte de ${clip(h).dur} s<span>${esc(h.v.m.name)}</span></div></div>`).join('')}</div></section>`).join('')+'<div id="vc-m"></div>';
-  paintThumbs(root);
+  root.innerHTML=groups().map(([t,hs])=>`<section class="vc-row"><h3>${t.k}<span>${hs.length}</span></h3><div class="vc-strip">${hs.map(h=>`<div class="tile" data-tile="${h.id}" style="--c:${h.v.c}">${poster(h)}<button class="tick-btn${SEL.has(h.id)?' on':''}" data-incl="${h.id}" aria-label="Incluir no CSV">✓</button><div class="tile-ov"><b>${esc(h.media.title)}</b> · corte de ${clip(h).dur} s<span>${esc(h.v.m.name)} · ${when(h)}</span></div></div>`).join('')}</div></section>`).join('')+'<div id="vc-m"></div>';
   const modal=()=>{
     const m=$('#vc-m');if(!open){m.innerHTML='';return}
     const F=flat(),i=F.findIndex(h=>h.id===open),h=F[i];
@@ -609,13 +707,10 @@ const VICON={
   C:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
 };
 let cur=null;
-function updDL(){const n=SEL.size;$('#dl').textContent=`Baixar cortes (${n})`;$('#dl').disabled=!n}
+function updDL(){const n=SEL.size;$('#dl').textContent=`Baixar CSV (${n})`;$('#dl').disabled=!n}
 function renderBase(){
   const hs=done(),nm=new Set(hs.map(h=>h.v.m)).size;
-  $('#t4-sub').innerHTML=`<b>${hs.length}</b> ${hs.length===1?'Highlight':'Highlights'} em <b>${nm}</b> ${nm===1?'Partida':'Partidas'}`;
-  const gv=V.find(v=>v.gap);
-  $('#t4-warn').hidden=!gv||S.warnOff;
-  if(gv)$('#t4-warn').innerHTML=`<span><b>1 trecho não analisado</b> em ${esc(gv.m.name)}, ${gv.half}º tempo (${tc(gv.gap[0])}–${tc(gv.gap[1])}). Pode haver lances nesse intervalo.</span><button class="warn-x" data-warn-x aria-label="Dispensar aviso" title="Dispensar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>`;
+  $('#t4-sub').innerHTML=`<b>${hs.length}</b> ${hs.length===1?'Highlight':'Highlights'} em <b>${nm}</b> ${nm===1?'Partida':'Partidas'} · cortes reais do SoccerNet em 224p`;
   const fn=VARIANTS[S.variant][1];
   cur=fn($('#vroot'),S.focus);S.focus=null;
   $('#vt').innerHTML=Object.entries(VARIANTS).map(([k,[n]])=>`<button data-vt="${k}" class="${k===S.variant?'on':''}" aria-pressed="${k===S.variant}" aria-label="${n}" title="${n}">${VICON[k]}</button>`).join('');
@@ -624,33 +719,26 @@ function renderBase(){
 function setVariant(k){S.variant=k;renderBase();url()}
 $('#dl').onclick=()=>{
   const hs=done().filter(h=>SEL.has(h.id));if(!hs.length)return;
-  const rows=[['partida','tempo','arquivo','lance','inicio_corte','fim_corte','duracao_corte_s','inicio_lance','fim_lance'],...hs.map(h=>{const k=clip(h);return [h.v.m.name,h.v.half+'º',h.v.name,h.type.k,tc(k.a),tc(k.b),k.dur,tc(h.t),tc(h.t+h.dur)]})];
+  const rows=[['id','titulo','tipo','partida','data','tempo','arquivo_origem','anotacao','anotacao_gameTime','relogio_jogo','evento_no_arquivo_s','inicio_corte_no_arquivo_s','fim_corte_no_arquivo_s','evento_no_corte_s','duracao_corte_s','url_clipe'],...hs.map(h=>{const c=h.media;return [c.id,c.title,c.type,h.v.m.name,h.v.m.date,h.v.half,h.v.name,c.annotation.label,c.annotation.gameTime,c.matchTime,c.eventSourceSeconds,c.cutStartSeconds,c.cutEndSeconds,c.eventClipSeconds,c.durationSeconds,new URL(c.src,location.href).href]})];
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob(['﻿'+rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(';')).join('\r\n')],{type:'text/csv;charset=utf-8'}));
-  a.download='PROTOTIPO_cortes_selecionados.csv';a.click();
-  toast(`${hs.length} ${hs.length===1?'corte listado':'cortes listados'} em CSV. Neste protótipo os vídeos dos cortes não existem.`);
+  a.download='cortes_selecionados.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  toast(`${hs.length} ${hs.length===1?'corte listado':'cortes listados'} em CSV, com o link de cada MP4. Para baixar um vídeo, use “Baixar MP4” no detalhe do lance.`);
 };
 
 // ---------- telas 1 e 2 ----------
-function addFiles(list){
-  const f=[...list].filter(x=>x.type.startsWith('video')||/\.(mp4|mov|mkv|avi|webm|m4v)$/i.test(x.name));
-  if(!f.length){toast('Nenhum vídeo reconhecido nesses arquivos.');return}
-  load(f.map(x=>x.name));
-  toast(`${Math.min(8,f.length)} vídeo(s) adicionados. Duração e lances são fictícios.`);
-  go(2);
-}
-$('#file').onchange=e=>addFiles(e.target.files);
+const NO_UPLOAD='Envio de arquivos não é suportado nesta demonstração. Use os vídeos de exemplo.';
+$('#file').onchange=e=>{e.target.value='';toast(NO_UPLOAD)};
 const drop=$('#drop');
 drop.ondragover=e=>{e.preventDefault();drop.classList.add('over')};
 drop.ondragleave=()=>drop.classList.remove('over');
-drop.ondrop=e=>{e.preventDefault();drop.classList.remove('over');addFiles(e.dataTransfer.files)};
-$('#use-mock').onclick=()=>{load(MOCK_NAMES);go(2)};
+drop.ondrop=e=>{e.preventDefault();drop.classList.remove('over');toast(NO_UPLOAD)};
+$('#use-mock').onclick=()=>{load();go(2)};
 function renderGrid(){
   const started=A.state!=='idle';
-  $('#t2-sub').textContent=V.length?`${V.length} ${V.length===1?'vídeo':'vídeos'} · ${hm(total())} de gravação`:'Nenhum vídeo';
-  $('#grid').innerHTML=V.length?V.map(v=>`<article class="vcard" style="--c:${v.c}"><div class="th"><canvas data-vthumb="${v.i}" width="320" height="180"></canvas><span class="dur mono">${tc(v.dur)}</span></div>${started?'':`<button class="rm" data-rm="${v.i}" aria-label="Remover ${esc(v.name)}">×</button>`}<div class="vname"><i class="dot"></i>${mid(v.name)}</div><div class="vmeta">${esc(v.m.name)} · ${v.half}º tempo</div><span class="vstate">${started?v.st[0].toUpperCase()+v.st.slice(1):'Pronto para análise'}</span></article>`).join(''):'';
+  $('#t2-sub').textContent=V.length?`${V.length} ${V.length===1?'vídeo':'vídeos'} · ${hm(total())} de gravação · as gravações completas não são publicadas, só os cortes`:'Nenhum vídeo';
+  $('#grid').innerHTML=V.length?V.map(v=>{const h=H.find(x=>x.v===v),s=v.src.video;return `<article class="vcard" style="--c:${v.c}"><div class="th">${h?poster(h,'Quadro do '+v.half+'º tempo'):''}<span class="dur mono">${tc(v.dur)}</span></div>${started?'':`<button class="rm" data-rm="${v.i}" aria-label="Remover ${esc(v.name)}">×</button>`}<div class="vname"><i class="dot"></i>${mid(v.name)}</div><div class="vmeta">${esc(v.m.name)} · ${v.half}º tempo<br>${s.width}×${s.height} · ${s.fps} fps · ${mb(v.src.sizeBytes)}</div><span class="vstate">${started?v.st[0].toUpperCase()+v.st.slice(1):'Pronto para análise'}</span></article>`}).join(''):'';
   $('#grid').style.display=V.length?'':'none';
-  paintThumbs($('#grid'));
   $('#start').textContent=started?'Ver análise':'Iniciar';
   $('#start').disabled=!V.length;
 }
@@ -659,23 +747,24 @@ $('#grid').onclick=e=>{
   const v=V.find(x=>x.i===+b.dataset.rm);V=V.filter(x=>x!==v);H=H.filter(h=>h.v!==v);renderGrid();
 };
 $('#start').onclick=()=>go(3);
-$('#restart').onclick=()=>{startAnalysis();buildTracks()};
+$('#restart').onclick=()=>{startAnalysis();buildTracks();paintT3()};
 
 // ---------- navegação ----------
-const S={tela:1,variant:'A',warnOff:false,focus:null};
+const S={tela:1,variant:'A',focus:null};
 function url(){
   const p=new URLSearchParams({tela:S.tela});if(S.tela===4)p.set('variant',S.variant);
   try{history.replaceState(null,'','?'+p)}catch{}
 }
 function go(n){
-  if(n>=2&&!V.length)load(MOCK_NAMES);
+  if(n>=2&&!V.length){if(MF)load();else{toast(MF_ERR?`Exemplos indisponíveis: ${MF_ERR}`:'Carregando vídeos de exemplo…');n=1}}
+  stopMedia();
   if(n===3&&A.state==='idle')startAnalysis();
   if(n===4&&A.state!=='done'){const was=A.state==='running';finishAll();if(was)toast('Para revisar a base, a análise restante foi concluída na hora (simulação).')}
-  hlHide(true);S.tela=n;
+  hlHide(true);S.tela=n;sync();
   $$('.screen').forEach((e,i)=>e.hidden=i+1!==n);
   scrollTo(0,0);
   if(n===2)renderGrid();
-  if(n===3)buildTracks();
+  if(n===3){buildTracks();paintT3()}
   if(n===4)renderBase();else cur=null;
   url();
 }
@@ -683,29 +772,23 @@ document.addEventListener('click',e=>{
   const g=e.target.closest('[data-go]');if(g){go(+g.dataset.go);return}
   const h=e.target.closest('[data-goto]');if(h){S.focus=h.dataset.goto;S.variant='A';go(4);return}
   const i=e.target.closest('[data-incl]');if(i){toggle(i.dataset.incl);return}
-  if(e.target.closest('[data-warn-x]')){S.warnOff=true;$('#t4-warn').hidden=true;return}
+  const p=e.target.closest('[data-play]');if(p){play(p);return}
   const t=e.target.closest('[data-vt]');if(t&&t.dataset.vt!==S.variant)setVariant(t.dataset.vt);
 });
 document.addEventListener('keydown',e=>{
-  if(S.tela===4&&cur?.key(e))return;
   const a=document.activeElement;
+  if(a?.tagName==='VIDEO')return;
+  if(S.tela===4&&cur?.key(e))return;
   if(a&&(/INPUT|TEXTAREA|SELECT/.test(a.tagName)||a.isContentEditable))return;
   if(e.metaKey||e.ctrlKey||e.altKey)return;
   if(e.key==='ArrowLeft'||e.key==='ArrowRight'){const n=S.tela+(e.key==='ArrowRight'?1:-1);if(n>=1&&n<=4)go(n)}
 });
 
-let lastT=performance.now();
-function frame(now){
-  const dt=Math.min(100,now-lastT);lastT=now;
-  if(A.state==='running')step(dt);
-  if(S.tela===3)paintT3(now);
-  if(S.tela===4)paintLive(now);
-  requestAnimationFrame(frame);
-}
-const P=new URLSearchParams(location.search);
-if(VARIANTS[P.get('variant')])S.variant=P.get('variant');
-go(Math.min(4,Math.max(1,+P.get('tela')||1)));
-requestAnimationFrame(frame);
+const Q=new URLSearchParams(location.search);
+if(VARIANTS[Q.get('variant')])S.variant=Q.get('variant');
+const want=Math.min(4,Math.max(1,+Q.get('tela')||1));
+go(1);
+loadManifest().then(()=>{if(MF&&want>1)go(want)});
 </script>
 </body>
 </html>

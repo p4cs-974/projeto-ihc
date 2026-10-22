@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "dataset": "SoccerNet-v2",
+  "discovery": {
+    "t3ProjectId": "5d2d166a-c2bb-4b54-980a-eed034c8bce1",
+    "projectRoot": "/home/pedro/tcc",
+    "datasetRootRelativeToProject": "benchmark/downloads"
+  },
+  "timebase": "annotation.position / 1000 + source.annotationToVideoOffsetSeconds gives seconds within the half video. gameTime is half-relative, matchTime adds 45 minutes for half 2. eventClipSeconds subtracts cutStartSeconds. The broadcast overlay is about one second behind annotation gameTime; no extra seek offset is applied.",
+  "encoding": {
+    "videoCodec": "libx264",
+    "crf": 23,
+    "preset": "slow",
+    "pixelFormat": "yuv420p",
+    "keyframeInterval": 50,
+    "audioCodec": "aac",
+    "audioBitrate": "64k",
+    "movflags": "+faststart",
+    "resize": false
+  },
+  "sources": [
+    {
+      "id": "clasico-2015-1t",
+      "match": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona",
+      "matchName": "Real Madrid 0 x 4 Barcelona",
+      "date": "2015-11-21",
+      "teams": [
+        "Real Madrid",
+        "Barcelona"
+      ],
+      "half": 1,
+      "file": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona/1_224p.mkv",
+      "labelsFile": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona/Labels-v2.json",
+      "labelsSha256": "7816351997dc12ba965d3563362a44aa1cbfc3ccddad10d2485ee0f6475bc346",
+      "annotationToVideoOffsetSeconds": 0,
+      "durationSeconds": 2700.003,
+      "sizeBytes": 190470781,
+      "video": {
+        "codec": "h264",
+        "width": 398,
+        "height": 224,
+        "fps": 25,
+        "pixelFormat": "yuv420p"
+      },
+      "audio": {
+        "codec": "vorbis",
+        "sampleRate": 48000,
+        "channels": 2
+      }
+    },
+    {
+      "id": "clasico-2015-2t",
+      "match": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona",
+      "matchName": "Real Madrid 0 x 4 Barcelona",
+      "date": "2015-11-21",
+      "teams": [
+        "Real Madrid",
+        "Barcelona"
+      ],
+      "half": 2,
+      "file": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona/2_224p.mkv",
+      "labelsFile": "spain_laliga/2015-2016/2015-11-21 - 20-15 Real Madrid 0 - 4 Barcelona/Labels-v2.json",
+      "labelsSha256": "7816351997dc12ba965d3563362a44aa1cbfc3ccddad10d2485ee0f6475bc346",
+      "annotationToVideoOffsetSeconds": 0,
+      "durationSeconds": 2849.003,
+      "sizeBytes": 204988194,
+      "video": {
+        "codec": "h264",
+        "width": 398,
+        "height": 224,
+        "fps": 25,
+        "pixelFormat": "yuv420p"
+      },
+      "audio": {
+        "codec": "vorbis",
+        "sampleRate": 48000,
+        "channels": 2
+      }
+    },
+    {
+      "id": "bayern-real-2017-1t",
+      "match": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid",
+      "matchName": "Bayern de Munique 1 x 2 Real Madrid",
+      "date": "2017-04-12",
+      "teams": [
+        "Bayern de Munique",
+        "Real Madrid"
+      ],
+      "half": 1,
+      "file": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid/1_224p.mkv",
+      "labelsFile": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid/Labels-v2.json",
+      "labelsSha256": "ca73031d7930c408dd5a67debb48b2ad5adcad77fef84c49a72f6e12a14ee117",
+      "annotationToVideoOffsetSeconds": 0,
+      "durationSeconds": 2813.003,
+      "sizeBytes": 187736200,
+      "video": {
+        "codec": "h264",
+        "width": 398,
+        "height": 224,
+        "fps": 25,
+        "pixelFormat": "yuv420p"
+      },
+      "audio": {
+        "codec": "vorbis",
+        "sampleRate": 48000,
+        "channels": 2
+      }
+    },
+    {
+      "id": "bayern-real-2017-2t",
+      "match": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid",
+      "matchName": "Bayern de Munique 1 x 2 Real Madrid",
+      "date": "2017-04-12",
+      "teams": [
+        "Bayern de Munique",
+        "Real Madrid"
+      ],
+      "half": 2,
+      "file": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid/2_224p.mkv",
+      "labelsFile": "europe_uefa-champions-league/2016-2017/2017-04-12 - 21-45 Bayern Munich 1 - 2 Real Madrid/Labels-v2.json",
+      "labelsSha256": "ca73031d7930c408dd5a67debb48b2ad5adcad77fef84c49a72f6e12a14ee117",
+      "annotationToVideoOffsetSeconds": 0,
+      "durationSeconds": 2781.003,
+      "sizeBytes": 174269113,
+      "video": {
+        "codec": "h264",
+        "width": 398,
+        "height": 224,
+        "fps": 25,
+        "pixelFormat": "yuv420p"
+      },
+      "audio": {
+        "codec": "vorbis",
+        "sampleRate": 48000,
+        "channels": 2
+      }
+    }
+  ],
+  "clips": [
+    {
+      "id": "suarez",
+      "sourceId": "clasico-2015-1t",
+      "title": "Gol de Luis Suárez",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "1 - 10:04",
+        "label": "Goal",
+        "position": "604240",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "10:04",
+      "cutStartSeconds": 590,
+      "cutEndSeconds": 618,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 604.24,
+      "eventClipSeconds": 14.24,
+      "posterClipSeconds": 12.74,
+      "src": "media/suarez.mp4",
+      "poster": "media/suarez.jpg",
+      "verifiedAction": "Barcelona avança pelo meio, Suárez recebe na área e finaliza cruzado. A bola entra e ele comemora.",
+      "verification": "Inspecionado no navegador T3, reprodução completa e quadros da construção, finalização e desfecho.",
+      "sizeBytes": 2051038,
+      "sha256": "619ec7fa533a5b96ad9d83dba6c6e72ccab0f4d317e857626a35554c0df73f26",
+      "posterSizeBytes": 17810
+    },
+    {
+      "id": "neymar",
+      "sourceId": "clasico-2015-1t",
+      "title": "Gol de Neymar",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "1 - 38:35",
+        "label": "Goal",
+        "position": "2315370",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "38:35",
+      "cutStartSeconds": 2302,
+      "cutEndSeconds": 2330,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 2315.37,
+      "eventClipSeconds": 13.37,
+      "posterClipSeconds": 11.87,
+      "src": "media/neymar.mp4",
+      "poster": "media/neymar.jpg",
+      "verifiedAction": "Barcelona recupera a bola, avança e encontra Neymar à esquerda da área. Ele finaliza, marca e comemora.",
+      "verification": "Inspecionado no navegador T3, reprodução completa e quadros da construção, finalização e desfecho.",
+      "sizeBytes": 2118067,
+      "sha256": "7a2c5bc0610623357ed36ba6e5eb92427f39e336135a16078f987bb8f65ad8a5",
+      "posterSizeBytes": 20985
+    },
+    {
+      "id": "bravo",
+      "sourceId": "clasico-2015-2t",
+      "title": "Defesa do Barcelona",
+      "type": "Defesa",
+      "annotation": {
+        "gameTime": "2 - 02:55",
+        "label": "Shots on target",
+        "position": "175605",
+        "team": "home",
+        "visibility": "visible"
+      },
+      "matchTime": "47:55",
+      "cutStartSeconds": 163,
+      "cutEndSeconds": 190,
+      "durationSeconds": 27,
+      "eventSourceSeconds": 175.605,
+      "eventClipSeconds": 12.605,
+      "posterClipSeconds": 11.105,
+      "src": "media/bravo.mp4",
+      "poster": "media/bravo.jpg",
+      "verifiedAction": "Real Madrid avança e finaliza de fora da área. O goleiro do Barcelona espalma a bola.",
+      "verification": "Inspecionado no navegador T3, reprodução completa e quadros da construção, finalização e desfecho.",
+      "sizeBytes": 2128284,
+      "sha256": "db04a5a7f84e764d7289acb427fe83f2a6d2c37670f71efb4ba83e2bdfdbe791",
+      "posterSizeBytes": 17341
+    },
+    {
+      "id": "iniesta",
+      "sourceId": "clasico-2015-2t",
+      "title": "Gol de Andrés Iniesta",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "2 - 07:17",
+        "label": "Goal",
+        "position": "437840",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "52:17",
+      "cutStartSeconds": 423,
+      "cutEndSeconds": 451,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 437.84,
+      "eventClipSeconds": 14.84,
+      "posterClipSeconds": 13.34,
+      "src": "media/iniesta.mp4",
+      "poster": "media/iniesta.jpg",
+      "verifiedAction": "Barcelona constrói pela esquerda, Iniesta combina na entrada da área e marca. O corte inclui a comemoração.",
+      "verification": "Inspecionado no navegador T3, reprodução completa e quadros da construção, finalização e desfecho.",
+      "sizeBytes": 1885059,
+      "sha256": "5664c8ab01067c81a317b1cb5ed7d9bf8464d4855a9a6b6c0a43be8ed8107db8",
+      "posterSizeBytes": 17877
+    },
+    {
+      "id": "vidal",
+      "sourceId": "bayern-real-2017-1t",
+      "title": "Gol de Arturo Vidal",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "1 - 24:43",
+        "label": "Goal",
+        "position": "1483960",
+        "team": "home",
+        "visibility": "visible"
+      },
+      "matchTime": "24:43",
+      "cutStartSeconds": 1470,
+      "cutEndSeconds": 1498,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 1483.96,
+      "eventClipSeconds": 13.96,
+      "posterClipSeconds": 12.46,
+      "src": "media/vidal.mp4",
+      "poster": "media/vidal.jpg",
+      "verifiedAction": "Ribéry cobra a bola parada pela direita e Vidal cabeceia para o gol. Ele corre para comemorar com os companheiros.",
+      "verification": "Quadros da fonte conferidos no T3 a cada 1,5 s em torno da anotação (0,5 s no pênalti) e corte publicado reproduzido no navegador T3.",
+      "sizeBytes": 2386647,
+      "sha256": "f5d8dac4c6b6af6f35322158dfdcc85115a987c6f2865c18101c41204be35f7d",
+      "posterSizeBytes": 25508
+    },
+    {
+      "id": "vidal-penalti",
+      "sourceId": "bayern-real-2017-1t",
+      "title": "Pênalti perdido por Vidal",
+      "type": "Pênalti",
+      "annotation": {
+        "gameTime": "1 - 45:53",
+        "label": "Penalty",
+        "position": "2753000",
+        "team": "home",
+        "visibility": "visible"
+      },
+      "matchTime": "45:53",
+      "cutStartSeconds": 2739,
+      "cutEndSeconds": 2767,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 2753.0,
+      "eventClipSeconds": 14.0,
+      "posterClipSeconds": 12.5,
+      "src": "media/vidal-penalti.mp4",
+      "poster": "media/vidal-penalti.jpg",
+      "verifiedAction": "Vidal bate o pênalti, Navas cai para um lado e a bola passa por cima do gol. Vidal leva as mãos à cabeça.",
+      "verification": "Quadros da fonte conferidos no T3 a cada 1,5 s em torno da anotação (0,5 s no pênalti) e corte publicado reproduzido no navegador T3.",
+      "sizeBytes": 1722172,
+      "sha256": "ad0cf8090a5b9d8914fad595a0d224247fd40e50ca2a02ffe8e552ddfd32210c",
+      "posterSizeBytes": 29434
+    },
+    {
+      "id": "ronaldo-1",
+      "sourceId": "bayern-real-2017-2t",
+      "title": "Gol de Cristiano Ronaldo",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "2 - 01:35",
+        "label": "Goal",
+        "position": "95440",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "46:35",
+      "cutStartSeconds": 81,
+      "cutEndSeconds": 109,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 95.44,
+      "eventClipSeconds": 14.44,
+      "posterClipSeconds": 12.94,
+      "src": "media/ronaldo-1.mp4",
+      "poster": "media/ronaldo-1.jpg",
+      "verifiedAction": "Real Madrid ataca pela direita e Cristiano Ronaldo finaliza na área para empatar. O time comemora junto à placa.",
+      "verification": "Quadros da fonte conferidos no T3 a cada 1,5 s em torno da anotação (0,5 s no pênalti) e corte publicado reproduzido no navegador T3.",
+      "sizeBytes": 1832449,
+      "sha256": "c49f02b190fa90faba6c1e249398af0725835a63cd477c3da23beecd8da1f4cc",
+      "posterSizeBytes": 17221
+    },
+    {
+      "id": "ronaldo-2",
+      "sourceId": "bayern-real-2017-2t",
+      "title": "Segundo gol de Cristiano Ronaldo",
+      "type": "Gol",
+      "annotation": {
+        "gameTime": "2 - 31:03",
+        "label": "Goal",
+        "position": "1863440",
+        "team": "away",
+        "visibility": "visible"
+      },
+      "matchTime": "76:03",
+      "cutStartSeconds": 1849,
+      "cutEndSeconds": 1877,
+      "durationSeconds": 28,
+      "eventSourceSeconds": 1863.44,
+      "eventClipSeconds": 14.44,
+      "posterClipSeconds": 12.94,
+      "src": "media/ronaldo-2.mp4",
+      "poster": "media/ronaldo-2.jpg",
+      "verifiedAction": "Real Madrid avança pela esquerda e Cristiano Ronaldo finaliza na área para virar. Ele corre para a lateral e é abraçado pelos companheiros.",
+      "verification": "Quadros da fonte conferidos no T3 a cada 1,5 s em torno da anotação (0,5 s no pênalti) e corte publicado reproduzido no navegador T3.",
+      "sizeBytes": 2109983,
+      "sha256": "c183a2aa4a7076f2d6b9f84787642bb9d8944db7eff8521be121606b698a58b3",
+      "posterSizeBytes": 15687
+    }
+  ]
+}

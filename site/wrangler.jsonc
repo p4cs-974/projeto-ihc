@@ -2,15 +2,27 @@
   "name": "ihc-prototipo",
   "main": "src/worker.js",
   "compatibility_date": "2026-10-01",
+  "preview_urls": true,
   // build.sh copia o protótipo e o guia de assets/06_prototipos para public/
   "build": { "command": "sh build.sh" },
   "assets": { "directory": "./public", "binding": "ASSETS" },
   "routes": [{ "pattern": "ihc.p4cs.com.br", "custom_domain": true }],
+  "previews": {
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "ihc-feedback-preview",
+        "database_id": "950a9542-4558-4d02-8131-39603c98948f",
+        "migrations_dir": "migrations"
+      }
+    ]
+  },
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "ihc-feedback",
       "database_id": "271ea0aa-2f11-48d8-9aef-455811b50e2a",
+      "preview_database_id": "950a9542-4558-4d02-8131-39603c98948f",
       "migrations_dir": "migrations"
     }
   ]

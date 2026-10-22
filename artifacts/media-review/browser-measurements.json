@@ -1,0 +1,334 @@
+{
+  "environment": {
+    "date": "2026-10-21",
+    "browser": "T3 collaborative browser, incognito profile",
+    "server": "Wrangler dev, ihc-prototipo static assets on port 8768",
+    "method": "Navigation/Resource Timing transferSize and encodedBodySize. Values include browser-estimated response headers, exclude TLS/TCP overhead. Same-origin asset cache cold for final 127.0.0.1 run; external fonts warm or absent from Resource Timing, so initial totals are observed lower bounds, not full wire totals."
+  },
+  "initial": {
+    "at": "2026-10-21T23:02:46.077Z",
+    "screen": 1,
+    "entries": [
+      {
+        "url": "http://127.0.0.1:8768/",
+        "type": "navigation",
+        "status": 200,
+        "transferBytes": 16704,
+        "bodyBytes": 16404
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap",
+        "type": "resource",
+        "status": 0,
+        "transferBytes": 0,
+        "bodyBytes": 771
+      },
+      {
+        "url": "http://127.0.0.1:8768/media/manifest.json",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 2126,
+        "bodyBytes": 1826
+      }
+    ],
+    "totalTransferBytes": 18830,
+    "mp4Requests": 0
+  },
+  "throughHighlightList": {
+    "at": "2026-10-21T23:02:55.350Z",
+    "screen": 4,
+    "entries": [
+      {
+        "url": "http://127.0.0.1:8768/",
+        "type": "navigation",
+        "status": 200,
+        "transferBytes": 16704,
+        "bodyBytes": 16404
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap",
+        "type": "resource",
+        "status": 0,
+        "transferBytes": 0,
+        "bodyBytes": 771
+      },
+      {
+        "url": "http://127.0.0.1:8768/media/manifest.json",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 2126,
+        "bodyBytes": 1826
+      },
+      {
+        "url": "http://127.0.0.1:8768/media/neymar.jpg",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 21285,
+        "bodyBytes": 20985
+      },
+      {
+        "url": "http://127.0.0.1:8768/media/suarez.jpg",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 18110,
+        "bodyBytes": 17810
+      },
+      {
+        "url": "http://127.0.0.1:8768/media/bravo.jpg",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 17641,
+        "bodyBytes": 17341
+      },
+      {
+        "url": "http://127.0.0.1:8768/media/iniesta.jpg",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 18177,
+        "bodyBytes": 17877
+      }
+    ],
+    "totalTransferBytes": 94043,
+    "mp4Requests": 0,
+    "fonts": [
+      "Geist",
+      "Geist",
+      "Geist",
+      "Geist Mono"
+    ],
+    "ctxStyle": 185
+  },
+  "earlierColdList": {
+    "at": "2026-10-21T22:56:28.352Z",
+    "screen": 4,
+    "entries": [
+      {
+        "url": "http://localhost:8768/?tela=4",
+        "type": "navigation",
+        "status": 200,
+        "transferBytes": 16682,
+        "bodyBytes": 16382
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap",
+        "type": "resource",
+        "status": 0,
+        "transferBytes": 1071,
+        "bodyBytes": 771
+      },
+      {
+        "url": "http://localhost:8768/media/manifest.json",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 2126,
+        "bodyBytes": 1826
+      },
+      {
+        "url": "http://localhost:8768/media/suarez.jpg",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 18110,
+        "bodyBytes": 17810
+      },
+      {
+        "url": "http://localhost:8768/media/neymar.jpg",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 21285,
+        "bodyBytes": 20985
+      },
+      {
+        "url": "http://localhost:8768/media/bravo.jpg",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 17641,
+        "bodyBytes": 17341
+      },
+      {
+        "url": "http://localhost:8768/media/iniesta.jpg",
+        "type": "resource",
+        "status": 200,
+        "transferBytes": 18177,
+        "bodyBytes": 17877
+      }
+    ],
+    "totalTransferBytes": 95092,
+    "mp4Requests": 0,
+    "thumbs": [
+      {
+        "w": 120,
+        "h": 68
+      },
+      {
+        "w": 120,
+        "h": 68
+      },
+      {
+        "w": 120,
+        "h": 68
+      },
+      {
+        "w": 120,
+        "h": 68
+      }
+    ]
+  },
+  "playback": [
+    {
+      "id": "suarez",
+      "currentTime": 0,
+      "paused": false,
+      "duration": 28,
+      "seekable": [
+        [
+          0,
+          28
+        ]
+      ],
+      "width": 398,
+      "height": 224,
+      "error": null,
+      "mp4": [
+        {
+          "url": "http://localhost:8768/media/suarez.mp4",
+          "transferBytes": 2051338,
+          "bodyBytes": 2051038,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "neymar",
+      "time": 13.37,
+      "duration": 28,
+      "error": null,
+      "seekable": 28,
+      "bytes": [
+        {
+          "body": 2118067,
+          "transfer": 2118367,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "bravo",
+      "time": 14,
+      "duration": 27,
+      "error": null,
+      "seekable": 27,
+      "previousPaused": true,
+      "previousSource": null,
+      "bytes": [
+        {
+          "body": 2128284,
+          "transfer": 2128584,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "iniesta",
+      "time": 15.5,
+      "duration": 28,
+      "seekable": [
+        0,
+        28
+      ],
+      "error": null,
+      "bytes": [
+        {
+          "body": 1885059,
+          "transfer": 1885359,
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "lifecycle": {
+    "variantChange": {
+      "wasPlaying": true,
+      "oldPaused": true,
+      "oldSource": null,
+      "oldConnected": false,
+      "remainingVideos": 0,
+      "variant": "B"
+    },
+    "filterChange": {
+      "wasPlaying": true,
+      "oldPaused": true,
+      "oldSource": null,
+      "remainingVideos": 0
+    },
+    "screenChange": {
+      "wasPlaying": true,
+      "oldPaused": true,
+      "oldSource": null,
+      "remainingVideos": 0
+    },
+    "pendingFetchCancellation": {
+      "method": "Injected pending fetch honoring AbortSignal; switch detail before resolution",
+      "aborted": true,
+      "playerCleared": true,
+      "videos": 0
+    },
+    "visibilityHandler": {
+      "method": "Injected document.hidden=true and dispatched visibilitychange; T3 tab switching did not change document visibility",
+      "wasPlaying": true,
+      "oldPaused": true,
+      "oldSource": null,
+      "activeVideos": 0
+    }
+  },
+  "visualEvidence": {
+    "analysis": "analysis.png",
+    "suarez": "suarez.png",
+    "neymar": "neymar.png",
+    "bravo": "bravo.png",
+    "iniesta": "iniesta.png",
+    "finalLayout": "detail-final.png",
+    "t3Recording": "/home/pedro/.t3/userdata/attachments/07a851b3-7010-4d6e-8197-19e34cf44807-fced77b1-86e0-4b66-87c3-f6d84c525d22-mp4.mp4"
+  },
+  "fullPlayback": {
+    "at": "2026-10-21T23:06:30.665Z",
+    "method": "Each entire integrated clip played at 4x until native ended event; first-play and seeking tested separately",
+    "clips": [
+      {
+        "id": "suarez",
+        "ended": true,
+        "currentTime": 28,
+        "duration": 28,
+        "error": null
+      },
+      {
+        "id": "neymar",
+        "ended": true,
+        "currentTime": 28,
+        "duration": 28,
+        "error": null
+      },
+      {
+        "id": "bravo",
+        "ended": true,
+        "currentTime": 27,
+        "duration": 27,
+        "error": null
+      },
+      {
+        "id": "iniesta",
+        "ended": true,
+        "currentTime": 28,
+        "duration": 28,
+        "error": null
+      }
+    ],
+    "error": null
+  },
+  "notes": [
+    "Four cuts inspected visually in T3 using candidate playback and decoded frames before integration; final integrated playback verified.",
+    "All four clips reached their end without media error; initial Suarez first-play record and seek checks supplemented by visual playback.",
+    "Actual tab switching in T3 did not change document.hidden; visibility handler tested by injecting hidden=true and dispatching visibilitychange.",
+    "Pending-fetch cancellation tested with a deliberately pending fetch honoring AbortSignal; normal full downloads measured separately.",
+    "CSV downloaded through UI and inspected: four records, source/cut/event times and clip URLs match manifest."
+  ]
+}

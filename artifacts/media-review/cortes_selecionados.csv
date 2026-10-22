@@ -1,0 +1,5 @@
+﻿"id";"titulo";"tipo";"partida";"data";"tempo";"arquivo_origem";"anotacao";"anotacao_gameTime";"relogio_jogo";"evento_no_arquivo_s";"inicio_corte_no_arquivo_s";"fim_corte_no_arquivo_s";"evento_no_corte_s";"duracao_corte_s";"url_clipe"
+"suarez";"Gol de Luis Suárez";"Gol";"Real Madrid 0 x 4 Barcelona";"2015-11-21";"1";"1_224p.mkv";"Goal";"1 - 10:04";"10:04";"604.24";"590";"618";"14.24";"28";"http://localhost:8768/media/suarez.mp4"
+"neymar";"Gol de Neymar";"Gol";"Real Madrid 0 x 4 Barcelona";"2015-11-21";"1";"1_224p.mkv";"Goal";"1 - 38:35";"38:35";"2315.37";"2302";"2330";"13.37";"28";"http://localhost:8768/media/neymar.mp4"
+"bravo";"Defesa do Barcelona";"Defesa";"Real Madrid 0 x 4 Barcelona";"2015-11-21";"2";"2_224p.mkv";"Shots on target";"2 - 02:55";"47:55";"175.605";"163";"190";"12.605";"27";"http://localhost:8768/media/bravo.mp4"
+"iniesta";"Gol de Andrés Iniesta";"Gol";"Real Madrid 0 x 4 Barcelona";"2015-11-21";"2";"2_224p.mkv";"Goal";"2 - 07:17";"52:17";"437.84";"423";"451";"14.84";"28";"http://localhost:8768/media/iniesta.mp4"
