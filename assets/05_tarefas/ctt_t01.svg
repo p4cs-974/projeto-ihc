@@ -10,7 +10,8 @@
 <circle cx="380" cy="320" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
 <path d="M361 366 V343 Q361 333 380 333 Q399 333 399 343 V366 Z M371 349 V366 M389 349 V366" fill="none" stroke="#333" stroke-width="1.6"/>
 <path transform="translate(1017,310)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<text x="380" y="389" font-size="16" text-anchor="middle">M. Decidir revisar após receber demanda editorial</text>
+<text x="380" y="389" font-size="16" text-anchor="middle">M. Decidir revisar após receber demanda</text>
+<text x="380" y="410" font-size="16" text-anchor="middle">editorial</text>
 <path d="M437 340 H1003" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="686" y="323" width="68" height="32" fill="white"/>
 <text x="720" y="345" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
@@ -64,7 +65,8 @@
 <path d="M437.0 1149 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="686.0" y="1132" width="68" height="32" fill="white"/>
 <text x="720.0" y="1154" font-size="18" text-anchor="middle" font-weight="700">[&gt;</text>
-<text x="1060.0" y="1198" font-size="16" text-anchor="middle" font-weight="400">E. Encerrar conferência e reconhecer pendências</text>
+<text x="1060.0" y="1198" font-size="16" text-anchor="middle" font-weight="400">E. Encerrar conferência e reconhecer</text>
+<text x="1060.0" y="1219" font-size="16" text-anchor="middle" font-weight="400">pendências</text>
 <text x="40" y="1288" font-size="15" text-anchor="start" font-weight="400">E: revisão suficiente para esta sessão, prazo encerrado, acesso inviável ou lista vazia sem conferência possível.</text>
 <text x="40" y="1309" font-size="15" text-anchor="start" font-weight="400">C só inicia com candidato acessível ou suspeita de omissão verificável. E pode encerrar antes do primeiro C.</text>
 <path d="M40 1355 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
@@ -103,7 +105,8 @@
 <path d="M720 2317 L1060.0 2364" fill="none" stroke="#333" stroke-width="1.6"/>
 <circle cx="1060.0" cy="2374" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
 <path d="M1041.0 2420 V2397 Q1041.0 2387 1060.0 2387 Q1079.0 2387 1079.0 2397 V2420 Z M1051.0 2403 V2420 M1069.0 2403 V2420" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="380.0" y="2443" font-size="16" text-anchor="middle" font-weight="400">3.3. Conferir original e encaminhar correção</text>
+<text x="380.0" y="2443" font-size="16" text-anchor="middle" font-weight="400">3.3. Conferir original e encaminhar</text>
+<text x="380.0" y="2464" font-size="16" text-anchor="middle" font-weight="400">correção</text>
 <path d="M437.0 2394 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="686.0" y="2377" width="68" height="32" fill="white"/>
 <text x="720.0" y="2399" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
@@ -178,7 +181,8 @@
 <path d="M437.0 3597 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="686.0" y="3580" width="68" height="32" fill="white"/>
 <text x="720.0" y="3602" font-size="18" text-anchor="middle" font-weight="700">[&gt;</text>
-<text x="1060.0" y="3646" font-size="16" text-anchor="middle" font-weight="400">J. Encerrar reprodução e reconhecer o que foi visto</text>
+<text x="1060.0" y="3646" font-size="16" text-anchor="middle" font-weight="400">J. Encerrar reprodução e reconhecer o que</text>
+<text x="1060.0" y="3667" font-size="16" text-anchor="middle" font-weight="400">foi visto</text>
 <text x="40" y="3736" font-size="15" text-anchor="start" font-weight="400">J habilitada com informação para julgar, prazo encerrado ou reprodução indisponível; dúvida permanece explícita.</text>
 <path d="M40 3782 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="3811" font-size="18" text-anchor="start" font-weight="700">3 — decisão direta ou conferência seguida de nova decisão</text>
@@ -202,7 +206,8 @@
 <path transform="translate(337.0,4397)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
 <path d="M720 4350 L1060.0 4397" fill="none" stroke="#333" stroke-width="1.6"/>
 <path transform="translate(1017.0,4397)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<text x="380.0" y="4476" font-size="16" text-anchor="middle" font-weight="400">3.3. Conferir original e encaminhar correção</text>
+<text x="380.0" y="4476" font-size="16" text-anchor="middle" font-weight="400">3.3. Conferir original e encaminhar</text>
+<text x="380.0" y="4497" font-size="16" text-anchor="middle" font-weight="400">correção</text>
 <path d="M437.0 4427 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="686.0" y="4410" width="68" height="32" fill="white"/>
 <text x="720.0" y="4432" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
@@ -396,7 +401,8 @@
 <path d="M777.0 7684 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="912.6666666666666" y="7667" width="68" height="32" fill="white"/>
 <text x="946.6666666666666" y="7689" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
-<text x="1173.3333333333333" y="7733" font-size="16" text-anchor="middle" font-weight="400">S. Disponibilizar arquivos ou informar falha</text>
+<text x="1173.3333333333333" y="7733" font-size="16" text-anchor="middle" font-weight="400">S. Disponibilizar arquivos ou informar</text>
+<text x="1173.3333333333333" y="7754" font-size="16" text-anchor="middle" font-weight="400">falha</text>
 <text x="40" y="7823" font-size="15" text-anchor="start" font-weight="400">4.4 confere o resultado de S; falha mantém obtenção pendente e encaminha a T03.</text>
 <path d="M40 7869 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="7898" font-size="18" text-anchor="start" font-weight="700">5 — atendimento externo e retomada</text>

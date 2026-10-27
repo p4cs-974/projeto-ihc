@@ -224,9 +224,61 @@ GOAL 0: obter seleção revisada e identificar pendências da partida
 
 ### Diagrama CTT
 
-![CTT T01 — revisão iterativa, alternativas e suspensão/retomada](../assets/05_tarefas/ctt_t01.svg)
+![CTT T01 — revisão iterativa, alternativas e suspensão/retomada](../assets/05_tarefas/ctt_t01_visao_geral.svg)
 
 *Figura 8 — CTT de T01, por Pedro Alexandre Custódio Silva. Visão geral e expansões com relações entre irmãs; 5 suspende o percurso regular e permite retomada. [SVG editável](../assets/05_tarefas/ctt_t01.svg).*
+
+[H] A visão geral apresenta os três primeiros painéis. Os detalhamentos abaixo são recortes da mesma árvore, com IDs e relações preservados; o SVG completo reúne todos os painéis e a legenda.
+
+<details>
+<summary>T01: detalhamento 1, V, C, L</summary>
+
+![CTT T01, detalhamento 1](../assets/05_tarefas/ctt_t01_detalhe_01.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 2, O, 1, 2</summary>
+
+![CTT T01, detalhamento 2](../assets/05_tarefas/ctt_t01_detalhe_02.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 3, B, 3, P</summary>
+
+![CTT T01, detalhamento 3](../assets/05_tarefas/ctt_t01_detalhe_03.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 4, F, 3.3, Q</summary>
+
+![CTT T01, detalhamento 4](../assets/05_tarefas/ctt_t01_detalhe_04.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 5, D, 3.3.3, 4</summary>
+
+![CTT T01, detalhamento 5](../assets/05_tarefas/ctt_t01_detalhe_05.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 6, W, A, 5</summary>
+
+![CTT T01, detalhamento 6](../assets/05_tarefas/ctt_t01_detalhe_06.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 7, Legenda e leitura</summary>
+
+![CTT T01, detalhamento 7](../assets/05_tarefas/ctt_t01_detalhe_07.svg)
+
+</details>
+
 
 IDs numéricos acompanham o HTA. `M` é a motivação externa e `U` agrupa o uso da interface; não são novos controles. Os agrupamentos e decisões com letras tornam explícitos os casos, as saídas e os retornos antes resumidos em notas. Cada painel expande um nó da mesma árvore; IDs repetidos são referências ao mesmo objetivo. Condições de habilitação e resultados estão associados aos nós no diagrama e na leitura abaixo. As letras não representam novos controles da interface. `S` responde ao pedido de download com arquivos disponíveis ou falha informada. Ligações descendentes representam decomposição; horizontais representam relações temporais entre irmãs.
 
@@ -463,13 +515,51 @@ GOAL 0: supervisionar processo editorial e chancelar cortes
 
 **Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1\
 **Abordagem:** árvore de tarefas e relações temporais conforme os slides 19–24 de **CC8122-GOMS-CTT**.\
-**Fronteira dos sistemas:** as interações e tarefas automáticas são do **chat, da pasta compartilhada e do player externos**, usados no percurso proposto de P02. Arnaldo não recebe notificações diretamente do backend do TCC. O aviso no chat vem do editor após A04, H33/H40. A alternativa presencial é detalhada no GOMS.
+**Fronteira dos sistemas:** as interações e tarefas automáticas são do **chat, da pasta compartilhada e do player externos**, usados no percurso proposto de P02. Arnaldo não recebe notificações diretamente do backend do TCC. O aviso no chat vem do editor após A04, H33/H40. A comunicação presencial é uma tarefa de usuário fora desses sistemas; 3.3 detalha a escolha do canal.
 
 ### Diagrama CTT
 
-![CTT T02 — árvore com tipos de tarefas e operadores entre irmãs](../assets/05_tarefas/ctt_t02.svg)
+![CTT T02 — árvore com tipos de tarefas e operadores entre irmãs](../assets/05_tarefas/ctt_t02_visao_geral.svg)
 
 *Figura 2 — CTT de T02, por Lucas Roberto. Nuvem: abstrata; pessoa: usuário; computador: sistema; pessoa e computador com seta dupla: interação. Os painéis inferiores expandem os nós da visão geral. [SVG editável](../assets/05_tarefas/ctt_t02.svg).*
+
+[H] A visão geral apresenta os três primeiros painéis. Os detalhamentos abaixo são recortes da mesma árvore, com IDs e relações preservados; o SVG completo reúne todos os painéis e a legenda.
+
+<details>
+<summary>T02: detalhamento 1, 1, 2, B</summary>
+
+![CTT T02, detalhamento 1](../assets/05_tarefas/ctt_t02_detalhe_01.svg)
+
+</details>
+
+<details>
+<summary>T02: detalhamento 2, 3, D, 4</summary>
+
+![CTT T02, detalhamento 2](../assets/05_tarefas/ctt_t02_detalhe_02.svg)
+
+</details>
+
+<details>
+<summary>T02: detalhamento 3, R, K, 4.4</summary>
+
+![CTT T02, detalhamento 3](../assets/05_tarefas/ctt_t02_detalhe_03.svg)
+
+</details>
+
+<details>
+<summary>T02: detalhamento 4, 3.3, 3.3.A, 3.3.B</summary>
+
+![CTT T02, detalhamento 4](../assets/05_tarefas/ctt_t02_detalhe_04.svg)
+
+</details>
+
+<details>
+<summary>T02: detalhamento 5, Legenda e leitura</summary>
+
+![CTT T02, detalhamento 5](../assets/05_tarefas/ctt_t02_detalhe_05.svg)
+
+</details>
+
 
 As ligações descendentes mostram **decomposição**. As ligações horizontais entre tarefas irmãs carregam as **relações temporais**, como nos slides 23 e 24; não são planos HTA nem setas de um fluxograma. Os identificadores dos ramos 1–4 facilitam a comparação com o HTA; `D` agrupa as decisões de 3 e `S` identifica uma resposta automática do chat, que complementa as operações humanas do HTA.
 
@@ -477,7 +567,7 @@ As ligações descendentes mostram **decomposição**. As ligações horizontais
 
 1. **Sessão:** `C* [> V`, com `C = (1 []>> 2 []>> 3)` e `V = (E [] 4)`. E encerra o turno ou a sessão sem lote disponível para atender, reconhecendo pendências. 4 só é habilitada por alerta e falha que justifique retirada. A saída normal não exige uma crise. Nova versão recebida habilita novo C; enquanto espera, a chancela continua pendente.
 2. **Identificação e inspeção:** `1.1 >> 1.2 []>> 1.3` e `2 = (2.1 >> B []>> 2.3)`, com `B = (2.2* [> J)`. J encerra a reprodução quando os cortes foram conferidos, o prazo acaba ou o acesso é insuficiente, explicitando lacunas. O julgamento usa o que foi efetivamente visto; lacunas impedem chancela e levam à revisão. Pasta, chat e player são externos.
-3. **Deliberação:** `D []>> 3.3 []>> S`, com `D = (3.1 [] 3.2)`. Chancela exige critérios atendidos sem conferência pendente; devolução identifica o que revisar. S entrega a mensagem pelo chat, não é notificação do backend. Nova entrega exige nova inspeção; o envio da decisão não comprova que o ajuste ocorreu.
+3. **Deliberação:** `D []>> 3.3`, com `D = (3.1 [] 3.2)` e `3.3 = (3.3.A [] 3.3.B)`. O caminho por chat é `3.3.A.1 []>> S []>> 3.3.A.2`; o presencial é `3.3.B.1 []>> 3.3.B.2`. Escolher chat na estação com canal acessível, ou comunicação verbal junto ao editor, conforme os métodos de comunicação no GOMS. Sem canal viável, manter comunicação pendente. Chancela exige critérios atendidos sem conferência pendente; devolução identifica o que revisar. S entrega a mensagem pelo chat, não é notificação do backend. Nova entrega exige nova inspeção; o envio da decisão não comprova que o ajuste ocorreu.
 4. **Contingência:** ao escolher 4 em V, a instância C é desativada, preservando os outros lotes como pendências. `4 = (4.1 >> 4.2 []>> R)`, com `R = (K* [> F)` e `K = (4.3 >> 4.4)`. 4.4 só é habilitada depois da nova versão recebida. Se insuficiente, repetir K; F encerra quando a decisão foi comunicada e a versão é suficiente, ou quando a continuidade precisa ser adiada/inviável, mantendo pendências explícitas.
 5. **Reavaliação:** `4.4.1 []>> 4.4.2`. Conferir precede comunicar aprovação ou novo ajuste. Concluir F não executa republicação nem retoma a instância regular interrompida; os outros lotes exigem nova sessão. E/J/F explicitam decisões de término já presentes nos planos HTA e no GOMS, sem novos controles no produto.
 
@@ -497,9 +587,9 @@ As ligações descendentes mostram **decomposição**. As ligações horizontais
 
 | Símbolo no diagrama | Tipo nos slides | Aplicação no modelo |
 |---|---|---|
-| Nuvem | Abstrata | Objetivo global, C/V/B/R/K, ramos 1–4, decisão D e reavaliação 4.4; agrupam outras tarefas. |
-| Pessoa | Usuário | Consultar prioridades em anotações, escolher lote, julgar pertinência, chancelar ou solicitar revisão como decisões, conferir a correção e reconhecer término/pendências (E/J/F). Atividades fora dos sistemas externos, incluindo julgamentos mentais. |
-| Pessoa e computador, com seta dupla | Interativa | Consultar aviso e arquivos, ler metadados, reproduzir cortes, enviar decisão e orientações pelo chat. Há diálogo com aplicações externas. |
+| Nuvem | Abstrata | Objetivo global, C/V/B/R/K, ramos 1–4, decisão D, comunicação 3.3/A/B e reavaliação 4.4; agrupam outras tarefas. |
+| Pessoa | Usuário | Consultar prioridades em anotações, escolher lote, julgar pertinência, chancelar ou solicitar revisão como decisões, conferir a correção, comunicar presencialmente/conferir compreensão (3.3.B), conferir entrega no chat (3.3.A.2) e reconhecer término/pendências (E/J/F). Atividades fora dos sistemas externos, incluindo julgamentos mentais. |
+| Pessoa e computador, com seta dupla | Interativa | Consultar aviso e arquivos, ler metadados, reproduzir cortes, enviar decisão (3.3.A.1) e orientações pelo chat. Há diálogo com aplicações externas. |
 | Computador | Sistema | Entregar a mensagem no chat, sem nova ação de Arnaldo. Ler ou perceber o aviso é ação do usuário, não tarefa automática do TCC. |
 
 ---
@@ -677,9 +767,40 @@ GOAL 0: acompanhar o lote e definir a continuidade das partidas
 
 ### Diagrama CTT
 
-![CTT T03 — árvore com tipos de tarefas e relações temporais entre irmãs](../assets/05_tarefas/ctt_t03.svg)
+![CTT T03 — árvore com tipos de tarefas e relações temporais entre irmãs](../assets/05_tarefas/ctt_t03_visao_geral.svg)
 
 *Figura 5 — CTT de T03, por Giovanni Chahin Morassi. Visão geral e expansões dos ramos; ícones distinguem tarefas abstratas, de usuário, interativas e de sistema. [SVG editável](../assets/05_tarefas/ctt_t03.svg).*
+
+[H] A visão geral apresenta os três primeiros painéis. Os detalhamentos abaixo são recortes da mesma árvore, com IDs e relações preservados; o SVG completo reúne todos os painéis e a legenda.
+
+<details>
+<summary>T03: detalhamento 1, C, 1, 2</summary>
+
+![CTT T03, detalhamento 1](../assets/05_tarefas/ctt_t03_detalhe_01.svg)
+
+</details>
+
+<details>
+<summary>T03: detalhamento 2, 3, 3.2, A</summary>
+
+![CTT T03, detalhamento 2](../assets/05_tarefas/ctt_t03_detalhe_02.svg)
+
+</details>
+
+<details>
+<summary>T03: detalhamento 3, 3.3, 3.3.3, 4</summary>
+
+![CTT T03, detalhamento 3](../assets/05_tarefas/ctt_t03_detalhe_03.svg)
+
+</details>
+
+<details>
+<summary>T03: detalhamento 4, Legenda e leitura</summary>
+
+![CTT T03, detalhamento 4](../assets/05_tarefas/ctt_t03_detalhe_04.svg)
+
+</details>
+
 
 As ligações descendentes indicam decomposição; relações horizontais ligam tarefas irmãs. Os IDs numéricos seguem o HTA. `M` explicita a motivação externa e `U` agrupa a sessão de uso. `C` agrupa o ciclo por partida; `S` explicita a resposta automática à consulta, implícita na operação 2.1 do HTA. A escolha das alternativas é condicionada pela avaliação em 2.3 e 3.3.2; não equivale a um fluxograma com setas “sim/não”.
 
@@ -724,6 +845,24 @@ Os três modelos aprofundam uma necessidade já registrada e permanecem **propos
 3. **Continuidade editorial:** abrir resultados acessíveis encaminha a T01/A04; resultado vazio, falha parcial e cobertura desconhecida precisam permanecer explícitos, RC05. T03 não aprova a seleção nem substitui T02.
 4. **Aplicação às duas primárias:** P01 precisa continuar outras edições durante a espera, H32; P03 precisa de processamento remoto e vocabulário acessível, H37/H38. O mesmo fluxo deve apoiar os dois sem exigir capacidade local para a inferência pesada, parâmetros de IA ou histórico permanente. O dispositivo continua precisando de espaço para entradas, cortes/metadados e edição externa; a viabilidade com pouco armazenamento permanece em investigação em H37.
 5. **Investigação na Entrega 7:** verificar frequência das consultas, percepção dos estados, meio de aviso, causas de falha compreensíveis, critérios para tentar novamente ou adiar e preservação efetiva dos resultados. Investigar com a equipe técnica estados, validação, recuperação e informações de custo disponíveis. Esses resultados poderão orientar metas de usabilidade e testes futuros; não há valores quantitativos fixados nesta modelagem.
+
+---
+
+## Correspondência entre escolhas e sequências dos modelos
+
+[H] Nos HTAs, `/` representa alternativas condicionadas; os GOMS conservam métodos e regras nessas escolhas. `>` representa uma sequência, descrita diretamente no GOMS quando há um único caminho. Os planos HTA continuam necessários nos nós decompostos, inclusive nas sequências. `+` indicaria paralelismo, mas não é usado nestes recortes.
+
+| Tarefa | Escolhas no HTA | Métodos no GOMS | Relações correspondentes no CTT |
+|---|---|---|---|
+| T01 | Destino 3.1/3.2/3.3/3.4; corte externo condicionado em 3.3; download somente com seleção não vazia | 3.A–D; 3.C.5.A/B; 4.A/B | F/P distinguem decisão direta e conferência; D escolhe corte externo ou dispensa; W escolhe download ou seleção vazia. M antecede a sessão e 5 trata a retomada. |
+| T02 | Chancelar/devolver em 3; rotina/contingência; comunicação por chat ou na ilha | A.R/A.C; 2.A/B; 3.A/B; comunicação 3.A.2.A/B e 3.B.3.A/B | V distingue encerramento/contingência; D distingue as deliberações; 3.3.A/B distinguem chat e comunicação presencial. A inspeção conjunta refina 2 no GOMS, sem mudar a avaliação requerida pelo HTA/CTT. |
+| T03 | Aguardar, acessar ou recuperar em 3; recuperação 3.3.3.1/2/3 | 3.A–C; 3.C.3.A–C | 3 e 3.3.3 usam escolha; S informa estado ou indisponibilidade. 3.3.4 confere o desfecho dos dois pedidos de recuperação e da manutenção da pendência. |
+
+[H] As verificações finais reconhecem o resultado efetivo, inclusive rejeição e pendência. Nenhum modelo transforma confirmação de comando em sucesso presumido. O envio inicial permanece precondição, e frequência, criticidade e condições de trabalho permanecem hipóteses.
+
+## Continuidade da investigação
+
+[?] Na próxima investigação, verificar com P01/P03 quais informações permitem reconhecer uma revisão suficiente, recuperar contexto após interrupção e decidir entre aguardar, tentar novamente ou manter pendência. Com P02, verificar identificação/timecodes/contexto recebidos e referência necessária para pedir ajustes fora da interface. Para T03, verificar reconhecimento dos estados, causas compreensíveis, confirmação de aceitação dos pedidos e preservação das demais partidas. H10/H16/H25/H26/H32/H35/H37/H40/H41 continuam abertas. O parecer orienta esses critérios; sua aplicação documental não valida o protótipo nem amplia o escopo da interface de Arnaldo.
 
 ---
 
