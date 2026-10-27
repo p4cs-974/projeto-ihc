@@ -228,13 +228,13 @@ GOAL 0: obter seleção revisada e identificar pendências da partida
 
 *Figura 8 — CTT de T01, por Pedro Alexandre Custódio Silva. Visão geral e expansões com relações entre irmãs; 5 suspende o percurso regular e permite retomada. [SVG editável](../assets/05_tarefas/ctt_t01.svg).*
 
-IDs numéricos acompanham o HTA. Os agrupamentos e decisões com letras tornam explícitos os casos, as saídas e os retornos antes resumidos em notas. Cada painel expande um nó da mesma árvore; IDs repetidos são referências ao mesmo objetivo. Condições de habilitação e resultados estão associados aos nós no diagrama e na leitura abaixo. As letras não representam novos controles da interface. `S` responde ao pedido de download com arquivos disponíveis ou falha informada. Ligações descendentes representam decomposição; horizontais representam relações temporais entre irmãs.
+IDs numéricos acompanham o HTA. `M` é a motivação externa e `U` agrupa o uso da interface; não são novos controles. Os agrupamentos e decisões com letras tornam explícitos os casos, as saídas e os retornos antes resumidos em notas. Cada painel expande um nó da mesma árvore; IDs repetidos são referências ao mesmo objetivo. Condições de habilitação e resultados estão associados aos nós no diagrama e na leitura abaixo. As letras não representam novos controles da interface. `S` responde ao pedido de download com arquivos disponíveis ou falha informada. Ligações descendentes representam decomposição; horizontais representam relações temporais entre irmãs.
 
 A separação entre relações temporais e condições de tarefas segue os slides da disciplina; para iteração, opcionalidade e pré/pós-condições, consultou-se também [W3C, MBUI — Task Models, §§3.1 e 3.4](https://www.w3.org/TR/task-models/), nota de grupo de trabalho de 08/04/2014, acesso em 13/10/2026. Essa referência complementa a notação e não declara conformidade executável ou aprovação do professor.
 
 ### Leitura da árvore e condições
 
-1. **Tarefa global:** `R |> 5`, com `R = (1 []>> V []>> 4)` e `V = (C* [> E)`. `E` encerra a conferência quando há decisões suficientes para esta sessão, prazo encerrado, acesso inviável ou nenhum candidato/conferência possível. Ao iniciar E, a iteração é desativada e as pendências alimentam 4. Com lista vazia e sem omissão verificável, E pode acontecer antes do primeiro C; não se executa inspeção de candidato inexistente. A lista vazia não prova ausência de lances.
+1. **Tarefa global:** `M []>> U`, com `U = (R |> 5)`. [H] M representa o editor recebendo uma demanda editorial fora da interface e decidindo revisar a partida; transmite finalidade e referência a U antes de abrir os resultados. Recuperar critérios e prazo em 1.3 continua necessário, mas não substitui essa motivação. A sessão U usa `R |> 5`, com `R = (1 []>> V []>> 4)` e `V = (C* [> E)`. `E` encerra a conferência quando há decisões suficientes para esta sessão, prazo encerrado, acesso inviável ou nenhum candidato/conferência possível. Ao iniciar E, a iteração é desativada e as pendências alimentam 4. Com lista vazia e sem omissão verificável, E pode acontecer antes do primeiro C; não se executa inspeção de candidato inexistente. A lista vazia não prova ausência de lances.
 2. **Casos do ciclo:** `C = (L [] O)`. `L = (2 []>> 3)` exige candidato gerado acessível. `O = (3.3 []>> X)` exige suspeita de omissão com referência, original e recursos/prazo; X reconhece o corte externo conferido ou a pendência, a partir da distinção de 3.3.4. O não executa inclusão/exclusão de candidato inexistente. Sem conferência viável, reconhecer a pendência em E/4.
 3. **Preparação e inspeção:** `1 = (1.1 []>> 1.2 []>> 1.3)` e `2 = (2.1 []>> B []>> 2.3)`, com `B = (2.2* [> J)`. J encerra a reprodução com informação para julgar, prazo encerrado ou prévia indisponível, reconhecendo o que foi visto e as lacunas. Só depois se executa o julgamento 2.3; não se presume inspeção bem-sucedida quando a prévia falha. Falha técnica encaminha a T03 e mantém o candidato como pendência.
 4. **Decisão sobre o gerado:** `3 = (F [] P)`, `F = (3.1 [] 3.2 [] 3.4)` e `P = (3.3 []>> F)`. F representa decisão direta ou manutenção de pendência sem conferência viável; P representa conferência no original seguida de nova decisão explícita. Incluir em 3.1 exige pertinência e contexto suficiente; 3.2 cobre irrelevância ou substituição por corte externo; 3.4 mantém inconclusivos fora da seleção utilizável. H30 admite candidatos extras para conferência, sem dispensar essas condições.
@@ -260,8 +260,8 @@ Não se presume inspeção concorrente de vários vídeos por Rafael. Processame
 
 | Símbolo no diagrama | Tipo nos slides | Aplicação no modelo |
 |---|---|---|
-| Nuvem | Abstrata | Objetivo global, R/V/C/L/O/B, ramos 1–5, F/P/Q/D, correção 3.3.3 e W/A. |
-| Pessoa | Usuário | Recuperar critérios (1.3), julgar (2.3), reconhecer dispensa/impossibilidade (N), definir limites (3.3.3.1), distinguir versões/pendências (3.3.4), manter pendência (3.4), avaliar seleção/pendências (4.1) e reconhecer término/lacunas/resultado externo/seleção vazia (E/J/K/X/Z). |
+| Nuvem | Abstrata | Objetivo global e sessão U, R/V/C/L/O/B, ramos 1–5, F/P/Q/D, correção 3.3.3 e W/A. |
+| Pessoa | Usuário | Receber demanda e decidir revisar fora da interface (M), recuperar critérios (1.3), julgar (2.3), reconhecer dispensa/impossibilidade (N), definir limites (3.3.3.1), distinguir versões/pendências (3.3.4), manter pendência (3.4), avaliar seleção/pendências (4.1) e reconhecer término/lacunas/resultado externo/seleção vazia (E/J/K/X/Z). |
 | Pessoa e computador, com seta dupla | Interativa | Consultar origem/resultados (1.1–2), localizar/reproduzir (2.1–2), marcar/desmarcar (3.1–2), localizar/assistir original (3.3.1–2), recortar/salvar/reproduzir externamente (3.3.3.2–3), conferir resumo/pedir download (4.2–3), conferir arquivos (4.4) e preservar/recuperar referência (5.1/5.3). 5.2 usa chat externo na variante desenhada; alternativa presencial no GOMS. |
 | Computador | Sistema | Disponibilizar arquivos selecionados ou informar falha (S), sem realizar decisão editorial. |
 
@@ -681,11 +681,11 @@ GOAL 0: acompanhar o lote e definir a continuidade das partidas
 
 *Figura 5 — CTT de T03, por Giovanni Chahin Morassi. Visão geral e expansões dos ramos; ícones distinguem tarefas abstratas, de usuário, interativas e de sistema. [SVG editável](../assets/05_tarefas/ctt_t03.svg).*
 
-As ligações descendentes indicam decomposição; relações horizontais ligam tarefas irmãs. Os IDs seguem o HTA. `C` agrupa o ciclo por partida; `S` explicita a resposta automática à consulta, implícita na operação 2.1 do HTA. A escolha das alternativas é condicionada pela avaliação em 2.3 e 3.3.2; não equivale a um fluxograma com setas “sim/não”.
+As ligações descendentes indicam decomposição; relações horizontais ligam tarefas irmãs. Os IDs numéricos seguem o HTA. `M` explicita a motivação externa e `U` agrupa a sessão de uso. `C` agrupa o ciclo por partida; `S` explicita a resposta automática à consulta, implícita na operação 2.1 do HTA. A escolha das alternativas é condicionada pela avaliação em 2.3 e 3.3.2; não equivale a um fluxograma com setas “sim/não”.
 
 ### Leitura da árvore e condições
 
-1. **Sessão:** `1 []>> V []>> 4`, com `V = (C* [> E)` e `C = (2 []>> 3)`. E encerra as consultas com encaminhamentos definidos para esta sessão ou decisão de adiar, explicitando partidas não consultadas e pendências. Encerrar E habilita 4 sem exigir conclusão de todo o lote. Nova informação motiva outra sessão; não dispara processamento automático.
+1. **Sessão:** `M []>> U`, com `U = (1 []>> V []>> 4)`. [H] M representa o usuário interrompendo outra atividade e decidindo consultar o lote, por necessidade própria ou após aviso disponível; o meio de aviso continua em H32. M antecede a abertura da lista em 1.1 e transmite a referência do lote a U, com `V = (C* [> E)` e `C = (2 []>> 3)`. E encerra as consultas com encaminhamentos definidos para esta sessão ou decisão de adiar, explicitando partidas não consultadas e pendências. Encerrar E habilita 4 sem exigir conclusão de todo o lote. Nova informação motiva outra sessão; não dispara processamento automático.
 2. **Identificação (1):** `1.1 []>> 1.2`. Lote já enviado e lista acessível são precondições; a indisponibilidade da lista não prova falha da execução.
 3. **Compreensão (2):** `2.1 []>> S []>> 2.2 []>> 2.3`. S devolve estado real ou informa indisponibilidade; o usuário interpreta e escolhe o encaminhamento. S não representa toda a inferência.
 4. **Continuidade (3):** `3.1 [] 3.2 [] 3.3`: aguardar/adiar quando ativo ou sem informação segura; conferir acesso quando há resultados; tratar falha informada. Em falha parcial, consultar ocorrência e limites antes de novo C para os resultados preservados, se acessíveis.
@@ -708,8 +708,8 @@ Não se usaram `|||`, `|[]|`, `|=|` ou `|>`: o processamento remoto pode continu
 
 | Símbolo no diagrama | Tipo nos slides | Aplicação no modelo |
 |---|---|---|
-| Nuvem | Abstrata | Objetivo global, V/C, ramos 1–4 e agrupamentos 3.2/A, 3.3 e 3.3.3. |
-| Pessoa | Usuário | Interpretar estado (2.2), escolher encaminhamento (2.3), aguardar/continuar outra atividade (3.1), reconhecer passagem à revisão (3.2.3), avaliar recuperação (3.3.2), manter pendência (3.3.3.3), identificar pendências (4.2), encerrar consultas (E) e reconhecer acesso falho (F). |
+| Nuvem | Abstrata | Objetivo global, U/V/C, ramos 1–4 e agrupamentos 3.2/A, 3.3 e 3.3.3. |
+| Pessoa | Usuário | Decidir consultar após interromper outra atividade (M), interpretar estado (2.2), escolher encaminhamento (2.3), aguardar/continuar outra atividade (3.1), reconhecer passagem à revisão (3.2.3), avaliar recuperação (3.3.2), manter pendência (3.3.3.3), identificar pendências (4.2), encerrar consultas (E) e reconhecer acesso falho (F). |
 | Pessoa e computador, com seta dupla | Interativa | Abrir/conferir lote, consultar estado (2.1), abrir/conferir resultados (3.2.1–2), ler orientação (3.3.1), corrigir/reenviar ou confirmar nova tentativa (3.3.3.1–2), conferir encaminhamento (3.3.4) e consultar demais partidas (4.1). |
 | Computador | Sistema | Disponibilizar a resposta à consulta (S), com estado ou indisponibilidade, sem novo comando humano. |
 

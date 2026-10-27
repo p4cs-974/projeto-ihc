@@ -1,11 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="8584" viewBox="0 0 1440 8584" role="img" aria-labelledby="title desc">
-<title id="title">CTT T01 — Revisão, alternativas e término da sessão</title><desc id="desc">Árvore com painéis de decomposição, tipos de tarefas, alternativas condicionadas e encerramentos explícitos. Revisão de AC-063. Pedro Alexandre Custódio Silva · 22.123.049-3 · P01; aplicação a P03. Modelo hipotético a validar.</desc>
-<rect width="1440" height="8584" fill="white"/><g font-family="DejaVu Sans, Arial, sans-serif" fill="#222"><text x="40" y="40" font-size="25" text-anchor="start" font-weight="700">CTT — T01: Revisão, alternativas e término da sessão</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="8999" viewBox="0 0 1440 8999" role="img" aria-labelledby="title desc">
+<title id="title">CTT T01 — Revisão, alternativas e término da sessão</title><desc id="desc">Árvore com painéis de decomposição, tipos de tarefas, alternativas condicionadas e encerramentos explícitos. Motivação externa M antes da sessão U; condições e encerramentos explícitos. Pedro Alexandre Custódio Silva · 22.123.049-3 · P01; aplicação a P03. Modelo hipotético a validar.</desc>
+<rect width="1440" height="8999" fill="white"/><g font-family="DejaVu Sans, Arial, sans-serif" fill="#222"><text x="40" y="40" font-size="25" text-anchor="start" font-weight="700">CTT — T01: Revisão, alternativas e término da sessão</text>
 <text x="40" y="73" font-size="16" text-anchor="start" font-weight="400">Pedro Alexandre Custódio Silva · 22.123.049-3 · P01; aplicação a P03 · [H]</text>
+<path d="M40 110 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="139" font-size="18" font-weight="700">Motivação externa antes da sessão de uso [H]</text>
+<path transform="translate(677,163)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="237" font-size="16" text-anchor="middle">T01. Motivação e sessão de uso</text>
+<path d="M720 263 L380 310 M720 263 L1060 310" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="380" cy="320" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M361 366 V343 Q361 333 380 333 Q399 333 399 343 V366 Z M371 349 V366 M389 349 V366" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1017,310)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="380" y="389" font-size="16" text-anchor="middle">M. Decidir revisar após receber demanda editorial</text>
+<path d="M437 340 H1003" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686" y="323" width="68" height="32" fill="white"/>
+<text x="720" y="345" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1060" y="389" font-size="16" text-anchor="middle">U. Sessão de uso da interface</text>
+<text x="40" y="465" font-size="15">M é ação do usuário fora da interface: receber a demanda e decidir revisar a partida, conforme C01/H11/H40.</text>
+<text x="40" y="486" font-size="15">M []&gt;&gt; U: a decisão externa transmite a partida/finalidade à consulta; U é detalhada nos painéis seguintes.</text>
+<g transform="translate(0,415)">
 <path d="M40 110 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="139" font-size="18" text-anchor="start" font-weight="700">Objetivo global e interrupção humana</text>
 <path transform="translate(677,163)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<text x="720" y="237" font-size="16" text-anchor="middle" font-weight="400">T01. Localizar, selecionar e revisar lances</text>
+<text x="720" y="237" font-size="16" text-anchor="middle" font-weight="400">U. Sessão de uso da interface</text>
 <path d="M720 263 L380.0 310" fill="none" stroke="#333" stroke-width="1.6"/>
 <path transform="translate(337.0,310)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
 <path d="M720 263 L1060.0 310" fill="none" stroke="#333" stroke-width="1.6"/>
@@ -433,4 +449,4 @@
 <text x="40" y="8464" font-size="15" text-anchor="start" font-weight="400">Painéis expandem nós da mesma árvore; repetir um ID no detalhamento é uma referência ao mesmo objetivo.</text>
 <text x="40" y="8488" font-size="15" text-anchor="start" font-weight="400">E/J/K são saídas humanas; X/Z reconhecem resultado ou seleção vazia. Não exigem novos botões.</text>
 <text x="40" y="8512" font-size="15" text-anchor="start" font-weight="400">[]&gt;&gt; passagem de informação; &gt;&gt; sequência; [] escolha; [&gt; desativação; |&gt; suspensão/retomada; * iteração.</text>
-<text x="40" y="8536" font-size="15" text-anchor="start" font-weight="400">Uma resposta técnica pode informar falha. Concluir uma interação não comprova obtenção nem aprovação.</text></g></svg>
+<text x="40" y="8536" font-size="15" text-anchor="start" font-weight="400">Uma resposta técnica pode informar falha. Concluir uma interação não comprova obtenção nem aprovação.</text></g></g></svg>
