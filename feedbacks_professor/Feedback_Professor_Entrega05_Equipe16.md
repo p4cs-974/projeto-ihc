@@ -201,4 +201,3 @@ De forma geral, considero a Entrega 5 consistente na escolha das tarefas, comple
   > **✅ Como foi tratado** ([`73b9041`](https://github.com/p4cs-974/projeto-ihc/commit/73b9041)): [F] A seção de correspondência diferencia escolhas dos HTAs, métodos GOMS e relações CTT. Sequências de caminho único não recebem métodos GOMS; os planos HTA permanecem nos nós decompostos. Não há paralelismo + nestes recortes.
   >
   > \- Lucas
-

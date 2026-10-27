@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
-**Data:** 07/10/2026 (versão original)  
-**Revisão:** 27/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe16.md) e dos comentários adicionais nas três tarefas, por Lucas  
+**Data:** 07/10/2026 (versão original)\
+**Revisão:** 27/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe16.md) e dos comentários adicionais nas três tarefas, por Lucas\
 **Revisão de T02:** 09/10/2026, adequação aos modelos dos slides do professor\
 **Preenchimento de T03:** 12/10/2026, acompanhamento de partidas em lote e tratamento de falhas\
 **Preenchimento de T01:** 13/10/2026, localização, seleção e revisão de lances de melhores momentos\
