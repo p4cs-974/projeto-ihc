@@ -1,6 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
-**Data:** 07/10/2026  
+**Data:** 07/10/2026 (versão original)  
+**Revisão:** 27/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe16.md) e dos comentários adicionais nas três tarefas, por Lucas  
 **Revisão de T02:** 09/10/2026, adequação aos modelos dos slides do professor\
 **Preenchimento de T03:** 12/10/2026, acompanhamento de partidas em lote e tratamento de falhas\
 **Preenchimento de T01:** 13/10/2026, localização, seleção e revisão de lances de melhores momentos\
@@ -906,3 +907,4 @@ Na tabela, `>` abrevia a ordem de leitura do percurso; as relações formais e a
 | 12/10/2026 | 1.2 | Preenchimento de T03, Acompanhar o processamento de partidas em lote e tratar falhas: HTA com planos e tabela, GOMS hierárquico e diagrama, CTT com tipos e relações entre irmãs. P01 como referência principal, aplicação a P03, estados e recuperação condicionados à viabilidade técnica. Criados os SVGs de T03 e atualizadas R02/R05 e a ponte de uso proposto na Entrega 4. Delimitada a passagem para T01/A04; T01 permanece pendente. | Giovanni Chahin Morassi |
 | 13/10/2026 | 1.3 | Preenchimento de T01 por Pedro: HTA com planos/tabela, GOMS hierárquico e CTT com suspensão/retomada; três SVGs. R01/R04 vinculadas à revisão proposta, correção externa e pendências. Corrigida autoria/matrícula na seleção; os três modelos das três tarefas estão preenchidos, sem validação empírica. | Pedro Alexandre Custódio Silva |
 | 13/10/2026 | 1.4 | Aplicação de AC-063 a AC-068 da análise das 15:11: CTT com saídas e alternativas explícitas, retorno após conferência externa e falha de acesso; percursos conferidos contra HTA/GOMS; frequência e criticidade de T02 como hipóteses; âncora da seção 0.2 corrigida. Jornada de P01, implicações C02/C03, README e impacto de H37 sincronizados. Escopo e autoria dos modelos preservados, sem validação empírica. | Equipe 16, revisão assistida pelo Codex a pedido da equipe |
+| 27/10/2026 | 1.5 | [F] Aplicação do parecer da Entrega 5 e dos comentários adicionais em T01/T02/T03: Input/Feedback somente na tarefa 0 dos HTAs; GOMS textual, precondições distintas de regras e meta 0 sem método; operadores separados e verificação dos resultados; motivação externa nos CTTs de T01/T03; comunicação por chat/presencial em T02; rótulos e navegação por recortes SVG; correspondência entre modelos e pontos de investigação. Hipóteses e escopo preservados. | Lucas Roberto Boccia dos Santos, com assistência do Codex e autorização para revisar as três tarefas |
