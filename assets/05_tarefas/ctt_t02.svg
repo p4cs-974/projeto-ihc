@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="5285" viewBox="0 0 1440 5285" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="6530" viewBox="0 0 1440 6530" role="img" aria-labelledby="title desc">
 <title id="title">CTT T02 — Supervisão, encerramento e contingência</title><desc id="desc">Árvore com painéis de decomposição, tipos de tarefas, alternativas condicionadas e encerramentos explícitos. Revisão de AC-063. Lucas Roberto Boccia dos Santos · 22.123.012-1 · P02; uso externo. Modelo hipotético a validar.</desc>
-<rect width="1440" height="5285" fill="white"/><g font-family="DejaVu Sans, Arial, sans-serif" fill="#222"><text x="40" y="40" font-size="25" text-anchor="start" font-weight="700">CTT — T02: Supervisão, encerramento e contingência</text>
+<rect width="1440" height="6530" fill="white"/><g font-family="DejaVu Sans, Arial, sans-serif" fill="#222"><text x="40" y="40" font-size="25" text-anchor="start" font-weight="700">CTT — T02: Supervisão, encerramento e contingência</text>
 <text x="40" y="73" font-size="16" text-anchor="start" font-weight="400">Lucas Roberto Boccia dos Santos · 22.123.012-1 · P02; uso externo · [H]</text>
 <path d="M40 110 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="139" font-size="18" text-anchor="start" font-weight="700">Sessão — distinguir encerramento normal de contingência</text>
@@ -119,29 +119,18 @@
 <text x="1060.0" y="2401" font-size="16" text-anchor="middle" font-weight="400">J. Encerrar inspeção e reconhecer lacunas</text>
 <text x="40" y="2491" font-size="15" text-anchor="start" font-weight="400">J: cortes conferidos, prazo encerrado ou acesso insuficiente. Lacunas impedem 3.1 e habilitam 3.2.</text>
 <path d="M40 2537 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="2566" font-size="18" text-anchor="start" font-weight="700">3 — decisão humana, envio e entrega externa</text>
+<text x="40" y="2566" font-size="18" text-anchor="start" font-weight="700">3: deliberação e comunicação</text>
 <path transform="translate(677,2590)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
 <text x="720" y="2664" font-size="16" text-anchor="middle" font-weight="400">3. Deliberar e comunicar</text>
-<path d="M720 2690 L266.66666666666663 2737" fill="none" stroke="#333" stroke-width="1.6"/>
-<path transform="translate(223.66666666666663,2737)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M720 2690 L720.0 2737" fill="none" stroke="#333" stroke-width="1.6"/>
-<circle cx="742.0" cy="2747" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
-<path d="M723.0 2793 V2770 Q723.0 2760 742.0 2760 Q761.0 2760 761.0 2770 V2793 Z M733.0 2776 V2793 M751.0 2776 V2793" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="668.0" y="2746" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M692.0 2778 V2785 M664.0 2785 H720.0 V2793 H664.0 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M717.0 2763 H730.0 M730.0 2763 l-5 -4 M730.0 2763 l-5 4 M730.0 2772 H717.0 M717.0 2772 l5 -4 M717.0 2772 l5 4" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M720 2690 L1173.3333333333333 2737" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="1149.3333333333333" y="2746" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/>
-<path d="M1173.3333333333333 2778 V2785 M1145.3333333333333 2785 H1201.3333333333333 V2793 H1145.3333333333333 Z" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="266.66666666666663" y="2816" font-size="16" text-anchor="middle" font-weight="400">D. Formar decisão</text>
-<path d="M323.66666666666663 2767 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="459.3333333333333" y="2750" width="68" height="32" fill="white"/>
-<text x="493.3333333333333" y="2772" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
-<text x="720.0" y="2816" font-size="16" text-anchor="middle" font-weight="400">3.3. Enviar decisão ao editor</text>
-<path d="M777.0 2767 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
-<rect x="912.6666666666666" y="2750" width="68" height="32" fill="white"/>
-<text x="946.6666666666666" y="2772" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
-<text x="1173.3333333333333" y="2816" font-size="16" text-anchor="middle" font-weight="400">S. Entregar mensagem pelo chat</text>
+<path d="M720 2690 L380.0 2737" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,2737)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="380.0" y="2816" font-size="16" text-anchor="middle" font-weight="400">D. Formar decisão</text>
+<path d="M720 2690 L1060.0 2737" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1017.0,2737)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1060.0" y="2816" font-size="16" text-anchor="middle" font-weight="400">3.3. Comunicar e conferir decisão</text>
+<path d="M437.0 2767 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/><rect x="686.0" y="2750" width="68" height="32" fill="white"/>
+<text x="720.0" y="2772" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="40" y="2906" font-size="15" text-anchor="start" font-weight="400">A comunicação tem caminhos por chat ou presencialmente; as condições são detalhadas em 3.3.</text>
 <path d="M40 2931 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="2960" font-size="18" text-anchor="start" font-weight="700">D — alternativas de deliberação</text>
 <path transform="translate(677,2984)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
@@ -198,7 +187,8 @@
 <path d="M437.0 3970 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="686.0" y="3953" width="68" height="32" fill="white"/>
 <text x="720.0" y="3975" font-size="18" text-anchor="middle" font-weight="700">[&gt;</text>
-<text x="1060.0" y="4019" font-size="16" text-anchor="middle" font-weight="400">F. Encerrar contingência com decisão ou pendência</text>
+<text x="1060.0" y="4019" font-size="16" text-anchor="middle" font-weight="400">F. Encerrar contingência com decisão ou</text>
+<text x="1060.0" y="4040" font-size="16" text-anchor="middle" font-weight="400">pendência</text>
 <text x="40" y="4109" font-size="15" text-anchor="start" font-weight="400">F: decisão comunicada e versão suficiente, ou continuidade inviável/adiada; não autoriza republicação automática.</text>
 <path d="M40 4155 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="4184" font-size="18" text-anchor="start" font-weight="700">K — esperar versão corrigida antes de reavaliar</text>
@@ -238,6 +228,53 @@
 <text x="1060.0" y="4849" font-size="16" text-anchor="middle" font-weight="400">4.4.2. Comunicar aprovação ou ajuste</text>
 <text x="40" y="4939" font-size="15" text-anchor="start" font-weight="400">Encerrar 4 não retoma o ciclo C desativado; demais lotes exigem uma nova sessão.</text>
 <path d="M40 4985 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="5014" font-size="18" text-anchor="start" font-weight="700">3.3: selecionar o meio de comunicação</text>
+<path transform="translate(677,5038)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="5112" font-size="16" text-anchor="middle" font-weight="400">3.3. Comunicar e conferir decisão</text>
+<path d="M720 5138 L380.0 5185" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(337.0,5185)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="380.0" y="5264" font-size="16" text-anchor="middle" font-weight="400">3.3.A. Comunicar pelo chat</text>
+<path d="M720 5138 L1060.0 5185" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1017.0,5185)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="1060.0" y="5264" font-size="16" text-anchor="middle" font-weight="400">3.3.B. Comunicar presencialmente</text>
+<path d="M437.0 5215 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/><rect x="686.0" y="5198" width="68" height="32" fill="white"/>
+<text x="720.0" y="5220" font-size="18" text-anchor="middle" font-weight="700">[]</text>
+<text x="40" y="5354" font-size="15" text-anchor="start" font-weight="400">Chat na estação com canal acessível; presencial quando junto ao editor. Sem canal viável, manter pendência.</text>
+<path d="M40 5400 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="5429" font-size="18" text-anchor="start" font-weight="700">3.3.A: mensagem e retorno do chat</text>
+<path transform="translate(677,5453)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="5527" font-size="16" text-anchor="middle" font-weight="400">3.3.A. Comunicar pelo chat</text>
+<path d="M720 5553 L266.66666666666663 5600" fill="none" stroke="#333" stroke-width="1.6"/>
+<g transform="translate(-22,0)"><rect x="242.66666666666663" y="5609" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/><path d="M266.66666666666663 5641 V5648 M238.66666666666663 5648 H294.66666666666663" fill="none" stroke="#333" stroke-width="1.6"/>
+</g><g transform="translate(22,0)"><circle cx="266.66666666666663" cy="5610" r="10" fill="white" stroke="#333" stroke-width="1.8"/><path d="M247.66666666666663 5656 V5633 Q247.66666666666663 5623 266.66666666666663 5623 Q285.66666666666663 5623 285.66666666666663 5633 V5656 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+</g><path d="M264.66666666666663 5625 H277.66666666666663 m-4 -4 l4 4 l-4 4 M277.66666666666663 5636 H264.66666666666663 m4 -4 l-4 4 l4 4" fill="none" stroke="#333" stroke-width="1.5"/>
+<text x="266.66666666666663" y="5679" font-size="16" text-anchor="middle" font-weight="400">3.3.A.1. Enviar decisão identificada</text>
+<path d="M720 5553 L720.0 5600" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="696.0" y="5609" width="48" height="32" fill="white" stroke="#333" stroke-width="1.6"/><path d="M720.0 5641 V5648 M692.0 5648 H748.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="720.0" y="5679" font-size="16" text-anchor="middle" font-weight="400">S. Entregar mensagem pelo chat</text>
+<path d="M323.66666666666663 5630 H663.0" fill="none" stroke="#333" stroke-width="1.6"/><rect x="459.3333333333333" y="5613" width="68" height="32" fill="white"/>
+<text x="493.3333333333333" y="5635" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<path d="M720 5553 L1173.3333333333333 5600" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1173.3333333333333" cy="5610" r="10" fill="white" stroke="#333" stroke-width="1.8"/><path d="M1154.3333333333333 5656 V5633 Q1154.3333333333333 5623 1173.3333333333333 5623 Q1192.3333333333333 5623 1192.3333333333333 5633 V5656 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="1173.3333333333333" y="5679" font-size="16" text-anchor="middle" font-weight="400">3.3.A.2. Conferir entrega e destinatário</text>
+<path d="M777.0 5630 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/><rect x="912.6666666666666" y="5613" width="68" height="32" fill="white"/>
+<text x="946.6666666666666" y="5635" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="40" y="5769" font-size="15" text-anchor="start" font-weight="400">S pertence ao chat externo. Entrega não comprova compreensão nem execução do ajuste.</text>
+<path d="M40 5815 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="5844" font-size="18" text-anchor="start" font-weight="700">3.3.B: comunicação presencial</text>
+<path transform="translate(677,5868)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="5942" font-size="16" text-anchor="middle" font-weight="400">3.3.B. Comunicar presencialmente</text>
+<path d="M720 5968 L380.0 6015" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="380.0" cy="6025" r="10" fill="white" stroke="#333" stroke-width="1.8"/><path d="M361.0 6071 V6048 Q361.0 6038 380.0 6038 Q399.0 6038 399.0 6048 V6071 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="380.0" y="6094" font-size="16" text-anchor="middle" font-weight="400">3.3.B.1. Dizer decisão ao editor</text>
+<path d="M720 5968 L1060.0 6015" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="1060.0" cy="6025" r="10" fill="white" stroke="#333" stroke-width="1.8"/><path d="M1041.0 6071 V6048 Q1041.0 6038 1060.0 6038 Q1079.0 6038 1079.0 6048 V6071 Z" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="1060.0" y="6094" font-size="16" text-anchor="middle" font-weight="400">3.3.B.2. Conferir compreensão da decisão</text>
+<path d="M437.0 6045 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/><rect x="686.0" y="6028" width="68" height="32" fill="white"/>
+<text x="720.0" y="6050" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="40" y="6184" font-size="15" text-anchor="start" font-weight="400">O editor confirma o entendimento; conferir a referência do lote e o alcance da aprovação ou ajuste.</text>
+<g transform="translate(0,1245)">
+<path d="M40 4985 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="5015" font-size="18" text-anchor="start" font-weight="700">Legenda e leitura</text>
 <path transform="translate(127,5040)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
 <text x="170" y="5125" font-size="16" text-anchor="middle" font-weight="400">Abstrata</text>
@@ -256,4 +293,4 @@
 <text x="40" y="5165" font-size="15" text-anchor="start" font-weight="400">Painéis expandem nós da mesma árvore; repetir um ID no detalhamento é uma referência ao mesmo objetivo.</text>
 <text x="40" y="5189" font-size="15" text-anchor="start" font-weight="400">E/J/F são decisões humanas de encerramento, com pendências explícitas. Não exigem novos botões.</text>
 <text x="40" y="5213" font-size="15" text-anchor="start" font-weight="400">[]&gt;&gt; passagem de informação; &gt;&gt; sequência; [] escolha; [&gt; desativação; |&gt; suspensão/retomada; * iteração.</text>
-<text x="40" y="5237" font-size="15" text-anchor="start" font-weight="400">Uma resposta técnica pode informar falha. Concluir uma interação não comprova obtenção nem aprovação.</text></g></svg>
+<text x="40" y="5237" font-size="15" text-anchor="start" font-weight="400">Uma resposta técnica pode informar falha. Concluir uma interação não comprova obtenção nem aprovação.</text></g></g></svg>

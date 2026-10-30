@@ -156,6 +156,7 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 | 14/10/2026 | Revisadas evidências, legendas e limites de C01/C02; lições alinhadas a RC05/RC08/RC12 e versões declaradas como desconhecidas quando não comprovadas. O recorte de IHC foi preservado | [Feedback da Entrega 02](feedbacks_professor/Feedback_Professor_Entrega02_Equipe16.md) | Entrega 2; matriz de rastreabilidade | Giovanni |
 | 14/10/2026 | P03 caracterizada com idade de 19 anos, biografia hipotética e H42; contexto e idade do mapa sincronizados; representação temporal delimitada como hipótese de revisão. O recorte de IHC foi preservado | [Feedback da Entrega 03](feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md) | Entrega 3; matriz de rastreabilidade | Giovanni |
 | 14/10/2026 | C03 revisado com questões numeradas e lacunas explícitas, categorias distintas, sintomas sem diagnóstico, desfecho sem solução presumida e investigação na seção 2.2; sincronizado com P03/H42 e T01/T03. O recorte de IHC foi preservado | [Feedback da Entrega 04](feedbacks_professor/Feedback_Professor_Entrega04_Equipe16.md) | Entrega 4; matriz de rastreabilidade | Giovanni |
+| 27/10/2026 | [F] Formalização de T01/T02/T03: retornos globais dos HTAs separados das recomendações locais; GOMS textual com escolhas e verificações explícitas; motivação externa e comunicação coerentes nos CTTs; navegação por recortes. O recorte de IHC foi preservado | [Feedback da Entrega 05](feedbacks_professor/Feedback_Professor_Entrega05_Equipe16.md) e comentários adicionais de Lucas | Entrega 5; SVGs em assets/05_tarefas; R01 a R05 preservadas, sem alteração do estado das hipóteses | Lucas, autorizado a revisar as três tarefas |
 
 ## Como usar
 
@@ -168,6 +169,8 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
 
 ## Histórico de atualização da rastreabilidade
+
+- 27/10/2026: [F] aplicado o feedback da Entrega 5 por Lucas, com autorização para T01, T02 e T03. Reservados Input/Feedback à tarefa 0 dos HTAs; GOMS apresentados apenas em texto, sem método na meta 0 e com precondições separadas das escolhas; operadores agregados separados e verificações finais explícitas, inclusive retomada, reenvio e nova tentativa. CTTs incluem motivação externa de T01/T03 e comunicação por chat/presencial em T02, com rótulos ajustados e vistas divididas. R01 a R05, envio inicial como precondição e hipóteses de frequência/criticidade/contexto preservados. Registrados critérios a investigar; nenhuma validação empírica ou ampliação de escopo inferida.
 
 - 22/10/2026: encerrada a Entrega 6 nesta iteração após o walkthrough conduzido por Pedro com U01. Registrados transcrição automática, feedback anonimizado, ajuda durante o uso e limite da evidência sobre MP4. E06-O01 a E06-O06 fundamentam D01 a D06, com revisões documentais do roteiro aplicadas e melhorias de interface previstas para a próxima iteração. Índice e checklist atualizados; hipóteses do público profissional continuam abertas.
 

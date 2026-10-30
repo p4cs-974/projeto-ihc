@@ -1,6 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
-**Data:** 07/10/2026  
+**Data:** 07/10/2026 (versão original)\
+**Revisão:** 27/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe16.md) e dos comentários adicionais nas três tarefas, por Lucas\
 **Revisão de T02:** 09/10/2026, adequação aos modelos dos slides do professor\
 **Preenchimento de T03:** 12/10/2026, acompanhamento de partidas em lote e tratamento de falhas\
 **Preenchimento de T01:** 13/10/2026, localização, seleção e revisão de lances de melhores momentos\
@@ -77,38 +78,40 @@ Retângulos representam objetivos; operações têm traço abaixo do retângulo.
 
 ### Decomposição e planos
 
+[H] Nos três HTAs, **Input** e **Feedback** pertencem somente à tarefa 0. As tarefas filhas descrevem ações, problemas, recomendações para a interação e planos dos nós decompostos. Uma recomendação de retorno indica o que apresentar ou permitir conferir naquele momento; o Feedback global indica como reconhecer a conclusão ou o desfecho com pendências.
+
 | Objetivos / Operações | Problemas e Recomendações |
 |---|---|
-| **0. Localizar, selecionar e revisar lances de melhores momentos** | **Input:** resultados acessíveis e finalidade. **Plano 0:** `1 > (2 > 3) > 4`; repetir `2 > 3` por candidato. Suspeita de omissão pode iniciar 3.3 com a referência disponível, mesmo sem candidato correspondente. Interrupção aciona 5 e retoma o passo suspenso; contexto perdido exige repetir 2. **Feedback:** seleção obtida ou continuidade parcial/pendências identificadas. **Problema:** cansaço, prazo e omissões, C01. **Recomendação:** revisão contextualizada e decisão humana, RC04/RC05. |
-| **1. Preparar a revisão da partida** | **Plano 1:** `1.1 > 1.2 > 1.3`. **Feedback:** origem, limites conhecidos e critérios recuperados. Resultados inacessíveis retornam a T03. Lista vazia segue a 4 para reconhecer seleção vazia e necessidade de conferência, sem afirmar ausência de lances. |
-| 1.1. Abrir os resultados da partida | **Ação:** acessar a partida encaminhada por T03. **Feedback:** candidatos/metadados acessíveis ou falha reconhecida; não continuar sem acesso. **Problema:** confusão de partidas/tentativas, H25. |
-| 1.2. Conferir origem e limites informados | **Ação:** conferir partida, timecodes, falhas parciais e partes não analisadas quando informadas. **Feedback:** alcance conhecido da revisão. Ausência de alerta não comprova análise integral, RC05. |
-| 1.3. Recuperar finalidade, critérios e prazo | **Input:** pauta ou finalidade definida externamente. **Ação:** decidir o que procura e quanto tempo há para revisão. **Feedback:** critérios provisórios de pertinência. Tipos de lance não são regra universal, H11/H28. |
-| **2. Localizar e examinar um candidato** | **Plano 2:** `2.1 > 2.2 > 2.3`; repetir reprodução/retorno em 2.2 se necessário. **Feedback:** avaliação com dúvida reconhecida, se houver. |
-| 2.1. Localizar candidato na lista de resultados | **Ação:** reconhecer tipo de lance/timecode disponíveis e escolher o próximo candidato. **Feedback:** candidato identificado. Filtros ajudam somente se existentes; não são precondição nem asseguram cobertura, RC08. |
-| 2.2. Reproduzir e rever o trecho com contexto | **Ação:** assistir, pausar e retornar para observar construção e desfecho. **Feedback:** contexto percebido ou insuficiente. Quantidade de contexto a investigar; ajuste do limite fica no editor externo, RC04/RC05. |
-| 2.3. Julgar pertinência e suficiência do contexto | **Ação:** confrontar o trecho com a finalidade e identificar dúvida, truncamento ou suspeita de omissão. **Feedback:** decisão fundamentada para 3. Discordar da sugestão é julgamento editorial, H10/H30. |
-| **3. Decidir o destino do candidato ou lance suspeito** | **Plano 3:** `3.1 / 3.2 / 3.3 / 3.4`. Incluir se pertinente e compreensível; excluir se sem interesse editorial ou substituído por corte externo conferido; conferir original se dúvida/omissão verificável; manter pendência se inconclusivo sem conferência possível. Depois de 3.3, decidir novamente 3.1/3.2/3.4 para o candidato gerado; cortes externos são identificados à parte. **Feedback:** inclusão, exclusão, esclarecimento ou pendência. |
-| 3.1. Incluir candidato na seleção para download | **Ação:** marcar o corte gerado e conferir inclusão. **Feedback:** candidato selecionado. H30 favorece conferir candidatos extras, sem tratar contexto insuficiente como resolvido. |
-| 3.2. Excluir candidato da seleção para download | **Ação:** desmarcar ou deixar fora da seleção o candidato sem pertinência ou substituído por corte externo conferido. **Feedback:** corte gerado não incluído; origem e eventual versão externa preservadas. Não excluir definitivamente o vídeo nem tratar escolha como erro, RC05. |
-| **3.3. Conferir lance no original e encaminhar correção** | **Plano 3.3:** `3.3.1 > 3.3.2 > 3.3.4`; inserir 3.3.3 entre 3.3.2 e 3.3.4 somente se houver corte necessário e recursos/prazo. Se não localizar o trecho ou não conseguir assistir, manter pendência por 3.4. **Feedback:** dúvida esclarecida, corte externo conferido ou pendência. Não garante encontrar lance omitido. |
-| 3.3.1. Localizar referência na gravação original | **Ação:** relacionar partida/timecode ao original e procurar o instante no editor externo; sem tempo exato, usar referência disponível e reconhecer incerteza. **Feedback:** trecho localizado ou busca pendente. Não confundir tempo do arquivo e minuto do jogo, H25. |
-| 3.3.2. Assistir ao original e confrontar o candidato | **Ação:** observar construção/desfecho e comparar com o corte ou conferir lance ausente. **Feedback:** adequação/necessidade de ajuste reconhecida ou dúvida persistente. Sem original acessível, escolher 3.4. |
-| **3.3.3. Preparar corte ou ajuste em editor externo** | **Plano 3.3.3:** `3.3.3.1 > 3.3.3.2 > 3.3.3.3`; repetir se insuficiente e houver prazo, ou manter pendência. **Feedback:** corte externo conferido, sem importação presumida para o produto. |
-| 3.3.3.1. Definir início e fim que preservem o lance | **Ação:** escolher limites no original conforme construção/desfecho. **Feedback:** intervalo definido por julgamento humano, H11; sem margem universal de segundos. |
-| 3.3.3.2. Recortar e salvar em ferramenta externa | **Ação:** aplicar limites no editor habitual e salvar com origem identificável. **Feedback:** arquivo externo produzido ou salvamento pendente. Produto não oferece edição detalhada. |
-| 3.3.3.3. Reproduzir corte externo e conferir contexto | **Ação:** assistir à versão salva e verificar compreensão do lance. **Feedback:** adequação ou novo ajuste necessário. Corte manual não recebe automaticamente metadados do backend. |
-| 3.3.4. Distinguir material gerado, externo e pendente | **Ação:** decidir destino do candidato gerado e reconhecer cortes externos conferidos ou lacunas. **Feedback:** versões identificadas. Dúvida resolvida sem ajuste retorna a 3.1/3.2; inconclusiva, a 3.4. Se um corte externo substitui o gerado truncado, deixar o gerado fora do download. |
-| 3.4. Manter dúvida ou omissão como pendência | **Ação:** conservar referência/motivo e não declarar lance validado; manter candidato inconclusivo fora da seleção utilizável. **Feedback:** pendência explícita. Anotação pode ser externa; recurso próprio ainda a validar. |
-| **4. Consolidar seleção e obter material** | **Plano 4:** `4.1 > 4.2 > 4.3 > 4.4` se houver seleção gerada não vazia; com seleção vazia, `4.1 > 4.4`, sem download. Seleção incorreta retorna a 2/3; falha de obtenção encaminha a T03 e mantém entrega pendente. **Feedback:** material obtido e limites reconhecidos. |
-| 4.1. Rever seleção, cortes externos e pendências | **Ação:** conferir inclusões e dúvidas resolvidas; distinguir não vistos, pendentes e descartados. **Feedback:** seleção coerente com a finalidade. Candidatos vistos não significa todos os lances encontrados, H10/RC05. |
-| 4.2. Conferir resumo dos arquivos selecionados | **Ação:** ler quantidade, origem, duração/formato conhecidos e tamanho somente quando estimável. **Feedback:** seleção para download conferida. Resumo do produto não conta cortes externos, RC09. |
-| 4.3. Solicitar download dos cortes e metadados | **Ação:** confirmar obtenção apenas da seleção gerada e metadados disponíveis. **Feedback:** estados reais da preparação/transferência e arquivos acessíveis ou falha. Não montar compacto no produto. |
-| 4.4. Conferir arquivos e continuidade externa | **Ação:** verificar obtenção, origem e associação dos metadados; separar cortes externos e pendências. **Feedback:** material para montagem externa ou encaminhamento a Arnaldo/T02 pelo canal externo H40, com pendências informadas. Com seleção vazia, distinguir cortes externos e conferências futuras. Não executar publicação nem chancela. |
-| **5. Atender interrupção e retomar revisão** | **Input:** chamado da supervisão durante o trabalho, H41. **Plano 5:** `5.1 > 5.2 > 5.3`; retornar ao passo suspenso. **Feedback:** contexto recuperado. Preservação automática é hipótese de design a validar. |
-| 5.1. Preservar referência e decisões da revisão | **Ação:** pausar e conferir partida, candidato, posição e seleção; anotar se a interface não preservar referência. **Feedback:** ponto de retorno identificável. Não pausar a inferência. |
-| 5.2. Atender pedido externo da supervisão | **Ação:** consultar a referência solicitada e responder pelo canal externo ou presencialmente. **Feedback:** demanda encaminhada; não é tela de aprovação, H40/H41. |
-| 5.3. Recuperar posição e retomar avaliação | **Ação:** voltar à partida/candidato, conferir decisões e rever trecho se perdeu o contexto. **Feedback:** continuidade ou reconstrução ainda pendente. Posição do vídeo sozinha pode não bastar. |
+| **0. Localizar, selecionar e revisar lances de melhores momentos** | **Input:** resultados da partida encaminhada por T03, cortes/metadados acessíveis, pauta ou finalidade editorial, critérios provisórios e prazo. Original e editor externo são recursos condicionais para conferência. **Plano 0:** `1 > (2 > 3) > 4`; repetir `2 > 3` por candidato. Suspeita de omissão pode iniciar 3.3 com a referência disponível, mesmo sem candidato correspondente. Interrupção aciona 5 e retoma o passo suspenso; contexto perdido exige repetir 2. **Feedback:** seleção obtida ou continuidade parcial/pendências identificadas. **Problema:** cansaço, prazo e omissões, C01. **Recomendação:** revisão contextualizada e decisão humana, RC04/RC05. |
+| **1. Preparar a revisão da partida** | **Plano 1:** `1.1 > 1.2 > 1.3`. **Recomendação:** apoiar a conferência pelo usuário: origem, limites conhecidos e critérios recuperados. Resultados inacessíveis retornam a T03. Lista vazia segue a 4 para reconhecer seleção vazia e necessidade de conferência, sem afirmar ausência de lances. |
+| 1.1. Abrir os resultados da partida | **Ação:** acessar a partida encaminhada por T03. **Recomendação:** apoiar a conferência pelo usuário: candidatos/metadados acessíveis ou falha reconhecida; não continuar sem acesso. **Problema:** confusão de partidas/tentativas, H25. |
+| 1.2. Conferir origem e limites informados | **Ação:** conferir partida, timecodes, falhas parciais e partes não analisadas quando informadas. **Recomendação:** apoiar a conferência pelo usuário: alcance conhecido da revisão. Ausência de alerta não comprova análise integral, RC05. |
+| 1.3. Recuperar finalidade, critérios e prazo | **Recomendação:** manter disponível como referência: pauta ou finalidade definida externamente.  **Ação:** decidir o que procura e quanto tempo há para revisão. **Recomendação:** apoiar a conferência pelo usuário: critérios provisórios de pertinência. Tipos de lance não são regra universal, H11/H28. |
+| **2. Localizar e examinar um candidato** | **Plano 2:** `2.1 > 2.2 > 2.3`; repetir reprodução/retorno em 2.2 se necessário. **Recomendação:** apoiar a conferência pelo usuário: avaliação com dúvida reconhecida, se houver. |
+| 2.1. Localizar candidato na lista de resultados | **Ação:** reconhecer tipo de lance/timecode disponíveis e escolher o próximo candidato. **Recomendação:** apoiar a conferência pelo usuário: candidato identificado. Filtros ajudam somente se existentes; não são precondição nem asseguram cobertura, RC08. |
+| 2.2. Reproduzir e rever o trecho com contexto | **Ação:** assistir, pausar e retornar para observar construção e desfecho. **Recomendação:** apoiar a conferência pelo usuário: contexto percebido ou insuficiente. Quantidade de contexto a investigar; ajuste do limite fica no editor externo, RC04/RC05. |
+| 2.3. Julgar pertinência e suficiência do contexto | **Ação:** confrontar o trecho com a finalidade e identificar dúvida, truncamento ou suspeita de omissão. **Recomendação:** apoiar a conferência pelo usuário: decisão fundamentada para 3. Discordar da sugestão é julgamento editorial, H10/H30. |
+| **3. Decidir o destino do candidato ou lance suspeito** | **Plano 3:** `3.1 / 3.2 / 3.3 / 3.4`. Incluir se pertinente e compreensível; excluir se sem interesse editorial ou substituído por corte externo conferido; conferir original se dúvida/omissão verificável; manter pendência se inconclusivo sem conferência possível. Depois de 3.3, decidir novamente 3.1/3.2/3.4 para o candidato gerado; cortes externos são identificados à parte. **Recomendação:** apoiar a conferência pelo usuário: inclusão, exclusão, esclarecimento ou pendência. |
+| 3.1. Incluir candidato na seleção para download | **Ação:** marcar o corte gerado e conferir inclusão. **Recomendação:** apoiar a conferência pelo usuário: candidato selecionado. H30 favorece conferir candidatos extras, sem tratar contexto insuficiente como resolvido. |
+| 3.2. Excluir candidato da seleção para download | **Ação:** desmarcar ou deixar fora da seleção o candidato sem pertinência ou substituído por corte externo conferido. **Recomendação:** apoiar a conferência pelo usuário: corte gerado não incluído; origem e eventual versão externa preservadas. Não excluir definitivamente o vídeo nem tratar escolha como erro, RC05. |
+| **3.3. Conferir lance no original e encaminhar correção** | **Plano 3.3:** `3.3.1 > 3.3.2 > 3.3.4`; inserir 3.3.3 entre 3.3.2 e 3.3.4 somente se houver corte necessário e recursos/prazo. Se não localizar o trecho ou não conseguir assistir, manter pendência por 3.4. **Recomendação:** apoiar a conferência pelo usuário: dúvida esclarecida, corte externo conferido ou pendência. Não garante encontrar lance omitido. |
+| 3.3.1. Localizar referência na gravação original | **Ação:** relacionar partida/timecode ao original e procurar o instante no editor externo; sem tempo exato, usar referência disponível e reconhecer incerteza. **Recomendação:** apoiar a conferência pelo usuário: trecho localizado ou busca pendente. Não confundir tempo do arquivo e minuto do jogo, H25. |
+| 3.3.2. Assistir ao original e confrontar o candidato | **Ação:** observar construção/desfecho e comparar com o corte ou conferir lance ausente. **Recomendação:** apoiar a conferência pelo usuário: adequação/necessidade de ajuste reconhecida ou dúvida persistente. Sem original acessível, escolher 3.4. |
+| **3.3.3. Preparar corte ou ajuste em editor externo** | **Plano 3.3.3:** `3.3.3.1 > 3.3.3.2 > 3.3.3.3`; repetir se insuficiente e houver prazo, ou manter pendência. **Recomendação:** apoiar a conferência pelo usuário: corte externo conferido, sem importação presumida para o produto. |
+| 3.3.3.1. Definir início e fim que preservem o lance | **Ação:** escolher limites no original conforme construção/desfecho. **Recomendação:** apoiar a conferência pelo usuário: intervalo definido por julgamento humano, H11; sem margem universal de segundos. |
+| 3.3.3.2. Recortar e salvar em ferramenta externa | **Ação:** aplicar limites no editor habitual e salvar com origem identificável. **Recomendação:** apoiar a conferência pelo usuário: arquivo externo produzido ou salvamento pendente. Produto não oferece edição detalhada. |
+| 3.3.3.3. Reproduzir corte externo e conferir contexto | **Ação:** assistir à versão salva e verificar compreensão do lance. **Recomendação:** apoiar a conferência pelo usuário: adequação ou novo ajuste necessário. Corte manual não recebe automaticamente metadados do backend. |
+| 3.3.4. Distinguir material gerado, externo e pendente | **Ação:** decidir destino do candidato gerado e reconhecer cortes externos conferidos ou lacunas. **Recomendação:** apoiar a conferência pelo usuário: versões identificadas. Dúvida resolvida sem ajuste retorna a 3.1/3.2; inconclusiva, a 3.4. Se um corte externo substitui o gerado truncado, deixar o gerado fora do download. |
+| 3.4. Manter dúvida ou omissão como pendência | **Ação:** conservar referência/motivo e não declarar lance validado; manter candidato inconclusivo fora da seleção utilizável. **Recomendação:** apoiar a conferência pelo usuário: pendência explícita. Anotação pode ser externa; recurso próprio ainda a validar. |
+| **4. Consolidar seleção e obter material** | **Plano 4:** `4.1 > 4.2 > 4.3 > 4.4` se houver seleção gerada não vazia; com seleção vazia, `4.1 > 4.4`, sem download. Seleção incorreta retorna a 2/3; falha de obtenção encaminha a T03 e mantém entrega pendente. **Recomendação:** apoiar a conferência pelo usuário: material obtido e limites reconhecidos. |
+| 4.1. Rever seleção, cortes externos e pendências | **Ação:** conferir inclusões e dúvidas resolvidas; distinguir não vistos, pendentes e descartados. **Recomendação:** apoiar a conferência pelo usuário: seleção coerente com a finalidade. Candidatos vistos não significa todos os lances encontrados, H10/RC05. |
+| 4.2. Conferir resumo dos arquivos selecionados | **Ação:** ler quantidade, origem, duração/formato conhecidos e tamanho somente quando estimável. **Recomendação:** apoiar a conferência pelo usuário: seleção para download conferida. Resumo do produto não conta cortes externos, RC09. |
+| 4.3. Solicitar download dos cortes e metadados | **Ação:** confirmar obtenção apenas da seleção gerada e metadados disponíveis. **Recomendação:** apoiar a conferência pelo usuário: estados reais da preparação/transferência e arquivos acessíveis ou falha. Não montar compacto no produto. |
+| 4.4. Conferir arquivos e continuidade externa | **Ação:** verificar obtenção, origem e associação dos metadados; separar cortes externos e pendências. **Recomendação:** apoiar a conferência pelo usuário: material para montagem externa ou encaminhamento a Arnaldo/T02 pelo canal externo H40, com pendências informadas. Com seleção vazia, distinguir cortes externos e conferências futuras. Não executar publicação nem chancela. |
+| **5. Atender interrupção e retomar revisão** | **Recomendação:** manter disponível como referência: chamado da supervisão durante o trabalho, H41.  **Plano 5:** `5.1 > 5.2 > 5.3`; retornar ao passo suspenso. **Recomendação:** apoiar a conferência pelo usuário: contexto recuperado. Preservação automática é hipótese de design a validar. |
+| 5.1. Preservar referência e decisões da revisão | **Ação:** pausar e conferir partida, candidato, posição e seleção; anotar se a interface não preservar referência. **Recomendação:** apoiar a conferência pelo usuário: ponto de retorno identificável. Não pausar a inferência. |
+| 5.2. Atender pedido externo da supervisão | **Ação:** consultar a referência solicitada e responder pelo canal externo ou presencialmente. **Recomendação:** apoiar a conferência pelo usuário: demanda encaminhada; não é tela de aprovação, H40/H41. |
+| 5.3. Recuperar posição e retomar avaliação | **Ação:** voltar à partida/candidato, conferir decisões e rever trecho se perdeu o contexto. **Recomendação:** apoiar a conferência pelo usuário: continuidade ou reconstrução ainda pendente. Posição do vídeo sozinha pode não bastar. |
 
 ### Verificação do HTA
 
@@ -122,94 +125,95 @@ Ramos 1–4 formam o percurso regular; 5 trata suspensão/retomada. Busca no ori
 **Recorte:** uso proposto de P01/R01, conferência/correção externas e retomada H41; aplicação à revisão manual de P03/R04.\
 **Abordagem:** GOMS hierárquico conforme slides 3–13 de **CC8122-GOMS-CTT**. Sem KLM: tempo de vídeo, julgamento, busca e interrupções exigem observação e interface definida.
 
-### Diagrama GOMS
-
-![GOMS T01 — metas, métodos, regras e contingências](../assets/05_tarefas/goms_t01.svg)
-
-*Figura 7 — GOMS de T01, por Pedro Alexandre Custódio Silva. Resumo das metas/alternativas; operadores completos abaixo. [SVG editável](../assets/05_tarefas/goms_t01.svg).*
+[H] **Precondições:** resultados da partida acessíveis após T03, finalidade e prazo recuperáveis. Repetir as metas 2–3 por candidato; meta 5 é acionada por interrupção. A meta 0 e as metas 1, 2 e 5 têm um único caminho e não recebem métodos.
 
 ### Modelo hierárquico de metas, métodos e operadores
 
 ```text
 GOAL 0: obter seleção revisada e identificar pendências da partida
-  METHOD 0.A: revisar candidatos disponíveis e obter a seleção
-  (SEL. RULE: resultados acessíveis e finalidade definida)
-    GOAL 1: preparar revisão
-      METHOD 1.A: conferir origem, limites e critérios
-      (SEL. RULE: partida encaminhada por T03)
-        OP. 1.A.1: abrir os resultados da partida
-        OP. 1.A.2: ler origem, timecodes e limites conhecidos
-        OP. 1.A.3: recuperar finalidade e prazo
-    GOAL 2: examinar candidato
-      METHOD 2.A: localizar na lista e assistir ao trecho
-      (SEL. RULE: candidato acessível; repetir por candidato)
-        OP. 2.A.1: identificar próximo candidato por dados disponíveis
-        OP. 2.A.2: selecionar candidato e iniciar reprodução
-        OP. 2.A.3: assistir à construção e ao desfecho disponíveis
-        OP. 2.A.4: pausar e retornar quando necessário
-        OP. 2.A.5: julgar pertinência, contexto e dúvidas
-    GOAL 3: definir destino do candidato ou lance suspeito
-      METHOD 3.A: incluir corte gerado
-      (SEL. RULE: pertinente e com contexto suficiente)
-        OP. 3.A.1: acionar inclusão na seleção
-        OP. 3.A.2: conferir inclusão
-      METHOD 3.B: deixar corte gerado fora da seleção
-      (SEL. RULE: sem pertinência editorial ou substituído por corte externo conferido)
-        OP. 3.B.1: desmarcar ou manter desmarcado o corte
-        OP. 3.B.2: conferir exclusão apenas da seleção para download
-      METHOD 3.C: esclarecer dúvida ou omissão no original
-      (SEL. RULE: dúvida verificável, original disponível e prazo;
-       suspeita de omissão pode iniciar o método sem candidato gerado)
-        OP. 3.C.1: recuperar partida e referência temporal disponível
-        OP. 3.C.2: abrir gravação no editor externo e localizar o trecho
-        OP. 3.C.3: assistir ao contexto e comparar com candidato, se existente
-        GOAL 3.C.4: definir necessidade e continuidade do corte
-          METHOD 3.C.4.A: corrigir/criar corte externamente
-          (SEL. RULE: lance relevante truncado/omitido confirmado;
-           recursos e prazo para corte externo)
-            OP. 3.C.4.A.1: definir início e fim com construção/desfecho
-            OP. 3.C.4.A.2: aplicar limites no editor externo
-            OP. 3.C.4.A.3: salvar com identificação de origem
-            OP. 3.C.4.A.4: reproduzir arquivo salvo e julgar contexto
-          METHOD 3.C.4.B: decidir sem novo corte externo
-          (SEL. RULE: original resolve a dúvida sem ajuste ou a conferência
-           permanece inconclusiva/sem recursos; neste caso, manter pendência)
-            OP. 3.C.4.B.1: reconhecer adequação, irrelevância ou dúvida persistente
-        OP. 3.C.5: distinguir candidato gerado, corte externo e pendência
-        OP. 3.C.6: decidir 3.A/3.B para candidato gerado ou 3.D se inconclusivo;
-         deixar gerado truncado fora do download se substituído por corte externo
-      METHOD 3.D: manter pendência editorial
-      (SEL. RULE: contexto insuficiente, original inacessível, prazo esgotado
-       ou avaliação inconclusiva, sem inclusão segura)
-        OP. 3.D.1: conservar referência e motivo da conferência
-        OP. 3.D.2: manter candidato não validado fora da seleção utilizável
-        OP. 3.D.3: reconhecer pendência sem declarar revisão completa
-    GOAL 4: consolidar seleção e obter material
-      METHOD 4.A: baixar seleção gerada não vazia e conferir continuidade
-      (SEL. RULE: seleção conferida com ao menos um corte gerado)
-        OP. 4.A.1: rever inclusões, cortes externos e pendências
-        OP. 4.A.2: ler resumo de quantidade, origem e formato disponíveis
-        OP. 4.A.3: conferir seleção e confirmar download de cortes/metadados
-        OP. 4.A.4: verificar obtenção e vínculo dos arquivos com a origem
-        OP. 4.A.5: distinguir material utilizável e pendências para uso externo
-      METHOD 4.B: encerrar com seleção gerada vazia
-      (SEL. RULE: nenhum corte gerado selecionado ou resultados vazios)
-        OP. 4.B.1: reconhecer seleção vazia e motivo conhecido
-        OP. 4.B.2: distinguir cortes externos e conferências pendentes
-        OP. 4.B.3: definir continuidade externa ou conferência posterior, sem download vazio
-    GOAL 5: atender interrupção e retomar revisão
-      METHOD 5.A: preservar referência, atender e recuperar avaliação
-      (SEL. RULE: chamado externo durante a tarefa; suspender método em curso)
-        OP. 5.A.1: pausar e conferir partida, candidato, posição e decisões
-        OP. 5.A.2: anotar referência se a interface não a conservar
-        OP. 5.A.3: atender pedido por canal externo ou presencialmente
-        OP. 5.A.4: voltar à partida/candidato e conferir decisões preservadas
-        OP. 5.A.5: rever trecho se necessário e retomar passo suspenso
+  GOAL 1: preparar revisão
+    OP. 1.1: abrir os resultados da partida
+    OP. 1.2: ler origem, timecodes e limites conhecidos
+    OP. 1.3: recuperar finalidade e prazo
+    OP. 1.4: conferir que partida, limites e critérios da revisão foram compreendidos
+  GOAL 2: examinar candidato
+    OP. 2.1: identificar próximo candidato pelos dados disponíveis
+    OP. 2.2: selecionar candidato
+    OP. 2.3: iniciar reprodução
+    OP. 2.4: assistir à construção e ao desfecho disponíveis
+    OP. 2.5: pausar a reprodução quando precisar rever o trecho
+    OP. 2.6: retornar ao ponto a rever, quando necessário
+    OP. 2.7: julgar pertinência e suficiência do contexto
+    OP. 2.8: conferir que a avaliação distingue o contexto compreendido das dúvidas persistentes
+  GOAL 3: definir destino do candidato ou lance suspeito
+    METHOD 3.A: incluir corte gerado
+    (SEL. RULE: pertinente e com contexto suficiente)
+      OP. 3.A.1: acionar inclusão na seleção
+      OP. 3.A.2: conferir inclusão
+    METHOD 3.B: deixar corte gerado fora da seleção
+    (SEL. RULE: sem pertinência editorial ou substituído por corte externo conferido)
+      OP. 3.B.1: acionar desmarcação, se o corte estiver marcado
+      OP. 3.B.2: conferir que o corte está fora da seleção para download
+    METHOD 3.C: esclarecer dúvida ou omissão no original
+    (SEL. RULE: dúvida verificável, original disponível e prazo;
+     suspeita de omissão pode iniciar o método sem candidato gerado)
+      OP. 3.C.1: recuperar partida e referência temporal disponível
+      OP. 3.C.2: abrir gravação no editor externo
+      OP. 3.C.3: localizar o trecho pela referência recuperada
+      OP. 3.C.4: assistir ao contexto no original, confrontando o candidato quando existente
+      GOAL 3.C.5: definir necessidade e continuidade do corte
+        METHOD 3.C.5.A: corrigir/criar corte externamente
+        (SEL. RULE: lance relevante truncado/omitido confirmado;
+         recursos e prazo para corte externo)
+          OP. 3.C.5.A.1: definir início e fim com construção/desfecho
+          OP. 3.C.5.A.2: aplicar limites no editor externo
+          OP. 3.C.5.A.3: salvar com identificação de origem
+          OP. 3.C.5.A.4: reproduzir arquivo salvo
+          OP. 3.C.5.A.5: verificar se o contexto do arquivo salvo permite compreender o lance
+        METHOD 3.C.5.B: decidir sem novo corte externo
+        (SEL. RULE: original resolve a dúvida sem ajuste ou a conferência
+         permanece inconclusiva/sem recursos; neste caso, manter pendência)
+          OP. 3.C.5.B.1: reconhecer a avaliação obtida na conferência
+          OP. 3.C.5.B.2: conferir se há informação suficiente para decidir sem novo corte
+      OP. 3.C.6: distinguir candidato gerado, corte externo e pendência
+      OP. 3.C.7: definir destino conforme 3.A, 3.B ou 3.D para o candidato existente
+      OP. 3.C.8: conferir que a decisão preserva versões identificadas e dúvidas pendentes
+    METHOD 3.D: manter pendência editorial
+    (SEL. RULE: contexto insuficiente, original inacessível, prazo esgotado
+     ou avaliação inconclusiva, sem inclusão segura)
+      OP. 3.D.1: conservar referência e motivo da conferência
+      OP. 3.D.2: retirar candidato não validado da seleção utilizável, se estiver marcado
+      OP. 3.D.3: conferir que a pendência está reconhecida sem declarar revisão completa
+  GOAL 4: consolidar seleção e obter material
+    METHOD 4.A: baixar seleção gerada não vazia e conferir continuidade
+    (SEL. RULE: seleção conferida com ao menos um corte gerado)
+      OP. 4.A.1: rever inclusões, cortes externos e pendências
+      OP. 4.A.2: ler resumo de quantidade, origem e formato disponíveis
+      OP. 4.A.3: conferir seleção para download
+      OP. 4.A.4: confirmar download de cortes/metadados
+      OP. 4.A.5: verificar obtenção e vínculo dos arquivos com a origem
+      OP. 4.A.6: conferir quais materiais são utilizáveis e quais pendências permanecem
+    METHOD 4.B: encerrar com seleção gerada vazia
+    (SEL. RULE: nenhum corte gerado selecionado ou resultados vazios)
+      OP. 4.B.1: reconhecer seleção vazia e motivo conhecido
+      OP. 4.B.2: distinguir cortes externos e conferências pendentes
+      OP. 4.B.3: definir continuidade externa ou conferência posterior
+      OP. 4.B.4: conferir que a continuidade está definida sem pressupor download vazio
+  GOAL 5: atender interrupção e recuperar contexto para a retomada
+    OP. 5.1: pausar a revisão no ponto suspenso
+    OP. 5.2: conferir partida, candidato, posição e decisões
+    OP. 5.3: anotar referência se a interface não a conservar
+    OP. 5.4: atender pedido pelo canal que originou a interrupção
+    OP. 5.5: voltar à partida e ao candidato suspensos
+    OP. 5.6: conferir decisões preservadas
+    OP. 5.7: rever trecho se o contexto recuperado for insuficiente
+    OP. 5.8: verificar que contexto e decisões foram recuperados antes de prosseguir
+  OP. 0.1: conferir que a seleção obtida e as pendências permitem reconhecer o desfecho da sessão
 ```
 
-**Regras e repetições:** executar metas 2–3 por candidato e rever dúvidas resolvidas antes de 4. Meta 5 é contingência por interrupção, não etapa depois do download. Contexto perdido exige repetir 2 antes de decidir 3. Métodos 3.A–D condicionam o destino; 3.C.4.A/B definem continuidade com ou sem nova versão externa. Se o ajuste continuar insuficiente, repetir enquanto viável ou adotar 3.D. Busca/reprodução/salvamento sem sucesso interrompem aquele encaminhamento e mantêm pendência. Falha de prévia/download encaminha a T03; não prosseguir como se tivesse ocorrido sucesso. Lista vazia dispensa 2–3 e usa 4.B.
+**Regras e repetições:** executar metas 2–3 por candidato e rever dúvidas resolvidas antes de 4. Pausa/retorno em 2.5–2.6 são condicionais à necessidade de rever. Executar 5 apenas por interrupção; após verificar o contexto em 5.8, retomar o passo suspenso. Se corte externo substituir o gerado truncado, deixar o gerado fora do download. Para suspeita sem candidato, 3.C.7 identifica o destino do material externo ou a pendência, sem marcar um candidato inexistente. Meta 5 é contingência por interrupção, não etapa depois do download. Contexto perdido exige repetir 2 antes de decidir 3. Métodos 3.A–D condicionam o destino; 3.C.5.A/B definem continuidade com ou sem nova versão externa. Se o ajuste continuar insuficiente, repetir enquanto viável ou adotar 3.D. Busca/reprodução/salvamento sem sucesso interrompem aquele encaminhamento e mantêm pendência. Falha de prévia/download encaminha a T03; não prosseguir como se tivesse ocorrido sucesso. Lista vazia dispensa 2–3 e usa 4.B.
 
-**Correspondência com HTA:** metas 1, 2, 4 e 5 seguem ramos homônimos; 3.A–D correspondem a 3.1–3.4. 3.C.4.A expande 3.3.3; 3.C.4.B representa a dispensa condicionada. Ler/assistir são perceptivos; selecionar/pausar/salvar são externos; julgar/reconhecer/decidir são cognitivos. Cortes externos não são saídas do backend nem entram automaticamente na seleção do produto. Métodos não pressupõem seleção editorial única correta; participação de atleta por P03 é conferida manualmente, H36/H38.
+**Correspondência com HTA:** metas 1, 2, 4 e 5 seguem ramos homônimos; 3.A–D correspondem a 3.1–3.4. 3.C.5.A expande 3.3.3; 3.C.5.B representa a dispensa condicionada. Ler/assistir são perceptivos; selecionar/pausar/salvar são externos; julgar/reconhecer/decidir são cognitivos. Cortes externos não são saídas do backend nem entram automaticamente na seleção do produto. Métodos não pressupõem seleção editorial única correta; participação de atleta por P03 é conferida manualmente, H36/H38.
 
 ---
 
@@ -221,17 +225,69 @@ GOAL 0: obter seleção revisada e identificar pendências da partida
 
 ### Diagrama CTT
 
-![CTT T01 — revisão iterativa, alternativas e suspensão/retomada](../assets/05_tarefas/ctt_t01.svg)
+![CTT T01 — revisão iterativa, alternativas e suspensão/retomada](../assets/05_tarefas/ctt_t01_visao_geral.svg)
 
 *Figura 8 — CTT de T01, por Pedro Alexandre Custódio Silva. Visão geral e expansões com relações entre irmãs; 5 suspende o percurso regular e permite retomada. [SVG editável](../assets/05_tarefas/ctt_t01.svg).*
 
-IDs numéricos acompanham o HTA. Os agrupamentos e decisões com letras tornam explícitos os casos, as saídas e os retornos antes resumidos em notas. Cada painel expande um nó da mesma árvore; IDs repetidos são referências ao mesmo objetivo. Condições de habilitação e resultados estão associados aos nós no diagrama e na leitura abaixo. As letras não representam novos controles da interface. `S` responde ao pedido de download com arquivos disponíveis ou falha informada. Ligações descendentes representam decomposição; horizontais representam relações temporais entre irmãs.
+[H] A visão geral apresenta os três primeiros painéis. Os detalhamentos abaixo são recortes da mesma árvore, com IDs e relações preservados; o SVG completo reúne todos os painéis e a legenda.
+
+<details>
+<summary>T01: detalhamento 1, V, C, L</summary>
+
+![CTT T01, detalhamento 1](../assets/05_tarefas/ctt_t01_detalhe_01.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 2, O, 1, 2</summary>
+
+![CTT T01, detalhamento 2](../assets/05_tarefas/ctt_t01_detalhe_02.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 3, B, 3, P</summary>
+
+![CTT T01, detalhamento 3](../assets/05_tarefas/ctt_t01_detalhe_03.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 4, F, 3.3, Q</summary>
+
+![CTT T01, detalhamento 4](../assets/05_tarefas/ctt_t01_detalhe_04.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 5, D, 3.3.3, 4</summary>
+
+![CTT T01, detalhamento 5](../assets/05_tarefas/ctt_t01_detalhe_05.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 6, W, A, 5</summary>
+
+![CTT T01, detalhamento 6](../assets/05_tarefas/ctt_t01_detalhe_06.svg)
+
+</details>
+
+<details>
+<summary>T01: detalhamento 7, Legenda e leitura</summary>
+
+![CTT T01, detalhamento 7](../assets/05_tarefas/ctt_t01_detalhe_07.svg)
+
+</details>
+
+
+IDs numéricos acompanham o HTA. `M` é a motivação externa e `U` agrupa o uso da interface; não são novos controles. Os agrupamentos e decisões com letras tornam explícitos os casos, as saídas e os retornos antes resumidos em notas. Cada painel expande um nó da mesma árvore; IDs repetidos são referências ao mesmo objetivo. Condições de habilitação e resultados estão associados aos nós no diagrama e na leitura abaixo. As letras não representam novos controles da interface. `S` responde ao pedido de download com arquivos disponíveis ou falha informada. Ligações descendentes representam decomposição; horizontais representam relações temporais entre irmãs.
 
 A separação entre relações temporais e condições de tarefas segue os slides da disciplina; para iteração, opcionalidade e pré/pós-condições, consultou-se também [W3C, MBUI — Task Models, §§3.1 e 3.4](https://www.w3.org/TR/task-models/), nota de grupo de trabalho de 08/04/2014, acesso em 13/10/2026. Essa referência complementa a notação e não declara conformidade executável ou aprovação do professor.
 
 ### Leitura da árvore e condições
 
-1. **Tarefa global:** `R |> 5`, com `R = (1 []>> V []>> 4)` e `V = (C* [> E)`. `E` encerra a conferência quando há decisões suficientes para esta sessão, prazo encerrado, acesso inviável ou nenhum candidato/conferência possível. Ao iniciar E, a iteração é desativada e as pendências alimentam 4. Com lista vazia e sem omissão verificável, E pode acontecer antes do primeiro C; não se executa inspeção de candidato inexistente. A lista vazia não prova ausência de lances.
+1. **Tarefa global:** `M []>> U`, com `U = (R |> 5)`. [H] M representa o editor recebendo uma demanda editorial fora da interface e decidindo revisar a partida; transmite finalidade e referência a U antes de abrir os resultados. Recuperar critérios e prazo em 1.3 continua necessário, mas não substitui essa motivação. A sessão U usa `R |> 5`, com `R = (1 []>> V []>> 4)` e `V = (C* [> E)`. `E` encerra a conferência quando há decisões suficientes para esta sessão, prazo encerrado, acesso inviável ou nenhum candidato/conferência possível. Ao iniciar E, a iteração é desativada e as pendências alimentam 4. Com lista vazia e sem omissão verificável, E pode acontecer antes do primeiro C; não se executa inspeção de candidato inexistente. A lista vazia não prova ausência de lances.
 2. **Casos do ciclo:** `C = (L [] O)`. `L = (2 []>> 3)` exige candidato gerado acessível. `O = (3.3 []>> X)` exige suspeita de omissão com referência, original e recursos/prazo; X reconhece o corte externo conferido ou a pendência, a partir da distinção de 3.3.4. O não executa inclusão/exclusão de candidato inexistente. Sem conferência viável, reconhecer a pendência em E/4.
 3. **Preparação e inspeção:** `1 = (1.1 []>> 1.2 []>> 1.3)` e `2 = (2.1 []>> B []>> 2.3)`, com `B = (2.2* [> J)`. J encerra a reprodução com informação para julgar, prazo encerrado ou prévia indisponível, reconhecendo o que foi visto e as lacunas. Só depois se executa o julgamento 2.3; não se presume inspeção bem-sucedida quando a prévia falha. Falha técnica encaminha a T03 e mantém o candidato como pendência.
 4. **Decisão sobre o gerado:** `3 = (F [] P)`, `F = (3.1 [] 3.2 [] 3.4)` e `P = (3.3 []>> F)`. F representa decisão direta ou manutenção de pendência sem conferência viável; P representa conferência no original seguida de nova decisão explícita. Incluir em 3.1 exige pertinência e contexto suficiente; 3.2 cobre irrelevância ou substituição por corte externo; 3.4 mantém inconclusivos fora da seleção utilizável. H30 admite candidatos extras para conferência, sem dispensar essas condições.
@@ -257,8 +313,8 @@ Não se presume inspeção concorrente de vários vídeos por Rafael. Processame
 
 | Símbolo no diagrama | Tipo nos slides | Aplicação no modelo |
 |---|---|---|
-| Nuvem | Abstrata | Objetivo global, R/V/C/L/O/B, ramos 1–5, F/P/Q/D, correção 3.3.3 e W/A. |
-| Pessoa | Usuário | Recuperar critérios (1.3), julgar (2.3), reconhecer dispensa/impossibilidade (N), definir limites (3.3.3.1), distinguir versões/pendências (3.3.4), manter pendência (3.4), avaliar seleção/pendências (4.1) e reconhecer término/lacunas/resultado externo/seleção vazia (E/J/K/X/Z). |
+| Nuvem | Abstrata | Objetivo global e sessão U, R/V/C/L/O/B, ramos 1–5, F/P/Q/D, correção 3.3.3 e W/A. |
+| Pessoa | Usuário | Receber demanda e decidir revisar fora da interface (M), recuperar critérios (1.3), julgar (2.3), reconhecer dispensa/impossibilidade (N), definir limites (3.3.3.1), distinguir versões/pendências (3.3.4), manter pendência (3.4), avaliar seleção/pendências (4.1) e reconhecer término/lacunas/resultado externo/seleção vazia (E/J/K/X/Z). |
 | Pessoa e computador, com seta dupla | Interativa | Consultar origem/resultados (1.1–2), localizar/reproduzir (2.1–2), marcar/desmarcar (3.1–2), localizar/assistir original (3.3.1–2), recortar/salvar/reproduzir externamente (3.3.3.2–3), conferir resumo/pedir download (4.2–3), conferir arquivos (4.4) e preservar/recuperar referência (5.1/5.3). 5.2 usa chat externo na variante desenhada; alternativa presencial no GOMS. |
 | Computador | Sistema | Disponibilizar arquivos selecionados ou informar falha (S), sem realizar decisão editorial. |
 
@@ -312,30 +368,30 @@ Como nos slides 5 e 6 de **CC8122-HTA**, retângulos representam objetivos e um 
 
 ### Decomposição e planos
 
-A tabela segue o modelo do slide 8: **Objetivos/Operações** e **Problemas e Recomendações**, com entrada (*Input*), ação, avaliação do resultado (*Feedback*) e plano quando pertinente. Recomendações são propostas a investigar, não funcionalidades automaticamente incluídas.
+[H] As tabelas dos três HTAs usam **Input** e **Feedback** somente na tarefa 0: condições necessárias para iniciar e resultado que permite reconhecer o desfecho global. Nas tarefas filhas, **Ação** descreve o que a pessoa faz e **Recomendação** indica a informação ou resposta a apresentar naquele momento, ou a conferência humana a apoiar. Um retorno intermediário não comprova a conclusão da tarefa global. Planos permanecem nos objetivos decompostos. As recomendações são propostas a investigar.
 
 | Objetivos / Operações | Problemas e Recomendações |
 |---|---|
-| **0. Supervisionar processo editorial e chancelar cortes** | **Input:** prioridades da rodada, lotes recebidos e eventuais alertas externos. **Plano 0:** `1 > 2 > 3` para cada lote. Se 3.2 for escolhido, aguardar nova versão e repetir `2 > 3`. Encerrar quando os lotes recebidos estiverem encaminhados ou ao fim do turno, deixando explícitas as pendências. Em caso de falha editorial publicada, interromper o ciclo e executar 4; os demais lotes permanecem pendentes e exigem um novo ciclo. **Feedback:** editor informado sobre a seleção aprovada ou sobre a revisão necessária. **Problema:** aprovações apressadas e material difícil de identificar, C02/H33. **Recomendação:** preservar identificação e contexto nos resultados baixados, RC05/RC09. |
-| **1. Identificar e priorizar lote recebido** | **Plano 1:** `1.1 > 1.2 > 1.3`; se nenhum lote estiver disponível, aguardar a entrega. **Feedback:** partida, material e prioridade definidos. **Problema:** chamados simultâneos dificultam ordenar o atendimento, C02. **Recomendação:** investigar como o editor comunica andamento e entrega, H40. |
-| 1.1. Consultar prioridades e prazos da rodada | **Input:** pauta e anotações externas. **Ação:** conferir prioridades combinadas com os editores. **Feedback:** critérios de atendimento recuperados. |
-| 1.2. Consultar aviso e identificar lote da partida | **Input:** aviso no chat e arquivos na pasta compartilhada, H40. **Ação:** conferir partida de origem e lote recebido. **Problema:** arquivos misturados ou sem identificação, H25/H33. **Recomendação:** nomes e metadados legíveis fora da interface, RC05/RC09. |
-| 1.3. Escolher lote prioritário | **Ação:** escolher o próximo lote considerando prazo, pauta e dúvidas sinalizadas. **Feedback:** lote a inspecionar definido. **Problema:** prioridade e quantidade de atendimentos ainda não validadas. |
-| **2. Inspecionar seleção e contexto dos cortes** | **Plano 2:** `2.1 > 2.2 > 2.3`; em 2.2, assistir aos cortes da seleção e rever os trechos duvidosos. Se dados ou contexto forem insuficientes, apontar a pendência em 3.2. **Feedback:** avaliação do lote e eventuais lacunas identificadas. |
-| 2.1. Conferir identificação e timecodes | **Input:** metadados disponíveis: partida, timecodes e tipo de lance. **Ação:** relacionar cada corte à sua origem; não presumir placar ou súmula como saídas asseguradas do backend. **Problema:** informação ausente ou inconsistente impede referência precisa. **Recomendação:** manter vínculo entre corte e original, H25/RC05. |
-| 2.2. Assistir aos cortes com contexto temporal | **Ação:** reproduzir os trechos em player externo ou na ilha do editor, incluindo a construção e o desfecho da jogada. **Feedback:** contexto percebido para julgamento. **Problema:** limite truncado pode ocultar a falta anterior, C02. **Recomendação:** investigar quanto contexto cada tipo de lance exige, RC04; não fixar uma duração universal. |
-| 2.3. Avaliar pertinência, contexto e possíveis omissões | **Ação:** confrontar a seleção com a pauta, os critérios editoriais e as informações do editor. Se houver dúvida de omissão, pedir conferência no original. **Feedback:** parecer sobre o lote ou pendência de verificação. **Problema:** o índice de eventos detectados não é prova de cobertura completa, H10/H16. |
-| **3. Deliberar e comunicar decisão editorial** | **Plano 3:** `(3.1 / 3.2) > 3.3`. Escolher 3.1 somente se a seleção atender aos critérios e não houver pendência de conferência; caso contrário, escolher 3.2. **Feedback:** editor recebe orientação vinculada ao material avaliado. |
-| 3.1. Chancelar seleção para montagem externa | **Ação:** aprovar a seleção conferida para continuidade pelo editor. **Feedback:** lote aprovado; montagem e publicação ainda cabem às equipes externas, H23/H33. |
-| 3.2. Solicitar revisão com referência ao lance | **Ação:** indicar partida, corte, timecode disponível e motivo do ajuste ou da conferência solicitada. **Feedback:** seleção devolvida, com chancela pendente. **Recomendação:** reduzir ambiguidade da orientação com metadados identificáveis. |
-| 3.3. Comunicar decisão ao editor responsável | **Ação:** comunicar aprovação ou revisão pelo chat, ou presencialmente na alternativa de inspeção na ilha. **Feedback:** decisão comunicada. **Problema:** utilidade de recuperar decisões anteriores ainda aberta, H35. **Recomendação:** investigar se os registros externos bastam; não criar auditoria no produto. |
-| **4. Conduzir contingência pós-publicação** | **Input:** alerta externo e identificação da publicação com falha editorial. **Plano 4:** `4.1 > 4.2 > 4.3 > 4.4`. Acionar somente quando a falha justificar retirada; críticas isoladas não bastam para concluir que há erro. **Feedback:** decisão sobre a versão corrigida comunicada; demais lotes continuam pendentes. |
-| 4.1. Solicitar retirada à equipe de publicação | **Ação:** identificar a publicação afetada e solicitar a remoção pelo canal externo. **Problema:** propagação de material sem contexto, C02. **Feedback:** solicitação encaminhada; a confirmação da retirada depende da equipe responsável. |
-| 4.2. Examinar corte e localizar falha de contexto | **Ação:** relacionar o vídeo publicado ao corte e ao timecode original com ajuda do editor. **Feedback:** trecho e falha identificados para correção. |
-| 4.3. Orientar correção e solicitar nova versão | **Ação:** apontar o contexto faltante e pedir a reedição em ferramenta externa. **Feedback:** orientação transmitida; aguardar a entrega corrigida antes de 4.4. |
-| **4.4. Reavaliar versão corrigida** | **Plano 4.4:** `4.4.1 > 4.4.2`. Se a versão continuar insuficiente, solicitar novo ajuste e repetir `4.3 > 4.4`. **Feedback:** nova decisão comunicada, sem autorização automática de republicação. |
-| 4.4.1. Conferir correção e pertinência editorial | **Ação:** assistir à nova versão e verificar o contexto e os critérios usados em 2. **Feedback:** aprovação possível ou ajuste ainda necessário. |
-| 4.4.2. Comunicar aprovação ou novo ajuste | **Ação:** comunicar a decisão sobre a versão identificada. **Feedback:** continuidade externa autorizada ou revisão pendente. |
+| **0. Supervisionar processo editorial e chancelar cortes** | **Input:** pauta, prioridades e prazos da rodada, anotações externas, aviso do editor, lotes e metadados recebidos pelo canal combinado. Alertas externos e identificação da publicação são necessários para a contingência. **Plano 0:** `1 > 2 > 3` para cada lote. Se 3.2 for escolhido, aguardar nova versão e repetir `2 > 3`. Encerrar quando os lotes recebidos estiverem encaminhados ou ao fim do turno, deixando explícitas as pendências. Em caso de falha editorial publicada, interromper o ciclo e executar 4; os demais lotes permanecem pendentes e exigem um novo ciclo. **Feedback:** editor informado sobre a seleção aprovada ou sobre a revisão necessária. **Problema:** aprovações apressadas e material difícil de identificar, C02/H33. **Recomendação:** preservar identificação e contexto nos resultados baixados, RC05/RC09. |
+| **1. Identificar e priorizar lote recebido** | **Plano 1:** `1.1 > 1.2 > 1.3`; se nenhum lote estiver disponível, aguardar a entrega. **Recomendação:** apoiar a conferência pelo usuário: partida, material e prioridade definidos. **Problema:** chamados simultâneos dificultam ordenar o atendimento, C02. **Recomendação:** investigar como o editor comunica andamento e entrega, H40. |
+| 1.1. Consultar prioridades e prazos da rodada | **Recomendação:** manter disponível como referência: pauta e anotações externas.  **Ação:** conferir prioridades combinadas com os editores. **Recomendação:** apoiar a conferência pelo usuário: critérios de atendimento recuperados. |
+| 1.2. Consultar aviso e identificar lote da partida | **Recomendação:** manter disponível como referência: aviso no chat e arquivos na pasta compartilhada, H40.  **Ação:** conferir partida de origem e lote recebido. **Problema:** arquivos misturados ou sem identificação, H25/H33. **Recomendação:** nomes e metadados legíveis fora da interface, RC05/RC09. |
+| 1.3. Escolher lote prioritário | **Ação:** escolher o próximo lote considerando prazo, pauta e dúvidas sinalizadas. **Recomendação:** apoiar a conferência pelo usuário: lote a inspecionar definido. **Problema:** prioridade e quantidade de atendimentos ainda não validadas. |
+| **2. Inspecionar seleção e contexto dos cortes** | **Plano 2:** `2.1 > 2.2 > 2.3`; em 2.2, assistir aos cortes da seleção e rever os trechos duvidosos. Se dados ou contexto forem insuficientes, apontar a pendência em 3.2. **Recomendação:** apoiar a conferência pelo usuário: avaliação do lote e eventuais lacunas identificadas. |
+| 2.1. Conferir identificação e timecodes | **Recomendação:** manter disponível como referência: metadados disponíveis: partida, timecodes e tipo de lance.  **Ação:** relacionar cada corte à sua origem; não presumir placar ou súmula como saídas asseguradas do backend. **Problema:** informação ausente ou inconsistente impede referência precisa. **Recomendação:** manter vínculo entre corte e original, H25/RC05. |
+| 2.2. Assistir aos cortes com contexto temporal | **Ação:** reproduzir os trechos em player externo ou na ilha do editor, incluindo a construção e o desfecho da jogada. **Recomendação:** apoiar a conferência pelo usuário: contexto percebido para julgamento. **Problema:** limite truncado pode ocultar a falta anterior, C02. **Recomendação:** investigar quanto contexto cada tipo de lance exige, RC04; não fixar uma duração universal. |
+| 2.3. Avaliar pertinência, contexto e possíveis omissões | **Ação:** confrontar a seleção com a pauta, os critérios editoriais e as informações do editor. Se houver dúvida de omissão, pedir conferência no original. **Recomendação:** apoiar a conferência pelo usuário: parecer sobre o lote ou pendência de verificação. **Problema:** o índice de eventos detectados não é prova de cobertura completa, H10/H16. |
+| **3. Deliberar e comunicar decisão editorial** | **Plano 3:** `(3.1 / 3.2) > 3.3`. Escolher 3.1 somente se a seleção atender aos critérios e não houver pendência de conferência; caso contrário, escolher 3.2. **Recomendação:** apoiar a conferência pelo usuário: editor recebe orientação vinculada ao material avaliado. |
+| 3.1. Chancelar seleção para montagem externa | **Ação:** aprovar a seleção conferida para continuidade pelo editor. **Recomendação:** apoiar a conferência pelo usuário: lote aprovado; montagem e publicação ainda cabem às equipes externas, H23/H33. |
+| 3.2. Solicitar revisão com referência ao lance | **Ação:** indicar partida, corte, timecode disponível e motivo do ajuste ou da conferência solicitada. **Recomendação:** apoiar a conferência pelo usuário: seleção devolvida, com chancela pendente. **Recomendação:** reduzir ambiguidade da orientação com metadados identificáveis. |
+| 3.3. Comunicar decisão ao editor responsável | **Ação:** comunicar aprovação ou revisão pelo chat, ou presencialmente na alternativa de inspeção na ilha. **Recomendação:** apoiar a conferência pelo usuário: decisão comunicada. **Problema:** utilidade de recuperar decisões anteriores ainda aberta, H35. **Recomendação:** investigar se os registros externos bastam; não criar auditoria no produto. |
+| **4. Conduzir contingência pós-publicação** | **Recomendação:** manter disponível como referência: alerta externo e identificação da publicação com falha editorial.  **Plano 4:** `4.1 > 4.2 > 4.3 > 4.4`. Acionar somente quando a falha justificar retirada; críticas isoladas não bastam para concluir que há erro. **Recomendação:** apoiar a conferência pelo usuário: decisão sobre a versão corrigida comunicada; demais lotes continuam pendentes. |
+| 4.1. Solicitar retirada à equipe de publicação | **Ação:** identificar a publicação afetada e solicitar a remoção pelo canal externo. **Problema:** propagação de material sem contexto, C02. **Recomendação:** apoiar a conferência pelo usuário: solicitação encaminhada; a confirmação da retirada depende da equipe responsável. |
+| 4.2. Examinar corte e localizar falha de contexto | **Ação:** relacionar o vídeo publicado ao corte e ao timecode original com ajuda do editor. **Recomendação:** apoiar a conferência pelo usuário: trecho e falha identificados para correção. |
+| 4.3. Orientar correção e solicitar nova versão | **Ação:** apontar o contexto faltante e pedir a reedição em ferramenta externa. **Recomendação:** apoiar a conferência pelo usuário: orientação transmitida; aguardar a entrega corrigida antes de 4.4. |
+| **4.4. Reavaliar versão corrigida** | **Plano 4.4:** `4.4.1 > 4.4.2`. Se a versão continuar insuficiente, solicitar novo ajuste e repetir `4.3 > 4.4`. **Recomendação:** apoiar a conferência pelo usuário: nova decisão comunicada, sem autorização automática de republicação. |
+| 4.4.1. Conferir correção e pertinência editorial | **Ação:** assistir à nova versão e verificar o contexto e os critérios usados em 2. **Recomendação:** apoiar a conferência pelo usuário: aprovação possível ou ajuste ainda necessário. |
+| 4.4.2. Comunicar aprovação ou novo ajuste | **Ação:** comunicar a decisão sobre a versão identificada. **Recomendação:** apoiar a conferência pelo usuário: continuidade externa autorizada ou revisão pendente. |
 
 ### Verificação do HTA
 
@@ -349,81 +405,108 @@ O objetivo 0 expressa a meta humana de supervisão. Os ramos 1–3 cobrem o cicl
 **Recorte:** mesmo uso proposto externo de P02, H33/H40, com alternativa presencial e contingência de C02.\
 **Abordagem:** modelo GOMS hierárquico conforme os exemplos dos slides 4–13 de **CC8122-GOMS-CTT**. Não se estima tempo por KLM: julgamento editorial, reprodução de vídeo, espera por correção e deslocamento exigiriam dados específicos.
 
+[H] **Precondições:** prioridades e prazos recuperáveis, lote recebido pelo canal combinado para a rotina ou alerta externo e publicação identificável para a contingência. Receber nova versão é condição para reavaliá-la. A submeta A seleciona o atendimento; a meta 0 não recebe métodos.
+
 ### Modelo hierárquico de metas, métodos e operadores
 
-Como nos slides, cada método pertence a uma meta, sua regra de seleção aparece junto dele e seus operadores são identificados dentro da sequência. Os métodos de uma mesma meta atingem o mesmo objetivo em condições diferentes. As folhas `OP.` representam ações concretas ou primitivas cognitivas no nível adotado; os trechos de reprodução devem ser repetidos para os cortes a avaliar.
+[H] O GOMS é textual e indentado. A meta 0 organiza a tarefa sem método próprio. Metas com um único caminho contêm diretamente operadores ou submetas; métodos e regras de seleção aparecem nas escolhas entre maneiras de atingir a mesma meta. Precondições descrevem quando é possível iniciar, e não selecionam um método. As folhas `OP.` representam ações externas, perceptivas ou cognitivas; repetir a inspeção por corte/lote conforme as condições do modelo.
 
 ```text
 GOAL 0: supervisionar processo editorial e chancelar cortes
-  METHOD 0.A: avaliar um lote recebido
-  (SEL. RULE: lote disponível e nenhuma contingência editorial prioritária)
-    GOAL 1: identificar e priorizar lote
-      METHOD 1.A: consultar prioridades e entrega externa
-      (SEL. RULE: aviso de entrega disponível pelo canal combinado)
-        OP. 1.A.1: ler prioridades e prazos nas anotações da rodada
-        OP. 1.A.2: ler o aviso do editor no chat corporativo
-        OP. 1.A.3: abrir a pasta indicada no aviso
-        OP. 1.A.4: conferir identificação da partida e do lote
-        OP. 1.A.5: escolher o lote a inspecionar segundo prazo e pauta
-    GOAL 2: avaliar a seleção e o contexto dos cortes
-      METHOD 2.A: inspecionar arquivos na estação de supervisão
-      (SEL. RULE: arquivos acessíveis e dúvida avaliável nos cortes recebidos)
-        OP. 2.A.1: abrir o arquivo de metadados disponível
-        OP. 2.A.2: ler partida, tipo de lance e timecodes dos cortes
-        OP. 2.A.3: apontar o cursor para o corte a conferir
-        OP. 2.A.4: abrir o corte no player externo
-        OP. 2.A.5: assistir ao trecho com contexto anterior e posterior
-        OP. 2.A.6: confrontar o trecho com os critérios editoriais
-        OP. 2.A.7: identificar lacunas de contexto ou suspeitas de omissão
-        OP. 2.A.8: anotar a referência e o motivo de eventual revisão
-      METHOD 2.B: inspecionar com o editor na ilha de edição
-      (SEL. RULE: arquivos inacessíveis ou dúvida não resolvida em 2.A;
-       chamado presencial pode iniciar diretamente esta meta)
-        OP. 2.B.1: deslocar-se até a ilha do editor responsável
-        OP. 2.B.2: pedir identificação da partida e do trecho duvidoso
-        OP. 2.B.3: pedir ao editor a reprodução do corte e do contexto no original
-        OP. 2.B.4: assistir à reprodução apresentada pelo editor
-        OP. 2.B.5: confrontar o trecho com os critérios editoriais
-        OP. 2.B.6: identificar o trecho e o motivo de eventual revisão
-    GOAL 3: deliberar e comunicar decisão sobre o lote
-      METHOD 3.A: chancelar a seleção
-      (SEL. RULE: seleção atende aos critérios e não há conferência pendente)
-        OP. 3.A.1: formular a aprovação do lote identificado
-        OP. 3.A.2: digitar a aprovação no chat ou comunicá-la presencialmente
-        OP. 3.A.3: enviar a mensagem, se usado o chat
-        OP. 3.A.4: verificar o envio ou a compreensão pelo editor presente
-      METHOD 3.B: devolver a seleção para revisão
-      (SEL. RULE: contexto insuficiente, suspeita de omissão ou dado inconsistente)
-        OP. 3.B.1: recuperar a referência do corte ou do lance a conferir
-        OP. 3.B.2: formular o ajuste, indicando partida, timecode disponível e motivo
-        OP. 3.B.3: digitar o pedido no chat ou comunicá-lo presencialmente
-        OP. 3.B.4: enviar a mensagem, se usado o chat
-        OP. 3.B.5: verificar o envio ou a compreensão pelo editor presente
-        GOAL 3.B.6: reavaliar o lote após a nova entrega
-          METHOD 3.B.6.A: repetir inspeção e deliberação
-          (SEL. RULE: nova versão recebida; enquanto não recebida, chancela pendente)
+  GOAL A: atender a demanda editorial da sessão
+    METHOD A.R: avaliar um lote recebido
+    (SEL. RULE: lote disponível e nenhuma contingência editorial prioritária)
+      GOAL 1: identificar e priorizar lote
+        OP. 1.1: ler prioridades e prazos nas anotações da rodada
+        OP. 1.2: ler o aviso do editor no chat corporativo
+        OP. 1.3: abrir a pasta indicada no aviso
+        OP. 1.4: conferir identificação da partida e do lote
+        OP. 1.5: escolher o lote a inspecionar segundo prazo e pauta
+        OP. 1.6: verificar que o lote escolhido corresponde à prioridade recuperada
+      GOAL 2: avaliar a seleção e o contexto dos cortes
+        METHOD 2.A: inspecionar arquivos na estação de supervisão
+        (SEL. RULE: arquivos acessíveis e dúvida avaliável nos cortes recebidos)
+          OP. 2.A.1: abrir o arquivo de metadados disponível
+          OP. 2.A.2: ler partida, tipo de lance e timecodes dos cortes
+          OP. 2.A.3: apontar o cursor para o corte a conferir
+          OP. 2.A.4: abrir o corte no player externo
+          OP. 2.A.5: assistir ao trecho com contexto anterior e posterior
+          OP. 2.A.6: confrontar o trecho com os critérios editoriais
+          OP. 2.A.7: identificar lacunas de contexto ou suspeitas de omissão
+          OP. 2.A.8: anotar a referência e o motivo de eventual revisão
+          OP. 2.A.9: conferir que a avaliação e as pendências foram registradas corretamente
+        METHOD 2.B: inspecionar com o editor na ilha de edição
+        (SEL. RULE: arquivos inacessíveis ou dúvida não resolvida em 2.A;
+         chamado presencial pode iniciar diretamente esta meta)
+          OP. 2.B.1: deslocar-se até a ilha do editor responsável
+          OP. 2.B.2: pedir identificação da partida e do trecho duvidoso
+          OP. 2.B.3: pedir ao editor a reprodução do corte e do contexto no original
+          OP. 2.B.4: assistir à reprodução apresentada pelo editor
+          OP. 2.B.5: confrontar o trecho com os critérios editoriais
+          OP. 2.B.6: anotar o trecho e o motivo de eventual revisão
+          OP. 2.B.7: conferir que a avaliação e as pendências correspondem ao trecho visto
+      GOAL 3: deliberar e comunicar decisão sobre o lote
+        METHOD 3.A: chancelar a seleção
+        (SEL. RULE: seleção atende aos critérios e não há conferência pendente)
+          OP. 3.A.1: formular a aprovação do lote identificado
+          GOAL 3.A.2: comunicar a aprovação
+            METHOD 3.A.2.A: comunicar pelo chat
+            (SEL. RULE: supervisor na estação e chat corporativo acessível)
+              OP. 3.A.2.A.1: digitar a aprovação com a referência do lote
+              OP. 3.A.2.A.2: enviar a mensagem ao editor responsável
+              OP. 3.A.2.A.3: verificar entrega no chat ao destinatário correto
+            METHOD 3.A.2.B: comunicar presencialmente
+            (SEL. RULE: supervisor junto ao editor na ilha de edição)
+              OP. 3.A.2.B.1: dizer a aprovação do lote identificado
+              OP. 3.A.2.B.2: ouvir a confirmação do editor
+              OP. 3.A.2.B.3: conferir que o editor compreendeu a aprovação e seu alcance
+          OP. 3.A.3: conferir que a aprovação comunicada corresponde ao lote avaliado
+        METHOD 3.B: devolver a seleção para revisão
+        (SEL. RULE: contexto insuficiente, suspeita de omissão ou dado inconsistente)
+          OP. 3.B.1: recuperar a referência do corte ou do lance a conferir
+          OP. 3.B.2: formular o ajuste com partida, timecode disponível e motivo
+          GOAL 3.B.3: comunicar o pedido de ajuste
+            METHOD 3.B.3.A: pedir pelo chat
+            (SEL. RULE: supervisor na estação e chat corporativo acessível)
+              OP. 3.B.3.A.1: digitar o pedido com a referência e o motivo
+              OP. 3.B.3.A.2: enviar a mensagem ao editor responsável
+              OP. 3.B.3.A.3: verificar entrega do pedido no chat ao destinatário correto
+            METHOD 3.B.3.B: pedir presencialmente
+            (SEL. RULE: supervisor junto ao editor na ilha de edição)
+              OP. 3.B.3.B.1: dizer o pedido com a referência e o motivo
+              OP. 3.B.3.B.2: ouvir a confirmação do editor
+              OP. 3.B.3.B.3: conferir que o editor compreendeu o ajuste solicitado
+          OP. 3.B.4: verificar que a chancela permanece pendente até a reavaliação
+          GOAL 3.B.6: reavaliar o lote após a nova entrega, somente quando recebida
             GOAL 2: avaliar a nova versão pelos métodos 2.A ou 2.B
             GOAL 3: deliberar novamente pelos métodos 3.A ou 3.B
-  METHOD 0.B: tratar contingência de publicação
-  (SEL. RULE: alerta externo e falha editorial que justifica retirada;
-   substituir o método regular em andamento, mantendo os demais lotes pendentes)
-    GOAL 4: orientar correção e reavaliar material publicado com falha
-      METHOD 4.A: solicitar retirada e coordenar nova versão externa
-      (SEL. RULE: publicação afetada e equipe responsável identificadas)
-        OP. 4.A.1: ler ou ouvir o alerta e identificar a publicação afetada
-        OP. 4.A.2: avaliar se a falha justifica a retirada
-        OP. 4.A.3: comunicar pedido de retirada à equipe de publicação
-        OP. 4.A.4: examinar o corte e localizar a falha com o editor
-        OP. 4.A.5: apontar a referência e o contexto que precisa ser corrigido
-        OP. 4.A.6: comunicar pedido de reedição e nova entrega
-        GOAL 4.A.7: reavaliar a versão corrigida
-          METHOD 4.A.7.A: inspecionar e comunicar nova deliberação
-          (SEL. RULE: versão corrigida recebida)
-            GOAL 2: avaliar a versão corrigida pelos métodos 2.A ou 2.B
-            GOAL 3: comunicar aprovação ou novo ajuste pelos métodos 3.A ou 3.B
+            OP. 3.B.6.1: conferir a nova decisão e as pendências dessa versão
+          OP. 3.B.7: conferir o encaminhamento da revisão nesta sessão
+      OP. A.R.1: verificar quais lotes têm decisão comunicada e quais continuam pendentes
+    METHOD A.C: tratar contingência de publicação
+    (SEL. RULE: alerta externo e falha editorial que justifica retirada;
+     substituir o atendimento regular em andamento, mantendo os demais lotes pendentes)
+      GOAL 4: orientar correção e reavaliar material publicado com falha
+        OP. 4.1: ler ou ouvir o alerta pelo canal que o apresentou
+        OP. 4.2: identificar a publicação afetada
+        OP. 4.3: avaliar se a falha justifica a retirada
+        OP. 4.4: comunicar pedido de retirada à equipe de publicação
+        OP. 4.5: examinar o corte com o editor
+        OP. 4.6: localizar a falha no trecho examinado
+        OP. 4.7: apontar a referência e o contexto que precisa ser corrigido
+        OP. 4.8: comunicar pedido de reedição e nova entrega
+        GOAL 4.9: reavaliar a versão corrigida, somente quando recebida
+          GOAL 2: avaliar a versão corrigida pelos métodos 2.A ou 2.B
+          GOAL 3: comunicar aprovação ou novo ajuste pelos métodos 3.A ou 3.B
+          OP. 4.9.1: conferir a decisão sobre a versão corrigida e as pendências
+        OP. 4.10: verificar o encaminhamento da publicação afetada e os lotes ainda pendentes
+      OP. A.C.1: conferir que a contingência teve orientação comunicada e desfecho reconhecido
+  OP. 0.1: conferir as decisões comunicadas e as pendências que definem o desfecho da sessão
 ```
 
-**Leitura das regras de seleção:** 0.A e 0.B distinguem rotina e contingência; 2.A e 2.B são maneiras alternativas de obter a mesma avaliação; 3.A e 3.B comunicam resultados alternativos da mesma deliberação. Se ambos os meios de inspeção estiverem disponíveis e a dúvida puder ser resolvida nos arquivos, adotar 2.A; recorrer a 2.B nas condições explicitadas. A seleção de método não é um operador temporal CTT.
+**Leitura das regras de seleção:** a submeta A distingue atendimento regular (A.R) e contingência (A.C); 2.A e 2.B são maneiras alternativas de obter a mesma avaliação; 3.A e 3.B comunicam resultados alternativos da mesma deliberação. Se ambos os meios de inspeção estiverem disponíveis e a dúvida puder ser resolvida nos arquivos, adotar 2.A; recorrer a 2.B nas condições explicitadas. A seleção de método não é um operador temporal CTT.
+
+[H] **Comunicação e término:** na aprovação e no pedido de ajuste, os métodos de comunicação selecionam chat quando o supervisor está na estação com acesso ao canal, ou comunicação verbal quando está junto ao editor. Na estação sem chat acessível, manter a comunicação pendente e recorrer à inspeção presencial 2.B quando viável. Entrega no chat não comprova compreensão nem execução do ajuste. Se nova versão ainda não foi recebida, não executar 3.B.6 ou 4.9; reconhecer a pendência nas verificações finais da sessão. Os últimos operadores explicitam a conferência do resultado pelo usuário. Reconhecer uma falha ou pendência é verificar o desfecho real, sem supor sucesso.
 
 **Operadores:** ler e assistir são perceptivos; apontar, abrir, digitar, enviar e deslocar-se são externos; confrontar critérios, identificar lacunas, recuperar referências e formular a decisão são cognitivos. Arnaldo não precisa operar a linha do tempo do NLE: na alternativa presencial, o editor controla a reprodução. A hipótese H34 precisa ser investigada antes de pressupor domínio técnico de P02.
 
@@ -433,13 +516,51 @@ GOAL 0: supervisionar processo editorial e chancelar cortes
 
 **Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1\
 **Abordagem:** árvore de tarefas e relações temporais conforme os slides 19–24 de **CC8122-GOMS-CTT**.\
-**Fronteira dos sistemas:** as interações e tarefas automáticas são do **chat, da pasta compartilhada e do player externos**, usados no percurso proposto de P02. Arnaldo não recebe notificações diretamente do backend do TCC. O aviso no chat vem do editor após A04, H33/H40. A alternativa presencial é detalhada no GOMS.
+**Fronteira dos sistemas:** as interações e tarefas automáticas são do **chat, da pasta compartilhada e do player externos**, usados no percurso proposto de P02. Arnaldo não recebe notificações diretamente do backend do TCC. O aviso no chat vem do editor após A04, H33/H40. A comunicação presencial é uma tarefa de usuário fora desses sistemas; 3.3 detalha a escolha do canal.
 
 ### Diagrama CTT
 
-![CTT T02 — árvore com tipos de tarefas e operadores entre irmãs](../assets/05_tarefas/ctt_t02.svg)
+![CTT T02 — árvore com tipos de tarefas e operadores entre irmãs](../assets/05_tarefas/ctt_t02_visao_geral.svg)
 
 *Figura 2 — CTT de T02, por Lucas Roberto. Nuvem: abstrata; pessoa: usuário; computador: sistema; pessoa e computador com seta dupla: interação. Os painéis inferiores expandem os nós da visão geral. [SVG editável](../assets/05_tarefas/ctt_t02.svg).*
+
+[H] A visão geral apresenta os três primeiros painéis. Os detalhamentos abaixo são recortes da mesma árvore, com IDs e relações preservados; o SVG completo reúne todos os painéis e a legenda.
+
+<details>
+<summary>T02: detalhamento 1, 1, 2, B</summary>
+
+![CTT T02, detalhamento 1](../assets/05_tarefas/ctt_t02_detalhe_01.svg)
+
+</details>
+
+<details>
+<summary>T02: detalhamento 2, 3, D, 4</summary>
+
+![CTT T02, detalhamento 2](../assets/05_tarefas/ctt_t02_detalhe_02.svg)
+
+</details>
+
+<details>
+<summary>T02: detalhamento 3, R, K, 4.4</summary>
+
+![CTT T02, detalhamento 3](../assets/05_tarefas/ctt_t02_detalhe_03.svg)
+
+</details>
+
+<details>
+<summary>T02: detalhamento 4, 3.3, 3.3.A, 3.3.B</summary>
+
+![CTT T02, detalhamento 4](../assets/05_tarefas/ctt_t02_detalhe_04.svg)
+
+</details>
+
+<details>
+<summary>T02: detalhamento 5, Legenda e leitura</summary>
+
+![CTT T02, detalhamento 5](../assets/05_tarefas/ctt_t02_detalhe_05.svg)
+
+</details>
+
 
 As ligações descendentes mostram **decomposição**. As ligações horizontais entre tarefas irmãs carregam as **relações temporais**, como nos slides 23 e 24; não são planos HTA nem setas de um fluxograma. Os identificadores dos ramos 1–4 facilitam a comparação com o HTA; `D` agrupa as decisões de 3 e `S` identifica uma resposta automática do chat, que complementa as operações humanas do HTA.
 
@@ -447,7 +568,7 @@ As ligações descendentes mostram **decomposição**. As ligações horizontais
 
 1. **Sessão:** `C* [> V`, com `C = (1 []>> 2 []>> 3)` e `V = (E [] 4)`. E encerra o turno ou a sessão sem lote disponível para atender, reconhecendo pendências. 4 só é habilitada por alerta e falha que justifique retirada. A saída normal não exige uma crise. Nova versão recebida habilita novo C; enquanto espera, a chancela continua pendente.
 2. **Identificação e inspeção:** `1.1 >> 1.2 []>> 1.3` e `2 = (2.1 >> B []>> 2.3)`, com `B = (2.2* [> J)`. J encerra a reprodução quando os cortes foram conferidos, o prazo acaba ou o acesso é insuficiente, explicitando lacunas. O julgamento usa o que foi efetivamente visto; lacunas impedem chancela e levam à revisão. Pasta, chat e player são externos.
-3. **Deliberação:** `D []>> 3.3 []>> S`, com `D = (3.1 [] 3.2)`. Chancela exige critérios atendidos sem conferência pendente; devolução identifica o que revisar. S entrega a mensagem pelo chat, não é notificação do backend. Nova entrega exige nova inspeção; o envio da decisão não comprova que o ajuste ocorreu.
+3. **Deliberação:** `D []>> 3.3`, com `D = (3.1 [] 3.2)` e `3.3 = (3.3.A [] 3.3.B)`. O caminho por chat é `3.3.A.1 []>> S []>> 3.3.A.2`; o presencial é `3.3.B.1 []>> 3.3.B.2`. Escolher chat na estação com canal acessível, ou comunicação verbal junto ao editor, conforme os métodos de comunicação no GOMS. Sem canal viável, manter comunicação pendente. Chancela exige critérios atendidos sem conferência pendente; devolução identifica o que revisar. S entrega a mensagem pelo chat, não é notificação do backend. Nova entrega exige nova inspeção; o envio da decisão não comprova que o ajuste ocorreu.
 4. **Contingência:** ao escolher 4 em V, a instância C é desativada, preservando os outros lotes como pendências. `4 = (4.1 >> 4.2 []>> R)`, com `R = (K* [> F)` e `K = (4.3 >> 4.4)`. 4.4 só é habilitada depois da nova versão recebida. Se insuficiente, repetir K; F encerra quando a decisão foi comunicada e a versão é suficiente, ou quando a continuidade precisa ser adiada/inviável, mantendo pendências explícitas.
 5. **Reavaliação:** `4.4.1 []>> 4.4.2`. Conferir precede comunicar aprovação ou novo ajuste. Concluir F não executa republicação nem retoma a instância regular interrompida; os outros lotes exigem nova sessão. E/J/F explicitam decisões de término já presentes nos planos HTA e no GOMS, sem novos controles no produto.
 
@@ -467,9 +588,9 @@ As ligações descendentes mostram **decomposição**. As ligações horizontais
 
 | Símbolo no diagrama | Tipo nos slides | Aplicação no modelo |
 |---|---|---|
-| Nuvem | Abstrata | Objetivo global, C/V/B/R/K, ramos 1–4, decisão D e reavaliação 4.4; agrupam outras tarefas. |
-| Pessoa | Usuário | Consultar prioridades em anotações, escolher lote, julgar pertinência, chancelar ou solicitar revisão como decisões, conferir a correção e reconhecer término/pendências (E/J/F). Atividades fora dos sistemas externos, incluindo julgamentos mentais. |
-| Pessoa e computador, com seta dupla | Interativa | Consultar aviso e arquivos, ler metadados, reproduzir cortes, enviar decisão e orientações pelo chat. Há diálogo com aplicações externas. |
+| Nuvem | Abstrata | Objetivo global, C/V/B/R/K, ramos 1–4, decisão D, comunicação 3.3/A/B e reavaliação 4.4; agrupam outras tarefas. |
+| Pessoa | Usuário | Consultar prioridades em anotações, escolher lote, julgar pertinência, chancelar ou solicitar revisão como decisões, conferir a correção, comunicar presencialmente/conferir compreensão (3.3.B), conferir entrega no chat (3.3.A.2) e reconhecer término/pendências (E/J/F). Atividades fora dos sistemas externos, incluindo julgamentos mentais. |
+| Pessoa e computador, com seta dupla | Interativa | Consultar aviso e arquivos, ler metadados, reproduzir cortes, enviar decisão (3.3.A.1) e orientações pelo chat. Há diálogo com aplicações externas. |
 | Computador | Sistema | Entregar a mensagem no chat, sem nova ação de Arnaldo. Ler ou perceber o aviso é ação do usuário, não tarefa automática do TCC. |
 
 ---
@@ -524,31 +645,31 @@ Retângulos representam objetivos; o traço sob as folhas marca operações. Os 
 
 | Objetivos / Operações | Problemas e Recomendações |
 |---|---|
-| **0. Acompanhar o processamento de partidas em lote e tratar falhas** | **Input:** lote já enviado, com identificação por partida. **Plano 0:** `1 > (2 > 3) > 4`; repetir `2 > 3` para cada partida a consultar na sessão e após uma nova tentativa quando houver novo estado disponível. Se escolher 3.1, voltar à consulta em outra ocasião; não bloquear as demais partidas. **Feedback:** resultados encaminhados ou pendências identificadas. **Problema:** uma falha pode atrasar o lote, H16/H26. **Recomendação:** preservar os resultados e estados das outras partidas, R02/R05. |
-| **1. Identificar lote a acompanhar** | **Plano 1:** `1.1 > 1.2`. **Feedback:** registros associados às gravações corretas. **Problema:** arquivos e tentativas podem ser confundidos, H24/H26. **Recomendação:** identificação legível, RC02/RC07. |
-| 1.1. Abrir a lista de partidas enviadas | **Input:** lote enviado e lista acessível, precondição da sessão. **Ação:** acessar o acompanhamento na interface proposta. **Feedback:** lista disponível. Se a lista inteira estiver inacessível, T03 não pode ser iniciada; essa indisponibilidade não prova falha do processamento. Não exige dashboard com métricas, H29. |
-| 1.2. Conferir partida e tentativa | **Ação:** relacionar nome/arquivo e identificador da tentativa, quando disponível, à gravação pretendida. **Feedback:** lote reconhecido. **Recomendação:** distinguir novo processamento do anterior sem exigir histórico permanente, RC10. |
-| **2. Compreender a situação de uma partida** | **Plano 2:** `2.1 > 2.2 > 2.3`. **Feedback:** caso de continuidade escolhido para aquela partida. |
-| 2.1. Consultar o estado da partida | **Input:** registro identificado. **Ação:** acessar o estado disponível, por exemplo, na fila, processando, concluído ou falhou. **Feedback:** informação apresentada ou consulta indisponível. **Recomendação:** exibir apenas estados reais em texto, RC03; percentual e prazo somente se confiáveis. |
-| 2.2. Interpretar estado e disponibilidade | **Ação:** distinguir espera, resultados acessíveis e falha informada. Se a consulta estiver indisponível, reconhecer que o estado não pôde ser confirmado. **Feedback:** situação compreendida, inclusive quando incerta. **Problema:** demora não prova falha e conclusão não prova resultado editorialmente completo, H16/H26. |
-| 2.3. Escolher o encaminhamento | **Ação:** escolher 3.1 se ainda ativo ou sem informação suficiente; 3.2 se houver resultados acessíveis; 3.3 se houver falha informada ou falha de acesso aos resultados com orientação disponível. **Feedback:** decisão por partida. Em falha parcial, consultar os limites conhecidos em 3.3 antes de encaminhar somente os resultados que o sistema disponibilizar. |
-| **3. Dar continuidade conforme a situação** | **Plano 3:** `3.1 / 3.2 / 3.3`, conforme 2.3. **Feedback:** espera, acesso para revisão ou tratamento da falha. Uma falha parcial pode exigir novo ciclo para abrir resultados preservados; nunca presumir sua existência. |
-| 3.1. Aguardar e retomar outra atividade | **Ação:** adiar a nova consulta e continuar outro trabalho, se houver. **Feedback:** partida permanece pendente; consultar novamente por iniciativa do usuário ou após aviso disponível. **Problema:** vigilância contínua interrompe outras edições, H32. **Recomendação:** investigar meio de aviso; sem temporizador ou frequência de consulta presumidos. |
-| **3.2. Encaminhar resultados disponíveis à revisão** | **Plano 3.2:** `3.2.1 > 3.2.2 > 3.2.3`. Se o acesso falhar, escolher 3.3 no próximo ciclo. **Feedback:** acesso conferido, sem julgamento editorial dos cortes. |
-| 3.2.1. Abrir os resultados da partida | **Ação:** acessar os resultados vinculados à partida/tentativa. **Feedback:** lista apresentada ou falha de acesso informada. |
-| 3.2.2. Conferir acesso e limites informados | **Ação:** verificar se cortes/metadados estão acessíveis e ler indicação de resultado vazio, falha parcial ou partes não analisadas quando o backend fornecer essa informação. **Feedback:** condições para revisão conhecidas. Resultado vazio não significa ausência de lances relevantes, RC05. |
-| 3.2.3. Reconhecer o encaminhamento para T01/A04 | **Ação:** considerar a partida pronta para iniciar a revisão dos resultados acessíveis e manter eventuais lacunas como pendentes. **Feedback:** continuidade definida. É decisão humana; não exige botão para marcar o lote como concluído. |
-| **3.3. Tratar falha da partida** | **Plano 3.3:** `3.3.1 > 3.3.2 > 3.3.3 > 3.3.4`. **Feedback:** tentativa encaminhada ou pendência mantida. **Problema:** repetir indiscriminadamente pode gerar atraso e novo custo, H08/H16. |
-| 3.3.1. Ler o problema e a orientação disponível | **Input:** falha informada, partida e tentativa identificadas. **Ação:** consultar causa conhecida, limites e próximo passo. **Feedback:** informação compreensível ou diagnóstico insuficiente reconhecido. **Recomendação:** evitar jargão e não inventar a causa, RC07/H38. |
-| 3.3.2. Avaliar a ação possível | **Ação:** distinguir entrada corrigível, nova tentativa orientada e ausência de recuperação segura; considerar prazo e eventual novo consumo de recursos. **Feedback:** condição de escolha identificada. Sem causa/orientação suficiente, manter pendência; falha persistente não justifica repetição automática. |
-| **3.3.3. Encaminhar recuperação ou pendência** | **Plano 3.3.3:** `3.3.3.1 / 3.3.3.2 / 3.3.3.3`. Escolher correção apenas para problema de entrada corrigível; nova tentativa apenas quando oferecida e orientada; nos demais casos, manter pendência. **Feedback:** ação escolhida para a partida afetada, preservando as outras. |
-| 3.3.3.1. Corrigir a entrada e reenviar a partida | **Ação:** selecionar arquivo corrigido/substituto, conferir a identificação e a validação e confirmar seu envio, se suportado. **Feedback:** novo envio aceito ou rejeição explicada. Não pressupõe continuar do ponto interrompido, RC02/RC03. |
-| 3.3.3.2. Confirmar nova tentativa orientada | **Ação:** solicitar nova tentativa para a partida afetada, quando disponível, conferindo o aviso de novo processamento/possível custo antes de confirmar. **Feedback:** solicitação aceita ou recusada. Valor monetário somente se calculável e pertinente; não duplicar o lote, H08/H16/RC10. |
-| 3.3.3.3. Manter pendência e buscar orientação | **Ação:** adiar a recuperação, conservar a referência da partida/tentativa e consultar ajuda ou suporte externo existente, se disponível. **Feedback:** pendência e próximo passo reconhecidos. Não cria serviço de suporte nem implica envio automático de mensagens. |
-| 3.3.4. Conferir o encaminhamento da falha | **Ação:** verificar confirmação da ação solicitada ou reconhecer que a pendência continua. **Feedback:** nova tentativa identificada para acompanhamento ou recuperação não realizada. Aceitação não é conclusão; falha persistente exige orientação, não ciclo ilimitado de novas tentativas. |
-| **4. Consolidar resultados e pendências do lote** | **Plano 4:** `4.1 > 4.2`. **Feedback:** fim da sessão com continuidade explícita, mesmo que existam partidas em andamento. |
-| 4.1. Conferir a preservação das demais partidas | **Ação:** consultar se os resultados/estados das outras partidas continuam acessíveis; se indisponíveis, reconhecer a pendência. **Feedback:** preservação conferida ou problema adicional identificado. A interface precisa apoiar essa independência, R02/R05. |
-| 4.2. Identificar pendências e próxima consulta | **Ação:** distinguir partidas encaminhadas para revisão, ainda ativas e com recuperação pendente. **Feedback:** usuário sabe o que pode revisar e o que deve acompanhar depois. Não equivale a auditoria editorial nem exige registro permanente de decisões. |
+| **0. Acompanhar o processamento de partidas em lote e tratar falhas** | **Input:** lote já enviado e identificável, referências dos arquivos/tentativas e lista de partidas acessível. Os estados serão consultados durante a tarefa; falha informada é condição local para a recuperação. **Plano 0:** `1 > (2 > 3) > 4`; repetir `2 > 3` para cada partida a consultar na sessão e após uma nova tentativa quando houver novo estado disponível. Se escolher 3.1, voltar à consulta em outra ocasião; não bloquear as demais partidas. **Feedback:** resultados encaminhados ou pendências identificadas. **Problema:** uma falha pode atrasar o lote, H16/H26. **Recomendação:** preservar os resultados e estados das outras partidas, R02/R05. |
+| **1. Identificar lote a acompanhar** | **Plano 1:** `1.1 > 1.2`. **Recomendação:** apoiar a conferência pelo usuário: registros associados às gravações corretas. **Problema:** arquivos e tentativas podem ser confundidos, H24/H26. **Recomendação:** identificação legível, RC02/RC07. |
+| 1.1. Abrir a lista de partidas enviadas | **Recomendação:** manter disponível como referência: lote enviado e lista acessível, precondição da sessão.  **Ação:** acessar o acompanhamento na interface proposta. **Recomendação:** apoiar a conferência pelo usuário: lista disponível. Se a lista inteira estiver inacessível, T03 não pode ser iniciada; essa indisponibilidade não prova falha do processamento. Não exige dashboard com métricas, H29. |
+| 1.2. Conferir partida e tentativa | **Ação:** relacionar nome/arquivo e identificador da tentativa, quando disponível, à gravação pretendida. **Recomendação:** apoiar a conferência pelo usuário: lote reconhecido. **Recomendação:** distinguir novo processamento do anterior sem exigir histórico permanente, RC10. |
+| **2. Compreender a situação de uma partida** | **Plano 2:** `2.1 > 2.2 > 2.3`. **Recomendação:** apoiar a conferência pelo usuário: caso de continuidade escolhido para aquela partida. |
+| 2.1. Consultar o estado da partida | **Recomendação:** manter disponível como referência: registro identificado.  **Ação:** acessar o estado disponível, por exemplo, na fila, processando, concluído ou falhou. **Recomendação:** apoiar a conferência pelo usuário: informação apresentada ou consulta indisponível. **Recomendação:** exibir apenas estados reais em texto, RC03; percentual e prazo somente se confiáveis. |
+| 2.2. Interpretar estado e disponibilidade | **Ação:** distinguir espera, resultados acessíveis e falha informada. Se a consulta estiver indisponível, reconhecer que o estado não pôde ser confirmado. **Recomendação:** apoiar a conferência pelo usuário: situação compreendida, inclusive quando incerta. **Problema:** demora não prova falha e conclusão não prova resultado editorialmente completo, H16/H26. |
+| 2.3. Escolher o encaminhamento | **Ação:** escolher 3.1 se ainda ativo ou sem informação suficiente; 3.2 se houver resultados acessíveis; 3.3 se houver falha informada ou falha de acesso aos resultados com orientação disponível. **Recomendação:** apoiar a conferência pelo usuário: decisão por partida. Em falha parcial, consultar os limites conhecidos em 3.3 antes de encaminhar somente os resultados que o sistema disponibilizar. |
+| **3. Dar continuidade conforme a situação** | **Plano 3:** `3.1 / 3.2 / 3.3`, conforme 2.3. **Recomendação:** apoiar a conferência pelo usuário: espera, acesso para revisão ou tratamento da falha. Uma falha parcial pode exigir novo ciclo para abrir resultados preservados; nunca presumir sua existência. |
+| 3.1. Aguardar e retomar outra atividade | **Ação:** adiar a nova consulta e continuar outro trabalho, se houver. **Recomendação:** apoiar a conferência pelo usuário: partida permanece pendente; consultar novamente por iniciativa do usuário ou após aviso disponível. **Problema:** vigilância contínua interrompe outras edições, H32. **Recomendação:** investigar meio de aviso; sem temporizador ou frequência de consulta presumidos. |
+| **3.2. Encaminhar resultados disponíveis à revisão** | **Plano 3.2:** `3.2.1 > 3.2.2 > 3.2.3`. Se o acesso falhar, escolher 3.3 no próximo ciclo. **Recomendação:** apoiar a conferência pelo usuário: acesso conferido, sem julgamento editorial dos cortes. |
+| 3.2.1. Abrir os resultados da partida | **Ação:** acessar os resultados vinculados à partida/tentativa. **Recomendação:** apoiar a conferência pelo usuário: lista apresentada ou falha de acesso informada. |
+| 3.2.2. Conferir acesso e limites informados | **Ação:** verificar se cortes/metadados estão acessíveis e ler indicação de resultado vazio, falha parcial ou partes não analisadas quando o backend fornecer essa informação. **Recomendação:** apoiar a conferência pelo usuário: condições para revisão conhecidas. Resultado vazio não significa ausência de lances relevantes, RC05. |
+| 3.2.3. Reconhecer o encaminhamento para T01/A04 | **Ação:** considerar a partida pronta para iniciar a revisão dos resultados acessíveis e manter eventuais lacunas como pendentes. **Recomendação:** apoiar a conferência pelo usuário: continuidade definida. É decisão humana; não exige botão para marcar o lote como concluído. |
+| **3.3. Tratar falha da partida** | **Plano 3.3:** `3.3.1 > 3.3.2 > 3.3.3 > 3.3.4`. **Recomendação:** apoiar a conferência pelo usuário: tentativa encaminhada ou pendência mantida. **Problema:** repetir indiscriminadamente pode gerar atraso e novo custo, H08/H16. |
+| 3.3.1. Ler o problema e a orientação disponível | **Recomendação:** manter disponível como referência: falha informada, partida e tentativa identificadas.  **Ação:** consultar causa conhecida, limites e próximo passo. **Recomendação:** apoiar a conferência pelo usuário: informação compreensível ou diagnóstico insuficiente reconhecido. **Recomendação:** evitar jargão e não inventar a causa, RC07/H38. |
+| 3.3.2. Avaliar a ação possível | **Ação:** distinguir entrada corrigível, nova tentativa orientada e ausência de recuperação segura; considerar prazo e eventual novo consumo de recursos. **Recomendação:** apoiar a conferência pelo usuário: condição de escolha identificada. Sem causa/orientação suficiente, manter pendência; falha persistente não justifica repetição automática. |
+| **3.3.3. Encaminhar recuperação ou pendência** | **Plano 3.3.3:** `3.3.3.1 / 3.3.3.2 / 3.3.3.3`. Escolher correção apenas para problema de entrada corrigível; nova tentativa apenas quando oferecida e orientada; nos demais casos, manter pendência. **Recomendação:** apoiar a conferência pelo usuário: ação escolhida para a partida afetada, preservando as outras. |
+| 3.3.3.1. Corrigir a entrada e reenviar a partida | **Ação:** selecionar arquivo corrigido/substituto, conferir a identificação e a validação e confirmar seu envio, se suportado. **Recomendação:** apoiar a conferência pelo usuário: novo envio aceito ou rejeição explicada. Não pressupõe continuar do ponto interrompido, RC02/RC03. |
+| 3.3.3.2. Confirmar nova tentativa orientada | **Ação:** solicitar nova tentativa para a partida afetada, quando disponível, conferindo o aviso de novo processamento/possível custo antes de confirmar. **Recomendação:** apoiar a conferência pelo usuário: solicitação aceita ou recusada. Valor monetário somente se calculável e pertinente; não duplicar o lote, H08/H16/RC10. |
+| 3.3.3.3. Manter pendência e buscar orientação | **Ação:** adiar a recuperação, conservar a referência da partida/tentativa e consultar ajuda ou suporte externo existente, se disponível. **Recomendação:** apoiar a conferência pelo usuário: pendência e próximo passo reconhecidos. Não cria serviço de suporte nem implica envio automático de mensagens. |
+| 3.3.4. Conferir o encaminhamento da falha | **Ação:** verificar confirmação da ação solicitada ou reconhecer que a pendência continua. **Recomendação:** apoiar a conferência pelo usuário: nova tentativa identificada para acompanhamento ou recuperação não realizada. Aceitação não é conclusão; falha persistente exige orientação, não ciclo ilimitado de novas tentativas. |
+| **4. Consolidar resultados e pendências do lote** | **Plano 4:** `4.1 > 4.2`. **Recomendação:** apoiar a conferência pelo usuário: fim da sessão com continuidade explícita, mesmo que existam partidas em andamento. |
+| 4.1. Conferir a preservação das demais partidas | **Ação:** consultar se os resultados/estados das outras partidas continuam acessíveis; se indisponíveis, reconhecer a pendência. **Recomendação:** apoiar a conferência pelo usuário: preservação conferida ou problema adicional identificado. A interface precisa apoiar essa independência, R02/R05. |
+| 4.2. Identificar pendências e próxima consulta | **Ação:** distinguir partidas encaminhadas para revisão, ainda ativas e com recuperação pendente. **Recomendação:** apoiar a conferência pelo usuário: usuário sabe o que pode revisar e o que deve acompanhar depois. Não equivale a auditoria editorial nem exige registro permanente de decisões. |
 
 ### Verificação do HTA
 
@@ -562,81 +683,80 @@ O objetivo 0 expressa a continuidade do trabalho. Os ramos 1–4 cobrem identifi
 **Recorte:** mesmo uso proposto de P01/R02, aplicável a P03/R05; lote já enviado, com espera, resultados acessíveis e falhas.\
 **Abordagem:** modelo GOMS hierárquico conforme os slides 3–13 de **CC8122-GOMS-CTT**. Não se estima tempo por KLM: espera assíncrona, diagnóstico e alternância de trabalhos ainda não têm dados empíricos.
 
-### Diagrama GOMS
-
-![GOMS T03 — metas, métodos alternativos e regras de seleção](../assets/05_tarefas/goms_t03.svg)
-
-*Figura 4 — GOMS de T03, por Giovanni Chahin Morassi. Visão das metas, métodos e regras de seleção; os operadores completos aparecem no modelo textual. [SVG editável](../assets/05_tarefas/goms_t03.svg).*
+[H] **Precondições:** lote já enviado e identificável, com lista acessível. Uma consulta por iniciativa do usuário ou motivada por aviso disponível inicia a sessão. Metas 1, 2 e 4 têm execução direta; as alternativas de continuidade e recuperação ficam na meta 3.
 
 ### Modelo hierárquico de metas, métodos e operadores
 
 ```text
 GOAL 0: acompanhar o lote e definir a continuidade das partidas
-  METHOD 0.A: acompanhar uma sessão do lote já enviado
-  (SEL. RULE: lote identificável e lista acessível; consulta iniciada pelo usuário ou aviso)
-    GOAL 1: identificar lote
-      METHOD 1.A: consultar registros das partidas enviadas
-      (SEL. RULE: lista de partidas acessível)
-        OP. 1.A.1: abrir a lista de partidas enviadas
-        OP. 1.A.2: ler nomes e referências das tentativas disponíveis
-        OP. 1.A.3: relacionar os registros ao lote pretendido
-    GOAL 2: compreender a situação de uma partida
-      METHOD 2.A: consultar estado e escolher encaminhamento
-      (SEL. RULE: partida identificada; repetir por partida e em consultas posteriores)
-        OP. 2.A.1: selecionar a partida a consultar
-        OP. 2.A.2: acessar a informação de estado disponível
-        OP. 2.A.3: ler o estado ou a mensagem de consulta indisponível
-        OP. 2.A.4: distinguir espera, resultados acessíveis e falha informada
-        OP. 2.A.5: escolher encaminhamento conforme a informação obtida
-    GOAL 3: dar continuidade à partida
-      METHOD 3.A: adiar a consulta e aguardar
-      (SEL. RULE: partida ainda ativa ou estado indisponível sem ação segura)
-        OP. 3.A.1: reconhecer a partida como pendente
-        OP. 3.A.2: decidir retomar outro trabalho ou aguardar fora do acompanhamento
-        OP. 3.A.3: deixar a consulta para outra ocasião ou aviso disponível
-      METHOD 3.B: encaminhar resultados para revisão
-      (SEL. RULE: resultados acessíveis; em falha parcial, limites já consultados)
-        OP. 3.B.1: abrir os resultados da partida identificada
-        OP. 3.B.2: conferir acesso aos cortes/metadados e limites informados
-        OP. 3.B.3: reconhecer continuidade em T01/A04 e eventuais lacunas pendentes
-      METHOD 3.C: tratar falha informada
-      (SEL. RULE: falha de entrada, processamento ou acesso informada)
-        OP. 3.C.1: ler a causa conhecida e a orientação disponível
-        OP. 3.C.2: avaliar correção, repetição orientada ou manutenção da pendência
-        GOAL 3.C.3: encaminhar recuperação ou pendência
-          METHOD 3.C.3.A: corrigir entrada e reenviar a partida afetada
-          (SEL. RULE: problema de entrada corrigível; novo envio suportado e desejado)
-            OP. 3.C.3.A.1: selecionar arquivo corrigido ou substituto
-            OP. 3.C.3.A.2: conferir partida e resultado da validação disponível
-            OP. 3.C.3.A.3: confirmar o envio somente dessa partida
-          METHOD 3.C.3.B: confirmar nova tentativa orientada
-          (SEL. RULE: entrada adequada; nova tentativa oferecida e orientada;
-           usuário aceita novo processamento após conferir suas implicações)
-            OP. 3.C.3.B.1: acessar a ação de nova tentativa da partida afetada
-            OP. 3.C.3.B.2: ler o aviso de novo processamento e possível custo
-            OP. 3.C.3.B.3: decidir confirmar a tentativa
-            OP. 3.C.3.B.4: acionar a confirmação
-          METHOD 3.C.3.C: manter pendência e buscar orientação
-          (SEL. RULE: diagnóstico insuficiente, falha persistente, ação indisponível
-           ou decisão de adiar a recuperação)
-            OP. 3.C.3.C.1: conservar a referência da partida/tentativa
-            OP. 3.C.3.C.2: identificar orientação ou suporte externo, se existente
-            OP. 3.C.3.C.3: reconhecer a recuperação como pendente
-        OP. 3.C.4: conferir aceitação/rejeição da ação ou permanência da pendência
-    GOAL 4: consolidar resultados e pendências
-      METHOD 4.A: conferir o lote antes de encerrar a sessão
-      (SEL. RULE: partidas consultadas com encaminhamento definido, inclusive estado incerto)
-        OP. 4.A.1: consultar as demais partidas e resultados já disponíveis
-        OP. 4.A.2: verificar preservação ou identificar indisponibilidade adicional
-        OP. 4.A.3: distinguir partidas para revisão e partidas ainda pendentes
-        OP. 4.A.4: decidir quais pendências consultar depois e encerrar a sessão
+  GOAL 1: identificar lote
+    OP. 1.1: abrir a lista de partidas enviadas
+    OP. 1.2: ler nomes e referências das tentativas disponíveis
+    OP. 1.3: relacionar os registros ao lote pretendido
+    OP. 1.4: conferir que as partidas e tentativas pertencem ao lote pretendido
+  GOAL 2: compreender a situação de uma partida
+    OP. 2.1: selecionar a partida a consultar
+    OP. 2.2: acessar a informação de estado disponível
+    OP. 2.3: ler a resposta da consulta, inclusive quando indicar indisponibilidade
+    OP. 2.4: distinguir espera, resultados acessíveis e falha informada
+    OP. 2.5: escolher encaminhamento conforme a informação obtida
+    OP. 2.6: conferir que o encaminhamento usa a informação efetivamente disponível
+  GOAL 3: dar continuidade à partida
+    METHOD 3.A: adiar a consulta e aguardar
+    (SEL. RULE: partida ainda ativa ou estado indisponível sem ação segura)
+      OP. 3.A.1: reconhecer a partida como pendente
+      OP. 3.A.2: definir a próxima ocasião de consulta, sem vigiar continuamente
+      OP. 3.A.3: deixar o acompanhamento para continuar a atividade externa
+      OP. 3.A.4: conferir que a partida continua pendente para consulta posterior
+    METHOD 3.B: encaminhar resultados para revisão
+    (SEL. RULE: resultados acessíveis; em falha parcial, limites já consultados)
+      OP. 3.B.1: abrir os resultados da partida identificada
+      OP. 3.B.2: conferir acesso aos cortes/metadados e limites informados
+      OP. 3.B.3: reconhecer continuidade em T01/A04 e eventuais lacunas pendentes
+    METHOD 3.C: tratar falha informada
+    (SEL. RULE: falha de entrada, processamento ou acesso informada)
+      OP. 3.C.1: ler a causa conhecida e a orientação disponível
+      OP. 3.C.2: avaliar correção, repetição orientada ou manutenção da pendência
+      GOAL 3.C.3: encaminhar recuperação ou pendência
+        METHOD 3.C.3.A: corrigir entrada e reenviar a partida afetada
+        (SEL. RULE: problema de entrada corrigível; novo envio suportado e desejado)
+          OP. 3.C.3.A.1: selecionar arquivo corrigido ou substituto
+          OP. 3.C.3.A.2: conferir partida e resultado da validação disponível
+          OP. 3.C.3.A.3: confirmar o envio somente dessa partida
+          OP. 3.C.3.A.4: verificar a resposta de aceitação ou rejeição do novo envio
+        METHOD 3.C.3.B: confirmar nova tentativa orientada
+        (SEL. RULE: entrada adequada; nova tentativa oferecida e orientada;
+         usuário aceita novo processamento após conferir suas implicações)
+          OP. 3.C.3.B.1: acessar a ação de nova tentativa da partida afetada
+          OP. 3.C.3.B.2: ler o aviso de novo processamento e possível custo
+          OP. 3.C.3.B.3: decidir confirmar a tentativa
+          OP. 3.C.3.B.4: acionar a confirmação
+          OP. 3.C.3.B.5: verificar a resposta de aceitação ou rejeição da nova tentativa
+        METHOD 3.C.3.C: manter pendência e buscar orientação
+        (SEL. RULE: diagnóstico insuficiente, falha persistente, ação indisponível
+         ou decisão de adiar a recuperação)
+          OP. 3.C.3.C.1: conservar a referência da partida/tentativa
+          OP. 3.C.3.C.2: identificar orientação ou suporte externo, se existente
+          OP. 3.C.3.C.3: conferir que a recuperação continua pendente com próximo passo reconhecido
+      OP. 3.C.4: conferir o desfecho comum: aceitação/rejeição em A e B, ou pendência em C
+  GOAL 4: consolidar resultados e pendências
+    OP. 4.1: consultar as demais partidas e resultados já disponíveis
+    OP. 4.2: verificar preservação ou identificar indisponibilidade adicional
+    OP. 4.3: distinguir partidas para revisão e partidas ainda pendentes
+    OP. 4.4: decidir quais pendências consultar depois
+    OP. 4.5: conferir quais partidas estão encaminhadas e quais continuam pendentes
+    OP. 4.6: encerrar a sessão de consulta
+    OP. 4.7: reconhecer o encerramento da consulta sem presumir conclusão do lote
+  OP. 0.1: verificar que o desfecho da sessão distingue resultados acessíveis e pendências
 ```
 
 **Regras de seleção:** os métodos 3.A–3.C atingem a meta de definir a continuidade de uma partida em situações diferentes. 3.C.3.A–C atingem a meta de encaminhar uma falha por correção, repetição orientada ou manutenção da pendência. Se a entrada precisar de correção, não repetir o mesmo arquivo sem ajuste; se a falha persistir ou faltar orientação, adotar C. Se o usuário desistir de confirmar uma tentativa, adotar C. Consulta de estado indisponível não prova falha de execução: manter pendência por 3.A e consolidar em 4. Acesso à lista de partidas é precondição para iniciar o modelo. Nenhum método garante que o backend conclua com sucesso.
 
+[H] **Verificação da recuperação:** 3.C.4 é comum aos três caminhos. Tanto o reenvio A quanto a nova tentativa B exigem ler a resposta e reconhecer aceitação ou rejeição; acionar a confirmação não demonstra aceitação. C reconhece a pendência. Antes de encerrar em 4.6, o usuário confere em 4.5 o que foi encaminhado e o que ficou pendente; o modelo não exige uma tela adicional de resumo.
+
 **Correspondência com HTA:** metas 1, 2 e 4 mantêm os mesmos ramos; 3.A corresponde a 3.1, 3.B a 3.2 e 3.C a 3.3. A meta 3.C.3 corresponde ao objetivo 3.3.3 do HTA. Se o acesso falhar durante 3.B, não executar 3.B.3: iniciar novo ciclo com 3.C, conforme a condição de 3.2 no HTA. Repetir as metas 2–3 por partida; após nova tentativa aceita, aguardar informação disponível antes de repetir. Encerrar a sessão com pendências explícitas em 4, sem repetição ilimitada de tentativas.
 
-**Operadores:** ler e conferir são perceptivos; selecionar, abrir e confirmar são ações externas; distinguir estados, avaliar ações e decidir continuidade são cognitivos. O processamento remoto e sua espera não são operadores de digitação. O diagrama resume a hierarquia; a sequência detalhada e suas condições são as do modelo textual. Na aplicação a P03, outra atividade pode ser estudo ou tarefa doméstica, sem pressupor edição profissional nem conhecimento de IA, H37/H38.
+**Operadores:** ler e conferir são perceptivos; selecionar, abrir e confirmar são ações externas; distinguir estados, avaliar ações e decidir continuidade são cognitivos. O processamento remoto e sua espera não são operadores de digitação. O modelo textual é a referência para a sequência e suas condições. Na aplicação a P03, outra atividade pode ser estudo ou tarefa doméstica, sem pressupor edição profissional nem conhecimento de IA, H37/H38.
 
 ---
 
@@ -648,15 +768,46 @@ GOAL 0: acompanhar o lote e definir a continuidade das partidas
 
 ### Diagrama CTT
 
-![CTT T03 — árvore com tipos de tarefas e relações temporais entre irmãs](../assets/05_tarefas/ctt_t03.svg)
+![CTT T03 — árvore com tipos de tarefas e relações temporais entre irmãs](../assets/05_tarefas/ctt_t03_visao_geral.svg)
 
 *Figura 5 — CTT de T03, por Giovanni Chahin Morassi. Visão geral e expansões dos ramos; ícones distinguem tarefas abstratas, de usuário, interativas e de sistema. [SVG editável](../assets/05_tarefas/ctt_t03.svg).*
 
-As ligações descendentes indicam decomposição; relações horizontais ligam tarefas irmãs. Os IDs seguem o HTA. `C` agrupa o ciclo por partida; `S` explicita a resposta automática à consulta, implícita na operação 2.1 do HTA. A escolha das alternativas é condicionada pela avaliação em 2.3 e 3.3.2; não equivale a um fluxograma com setas “sim/não”.
+[H] A visão geral apresenta os três primeiros painéis. Os detalhamentos abaixo são recortes da mesma árvore, com IDs e relações preservados; o SVG completo reúne todos os painéis e a legenda.
+
+<details>
+<summary>T03: detalhamento 1, C, 1, 2</summary>
+
+![CTT T03, detalhamento 1](../assets/05_tarefas/ctt_t03_detalhe_01.svg)
+
+</details>
+
+<details>
+<summary>T03: detalhamento 2, 3, 3.2, A</summary>
+
+![CTT T03, detalhamento 2](../assets/05_tarefas/ctt_t03_detalhe_02.svg)
+
+</details>
+
+<details>
+<summary>T03: detalhamento 3, 3.3, 3.3.3, 4</summary>
+
+![CTT T03, detalhamento 3](../assets/05_tarefas/ctt_t03_detalhe_03.svg)
+
+</details>
+
+<details>
+<summary>T03: detalhamento 4, Legenda e leitura</summary>
+
+![CTT T03, detalhamento 4](../assets/05_tarefas/ctt_t03_detalhe_04.svg)
+
+</details>
+
+
+As ligações descendentes indicam decomposição; relações horizontais ligam tarefas irmãs. Os IDs numéricos seguem o HTA. `M` explicita a motivação externa e `U` agrupa a sessão de uso. `C` agrupa o ciclo por partida; `S` explicita a resposta automática à consulta, implícita na operação 2.1 do HTA. A escolha das alternativas é condicionada pela avaliação em 2.3 e 3.3.2; não equivale a um fluxograma com setas “sim/não”.
 
 ### Leitura da árvore e condições
 
-1. **Sessão:** `1 []>> V []>> 4`, com `V = (C* [> E)` e `C = (2 []>> 3)`. E encerra as consultas com encaminhamentos definidos para esta sessão ou decisão de adiar, explicitando partidas não consultadas e pendências. Encerrar E habilita 4 sem exigir conclusão de todo o lote. Nova informação motiva outra sessão; não dispara processamento automático.
+1. **Sessão:** `M []>> U`, com `U = (1 []>> V []>> 4)`. [H] M representa o usuário interrompendo outra atividade e decidindo consultar o lote, por necessidade própria ou após aviso disponível; o meio de aviso continua em H32. M antecede a abertura da lista em 1.1 e transmite a referência do lote a U, com `V = (C* [> E)` e `C = (2 []>> 3)`. E encerra as consultas com encaminhamentos definidos para esta sessão ou decisão de adiar, explicitando partidas não consultadas e pendências. Encerrar E habilita 4 sem exigir conclusão de todo o lote. Nova informação motiva outra sessão; não dispara processamento automático.
 2. **Identificação (1):** `1.1 []>> 1.2`. Lote já enviado e lista acessível são precondições; a indisponibilidade da lista não prova falha da execução.
 3. **Compreensão (2):** `2.1 []>> S []>> 2.2 []>> 2.3`. S devolve estado real ou informa indisponibilidade; o usuário interpreta e escolhe o encaminhamento. S não representa toda a inferência.
 4. **Continuidade (3):** `3.1 [] 3.2 [] 3.3`: aguardar/adiar quando ativo ou sem informação segura; conferir acesso quando há resultados; tratar falha informada. Em falha parcial, consultar ocorrência e limites antes de novo C para os resultados preservados, se acessíveis.
@@ -679,8 +830,8 @@ Não se usaram `|||`, `|[]|`, `|=|` ou `|>`: o processamento remoto pode continu
 
 | Símbolo no diagrama | Tipo nos slides | Aplicação no modelo |
 |---|---|---|
-| Nuvem | Abstrata | Objetivo global, V/C, ramos 1–4 e agrupamentos 3.2/A, 3.3 e 3.3.3. |
-| Pessoa | Usuário | Interpretar estado (2.2), escolher encaminhamento (2.3), aguardar/continuar outra atividade (3.1), reconhecer passagem à revisão (3.2.3), avaliar recuperação (3.3.2), manter pendência (3.3.3.3), identificar pendências (4.2), encerrar consultas (E) e reconhecer acesso falho (F). |
+| Nuvem | Abstrata | Objetivo global, U/V/C, ramos 1–4 e agrupamentos 3.2/A, 3.3 e 3.3.3. |
+| Pessoa | Usuário | Decidir consultar após interromper outra atividade (M), interpretar estado (2.2), escolher encaminhamento (2.3), aguardar/continuar outra atividade (3.1), reconhecer passagem à revisão (3.2.3), avaliar recuperação (3.3.2), manter pendência (3.3.3.3), identificar pendências (4.2), encerrar consultas (E) e reconhecer acesso falho (F). |
 | Pessoa e computador, com seta dupla | Interativa | Abrir/conferir lote, consultar estado (2.1), abrir/conferir resultados (3.2.1–2), ler orientação (3.3.1), corrigir/reenviar ou confirmar nova tentativa (3.3.3.1–2), conferir encaminhamento (3.3.4) e consultar demais partidas (4.1). |
 | Computador | Sistema | Disponibilizar a resposta à consulta (S), com estado ou indisponibilidade, sem novo comando humano. |
 
@@ -698,6 +849,24 @@ Os três modelos aprofundam uma necessidade já registrada e permanecem **propos
 
 ---
 
+## Correspondência entre escolhas e sequências dos modelos
+
+[H] Nos HTAs, `/` representa alternativas condicionadas; os GOMS conservam métodos e regras nessas escolhas. `>` representa uma sequência, descrita diretamente no GOMS quando há um único caminho. Os planos HTA continuam necessários nos nós decompostos, inclusive nas sequências. `+` indicaria paralelismo, mas não é usado nestes recortes.
+
+| Tarefa | Escolhas no HTA | Métodos no GOMS | Relações correspondentes no CTT |
+|---|---|---|---|
+| T01 | Destino 3.1/3.2/3.3/3.4; corte externo condicionado em 3.3; download somente com seleção não vazia | 3.A–D; 3.C.5.A/B; 4.A/B | F/P distinguem decisão direta e conferência; D escolhe corte externo ou dispensa; W escolhe download ou seleção vazia. M antecede a sessão e 5 trata a retomada. |
+| T02 | Chancelar/devolver em 3; rotina/contingência; comunicação por chat ou na ilha | A.R/A.C; 2.A/B; 3.A/B; comunicação 3.A.2.A/B e 3.B.3.A/B | V distingue encerramento/contingência; D distingue as deliberações; 3.3.A/B distinguem chat e comunicação presencial. A inspeção conjunta refina 2 no GOMS, sem mudar a avaliação requerida pelo HTA/CTT. |
+| T03 | Aguardar, acessar ou recuperar em 3; recuperação 3.3.3.1/2/3 | 3.A–C; 3.C.3.A–C | 3 e 3.3.3 usam escolha; S informa estado ou indisponibilidade. 3.3.4 confere o desfecho dos dois pedidos de recuperação e da manutenção da pendência. |
+
+[H] As verificações finais reconhecem o resultado efetivo, inclusive rejeição e pendência. Nenhum modelo transforma confirmação de comando em sucesso presumido. O envio inicial permanece precondição, e frequência, criticidade e condições de trabalho permanecem hipóteses.
+
+## Continuidade da investigação
+
+[?] Na próxima investigação, verificar com P01/P03 quais informações permitem reconhecer uma revisão suficiente, recuperar contexto após interrupção e decidir entre aguardar, tentar novamente ou manter pendência. Com P02, verificar identificação/timecodes/contexto recebidos e referência necessária para pedir ajustes fora da interface. Para T03, verificar reconhecimento dos estados, causas compreensíveis, confirmação de aceitação dos pedidos e preservação das demais partidas. H10/H16/H25/H26/H32/H35/H37/H40/H41 continuam abertas. O parecer orienta esses critérios; sua aplicação documental não valida o protótipo nem amplia o escopo da interface de Arnaldo.
+
+---
+
 ## Conferência dos percursos após a revisão de coerência
 
 Verificação documental de correspondência entre CTT, HTA e GOMS; não é simulação em CTTE nem teste com usuários. E/J/K/X/Z/F são refinamentos de decisões já presentes, com significado local a cada tarefa.
@@ -706,7 +875,7 @@ Verificação documental de correspondência entre CTT, HTA e GOMS; não é simu
 |---|---|---|
 | T01 sem candidatos e sem omissão verificável | `1 > V(E) > 4.1 > W(Z) > 4.4` | Reconhecer seleção vazia/pendências sem examinar candidato ou pedir download; HTA 1/4 e GOMS 4.B. |
 | T01 revisou candidatos, mas não selecionou cortes gerados | `V(C* [> E) > 4.1 > W(Z) > 4.4` | Seleção vazia após decisões; cortes externos permanecem separados; HTA plano 4 e GOMS 4.B. |
-| T01 esclareceu dúvida no original | `L(2 > 3(P(3.3 > F)))` | Nova decisão 3.1/3.2/3.4 com o resultado da conferência; HTA plano 3 e GOMS 3.C.6. |
+| T01 esclareceu dúvida no original | `L(2 > 3(P(3.3 > F)))` | Nova decisão 3.1/3.2/3.4 com o resultado da conferência; HTA plano 3 e GOMS 3.C.7. |
 | T01 suspeita de omissão sem candidato gerado | `C(O(3.3 > X))` | Corte externo conferido ou pendência, sem inclusão de arquivo inexistente; HTA 3.3/3.3.4 e GOMS 3.C. |
 | T03 falhou ao abrir resultados | `3.2.1 > 3.2.2 > A(F)`; depois novo `C(2 > 3.3)` ou `E > 4` | Não executa 3.2.3; recuperação orientada ou pendência; HTA 3.2 e GOMS regra de 3.B. |
 | Sessão encerrada com pendências | T01/T03: `V(C* [> E) > 4`; T02: `C* [> V(E)` | Término explícito com não vistos/não consultados/nova versão aguardada; não declara cobertura ou chancela completa. |
@@ -738,3 +907,4 @@ Na tabela, `>` abrevia a ordem de leitura do percurso; as relações formais e a
 | 12/10/2026 | 1.2 | Preenchimento de T03, Acompanhar o processamento de partidas em lote e tratar falhas: HTA com planos e tabela, GOMS hierárquico e diagrama, CTT com tipos e relações entre irmãs. P01 como referência principal, aplicação a P03, estados e recuperação condicionados à viabilidade técnica. Criados os SVGs de T03 e atualizadas R02/R05 e a ponte de uso proposto na Entrega 4. Delimitada a passagem para T01/A04; T01 permanece pendente. | Giovanni Chahin Morassi |
 | 13/10/2026 | 1.3 | Preenchimento de T01 por Pedro: HTA com planos/tabela, GOMS hierárquico e CTT com suspensão/retomada; três SVGs. R01/R04 vinculadas à revisão proposta, correção externa e pendências. Corrigida autoria/matrícula na seleção; os três modelos das três tarefas estão preenchidos, sem validação empírica. | Pedro Alexandre Custódio Silva |
 | 13/10/2026 | 1.4 | Aplicação de AC-063 a AC-068 da análise das 15:11: CTT com saídas e alternativas explícitas, retorno após conferência externa e falha de acesso; percursos conferidos contra HTA/GOMS; frequência e criticidade de T02 como hipóteses; âncora da seção 0.2 corrigida. Jornada de P01, implicações C02/C03, README e impacto de H37 sincronizados. Escopo e autoria dos modelos preservados, sem validação empírica. | Equipe 16, revisão assistida pelo Codex a pedido da equipe |
+| 27/10/2026 | 1.5 | [F] Aplicação do parecer da Entrega 5 e dos comentários adicionais em T01/T02/T03: Input/Feedback somente na tarefa 0 dos HTAs; GOMS textual, precondições distintas de regras e meta 0 sem método; operadores separados e verificação dos resultados; motivação externa nos CTTs de T01/T03; comunicação por chat/presencial em T02; rótulos e navegação por recortes SVG; correspondência entre modelos e pontos de investigação. Hipóteses e escopo preservados. | Lucas Roberto Boccia dos Santos, com assistência do Codex e autorização para revisar as três tarefas |

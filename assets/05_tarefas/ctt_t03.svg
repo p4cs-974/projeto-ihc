@@ -1,11 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="4891" viewBox="0 0 1440 4891" role="img" aria-labelledby="title desc">
-<title id="title">CTT T03 — Acompanhamento, falhas e consolidação</title><desc id="desc">Árvore com painéis de decomposição, tipos de tarefas, alternativas condicionadas e encerramentos explícitos. Revisão de AC-063. Giovanni Chahin Morassi · 22.123.025-3 · P01; aplicação a P03. Modelo hipotético a validar.</desc>
-<rect width="1440" height="4891" fill="white"/><g font-family="DejaVu Sans, Arial, sans-serif" fill="#222"><text x="40" y="40" font-size="25" text-anchor="start" font-weight="700">CTT — T03: Acompanhamento, falhas e consolidação</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="5306" viewBox="0 0 1440 5306" role="img" aria-labelledby="title desc">
+<title id="title">CTT T03 — Acompanhamento, falhas e consolidação</title><desc id="desc">Árvore com painéis de decomposição, tipos de tarefas, alternativas condicionadas e encerramentos explícitos. Motivação externa M antes da sessão U; condições e encerramentos explícitos. Giovanni Chahin Morassi · 22.123.025-3 · P01; aplicação a P03. Modelo hipotético a validar.</desc>
+<rect width="1440" height="5306" fill="white"/><g font-family="DejaVu Sans, Arial, sans-serif" fill="#222"><text x="40" y="40" font-size="25" text-anchor="start" font-weight="700">CTT — T03: Acompanhamento, falhas e consolidação</text>
 <text x="40" y="73" font-size="16" text-anchor="start" font-weight="400">Giovanni Chahin Morassi · 22.123.025-3 · P01; aplicação a P03 · [H]</text>
+<path d="M40 110 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="139" font-size="18" font-weight="700">Motivação externa antes da sessão de uso [H]</text>
+<path transform="translate(677,163)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="720" y="237" font-size="16" text-anchor="middle">T03. Motivação e sessão de uso</text>
+<path d="M720 263 L380 310 M720 263 L1060 310" fill="none" stroke="#333" stroke-width="1.6"/>
+<circle cx="380" cy="320" r="10" fill="white" stroke="#333" stroke-width="1.8"/>
+<path d="M361 366 V343 Q361 333 380 333 Q399 333 399 343 V366 Z M371 349 V366 M389 349 V366" fill="none" stroke="#333" stroke-width="1.6"/>
+<path transform="translate(1017,310)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
+<text x="380" y="389" font-size="16" text-anchor="middle">M. Decidir consultar ao interromper outra</text>
+<text x="380" y="410" font-size="16" text-anchor="middle">atividade</text>
+<path d="M437 340 H1003" fill="none" stroke="#333" stroke-width="1.6"/>
+<rect x="686" y="323" width="68" height="32" fill="white"/>
+<text x="720" y="345" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
+<text x="1060" y="389" font-size="16" text-anchor="middle">U. Sessão de uso da interface</text>
+<text x="40" y="465" font-size="15">M é ação do usuário fora da interface: interromper outra atividade e decidir consultar, conforme H32/H37.</text>
+<text x="40" y="486" font-size="15">M []&gt;&gt; U: a decisão externa transmite a partida/finalidade à consulta; U é detalhada nos painéis seguintes.</text>
+<g transform="translate(0,415)">
 <path d="M40 110 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="139" font-size="18" text-anchor="start" font-weight="700">Sessão — identificar, consultar e consolidar</text>
 <path transform="translate(677,163)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<text x="720" y="237" font-size="16" text-anchor="middle" font-weight="400">T03. Acompanhar partidas e tratar falhas</text>
+<text x="720" y="237" font-size="16" text-anchor="middle" font-weight="400">U. Sessão de uso da interface</text>
 <path d="M720 263 L266.66666666666663 310" fill="none" stroke="#333" stroke-width="1.6"/>
 <path transform="translate(223.66666666666663,310)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
 <path d="M720 263 L720.0 310" fill="none" stroke="#333" stroke-width="1.6"/>
@@ -34,7 +51,8 @@
 <path d="M437.0 734 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="686.0" y="717" width="68" height="32" fill="white"/>
 <text x="720.0" y="739" font-size="18" text-anchor="middle" font-weight="700">[&gt;</text>
-<text x="1060.0" y="783" font-size="16" text-anchor="middle" font-weight="400">E. Encerrar consultas e reconhecer pendências</text>
+<text x="1060.0" y="783" font-size="16" text-anchor="middle" font-weight="400">E. Encerrar consultas e reconhecer</text>
+<text x="1060.0" y="804" font-size="16" text-anchor="middle" font-weight="400">pendências</text>
 <text x="40" y="873" font-size="15" text-anchor="start" font-weight="400">E: encaminhamentos definidos para esta sessão ou decisão de adiar; registra o que não foi consultado.</text>
 <text x="40" y="894" font-size="15" text-anchor="start" font-weight="400">Pode encerrar sem aguardar o lote inteiro. Novo estado motiva outra sessão; não há reprocessamento automático.</text>
 <path d="M40 940 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
@@ -115,7 +133,8 @@
 <path transform="translate(677.0,2322)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
 <path d="M720 2275 L1173.3333333333333 2322" fill="none" stroke="#333" stroke-width="1.6"/>
 <path transform="translate(1130.3333333333333,2322)" d="M17 46 C-1 46 -3 30 7 24 C0 10 13 2 23 8 C28 -3 43 -1 47 7 C58 -3 74 3 74 14 C89 13 92 31 80 37 C84 51 67 58 58 49 C48 60 31 58 28 49 C23 53 18 51 17 46 Z" fill="white" stroke="#333" stroke-width="1.8"/>
-<text x="266.66666666666663" y="2401" font-size="16" text-anchor="middle" font-weight="400">3.1. Adiar consulta e retomar outra atividade</text>
+<text x="266.66666666666663" y="2401" font-size="16" text-anchor="middle" font-weight="400">3.1. Adiar consulta e retomar outra</text>
+<text x="266.66666666666663" y="2422" font-size="16" text-anchor="middle" font-weight="400">atividade</text>
 <path d="M323.66666666666663 2352 H663.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="459.3333333333333" y="2335" width="68" height="32" fill="white"/>
 <text x="493.3333333333333" y="2357" font-size="18" text-anchor="middle" font-weight="700">[]</text>
@@ -166,7 +185,8 @@
 <path d="M437.0 3161 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="686.0" y="3144" width="68" height="32" fill="white"/>
 <text x="720.0" y="3166" font-size="18" text-anchor="middle" font-weight="700">[]</text>
-<text x="1060.0" y="3210" font-size="16" text-anchor="middle" font-weight="400">F. Reconhecer acesso falho e manter pendência</text>
+<text x="1060.0" y="3210" font-size="16" text-anchor="middle" font-weight="400">F. Reconhecer acesso falho e manter</text>
+<text x="1060.0" y="3231" font-size="16" text-anchor="middle" font-weight="400">pendência</text>
 <text x="40" y="3300" font-size="15" text-anchor="start" font-weight="400">3.2.3 só com acesso conferido; F só com falha de acesso. F conclui esse ciclo sem declarar resultados prontos.</text>
 <text x="40" y="3321" font-size="15" text-anchor="start" font-weight="400">Após F, novo C pode escolher 3.3; se não houver ação segura, manter pendência e encerrar em E.</text>
 <path d="M40 3367 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
@@ -230,7 +250,8 @@
 <path d="M777.0 3991 H1116.3333333333333" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="912.6666666666666" y="3974" width="68" height="32" fill="white"/>
 <text x="946.6666666666666" y="3996" font-size="18" text-anchor="middle" font-weight="700">[]</text>
-<text x="1173.3333333333333" y="4040" font-size="16" text-anchor="middle" font-weight="400">3.3.3.3. Manter pendência e buscar orientação</text>
+<text x="1173.3333333333333" y="4040" font-size="16" text-anchor="middle" font-weight="400">3.3.3.3. Manter pendência e buscar</text>
+<text x="1173.3333333333333" y="4061" font-size="16" text-anchor="middle" font-weight="400">orientação</text>
 <text x="40" y="4130" font-size="15" text-anchor="start" font-weight="400">Reenvio exige entrada corrigível e suporte; repetição exige orientação/aceitação; nos demais casos, pendência.</text>
 <path d="M40 4176 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="4205" font-size="18" text-anchor="start" font-weight="700">4 — consolidar mesmo com partidas ainda ativas</text>
@@ -249,7 +270,8 @@
 <path d="M437.0 4406 H1003.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <rect x="686.0" y="4389" width="68" height="32" fill="white"/>
 <text x="720.0" y="4411" font-size="18" text-anchor="middle" font-weight="700">[]&gt;&gt;</text>
-<text x="1060.0" y="4455" font-size="16" text-anchor="middle" font-weight="400">4.2. Identificar pendências e próxima consulta</text>
+<text x="1060.0" y="4455" font-size="16" text-anchor="middle" font-weight="400">4.2. Identificar pendências e próxima</text>
+<text x="1060.0" y="4476" font-size="16" text-anchor="middle" font-weight="400">consulta</text>
 <text x="40" y="4545" font-size="15" text-anchor="start" font-weight="400">Falha de uma partida não encerra as outras; tentativa aceita não comprova processamento concluído.</text>
 <path d="M40 4591 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
 <text x="40" y="4621" font-size="18" text-anchor="start" font-weight="700">Legenda e leitura</text>
@@ -270,4 +292,4 @@
 <text x="40" y="4771" font-size="15" text-anchor="start" font-weight="400">Painéis expandem nós da mesma árvore; repetir um ID no detalhamento é uma referência ao mesmo objetivo.</text>
 <text x="40" y="4795" font-size="15" text-anchor="start" font-weight="400">E encerra consultas e F reconhece falha de acesso; são decisões humanas, sem novos botões.</text>
 <text x="40" y="4819" font-size="15" text-anchor="start" font-weight="400">[]&gt;&gt; passagem de informação; &gt;&gt; sequência; [] escolha; [&gt; desativação; |&gt; suspensão/retomada; * iteração.</text>
-<text x="40" y="4843" font-size="15" text-anchor="start" font-weight="400">Uma resposta técnica pode informar falha. Concluir uma interação não comprova obtenção nem aprovação.</text></g></svg>
+<text x="40" y="4843" font-size="15" text-anchor="start" font-weight="400">Uma resposta técnica pode informar falha. Concluir uma interação não comprova obtenção nem aprovação.</text></g></g></svg>

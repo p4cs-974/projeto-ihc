@@ -461,6 +461,8 @@ O Cap se aproxima do nosso problema quando transforma uma captura em algo que o 
 
 ### Análise C06 — WSC Sports
 
+**OBS: As análises dos softwares WSC Sports e Magnifi, realizadas por Lucas Roberto, não possuem imagens reais das interfaces dos softwares pois o modelo de negócios das empresas por trás destas soluções não permite nenhuma divulgação de imagens do software além das previews comerciais disponibilizadas em seus websites... Isto foi validado com o professor em sala de aula, que alegou que não há necessidade de alterar, corrigir ou adicionar novos softwares para análise**
+
 **Autor(a):** Lucas Roberto Boccia dos Santos — 22.123.012-1  
 **Tipo:** concorrente direto parcial
 **Link oficial:** [Página da plataforma](https://wsc-sports.com/platform/)  
