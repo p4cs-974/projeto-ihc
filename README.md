@@ -2,7 +2,7 @@
 
 01 - Completa
 
-02 - Revisão de Giovanni (C01/C02) concluída em 14/10/2026; pendências de C06/C07 com Lucas
+02 - Completa; pendências de C06/C07 dispensadas pelo professor em sala
 
 03 - Revisão documental do feedback concluída em 14/10/2026; proto-personas a validar
 
@@ -11,6 +11,10 @@
 05 - Preenchimento concluído; revisão de coerência aplicada em 13/10/2026; modelos hipotéticos a validar
 
 06 - Concluída nesta iteração em 22/10/2026; protótipo, walkthrough acompanhado e decisões de revisão documentados, com melhorias de interface para a próxima iteração
+
+07 - Completa
+
+08 - Completa
 
 # Projeto de Interação Humano-Computador (IHC)  - Equipe 16
 
@@ -118,13 +122,13 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 
 | # | Entrega | Quantidade mínima / responsabilidade | Status |
 |---:|---|---|---|
-| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟦 |
-| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟨 |
+| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟩 completa  |
+| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟩 completa  |
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟩 revisão documental; validação pendente |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟩 revisão documental; validação pendente |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟩 preenchida; coerência revisada; validação empírica pendente |
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) · [protótipo publicado](https://ihc.p4cs.com.br) | 1 protótipo integrado por equipe | 🟩 concluída nesta iteração; walkthrough e decisões documentados |
-| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | ⬜ |
+| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟩 completa  |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | 🟩 completa |
 | 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | ⬜ |
 | 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante | ⬜ |

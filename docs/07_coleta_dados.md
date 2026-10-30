@@ -26,7 +26,7 @@ A contribuição técnica prevista é identificar melhores momentos e produzir c
 | Mesmo material, slides 8–13 | Incluir usuários e stakeholders; identificar quem usa, quem é afetado, quem decide objetivos/funcionalidades e quem define os processos; tratar autonomia, benefícios, riscos, justiça, consentimento e privacidade. |
 | [CC8122 — Identificação de Necessidades — B](../slides_plinio/CC8122-Identificacao%20Necessidades-B.pdf), slides 3–9 | Entrevista para profundidade, com entrevistador preparado; questionário para respostas comparáveis, combinando perguntas fechadas e abertas, sem ambiguidades ou indução. |
 | Mesmo material, slide 12 | Brainstorming com 8 a 12 usuários, moderador, geração individual seguida de coletiva e ausência de censura durante a geração. O foco é levantar necessidades e desejos. |
-| Mesmo material, slides 20–21 | Escolher método e amostra conforme o objetivo e fornecer protocolo reproduzível. Entrevista e questionário devem utilizar ferramenta on-line; a cópia textual e as configurações estão abaixo, mas a criação dos formulários ainda está pendente. |
+| Mesmo material, slides 20–21 | Escolher método e amostra conforme o objetivo e fornecer protocolo reproduzível. Entrevista e questionário devem utilizar ferramenta on-line. O questionário (I02) está publicado no fim do guia do protótipo; o formulário de registro da entrevista ainda está pendente. |
 | [Entrega 1](01_conhecendo_o_problema.md) e [rastreabilidade](../RASTREABILIDADE.md) | Hipóteses H01–H29, refinamentos H30–H42 e lacunas sobre público, atividades, acessibilidade e contexto; nenhuma será convertida em fato pelo planejamento. |
 | [Entrega 2](02_analise_concorrencia.md) | Padrões e recomendações RC01–RC12 são referências para investigação; existência de um recurso em concorrente não comprova necessidade ou compreensão pelo nosso público. |
 | [Entrega 3](03_personas_contexto_jornada.md) e [Entrega 4](04_cenarios_problema.md) | P01/Rafael e P03/Jorginho Jr. são proto-personas primárias; P02/Arnaldo é persona atendida por resultados recebidos externamente. C01–C03 descrevem problemas hipotéticos. Não recrutar pessoas para que reproduzam essas biografias. |
@@ -77,12 +77,16 @@ O critério comum é ter 18 anos ou mais e experiência na atividade indicada no
 | Supervisor, produtor ou editor-chefe | Ter recebido e avaliado seleções de lances | Stakeholder associado a P02, com decisão externa à interface; participa de I01. Quem apenas supervisiona ou assiste a futebol não integra o público de I02/I03 |
 
 **Quem usa?** Editores e criadores são usuários potenciais, a confirmar pela investigação. 
+
 **Quem é afetado?** Responsáveis editoriais, organizações, destinatários dos cortes e pessoas identificáveis nas gravações, sem necessidade de coletar seus nomes ou imagens.
-**Quem decide objetivos e funcionalidades?** Investigar quem determina a finalidade editorial e autoriza ou escolhe ferramentas; a equipe traduz os achados em decisões de projeto e verifica a viabilidade técnica após a coleta. **Quem definiu os processos?** Identificar se o fluxo foi estabelecido pelo próprio editor, pela supervisão ou pela organização, preservando diferenças entre contextos.
+
+**Quem decide objetivos e funcionalidades?** Investigar quem determina a finalidade editorial e autoriza ou escolhe ferramentas; a equipe traduz os achados em decisões de projeto e verifica a viabilidade técnica após a coleta. 
+
+**Quem definiu os processos?** Identificar se o fluxo foi estabelecido pelo próprio editor, pela supervisão ou pela organização, preservando diferenças entre contextos.
 
 ### Aspectos éticos e gestão dos dados
 
-Os cuidados comuns estão definidos no protocolo abaixo. Na entrevista, solicitar relatos sem identificar terceiros ou expor materiais confidenciais, em conversa individual sem superior acompanhando. No questionário, não solicitar identificadores pessoais nem exigir login ou coleta automática de e-mail; desidentificar textos livres antes da divulgação. No brainstorming, combinar confidencialidade, evitar relações de chefia direta e permitir que a pessoa não fale, vote ou justifique sua experiência; a geração de ideias não terá críticas nem julgamentos de competência ou viabilidade. Não é possível garantir o sigilo pelos demais participantes.
+Os cuidados comuns estão definidos no protocolo abaixo. Na entrevista, solicitar relatos sem identificar terceiros ou expor materiais confidenciais, em conversa individual sem superior acompanhando. No questionário, não exigir login nem coletar e-mail; o nome ou apelido é opcional e não aparece na divulgação; desidentificar textos livres antes da divulgação. No brainstorming, combinar confidencialidade, evitar relações de chefia direta e permitir que a pessoa não fale, vote ou justifique sua experiência; a geração de ideias não terá críticas nem julgamentos de competência ou viabilidade. Não é possível garantir o sigilo pelos demais participantes.
 
 #### Protocolo comum aos três instrumentos
 
@@ -93,13 +97,13 @@ Os princípios de autonomia, não maleficência, beneficência e justiça aprese
 | Voluntariedade e autonomia | Convite sem obrigação acadêmica ou profissional, com possibilidade de pular perguntas, fazer pausa ou desistir sem justificativa. Não recrutar subordinados por ordem de gestores. Restringir este planejamento a adultos. |
 | Benefícios e ônus | Benefício esperado indireto: compreender melhor a seleção de lances. Não prometer aumento de produtividade, precisão do modelo ou benefício individual. Informar a duração e combinar horário que não prejudique a produção. |
 | Riscos e minimização | Possível constrangimento ao relatar erro, cobrança ou dificuldade; não avaliar desempenho individual. Não coletar salário, diagnósticos, credenciais, material sigiloso nem dados de jogadores. Perguntar sobre ajustes de interação, sem exigir condição médica. |
-| Consentimento | Apresentar objetivo, procedimento, registros, acesso, divulgação e descarte antes do aceite. I01/I03 usam registro separado com código do participante, data e aceite; I02 usa aceite inicial. Sem aceite, não coletar respostas de pesquisa. |
+| Consentimento | Apresentar objetivo, procedimento, registros, acesso, divulgação e descarte antes do aceite. I01/I03 usam registro separado com código do participante, data e aceite; I02 exibe o aviso de participação junto ao botão de envio, e enviar o formulário equivale ao aceite. Sem aceite, não coletar respostas de pesquisa. |
 | Gravação | Somente I01 admite áudio opcional, mediante autorização específica. Não gravar vídeo/tela. I02 não grava; I03 usa cartões/notas. Recusa de áudio em I01 não impede a participação. |
-| Privacidade | Códigos ENT-01… para entrevista e BRA-01… para brainstorming; QUE-01… atribuídos na exportação do questionário. Contatos de agendamento e registros de consentimento ficam separados das respostas. Notas com códigos ainda podem permitir associação e serão tratadas como confidenciais. |
+| Privacidade | Códigos ENT-01… para entrevista e BRA-01… para brainstorming; QUE-01… atribuídos na exportação do questionário, quando o nome ou apelido opcional é removido. Contatos de agendamento e registros de consentimento ficam separados das respostas. Notas com códigos ainda podem permitir associação e serão tratadas como confidenciais. |
 | Divulgação | Publicar apenas síntese, contagens e trechos desidentificados. Remover nomes e combinações que revelem empregador/canal ou episódio reconhecível; agregar ou suprimir grupos muito pequenos. Não subir áudio, consentimentos, contatos ou respostas brutas ao Git público. |
 | Armazenamento e acesso | Pasta privada da equipe em conta institucional, acesso nominal somente aos três integrantes. Desativar link público dos formulários de registro/quadro e do painel de respostas. Compartilhar com o docente preferencialmente a síntese desidentificada. |
 | Retenção e descarte | Apagar áudio após conferir a transcrição, em até 30 dias da sessão. Apagar contatos após encerrar o agendamento/retornos. Excluir respostas brutas, cartões, transcrições e consentimentos até 90 dias após o encerramento da disciplina, incluindo cópias locais e lixeira sob controle da equipe. Conservar no repositório somente sínteses desidentificadas. |
-| Retirada após participar | Em I01/I03, informar o código privadamente para solicitar retirada ao responsável que enviou o convite, até a consolidação da síntese, prevista em até 30 dias da sessão. Após agregação, pode não ser possível separar uma contribuição. Em I02, sem identificador de vínculo, pode não ser possível localizar uma resposta já enviada; informar isso antes do aceite. |
+| Retirada após participar | Em I01/I03, informar o código privadamente para solicitar retirada ao responsável que enviou o convite, até a consolidação da síntese, prevista em até 30 dias da sessão. Após agregação, pode não ser possível separar uma contribuição. Em I02, sem nome ou apelido, pode não ser possível localizar uma resposta já enviada. |
 | Justiça e acessibilidade | Oferecer material legível, tempo de pausa e possibilidade de ditar respostas/cartões a um facilitador, registrando a adaptação. Identificar barreiras de acesso ao método; não excluir uma pessoa por pouca habilidade com ferramentas digitais. |
 
 #### Texto comum de apresentação e consentimento
@@ -109,7 +113,7 @@ Os princípios de autonomia, não maleficência, beneficência e justiça aprese
 O responsável acrescentará antes do aceite a descrição específica:
 
 - **I01:** conversa individual de cerca de 40–50 minutos, registrada por notas; áudio somente se autorizado separadamente, apagado em até 30 dias. Será enviado um código para solicitar retirada antes da consolidação da síntese, em até 30 dias da sessão.
-- **I02:** formulário direto, sem nome ou e-mail solicitado. Você pode sair antes de enviar; sem identificador de vínculo, talvez não seja possível localizar e retirar sua resposta depois do envio. A plataforma pode manter registros técnicos próprios, que a equipe não publicará nem usará para identificar você.
+- **I02:** questionário no fim do guia do protótipo, respondido depois das tarefas da simulação. Não solicita e-mail; nome ou apelido é opcional. Junto ao botão de envio, o guia informa: “Esta é uma atividade da disciplina de IHC do Centro Universitário FEI. Você pode parar a qualquer momento. Guardamos só as respostas deste formulário, e elas aparecem nos documentos do projeto sem o seu nome.” Você pode parar antes de enviar; sem nome ou apelido, talvez não seja possível localizar e retirar sua resposta depois do envio. A plataforma pode manter registros técnicos próprios, que a equipe não publicará nem usará para identificar você.
 - **I03:** encontro de aproximadamente 75 minutos com 8 a 12 pessoas, com cartões/notas e sem gravação. Pediremos a todos que preservem o sigilo, mas não podemos garantir confidencialidade por parte dos demais. Você receberá um código para solicitar retirada antes da consolidação da síntese; ideias já combinadas no grupo podem não ser separáveis.
 
 ## Parte B — Ferramentas de coleta
@@ -171,15 +175,30 @@ Cada conclusão deverá citar código e pergunta de origem e indicar se veio de 
 ### Instrumento I02 — Questionário
 
 **Autor:** Lucas Roberto Boccia dos Santos — 22.123.012-1\
-**Objetivo:** caracterizar práticas, condições, dificuldades e expectativas de editores profissionais e criadores amadores, comparando os perfis sem generalizar a amostra para todo o mercado.\
-**Público/amostra pretendida:** pelo menos 20 respostas elegíveis, buscando cerca de dez profissionais e dez criadores amadores. Recrutamento por conveniência em contatos e comunidades de edição/futebol; a divisão é meta de diversidade, não cota representativa. Se não for alcançada, apresentar a quantidade real e o desequilíbrio.\
-**Duração estimada:** 15–20 minutos, a conferir no piloto.\
-**Ferramenta planejada:** Google Forms ou equivalente institucional, com navegação por seções e ramificação.\
-**Situação da ferramenta:** formulário ainda não criado; o texto integral, os tipos de campo e as regras de navegação estão abaixo.
+**Objetivo:** registrar, logo após a simulação com o protótipo, como cada pessoa realizou as quatro tarefas, onde não soube o que fazer, qual visualização dos resultados preferiu e o que esperava receber no download, comparando as respostas pela familiaridade com edição sem generalizar a amostra para todo o mercado.\
+**Público/amostra pretendida:** pelo menos 20 respostas, buscando editores profissionais e criadores amadores. Recrutamento por conveniência em contatos e comunidades de edição/futebol. O formulário não tem triagem; G01 separa quem edita com frequência, de vez em quando ou nunca, e a análise trata esses grupos separadamente. Se a meta não for alcançada, apresentar a quantidade real e o desequilíbrio.\
+**Duração estimada:** a conferir; o formulário tem oito perguntas, quatro obrigatórias e quatro opcionais.\
+**Ferramenta:** formulário próprio na seção “Feedback” do guia do protótipo. As respostas são gravadas no banco D1 `ihc-feedback` do site, com data e versão do formulário (2026-10-21).\
+**Situação da ferramenta:** formulário criado e publicado no fim do guia.
 
-Link do questionário para preenchimento abaixo. O questionário está na parte inferior da página:
+Link do questionário para preenchimento abaixo, inserido dentro do nosso guia de utilização do protótipo. O questionário está na parte inferior da página:
 
 https://ihc.p4cs.com.br/guia/
+
+**Procedimento:** a pessoa abre o guia, lê “Do que se trata” e “Antes de começar”, faz as quatro tarefas no protótipo e responde ao formulário no fim da página. O rascunho fica salvo no navegador até o envio.
+
+| ID | Pergunta | Campo e alternativas | Obrigatória |
+|---|---|---|---|
+| G01 | Você edita vídeos? | Escolha única: Nunca; De vez em quando; Com frequência, por trabalho ou hobby | Sim |
+| G02 | Como você fez a simulação? | Escolha única: Sozinho(a); Com alguém da equipe acompanhando | Sim |
+| G03 | Como foi cada tarefa? | Grade com uma linha por tarefa (1. Preparar a análise; 2. Acompanhar a análise; 3. Escolher três lances; 4. Baixar o que escolheu): Consegui; Com dificuldade; Não consegui | Sim |
+| G04 | Teve algum momento em que você não soube o que fazer? | Texto longo | Não |
+| G05 | Qual forma de ver os resultados você preferiu? | Escolha única: Busca primeiro; Trilhas por partida; Mosaico por tipo; Não vi diferença. Complemento “Por quê?” opcional | Sim |
+| G06 | O que você esperava receber quando baixou? | Texto longo | Não |
+| G07 | O que você achou, no geral? | Texto longo | Não |
+| G08 | Nome ou apelido | Texto curto, até 80 caracteres | Não |
+
+**Análise:** contar G02, G03 e G05 por grupo de G01; agrupar G04, G05 (por quê), G06 e G07 por tema; não publicar G08. Na matriz de análise abaixo, G01–G08 indicam as perguntas do I02.
 
 ### Instrumento I03 — Brainstorming de necessidades e desejos dos usuários
 
@@ -265,18 +284,18 @@ Este conjunto coleta principalmente autorrelatos, opiniões e necessidades expre
 
 | Hipóteses | Evidência a procurar nos instrumentos | Critério para sustentar, refutar ou refinar | Artefato/decisão a revisar |
 |---|---|---|---|
-| H01/H09/H10/H11 | E02/E04–E06; Q08/Q09/Q16/Q17; B02/B04 | Episódios de esforço e omissão podem sustentar o problema no contexto relatado; processos já resolvidos ou outras dores podem refinar ou contrariar sua centralidade. Descarte editorial não será contado como erro. | Problema da Entrega 1 e C01/C03 |
-| H03/H06/H12/H21/H27/H28 | E01/E02/E10; Q02/Q03/Q07/Q21; B01/B02/B05 | Atividade e objetivo reais compatíveis sustentam o recorte apenas nos perfis/contextos alcançados. Se os resultados gerais não servirem à finalidade ou a atividade não existir, refinar público/objetivo. | P01/P03, contexto e escopo de IHC |
-| H02 | E05/E10/E12; Q23–Q26; B07 | Registrar benefício desejado e condições para avaliá-lo; manter o ganho efetivo em aberto até comparação com tarefas equivalentes. Intenção de uso não confirma redução de tempo. | Critérios de avaliação nas Entregas 8 e 12–14 |
-| H05/H17/H19/H34/H38 | E01/E03/E07/E12; Q10/Q11/Q27; B05/B07 | Comparar ferramentas, termos espontâneos e formas de aprendizagem; diferenças entre perfis refinam a linguagem. Não inferir compreensão só porque o termo existe em concorrente. | RC06/RC07, ajuda e representação dos resultados externos |
-| H07/H08/H24/H39 | E02/E03/E05/E06; Q05/Q06/Q09/Q15–Q17; B01/B04 | Frequência de repetição e consequência de falhas podem mudar prioridades; volume real pode contrariar quatro a seis partidas/dia. Investigar entradas por partida, tempo ou outro arquivo. | A01, RC02 e prioridades de T01/T03 |
-| H13/H16/H25/H26/H32/H41 | E03/E06/E08/E09; Q13/Q16–Q21; B03/B04 | Episódios de espera, retomada e falha refinam estados e informações; ausência de necessidade de aviso ou retomada evita pressupor o recurso. Capacidade técnica de recuperar continua verificação separada. | RC03/RC05, T03 e continuidade para T01 |
-| H14/H22/H23/H33/H40 | E02/E07/E08/E10 com editor e supervisor; Q21/Q22; B05 | Descrever quem recebe, decide e devolve, por qual canal. Divergências entre relatos refinam a passagem; uso direto de P02 exige tarefa fundamentada antes de rever o recorte. | T02 externo, identificação dos arquivos e RC09 |
-| H30 | E04/E11; Q25; B02/B07 | Registrar em que finalidades/prazos candidatos extras ou omissões são toleráveis; respostas condicionais refinam a hipótese, sem afirmar cobertura completa. | Revisão de T01 e comunicação de limites |
-| H36/H37 | E03/E04/E10; Q07/Q08/Q12/Q13/Q26; B01/B02/B08 | Separar demanda por atleta da capacidade de atendê-la. Identificar espaço para originais, cortes e edição externa; processamento remoto não comprova economia de disco. | Adequação de P03 e viabilidade a discutir com a equipe técnica |
-| H15/H29/H35 | E08, inclusive supervisores; Q19; B06 | Sustentar somente quando houver situação e decisão que exijam recuperação/visão geral; registros externos suficientes ou ausência de tarefa podem refinar/refutar a necessidade. Histórico técnico e auditoria editorial são distintos. | A03 a modelar se justificada; H35 continua exploratória |
-| H31/H42 e acessibilidade | E01/E09; Q04/Q12–Q14/Q18; B08 | Refinar condições de uso pela rotina real e barreiras relatadas, sem buscar confirmar 19 anos ou modo escuro por princípio. Preferência não substitui avaliação de legibilidade. | Contexto, apresentação e avaliação futura de acessibilidade |
-| H04/H18/H20 | E07/E10/E12, inclusive supervisores; Q22/Q26; B07 | Esclarecer papéis de adoção, restrições e benefícios esperados; não declarar redução de custos, comprador confirmado ou mercado validado com essa amostra. | Stakeholders e limites de adoção da Entrega 1 |
+| H01/H09/H10/H11 | E02/E04–E06; B02/B04 | Episódios de esforço e omissão podem sustentar o problema no contexto relatado; processos já resolvidos ou outras dores podem refinar ou contrariar sua centralidade. Descarte editorial não será contado como erro. | Problema da Entrega 1 e C01/C03 |
+| H03/H06/H12/H21/H27/H28 | E01/E02/E10; G01; B01/B02/B05 | Atividade e objetivo reais compatíveis sustentam o recorte apenas nos perfis/contextos alcançados. Se os resultados gerais não servirem à finalidade ou a atividade não existir, refinar público/objetivo. | P01/P03, contexto e escopo de IHC |
+| H02 | E05/E10/E12; G07; B07 | Registrar benefício desejado e condições para avaliá-lo; manter o ganho efetivo em aberto até comparação com tarefas equivalentes. Intenção de uso não confirma redução de tempo. | Critérios de avaliação nas Entregas 8 e 12–14 |
+| H05/H17/H19/H34/H38 | E01/E03/E07/E12; G04/G05; B05/B07 | Comparar ferramentas, termos espontâneos e formas de aprendizagem; diferenças entre perfis refinam a linguagem. Não inferir compreensão só porque o termo existe em concorrente. | RC06/RC07, ajuda e representação dos resultados externos |
+| H07/H08/H24/H39 | E02/E03/E05/E06; G01; B01/B04 | Frequência de repetição e consequência de falhas podem mudar prioridades; volume real pode contrariar quatro a seis partidas/dia. Investigar entradas por partida, tempo ou outro arquivo. | A01, RC02 e prioridades de T01/T03 |
+| H13/H16/H25/H26/H32/H41 | E03/E06/E08/E09; G03/G04; B03/B04 | Episódios de espera, retomada e falha refinam estados e informações; ausência de necessidade de aviso ou retomada evita pressupor o recurso. Capacidade técnica de recuperar continua verificação separada. | RC03/RC05, T03 e continuidade para T01 |
+| H14/H22/H23/H33/H40 | E02/E07/E08/E10 com editor e supervisor; G06; B05 | Descrever quem recebe, decide e devolve, por qual canal. Divergências entre relatos refinam a passagem; uso direto de P02 exige tarefa fundamentada antes de rever o recorte. | T02 externo, identificação dos arquivos e RC09 |
+| H30 | E04/E11; B02/B07 | Registrar em que finalidades/prazos candidatos extras ou omissões são toleráveis; respostas condicionais refinam a hipótese, sem afirmar cobertura completa. | Revisão de T01 e comunicação de limites |
+| H36/H37 | E03/E04/E10; B01/B02/B08 | Separar demanda por atleta da capacidade de atendê-la. Identificar espaço para originais, cortes e edição externa; processamento remoto não comprova economia de disco. | Adequação de P03 e viabilidade a discutir com a equipe técnica |
+| H15/H29/H35 | E08, inclusive supervisores; B06 | Sustentar somente quando houver situação e decisão que exijam recuperação/visão geral; registros externos suficientes ou ausência de tarefa podem refinar/refutar a necessidade. Histórico técnico e auditoria editorial são distintos. | A03 a modelar se justificada; H35 continua exploratória |
+| H31/H42 e acessibilidade | E01/E09; B08 | Refinar condições de uso pela rotina real e barreiras relatadas, sem buscar confirmar 19 anos ou modo escuro por princípio. Preferência não substitui avaliação de legibilidade. | Contexto, apresentação e avaliação futura de acessibilidade |
+| H04/H18/H20 | E07/E10/E12, inclusive supervisores; G07; B07 | Esclarecer papéis de adoção, restrições e benefícios esperados; não declarar redução de custos, comprador confirmado ou mercado validado com essa amostra. | Stakeholders e limites de adoção da Entrega 1 |
 
 Após a coleta, construir uma tabela de achados com os campos **ID do achado**, **fonte/código e item do instrumento**, **contexto/perfil**, **relato ou expectativa**, **evidências convergentes/contrárias**, **limitação**, **hipótese afetada**, **estado proposto** e **decisão de design**. Não preencher agora achados hipotéticos como resultados.
 
@@ -301,7 +320,7 @@ Os instrumentos deverão reduzir as lacunas que sustentam o recorte de envio, ac
 - [x] Há uma técnica completa por integrante, com nome e matrícula, e técnicas distintas.
 - [x] Questionário está incluído entre as técnicas.
 - [x] Cada instrumento possui objetivo, público, amostra pretendida, procedimento e conteúdo integral.
-- [x] Questionário informa alternativas, tipos de campo, obrigatoriedade e lógica de triagem.
+- [x] Questionário informa alternativas, tipos de campo e obrigatoriedade; não tem triagem, e o perfil é separado por G01.
 - [x] Brainstorming prevê 8 a 12 usuários, geração individual seguida de coletiva e ausência de censura na geração.
 - [x] Perguntas evitam indução, admitem ausência de necessidade e coletam apenas dados pertinentes.
 - [x] Está definido como analisar, triangular e usar os dados no design, preservando limitações.
@@ -312,3 +331,4 @@ Os instrumentos deverão reduzir as lacunas que sustentam o recorte de envio, ac
 |---|---|---|
 | 25/10/2026 | Preenchimento das soluções individuais, protocolo ético, entrevista de Pedro, questionário de Lucas, brainstorming de Giovanni e plano de análise, com base nos slides A/B e nas Entregas 1–6. Instrumentos não aplicados; ferramentas on-line e pilotos pendentes. | Autoria por integrante indicada nas partes A/B; elaboração documental assistida pelo Codex a pedido da equipe |
 | 29/10/2026 | Consolidação de A01, A02 e A03 em um mapeamento geral na Parte A, com dados, públicos e cuidados éticos comuns aos três instrumentos. | Equipe 16; revisão documental assistida pelo Codex a pedido da equipe |
+| 30/10/2026 | Revisão de coerência com a Entrega 8. I02 passa a ser o questionário publicado no fim do guia do protótipo: perguntas G01–G08 transcritas, protocolo ético ajustado ao formulário (nome opcional, aviso no envio, D1) e matriz de análise com G01–G08 no lugar de Q00–Q27. Análise das respostas pendente. | Equipe 16; autoria de I02 mantida conforme identificação do instrumento, com revisão documental assistida pelo Codex a pedido da equipe |
