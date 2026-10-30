@@ -77,8 +77,12 @@ O critério comum é ter 18 anos ou mais e experiência na atividade indicada no
 | Supervisor, produtor ou editor-chefe | Ter recebido e avaliado seleções de lances | Stakeholder associado a P02, com decisão externa à interface; participa de I01. Quem apenas supervisiona ou assiste a futebol não integra o público de I02/I03 |
 
 **Quem usa?** Editores e criadores são usuários potenciais, a confirmar pela investigação. 
+
 **Quem é afetado?** Responsáveis editoriais, organizações, destinatários dos cortes e pessoas identificáveis nas gravações, sem necessidade de coletar seus nomes ou imagens.
-**Quem decide objetivos e funcionalidades?** Investigar quem determina a finalidade editorial e autoriza ou escolhe ferramentas; a equipe traduz os achados em decisões de projeto e verifica a viabilidade técnica após a coleta. **Quem definiu os processos?** Identificar se o fluxo foi estabelecido pelo próprio editor, pela supervisão ou pela organização, preservando diferenças entre contextos.
+
+**Quem decide objetivos e funcionalidades?** Investigar quem determina a finalidade editorial e autoriza ou escolhe ferramentas; a equipe traduz os achados em decisões de projeto e verifica a viabilidade técnica após a coleta. 
+
+**Quem definiu os processos?** Identificar se o fluxo foi estabelecido pelo próprio editor, pela supervisão ou pela organização, preservando diferenças entre contextos.
 
 ### Aspectos éticos e gestão dos dados
 
