@@ -2,7 +2,7 @@
 
 01 - Completa
 
-02 - Revisão de Giovanni (C01/C02) concluída em 14/10/2026; pendências de C06/C07 com Lucas
+02 - Completa; pendências de C06/C07 dispensadas pelo professor em sala
 
 03 - Revisão documental do feedback concluída em 14/10/2026; proto-personas a validar
 
