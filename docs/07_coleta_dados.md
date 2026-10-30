@@ -177,77 +177,9 @@ Cada conclusão deverá citar código e pergunta de origem e indicar se veio de 
 **Ferramenta planejada:** Google Forms ou equivalente institucional, com navegação por seções e ramificação.\
 **Situação da ferramenta:** formulário ainda não criado; o texto integral, os tipos de campo e as regras de navegação estão abaixo.
 
-**Distinção dos instrumentos:** o formulário no [guia da simulação da Entrega 6](../assets/06_prototipos/GUIA_simulacao.html#feedback) coleta feedback após tarefas no protótipo, inclusive de participantes sem experiência em edição, e contém campo de nome opcional. Ele não corresponde ao I02 e não será usado como seu link de aplicação. O I02 abaixo investiga práticas e necessidades sem exigir exposição ao protótipo, não solicita nome/e-mail e tem triagem própria. Seu link será registrado aqui após a configuração e conferência da ferramenta on-line; não há link de aplicação do I02 disponível nesta versão.
+Link do questionário para preenchimento abaixo, inserido dentro do nosso guia de utilização do protótipo. O questionário está na parte inferior da página:
 
-#### Procedimento padronizado de aplicação
-
-1. **Configurar:** criar formulário próprio com as seções, perguntas e ramificações abaixo. Desativar coleta de e-mail, exigência de login, envio de cópias por e-mail e acesso público ao painel de respostas. Não solicitar upload, nome, canal, empresa ou identificadores. Restringir o painel aos três integrantes. Conferir as condições técnicas e de privacidade da plataforma antes de divulgar o link.
-2. **Conferir e pilotar:** testar os caminhos de recusa, inelegibilidade, perguntas puladas e conclusão; aplicar piloto a uma pessoa elegível e registrar compreensão, duração e ajustes. Usar respostas fictícias nos testes técnicos e excluí-las. Se o piloto motivar mudança relevante, identificar sua versão e não misturar os dados silenciosamente à análise principal.
-3. **Convidar:** apresentar finalidade, duração e critérios de participação por canal separado das respostas. Não enviar o guia ou demonstrar o protótipo antes do I02. Não prometer ganho de produtividade nem exigir participação por vínculo acadêmico/profissional.
-4. **Apresentar e obter aceite:** exibir o texto comum de apresentação e a descrição específica I02 antes de Q00. Sem aceite, encerrar sem coletar respostas de pesquisa. Fazer a triagem Q01–Q03 somente após o aceite. Configurar a saída de recusas e inelegíveis sem envio das demais respostas de pesquisa, sem tratar o encerramento como uma resposta elegível.
-5. **Responder:** aplicar Q04–Q22 sobre a prática atual antes de exibir a descrição neutra e Q23–Q27 sobre a proposta. Permitir pular qualquer pergunta de conteúdo. Oferecer leitura/ditado a facilitador, se solicitado, sem sugerir respostas; registrar a adaptação de forma agregada, sem criar vínculo de identidade.
-6. **Encerrar e tratar:** agradecer, reiterar os limites de retirada após envio e exportar somente respostas consentidas e elegíveis para a análise. Atribuir QUE-01… na exportação, desidentificar textos livres e guardar os registros na pasta privada conforme o protocolo comum. Registrar versão, período de aplicação, quantidade real por perfil e desvios do procedimento.
-
-#### Configuração comum dos campos e navegação
-
-Q00–Q03 são de escolha única e necessários para consentimento/triagem; incluir as opções de recusa indicadas. Q04–Q27 são opcionais, sem validação que obrigue a escrever ou marcar uma alternativa. Nas perguntas de seleção múltipla, permitir várias marcações, mas configurar opções como “nenhuma”, “não sei” e “prefiro não responder” como exclusivas; se a plataforma não permitir, orientar e conferir inconsistências na análise, sem adivinhar a intenção. “Outro” permite complemento textual opcional. Não embaralhar escalas nem a sequência das seções. Não aplicar todas as linhas de uma grade como obrigatórias.
-
-As perguntas usam como referência o **trabalho mais recente de seleção de lances de uma partida encerrada**, exceto quando pedem explicitamente a rotina dos últimos seis meses. Respostas sobre frequência são autorrelatos; não equivalem a frequência observada. Não pedir datas exatas, nomes ou links de trabalhos que possam identificar pessoas ou organizações.
-
-#### Seção 1 — Apresentação, consentimento e triagem
-
-Exibir o texto comum e a descrição I02 antes dos campos abaixo. As saídas indicadas mostram apenas agradecimento e o motivo geral do encerramento, sem apresentar as perguntas de conteúdo.
-
-| ID | Pergunta | Campo e alternativas | Regra de navegação |
-|---|---|---|---|
-| Q00 | Após ler a apresentação, você concorda em participar voluntariamente nas condições descritas? | Escolha única: Sim, concordo; Não concordo | Não concordo → encerrar. Sim → Q01 |
-| Q01 | Você tem 18 anos ou mais? | Escolha única: Sim; Não; Prefiro não responder | Não ou recusa → encerrar. Sim → Q02 |
-| Q02 | Qual opção melhor descreve sua atuação mais recente na preparação de seleções de lances de futebol? | Escolha única: Editor profissional, com edição como atividade de trabalho regular; Criador amador, inclusive produção própria ou remuneração ocasional; Apenas recebo/supervisiono seleções feitas por outras pessoas; Não preparo seleções de lances; Prefiro não responder | Profissional/amador → Q03. Demais → encerrar. Se atuar nos dois contextos, orientar a escolher o do trabalho mais recente |
-| Q03 | Nos últimos seis meses, você selecionou ou recortou lances de alguma partida de futebol já encerrada? | Escolha única: Sim; Não; Não lembro; Prefiro não responder | Sim → seção 2. Demais → encerrar |
-
-#### Seção 2 — Prática atual e condições de trabalho
-
-| ID | Pergunta | Campo e alternativas |
-|---|---|---|
-| Q04 | Há quanto tempo você prepara seleções de lances de futebol? Como aprendeu essa atividade? | Dois campos opcionais: escolha única de tempo — Menos de seis meses; De seis meses a menos de dois anos; De dois a menos de cinco anos; Cinco anos ou mais; Não lembro; texto curto sobre aprendizagem |
-| Q05 | Nos últimos seis meses, com que frequência preparou seleções de lances de partidas encerradas? | Escolha única: Menos de uma vez por mês; De uma a três vezes por mês; De uma a duas vezes por semana; Três ou mais vezes por semana; Variou demais para indicar; Não lembro |
-| Q06 | Em que forma recebeu ou obteve as gravações no trabalho mais recente? | Seleção múltipla: Partida inteira em um arquivo; Arquivos separados por tempo da partida; Trechos já recortados; Gravação própria; Acesso em plataforma sem arquivo local; Outro; Não lembro |
-| Q07 | Qual era a finalidade daquela seleção? | Seleção múltipla: Melhores momentos gerais da partida; Lances de um atleta; Lances de uma equipe; Análise técnica/tática; Conteúdo para redes sociais; Outro; Não havia finalidade definida |
-| Q08 | O que fez um lance entrar ou ficar fora daquela seleção? Que trecho anterior ou posterior precisou conferir? | Dois campos de texto longo opcionais: critérios de relevância; contexto conferido antes/depois. Orientar a relatar sem nomes de pessoas ou organizações |
-| Q09 | Quais etapas exigiram mais esforço naquele trabalho, se alguma? | Seleção múltipla: Obter/preparar gravações; Localizar lances; Decidir relevância; Definir início/fim de cortes; Conferir se faltava algo; Organizar arquivos; Entregar material; Nenhuma exigiu esforço especial; Outro; Não lembro. Complemento opcional: descreva uma situação |
-| Q10 | Quais ferramentas usou naquele trabalho e para quê? | Texto longo opcional. Pedir ferramentas e etapas, sem links de contas, credenciais ou nomes de clientes |
-| Q11 | Quanto contato você tem com cada recurso abaixo? | Grade de escolha única por linha: edição de vídeo; automação de tarefas; programação; ferramentas de IA. Colunas: Nunca usei; Já experimentei; Uso ocasionalmente; Uso com frequência; Não sei classificar; Prefiro não responder |
-| Q12 | Quais dispositivos usou naquele trabalho? Houve limitação de equipamento ou armazenamento? | Seleção múltipla: Computador de mesa; Notebook; Celular; Tablet; Outro. Texto longo opcional sobre limitações, com orientação para registrar também quando não houve limitação |
-| Q13 | Como a conexão com a internet afetou aquele trabalho, se afetou? | Escolha única: Não precisei de conexão para realizá-lo; Usei conexão e não houve dificuldade; Houve dificuldade, mas consegui continuar; Houve dificuldade que impediu uma etapa; Não lembro. Complemento opcional sobre etapa e consequência |
-| Q14 | Que ajuste de leitura, som ou operação facilitaria sua participação ou seu trabalho, se algum? | Texto longo opcional. Informar que não é necessário declarar diagnóstico ou motivo médico e que pode registrar que nenhum ajuste é necessário |
-| Q15 | Quantas partidas havia naquele trabalho e como era o prazo de entrega? | Dois campos opcionais: número inteiro de partidas, mínimo 1, sem exigir resposta; texto curto sobre prazo. Permitir deixar em branco se não lembrar, sem usar zero como ausência de resposta |
-| Q16 | Quais situações ocorreram naquele trabalho, se alguma? | Seleção múltipla: Problema ao obter/enviar gravações; Espera por processamento ou transferência; Interrupção da atividade; Corte de lance sem interesse; Percebi depois que faltava um lance relevante; Arquivo ou trecho incorreto na entrega; Nenhuma dessas situações; Outro; Não lembro |
-| Q17 | Se houve erro, espera ou interrupção, o que você fez e qual foi a consequência? | Texto longo opcional. Pedir um episódio e eventual retrabalho; não contar descarte editorial deliberado como omissão involuntária |
-| Q18 | Quais condições fizeram parte do ambiente daquele trabalho? | Seleção múltipla: Interrupções de outras atividades/pessoas; Equipamento compartilhado; Dificuldade de iluminação/reflexo; Dificuldade com som/ruído; Nenhuma dessas condições; Outro; Prefiro não responder. Complemento opcional sobre como afetaram a atividade |
-| Q19 | Nos últimos seis meses, precisou voltar a uma seleção ou decisão anterior? | Escolha única: Sim; Não; Não lembro. Complemento opcional: qual informação procurava, para que decisão e como resolveu? Não sugerir histórico ou painel como resposta |
-| Q20 | Quando precisou esperar naquele trabalho, como soube que podia continuar? | Texto longo opcional. Permitir registrar que não houve espera; pedir o que fez durante a espera e como percebeu a conclusão, sem oferecer uma lista de soluções |
-| Q21 | Como o material saiu da seleção para a próxima etapa, naquele trabalho? | Texto longo opcional: o que entregou/abriu, em qual ferramenta ou canal, que informações acompanhavam os arquivos e como recebeu pedidos de ajuste, se houve. Não pedir identificação do destinatário |
-| Q22 | Quem participou da decisão de usar as ferramentas daquele trabalho? | Seleção múltipla: Eu; Outros editores/criadores; Supervisão/produção; Organização/contratante; Não sei; Outro. Complemento opcional: quem definiu o processo, quem arcou com custos e que restrições existiam, sem informar nomes ou valores |
-
-#### Seção 3 — Expectativas sobre a aplicação potencial
-
-Exibir **somente agora** a descrição neutra usada em I01: “O projeto investiga um sistema que recebe gravações de partidas encerradas e sugere cortes de possíveis melhores momentos acompanhados de informações sobre os trechos. A pessoa precisa conferir a seleção; sugestões podem estar incorretas ou incompletas. A edição detalhada e a publicação continuam em ferramentas externas. A identificação automática de jogadores não está assegurada.” Não exibir telas, tutorial ou exemplos de funcionalidades.
-
-| ID | Pergunta | Campo e alternativas |
-|---|---|---|
-| Q23 | Pensando naquele trabalho, em que parte esse apoio teria utilidade, se tivesse? Em que parte não ajudaria? | Dois campos de texto longo opcionais: utilidade; limites/ausência de utilidade |
-| Q24 | Que resultado permitiria a você decidir se esse apoio valeu a pena? | Texto longo opcional. Pedir critério e como o verificaria, sem afirmar que haverá redução de tempo ou esforço |
-| Q25 | Se uma seleção sugerida incluísse lances sem interesse ou deixasse de fora lances relevantes, como você decidiria o que conferir e corrigir? | Texto longo opcional. Perguntar o que mudaria com a finalidade e o prazo, sem impor preferência por candidatos extras ou faltantes |
-| Q26 | O que pesaria na decisão de experimentar ou não esse apoio? | Texto longo opcional. Permitir registrar ausência de interesse; considerar espontaneamente adequação à finalidade, recursos, custos, envio de gravações ou aprendizagem, sem exigir concordância com benefícios |
-| Q27 | Que palavras você usaria para o trecho sugerido, o momento em que ele ocorre e o arquivo recebido para continuar a edição? Há algo mais sobre seu trabalho que deveríamos compreender? | Dois campos de texto longo opcionais: palavras/expressões próprias; comentário final. Não apresentar rótulos da interface como gabarito |
-
-#### Encerramento e análise
-
-Mensagem final: “Obrigado pela participação. Você pode sair antes de enviar. Como não solicitamos identificador de vínculo, talvez não seja possível localizar uma resposta após o envio para retirá-la. Apenas os três integrantes terão acesso aos registros brutos; a divulgação usará sínteses ou trechos desidentificados. Os registros serão descartados até 90 dias após o encerramento da disciplina. Não informe nomes ou conteúdo confidencial nos campos de texto.”
-
-Lucas conferirá a elegibilidade e a completude sem excluir uma resposta elegível apenas por conter perguntas opcionais em branco. Informará quantas respostas foram analisadas por perfil e quantas responderam cada item. Em seleção múltipla, os percentuais podem somar mais de 100%; indicar essa possibilidade e o denominador. Grades terão contagens por linha; ausência, “não sei”, “não lembro” e recusa não serão convertidos em resposta negativa ou zero. Não afirmar controle de duplicidade por pessoa, já que não se exigem login ou identificadores.
-
-Codificar textos por prática atual, relevância/contexto, esforço, tecnologia, espera/retomada, transferência, acessibilidade, adoção e temas novos; outro integrante revisará a codificação e as divergências. Vincular conclusões aos códigos QUE-… e aos IDs Q, preservando distinção entre episódio relatado e expectativa sobre a proposta. Comparar profissionais e amadores sem testes ou generalizações de representatividade não sustentados pela amostra. As respostas não comprovam ganho de produtividade, usabilidade observada nem detecção correta; esses aspectos exigem avaliação posterior.
+https://ihc.p4cs.com.br/guia/
 
 ### Instrumento I03 — Brainstorming de necessidades e desejos dos usuários
 
