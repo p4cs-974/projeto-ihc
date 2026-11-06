@@ -1,5 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1150" viewBox="0 0 1400 1150" role="img" aria-labelledby="title desc">
+<title id="title">Mapa consolidado de objetivos — Equipe 16</title>
+<desc id="desc">O00 é decomposto em preparação e acompanhamento O01 a O03, revisão O04 a O06 e obtenção O07. O08 trata contexto e pendências transversalmente. O09, decisão editorial, e O10, conferência do original, ajuste e montagem, são atividades externas. O diagrama organiza objetivos, sem representar fluxo de telas nem notação MoLIC.</desc>
+<defs><style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#152e43} .title{font-size:30px;font-weight:700} .sub{font-size:18px;fill:#425b70} .group{font-size:22px;font-weight:700} .id{font-size:17px;font-weight:700;fill:#176559} .label{font-size:22px;font-weight:600} .note{font-size:17px;fill:#425b70} .branch{fill:none;stroke:#7794a8;stroke-width:2.5} .external{fill:none;stroke:#9a6d28;stroke-width:2.5;stroke-dasharray:8 7}
+</style></defs>
+<rect width="1400" height="1150" fill="#f7fafc"/>
+<text x="50" y="47" class="title">Mapa consolidado de objetivos</text>
+<text x="50" y="80" class="sub">Entrega 9 · Equipe 16 · 05/11/2026 · Modelo proposto, a validar</text>
+
+<rect x="245" y="110" width="910" height="108" rx="14" fill="#163d54" stroke="#163d54"/>
+<text x="700" y="138" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#9fe1cf">O00 · PROPÓSITO GLOBAL</text>
+<text x="700" y="170" text-anchor="middle" style="font-size:26px;font-weight:700;fill:white">Obter material de melhores momentos</text>
+<text x="700" y="198" text-anchor="middle" style="font-size:26px;font-weight:700;fill:white">para continuidade editorial externa</text>
+<path d="M700 218 V239 M260 239 H1140 M260 239 V260 M700 239 V260 M1140 239 V260" class="branch"/>
+<rect x="50" y="260" width="420" height="440" rx="14" fill="#edf4f8" stroke="#d5e2eb"/>
+<text x="72" y="299" class="group" text-anchor="start">Preparar e acompanhar</text>
+<rect x="490" y="260" width="420" height="440" rx="14" fill="#edf4f8" stroke="#d5e2eb"/>
+<text x="512" y="299" class="group" text-anchor="start">Revisar candidatos</text>
+<rect x="930" y="260" width="420" height="440" rx="14" fill="#edf4f8" stroke="#d5e2eb"/>
+<text x="952" y="299" class="group" text-anchor="start">Obter material</text>
+<rect x="70" y="325" width="380" height="85" rx="14" fill="#ffffff" stroke="#c2d3de"/>
+<text x="92" y="351" class="id" text-anchor="start">O01</text>
+<text x="92" y="379" class="label" text-anchor="start">Preparar gravações para análise</text>
+<rect x="70" y="430" width="380" height="111" rx="14" fill="#ffffff" stroke="#c2d3de"/>
+<text x="92" y="456" class="id" text-anchor="start">O02</text>
+<text x="92" y="484" class="label" text-anchor="start">Acompanhar a análise e</text>
+<text x="92" y="510" class="label" text-anchor="start">reconhecer resultados acessíveis</text>
+<rect x="70" y="561" width="380" height="111" rx="14" fill="#ffffff" stroke="#c2d3de"/>
+<text x="92" y="587" class="id" text-anchor="start">O03</text>
+<text x="92" y="615" class="label" text-anchor="start">Encaminhar uma falha sem</text>
+<text x="92" y="641" class="label" text-anchor="start">comprometer as demais partidas</text>
+<rect x="510" y="325" width="380" height="92" rx="14" fill="#ffffff" stroke="#c2d3de"/>
+<text x="532" y="351" class="id" text-anchor="start">O04</text>
+<text x="532" y="379" class="label" text-anchor="start">Localizar candidatos</text>
+<text x="532" y="405" class="label" text-anchor="start">pertinentes à revisão</text>
+<rect x="510" y="430" width="380" height="111" rx="14" fill="#ffffff" stroke="#c2d3de"/>
+<text x="532" y="456" class="id" text-anchor="start">O05</text>
+<text x="532" y="484" class="label" text-anchor="start">Conferir pertinência e contexto</text>
+<text x="532" y="510" class="label" text-anchor="start">do candidato</text>
+<rect x="510" y="561" width="380" height="111" rx="14" fill="#ffffff" stroke="#c2d3de"/>
+<text x="532" y="587" class="id" text-anchor="start">O06</text>
+<text x="532" y="615" class="label" text-anchor="start">Definir e conferir a seleção</text>
+<text x="532" y="641" class="label" text-anchor="start">para obtenção</text>
+<rect x="950" y="325" width="380" height="111" rx="14" fill="#ffffff" stroke="#c2d3de"/>
+<text x="972" y="351" class="id" text-anchor="start">O07</text>
+<text x="972" y="379" class="label" text-anchor="start">Obter e conferir cortes</text>
+<text x="972" y="405" class="label" text-anchor="start">e metadados</text>
+<text x="972" y="479" class="note" text-anchor="start">CSV: relação e referências</text>
+<text x="972" y="509" class="note" text-anchor="start">MP4: vídeo individual</text>
+<text x="972" y="555" class="note" text-anchor="start">Seleção não é aprovação.</text>
+<text x="972" y="585" class="note" text-anchor="start">Obtenção não é montagem.</text>
+<text x="972" y="640" class="note" text-anchor="start">P01 e P03 operam a interface.</text>
+<path d="M245 164 H25 V778 H50" class="branch"/>
+<rect x="50" y="735" width="1300" height="90" rx="14" fill="#e4f4ed" stroke="#7db69f"/>
+<text x="72" y="763" class="id" text-anchor="start">O08 · OBJETIVO TRANSVERSAL</text>
+<text x="72" y="794" class="label" text-anchor="start">Reconhecer o contexto disponível e as pendências ao retomar ou encerrar</text>
+<path d="M700 825 V899 M360 899 H1040 M360 899 V930 M1040 899 V930" class="external"/>
+<text x="50" y="876" class="group" text-anchor="start">Continuidade externa · conforme a necessidade</text>
+<rect x="50" y="930" width="620" height="111" rx="14" fill="#fffaf0" stroke="#d0ac70"/>
+<text x="72" y="956" class="id" text-anchor="start">O09 · P02, EM CONVERSA COM O EDITOR</text>
+<text x="72" y="984" class="label" text-anchor="start">Avaliar e comunicar a decisão editorial</text>
+<rect x="730" y="930" width="620" height="111" rx="14" fill="#fffaf0" stroke="#d0ac70"/>
+<text x="752" y="956" class="id" text-anchor="start">O10 · P01/P03; P02 PODE SOLICITAR AJUSTE</text>
+<text x="752" y="984" class="label" text-anchor="start">Conferir o original e ajustar ou montar</text>
+<text x="752" y="1010" class="label" text-anchor="start">o material</text>
+<text x="50" y="1080" class="note" text-anchor="start">Linhas sólidas: decomposição · Faixa verde: objetivo transversal · Tracejado: continuidade externa</text>
+<text x="50" y="1110" class="note" text-anchor="start">Não representa sequência obrigatória, fluxo de telas ou notação MoLIC. Revisão da equipe pendente.</text>
 </svg>
