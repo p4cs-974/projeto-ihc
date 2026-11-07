@@ -16,6 +16,8 @@
 
 08 - Completa
 
+09 - Completa
+
 # Projeto de Interação Humano-Computador (IHC)  - Equipe 16
 
 > **Template acadêmico para documentação do projeto no GitHub.**  
@@ -130,7 +132,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) · [protótipo publicado](https://ihc.p4cs.com.br) | 1 protótipo integrado por equipe | 🟩 concluída nesta iteração; walkthrough e decisões documentados |
 | 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟩 completa  |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | 🟩 completa |
-| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | ⬜ |
+| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | 🟩 completa |
 | 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante | ⬜ |
 | 11 | [Protótipo no Figma](docs/11_figma.md) | 1 protótipo integrado por equipe, cobrindo fluxos modelados | ⬜ |
 | 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | ⬜ |
