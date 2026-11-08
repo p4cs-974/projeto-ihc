@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1718" viewBox="0 0 1200 1718" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1697" viewBox="0 0 1200 1697" role="img" aria-labelledby="title desc">
 <title id="title">M01 · Revisar candidatos e obter o material da partida</title>
 <desc id="desc">Diagrama MoLIC M01 da Entrega 10, Equipe 16. Proposta para revisão individual. Cenas, processos e falas identificados por c, p, a, e e f, explicados em docs/10_molic.md.</desc>
 <defs><style>text{font-family:Arial, Helvetica, sans-serif;fill:#1f2a33}.h1{font-size:28px;font-weight:700}.sub{font-size:17px;fill:#425b70}.stitle{font-size:19px;font-weight:700}.sid{fill:#0b5cad}.tag{font-size:16px;font-weight:700;fill:#176559}.dname{font-size:16px;font-weight:700}.dline{font-size:16px}.lbl{font-size:16px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.fid{font-weight:700;fill:#0b5cad}.nid{font-size:17px;font-weight:700;fill:#0b5cad}.note{font-size:16px;font-style:italic;fill:#7a4b0b}.leg{font-size:16px}</style><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker><marker id="arr-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker></defs>
-<rect width="1200" height="1718" fill="#ffffff"/>
+<rect width="1200" height="1697" fill="#ffffff"/>
 <text x="40" y="44" class="h1" text-anchor="start">M01 · Revisar candidatos e obter o material da partida</text>
 <text x="40" y="72" class="sub" text-anchor="start">Pedro Alexandre Custódio Silva (22.123.049-3) · CI01/T01 · O04–O07 e O08; sai para O10</text>
 <text x="40" y="94" class="sub" text-anchor="start">Proposta para revisão individual · notação: CC8122-Molic Parte A, slides 6–15; Parte B, slides 3–5</text>
@@ -45,21 +45,20 @@
 <text x="228" y="835" class="dline" text-anchor="start">d: MP4 S27 do corte, tamanho S33 }</text>
 </g>
 <g id="c3" data-kind="scene">
-<rect x="200" y="1023" width="540" height="285" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<rect x="200" y="1023" width="540" height="264" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
 <line x1="200" y1="1063" x2="740" y2="1063" stroke="#1f2a33" stroke-width="1.5"/>
 <text x="214" y="1050" class="stitle"><tspan class="sid">c3</tspan> · Conferir a seleção e as saídas</text>
 <text x="726" y="1050" class="tag" text-anchor="end">O06 · O07</text>
 <text x="214" y="1087" class="dname" text-anchor="start">ver seleção {</text>
 <text x="228" y="1108" class="dline" text-anchor="start">d: lista(candidato S16 em S23: S01, S02, S17, S18),</text>
-<text x="249" y="1129" class="dline" text-anchor="start">quantidade S24, duração somada S25 }</text>
+<text x="249" y="1129" class="dline" text-anchor="start">quantidade S24 }</text>
 <text x="214" y="1150" class="dname" text-anchor="start">retirar item {</text>
 <text x="228" y="1171" class="dline" text-anchor="start">d+u: seleção S23 }</text>
-<text x="214" y="1192" class="dname" text-anchor="start">planejar obtenção {</text>
-<text x="228" y="1213" class="dline" text-anchor="start">d: tamanho S33 de cada MP4: conhecido, estimado ou indisponível;</text>
-<text x="249" y="1234" class="dline" text-anchor="start">soma S34 só como total se todos forem conhecidos }</text>
-<text x="214" y="1255" class="dname" text-anchor="start">distinguir saídas {</text>
-<text x="228" y="1276" class="dline" text-anchor="start">d: CSV S26 com referências da seleção, exige seleção não vazia;</text>
-<text x="249" y="1297" class="dline" text-anchor="start">MP4 S27 obtido por corte, sem exigir seleção }</text>
+<text x="214" y="1192" class="dname" text-anchor="start">ver tamanho dos arquivos {</text>
+<text x="228" y="1213" class="dline" text-anchor="start">d: tamanho S33 de cada MP4: conhecido, estimado ou indisponível }</text>
+<text x="214" y="1234" class="dname" text-anchor="start">distinguir saídas {</text>
+<text x="228" y="1255" class="dline" text-anchor="start">d: CSV S26 com referências da seleção, exige seleção não vazia;</text>
+<text x="249" y="1276" class="dline" text-anchor="start">MP4 S27 obtido por corte, sem exigir seleção }</text>
 </g>
 <g id="p1" data-kind="process">
 <rect x="952" y="302" width="26" height="26" fill="#1f2a33"/>
@@ -78,9 +77,9 @@
 <text x="947" y="1176" class="nid" text-anchor="end">p4</text>
 </g>
 <g id="e1" data-kind="close">
-<circle cx="480" cy="1398" r="15" fill="#fff" stroke="#1f2a33" stroke-width="2.5"/>
-<circle cx="480" cy="1398" r="8.5" fill="#1f2a33"/>
-<text x="480" y="1438" class="nid" text-anchor="middle">e1</text>
+<circle cx="480" cy="1377" r="15" fill="#fff" stroke="#1f2a33" stroke-width="2.5"/>
+<circle cx="480" cy="1377" r="8.5" fill="#1f2a33"/>
+<text x="480" y="1417" class="nid" text-anchor="middle">e1</text>
 </g>
 <g id="e2" data-kind="close">
 <circle cx="990" cy="523" r="15" fill="#fff" stroke="#1f2a33" stroke-width="2.5"/>
@@ -182,21 +181,21 @@
 <text x="977" y="1211" class="lbl" text-anchor="start">confira o arquivo salvo</text>
 </g>
 <g id="f20" data-kind="edge" data-from="c3" data-to="e1" data-style="solid" data-label="u: encerrar com o | material obtido">
-<polyline points="480,1308 480,1383" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
-<text x="492" y="1338" class="lbl" text-anchor="start"><tspan class="fid">f20</tspan> · u: encerrar com o</text>
-<text x="492" y="1357" class="lbl" text-anchor="start">material obtido</text>
+<polyline points="480,1287 480,1362" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="492" y="1317" class="lbl" text-anchor="start"><tspan class="fid">f20</tspan> · u: encerrar com o</text>
+<text x="492" y="1336" class="lbl" text-anchor="start">material obtido</text>
 </g>
 <g id="f21" data-kind="edge" data-from="c1" data-to="e2" data-style="solid" data-label="u: interromper revisão">
 <polyline points="740,445 990,445 990,508" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
 <text x="770" y="437" class="lbl" text-anchor="start"><tspan class="fid">f21</tspan> · u: interromper revisão</text>
 </g>
-<text x="505" y="1393" class="note" text-anchor="start">Fora do sistema: abrir o CSV e reproduzir os MP4 salvos,</text>
-<text x="505" y="1413" class="note" text-anchor="start">copiar ao servidor e avisar Arnaldo (T02, O09); pendências S30</text>
+<text x="505" y="1372" class="note" text-anchor="start">Fora do sistema: abrir o CSV e reproduzir os MP4 salvos,</text>
+<text x="505" y="1392" class="note" text-anchor="start">copiar ao servidor e avisar Arnaldo (T02, O09); pendências S30</text>
 <text x="1015" y="518" class="note" text-anchor="start">Fora do sistema:</text>
 <text x="1015" y="538" class="note" text-anchor="start">original, ajuste ou</text>
 <text x="1015" y="558" class="note" text-anchor="start">busca (O10); S30;</text>
 <text x="1015" y="578" class="note" text-anchor="start">retorno por a2</text>
-<g id="legenda" transform="translate(40,1498)">
+<g id="legenda" transform="translate(40,1477)">
 <rect x="0" y="0" width="1120" height="190" rx="10" fill="#f6f8fa" stroke="#c9d1d9"/>
 <text x="18" y="30" class="stitle" text-anchor="start">Legenda (notação da disciplina; não é fluxo de telas)</text>
 <circle cx="30" cy="62" r="10" fill="#1f2a33"/>
@@ -212,7 +211,7 @@
 <line x1="450" y1="97" x2="520" y2="97" stroke="#1f2a33" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#arr-d)"/>
 <text x="532" y="103" class="leg" text-anchor="start">ruptura ou recuperação (A11–A13)</text>
 <text x="450" y="138" class="leg" text-anchor="start">u: fala do usuário · d: fala do preposto · d+u: ambos (A8, A14)</text>
-<text x="450" y="170" class="leg" text-anchor="start">precond: condição para a fala (A6) · S01–S34, O00–O10: Entrega 9</text>
+<text x="450" y="170" class="leg" text-anchor="start">precond: condição para a fala (A6) · signos e objetivos: Entrega 9</text>
 <text x="830" y="68" class="note">Itálico marrom: nota fora</text>
 <text x="830" y="90" class="note">da notação (atividade externa)</text>
 </g>
