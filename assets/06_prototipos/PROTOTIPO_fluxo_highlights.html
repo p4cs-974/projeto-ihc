@@ -15,6 +15,9 @@
   A Tela 4 ("???" no esboço, "Base de dados de highlights") tem 3 variantes, trocadas por
   ?variant=A|B|C ou pelo seletor ao lado de "Baixar CSV". Nada é salvo.
   As setas ← → trocam de tela. Atalho de URL: ?tela=1..4
+  Versão 2 (10/11/2026), revisão após o walkthrough de 22/10/2026 (E06-O01/D01 e E06-O04/D05): a Tela 3 mostra a
+  conclusão e um botão para os resultados; a Tela 4 abre os resultados prontos enquanto a análise continua nos
+  outros vídeos, com o estado do lote visível; "Obter seleção" separa a lista CSV dos vídeos MP4.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -222,11 +225,34 @@ h3{margin:0;font-size:16px;font-weight:500}
 .vt svg{flex:none}
 .vt .on{background:#fff;color:var(--text);box-shadow:0 0 0 1px var(--line),0 1px 3px rgba(0,0,0,.06)}
 .toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%);z-index:70;background:var(--text);color:#fff;padding:10px 18px;border-radius:9999px;font-size:13.5px;box-shadow:0 10px 30px rgba(0,0,0,.18);animation:rise .25s;max-width:90vw}
+/* v2: continuidade da análise para a base, estado do lote e obtenção da seleção */
+.t3-top{justify-content:space-between;padding-top:44px}
+.t3-go{display:flex;align-items:center;gap:14px;min-width:0}
+.t3-go .meta{text-align:right}
+.t3-go .meta b{color:var(--text);font-weight:500}
+.lote{margin-top:24px;background:var(--s1);border-radius:24px;padding:14px 16px 16px}
+.lote-h{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13.5px;margin:0 4px 10px;color:var(--muted)}
+.lote-h b{font-weight:500;color:var(--text)}
+.lote-l{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.lv{background:#fff;border-radius:16px;padding:10px 12px;font-size:13px;display:flex;flex-direction:column;gap:1px;min-width:0}
+.lv b{font-weight:500;display:flex;gap:7px;align-items:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lv .st{color:var(--muted)}
+.lv .bar{display:block;height:4px;border-radius:9999px;background:var(--fill);overflow:hidden;margin-top:6px}
+.lv .bar i{display:block;height:100%;background:var(--c)}
+.newbar{display:flex;justify-content:center;margin-top:12px}
+.obt{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.obt>div{background:var(--s1);border-radius:20px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.obt h3{font-size:18px}
+.obt .btn{align-self:flex-start;margin-top:8px}
+.obt ul{margin:6px 0 0;padding-left:18px;font-size:13px;color:var(--muted)}
+.obt-next{background:var(--fill);border-radius:16px;padding:12px 16px;font-size:13.5px}
+.obt-next b{font-weight:500}
+@media (max-width:760px){.lote-l{grid-template-columns:1fr 1fr}.obt{grid-template-columns:1fr}.t3-top{flex-wrap:wrap}}
 </style>
 </head>
 <body>
-<span class="proto">Clipes reais · análise simulada</span>
-<p class="tip">Use ← → para navegar entre as telas</p>
+<span class="proto">Clipes reais · análise simulada · v2, 10/11/2026</span>
+<p class="tip">Atalho da demonstração: ← → trocam de tela</p>
 
 <main>
   <!-- Tela 1: envio -->
@@ -254,7 +280,7 @@ h3{margin:0;font-size:16px;font-weight:500}
 
   <!-- Tela 3: só prévias e trilhas -->
   <section class="screen" id="t3" hidden>
-    <div class="t3-top"><button class="btn pri" id="restart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>Reiniciar análise</button></div>
+    <div class="t3-top"><button class="btn" id="restart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>Reiniciar análise</button><div class="t3-go"><span class="meta" id="t3-st" role="status"></span><button class="btn pri" id="t3-next" data-go="4" disabled>Ver resultados prontos</button></div></div>
     <div class="previews"><p class="meta t3-note">Simulação: nenhum modelo assiste ao vídeo. As prévias tocam em 2× os trechos anotados no SoccerNet e revelam cada lance no instante anotado.</p><div class="pvg">
       <div class="pv" id="pv0"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div></div>
       <div class="pv" id="pv1"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div></div>
@@ -273,13 +299,16 @@ h3{margin:0;font-size:16px;font-weight:500}
   <section class="screen" id="t4" hidden>
     <div class="head">
       <div><h1>Base de highlights</h1><p class="sub" id="t4-sub"></p></div>
-      <button class="btn pri" id="dl" disabled>Baixar CSV (0)</button>
+      <button class="btn pri" id="dl" disabled>Obter seleção (0)</button>
     </div>
+    <div class="lote" id="lote"></div>
+    <div class="newbar" id="newbar" hidden></div>
     <div class="shell"><nav class="vt" id="vt" aria-label="Visualização"></nav><div id="vroot"></div></div>
   </section>
 </main>
 
 <div class="toast" id="toast" role="status" hidden></div>
+<div id="obt-m"></div>
 
 <script>
 // ---------- utilidades ----------
@@ -292,6 +321,8 @@ const hm=s=>`${Math.floor(s/3600)} h ${String(Math.round(s%3600/60)).padStart(2,
 const mb=b=>(b/1e6).toLocaleString('pt-BR',{maximumFractionDigits:1})+' MB';
 const day=d=>d.split('-').reverse().join('/');
 const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const setHTML=(el,h)=>{if(el._h!==h){el._h=h;el.innerHTML=h}};
+const plural=(n,a,b)=>`${n} ${n===1?a:b}`;
 let toastT;
 function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,4200)}
 
@@ -322,7 +353,7 @@ function load(){
   const byMatch=new Map();
   V=MF.sources.map((s,i)=>{
     if(!byMatch.has(s.match))byMatch.set(s.match,{name:s.matchName,teams:s.teams,date:s.date});
-    return {i,id:s.id,name:s.file.split('/').pop(),m:byMatch.get(s.match),half:s.half,dur:s.durationSeconds,c:COLORS[i%COLORS.length],src:s,prog:0,st:'aguardando'};
+    return {i,id:s.id,name:s.file.split('/').pop(),m:byMatch.get(s.match),half:s.half,dur:s.durationSeconds,c:COLORS[i%COLORS.length],src:s,prog:0,st:'aguardando',poster:MF.clips.find(c=>c.sourceId===s.id)?.poster};
   });
   MATCHES=[...byMatch.values()];
   TYPES=[...new Set(MF.clips.map(c=>c.type))].map(k=>({k,a:k.slice(0,3).toUpperCase()}));
@@ -333,6 +364,8 @@ function load(){
 const total=()=>V.reduce((a,v)=>a+v.dur,0);
 const off=v=>{let a=0;for(const x of V){if(x===v)return a;a+=x.dur}return a};
 const done=()=>H.filter(h=>h.done);
+// lances exibidos na Tela 4; novos resultados entram só quando a pessoa pede, para não mexer no que ela examina
+const base=()=>H.filter(h=>h.done&&S.base.has(h.id));
 const when=h=>`${h.v.half}º tempo · jogo <span class="mono">${esc(h.media.matchTime)}</span>`;
 const poster=(h,alt='')=>`<img src="${esc(h.media.poster)}" alt="${esc(alt)}" width="398" height="224">`;
 
@@ -401,7 +434,7 @@ async function play(btn){
   v.play().catch(()=>{});
 }
 new MutationObserver(()=>{if(P.box&&!P.box.isConnected)stopMedia()}).observe($('#t4'),{childList:true,subtree:true});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stopMedia();sync()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopMedia();sync();bgSync()});
 
 // ---------- simulação da análise: revela as anotações do manifesto ----------
 // Cada prévia percorre um tempo tocando, em RATE×, só os cortes anotados, na ordem do arquivo. O relógio é o
@@ -466,6 +499,32 @@ function resetAnalysis(){
   V.forEach(v=>{v.prog=0;v.st='aguardando'});H.forEach(h=>{h.found=h.done=false});
 }
 function startAnalysis(){resetAnalysis();A.state='running';fill();sync()}
+// fora da Tela 3 a análise continua em segundo plano: um vídeo termina a cada BG_MS, sem reproduzir nada
+const BG_MS=6000;let bgT=0;
+function bgSync(){
+  const on=A.state==='running'&&S.tela!==3&&!document.hidden;
+  if(on&&!bgT)bgT=setInterval(bgStep,BG_MS);
+  if(!on&&bgT){clearInterval(bgT);bgT=0}
+}
+function bgStep(){
+  const v=A.slots.find(Boolean)?.v||V.find(x=>x.st==='processando')||V.find(x=>x.st==='aguardando');
+  if(v)finishVideo(v);
+  for(let s=0;s<2;s++)if(!A.slots[s]&&!V.some((x,k)=>k%2===s&&x.st==='processando')){const n=V.find((x,k)=>k%2===s&&x.st==='aguardando');if(n)n.st='processando'}
+  if(!V.some(x=>x.st==='aguardando'||x.st==='processando'))A.state='done';
+  bgSync();refresh();
+}
+function finishVideo(v){
+  A.slots.forEach((l,s)=>{if(l?.v===v)A.slots[s]=null});
+  const hs=route(v);
+  hs.forEach(h=>{h.found=h.done=true});
+  v.prog=1;v.st='pronto';
+  A.last.forEach(l=>{if(l?.v===v){unload(l);Object.assign(l,{ph:'done',i:hs.length,err:null})}});
+}
+function refresh(){
+  if(S.tela===2)renderGrid();
+  if(S.tela===3){buildTracks();paintT3()}
+  if(S.tela===4)paintLote();
+}
 // toca só com a Tela 3 à vista; sair dela ou esconder a aba pausa vídeo e relógio juntos
 function sync(){
   const on=A.state==='running'&&S.tela===3&&!document.hidden;
@@ -481,13 +540,12 @@ function tick(){
 }
 function fill(){
   // vídeos pares à esquerda, ímpares à direita: com os quatro tempos, os dois de cada partida ficam lado a lado
-  for(let s=0;s<2;s++)if(!A.slots[s]){const n=V.find((v,k)=>k%2===s&&v.st==='aguardando');if(n){n.st='processando';advance(A.slots[s]=A.last[s]=lane(n,s))}}
+  for(let s=0;s<2;s++)if(!A.slots[s]){const n=V.find((v,k)=>k%2===s&&v.st==='processando'&&!A.slots.some(l=>l?.v===v))||V.find((v,k)=>k%2===s&&v.st==='aguardando');if(n){n.st='processando';advance(A.slots[s]=A.last[s]=lane(n,s))}}
   if(A.state==='running'&&!A.slots[0]&&!A.slots[1])A.state='done';
 }
 function finishAll(){
   A.gen++;cancelAnimationFrame(A.raf);A.raf=0;
-  A.last.forEach(l=>{if(l){unload(l);Object.assign(l,{ph:'done',i:l.segs.length,err:null})}});
-  V.forEach(v=>{v.prog=1;v.st='pronto'});H.forEach(h=>h.found=h.done=true);
+  V.forEach(v=>{if(v.st!=='pronto')finishVideo(v)});
   A.slots=[null,null];A.state='done';$$('.chip2').forEach(e=>e.remove());
 }
 // revelado na prévia → voa até a trilha
@@ -561,10 +619,18 @@ function paintT3(){
   $('#tr-all>i').style.width=p*100+'%';
   $('#tr-all>span').textContent=A.state==='done'?'Análise concluída':Math.floor(p*100)+'%';
   $('#k-all').textContent=A.state==='done'?`${V.length} vídeos · ${hm(total())}`:`${c.pronto} de ${V.length} vídeos`;
+  const nx=$('#t3-next');
+  if(A.state==='done'){
+    setHTML($('#t3-st'),`<b>✓ Análise concluída.</b> ${plural(n,'lance pronto','lances prontos')} para revisar`);
+    nx.textContent=`Ver os ${plural(n,'lance','lances')} na base →`;nx.disabled=!n;
+  }else{
+    setHTML($('#t3-st'),n?`<b>${plural(n,'lance pronto','lances prontos')}</b> para revisar. A análise continua nos vídeos`:'Os lances ficam disponíveis assim que aparecem');
+    nx.textContent=n?`Ver resultados prontos (${n}) →`:'Ver resultados prontos';nx.disabled=!n;
+  }
 }
 
 // ---------- detalhe de um lance (compartilhado pelas variantes) ----------
-const inclLabel=on=>on?'✓ No CSV':'+ Incluir';
+const inclLabel=on=>on?'✓ Selecionado':'+ Selecionar';
 const inclBtn=h=>`<button class="incl${SEL.has(h.id)?' on':''}" data-incl="${h.id}">${inclLabel(SEL.has(h.id))}</button>`;
 function toggle(id){
   SEL.has(id)?SEL.delete(id):SEL.add(id);updDL();
@@ -582,7 +648,7 @@ function detail(h,wide){
       <dl class="kv"><div><dt>Início no arquivo</dt><dd class="mono">${tc(k.a)}</dd></div><div><dt>Fim no arquivo</dt><dd class="mono">${tc(k.b)}</dd></div><div><dt>Duração do corte</dt><dd class="mono">${k.dur} s</dd></div></dl>
       <div class="ctx"><i style="left:${k.ev/k.dur*100}%"></i></div>
       <div class="ctx-l"><span class="mono">0:00</span><span>anotação “${esc(c.annotation.label)}” em <span class="mono">${tc(k.ev)}</span> do corte · <span class="mono">${tc(h.t)}</span> do arquivo</span><span class="mono">${tc(k.dur)}</span></div>
-      <div class="det-act">${inclBtn(h)}<a class="link" href="${esc(c.src)}" download>Baixar MP4 (${mb(c.sizeBytes)})</a><span class="file">${esc(v.name)}</span></div>
+      <div class="det-act">${inclBtn(h)}<a class="link" href="${esc(c.src)}" download>Baixar este vídeo, MP4 (${mb(c.sizeBytes)})</a><span class="file">${esc(v.name)}</span></div>
     </div></div>`;
 }
 
@@ -591,9 +657,9 @@ function VA(root,focus){
   let q='',ty='',half=0,open=focus;
   root.innerHTML=`<div class="va-search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8d8d8d" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="va-q" placeholder="Buscar por lance, jogador, partida, time ou arquivo" autocomplete="off"></div><div class="chips" id="va-chips"></div><div class="va-list" id="va-list"></div>`;
   const chip=(k,label,n,on)=>`<button class="chip${on?' on':''}" data-chip="${k}">${label}${n!==''?`<span>${n}</span>`:''}</button>`;
-  const list=()=>done().filter(h=>(!ty||h.type.k===ty)&&(!half||h.v.half===half)&&(!q||norm(`${h.media.title} ${h.type.k} ${h.media.verifiedAction} ${h.v.m.name} ${h.v.m.teams.join(' ')} ${h.v.name} ${h.v.half}º tempo ${h.media.matchTime} ${tc(h.t)}`).includes(norm(q))));
+  const list=()=>base().filter(h=>(!ty||h.type.k===ty)&&(!half||h.v.half===half)&&(!q||norm(`${h.media.title} ${h.type.k} ${h.media.verifiedAction} ${h.v.m.name} ${h.v.m.teams.join(' ')} ${h.v.name} ${h.v.half}º tempo ${h.media.matchTime} ${tc(h.t)}`).includes(norm(q))));
   const draw=()=>{
-    const all=done();
+    const all=base();
     $('#va-chips').innerHTML=chip('','Todos',all.length,!ty&&!half)+TYPES.map(t=>{const n=all.filter(h=>h.type===t).length;return n?chip('t:'+t.k,t.k,n,ty===t.k):''}).join('')+'<i class="sep"></i>'+[1,2].map(n=>chip('h:'+n,n+'º tempo','',half===n)).join('');
     let html='',lm=null;
     list().forEach(h=>{
@@ -625,9 +691,9 @@ function VA(root,focus){
 // ---------- Variante B: trilhas por partida (mesma linguagem da Tela 3) ----------
 function VB(root,focus){
   const on=new Set(TYPES.map(t=>t.k));let act=focus;
-  const vis=()=>done().filter(h=>on.has(h.type.k));
+  const vis=()=>base().filter(h=>on.has(h.type.k));
   const draw=()=>{
-    const all=done(),L=vis();
+    const all=base(),L=vis();
     let html=`<div class="chips left">${TYPES.map(t=>{const n=all.filter(h=>h.type===t).length;return n?`<button class="chip${on.has(t.k)?' on':''}" data-ty="${t.k}">${t.k}<span>${n}</span></button>`:''}).join('')}</div>`;
     MATCHES.forEach(m=>{
       const vs=V.filter(v=>v.m===m);if(!vs.length)return;
@@ -674,9 +740,9 @@ function VB(root,focus){
 // ---------- Variante C: mosaico por tipo (fileiras de miniaturas, detalhe em tela cheia) ----------
 function VC(root,focus){
   let open=focus;
-  const groups=()=>TYPES.map(t=>[t,done().filter(h=>h.type===t)]).filter(g=>g[1].length);
+  const groups=()=>TYPES.map(t=>[t,base().filter(h=>h.type===t)]).filter(g=>g[1].length);
   const flat=()=>groups().flatMap(g=>g[1]);
-  root.innerHTML=groups().map(([t,hs])=>`<section class="vc-row"><h3>${t.k}<span>${hs.length}</span></h3><div class="vc-strip">${hs.map(h=>`<div class="tile" data-tile="${h.id}" style="--c:${h.v.c}">${poster(h)}<button class="tick-btn${SEL.has(h.id)?' on':''}" data-incl="${h.id}" aria-label="Incluir no CSV">✓</button><div class="tile-ov"><b>${esc(h.media.title)}</b> · corte de ${clip(h).dur} s<span>${esc(h.v.m.name)} · ${when(h)}</span></div></div>`).join('')}</div></section>`).join('')+'<div id="vc-m"></div>';
+  root.innerHTML=groups().map(([t,hs])=>`<section class="vc-row"><h3>${t.k}<span>${hs.length}</span></h3><div class="vc-strip">${hs.map(h=>`<div class="tile" data-tile="${h.id}" style="--c:${h.v.c}">${poster(h)}<button class="tick-btn${SEL.has(h.id)?' on':''}" data-incl="${h.id}" aria-label="Selecionar lance">✓</button><div class="tile-ov"><b>${esc(h.media.title)}</b> · corte de ${clip(h).dur} s<span>${esc(h.v.m.name)} · ${when(h)}</span></div></div>`).join('')}</div></section>`).join('')+'<div id="vc-m"></div>';
   const modal=()=>{
     const m=$('#vc-m');if(!open){m.innerHTML='';return}
     const F=flat(),i=F.findIndex(h=>h.id===open),h=F[i];
@@ -707,24 +773,66 @@ const VICON={
   C:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
 };
 let cur=null;
-function updDL(){const n=SEL.size;$('#dl').textContent=`Baixar CSV (${n})`;$('#dl').disabled=!n}
+function updDL(){const n=SEL.size;$('#dl').textContent=`Obter seleção (${n})`;$('#dl').disabled=!n;$('#dl').title=n?'':'Selecione ao menos um lance'}
+const ST={
+  pronto:(v,n)=>`Pronto · ${plural(n,'lance','lances')}`,
+  processando:(v,n)=>`Em análise${v.prog>0?` · ${Math.floor(v.prog*100)}%`:''}${n?` · ${plural(n,'lance','lances')} até agora`:''}`,
+  aguardando:()=>'Na fila',
+};
+function paintLote(){
+  const k=s=>V.filter(v=>v.st===s).length;
+  const head=A.state==='done'
+    ?`<span><b>✓ Análise concluída</b> · ${k('pronto')} de ${V.length} vídeos prontos</span><span>A cor identifica o vídeo de origem</span>`
+    :`<span><b>Análise em andamento</b> · ${k('pronto')} de ${V.length} vídeos prontos. Os lances dos outros entram aqui quando cada vídeo terminar</span><button class="link" data-go="3">Acompanhar a análise</button>`;
+  const card=v=>{
+    const n=H.filter(h=>h.v===v&&h.done).length,bar=v.st!=='pronto';
+    return `<div class="lv" style="--c:${v.c}"><b><i class="dot"></i>${esc(v.m.name)}</b><span>${v.half}º tempo</span><span class="st">${ST[v.st](v,n)}</span>${bar?`<span class="bar"><i style="width:${v.prog*100}%"></i></span>`:''}</div>`;
+  };
+  setHTML($('#lote'),`<div class="lote-h">${head}</div><div class="lote-l">${V.map(card).join('')}</div>`);
+  const nw=done().length-S.base.size,nb=$('#newbar');
+  nb.hidden=nw<=0;
+  if(nw>0)setHTML(nb,`<button class="btn" data-shownew>Mostrar ${plural(nw,'lance novo','lances novos')} na lista</button>`);
+}
 function renderBase(){
-  const hs=done(),nm=new Set(hs.map(h=>h.v.m)).size;
+  S.base=new Set(done().map(h=>h.id));
+  const hs=base(),nm=new Set(hs.map(h=>h.v.m)).size;
   $('#t4-sub').innerHTML=`<b>${hs.length}</b> ${hs.length===1?'Highlight':'Highlights'} em <b>${nm}</b> ${nm===1?'Partida':'Partidas'} · cortes reais do SoccerNet em 224p`;
   const fn=VARIANTS[S.variant][1];
   cur=fn($('#vroot'),S.focus);S.focus=null;
   $('#vt').innerHTML=Object.entries(VARIANTS).map(([k,[n]])=>`<button data-vt="${k}" class="${k===S.variant?'on':''}" aria-pressed="${k===S.variant}" aria-label="${n}" title="${n}">${VICON[k]}</button>`).join('');
-  updDL();
+  updDL();paintLote();
 }
 function setVariant(k){S.variant=k;renderBase();url()}
-$('#dl').onclick=()=>{
-  const hs=done().filter(h=>SEL.has(h.id));if(!hs.length)return;
+$('#dl').onclick=()=>obtain(true);
+const selected=()=>done().filter(h=>SEL.has(h.id));
+function obtain(open){
+  const m=$('#obt-m');
+  if(!open){m.innerHTML='';return}
+  const hs=selected();if(!hs.length)return;
+  const sz=hs.reduce((a,h)=>a+h.media.sizeBytes,0);
+  m.innerHTML=`<div class="modal" data-obt-bg><div class="sheet" role="dialog" aria-modal="true" aria-label="Obter seleção">
+    <div class="bar-h"><h3>Obter ${plural(hs.length,'lance selecionado','lances selecionados')}</h3><button class="ib" data-obt-close aria-label="Fechar">×</button></div>
+    <p class="meta" style="margin:0">São duas saídas diferentes. Baixe uma ou as duas.</p>
+    <div class="obt">
+      <div><h3>Lista dos cortes · CSV</h3><span class="meta">1 arquivo: cortes_selecionados.csv</span><span>Uma linha por lance, com partida, tempo, relógio do jogo, início e fim no arquivo de origem e o link de cada MP4.</span><span><b>Não contém vídeo.</b></span><button class="btn pri" data-dlcsv>Baixar lista CSV</button></div>
+      <div><h3>Vídeos dos cortes · MP4</h3><span class="meta">${plural(hs.length,'arquivo separado','arquivos separados')}, ${mb(sz)} no total</span><span>Um MP4 por lance, com o mesmo trecho do player. Os cortes não são juntados em um vídeo único.</span><button class="btn pri" data-dlmp4>Baixar ${plural(hs.length,'vídeo MP4','vídeos MP4')}</button><ul>${hs.map(h=>`<li><a class="link" href="${esc(h.media.src)}" download>${esc(h.media.src.split('/').pop())}</a> · ${esc(h.media.title)} · ${mb(h.media.sizeBytes)}</li>`).join('')}</ul></div>
+    </div>
+    <div class="obt-next"><b>Depois do download, fora do protótipo:</b> monte o vídeo final no seu editor com os MP4. Use o CSV para localizar cada trecho na gravação original quando precisar de mais contexto.</div>
+  </div></div>`;
+}
+function downloadMP4(){
+  const hs=selected();
+  hs.forEach((h,i)=>setTimeout(()=>{const a=document.createElement('a');a.href=h.media.src;a.download='';document.body.append(a);a.click();a.remove()},i*400));
+  toast(`${plural(hs.length,'vídeo MP4 enviado','vídeos MP4 enviados')} ao navegador. Se ele pedir permissão para vários downloads, aceite ou use os links da lista.`);
+}
+function downloadCSV(){
+  const hs=selected();if(!hs.length)return;
   const rows=[['id','titulo','tipo','partida','data','tempo','arquivo_origem','anotacao','anotacao_gameTime','relogio_jogo','evento_no_arquivo_s','inicio_corte_no_arquivo_s','fim_corte_no_arquivo_s','evento_no_corte_s','duracao_corte_s','url_clipe'],...hs.map(h=>{const c=h.media;return [c.id,c.title,c.type,h.v.m.name,h.v.m.date,h.v.half,h.v.name,c.annotation.label,c.annotation.gameTime,c.matchTime,c.eventSourceSeconds,c.cutStartSeconds,c.cutEndSeconds,c.eventClipSeconds,c.durationSeconds,new URL(c.src,location.href).href]})];
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob(['﻿'+rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(';')).join('\r\n')],{type:'text/csv;charset=utf-8'}));
   a.download='cortes_selecionados.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
-  toast(`${hs.length} ${hs.length===1?'corte listado':'cortes listados'} em CSV, com o link de cada MP4. Para baixar um vídeo, use “Baixar MP4” no detalhe do lance.`);
-};
+  toast(`Lista CSV com ${plural(hs.length,'corte','cortes')} baixada. Ela não contém vídeo; os MP4 estão na opção ao lado.`);
+}
 
 // ---------- telas 1 e 2 ----------
 const NO_UPLOAD='Envio de arquivos não é suportado nesta demonstração. Use os vídeos de exemplo.';
@@ -737,7 +845,7 @@ $('#use-mock').onclick=()=>{load();go(2)};
 function renderGrid(){
   const started=A.state!=='idle';
   $('#t2-sub').textContent=V.length?`${V.length} ${V.length===1?'vídeo':'vídeos'} · ${hm(total())} de gravação · as gravações completas não são publicadas, só os cortes`:'Nenhum vídeo';
-  $('#grid').innerHTML=V.length?V.map(v=>{const h=H.find(x=>x.v===v),s=v.src.video;return `<article class="vcard" style="--c:${v.c}"><div class="th">${h?poster(h,'Quadro do '+v.half+'º tempo'):''}<span class="dur mono">${tc(v.dur)}</span></div>${started?'':`<button class="rm" data-rm="${v.i}" aria-label="Remover ${esc(v.name)}">×</button>`}<div class="vname"><i class="dot"></i>${mid(v.name)}</div><div class="vmeta">${esc(v.m.name)} · ${v.half}º tempo<br>${s.width}×${s.height} · ${s.fps} fps · ${mb(v.src.sizeBytes)}</div><span class="vstate">${started?v.st[0].toUpperCase()+v.st.slice(1):'Pronto para análise'}</span></article>`}).join(''):'';
+  $('#grid').innerHTML=V.length?V.map(v=>{const s=v.src.video;return `<article class="vcard" style="--c:${v.c}"><div class="th">${v.poster?`<img src="${esc(v.poster)}" alt="Quadro do ${v.half}º tempo" width="398" height="224">`:''}<span class="dur mono">${tc(v.dur)}</span></div>${started?'':`<button class="rm" data-rm="${v.i}" aria-label="Remover ${esc(v.name)}">×</button>`}<div class="vname"><i class="dot"></i>${mid(v.name)}</div><div class="vmeta">${esc(v.m.name)} · ${v.half}º tempo<br>${s.width}×${s.height} · ${s.fps} fps · ${mb(v.src.sizeBytes)}</div><span class="vstate">${started?v.st[0].toUpperCase()+v.st.slice(1):'Pronto para análise'}</span></article>`}).join(''):'';
   $('#grid').style.display=V.length?'':'none';
   $('#start').textContent=started?'Ver análise':'Iniciar';
   $('#start').disabled=!V.length;
@@ -750,7 +858,7 @@ $('#start').onclick=()=>go(3);
 $('#restart').onclick=()=>{startAnalysis();buildTracks();paintT3()};
 
 // ---------- navegação ----------
-const S={tela:1,variant:'A',focus:null};
+const S={tela:1,variant:'A',focus:null,base:new Set()};
 function url(){
   const p=new URLSearchParams({tela:S.tela});if(S.tela===4)p.set('variant',S.variant);
   try{history.replaceState(null,'','?'+p)}catch{}
@@ -759,8 +867,9 @@ function go(n){
   if(n>=2&&!V.length){if(MF)load();else{toast(MF_ERR?`Exemplos indisponíveis: ${MF_ERR}`:'Carregando vídeos de exemplo…');n=1}}
   stopMedia();
   if(n===3&&A.state==='idle')startAnalysis();
-  if(n===4&&A.state!=='done'){const was=A.state==='running';finishAll();if(was)toast('Para revisar a base, a análise restante foi concluída na hora (simulação).')}
-  hlHide(true);S.tela=n;sync();
+  if(n===4&&A.state==='idle'){finishAll();toast('Atalho da demonstração: a análise foi concluída na hora para abrir a base.')}
+  if(n===4&&A.state==='running'&&S.tela===3)toast('A análise continua nos outros vídeos. Os lances deles entram na base quando cada vídeo terminar.');
+  obtain(false);hlHide(true);S.tela=n;sync();bgSync();
   $$('.screen').forEach((e,i)=>e.hidden=i+1!==n);
   scrollTo(0,0);
   if(n===2)renderGrid();
@@ -773,9 +882,14 @@ document.addEventListener('click',e=>{
   const h=e.target.closest('[data-goto]');if(h){S.focus=h.dataset.goto;S.variant='A';go(4);return}
   const i=e.target.closest('[data-incl]');if(i){toggle(i.dataset.incl);return}
   const p=e.target.closest('[data-play]');if(p){play(p);return}
-  const t=e.target.closest('[data-vt]');if(t&&t.dataset.vt!==S.variant)setVariant(t.dataset.vt);
+  const t=e.target.closest('[data-vt]');if(t&&t.dataset.vt!==S.variant){setVariant(t.dataset.vt);return}
+  if(e.target.closest('[data-shownew]')){renderBase();return}
+  if(e.target.closest('[data-obt-close]')||e.target.matches('[data-obt-bg]')){obtain(false);return}
+  if(e.target.closest('[data-dlcsv]')){downloadCSV();return}
+  if(e.target.closest('[data-dlmp4]')){downloadMP4();return}
 });
 document.addEventListener('keydown',e=>{
+  if($('#obt-m').firstChild){if(e.key==='Escape')obtain(false);return}
   const a=document.activeElement;
   if(a?.tagName==='VIDEO')return;
   if(S.tela===4&&cur?.key(e))return;
