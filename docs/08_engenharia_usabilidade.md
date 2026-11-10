@@ -134,20 +134,32 @@ Se MQ01 remover um tempo do lote, restaurar os quatro tempos e concluir a simula
 
 O limite confirmado de 90 s é um critério de desempenho, sem interrupção automática da tentativa. Se a pessoa ultrapassá-lo, o tempo continua registrado até conclusão, abandono ou limite de sessão previamente definido. Não há medições novas nesta entrega, e os aproximadamente 4min36s de áudio de U01 não são tempo de execução de nenhuma dessas tarefas.
 
-### 3.3 Prioridades e decisões confirmadas
+### 3.3 Prioridades pelas metas de Nielsen
 
-A recomendação inicial é tratar continuidade, compreensão e obtenção efetiva como prioridades antes de otimizar tempo. Essa ordem decorre dos bloqueios e dúvidas registrados, sem medição de severidade ou frequência no público profissional.
+A priorização usa as cinco metas de usabilidade de Nielsen: facilidade de aprendizado, facilidade de memorização, eficiência, baixa taxa de erro e satisfação positiva do usuário. O material da disciplina apresenta esses fatores em [Qualidade de Uso](../slides_plinio/CC8122-Qualidade%20de%20Uso.pdf), slide 4, com base em Nielsen (1993), e nomeia a baixa taxa de erro como segurança no uso. A definição de memorização como restabelecimento da proficiência ao voltar após um período sem uso foi conferida na página [Usability 101 do Nielsen Norman Group](https://www.nngroup.com/articles/usability-101-introduction-to-usability/), consultada em 10/11/2026.
 
-Não foi localizada, nos materiais consultados do repositório, exigência específica de pesos para esta entrega. Se o docente os solicitar, a equipe deverá atribuir pesos que somem 100%. Pesos representam prioridade, não taxa de sucesso.
+Continuidade, compreensão e obtenção efetiva continuam sendo preocupações do projeto. Elas não ocupam o lugar das metas: cada uma é relacionada abaixo à meta que serve. Eficácia e compreensão continuam como medidas operacionais, MU01–MU04 e MQ01–MQ04, usadas para verificar as metas. Concluir uma tarefa ao final não demonstra ter cometido poucos erros durante a execução; por isso a baixa taxa de erro tem medida própria.
+
+[H] Os pesos abaixo representam a importância relativa das metas para o uso previsto, não desempenho atingido. Somam 100% e foram propostos nesta revisão a partir das evidências e hipóteses citadas, sem medição de severidade ou frequência no público. A equipe deve confirmá-los ou alterá-los antes do piloto da Entrega 12, registrando o motivo.
+
+| Meta de Nielsen | Peso | Justificativa para o uso previsto | Preocupações do projeto relacionadas | Medidas que a verificam |
+|---|---|---|---|---|
+| Facilidade de aprendizado | 30% | [H] P03 usa o serviço de forma ocasional e P01 teria um primeiro contato sem treinamento. [F] O bloqueio de E06-O01 ocorreu no primeiro uso. As avaliações planejadas observam primeiro uso, sem guia que ensine o caminho | Continuidade, compreensão do lote, das referências temporais e das saídas | MU01–MU04 e MQ01–MQ04 na primeira sessão, sem ajuda prévia |
+| Baixa taxa de erro | 25% | [H] Um erro de seleção ou de download leva material errado para a edição externa e pode só ser percebido depois, já fora do serviço, com retrabalho, H16. Retirar a entrada errada do lote invalida a análise daquela partida | Obtenção efetiva, retirada de candidatos e de entradas do lote | MU07 e registro de erros de operação em MQ01, MU03 e MU04 |
+| Facilidade de memorização | 15% | [H] P01 trabalha por dia de rodada, H39, com intervalos entre rodadas, e é interrompido durante a revisão, H41. A seção 1 registra perda de seleção ao recarregar. A pessoa precisa reencontrar o caminho ao voltar, mesmo quando o protótipo não preserva o estado | Retomada, continuidade entre sessões, reconhecimento dos termos já vistos | MU08, em sessão de retorno após intervalo |
+| Eficiência | 15% | [H] O volume de quatro a seis partidas por dia de rodada ainda é hipótese, H39, e o conjunto demonstrado tem oito candidatos. O tempo do detector pertence ao TCC. A eficiência importa depois que o uso é aprendido, mas não decide sozinha entre alternativas nesta iteração | Localização de candidatos, esforço após o processamento | MU05, com tempo total preservado |
+| Satisfação positiva do usuário | 15% | [H] A adoção por editores e criadores depende de a experiência não ser frustrante, mas satisfação alta não compensa falha na tarefa | Confiança no material obtido, percepção da espera | MU06 e pergunta complementar sobre a experiência geral |
+
+Em conflitos de design, a meta de maior peso orienta a decisão. Por exemplo, entre um atalho que acelera a navegação e um rótulo explícito do próximo passo, preservar o rótulo e manter o atalho como alternativa. Uma meta de peso menor continua com medida própria e não deixa de ser avaliada.
 
 | Decisão | Critério adotado | Estado |
 |---|---|---|
 | Limites de eficácia e compreensão | MU01–MU04: 100% na amostra de cada perfil, com resultados por tarefa | Confirmado por Pedro em 29/10/2026; calibração na Entrega 12 |
 | Limite de eficiência | MU05: mediana de até 90 s por perfil, descontadas as esperas técnicas identificadas, com os oito candidatos | Confirmado por Pedro em 29/10/2026; calibração na Entrega 12 |
 | Limite de satisfação | MU06: mediana de pelo menos 4/5, por tarefa e perfil | Confirmado por Pedro em 29/10/2026; calibração na Entrega 12 |
-| Pesos de prioridade | Não adotados nesta versão; atribuir se houver exigência do docente | Inclusão condicionada à orientação da disciplina |
+| Pesos das metas de Nielsen | Aprendizado 30%, baixa taxa de erro 25%, memorização 15%, eficiência 15% e satisfação 15% | [H] Propostos nesta revisão; confirmação pela equipe pendente |
 
-A confirmação dos critérios encerra a definição das metas desta entrega. Os limites podem ser refinados com a coleta e o piloto da Entrega 12, registrando o motivo. A equipe deve fixar a versão dos critérios antes da avaliação principal. Uma alteração posterior não pode reclassificar silenciosamente os resultados já obtidos.
+A confirmação dos critérios de MU01–MU06 é uma decisão da equipe, não resultado de avaliação. Os limites podem ser refinados com a coleta e o piloto da Entrega 12, registrando o motivo. A equipe deve fixar a versão dos critérios antes da avaliação principal. Uma alteração posterior não pode reclassificar silenciosamente os resultados já obtidos.
 
 ## 4. Como o ciclo será iterado
 
