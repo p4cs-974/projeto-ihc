@@ -136,7 +136,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
 <body>
 <span class="proto">Guia · Entrega 6</span>
 <nav class="toc" aria-label="Seções">
-  <a href="#projeto">Projeto</a><a href="#fluxo">Fluxo</a><a href="#navegar">Como navegar</a><a href="#tarefas">Tarefas</a><a href="#feedback">Feedback</a>
+  <a href="#projeto">Projeto</a><a href="#participacao">Participação</a><a href="#fluxo">Fluxo</a><a href="#navegar">Como navegar</a><a href="#tarefas">Tarefas</a><a href="#feedback">Feedback</a>
 </nav>
 
 <main>
@@ -163,6 +163,21 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
       <div><dt>Corte</dt><dd>O trecho recortado da gravação com aquele lance.</dd></div>
       <div><dt>Tempo no arquivo</dt><dd>A posição dentro do arquivo de vídeo de um tempo, como <span class="mono">2:55</span> no arquivo do 2º tempo. Não é o mesmo que o relógio do jogo, que nesse ponto marca <span class="mono">47:55</span>.</dd></div>
       <div><dt>Anotação</dt><dd>O instante do lance marcado à mão por pessoas no conjunto de dados SoccerNet. Cada corte tem cerca de 14 s antes e 14 s depois desse instante.</dd></div>
+    </dl>
+  </section>
+
+  <section class="part" id="participacao">
+    <h2>Sua participação</h2>
+    <p class="sub">Leia antes de abrir o protótipo. Se tiver qualquer dúvida, pergunte antes de começar.</p>
+    <dl class="gloss">
+      <div><dt>Quem responde pela atividade</dt><dd>Pedro Alexandre Custódio Silva, Lucas Roberto Boccia dos Santos e Giovanni Chahin Morassi, da Equipe 16 de Interação Humano-Computador do Centro Universitário FEI, com acompanhamento do docente da disciplina.</dd></div>
+      <div><dt>Contato</dt><dd>Fale com quem te enviou o convite, pelo mesmo canal em que você recebeu este link.</dd></div>
+      <div><dt>O que guardamos</dt><dd>Só as respostas do formulário, com a data, a versão do formulário e um código de resposta. Não pedimos e-mail nem login, e não guardamos seu IP nem seu navegador. O serviço que hospeda o site pode manter registros técnicos próprios; não os usamos para identificar ninguém.</dd></div>
+      <div><dt>Quem vê</dt><dd>As respostas completas ficam num banco de acesso restrito aos três integrantes. O docente e os documentos do projeto recebem só resumos e trechos sem identificação.</dd></div>
+      <div><dt>Até quando</dt><dd>Apagamos as respostas completas e as cópias delas até 90 dias depois do fim da disciplina. Ficam só os resumos sem identificação.</dd></div>
+      <div><dt>Desistir ou retirar</dt><dd>Você pode parar a qualquer momento antes de enviar, e nada é gravado. Ao enviar, você recebe um código. Para retirar sua resposta, mande esse código a quem te convidou em até 30 dias. Depois disso, ela pode já fazer parte de um resumo e não ter como ser separada. Sem o código, talvez não seja possível encontrar sua resposta.</dd></div>
+      <div><dt>Perguntas obrigatórias</dt><dd>As perguntas de escolha precisam de uma resposta para que o formulário possa ser interpretado, mas todas têm a opção “Prefiro não responder”. Os campos de texto são opcionais.</dd></div>
+      <div><dt>Rascunho neste navegador</dt><dd>O que você digita no formulário fica guardado só neste navegador até você enviar ou clicar em “Apagar rascunho”. Em computador compartilhado, apague antes de sair.</dd></div>
     </dl>
   </section>
 
@@ -215,7 +230,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
 
   <section class="part" id="feedback">
     <h2>Feedback</h2>
-    <p class="sub">Responda depois de terminar as tarefas. Só as perguntas de escolha são obrigatórias. Os campos de texto são opcionais, mas qualquer detalhe que você contar ajuda muito. O que você digitar fica guardado neste navegador até você enviar.</p>
+    <p class="sub">Responda depois de terminar as tarefas. As perguntas de escolha são obrigatórias, e todas têm a opção “Prefiro não responder”. Os campos de texto são opcionais, mas qualquer detalhe que você contar ajuda muito. O que você digitar fica guardado neste navegador até você enviar ou clicar em “Apagar rascunho”.</p>
 
     <form id="fb" novalidate>
       <fieldset>
@@ -226,6 +241,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
           <label class="opt"><input type="radio" name="perfil" value="futebol_conta_propria"><span>Sim, por conta própria ou como hobby</span></label>
           <label class="opt"><input type="radio" name="perfil" value="edita_outros"><span>Não, mas edito outros tipos de vídeo</span></label>
           <label class="opt"><input type="radio" name="perfil" value="nao_edita"><span>Não edito vídeos</span></label>
+          <label class="opt"><input type="radio" name="perfil" value="prefiro_nao"><span>Prefiro não responder</span></label>
         </div>
       </fieldset>
 
@@ -234,6 +250,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
         <div class="opts">
           <label class="opt"><input type="radio" name="modo" value="sozinho" required><span>Sozinho(a)</span></label>
           <label class="opt"><input type="radio" name="modo" value="acompanhado"><span>Com alguém da equipe acompanhando</span></label>
+          <label class="opt"><input type="radio" name="modo" value="prefiro_nao"><span>Prefiro não responder</span></label>
         </div>
       </fieldset>
 
@@ -259,6 +276,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
           <label class="opt"><input type="radio" name="variante" value="B"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="5" rx="1.5"/><rect x="3" y="14" width="18" height="5" rx="1.5"/></svg>Trilhas por partida</span></label>
           <label class="opt"><input type="radio" name="variante" value="C"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Mosaico por tipo</span></label>
           <label class="opt"><input type="radio" name="variante" value="nenhuma"><span>Não vi diferença</span></label>
+          <label class="opt"><input type="radio" name="variante" value="prefiro_nao"><span>Prefiro não responder</span></label>
         </div>
         <textarea name="variante_porque" placeholder="Por quê? (opcional)"></textarea>
       </fieldset>
@@ -280,17 +298,18 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
       </fieldset>
 
       <fieldset>
-        <legend>Idade</legend>
+        <legend>Confirmação</legend>
         <div class="opts">
-          <label class="opt"><input type="checkbox" name="maioridade" value="sim" required><span>Tenho 18 anos ou mais</span></label>
+          <label class="opt"><input type="checkbox" name="maioridade" value="sim" required><span>Tenho 18 anos ou mais e li “Sua participação”</span></label>
         </div>
       </fieldset>
 
       <label class="hp" aria-hidden="true">Não preencha<input type="text" name="site" tabindex="-1" autocomplete="off"></label>
 
-      <p class="consent">Esta é uma atividade da disciplina de IHC do Centro Universitário FEI. Você pode parar a qualquer momento. Guardamos só as respostas deste formulário, e elas aparecem nos documentos do projeto sem o seu nome.</p>
+      <p class="consent">Esta é uma atividade da disciplina de IHC do Centro Universitário FEI. Você pode parar a qualquer momento. Guardamos só as respostas deste formulário, e elas aparecem nos documentos do projeto sem o seu nome. Contato, acesso, prazo de descarte e retirada estão em <a class="link" href="#participacao">Sua participação</a>.</p>
       <div class="send">
         <button class="btn pri big" type="submit" id="submit">Enviar feedback</button>
+        <button class="link" type="button" id="limpar">Apagar rascunho</button>
         <span class="status" id="status" role="status"></span>
       </div>
     </form>
@@ -298,6 +317,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
     <div class="thanks" id="thanks" hidden>
       <h3>Recebemos, obrigado!</h3>
       <p class="sub">Suas respostas vão ajudar a revisar o protótipo antes da próxima versão.</p>
+      <p class="sub">Seu código de resposta é <b class="mono" id="codigo"></b>. Guarde-o se quiser retirar sua resposta: mande o código a quem te convidou em até 30 dias.</p>
     </div>
   </section>
 
@@ -308,7 +328,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
 const $=s=>document.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const form=$('#fb'), status=$('#status'), KEY='guia-e06-rascunho', VERSAO='2026-11-10';
 
-const NIVEIS=[['sim','Consegui'],['dificil','Com dificuldade'],['nao','Não consegui']];
+const NIVEIS=[['sim','Consegui'],['dificil','Com dificuldade'],['nao','Não consegui'],['prefiro_nao','Prefiro não responder']];
 for(const box of $$('[data-q]'))
   box.innerHTML=NIVEIS.map(([v,l],i)=>`<label class="opt"><input type="radio" name="${box.dataset.q}" value="${v}"${i?'':' required'}><span>${l}</span></label>`).join('');
 
@@ -333,6 +353,13 @@ function restaurar(){
 }
 restaurar();
 form.addEventListener('input',()=>{localStorage.setItem(KEY,JSON.stringify(ler()));status.textContent='';status.className='status'});
+$('#limpar').addEventListener('click',()=>{localStorage.removeItem(KEY);form.reset();status.className='status';status.textContent='Rascunho apagado deste navegador.'});
+
+let codigo='';
+function novoCodigo(){
+  const A='ABCDEFGHJKMNPQRSTUVWXYZ23456789', n=crypto.getRandomValues(new Uint8Array(6));
+  return [...n].map(x=>A[x%A.length]).join('');
+}
 
 function faltando(){
   const nomes=[...new Set($$('[required]',form).map(el=>el.name))];
@@ -351,11 +378,13 @@ form.addEventListener('submit',async e=>{
     return;
   }
   const btn=$('#submit');btn.disabled=true;status.className='status';status.textContent='Enviando…';
+  codigo||=novoCodigo();
   try{
     const r=await fetch('/api/feedback',{method:'POST',headers:{'content-type':'application/json'},
-      body:JSON.stringify({versao:VERSAO,respostas:ler(),site:form.elements.site.value})});
+      body:JSON.stringify({versao:VERSAO,respostas:{...ler(),codigo},site:form.elements.site.value})});
     if(!r.ok)throw new Error(r.status);
     localStorage.removeItem(KEY);
+    $('#codigo').textContent=codigo;
     form.hidden=true;$('#thanks').hidden=false;
     $('#thanks').scrollIntoView({behavior:'smooth',block:'center'});
   }catch{
