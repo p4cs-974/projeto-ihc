@@ -357,6 +357,9 @@ Os instrumentos deverão reduzir as lacunas que sustentam o recorte de envio, ac
 - [x] Parte A reúne o mapeamento geral das cinco dimensões dos slides e dos perfis/stakeholders para os três instrumentos.
 - [x] Parte A identifica, em A01–A03, o levantamento de dados, público e implicações éticas de cada instrumento e o integrante responsável.
 - [ ] Cada integrante revisar e confirmar sua linha em A01–A03 e a divisão de exportação e conferência de I02.
+- [ ] Definir um canal fixo de contato para quem recebeu o link de I02 repassado por outra pessoa.
+- [ ] Verificar quais contas têm acesso ao D1 `ihc-feedback` e restringi-lo aos três integrantes.
+- [ ] Confirmar o relator e a ferramenta de quadro de I03.
 - [x] Aspectos éticos são contextualizados, com consentimento, gravação opcional, acesso e descarte.
 - [x] Há uma técnica completa por integrante, com nome e matrícula, e técnicas distintas.
 - [x] Questionário está incluído entre as técnicas.
