@@ -22,7 +22,7 @@ with sync_playwright() as p:
   if OUT: pg.wait_for_timeout(900); pg.screenshot(path=OUT+'/E06-P04_resultados_parciais_v2.png')
   pg.wait_for_selector('#newbar:not([hidden])',timeout=20000)
   ck('Aviso de lances novos sem refazer a lista', pg.evaluate("S.base.size")<pg.evaluate("done().length"), pg.inner_text('#newbar'))
-  pg.click('[data-shownew]'); 
+  pg.click('[data-shownew]');
   pg.wait_for_function("A.state==='done'",timeout=60000); pg.wait_for_timeout(300)
   if not pg.is_hidden('#newbar'): pg.click('[data-shownew]')
   ck('Lote termina em segundo plano e mostra os 8', pg.evaluate("base().length")==8 and 'Análise concluída' in pg.inner_text('#lote'), pg.inner_text('#lote').split('\n')[0])
