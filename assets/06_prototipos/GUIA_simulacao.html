@@ -105,7 +105,7 @@ fieldset .meta{margin-bottom:12px}
 .opt span:hover{box-shadow:inset 0 0 0 1px var(--line2)}
 .opt input:checked+span{background:var(--text);color:#fff;box-shadow:none}
 .opt input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
-.trow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:1fr;gap:8px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
 .trow:first-of-type{border-top:0}
 .trow .opts{margin-top:0}
 .trow>span{font-size:14.5px}
@@ -142,7 +142,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
 <main>
   <header class="hero">
     <h1>Guia da simulação</h1>
-    <p class="sub">Obrigado por topar. Você vai usar um protótipo por uns 15 minutos e depois contar como foi. Leia este guia até <b>Tarefas</b> antes de abrir o protótipo. A atividade é só para pessoas com 18 anos ou mais.</p>
+    <p class="sub">Obrigado por topar. Você vai usar um protótipo por uns 15 minutos e depois contar como foi. Ao todo, com a leitura do guia e o formulário, conte com cerca de 25 minutos. Leia este guia até <b>Tarefas</b> antes de abrir o protótipo. A atividade é só para pessoas com 18 anos ou mais.</p>
     <div class="hero-act">
       <a class="btn pri big" href="#projeto">Ler o guia</a>
       <a class="link" href="#feedback">Ir direto para o feedback</a>
@@ -249,13 +249,15 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
         <legend>Como você fez a simulação?</legend>
         <div class="opts">
           <label class="opt"><input type="radio" name="modo" value="sozinho" required><span>Sozinho(a)</span></label>
-          <label class="opt"><input type="radio" name="modo" value="acompanhado"><span>Com alguém da equipe acompanhando</span></label>
+          <label class="opt"><input type="radio" name="modo" value="acompanhado_sem_ajuda"><span>Com alguém da equipe acompanhando, sem ajuda nas tarefas</span></label>
+          <label class="opt"><input type="radio" name="modo" value="acompanhado_com_ajuda"><span>Com alguém da equipe acompanhando, e recebi ajuda em alguma tarefa</span></label>
           <label class="opt"><input type="radio" name="modo" value="prefiro_nao"><span>Prefiro não responder</span></label>
         </div>
       </fieldset>
 
       <fieldset>
         <legend>Como foi cada tarefa?</legend>
+        <p class="meta">Se alguém te ajudou numa tarefa, marque “Consegui com ajuda”, mesmo que também tenha tido dificuldade.</p>
         <div class="trow"><span>1. Preparar a análise</span><div class="opts" data-q="t1"></div></div>
         <div class="trow"><span>2. Acompanhar a análise</span><div class="opts" data-q="t2"></div></div>
         <div class="trow"><span>3. Escolher três lances</span><div class="opts" data-q="t3"></div></div>
@@ -275,7 +277,8 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
           <label class="opt"><input type="radio" name="variante" value="A" required><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/></svg>Busca primeiro</span></label>
           <label class="opt"><input type="radio" name="variante" value="B"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="5" rx="1.5"/><rect x="3" y="14" width="18" height="5" rx="1.5"/></svg>Trilhas por partida</span></label>
           <label class="opt"><input type="radio" name="variante" value="C"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Mosaico por tipo</span></label>
-          <label class="opt"><input type="radio" name="variante" value="nenhuma"><span>Não vi diferença</span></label>
+          <label class="opt"><input type="radio" name="variante" value="sem_preferencia"><span>Vi as três e não tenho preferência</span></label>
+          <label class="opt"><input type="radio" name="variante" value="nao_comparou"><span>Não consegui ver as três</span></label>
           <label class="opt"><input type="radio" name="variante" value="prefiro_nao"><span>Prefiro não responder</span></label>
         </div>
         <textarea name="variante_porque" placeholder="Por quê? (opcional)"></textarea>
@@ -328,7 +331,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
 const $=s=>document.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const form=$('#fb'), status=$('#status'), KEY='guia-e06-rascunho', VERSAO='2026-11-10';
 
-const NIVEIS=[['sim','Consegui'],['dificil','Com dificuldade'],['nao','Não consegui'],['prefiro_nao','Prefiro não responder']];
+const NIVEIS=[['sem_dificuldade','Consegui sem dificuldade'],['com_dificuldade','Consegui com dificuldade'],['com_ajuda','Consegui com ajuda'],['nao_consegui','Tentei e não consegui'],['nao_tentei','Não tentei'],['prefiro_nao','Prefiro não responder']];
 for(const box of $$('[data-q]'))
   box.innerHTML=NIVEIS.map(([v,l],i)=>`<label class="opt"><input type="radio" name="${box.dataset.q}" value="${v}"${i?'':' required'}><span>${l}</span></label>`).join('');
 
