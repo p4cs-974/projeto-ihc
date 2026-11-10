@@ -212,7 +212,7 @@ https://ihc.p4cs.com.br/guia/
 
 | ID | Pergunta | Campo e alternativas | Obrigatória |
 |---|---|---|---|
-| G01 | Nos últimos seis meses, você selecionou ou recortou lances de partidas de futebol para algum vídeo? | Escolha única: Sim, como parte do meu trabalho; Sim, por conta própria ou como hobby; Não, mas edito outros tipos de vídeo; Não edito vídeos | Sim |
+| G01 | Nos últimos seis meses, você selecionou ou recortou lances de partidas de futebol para algum vídeo? | Escolha única: Sim, como parte do meu trabalho; Sim, por conta própria ou como hobby; Não, mas edito outros tipos de vídeo; Não edito vídeos; Prefiro não responder | Sim |
 | G02 | Como você fez a simulação? | Escolha única: Sozinho(a); Com alguém da equipe acompanhando, sem ajuda nas tarefas; Com alguém da equipe acompanhando, e recebi ajuda em alguma tarefa; Prefiro não responder | Sim |
 | G03 | Como foi cada tarefa? | Grade com uma linha por tarefa (1. Preparar a análise; 2. Acompanhar a análise; 3. Escolher três lances; 4. Baixar o que escolheu): Consegui sem dificuldade; Consegui com dificuldade; Consegui com ajuda; Tentei e não consegui; Não tentei; Prefiro não responder. Orientação: com ajuda, marcar "Consegui com ajuda" mesmo que também tenha havido dificuldade | Sim |
 | G04 | Teve algum momento em que você não soube o que fazer? | Texto longo | Não |
