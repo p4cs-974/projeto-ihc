@@ -253,6 +253,19 @@ h3{margin:0;font-size:16px;font-weight:500}
 .obt ul{margin:6px 0 0;padding-left:18px;font-size:13px;color:var(--muted)}
 .obt-next{background:var(--fill);border-radius:16px;padding:12px 16px;font-size:13.5px}
 .obt-next b{font-weight:500}
+.t3-alert{flex:none;margin:0;padding:10px 18px;border-radius:16px;background:rgba(229,72,77,.06);font-size:13.5px;color:#a3262b}
+.t3-alert .link{color:#a3262b}
+.lv.fail{box-shadow:inset 0 0 0 1.5px #e5484d}
+.lv.fail .st{color:#a3262b}
+.fail-box{margin-top:10px;padding:14px 18px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1.5px #e5484d;font-size:14px}
+.fail-box h3{color:#a3262b;margin-bottom:4px}
+.fail-box p{margin:4px 0}
+.fail-act{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.seg.fail{background:repeating-linear-gradient(45deg,rgba(229,72,77,.16) 0 6px,#fff 6px 12px)}
+.lane-msg{position:absolute;inset:0;display:grid;place-items:center;font-size:12.5px;color:var(--muted)}
+.lane-fail{position:absolute;top:0;bottom:0;right:0;border-left:2px solid #e5484d;background:repeating-linear-gradient(45deg,rgba(229,72,77,.12) 0 6px,transparent 6px 12px);border-radius:0 14px 14px 0;display:grid;place-items:center;font-size:12px;color:#a3262b}
+.enc{display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;margin:-16px 0 8px;font-size:13.5px;color:var(--muted)}
+.enc-n{text-align:center;max-width:640px;margin:0 auto 24px;font-size:13px;color:var(--muted)}
 @media (max-width:760px){.lote-l{grid-template-columns:1fr 1fr}.obt{grid-template-columns:1fr}.t3-top{flex-wrap:wrap}}
 </style>
 </head>
@@ -281,12 +294,14 @@ h3{margin:0;font-size:16px;font-weight:500}
       <button class="btn" data-go="1">Adicionar vídeos</button>
     </div>
     <div class="grid" id="grid"></div>
+    <div class="enc" id="enc"></div><p class="enc-n" id="enc-n"></p>
     <div class="center"><button class="btn pri big" id="start">Iniciar</button></div>
   </section>
 
   <!-- Tela 3: só prévias e trilhas -->
   <section class="screen" id="t3" hidden>
     <div class="t3-top"><button class="btn" id="restart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>Reiniciar análise</button><div class="t3-go"><span class="meta" id="t3-st" role="status"></span><button class="btn pri" id="t3-next" data-go="4" disabled>Ver resultados prontos</button></div></div>
+    <p class="t3-alert" id="t3-alert" role="alert" hidden></p>
     <div class="previews"><p class="meta t3-note">Simulação: nenhum modelo assiste ao vídeo. As prévias tocam em 2× os trechos anotados no SoccerNet e revelam cada lance no instante anotado.</p><div class="pvg">
       <div class="pv" id="pv0"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div></div>
       <div class="pv" id="pv1"><img alt="" hidden><video muted playsinline hidden></video><div class="pv-idle"></div><div class="pv-top"><span class="pill" data-n></span><span class="pill" data-s></span></div><div class="pv-chips"></div></div>
@@ -339,6 +354,12 @@ const RATE=2; // velocidade dos cortes na Tela 3
 let MF=null, MF_ERR=null, MATCHES=[], TYPES=[];
 let V=[], H=[], HM={};
 const SEL=new Set();
+// percursos encenados: nenhuma falha real acontece; o cenário só muda como a demonstração trata um vídeo
+const SCEN={
+  normal:{name:'Percurso normal'},
+  falha:{name:'Falha em um vídeo',src:'bayern-real-2017-1t',note:'A análise do 1º tempo de Bayern 1 x 2 Real Madrid é interrompida no meio do arquivo. Os outros vídeos seguem normalmente.'},
+  vazio:{name:'Vídeo sem lances',src:'bayern-real-2017-2t',note:'O 2º tempo de Bayern 1 x 2 Real Madrid termina sem lances encontrados. Os cortes reais desse tempo ficam fora desta demonstração.'},
+};
 // limites exatos do corte publicado, em segundos do arquivo de origem; a anotação é um instante dentro dele
 const clip=h=>({a:h.media.cutStartSeconds,b:h.media.cutEndSeconds,dur:h.media.durationSeconds,ev:h.media.eventClipSeconds});
 
@@ -359,11 +380,12 @@ function load(){
   const byMatch=new Map();
   V=MF.sources.map((s,i)=>{
     if(!byMatch.has(s.match))byMatch.set(s.match,{name:s.matchName,teams:s.teams,date:s.date});
-    return {i,id:s.id,name:s.file.split('/').pop(),m:byMatch.get(s.match),half:s.half,dur:s.durationSeconds,c:COLORS[i%COLORS.length],src:s,prog:0,st:'aguardando',poster:MF.clips.find(c=>c.sourceId===s.id)?.poster};
+    return {i,id:s.id,name:s.file.split('/').pop(),m:byMatch.get(s.match),half:s.half,dur:s.durationSeconds,c:COLORS[i%COLORS.length],src:s,prog:0,st:'aguardando',poster:MF.clips.find(c=>c.sourceId===s.id)?.poster,
+      failAt0:S.cen==='falha'&&s.id===SCEN.falha.src?1:null,empty:S.cen==='vazio'&&s.id===SCEN.vazio.src};
   });
   MATCHES=[...byMatch.values()];
   TYPES=[...new Set(MF.clips.map(c=>c.type))].map(k=>({k,a:k.slice(0,3).toUpperCase()}));
-  H=MF.clips.map(c=>({id:c.id,v:V.find(v=>v.id===c.sourceId),media:c,type:TYPES.find(t=>t.k===c.type),t:c.eventSourceSeconds,found:false,done:false}));
+  H=MF.clips.filter(c=>!V.find(v=>v.id===c.sourceId).empty).map(c=>({id:c.id,v:V.find(v=>v.id===c.sourceId),media:c,type:TYPES.find(t=>t.k===c.type),t:c.eventSourceSeconds,found:false,done:false}));
   HM=Object.fromEntries(H.map(h=>[h.id,h]));
   SEL.clear(); resetAnalysis(); prefetch();
 }
@@ -401,6 +423,8 @@ async function pruneCache(){
   const keep=new Set(MF.clips.map(ckey));
   for(const r of await cache.keys())if(!keep.has(r.url))await cache.delete(r);
 }
+// ponto encenado da falha: meio do intervalo entre o último corte lido e o seguinte
+const failPos=(segs,i)=>Math.round(((segs[i-1]?.media.cutEndSeconds??0)+segs[i].media.cutStartSeconds)/2);
 const route=v=>H.filter(h=>h.v===v).sort((a,b)=>a.media.cutStartSeconds-b.media.cutStartSeconds);
 // baixa na ordem em que a Tela 3 vai precisar (rodada de prévias, corte, prévia), dois por vez
 function prefetch(){
@@ -464,6 +488,7 @@ function lane(v,s){
   el.defaultPlaybackRate=RATE;
   const l={v,s,segs,el,k:knots(v,segs),i:-1,ph:'load',played:0,blob:null,err:null,url:null};
   el.onerror=()=>{if(el.getAttribute('src'))l.err='o vídeo não pôde ser reproduzido'};
+  if(!segs.length){l.ph='scan';return l}
   next(l);
   return l;
 }
@@ -471,6 +496,7 @@ function lane(v,s){
 function next(l){
   if(l.i>=0)l.played+=l.segs[l.i].media.durationSeconds;
   unload(l);l.i++;l.blob=l.err=null;
+  if(l.v.failAt!=null&&l.i===l.v.failAt){l.ph='done';l.v.fail=failPos(l.segs,l.i);return}
   const h=l.segs[l.i];
   if(!h){l.ph='done';return}
   l.ph='load';
@@ -488,7 +514,9 @@ function unload(l){
   l.el.pause();l.el.removeAttribute('src');l.el.load();l.el.hidden=true;
   if(l.url)URL.revokeObjectURL(l.url);l.url=null;
 }
+const SCAN_MS=12000;
 function advance(l){
+  if(l.ph==='scan'){l.t0??=performance.now();l.v.prog=Math.min(1,(performance.now()-l.t0)/SCAN_MS);if(l.v.prog>=1)l.ph='done';return}
   if(l.ph==='play'&&l.el.ended)next(l);
   if(l.ph==='load'&&l.blob){
     l.url=URL.createObjectURL(l.blob);l.el.src=l.url;l.el.hidden=false;l.ph='play';
@@ -496,13 +524,13 @@ function advance(l){
   }
   const h=l.segs[l.i],ct=l.ph==='play'?l.el.currentTime:0;
   if(l.ph==='play'&&!h.found&&ct>=h.media.eventClipSeconds)detect(h,l.s);
-  l.v.prog=l.ph==='done'?1:along(l.k,l.played+ct);
+  l.v.prog=l.ph==='done'?(l.v.fail!=null?l.v.fail/l.v.dur:1):along(l.k,l.played+ct);
 }
 function resetAnalysis(){
   A.gen++;cancelAnimationFrame(A.raf);A.raf=0;
   [...A.slots,...A.last].forEach(l=>l&&unload(l));
   $$('.chip2,.fly').forEach(e=>e.remove());A.state='idle';A.slots=[null,null];A.last=[null,null];
-  V.forEach(v=>{v.prog=0;v.st='aguardando'});H.forEach(h=>{h.found=h.done=false});
+  V.forEach(v=>{v.prog=0;v.st='aguardando';v.failAt=v.failAt0;v.fail=null;v.pend=false});H.forEach(h=>{h.found=h.done=false});S.confirm=null;
 }
 function startAnalysis(){resetAnalysis();A.state='running';fill();sync()}
 // fora da Tela 3 a análise continua em segundo plano: um vídeo termina a cada BG_MS, sem reproduzir nada
@@ -521,10 +549,17 @@ function bgStep(){
 }
 function finishVideo(v){
   A.slots.forEach((l,s)=>{if(l?.v===v)A.slots[s]=null});
-  const hs=route(v);
-  hs.forEach(h=>{h.found=h.done=true});
-  v.prog=1;v.st='pronto';
-  A.last.forEach(l=>{if(l?.v===v){unload(l);Object.assign(l,{ph:'done',i:hs.length,err:null})}});
+  const hs=route(v),cut=v.failAt??hs.length;
+  hs.forEach((h,j)=>{if(j<cut)h.found=h.done=true});
+  if(v.failAt!=null){v.fail=failPos(hs,cut);v.prog=v.fail/v.dur;v.st='falhou'}else{v.prog=1;v.st='pronto'}
+  A.last.forEach(l=>{if(l?.v===v){unload(l);Object.assign(l,{ph:'done',i:cut,err:null})}});
+}
+function retry(id){
+  const v=V.find(x=>x.id===id);
+  Object.assign(v,{failAt:null,fail:null,pend:false,st:'aguardando',prog:0});S.confirm=null;
+  if(A.state==='done')A.state='running';
+  sync();bgSync();refresh();
+  toast(`Nova tentativa só para ${v.m.name} · ${v.half}º tempo. Os outros vídeos continuam como estão.`);
 }
 function refresh(){
   if(S.tela===2)renderGrid();
@@ -539,7 +574,7 @@ function sync(){
   if(!on&&A.raf){cancelAnimationFrame(A.raf);A.raf=0}
 }
 function tick(){
-  A.slots.forEach(l=>{if(!l)return;advance(l);if(l.ph==='done'){l.v.st='pronto';A.slots[l.s]=null}});
+  A.slots.forEach(l=>{if(!l)return;advance(l);if(l.ph==='done'){l.v.st=l.v.fail!=null?'falhou':'pronto';A.slots[l.s]=null}});
   fill();
   if(S.tela===3)paintT3();
   A.raf=A.state==='running'?requestAnimationFrame(tick):0;
@@ -551,7 +586,7 @@ function fill(){
 }
 function finishAll(){
   A.gen++;cancelAnimationFrame(A.raf);A.raf=0;
-  V.forEach(v=>{if(v.st!=='pronto')finishVideo(v)});
+  V.forEach(v=>{if(v.st!=='pronto'&&v.st!=='falhou')finishVideo(v)});
   A.slots=[null,null];A.state='done';$$('.chip2').forEach(e=>e.remove());
 }
 // revelado na prévia → voa até a trilha
@@ -607,27 +642,31 @@ function paintT3(){
   [0,1].forEach(s=>{
     const l=A.slots[s]||A.last[s],pv=$('#pv'+s),img=pv.querySelector('img'),idle=pv.querySelector('.pv-idle'),st=pv.querySelector('[data-s]');
     pv.querySelector('.pv-top').hidden=!l;
-    idle.hidden=!!l;
+    idle.hidden=!!l&&!!l.segs.length;
     if(!l){idle.textContent='Sem vídeo nesta prévia';pv.style.removeProperty('--c');img.hidden=true;return}
-    const v=l.v,h=l.segs[l.i]||l.segs.at(-1);
+    const v=l.v,h=v.fail!=null?l.segs[Math.max(0,v.failAt-1)]:l.segs[l.i]||l.segs.at(-1);
+    if(!h)idle.textContent=l.ph==='scan'?'Analisando este tempo. Nenhum lance encontrado até agora.':'Análise concluída: nenhum lance encontrado neste tempo.';
     pv.style.setProperty('--c',v.c);
     img.hidden=l.ph==='play'||!h;
     if(h&&img.dataset.id!==h.id){img.dataset.id=h.id;img.src=h.media.poster;img.alt=`Quadro do corte: ${h.media.title}`}
     pv.querySelector('[data-n]').innerHTML=`<i class="dot"></i>${esc(v.m.name)} · ${v.half}º tempo`;
     st.hidden=l.ph==='play'&&!l.err;
-    st.textContent=l.err?`Erro · ${l.err}`:{load:'Carregando trecho',play:'',done:'Pronto'}[l.ph];
+    st.textContent=l.err?`Erro · ${l.err}`:v.fail!=null?`Falhou em ${tc(v.fail)}`:{load:'Carregando trecho',play:'',scan:'Analisando',done:h?'Pronto':'Pronto · nenhum lance'}[l.ph];
   });
-  V.forEach(v=>{const f=document.getElementById('sf'+v.i);if(f)f.style.width=v.prog*100+'%'});
-  const n=done().length,c={pronto:0,processando:0,aguardando:0};V.forEach(v=>c[v.st]++);
+  V.forEach(v=>{const f=document.getElementById('sf'+v.i);if(f){f.style.width=v.prog*100+'%';f.parentElement.classList.toggle('fail',v.st==='falhou')}});
+  const n=done().length,c={pronto:0,processando:0,aguardando:0,falhou:0};V.forEach(v=>c[v.st]++);
   $('#k-hl').textContent=`${n} ${n===1?'lance':'lances'}`;
-  $('#k-vid').textContent=[c.pronto&&`${c.pronto} pronto${c.pronto>1?'s':''}`,c.processando&&`${c.processando} processando`,c.aguardando&&`${c.aguardando} aguardando`].filter(Boolean).join(' · ');
+  $('#k-vid').textContent=[c.pronto&&`${c.pronto} pronto${c.pronto>1?'s':''}`,c.processando&&`${c.processando} processando`,c.aguardando&&`${c.aguardando} aguardando`,c.falhou&&`${c.falhou} com falha`].filter(Boolean).join(' · ');
+  const fl=V.filter(v=>v.st==='falhou'),al=$('#t3-alert');
+  al.hidden=!fl.length;
+  if(fl.length)setHTML(al,fl.map(v=>`<b>${esc(v.m.name)} · ${v.half}º tempo:</b> a análise parou em ${tc(v.fail)} do arquivo. Os outros vídeos não foram afetados. <button class="link" data-go="4">Ver o que aconteceu e as opções</button>`).join('<br>'));
   const p=V.reduce((a,v)=>a+v.prog*v.dur,0)/total();
   $('#tr-all>i').style.width=p*100+'%';
-  $('#tr-all>span').textContent=A.state==='done'?'Análise concluída':Math.floor(p*100)+'%';
+  $('#tr-all>span').textContent=A.state==='done'?(c.falhou?`Análise encerrada · ${c.falhou} com falha`:'Análise concluída'):Math.floor(p*100)+'%';
   $('#k-all').textContent=A.state==='done'?`${V.length} vídeos · ${hm(total())}`:`${c.pronto} de ${V.length} vídeos`;
   const nx=$('#t3-next');
   if(A.state==='done'){
-    setHTML($('#t3-st'),`<b>✓ Análise concluída.</b> ${plural(n,'lance pronto','lances prontos')} para revisar`);
+    setHTML($('#t3-st'),c.falhou?`<b>Análise encerrada com ${c.falhou} falha.</b> ${plural(n,'lance pronto','lances prontos')} para revisar`:`<b>✓ Análise concluída.</b> ${plural(n,'lance pronto','lances prontos')} para revisar`);
     nx.textContent=`Ver os ${plural(n,'lance','lances')} na base →`;nx.disabled=!n;
   }else{
     setHTML($('#t3-st'),n?`<b>${plural(n,'lance pronto','lances prontos')}</b> para revisar. A análise continua nos vídeos`:'Os lances ficam disponíveis assim que aparecem');
@@ -673,7 +712,11 @@ function VA(root,focus){
       html+=`<div class="row${open===h.id?' open':''}" data-row="${h.id}" style="--c:${h.v.c}"><div class="th">${poster(h)}<span class="ab">${h.type.a}</span></div><div><b>${esc(h.media.title)}</b> <span class="meta">· ${when(h)}</span><div class="meta">corte de ${clip(h).dur} s · arquivo ${tc(clip(h).a)}–${tc(clip(h).b)} · ${esc(h.v.name)}</div></div>${inclBtn(h)}</div>`;
       if(open===h.id)html+=`<div class="expand">${detail(h,true)}</div>`;
     });
-    $('#va-list').innerHTML=html||`<div class="empty">Nenhum lance encontrado. <button class="link" data-clear>Limpar busca e filtros</button></div>`;
+    const none=V.filter(v=>v.st==='pronto'&&!H.some(h=>h.v===v));
+    $('#va-list').innerHTML=(html||(all.length
+      ?`<div class="empty">Nenhum lance corresponde à busca e aos filtros. A base tem ${plural(all.length,'lance','lances')}. <button class="link" data-clear>Limpar busca e filtros</button></div>`
+      :`<div class="empty">${A.state==='done'?'A análise terminou sem lances nos vídeos do lote.':'Ainda não há lances prontos. Eles aparecem aqui quando cada vídeo terminar.'}</div>`))
+      +none.map(v=>`<div class="grp"><b>${esc(v.m.name)} · ${v.half}º tempo</b><span class="dim">análise concluída, nenhum lance encontrado neste tempo</span></div>`).join('');
   };
   root.oninput=e=>{if(e.target.id==='va-q'){q=e.target.value;open=null;draw()}};
   root.onclick=e=>{
@@ -709,6 +752,8 @@ function VB(root,focus){
         html+=`<div class="lane" style="--c:${v.c}"><div class="lane-l"><span><i class="dot"></i>${v.half}º tempo</span><small>jogo ${v.half===1?"0'–45'":"45'–90'"}</small></div><div class="lane-t">`
           +[15,30].map(mn=>`<i class="tk" style="left:${mn*60/v.dur*100}%"><span>${mn} min</span></i>`).join('')
           +hs.filter(h=>h.v===v).map(h=>`<button class="bm${SEL.has(h.id)?' sel':''}${act===h.id?' act':''}" data-selmark="${h.id}" data-bm="${h.id}" style="left:${h.t/v.dur*100}%" title="${esc(h.media.title)} · minuto ${tc(h.t)} do arquivo"><span>${esc(h.type.k)}</span><small class="mono">jogo ${esc(h.media.matchTime)}</small></button>`).join('')
+          +(v.st==='falhou'?`<i class="lane-fail" style="left:${v.fail/v.dur*100}%" title="Não analisado depois de ${tc(v.fail)}">não analisado</i>`:'')
+          +(!all.some(h=>h.v===v)&&v.st!=='falhou'?`<span class="lane-msg">${v.st!=='pronto'?'Análise em andamento':H.some(h=>h.v===v)?'Lances prontos ainda fora da lista':'Análise concluída: nenhum lance encontrado neste tempo'}</span>`:'')
           +(act&&HM[act].v===v?pop(HM[act],L):'')+`</div></div>`;
       });
       html+='</section>';
@@ -792,20 +837,34 @@ const VICON={
 let cur=null;
 function updDL(){const n=SEL.size;$('#dl').textContent=`Obter seleção (${n})`;$('#dl').disabled=!n;$('#dl').title=n?'':'Selecione ao menos um lance'}
 const ST={
-  pronto:(v,n)=>`Pronto · ${plural(n,'lance','lances')}`,
+  pronto:(v,n)=>n?`Pronto · ${plural(n,'lance','lances')}`:'Pronto · nenhum lance encontrado',
+  falhou:(v,n)=>`${v.pend?'Pendente · ':''}Falhou em ${tc(v.fail)} · ${plural(n,'lance preservado','lances preservados')}`,
   processando:(v,n)=>`Em análise${v.prog>0?` · ${Math.floor(v.prog*100)}%`:''}${n?` · ${plural(n,'lance','lances')} até agora`:''}`,
   aguardando:()=>'Na fila',
 };
+// T03 3.3: ler o problema, avaliar a ação e encaminhar só a entrada afetada
+function failBox(v){
+  const n=H.filter(h=>h.v===v&&h.done).length,others=V.length-1;
+  const act=S.confirm===v.id
+    ?`<span>Analisar de novo só este vídeo, desde o início? Os outros ${others} não são reprocessados.</span><button class="btn pri" data-retry="${v.id}">Confirmar nova tentativa</button><button class="btn" data-cancel>Cancelar</button>`
+    :`<button class="btn pri" data-askretry="${v.id}">Tentar de novo este vídeo</button>${v.pend?'':`<button class="btn" data-pend="${v.id}">Deixar pendente e revisar os outros</button>`}<span class="meta">Reenviar um arquivo corrigido não está disponível nesta demonstração.</span>`;
+  if(v.pend&&S.confirm!==v.id)return `<div class="fail-box"><p><b>${esc(v.m.name)} · ${v.half}º tempo, pendente.</b> O trecho depois de ${tc(v.fail)} não foi analisado.</p><div class="fail-act">${act}</div></div>`;
+  return `<div class="fail-box"><h3>${esc(v.m.name)} · ${v.half}º tempo: a análise não terminou</h3>
+    <p>A leitura de <span class="mono">${esc(v.name)}</span> falhou em <span class="mono">${tc(v.fail)}</span> do arquivo. Falha encenada nesta demonstração.</p>
+    <p>${n?`${n===1?'O lance encontrado antes da falha continua':`Os ${n} lances encontrados antes da falha continuam`} na base.`:'Nenhum lance foi encontrado antes da falha.'} Os outros ${others} vídeos não foram afetados.</p>
+    <p class="meta">O trecho depois de ${tc(v.fail)} não foi analisado e pode conter lances.</p>
+    <div class="fail-act">${act}</div></div>`;
+}
 function paintLote(){
   const k=s=>V.filter(v=>v.st===s).length;
   const head=A.state==='done'
-    ?`<span><b>✓ Análise concluída</b> · ${k('pronto')} de ${V.length} vídeos prontos</span><span>A cor identifica o vídeo de origem</span>`
+    ?`<span><b>${k('falhou')?`Análise encerrada com ${k('falhou')} falha`:'✓ Análise concluída'}</b> · ${k('pronto')} de ${V.length} vídeos prontos</span><span>A cor identifica o vídeo de origem</span>`
     :`<span><b>Análise em andamento</b> · ${k('pronto')} de ${V.length} vídeos prontos. Os lances dos outros entram aqui quando cada vídeo terminar</span><button class="link" data-go="3">Acompanhar a análise</button>`;
   const card=v=>{
-    const n=H.filter(h=>h.v===v&&h.done).length,bar=v.st!=='pronto';
-    return `<div class="lv" style="--c:${v.c}"><b title="${esc(v.m.name)}"><i class="dot"></i>${esc(v.m.name)}</b><span>${v.half}º tempo</span><span class="st">${ST[v.st](v,n)}</span>${bar?`<span class="bar"><i style="width:${v.prog*100}%"></i></span>`:''}</div>`;
+    const n=H.filter(h=>h.v===v&&h.done).length,bar=v.st==='processando'||v.st==='aguardando';
+    return `<div class="lv${v.st==='falhou'?' fail':''}" style="--c:${v.c}"><b title="${esc(v.m.name)}"><i class="dot"></i>${esc(v.m.name)}</b><span>${v.half}º tempo</span><span class="st">${ST[v.st](v,n)}</span>${bar?`<span class="bar"><i style="width:${v.prog*100}%"></i></span>`:''}</div>`;
   };
-  setHTML($('#lote'),`<div class="lote-h">${head}</div><div class="lote-l">${V.map(card).join('')}</div>`);
+  setHTML($('#lote'),`<div class="lote-h">${head}</div><div class="lote-l">${V.map(card).join('')}</div>${V.filter(v=>v.st==='falhou').map(failBox).join('')}`);
   const nw=done().length-S.base.size,nb=$('#newbar');
   nb.hidden=nw<=0;
   if(nw>0)setHTML(nb,`<button class="btn" data-shownew>Mostrar ${plural(nw,'lance novo','lances novos')} na lista</button>`);
@@ -864,6 +923,8 @@ function renderGrid(){
   $('#t2-sub').textContent=V.length?`${V.length} ${V.length===1?'vídeo':'vídeos'} · ${hm(total())} de gravação · as gravações completas não são publicadas, só os cortes`:'Nenhum vídeo';
   $('#grid').innerHTML=V.length?V.map(v=>{const s=v.src.video;return `<article class="vcard" style="--c:${v.c}"><div class="th">${v.poster?`<img src="${esc(v.poster)}" alt="Quadro do ${v.half}º tempo" width="398" height="224">`:''}<span class="dur mono">${tc(v.dur)}</span></div>${started?'':`<button class="rm" data-rm="${v.i}" aria-label="Remover ${esc(v.name)}">×</button>`}<div class="vname"><i class="dot"></i>${mid(v.name)}</div><div class="vmeta">${esc(v.m.name)} · ${v.half}º tempo<br>${s.width}×${s.height} · ${s.fps} fps · ${mb(v.src.sizeBytes)}</div><span class="vstate">${started?v.st[0].toUpperCase()+v.st.slice(1):'Pronto para análise'}</span></article>`}).join(''):'';
   $('#grid').style.display=V.length?'':'none';
+  $('#enc').innerHTML=started?`<span>Percurso encenado: ${SCEN[S.cen].name}</span>`:'<span>Percurso da demonstração:</span>'+Object.entries(SCEN).map(([k,c])=>`<button class="chip${S.cen===k?' on':''}" data-cen="${k}" aria-pressed="${S.cen===k}">${c.name}</button>`).join('');
+  $('#enc-n').textContent=SCEN[S.cen].note||'';
   $('#start').textContent=started?'Ver análise':'Iniciar';
   $('#start').disabled=!V.length;
 }
@@ -875,9 +936,9 @@ $('#start').onclick=()=>go(3);
 $('#restart').onclick=()=>{startAnalysis();buildTracks();paintT3()};
 
 // ---------- navegação ----------
-const S={tela:1,variant:'A',focus:null,base:new Set()};
+const S={tela:1,variant:'A',focus:null,base:new Set(),cen:'normal',confirm:null};
 function url(){
-  const p=new URLSearchParams({tela:S.tela});if(S.tela===4)p.set('variant',S.variant);
+  const p=new URLSearchParams({tela:S.tela});if(S.tela===4)p.set('variant',S.variant);if(S.cen!=='normal')p.set('cenario',S.cen);
   try{history.replaceState(null,'','?'+p)}catch{}
 }
 function go(n){
@@ -901,6 +962,11 @@ document.addEventListener('click',e=>{
   const p=e.target.closest('[data-play]');if(p){play(p);return}
   const t=e.target.closest('[data-vt]');if(t&&t.dataset.vt!==S.variant){setVariant(t.dataset.vt);return}
   if(e.target.closest('[data-shownew]')){renderBase();return}
+  const cn=e.target.closest('[data-cen]');if(cn){S.cen=cn.dataset.cen;load();renderGrid();url();return}
+  const ar=e.target.closest('[data-askretry]');if(ar){S.confirm=ar.dataset.askretry;paintLote();return}
+  if(e.target.closest('[data-cancel]')){S.confirm=null;paintLote();return}
+  const rt=e.target.closest('[data-retry]');if(rt){retry(rt.dataset.retry);return}
+  const pd=e.target.closest('[data-pend]');if(pd){V.find(x=>x.id===pd.dataset.pend).pend=true;paintLote();return}
   if(e.target.closest('[data-obt-close]')||e.target.matches('[data-obt-bg]')){obtain(false);return}
   if(e.target.closest('[data-dlcsv]')){downloadCSV();return}
   if(e.target.closest('[data-dlmp4]')){downloadMP4();return}
@@ -917,6 +983,7 @@ document.addEventListener('keydown',e=>{
 
 const Q=new URLSearchParams(location.search);
 if(VARIANTS[Q.get('variant')])S.variant=Q.get('variant');
+if(SCEN[Q.get('cenario')])S.cen=Q.get('cenario');
 const want=Math.min(4,Math.max(1,+Q.get('tela')||1));
 go(1);
 loadManifest().then(()=>{if(MF&&want>1)go(want)});
