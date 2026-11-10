@@ -189,16 +189,50 @@ As respostas do I02 podem orientar o vocabulário, as dúvidas e a interpretaç�
 
 ## 4. Como o ciclo será iterado
 
-| Etapa ou evidência | Artefatos a revisitar | Critério para a revisão |
-|---|---|---|
-| Coleta da Entrega 7 | Hipóteses em RASTREABILIDADE, personas, cenários e tarefas das Entregas 1 e 3–5; plataforma e metas desta entrega | Confirmar ou refinar perfil, vocabulário, condições de uso e necessidade das funções. Não presumir validação do contexto profissional por U01 |
-| Próxima iteração do protótipo | E06-D01, D02, D05 e D06; modelo conceitual, MoLIC e protótipo das Entregas 9–11 | Revisar continuidade, legibilidade e significado de saídas e metadados. Esta entrega não implementa mudanças de interface |
-| Piloto e planejamento da Entrega 12 | Instruções adaptadas do guia, gabaritos, condições iniciais, critérios de ajuda, registro de tempo e limites confirmados | Verificar aplicação dos critérios por outro avaliador e cobertura de P01/P03. Registrar a manutenção ou alteração dos limites antes do teste principal. Manter a investigação de maior volume, E06-D04, como questão futura; os oito candidatos não a resolvem |
-| Inspeção da Entrega 13 | Telas e estados pertinentes, operação por teclado, contraste e mensagens | Relacionar achados às metas afetadas. Inspeção pode revelar obstáculos, mas não comprova satisfação ou desempenho com usuários |
-| Observação da Entrega 14 | MU01–MU06, MQ01–MQ04, evidências e decisões de revisão | Confrontar arquivos, ações e respostas com os critérios fixados. Separar participantes finais de proxies e desempenho técnico de dificuldade de interação |
-| Nova versão após avaliação | Protótipo, tarefas afetadas, matriz e histórico desta entrega | Ligar cada mudança ao achado e reaplicar a tarefa afetada. Mudança implementada só conta como melhoria verificada após nova evidência |
+O projeto adota o Ciclo de Vida de Engenharia de Usabilidade de Mayhew, conforme [Processos de Projeto de IHC, Parte 1](../slides_plinio/CC8122-Processos-Parte1.pdf), slides 4 e 8, e [Parte 2](../slides_plinio/CC8122-Processos-Parte2.pdf), slides 2–25. O ciclo tem três fases: análise de requisitos; projeto, teste e desenvolvimento em três níveis; e instalação com feedback do usuário. Os três níveis são o projeto essencial, os padrões de telas e diálogos e o projeto detalhado. Eles se repetem, nessa ordem, para cada grupo de funcionalidades essenciais. Cada nível termina em testes que decidem o avanço ou o retorno.
 
-Falhas de análise, recuperação localizada, acesso a resultados parciais, histórico e retomada após recarga permanecem lacunas do protótipo. Quando houver estados suficientes para demonstrá-las, suas metas devem ser especificadas antes da avaliação correspondente. A ausência atual não justifica construir backend, aprovação editorial ou edição detalhada dentro da disciplina.
+Os números das entregas indicam a ordem de produção na disciplina. Eles não impedem retornos: um achado da Entrega 14 pode reabrir as Entregas 5, 8 ou 9.
+
+### 4.1 Etapas do ciclo e trabalho do projeto
+
+| Fase ou nível de Mayhew | Atividade do ciclo | Trabalho do projeto | Estado |
+|---|---|---|---|
+| Análise de requisitos | Perfil do usuário | Personas P01 e P03 como primárias e P02 como continuidade editorial externa, [Entrega 3](03_personas_contexto_jornada.md); hipóteses na [matriz](../RASTREABILIDADE.md) | [H] Proto-personas; coleta da [Entrega 7](07_coleta_dados.md) planejada, sem respostas analisadas |
+| Análise de requisitos | Análise contextual das tarefas | Cenários de problema da [Entrega 4](04_cenarios_problema.md) e T01–T03 da [Entrega 5](05_analise_tarefas.md) | [H] Modelos do uso proposto, sem medição de desempenho humano |
+| Análise de requisitos | Capacidades e restrições da plataforma | Seção 1 desta entrega | [F] Conferidas no código e no manifesto |
+| Análise de requisitos | Princípios gerais de projeto | Seção 2, PN01–PN04 e PI01–PI06 | Definidos nesta entrega |
+| Análise de requisitos | Metas de usabilidade | Seção 3: MQ01–MQ04, MU01–MU08 e prioridades da seção 3.3 | MU01–MU06 confirmadas por Pedro em 29/10/2026; MU07, MU08 e pesos propostos, a confirmar |
+| Análise de requisitos | Guia de estilo | Registro das decisões de todas as fases. Começa com os princípios e as metas desta entrega | [?] Ainda não há documento próprio. As decisões ficam no histórico de cada entrega e na matriz até sua criação no Nível 2 |
+| Nível 1, projeto essencial | Reengenharia do trabalho | Nova repartição da tarefa: o serviço sugere candidatos, a pessoa decide e continua fora do serviço, PN01 e PN02 | [H] Descrita nas Entregas 4 e 5 |
+| Nível 1, projeto essencial | Modelo conceitual | Lote, análise, candidato, seleção e saídas, com navegação entre eles, [Entrega 9](09_modelo_conceitual.md) e Entrega 10, MoLIC | Entrega 9 em revisão; Entrega 10 não iniciada |
+| Nível 1, projeto essencial | Maquete e testes de interface | Protótipo em papel e simulação dupla com U01, [Entrega 6](06_prototipacao_papel.md) | [F] Uma sessão formativa; decisões E06-D01 a D06 |
+| Nível 2, padrões de telas e diálogos | Padrões de telas e diálogos | Regras de controles, terminologia, cores e fontes derivadas de PI02–PI06, aplicadas na Entrega 11 | Não iniciado |
+| Nível 2, padrões de telas e diálogos | Protótipo de baixa fidelidade | Protótipo HTML com exemplos anotados, que dialoga com a pessoa sem executar o detector, e protótipo no Figma, Entrega 11 | [F] HTML existente; Figma não iniciado |
+| Nível 2, padrões de telas e diálogos | Testes | Planejamento, Entrega 12; inspeção, Entrega 13; observação com MU01–MU08, Entrega 14 | Não iniciados |
+| Nível 3, projeto detalhado | Projeto detalhado e testes | Mensagens de falha, recuperação localizada, resultados parciais, histórico, retomada após recarga e volume maior que oito candidatos. Testes medem tempos contra os valores admissíveis | [H] Fora do protótipo atual; depende da continuidade do sistema no TCC |
+| Instalação | Feedback do usuário | Feedback de quem já usa o sistema real, que pode originar nova versão ou novos requisitos | Fora do alcance da disciplina; sem sistema instalado |
+
+### 4.2 Iteração planejada
+
+| Etapa de Mayhew | Etapa ou evidência | Artefatos a revisitar | Critério para a revisão |
+|---|---|---|---|
+| Análise de requisitos | Coleta da Entrega 7 | Hipóteses em RASTREABILIDADE, personas, cenários e tarefas das Entregas 1 e 3–5; plataforma e metas desta entrega | Confirmar ou refinar perfil, vocabulário, condições de uso e necessidade das funções. Não presumir validação do contexto profissional por U01 |
+| Nível 1, projeto essencial | Revisão do modelo conceitual | E06-D01, D02, D05 e D06; modelo conceitual e MoLIC das Entregas 9 e 10 | Revisar continuidade e significado de seleção, saídas e metadados no modelo antes de definir telas. Esta entrega não implementa mudanças de interface |
+| Nível 2, padrões de telas e diálogos | Próxima iteração do protótipo, Entrega 11 | Padrões de telas e diálogos, guia de estilo, protótipo | Aplicar PI02–PI06 a rótulos, controles, contraste e terminologia, com a mesma nomenclatura nas visualizações e no CSV |
+| Nível 2, testes | Piloto e planejamento da Entrega 12 | Instruções adaptadas do guia, gabaritos, condições iniciais, critérios de ajuda, registro de tempo, limites e instrumentos da seção 3.4 | Verificar aplicação dos critérios por outro avaliador e cobertura de P01/P03. Confirmar pesos, MU07 e MU08 e registrar a manutenção ou alteração dos limites antes do teste principal. Manter a investigação de maior volume, E06-D04, como questão futura; os oito candidatos não a resolvem |
+| Nível 2, testes | Inspeção da Entrega 13 | Telas e estados pertinentes, operação por teclado, contraste e mensagens | Relacionar achados às metas afetadas. Inspeção pode revelar obstáculos, mas não comprova satisfação ou desempenho com usuários |
+| Nível 2, testes | Observação da Entrega 14 | MU01–MU08, MQ01–MQ04, evidências e decisões de revisão | Confrontar arquivos, ações e respostas com os critérios fixados. Separar participantes finais de proxies e desempenho técnico de dificuldade de interação |
+| Retorno ao nível indicado pelo achado | Nova versão após avaliação | Protótipo, tarefas afetadas, matriz, guia de estilo e histórico desta entrega | Ligar cada mudança ao achado e reaplicar a tarefa afetada. Mudança implementada só conta como melhoria verificada após nova evidência |
+
+### 4.3 Avanço, retorno e registro das decisões
+
+- **Avanço.** Um grupo de funcionalidades passa ao nível seguinte quando os testes do nível atual atingem as metas fixadas para ele, ou quando cada falha restante foi classificada e tem decisão registrada.
+- **Retorno.** Cada problema volta ao nível em que se origina. Perfil, tarefa ou plataforma diferentes do previsto reabrem a análise de requisitos. Uma confusão sobre o que é lote, candidato, seleção ou saída, como em MQ04, reabre o Nível 1. Rótulo, controle, contraste ou terminologia reabrem o Nível 2. Mensagem ou caminho não essencial reabre o Nível 3.
+- **Grupos de funcionalidades.** [H] O primeiro grupo é acompanhar a análise e continuar até a base, T03 → T01. O segundo é consultar, selecionar e obter, T01/A04. Falhas de análise, recuperação, histórico, A03, e maior volume formam um grupo futuro, que só entra no ciclo quando houver estados para demonstrá-lo.
+- **Guia de estilo.** Cada decisão de projeto fica registrada com o achado que a motivou. Até existir o guia de estilo, o registro fica no histórico da entrega afetada e na matriz de rastreabilidade.
+- **Nova iteração.** Os resultados das Entregas 13 e 14 e o feedback do docente podem reabrir qualquer nível. O feedback de uso real, previsto por Mayhew após a instalação, depende do sistema do TCC e não é substituído pelas sessões da disciplina.
+
+Falhas de análise, recuperação localizada, acesso a resultados parciais, histórico, retomada após recarga e comportamento com mais de oito candidatos permanecem lacunas do protótipo. As metas atuais valem para o recorte demonstrado e não permitem concluir que esses cenários estão resolvidos. Quando houver estados suficientes para demonstrá-los, suas metas devem ser especificadas antes da avaliação correspondente. A ausência atual não justifica construir backend, aprovação editorial ou edição detalhada dentro da disciplina. P02 continua como continuidade editorial externa enquanto não houver evidência que justifique outra decisão de escopo.
 
 ## Checklist
 
