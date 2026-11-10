@@ -1,6 +1,8 @@
 # Entrega 6 — Prototipação em papel
 
-**Data da documentação:** 22/10/2026
+**Data da documentação:** 22/10/2026 (versão original)
+
+**Revisão:** 10/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega06_Equipe16.md)
 
 **Status:** walkthrough formativo de 22/10/2026 documentado; telas revisadas na versão 2 do protótipo, de 10/11/2026, para E06-O01, O02, O04 e O06. A verificação das telas revisadas com uma pessoa de fora do desenho está pendente, conforme o roteiro da seção 5.3
 
@@ -313,3 +315,4 @@ O protótipo, o walkthrough acompanhado, as observações e as telas revisadas c
 | 16/10/2026 | 0.6 | Publicado o guia da simulação em ihc.p4cs.com.br/guia, com formulário de feedback gravado em D1. Registradas as decisões de Pedro sobre modo das sessões, informações reveladas, público, papel e consentimento, e a relação das tarefas do guia com o roteiro 4.2. Sessões continuam pendentes. | Equipe 16, implementação e documentação assistidas por Opus a pedido de Pedro |
 | 22/10/2026 | 0.7 | Documentação sincronizada com o protótipo atual após o commit 74041d3e. Corrigidas origem e quantidade dos vídeos, suporte a envio, comportamento da análise, controles de reprodução, downloads, tempos e roteiro. A sessão com pessoa que não desenhou as telas continua pendente. Esta atualização documental não registra observação com participante. | Equipe 16, documentação assistida pelo Codex |
 | 22/10/2026 | 0.8 | Registrados o walkthrough acompanhado por Pedro com U01, a transcrição automática e o feedback do D1 anonimizado. Separados autorrelato, diálogo e ajuda; documentadas O01 a O06 e D01 a D06. Revisados os passos 2 e 6 do roteiro. Checklist encerrado nesta iteração, com melhorias futuras e limites da evidência explícitos. | Pedro Alexandre Custódio Silva, condução da sessão e fechamento documental assistido pelo Codex |
+| 10/11/2026 | 0.9 | Aplicação do feedback do professor. Protótipo na versão 2: continuidade da análise para a base com resultados parciais e estado do lote, painel de obtenção com CSV e MP4 separados, trilhas de B revisadas, falha localizada e vídeo sem lances encenados. Seção 5 com antes e depois, contraste calculado, situação das decisões e roteiro de revalidação pendente. Fala do facilitador sobre as saídas registrada como divergente do artefato. Referências internas, procedência do áudio por hash, capturas por versão e participação por integrante. Telas revisadas sem verificação com participante. | Pedro Alexandre Custódio Silva, revisão feita por automação a seu pedido, sem confirmação de fatos novos |
