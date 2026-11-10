@@ -1,0 +1,48 @@
+# Percurso real PF02→PF03→PF04 na v2: reprodução real na Tela 3, saída com análise em andamento, segundo plano, obtenção.
+import sys,os,json
+from playwright.sync_api import sync_playwright
+U='http://localhost:8762/PROTOTIPO_fluxo_highlights.html'; OUT=sys.argv[1] if len(sys.argv)>1 else None
+log=[]
+def ck(name,cond,info=''):
+    log.append((name,bool(cond),info)); print(('OK  ' if cond else 'FALHA ')+name,info)
+with sync_playwright() as p:
+  b=p.chromium.launch(executable_path='/usr/bin/chromium'); ctx=b.new_context(viewport={'width':1280,'height':800},accept_downloads=True); pg=ctx.new_page()
+  errs=[];pg.on('pageerror',lambda e:errs.append(str(e)))
+  pg.goto(U); pg.click('#use-mock:not([disabled])'); pg.wait_for_selector('#t2:not([hidden])')
+  pg.click('#start'); pg.wait_for_selector('#t3:not([hidden])')
+  ck('T3 inicia com botão desabilitado', pg.is_disabled('#t3-next'), pg.inner_text('#t3-next'))
+  pg.wait_for_function("!document.querySelector('#t3-next').disabled",timeout=90000)
+  ck('T3 habilita "Ver resultados prontos" com o 1º lance', 'Ver resultados prontos (' in pg.inner_text('#t3-next'), pg.inner_text('#t3-next')+' | '+pg.inner_text('#t3-st'))
+  if OUT: pg.screenshot(path=OUT+'/E06-P03_em_andamento_v2.png')
+  pg.click('#t3-next'); pg.wait_for_selector('#t4:not([hidden])')
+  st=pg.evaluate("()=>({state:A.state,base:S.base.size,total:H.length,sts:V.map(v=>v.st)})")
+  ck('T4 abre com análise ainda em andamento', st['state']=='running' and st['base']<st['total'], json.dumps(st))
+  ck('Estado do lote visível', 'Análise em andamento' in pg.inner_text('#lote'), pg.inner_text('#lote').replace('\n',' | '))
+  ck('Animação da Tela 3 não vaza para a base', pg.query_selector('.fly') is None)
+  if OUT: pg.wait_for_timeout(900); pg.screenshot(path=OUT+'/E06-P04_resultados_parciais_v2.png')
+  pg.wait_for_selector('#newbar:not([hidden])',timeout=20000)
+  ck('Aviso de lances novos sem refazer a lista', pg.evaluate("S.base.size")<pg.evaluate("done().length"), pg.inner_text('#newbar'))
+  pg.click('[data-shownew]'); 
+  pg.wait_for_function("A.state==='done'",timeout=60000); pg.wait_for_timeout(300)
+  if not pg.is_hidden('#newbar'): pg.click('[data-shownew]')
+  ck('Lote termina em segundo plano e mostra os 8', pg.evaluate("base().length")==8 and 'Análise concluída' in pg.inner_text('#lote'), pg.inner_text('#lote').split('\n')[0])
+  if OUT: pg.screenshot(path=OUT+'/E06-P04A_busca_v2.png')
+  ck('Obter seleção desabilitado sem seleção', pg.is_disabled('#dl'), pg.inner_text('#dl'))
+  pg.click('[data-row=suarez] [data-incl]'); pg.click('[data-row=bravo] [data-incl]')
+  ck('Rótulo de seleção sem citar CSV', pg.inner_text('[data-row=suarez] [data-incl]')=='✓ Selecionado', pg.inner_text('#dl'))
+  pg.click('#dl'); pg.wait_for_selector('.obt')
+  ck('Painel separa CSV e MP4', 'Não contém vídeo' in pg.inner_text('.obt') and 'Vídeos dos cortes' in pg.inner_text('.obt'))
+  pg.wait_for_timeout(600)
+  with pg.expect_download() as d: pg.click('[data-dlcsv]')
+  dl=d.value; csv=open(dl.path(),encoding='utf-8-sig').read().splitlines()
+  ck('CSV baixado com 2 linhas de lance', len(csv)==3 and dl.suggested_filename=='cortes_selecionados.csv', csv[0][:60])
+  got=[]
+  pg.on('download',lambda x:got.append(x))
+  pg.click('[data-dlmp4]'); pg.wait_for_timeout(2500)
+  names=sorted(x.suggested_filename for x in got)
+  sizes=sorted(os.path.getsize(x.path()) for x in got)
+  ck('MP4 baixados separadamente', names==['bravo.mp4','suarez.mp4'], f'{names} {sizes}')
+  pg.keyboard.press('Escape'); ck('Esc fecha o painel', not pg.query_selector('.obt'))
+  ck('Sem erros de página', not errs, '; '.join(errs))
+  b.close()
+print('RESUMO', sum(1 for x in log if x[1]),'/',len(log))

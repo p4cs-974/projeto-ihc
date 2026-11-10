@@ -1,5 +1,7 @@
 # Conferência da mídia real
 
+> **Versão e data.** Conferência técnica de 21/10/2026, feita durante a troca das animações por clipes reais, antes do walkthrough de 22/10/2026. Registra uma etapa intermediária com quatro cortes de Real Madrid 0 x 4 Barcelona. O commit integrado `74041d3`, do mesmo dia, já usa oito cortes de duas partidas, e a versão 2 do protótipo, de 10/11/2026, está nas [capturas da Entrega 6](../../assets/06_prototipos/capturas/README.md). As telas e medições abaixo são evolução técnica, não alterações decorrentes do walkthrough.
+
 A seleção e os tempos estão no [manifesto](../../assets/06_prototipos/media/manifest.json). O procedimento está no [guia de extração](../../assets/06_prototipos/media/README.md).
 
 ## Amostras da mesma jogada
