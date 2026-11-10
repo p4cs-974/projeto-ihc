@@ -2,7 +2,7 @@
 
 **Data da documentação:** 22/10/2026
 
-**Status:** concluída nesta iteração; protótipo, walkthrough formativo e decisões de revisão documentados
+**Status:** walkthrough formativo de 22/10/2026 documentado; telas revisadas na versão 2 do protótipo, de 10/11/2026, para E06-O01, O02, O04 e O06. A verificação das telas revisadas com uma pessoa de fora do desenho está pendente, conforme o roteiro da seção 5.3
 
 **Responsabilidade:** 1 solução integrada por equipe, Equipe 16
 
@@ -10,7 +10,7 @@
 
 Explorar a interação para preparar gravações, acompanhar uma análise simulada e escolher melhores momentos para download. A equipe usa um protótipo digital descartável antes da consolidação no Figma.
 
-O ciclo da atividade compreende construir, simular, observar e revisar. Em 22/10/2026, Pedro conduziu uma sessão acompanhada com um colega que não participou do desenho e não conhecia o projeto. A transcrição do áudio, o feedback e as decisões estão nas seções 4 e 5. As melhorias de interface registradas para a próxima iteração ainda não foram implementadas nem reavaliadas.
+O ciclo da atividade compreende construir, simular, observar e revisar. Em 22/10/2026, Pedro conduziu uma sessão acompanhada com um colega que não participou do desenho e não conhecia o projeto. A transcrição do áudio, o feedback e as decisões estão nas seções 4 e 5. A versão 2 do protótipo, de 10/11/2026, revisa as telas ligadas a E06-O01, O02, O04 e O06, conforme a seção 5.1. Essas telas ainda não foram usadas por um participante.
 
 ## 1. Escopo do protótipo
 
@@ -208,18 +208,44 @@ As observações abaixo têm identificadores próprios para ligar evidência e d
 
 ## 5. Decisões após a simulação
 
-O fechamento desta iteração registra as decisões abaixo a partir de U01. As revisões do roteiro foram aplicadas à seção 4.2. As mudanças de interface estão indicadas para a próxima iteração e não são apresentadas como implementadas ou verificadas com uma nova sessão.
+As decisões abaixo partem da sessão com U01. Em 22/10/2026, os passos 2 e 6 do roteiro da seção 4.2 foram revisados. Em 10/11/2026, a versão 2 do [protótipo principal](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) revisou as telas ligadas a O01, O02, O04 e O06. A revisão de interface é uma resposta de projeto às observações. Ela ainda não foi verificada com um participante; o roteiro da seção 5.3 prepara essa verificação.
+
+### 5.1 Telas revisadas na versão 2
+
+As capturas da versão 1, de 22/10/2026, estão em [`capturas/v1_2026-10-22_antes`](../assets/06_prototipos/capturas/v1_2026-10-22_antes/) e as da versão 2, de 10/11/2026, em [`capturas/v2_2026-11-10`](../assets/06_prototipos/capturas/v2_2026-11-10/). As duas foram geradas no Chromium local a 1280 × 800, com os mesmos clipes.
+
+| Observação e decisão | Estado anterior, v1 | Problema observado | Tela revisada, v2 | Justificativa |
+|---|---|---|---|---|
+| E06-O01, D01 | [F] E06-P03 terminava com a barra **Análise concluída** e sem ação de continuar. O único botão escuro era **Reiniciar análise**. A passagem dependia da seta direita, que concluía a análise restante na hora | [F] U01 perguntou se não havia botão e recebeu explicação para avançar, de 01:01 a 01:36. O formulário registra a dúvida entre usar as setas e esperar | [F] O topo de E06-P03 mostra os lances prontos e **Ver resultados prontos (n) →**, habilitado a partir do primeiro lance. Ao fim, **✓ Análise concluída** e **Ver os 8 lances na base →**. **Reiniciar análise** passou a botão claro. A base abre com a análise em andamento e mostra o estado de cada vídeo em E06-P04L | [H] Uma ação visível e nomeada pelo resultado reduz a dependência das setas, que agora aparecem como atalho da demonstração. Abrir os resultados prontos enquanto o restante continua corresponde a T03 2.3 e 3.2 |
+| E06-O02 e O06, D02 | [F] Em E06-P04B, os filtros ativos eram pílulas pretas. As etiquetas mostravam abreviações como `GOL`, `DEF` e `PÊN` em 10,5 px. O eixo mostrava `15:00`, `30:00` e `45:00`, sem dizer que era o tempo do arquivo | [F] No formulário, U01 descreveu as labels de B como confusas. No diálogo, de 02:50 a 03:03, os botões aparecem como escuros e o contraste das labels é comentado. Perguntou se a escala era um minuto, de 03:04 a 03:07, e o que as cores significavam, de 03:37 a 03:42 | [F] Filtros claros com ✓. Etiquetas com o nome do tipo e o relógio do jogo, por exemplo `Gol` e `jogo 10:04`. Eixo em `15 min` e `30 min`, com o intervalo do jogo ao lado de cada faixa, como `jogo 45'–90'`. Uma legenda explica faixa, etiqueta, cor e ✓. Etiquetas próximas ou nas pontas são deslocadas para não se sobrepor nem sair da faixa | [H] Nomes completos e relógio do jogo na própria etiqueta respondem às perguntas registradas sem a explicação do facilitador. O contraste calculado abaixo não mede a compreensão |
+| E06-O04, D05 | [F] **Baixar CSV (n)** no topo gerava o CSV direto. A inclusão aparecia como **+ Incluir** e **✓ No CSV**. O MP4 ficava só no detalhe de cada lance | [F] U01 esperava vídeos. O diálogo, em 02:23 e de 03:46 a 03:57, apresentou o download como apenas metadados | [F] **Obter seleção (n)** abre E06-P04S, com **Lista dos cortes · CSV** e **Vídeos dos cortes · MP4** lado a lado. Cada saída diz o que contém. O CSV informa que não contém vídeo. Os MP4 são baixados um por lance, sem montagem. O painel indica o próximo passo no editor externo. A inclusão passou a **+ Selecionar** e **✓ Selecionado** | [H] Separar seleção, lista e vídeo evita que a palavra CSV represente a seleção inteira. A montagem continua fora do produto, conforme o recorte da seção 1.1 |
+
+| Antes, v1 de 22/10/2026 | Depois, v2 de 10/11/2026 |
+|---|---|
+| ![E06-P03 na versão 1, com a barra Análise concluída e sem ação para continuar](../assets/06_prototipos/capturas/v1_2026-10-22_antes/E06-P03_analise_concluida_v1.png) | ![E06-P03 na versão 2, com Análise concluída e o botão Ver os 8 lances na base](../assets/06_prototipos/capturas/v2_2026-11-10/E06-P03_analise_concluida_v2.png) |
+| ![E06-P04B na versão 1, com filtros pretos e etiquetas abreviadas](../assets/06_prototipos/capturas/v1_2026-10-22_antes/E06-P04B_trilhas_v1.png) | ![E06-P04B na versão 2, com filtros claros, legenda e etiquetas com tipo e relógio do jogo](../assets/06_prototipos/capturas/v2_2026-11-10/E06-P04B_trilhas_v2.png) |
+
+[F] O contraste WCAG das etiquetas de B foi calculado a partir das cores do CSS, sem medição com participantes. Na v1, as etiquetas tinham 10,5 px; na v2, o tipo tem 12 px e o relógio do jogo, 10,5 px.
+
+| Vídeo de origem | v1 não selecionada | v1 selecionada | v2 não selecionada | v2 selecionada | v2 relógio do jogo |
+|---|---:|---:|---:|---:|---:|
+| Verde, Real Madrid x Barcelona, 1º tempo | 4,6:1 | 3,2:1 | 19,8:1 | 16,3:1 | 5,2:1 |
+| Azul, Real Madrid x Barcelona, 2º tempo | 6,0:1 | 4,5:1 | 19,8:1 | 15,7:1 | 5,0:1 |
+| Âmbar, Bayern x Real Madrid, 1º tempo | 3,4:1 | 2,2:1 | 19,8:1 | 17,3:1 | 5,5:1 |
+| Vermelho, Bayern x Real Madrid, 2º tempo | 5,4:1 | 3,9:1 | 19,8:1 | 15,6:1 | 5,0:1 |
+
+### 5.2 Situação de cada decisão
 
 | ID e evidência | Antes ou problema | Decisão e justificativa | Situação |
 |---|---|---|---|
-| E06-D01, O01 | Ao terminar a análise, U01 não soube se deveria esperar ou avançar | Revisar a indicação de conclusão e de acesso à base. O próximo teste deve verificar se a pessoa encontra essa continuidade sem ajuda | Roteiro do passo 2 revisado; alteração de interface para a próxima iteração |
-| E06-D02, O02 e O06 | Labels, contraste e significado temporal exigiram esclarecimento em B | Revisar legibilidade e identificação de tempo, origem e cores antes de repetir a comparação. As falas justificam investigar esses elementos, sem atribuir uma gravidade numérica | Revisão de interface e nova verificação previstas para a próxima iteração |
-| E06-D03, O05 | A já era a entrada inicial e foi a preferência declarada | Manter A como entrada e conservar B e C como alternativas exploratórias. A sessão dá um motivo para manter o padrão atual, mas não para encerrar a comparação com o público profissional | Organização atual mantida |
-| E06-D04, O03 | U01 antecipa dificuldade no carrossel com mais lances | Manter C nesta versão e investigar um conjunto maior em avaliação futura. A preocupação sozinha não justifica descartar o mosaico | Investigação futura; sem mudança na interface |
-| E06-D05, O04 | O autorrelato de obtenção não permite confirmar a diferença entre lista e vídeo | Manter CSV e MP4 individuais, já disponíveis. Separar no roteiro a abertura do CSV e o download com reprodução do MP4; o facilitador deve descrever as duas saídas. A montagem de vídeo único permanece na edição externa | Roteiro do passo 6 revisado; obtenção independente de MP4 a verificar em nova sessão |
-| E06-D06, O06 | Metadados foram explicados durante o uso | Em nova sessão, pedir que a pessoa identifique origem e momento do lance e explique os campos usados, registrando sua resposta antes de oferecer ajuda. Não inferir compreensão pelo preenchimento do formulário | Orientação de condução documentada para a próxima avaliação |
+| E06-D01, O01 | Ao terminar a análise, U01 não soube se deveria esperar ou avançar | Tornar reconhecíveis a conclusão e a ação de continuar, e abrir os resultados prontos durante a análise | Revisão de interface aplicada na v2, seção 5.1. Roteiro do passo 2 revisado. Verificação com participante pendente |
+| E06-D02, O02 e O06 | Labels, contraste e significado temporal exigiram esclarecimento em B | Revisar legibilidade e identificação de tempo, origem e cores antes de repetir a comparação. As falas justificam essa revisão, sem atribuir gravidade numérica | Revisão de interface aplicada na v2, seção 5.1. Verificação com participante pendente |
+| E06-D03, O05 | A já era a entrada inicial e foi a preferência declarada | Manter A como entrada e conservar B e C como alternativas exploratórias. A sessão dá um motivo para manter o padrão atual, mas não para encerrar a comparação com o público profissional | Manutenção fundamentada da solução |
+| E06-D04, O03 | U01 antecipa dificuldade no carrossel com mais lances | Manter C nesta versão e investigar um conjunto maior. A preocupação é uma hipótese de uso com mais volume, não uma falha observada | Manutenção fundamentada de C; volume maior em investigação futura |
+| E06-D05, O04 | O autorrelato de obtenção não permite confirmar a diferença entre lista e vídeo | Separar CSV e MP4 na interface e no roteiro; o facilitador descreve as duas saídas conforme o artefato. A montagem de vídeo único permanece na edição externa | Revisão de interface aplicada na v2, seção 5.1. Roteiro do passo 6 revisado. Obtenção independente de MP4 a verificar com participante |
+| E06-D06, O06 | Metadados foram explicados durante o uso | Em nova sessão, pedir que a pessoa identifique origem e momento do lance e explique os campos usados, registrando sua resposta antes de oferecer ajuda. Não inferir compreensão pelo preenchimento do formulário | Etiquetas e legenda de B revisadas na v2. Orientação de condução na seção 5.3 |
 
-O protótipo documentado, o walkthrough acompanhado, as observações e as decisões encerram a Entrega 6 nesta iteração. Permanecem as lacunas técnicas da seção 3.3 e as revisões de interface acima. A sessão não demonstra ganho de produtividade, cobertura completa dos lances ou adequação ao trabalho editorial profissional. As versões anteriores e a inclusão de contexto nos clipes ocorreram antes desta sessão e continuam identificadas como evolução técnica, não como correções motivadas por U01.
+O protótipo, o walkthrough acompanhado, as observações e as telas revisadas compõem a Entrega 6. Permanecem as lacunas técnicas da seção 3.3 e a verificação das telas revisadas. A sessão não demonstra ganho de produtividade, cobertura completa dos lances ou adequação ao trabalho editorial profissional. As versões anteriores a 22/10/2026 e a inclusão de contexto nos clipes continuam identificadas como evolução técnica, não como correções motivadas por U01.
 
 ## Checklist
 
@@ -228,7 +254,8 @@ O protótipo documentado, o walkthrough acompanhado, as observações e as decis
 - [x] O projeto mantém o recorte de envio, acompanhamento, revisão e obtenção, sem acrescentar login ou administração.
 - [x] Telas e estados estão numerados, com controles e retornos descritos.
 - [x] Há pelo menos uma simulação ou walkthrough com pessoa que não desenhou as telas, registrada em 22/10/2026 com U01.
-- [x] As observações da simulação geraram decisões de revisão documentadas, E06-D01 a E06-D06, com aplicação e próximos passos distinguidos.
+- [x] As observações da simulação geraram decisões documentadas, E06-D01 a E06-D06, e telas revisadas na versão 2 para D01, D02 e D05, com antes e depois na seção 5.1.
+- [ ] As telas revisadas foram verificadas com uma pessoa de fora do desenho. Pendente, roteiro na seção 5.3.
 - [x] O formato digital clicável do protótipo principal foi confirmado como aceito para a Entrega 6, conforme informação de Pedro em 16/10/2026.
 
 ## Histórico de revisões

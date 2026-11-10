@@ -185,12 +185,18 @@ h3{margin:0;font-size:16px;font-weight:500}
 .lane-l{font-size:13px;display:flex;flex-direction:column;gap:2px}
 .lane-l span{display:flex;align-items:center;gap:7px}
 .lane-l small{color:var(--dim);margin-left:16px}
-.lane-t{position:relative;height:48px;border-radius:14px;background:#fff}
+.lane-t{position:relative;height:56px;border-radius:14px;background:#fff}
 .tk{position:absolute;top:0;bottom:0;border-left:1px solid var(--line)}
-.tk span{position:absolute;top:4px;left:5px;font-size:10px;color:var(--dim)}
-.bm{position:absolute;top:50%;transform:translate(-50%,-50%);height:28px;padding:0 10px;border-radius:9999px;background:color-mix(in srgb,var(--c) 12%,#fff);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 55%,#fff);color:color-mix(in srgb,var(--c) 75%,#000);font-size:10.5px;font-weight:600;letter-spacing:.04em;z-index:1;transition:background .14s}
-.bm:hover{background:color-mix(in srgb,var(--c) 24%,#fff)}
-.bm.sel{background:var(--c);color:#fff;box-shadow:none}
+.tk span{position:absolute;top:4px;left:5px;font-size:10px;color:var(--dim);white-space:nowrap}
+.bm{position:absolute;top:50%;transform:translate(-50%,-50%);height:42px;padding:0 10px;border-radius:12px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--c);color:var(--text);font-size:12px;font-weight:500;line-height:1.2;display:flex;flex-direction:column;justify-content:center;white-space:nowrap;z-index:1;transition:background .14s}
+.bm small{font-size:10.5px;font-weight:400;color:#5c6066}
+.bm:hover{background:color-mix(in srgb,var(--c) 10%,#fff)}
+.bm.sel{background:color-mix(in srgb,var(--c) 18%,#fff);box-shadow:inset 0 0 0 2px var(--c)}
+.bm.sel>span::before{content:'✓ '}
+.chip.ck{background:#fff;box-shadow:inset 0 0 0 1.5px var(--line2)}
+.chip.ck::before{content:'✓';font-weight:600}
+.chip.off{color:var(--muted)}
+.vb-leg{font-size:13px;color:#5c6066;margin:-8px 4px 4px}
 .bm.act{outline:2px solid var(--text);outline-offset:3px;z-index:2}
 .pop{position:absolute;top:calc(100% + 12px);z-index:10;width:440px;background:#fff;border-radius:24px;padding:16px;box-shadow:0 0 0 1px var(--line),0 24px 60px rgba(0,0,0,.12)}
 .pop .det-k{font-size:20px}
@@ -694,15 +700,15 @@ function VB(root,focus){
   const vis=()=>base().filter(h=>on.has(h.type.k));
   const draw=()=>{
     const all=base(),L=vis();
-    let html=`<div class="chips left">${TYPES.map(t=>{const n=all.filter(h=>h.type===t).length;return n?`<button class="chip${on.has(t.k)?' on':''}" data-ty="${t.k}">${t.k}<span>${n}</span></button>`:''}).join('')}</div>`;
+    let html=`<div class="chips left">${TYPES.map(t=>{const n=all.filter(h=>h.type===t).length;return n?`<button class="chip ${on.has(t.k)?'ck':'off'}" data-ty="${t.k}" aria-pressed="${on.has(t.k)}">${t.k}<span>${n}</span></button>`:''}).join('')}</div><p class="vb-leg">Cada faixa é o arquivo de um tempo da partida, em minutos do arquivo. A etiqueta mostra o tipo do lance e o relógio do jogo. A cor identifica o vídeo de origem; ✓ marca lance selecionado.</p>`;
     MATCHES.forEach(m=>{
       const vs=V.filter(v=>v.m===m);if(!vs.length)return;
       const hs=L.filter(h=>h.v.m===m);
-      html+=`<section class="vb-card"><div class="vb-head"><div><h3>${esc(m.name)}</h3><span class="meta">${day(m.date)} · marcas em tempo do arquivo</span></div><span class="meta">${hs.length} ${hs.length===1?'lance':'lances'}</span></div>`;
+      html+=`<section class="vb-card"><div class="vb-head"><div><h3>${esc(m.name)}</h3><span class="meta">${day(m.date)}</span></div><span class="meta">${hs.length} ${hs.length===1?'lance':'lances'}</span></div>`;
       vs.forEach(v=>{
-        html+=`<div class="lane" style="--c:${v.c}"><div class="lane-l"><span><i class="dot"></i>${v.half}º tempo</span><small class="mono">${tc(v.dur)}</small></div><div class="lane-t">`
-          +[15,30,45].filter(mn=>mn*60<v.dur).map(mn=>`<i class="tk" style="left:${mn*60/v.dur*100}%"><span>${mn}:00</span></i>`).join('')
-          +hs.filter(h=>h.v===v).map(h=>`<button class="bm${SEL.has(h.id)?' sel':''}${act===h.id?' act':''}" data-selmark="${h.id}" data-bm="${h.id}" style="left:${h.t/v.dur*100}%" title="${esc(h.media.title)} · jogo ${esc(h.media.matchTime)}">${h.type.a}</button>`).join('')
+        html+=`<div class="lane" style="--c:${v.c}"><div class="lane-l"><span><i class="dot"></i>${v.half}º tempo</span><small>jogo ${v.half===1?"0'–45'":"45'–90'"}</small></div><div class="lane-t">`
+          +[15,30].map(mn=>`<i class="tk" style="left:${mn*60/v.dur*100}%"><span>${mn} min</span></i>`).join('')
+          +hs.filter(h=>h.v===v).map(h=>`<button class="bm${SEL.has(h.id)?' sel':''}${act===h.id?' act':''}" data-selmark="${h.id}" data-bm="${h.id}" style="left:${h.t/v.dur*100}%" title="${esc(h.media.title)} · minuto ${tc(h.t)} do arquivo"><span>${esc(h.type.k)}</span><small class="mono">jogo ${esc(h.media.matchTime)}</small></button>`).join('')
           +(act&&HM[act].v===v?pop(HM[act],L):'')+`</div></div>`;
       });
       html+='</section>';
@@ -710,7 +716,18 @@ function VB(root,focus){
     root.innerHTML=html;place();
   };
   const pop=(h,L)=>{const i=L.indexOf(h);return `<div class="pop" style="left:${h.t/h.v.dur*100}%"><div class="bar-h"><span class="meta">${i+1} de ${L.length} · ← → para navegar</span><div><button class="ib" data-nav="-1" aria-label="Anterior">←</button><button class="ib" data-nav="1" aria-label="Próximo">→</button><button class="ib" data-close aria-label="Fechar">×</button></div></div>${detail(h,false)}</div>`};
+  // etiquetas próximas ou nas pontas da faixa são deslocadas para não se sobrepor nem sair dela
+  const spread=()=>root.querySelectorAll('.lane-t').forEach(t=>{
+    const tr=t.getBoundingClientRect();let edge=tr.left+4;
+    [...t.querySelectorAll('.bm')].sort((a,b)=>a.getBoundingClientRect().left-b.getBoundingClientRect().left).forEach(m=>{
+      const r=m.getBoundingClientRect();let dx=Math.max(0,edge-r.left);
+      if(r.right+dx>tr.right-4)dx=tr.right-4-r.right;
+      if(dx)m.style.translate=`${dx}px 0`;
+      edge=r.right+dx+4;
+    });
+  });
   const place=()=>{
+    spread();
     const p=root.querySelector('.pop');if(!p)return;
     p.style.transform='translateX(-50%)';
     const r=p.getBoundingClientRect(),c=p.closest('.vb-card').getBoundingClientRect();
@@ -786,7 +803,7 @@ function paintLote(){
     :`<span><b>Análise em andamento</b> · ${k('pronto')} de ${V.length} vídeos prontos. Os lances dos outros entram aqui quando cada vídeo terminar</span><button class="link" data-go="3">Acompanhar a análise</button>`;
   const card=v=>{
     const n=H.filter(h=>h.v===v&&h.done).length,bar=v.st!=='pronto';
-    return `<div class="lv" style="--c:${v.c}"><b><i class="dot"></i>${esc(v.m.name)}</b><span>${v.half}º tempo</span><span class="st">${ST[v.st](v,n)}</span>${bar?`<span class="bar"><i style="width:${v.prog*100}%"></i></span>`:''}</div>`;
+    return `<div class="lv" style="--c:${v.c}"><b title="${esc(v.m.name)}"><i class="dot"></i>${esc(v.m.name)}</b><span>${v.half}º tempo</span><span class="st">${ST[v.st](v,n)}</span>${bar?`<span class="bar"><i style="width:${v.prog*100}%"></i></span>`:''}</div>`;
   };
   setHTML($('#lote'),`<div class="lote-h">${head}</div><div class="lote-l">${V.map(card).join('')}</div>`);
   const nw=done().length-S.base.size,nb=$('#newbar');
