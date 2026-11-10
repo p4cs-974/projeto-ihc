@@ -1,6 +1,7 @@
 # Entrega 8 — Ciclo de vida e engenharia de usabilidade
 
-**Data:** 28/10/2026
+**Data:** 28/10/2026 (versão original)
+**Revisão:** 10/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md)
 **Status:** 🟨 revisada após o parecer; pesos de prioridade, MU07 e MU08 propostos, a confirmar pela equipe
 **Responsabilidade:** 1 solução consolidada por equipe, Equipe 16
 
@@ -258,3 +259,4 @@ Falhas de análise, recuperação localizada, acesso a resultados parciais, hist
 | 29/10/2026 | Revisão de coerência após auditoria das análises de Opus 5.5 medium e GPT 6.1 Sol high. Cobertura das duas personas primárias, distinção entre pausa e encerramento do player e esclarecimentos de instruções, alvos, condições iniciais e cálculo de tempo. Limites numéricos continuam propostos, sem nova avaliação empírica | Equipe 16, elaboração assistida a pedido de Pedro |
 | 29/10/2026 | Pedro confirmou os limites de MU01–MU06. Entrega marcada como completa; calibração no piloto mantida na Entrega 12 e pesos condicionados à exigência do docente. Não foram declarados resultados de avaliação | Equipe 16, confirmação de Pedro |
 | 30/10/2026 | Alinhamento com a Entrega 7: inclusão do planejamento na base de evidências, referência aos procedimentos éticos e critérios de participação já especificados e identificação do formulário do guia como I02. Metas quantitativas preservadas, sem nova evidência empírica | Equipe 16; revisão documental assistida pelo Codex a pedido da equipe |
+| 10/11/2026 | Aplicação do parecer do professor: princípios em grupos de negócio e de interface, prioridades pelas cinco metas de Nielsen com pesos propostos, MU07 e MU08 propostas, cobertura das metas pelos instrumentos e ciclo de Mayhew na seção 4. Pesos e limites de MU07 e MU08 aguardam confirmação da equipe. Não foram declarados coleta, piloto ou resultados de avaliação | Equipe 16; revisão documental assistida a pedido de Pedro |
