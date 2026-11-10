@@ -277,6 +277,18 @@ O formulário do guia pode continuar a registrar o autorrelato, mas o sucesso de
 
 O protótipo, o walkthrough acompanhado, as observações e as telas revisadas compõem a Entrega 6. Permanecem as lacunas técnicas da seção 3.3 e a verificação das telas revisadas. A sessão não demonstra ganho de produtividade, cobertura completa dos lances ou adequação ao trabalho editorial profissional. As versões anteriores a 22/10/2026 e a inclusão de contexto nos clipes continuam identificadas como evolução técnica, não como correções motivadas por U01.
 
+## 6. Participação da equipe nesta rodada
+
+[F] A tabela usa o histórico do Git dos arquivos da Entrega 6 e os registros deste documento. Todos os commits em `docs/06_prototipacao_papel.md`, `assets/06_prototipos/`, `artifacts/entrega6/` e `artifacts/media-review/` até 22/10/2026 são de Pedro.
+
+| Integrante | Contribuição registrada na Entrega 6 | Evidência |
+|---|---|---|
+| Pedro Alexandre Custódio Silva | Esboço original no tldraw; protótipo de baixa fidelidade e protótipo principal com as alternativas A, B e C; clipes reais; guia e formulário da simulação; condução da sessão de 22/10/2026; consolidação das observações e decisões. A revisão das telas da versão 2, de 10/11/2026, foi feita por automação a pedido de Pedro | Seções 1.3 e 4.1; commits de 15/10 a 22/10/2026; revisão de 10/11/2026 |
+| Lucas Roberto Boccia dos Santos | [?] Não há contribuição registrada nos arquivos da Entrega 6. A continuidade externa de PF04 se apoia em T02, modelada por Lucas na Entrega 5, o que é uma base usada e não uma participação nesta rodada | Pendente de registro pelo próprio Lucas |
+| Giovanni Chahin Morassi | [?] Não há contribuição registrada nos arquivos da Entrega 6. O acompanhamento e a falha localizada da versão 2 seguem T03, modelada por Giovanni na Entrega 5, o que é uma base usada e não uma participação nesta rodada | Pendente de registro pelo próprio Giovanni |
+
+[?] Se Lucas e Giovanni participaram da exploração das alternativas, do roteiro, da observação, da consolidação ou da revisão das telas, cada um deve registrar aqui a própria contribuição, com data. Este documento não atribui a eles tarefas sem esse registro.
+
 ## Checklist
 
 - [x] O protótipo cobre tarefas relevantes da Entrega 5, com cobertura parcial e limites indicados.
