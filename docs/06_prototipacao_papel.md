@@ -196,7 +196,9 @@ U01 marcou **Consegui** nas quatro tarefas. A coluna de evidência abaixo distin
 | Preparar a análise, `t1` | Consegui | O áudio começa com a escolha dos exemplos e a identificação da tela 2, de 00:00 a 00:21. Não permite conferir cada clique ou a remoção de uma entrada |
 | Acompanhar a análise, `t2` | Consegui | De 01:01 a 01:36 há dúvida sobre navegação e explicação de que a tela serve para acompanhar e depois passar à próxima. O formulário confirma a dúvida ao final do processamento |
 | Escolher três lances e explorar as visualizações, `t3` | Consegui | O diálogo registra seleção por categoria, de 02:03 a 02:23, apresentação de B pelo facilitador em 02:42 e explicações sobre a timeline e a inclusão, de 03:04 a 03:17. Não há registro visual para conferir todos os itens selecionados |
-| Obter lista e vídeo, `t4` | Consegui | De 03:46 a 04:20 há referência ao download de metadados e discussão dos campos do CSV. A obtenção de um MP4 não fica comprovada no áudio. A explicação de que o download entrega apenas CSV pode ter influenciado a expectativa registrada |
+| Obter lista e vídeo, `t4` | Consegui | De 03:46 a 04:20 há referência ao download de metadados e discussão dos campos do CSV. A obtenção de um MP4 não fica comprovada no áudio. A explicação de que o download entrega apenas CSV pode ter influenciado a expectativa registrada. Não se atribui sucesso independente ao download de MP4 |
+
+[F] A explicação do facilitador sobre a obtenção não correspondia ao artefato usado. De 02:23 a 02:42, o diálogo diz que o download só baixa um CSV com metadados e não baixa os vídeos; de 03:47 a 03:57, repete que o download pega só os metadados. A versão usada na sessão já oferecia **Baixar MP4** no detalhe de cada lance, conforme a seção 1.2. Essa fala é tratada como possível influência sobre O04, e não como descrição do protótipo. A seção 5.3 define a fala de referência para as próximas sessões.
 
 As observações abaixo têm identificadores próprios para ligar evidência e decisão. Os tempos se referem à transcrição e são aproximados. As propriedades `travou`, `variante`, `variante_porque` e `download` podem ser consultadas no JSON do feedback.
 
@@ -247,6 +249,31 @@ As capturas da versão 1, de 22/10/2026, estão em [`capturas/v1_2026-10-22_ante
 | E06-D04, O03 | U01 antecipa dificuldade no carrossel com mais lances | Manter C nesta versão e investigar um conjunto maior. A preocupação é uma hipótese de uso com mais volume, não uma falha observada | Manutenção fundamentada de C; volume maior em investigação futura |
 | E06-D05, O04 | O autorrelato de obtenção não permite confirmar a diferença entre lista e vídeo | Separar CSV e MP4 na interface e no roteiro; o facilitador descreve as duas saídas conforme o artefato. A montagem de vídeo único permanece na edição externa | Revisão de interface aplicada na v2, seção 5.1. Roteiro do passo 6 revisado. Obtenção independente de MP4 a verificar com participante |
 | E06-D06, O06 | Metadados foram explicados durante o uso | Em nova sessão, pedir que a pessoa identifique origem e momento do lance e explique os campos usados, registrando sua resposta antes de oferecer ajuda. Não inferir compreensão pelo preenchimento do formulário | Etiquetas e legenda de B revisadas na v2. Orientação de condução na seção 5.3 |
+
+### 5.3 Roteiro de revalidação das telas revisadas
+
+[F] Esta verificação ainda não foi realizada. Nenhum resultado da versão 2 com participante é apresentado nesta entrega. O objetivo é saber se as dificuldades de O01, O02, O04 e O06 persistem, sem antecipar a avaliação final nem medir desempenho.
+
+Condução:
+
+- Uma ou duas pessoas que não participaram do desenho, preferencialmente sem contato com a sessão de 22/10/2026. Registrar a experiência com edição e se a pessoa leu o guia antes.
+- Usar o HTML local da versão 2, servido conforme a seção 1.2. Gravar a tela e o áudio somente com autorização expressa para guardar a gravação no repositório, anonimizada.
+- Não ensinar as setas. Se a pessoa travar, esperar cerca de 30 segundos, perguntar "o que você esperava encontrar aqui?" e só então ajudar.
+- Para cada passo, registrar o que a pessoa fez antes de qualquer ajuda, o momento da ajuda e o que ela fez depois. Separar o que a interface comunicou do que veio do guia ou do facilitador, inclusive o sentido de "highlight", "corte", "seleção" e "CSV".
+- Fala de referência sobre as saídas, usada só depois do passo 4 ou quando a pessoa perguntar: "A base oferece duas saídas: a lista dos cortes em CSV, que não contém vídeo, e os vídeos dos cortes em MP4, um arquivo por lance. A montagem do vídeo final fica no editor."
+- Alternar a ordem das alternativas entre pessoas, por exemplo A, B, C e depois C, B, A, com o mesmo objetivo em cada uma: localizar um lance de uma partida indicada e dizer em que tempo e minuto do jogo ele ocorreu.
+
+| Passo | Tela | Situação proposta | O que observar | Relação |
+|---|---|---|---|---|
+| R1 | E06-P02 → E06-P03 | Carregar os exemplos, iniciar e acompanhar a análise. Pedir para "revisar os primeiros lances assim que der" | Se encontra **Ver resultados prontos** sem ajuda e em que momento. Se entende que os outros vídeos continuam | O01, D01 |
+| R2 | E06-P04L | Na base, perguntar o que já está pronto e o que ainda falta | Se lê o estado de cada vídeo e usa **Mostrar lances novos** ou **Acompanhar a análise** | O01, T03 |
+| R3 | E06-P04B | Localizar o pênalti de Bayern x Real Madrid e dizer o minuto do jogo | Se lê tipo, relógio do jogo e faixa sem perguntar; se entende a cor e o ✓ | O02, O06, D02 |
+| R4 | E06-P04A/C | Repetir o objetivo de R3 com outro lance nas outras alternativas | Preferência e motivo, com a ordem registrada | O05, D03 |
+| R5 | E06-P04S | Selecionar dois lances, obter a lista e abrir o CSV; depois obter e reproduzir um MP4 | Registrar separadamente CSV e MP4, a ajuda recebida e o que a pessoa diz que falta para editar | O04, D05 |
+| R6 | E06-P03F → E06-P04F | No percurso **Falha em um vídeo**, pedir que a pessoa diga o que aconteceu e o que faria | Se identifica o vídeo afetado, o lance preservado, o trecho não analisado e escolhe entre nova tentativa e pendência | T03 3.3 |
+| R7 | E06-P04V e E06-P04Z | No percurso **Vídeo sem lances**, fazer uma busca sem resultado e depois perguntar sobre o 2º tempo de Bayern | Se distingue busca sem correspondência de vídeo sem candidatos | RC05 |
+
+O formulário do guia pode continuar a registrar o autorrelato, mas o sucesso de cada passo deve vir da observação. Com poucas pessoas, os resultados indicam se uma dificuldade persiste; não estabelecem taxas.
 
 O protótipo, o walkthrough acompanhado, as observações e as telas revisadas compõem a Entrega 6. Permanecem as lacunas técnicas da seção 3.3 e a verificação das telas revisadas. A sessão não demonstra ganho de produtividade, cobertura completa dos lances ou adequação ao trabalho editorial profissional. As versões anteriores a 22/10/2026 e a inclusão de contexto nos clipes continuam identificadas como evolução técnica, não como correções motivadas por U01.
 
