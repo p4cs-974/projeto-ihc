@@ -263,7 +263,7 @@ As capturas da versão 1, de 22/10/2026, estão em [`capturas/v1_2026-10-22_ante
 Condução:
 
 - Uma ou duas pessoas que não participaram do desenho, preferencialmente sem contato com a sessão de 22/10/2026. Registrar a experiência com edição e se a pessoa leu o guia antes.
-- Usar o HTML local da versão 2, servido conforme a seção 1.2. Gravar a tela e o áudio somente com autorização expressa para guardar a gravação no repositório, anonimizada.
+- Usar o HTML local da versão 2, servido conforme a seção 1.2. Servido assim, o formulário do guia não grava respostas, porque o envio para `/api/feedback` recebe 501 do `python3 -m http.server`. O autorrelato desta revalidação vai para a ficha de observação. Para testar o envio, usar `npx wrangler dev` em `site/` com o D1 local, conforme [`site/README.md`](../site/README.md); esses registros são testes e não entram na análise. Participação remota pelo formulário `2026-11-10` só depois da publicação dessa versão, e as respostas da versão `2026-10-21` publicada não se somam às da versão `2026-11-10`. Gravar a tela e o áudio somente com autorização expressa para guardar a gravação no repositório, anonimizada.
 - Não ensinar as setas. Se a pessoa travar, esperar cerca de 30 segundos, perguntar "o que você esperava encontrar aqui?" e só então ajudar.
 - Para cada passo, registrar o que a pessoa fez antes de qualquer ajuda, o momento da ajuda e o que ela fez depois. Separar o que a interface comunicou do que veio do guia ou do facilitador, inclusive o sentido de "highlight", "corte", "seleção" e "CSV".
 - Fala de referência sobre as saídas, usada só depois do passo 4 ou quando a pessoa perguntar: "A base oferece duas saídas: a lista dos cortes em CSV, que não contém vídeo, e os vídeos dos cortes em MP4, um arquivo por lance. A montagem do vídeo final fica no editor."
@@ -279,7 +279,7 @@ Condução:
 | R6 | E06-P03F → E06-P04F | No percurso **Falha em um vídeo**, pedir que a pessoa diga o que aconteceu e o que faria | Se identifica o vídeo afetado, o lance preservado, o trecho não analisado e escolhe entre nova tentativa e pendência | T03 3.3 |
 | R7 | E06-P04V e E06-P04Z | No percurso **Vídeo sem lances**, fazer uma busca sem resultado e depois perguntar sobre o 2º tempo de Bayern | Se distingue busca sem correspondência de vídeo sem candidatos | RC05 |
 
-O formulário do guia pode continuar a registrar o autorrelato, mas o sucesso de cada passo deve vir da observação. Com poucas pessoas, os resultados indicam se uma dificuldade persiste; não estabelecem taxas.
+O autorrelato complementa a ficha, mas o sucesso de cada passo deve vir da observação. Com poucas pessoas, os resultados indicam se uma dificuldade persiste; não estabelecem taxas.
 
 O protótipo, o walkthrough acompanhado, as observações e as telas revisadas compõem a Entrega 6. Permanecem as lacunas técnicas da seção 3.3 e a verificação das telas revisadas. A sessão não demonstra ganho de produtividade, cobertura completa dos lances ou adequação ao trabalho editorial profissional. As versões anteriores a 22/10/2026 e a inclusão de contexto nos clipes continuam identificadas como evolução técnica, não como correções motivadas por U01.
 
