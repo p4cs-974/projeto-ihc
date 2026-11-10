@@ -80,7 +80,7 @@ As referências externas foram consultadas em 28/10/2026. A seleção de critér
 
 ### Contexto comum de verificação
 
-P01, editor de vídeo esportivo, e P03, criador amador, são personas primárias, conforme a [composição das personas na Entrega 3](03_personas_contexto_jornada.md#composição-e-prioridade-das-personas). MQ01–MQ04 e MU01–MU06 se aplicam aos dois perfis, com resultados e cálculo das métricas separados por perfil. A compreensão de rótulos e mensagens deve ser verificada também com criadores amadores, conforme RC07. Se o recrutamento usar colegas como participantes proxy, registrar essa condição e limitar as conclusões à interação observada, sem usá-los como validação dos perfis finais.
+P01, editor de vídeo esportivo, e P03, criador amador, são personas primárias, conforme a [composição das personas na Entrega 3](03_personas_contexto_jornada.md#composição-e-prioridade-das-personas). MQ01–MQ04 e MU01–MU08 se aplicam aos dois perfis, com resultados e cálculo das métricas separados por perfil. A compreensão de rótulos e mensagens deve ser verificada também com criadores amadores, conforme RC07. Se o recrutamento usar colegas como participantes proxy, registrar essa condição e limitar as conclusões à interação observada, sem usá-los como validação dos perfis finais.
 
 Usar computador, os mesmos exemplos e uma versão identificada do protótipo. A visualização A é a entrada atual, conforme E06-D03, sem escolha definitiva entre A, B e C. As metas abaixo não exigem comparar as alternativas nem adotar uma nova direção visual.
 
@@ -101,7 +101,7 @@ Em MU01/MQ02, na versão atual, contam tanto a seta para a direita quanto **Ir p
 
 Registrar a primeira explicação, a ação observada e eventuais dúvidas com referência ao item e à tela. Falas após ajuda devem ficar separadas. Não substituir evidência de compreensão pela preferência por uma visualização.
 
-### 3.2 Metas quantitativas confirmadas
+### 3.2 Metas quantitativas
 
 **Os limites de MU01–MU06 foram confirmados por Pedro em 29/10/2026.** São critérios de aceitação definidos para o projeto, sem derivação de U01 ou de exigência normativa. O limite de 100% expressa a ambição de que ninguém na pequena amostra fique bloqueado nessas tarefas delimitadas. Não estima uma taxa para toda a população. A calibração no piloto fica para a Entrega 12.
 
@@ -112,7 +112,18 @@ Registrar a primeira explicação, a ação observada e eventuais dúvidas com r
 | MU03 | Eficácia: proporção de obtenção correta do CSV | P01 e P03, separadamente; T01/A04. Incluir dois candidatos indicados, retirar um terceiro previamente incluído e obter a relação final | 100% dos participantes avaliáveis de cada perfil, n/n | Abrir o CSV salvo. Deve conter exatamente os dois IDs previstos, sem o terceiro. Conferir origem e reconhecer que o arquivo contém metadados e links, sem vídeo incorporado | E06-O04/D05; verifica seleção, retirada e resultado efetivo, em vez de contar o clique em baixar |
 | MU04 | Eficácia: proporção de obtenção correta do MP4 | P01 e P03, separadamente; T01/A04. Obter o vídeo de um candidato indicado, em condição inicial padronizada | 100% dos participantes avaliáveis de cada perfil, n/n | Conferir o arquivo salvo e reproduzi-lo, comparando o lance ao candidato solicitado. Um link ou CSV não satisfaz o critério | MP4 já existe no protótipo, mas sua obtenção não foi comprovada na sessão de U01 |
 | MU05 | Eficiência: tempo mediano de localização e abertura | P01 e P03, separadamente; T01. Da base A com oito candidatos, sem filtro ou detalhe aberto, localizar um lance pela partida, tempo da partida, minuto do jogo e tipo e abrir seu detalhe | Mediana do tempo descontadas as esperas técnicas identificadas ≤ 90 s, entre conclusões independentes de cada perfil | Fixar um alvo único pelo manifesto. Iniciar após leitura e confirmação do cenário e com a base pronta. Encerrar ao abrir o candidato correto. Registrar todos os tempos, falhas e esperas técnicas | Orçamento inicial de exploração de um conjunto de oito itens. Não é benchmark profissional. O piloto deve verificar se 90 s permite diferenciar procura fluida de desorientação |
-| MU06 | Satisfação: mediana da facilidade percebida por tarefa | P01 e P03, separadamente; após as tarefas de MU01, MU03 e MU04, separadamente | Mediana ≥ 4 em escala de 1 a 5 para cada tarefa e perfil | Perguntar: "Quão fácil ou difícil foi realizar esta tarefa?" Usar 1, muito difícil; 2, difícil; 3, nem fácil nem difícil; 4, fácil; 5, muito fácil. Registrar resposta e motivo antes da discussão | Complementa a observação. Escala local, sem equivalência a instrumento padronizado ou comprovação de sucesso |
+| MU06 | Satisfação: mediana da facilidade percebida por tarefa | P01 e P03, separadamente; após as tarefas de MU01, MU03 e MU04, separadamente | Mediana ≥ 4 em escala de 1 a 5 para cada tarefa e perfil | Perguntar: "Quão fácil ou difícil foi realizar esta tarefa?" Usar 1, muito difícil; 2, difícil; 3, nem fácil nem difícil; 4, fácil; 5, muito fácil. Registrar resposta e motivo antes da discussão. A pergunta e a escala ainda devem ser incorporadas ao protocolo da Entrega 12; não existem no I02 atual | Complementa a observação. Mede a facilidade percebida, que é só parte da satisfação. Escala local, sem equivalência a instrumento padronizado ou comprovação de sucesso |
+
+#### Metas quantitativas propostas nesta revisão
+
+[H] MU07 e MU08 dão medida própria à baixa taxa de erro e à memorização, conforme a seção 3.3. Seus limites foram propostos nesta revisão e ainda não foram confirmados pela equipe. Ficam sujeitos à mesma calibração no piloto da Entrega 12 e devem ser confirmados ou alterados antes da avaliação principal.
+
+| ID | Meta de Nielsen e métrica | Público e tarefa delimitada | Limite proposto | Como medir e verificar | Justificativa do limite |
+|---|---|---|---|---|---|
+| MU07 | Baixa taxa de erro: erros de operação por tentativa | P01 e P03, separadamente; retirada da entrada indicada em MQ01, MU03 e MU04 | 100% das tentativas avaliáveis de cada perfil sem erro não corrigido no resultado e com no máximo um erro corrigido pela própria pessoa | Registrar cada erro de operação com tarefa, tela, ação, gravidade, se a pessoa percebeu e como recuperou. Um erro corrigido conta mesmo quando a tarefa termina com sucesso. Informar contagem de erros por tentativa ao lado de MU03 e MU04 | Separa conclusão final de execução sem erro. Erro não percebido leva material errado à edição externa, PN02. O limite de um erro corrigido admite exploração sem tratar qualquer desvio como bloqueio |
+| MU08 | Facilidade de memorização: conclusão independente no retorno | P01 e P03, separadamente; mesmas pessoas da primeira sessão, após intervalo de pelo menos sete dias sem uso do protótipo. T03 → T01: continuar até a base, localizar um candidato equivalente ao de MU05 e obter o CSV com dois IDs indicados | 100% das tentativas avaliáveis de cada perfil, n/n | Iniciar em sessão nova, sem reler o guia nem receber lembrete de caminho. Aplicar os critérios de sucesso de MU01, MU03 e MU05 com alvos equivalentes, não idênticos. Registrar também o tempo de localização e compará-lo descritivamente ao da primeira sessão | O intervalo aproxima o retorno a uma nova rodada, H39. Repetir a tarefa logo em seguida mede outra situação. Verifica se a pessoa reencontra o caminho, não se o protótipo preserva estado após recarga, que não está implementado |
+
+MU08 depende de recrutar as mesmas pessoas duas vezes. Se não houver retorno no prazo da disciplina, registrar MU08 como não avaliada, sem substituí-la por repetição imediata.
 
 Os IDs MU identificam métricas, não tarefas novas. Usar como referência os critérios da Entrega 7: participantes com 18 anos ou mais e experiência em seleção ou recorte de lances de partidas encerradas nos últimos seis meses, distinguindo editores profissionais e criadores amadores. Confirmar na Entrega 12 a adequação desses critérios e o tamanho da amostra para a avaliação de usabilidade; as amostras de entrevista, questionário e brainstorming não determinam a amostra do teste. Não juntar P01, P03 e participantes proxy no cálculo das métricas. Se um perfil não estiver representado, registrar suas metas como não avaliadas para esse perfil. A aplicação dos mesmos limites aos dois perfis foi confirmada nesta versão e será revista no piloto, sem presumir familiaridade igual com edição.
 
@@ -126,7 +137,8 @@ Os IDs MU identificam métricas, não tarefas novas. Usar como referência os cr
 - **Problema técnico:** se a mídia não carregar ou a sessão for interrompida por fator externo, marcar a tentativa como não avaliável, explicar a razão e informar quantas foram excluídas. Não esconder a ocorrência como sucesso ou falha da pessoa.
 - **Tempo:** usar duração entre os eventos definidos em MU05, incluindo leitura da interface e exploração. Para cada tentativa, subtrair do tempo total a soma das esperas técnicas identificadas durante a sessão. Comparar a mediana desses tempos ajustados aos 90 s. Preservar também tempos totais e descontos por tentativa. Não estimar descontos depois da sessão. Em MU01, a espera do processamento não mede tempo de interação.
 - **Mediana de tempo:** calcular apenas para conclusões independentes e informar quantos casos a compõem, ao lado das falhas e ajudas. Se ninguém concluir independentemente, não calcular mediana. Um tempo baixo entre poucos sucessos não compensa baixa eficácia.
-- **Satisfação:** perguntar também após dificuldade ou falha, respeitando recusa. Informar respostas individuais, mediana e ausências por tarefa. Uma nota alta não transforma falha em sucesso.
+- **Satisfação:** perguntar também após dificuldade ou falha, respeitando recusa. Informar respostas individuais, mediana e ausências por tarefa. Uma nota alta não transforma falha em sucesso. MU06 mede facilidade percebida por tarefa. Ao fim da sessão, perguntar também: "De modo geral, como foi sua experiência ao usar o protótipo?", em escala de 1, muito ruim, a 5, muito boa, com o motivo. Essa resposta complementa a interpretação da satisfação e não tem limite de aceitação nesta versão.
+- **Respostas do I02:** não converter retrospectivamente G03, G07 ou outras respostas do formulário atual para a escala de MU06 ou para a pergunta geral. G03 registra realização declarada, não sucesso independente; G05 registra preferência, não compreensão dos metadados.
 
 Antes da avaliação, definir os candidatos e gabaritos pelo manifesto, a versão e condição inicial de cada tarefa, o tratamento de repetições e um limite de interrupção. MU03 e MU04 devem ter preparação equivalente entre pessoas, sem ensinar o caminho de download durante a preparação. MU05 deve preceder tarefas que revelem a localização do mesmo candidato; se houver repetição, usar alvo equivalente e registrar aprendizagem.
 
@@ -160,6 +172,20 @@ Em conflitos de design, a meta de maior peso orienta a decisão. Por exemplo, en
 | Pesos das metas de Nielsen | Aprendizado 30%, baixa taxa de erro 25%, memorização 15%, eficiência 15% e satisfação 15% | [H] Propostos nesta revisão; confirmação pela equipe pendente |
 
 A confirmação dos critérios de MU01–MU06 é uma decisão da equipe, não resultado de avaliação. Os limites podem ser refinados com a coleta e o piloto da Entrega 12, registrando o motivo. A equipe deve fixar a versão dos critérios antes da avaliação principal. Uma alteração posterior não pode reclassificar silenciosamente os resultados já obtidos.
+
+### 3.4 Cobertura das metas pelos instrumentos
+
+[F] O I02 publicado no guia registra perfil de edição, G01, forma de realização, G02, realização declarada por tarefa, G03, momentos de dúvida, G04, preferência de visualização, G05, expectativa de download, G06, e impressão geral em texto livre, G07. Ele pode trazer informações úteis, mas não mede sozinho nenhuma das metas desta entrega. As verificações abaixo serão preparadas no protocolo da Entrega 12, sem execução nesta entrega.
+
+| Meta de Nielsen | Medidas | Instrumento necessário | O que o I02 atual oferece | Lacuna a resolver na Entrega 12 |
+|---|---|---|---|---|
+| Facilidade de aprendizado | MU01–MU04, MQ01–MQ04 | Observação da primeira sessão com registro de ação, ajuda, estado final e arquivos salvos; gabaritos pelo manifesto | G03 e G04 como autorrelato; "Consegui" não substitui a conferência de conclusão sem ajuda | Folha de registro por tarefa, gabaritos e versão das instruções sem o caminho das tarefas |
+| Baixa taxa de erro | MU07 | Observação com registro de cada erro, gravidade e recuperação; conferência do CSV e do MP4 salvos | Nenhuma medida de erro | Campo de erros na folha de registro e critérios de gravidade |
+| Facilidade de memorização | MU08 | Segunda sessão após intervalo, com alvos equivalentes e mesmo registro da primeira | Nenhuma; o formulário é respondido uma vez | Agenda de retorno, alvos equivalentes e tratamento de quem não retornar |
+| Eficiência | MU05 | Registro de tempo com eventos de início e fim, esperas técnicas e tempo total | Nenhuma medida de tempo | Forma de cronometragem e registro das esperas durante a sessão |
+| Satisfação positiva do usuário | MU06 e pergunta geral | Perguntas após cada tarefa e ao fim da sessão, com escala de 1 a 5 e motivo | G07 em texto livre, sem escala, e G03 com outra escala | Incorporar MU06 e a pergunta geral ao protocolo, sem converter respostas antigas |
+
+As respostas do I02 podem orientar o vocabulário, as dúvidas e a interpretação das metas. Não entram no numerador nem na mediana de nenhuma meta.
 
 ## 4. Como o ciclo será iterado
 
