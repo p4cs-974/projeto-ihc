@@ -9,9 +9,10 @@
 > | Correção 2: priorização pelas cinco metas de Nielsen | aplicada; pesos propostos aguardam confirmação da equipe | [`01811bf`](https://github.com/p4cs-974/projeto-ihc/commit/01811bf) |
 > | Correção 3: ciclo de Mayhew | aplicada | [`f693bf0`](https://github.com/p4cs-974/projeto-ihc/commit/f693bf0) |
 > | Correção 4: cobertura das metas pelos instrumentos | aplicada como plano; protocolo e instrumentos ficam para a Entrega 12; limites de MU07 e MU08 a confirmar | [`0743b4d`](https://github.com/p4cs-974/projeto-ihc/commit/0743b4d) |
-> | Recomendações de melhoria | aplicadas em parte; referência MU/MQ na matriz central fica para a consolidação | [`534ceaa`](https://github.com/p4cs-974/projeto-ihc/commit/534ceaa) |
+> | Recomendações de melhoria | aplicadas; referência MU/MQ na matriz central feita na consolidação | [`534ceaa`](https://github.com/p4cs-974/projeto-ihc/commit/534ceaa), [`e84eb25`](https://github.com/p4cs-974/projeto-ihc/commit/e84eb25), [`90ab599`](https://github.com/p4cs-974/projeto-ihc/commit/90ab599) |
 > | Pontos para as próximas entregas | encaminhados | [`f693bf0`](https://github.com/p4cs-974/projeto-ihc/commit/f693bf0), [`534ceaa`](https://github.com/p4cs-974/projeto-ihc/commit/534ceaa) |
 > | Cabeçalho e histórico | registrados | [`e10a8f8`](https://github.com/p4cs-974/projeto-ihc/commit/e10a8f8) |
+> | Consolidação com a versão 2 do protótipo | plataforma, caminhos de MU01, versões do I02, glossário e estados encenados alinhados; histórico, recarga e maior volume continuam lacunas | [`050a480`](https://github.com/p4cs-974/projeto-ihc/commit/050a480), [`0dff068`](https://github.com/p4cs-974/projeto-ihc/commit/0dff068) |
 >
 > \- Pedro
 
@@ -103,7 +104,7 @@ Ao reorganizar as prioridades de Nielsen, indiquem também como verificar aprend
   > \- Pedro
 - **Consolidar as referências de rastreabilidade.** A Entrega 08 relaciona várias metas a tarefas e hipóteses, mas a matriz central ainda não explicita os IDs MU/MQ. Acrescentem uma referência à especificação dessas metas, sem registrá-las como resultados alcançados.
 
-  > **🟨 Tratado em parte**: esta revisão não alterou `RASTREABILIDADE.md`. A inclusão da referência a MQ01–MQ04 e MU01–MU08 na matriz central, como especificação e não como resultado, fica para a consolidação da equipe e está como item aberto no checklist da Entrega 8.
+  > **✅ Como foi tratado** ([`e84eb25`](https://github.com/p4cs-974/projeto-ihc/commit/e84eb25), [`90ab599`](https://github.com/p4cs-974/projeto-ihc/commit/90ab599)): a seção 3.2 de `RASTREABILIDADE.md` liga MQ01–MQ04 e MU01–MU08 a R01–R05 e às tarefas delimitadas, como especificação e não como resultado. Diz que nenhuma meta foi medida e que pesos, MU07 e MU08 são proposta. O item do checklist da Entrega 8 foi marcado.
   >
   > \- Pedro
 - **Atualizar status e checklist após as correções.** A confirmação interna dos números encerra uma decisão da equipe, mas não resolve a organização dos princípios, das prioridades e do ciclo. O status “completa” deve acompanhar a revisão desses pontos.
@@ -130,7 +131,7 @@ Preservem como questões futuras o comportamento com mais de oito candidatos, a 
 4. Identificar os instrumentos necessários para verificar cada meta, incluindo a escala de MU06.
 5. Atualizar a rastreabilidade, o checklist e o status da entrega.
 
-> **Situação:** as ações 1 a 4 foram aplicadas em `docs/08_engenharia_usabilidade.md`, com pesos e limites de MU07 e MU08 como proposta a confirmar pela equipe. Na ação 5, checklist e status foram atualizados; a referência MU/MQ em `RASTREABILIDADE.md` fica para a consolidação. Nenhuma coleta, piloto ou revalidação ocorreu nesta revisão.
+> **Situação:** as ações 1 a 4 foram aplicadas em `docs/08_engenharia_usabilidade.md`, com pesos e limites de MU07 e MU08 como proposta a confirmar pela equipe. Na ação 5, checklist e status foram atualizados, e a referência MU/MQ entrou na seção 3.2 de `RASTREABILIDADE.md` na consolidação ([`e84eb25`](https://github.com/p4cs-974/projeto-ihc/commit/e84eb25)). Nenhuma coleta, piloto ou revalidação ocorreu nesta revisão.
 >
 > \- Pedro
 

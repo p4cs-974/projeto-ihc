@@ -1,7 +1,7 @@
 # Feedback do Professor > Entrega 06 > Equipe 16
 
 
-> **Status da aplicação (10/11/2026):** [F] revisão das partes de grupo da Entrega 6: `docs/06_prototipacao_papel.md`, protótipo principal, capturas, mapa do fluxo e evidências da sessão, na branch `docs/e06-prototype-feedback`. O guia da simulação, `README.md` e `RASTREABILIDADE.md` ficam fora desta rodada e dependem da consolidação. O texto do professor foi preservado; as anotações aparecem em blocos de citação após cada item.
+> **Status da aplicação (10/11/2026):** [F] revisão das partes de grupo da Entrega 6: `docs/06_prototipacao_papel.md`, protótipo principal, capturas, mapa do fluxo e evidências da sessão, na branch `docs/e06-prototype-feedback`. A consolidação posterior, na branch `feedback/entregas-06-07-08`, alinhou o guia, `README.md` e `RASTREABILIDADE.md` a esta revisão. O texto do professor foi preservado; as anotações aparecem em blocos de citação após cada item.
 >
 > | Item do parecer | Situação | Commit(s) |
 > |---|---|---|
@@ -9,10 +9,11 @@
 > | Correção 2: continuidade e obtenção | Aplicada no protótipo e no documento | [`9c67289`](https://github.com/p4cs-974/projeto-ihc/commit/9c67289) |
 > | Correção 3: exceções | Aplicada com percursos encenados | [`9ed3753`](https://github.com/p4cs-974/projeto-ihc/commit/9ed3753) |
 > | Correção 4: condução do walkthrough | Aplicada no documento; nova sessão pendente | [`d09b9c3`](https://github.com/p4cs-974/projeto-ihc/commit/d09b9c3) |
-> | Correção 5: evidências e acessos | Em parte: referências internas no documento; áudio fora do repositório por falta de autorização registrada; guia com outro responsável | [`d5d9f71`](https://github.com/p4cs-974/projeto-ihc/commit/d5d9f71) |
+> | Correção 5: evidências e acessos | Em parte: referências internas no documento; áudio fora do repositório por falta de autorização registrada; guia com link interno | [`d5d9f71`](https://github.com/p4cs-974/projeto-ihc/commit/d5d9f71), [`fb259aa`](https://github.com/p4cs-974/projeto-ihc/commit/fb259aa) |
 > | Correção 6: participação dos integrantes | Em parte: Pedro registrado; Lucas e Giovanni sem registro, marcados `[?]` | [`0d0ac88`](https://github.com/p4cs-974/projeto-ihc/commit/0d0ac88) |
 > | Recomendações | Aplicadas: capturas por versão, mapa do fluxo, nota em media-review; termos, ordem e volume de C no roteiro 5.3 | [`576d03b`](https://github.com/p4cs-974/projeto-ihc/commit/576d03b), [`d09b9c3`](https://github.com/p4cs-974/projeto-ihc/commit/d09b9c3) |
 > | Cabeçalho e histórico | Registrados | [`b7cfe44`](https://github.com/p4cs-974/projeto-ihc/commit/b7cfe44) |
+> | Consolidação: guia, documento, README e matriz | Aplicada; verificação com participante, áudio e contribuições de Lucas e Giovanni continuam pendentes | [`fb259aa`](https://github.com/p4cs-974/projeto-ihc/commit/fb259aa), [`14f6c1d`](https://github.com/p4cs-974/projeto-ihc/commit/14f6c1d), [`dfbe0f5`](https://github.com/p4cs-974/projeto-ihc/commit/dfbe0f5), [`0dff068`](https://github.com/p4cs-974/projeto-ihc/commit/0dff068), [`e84eb25`](https://github.com/p4cs-974/projeto-ihc/commit/e84eb25), [`da5ebf5`](https://github.com/p4cs-974/projeto-ihc/commit/da5ebf5) |
 >
 > \- Pedro (aplicação por automação a pedido de Pedro; fatos novos não confirmados por ele)
 
@@ -98,7 +99,7 @@ O mesmo cuidado deve ser aplicado aos acessos operacionais: o botão “Abrir o 
 
 > **🟨 Tratado em parte** ([`d5d9f71`](https://github.com/p4cs-974/projeto-ihc/commit/d5d9f71)): [F] o documento aponta para o protótipo e o guia do repositório, sem depender do domínio publicado. A nota da sessão identifica o áudio original por formato, duração, data de criação e SHA-256, e declara a transcrição como único registro do diálogo no repositório, sem equivalência com o áudio. [?] O áudio não foi versionado: contém as vozes de U01 e de Pedro, o repositório é público e não há registro de autorização de U01. A inclusão depende dessa autorização ou de uma versão com vozes alteradas, decisão de Pedro.
 >
-> **⏭️ Fora desta revisão:** o botão **Abrir o protótipo** de `GUIA_simulacao.html` tem outro responsável nesta rodada e precisa passar a apontar para `PROTOTIPO_fluxo_highlights.html`.
+> **✅ Guia** ([`fb259aa`](https://github.com/p4cs-974/projeto-ihc/commit/fb259aa)): [F] o botão **Abrir o protótipo** de `GUIA_simulacao.html` aponta para `PROTOTIPO_fluxo_highlights.html` na mesma pasta; `site/build.sh` ajusta o link na cópia publicada. O link da Entrega 6 no `README.md` também aponta para o protótipo do repositório ([`0dff068`](https://github.com/p4cs-974/projeto-ihc/commit/0dff068)).
 >
 > \- Pedro (aplicação por automação a pedido de Pedro; fatos novos não confirmados por ele)
 
@@ -125,7 +126,7 @@ Sugiro exportar imagens da versão principal para `assets/06_prototipos/`, ident
 
 Revisem a comunicação dos termos “highlight”, “corte”, “seleção” e “CSV”. O guia explica essas expressões antes da atividade; por isso, a compreensão posterior não pode ser tratada como descoberta espontânea. Nas próximas verificações, distingam o que a interface comunica sozinha do que depende de instrução recebida.
 
-> **✅ Como foi tratado** ([`9c67289`](https://github.com/p4cs-974/projeto-ihc/commit/9c67289), [`d09b9c3`](https://github.com/p4cs-974/projeto-ihc/commit/d09b9c3)): [F] a interface passou a usar **Selecionar** e **Obter seleção**, e o painel diz o que o CSV e os MP4 contêm. O roteiro 5.3 pede que se registre o que a interface comunicou e o que veio do guia ou do facilitador. [?] O glossário do guia não foi alterado nesta rodada.
+> **✅ Como foi tratado** ([`9c67289`](https://github.com/p4cs-974/projeto-ihc/commit/9c67289), [`d09b9c3`](https://github.com/p4cs-974/projeto-ihc/commit/d09b9c3)): [F] a interface passou a usar **Selecionar** e **Obter seleção**, e o painel diz o que o CSV e os MP4 contêm. O roteiro 5.3 pede que se registre o que a interface comunicou e o que veio do guia ou do facilitador. [F] O glossário do guia foi mantido. A seção 4.1 do documento e a Entrega 8 registram que quem leu o guia recebeu "highlight ou lance", "corte", "tempo no arquivo", "anotação", CSV e MP4 como instrução, e não como descoberta espontânea ([`dfbe0f5`](https://github.com/p4cs-974/projeto-ihc/commit/dfbe0f5), [`050a480`](https://github.com/p4cs-974/projeto-ihc/commit/050a480)). A dica das setas deixou de dizer que a seta termina a análise, sem acrescentar instrução de caminho ([`14f6c1d`](https://github.com/p4cs-974/projeto-ihc/commit/14f6c1d)).
 >
 > \- Pedro (aplicação por automação a pedido de Pedro; fatos novos não confirmados por ele)
 

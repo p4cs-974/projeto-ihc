@@ -12,7 +12,8 @@
 > | Recomendações | aplicadas; relator proposto e ferramenta de quadro a confirmar | [`930f673`](https://github.com/p4cs-974/projeto-ihc/commit/930f673) |
 > | Pontos para as próximas entregas | encaminhados, sem alteração de outras entregas | [`dc58d6e`](https://github.com/p4cs-974/projeto-ihc/commit/dc58d6e) |
 > | Síntese, item 5: pilotos | pendente; nenhum piloto realizado | |
-> | Registro da revisão | cabeçalho e histórico do documento; `RASTREABILIDADE.md` e `README.md` não alterados nesta rodada | [`d3dddd2`](https://github.com/p4cs-974/projeto-ihc/commit/d3dddd2) |
+> | Registro da revisão | cabeçalho e histórico do documento | [`d3dddd2`](https://github.com/p4cs-974/projeto-ihc/commit/d3dddd2) |
+> | Consolidação: README e matriz | status com publicação, pilotos e coleta pendentes; I02 registrado como questionário de experiência de uso na matriz, sem conclusões | [`0dff068`](https://github.com/p4cs-974/projeto-ihc/commit/0dff068), [`e84eb25`](https://github.com/p4cs-974/projeto-ihc/commit/e84eb25) |
 >
 > \- Pedro (aplicação automatizada em nome de Pedro; não confirma fatos marcados [?])
 
@@ -127,7 +128,7 @@ Os achados deverão orientar a revisão de P01/P03, do papel externo de P02 e da
 
 Na rastreabilidade, associem cada conclusão ao participante desidentificado, à pergunta ou atividade, ao contexto e à limitação. Dados de feedback do protótipo podem orientar melhorias de interação, mas não demonstram, sozinhos, redução de tempo, qualidade da detecção automática ou validação de mercado. Preservem as hipóteses abertas quando a evidência não permitir conclusão.
 
-> **ℹ️ Encaminhamento** ([`dc58d6e`](https://github.com/p4cs-974/projeto-ihc/commit/dc58d6e)): a matriz de análise já separa a interação com o protótipo das hipóteses do domínio e pede que cada achado cite código, item, contexto e limitação. P01/P02/P03, tarefas e `RASTREABILIDADE.md` não foram alterados, porque ainda não há dados.
+> **ℹ️ Encaminhamento** ([`dc58d6e`](https://github.com/p4cs-974/projeto-ihc/commit/dc58d6e)): a matriz de análise já separa a interação com o protótipo das hipóteses do domínio e pede que cada achado cite código, item, contexto e limitação. P01/P02/P03, tarefas e hipóteses da matriz não foram alterados, porque ainda não há dados. Na consolidação, `RASTREABILIDADE.md` passou a registrar, na seção 3.2 e na seção 5, que I02 não investiga práticas profissionais nem valida hipóteses do domínio ([`e84eb25`](https://github.com/p4cs-974/projeto-ihc/commit/e84eb25)).
 >
 > \- Pedro (aplicação automatizada em nome de Pedro; não confirma fatos marcados [?])
 
