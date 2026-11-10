@@ -1,7 +1,7 @@
 # Entrega 8 — Ciclo de vida e engenharia de usabilidade
 
 **Data:** 28/10/2026
-**Status:** 🟩 completa
+**Status:** 🟨 revisada após o parecer; pesos de prioridade, MU07 e MU08 propostos, a confirmar pela equipe
 **Responsabilidade:** 1 solução consolidada por equipe, Equipe 16
 
 ## Objetivo da atividade
@@ -86,7 +86,7 @@ Usar computador, os mesmos exemplos e uma versão identificada do protótipo. A 
 
 Informar previamente apenas o contexto e os limites da demonstração, inclusive ausência de upload real e montagem. Registrar qualquer instrução de navegação, como as setas. Uma ação ensinada não conta como descoberta espontânea. Não revelar o caminho da tarefa nem explicar os metadados antes de registrar a resposta inicial.
 
-O [guia usado na Entrega 6](../assets/06_prototipos/GUIA_simulacao.html) ensina navegação, significado dos tempos e caminhos de download. Ele não deve ser reutilizado integralmente antes das tarefas que verificam essas descobertas. Preparar uma versão de instruções sem essas respostas na Entrega 12. Se a pessoa já tiver recebido tais explicações, registrar a exposição como ajuda prévia nas tentativas afetadas. Essas tentativas permanecem no denominador, mas não contam como sucesso independente.
+O [guia usado na Entrega 6](../assets/06_prototipos/GUIA_simulacao.html) ensina navegação, significado dos tempos e caminhos de download. Ele não deve ser reutilizado integralmente antes das tarefas que verificam essas descobertas. Preparar uma versão de instruções sem essas respostas na Entrega 12. Ela mantém as informações necessárias ao consentimento e ao contexto da demonstração, separadas de qualquer explicação sobre navegação, significado dos tempos ou caminhos de download. Se a pessoa já tiver recebido tais explicações, registrar a exposição como ajuda prévia nas tentativas afetadas. Essas tentativas permanecem no denominador, mas não contam como sucesso independente.
 
 Em MU01/MQ02, na versão atual, contam tanto a seta para a direita quanto **Ir para o lance**, desde que usados após a conclusão natural da simulação. A dica de setas exibida pela própria interface faz parte do artefato avaliado e não é ajuda externa. Instruções do facilitador ou do guia contam como ajuda prévia. Se E06-D01 alterar a navegação, registrar os caminhos da nova versão antes da avaliação, sem misturar resultados de versões diferentes.
 
@@ -103,7 +103,7 @@ Registrar a primeira explicação, a ação observada e eventuais dúvidas com r
 
 ### 3.2 Metas quantitativas
 
-**Os limites de MU01–MU06 foram confirmados por Pedro em 29/10/2026.** São critérios de aceitação definidos para o projeto, sem derivação de U01 ou de exigência normativa. O limite de 100% expressa a ambição de que ninguém na pequena amostra fique bloqueado nessas tarefas delimitadas. Não estima uma taxa para toda a população. A calibração no piloto fica para a Entrega 12.
+**Os limites de MU01–MU06 foram confirmados por Pedro em 29/10/2026.** São critérios de aceitação definidos pela equipe, não resultados obtidos, sem derivação de U01 ou de exigência normativa. O limite de 100% expressa a ambição de que ninguém na pequena amostra fique bloqueado nessas tarefas delimitadas. Não estima uma taxa para toda a população. A calibração no piloto fica para a Entrega 12: verificar se o alvo de 100% e o tempo de 90 s distinguem dificuldades relevantes e registrar qualquer alteração antes da avaliação principal.
 
 | ID | Dimensão e métrica | Público e tarefa delimitada | Limite confirmado | Como medir e verificar | Justificativa do limite |
 |---|---|---|---|---|---|
@@ -111,7 +111,7 @@ Registrar a primeira explicação, a ação observada e eventuais dúvidas com r
 | MU02 | Compreensão: proporção de respostas inteiramente corretas | P01 e P03, separadamente; T01. Em um candidato do segundo tempo, identificar partida, tempo da partida, 1º ou 2º, e distinção entre relógio do jogo e posição no arquivo | 100% dos participantes avaliáveis de cada perfil, n/n | Fixar candidato e gabarito pelo manifesto antes da sessão, sem usar um exemplo previamente explicado à pessoa. Cada pessoa precisa acertar os três itens sem explicação prévia | E06-O06 registra perguntas e explicações, sem prova de compreensão independente. No segundo tempo, a diferença entre os relógios fica visível |
 | MU03 | Eficácia: proporção de obtenção correta do CSV | P01 e P03, separadamente; T01/A04. Incluir dois candidatos indicados, retirar um terceiro previamente incluído e obter a relação final | 100% dos participantes avaliáveis de cada perfil, n/n | Abrir o CSV salvo. Deve conter exatamente os dois IDs previstos, sem o terceiro. Conferir origem e reconhecer que o arquivo contém metadados e links, sem vídeo incorporado | E06-O04/D05; verifica seleção, retirada e resultado efetivo, em vez de contar o clique em baixar |
 | MU04 | Eficácia: proporção de obtenção correta do MP4 | P01 e P03, separadamente; T01/A04. Obter o vídeo de um candidato indicado, em condição inicial padronizada | 100% dos participantes avaliáveis de cada perfil, n/n | Conferir o arquivo salvo e reproduzi-lo, comparando o lance ao candidato solicitado. Um link ou CSV não satisfaz o critério | MP4 já existe no protótipo, mas sua obtenção não foi comprovada na sessão de U01 |
-| MU05 | Eficiência: tempo mediano de localização e abertura | P01 e P03, separadamente; T01. Da base A com oito candidatos, sem filtro ou detalhe aberto, localizar um lance pela partida, tempo da partida, minuto do jogo e tipo e abrir seu detalhe | Mediana do tempo descontadas as esperas técnicas identificadas ≤ 90 s, entre conclusões independentes de cada perfil | Fixar um alvo único pelo manifesto. Iniciar após leitura e confirmação do cenário e com a base pronta. Encerrar ao abrir o candidato correto. Registrar todos os tempos, falhas e esperas técnicas | Orçamento inicial de exploração de um conjunto de oito itens. Não é benchmark profissional. O piloto deve verificar se 90 s permite diferenciar procura fluida de desorientação |
+| MU05 | Eficiência: tempo mediano de localização e abertura | P01 e P03, separadamente; T01. Da base A com oito candidatos, sem filtro ou detalhe aberto, localizar um lance pela partida, tempo da partida, minuto do jogo e tipo e abrir seu detalhe | Mediana do tempo descontadas as esperas técnicas identificadas ≤ 90 s, entre conclusões independentes de cada perfil | Fixar um alvo único pelo manifesto. Iniciar após leitura e confirmação do cenário e com a base pronta. Encerrar ao abrir o candidato correto. Registrar todos os tempos, falhas e esperas técnicas e relatar o tempo total ao lado do ajustado | Orçamento inicial de exploração de um conjunto de oito itens. Não é benchmark profissional. O piloto deve verificar se 90 s permite diferenciar procura fluida de desorientação |
 | MU06 | Satisfação: mediana da facilidade percebida por tarefa | P01 e P03, separadamente; após as tarefas de MU01, MU03 e MU04, separadamente | Mediana ≥ 4 em escala de 1 a 5 para cada tarefa e perfil | Perguntar: "Quão fácil ou difícil foi realizar esta tarefa?" Usar 1, muito difícil; 2, difícil; 3, nem fácil nem difícil; 4, fácil; 5, muito fácil. Registrar resposta e motivo antes da discussão. A pergunta e a escala ainda devem ser incorporadas ao protocolo da Entrega 12; não existem no I02 atual | Complementa a observação. Mede a facilidade percebida, que é só parte da satisfação. Escala local, sem equivalência a instrumento padronizado ou comprovação de sucesso |
 
 #### Metas quantitativas propostas nesta revisão
@@ -135,7 +135,7 @@ Os IDs MU identificam métricas, não tarefas novas. Usar como referência os cr
 - **Escolha editorial:** discordar da seleção automática ou considerar o contexto insuficiente não é erro. Os candidatos predefinidos das tarefas medem localização e operação, sem impor um julgamento editorial correto.
 - **Taxas:** dividir sucessos independentes pelo total de tentativas avaliáveis de cada tarefa e perfil. Ajuda, falha e abandono permanecem no denominador. Registrar contagens absolutas e percentual. Com três tentativas avaliáveis de um mesmo perfil, o limite de 100% exige 3/3, sem generalização estatística.
 - **Problema técnico:** se a mídia não carregar ou a sessão for interrompida por fator externo, marcar a tentativa como não avaliável, explicar a razão e informar quantas foram excluídas. Não esconder a ocorrência como sucesso ou falha da pessoa.
-- **Tempo:** usar duração entre os eventos definidos em MU05, incluindo leitura da interface e exploração. Para cada tentativa, subtrair do tempo total a soma das esperas técnicas identificadas durante a sessão. Comparar a mediana desses tempos ajustados aos 90 s. Preservar também tempos totais e descontos por tentativa. Não estimar descontos depois da sessão. Em MU01, a espera do processamento não mede tempo de interação.
+- **Tempo:** usar duração entre os eventos definidos em MU05, incluindo leitura da interface e exploração. Para cada tentativa, subtrair do tempo total a soma das esperas técnicas identificadas durante a sessão. Comparar a mediana desses tempos ajustados aos 90 s. Preservar também tempos totais e descontos por tentativa e relatar a mediana do tempo total ao lado da ajustada. Um tempo ajustado baixo não elimina o impacto da espera percebida pela pessoa; registrar comentários sobre a espera. Não estimar descontos depois da sessão. Em MU01, a espera do processamento não mede tempo de interação.
 - **Mediana de tempo:** calcular apenas para conclusões independentes e informar quantos casos a compõem, ao lado das falhas e ajudas. Se ninguém concluir independentemente, não calcular mediana. Um tempo baixo entre poucos sucessos não compensa baixa eficácia.
 - **Satisfação:** perguntar também após dificuldade ou falha, respeitando recusa. Informar respostas individuais, mediana e ausências por tarefa. Uma nota alta não transforma falha em sucesso. MU06 mede facilidade percebida por tarefa. Ao fim da sessão, perguntar também: "De modo geral, como foi sua experiência ao usar o protótipo?", em escala de 1, muito ruim, a 5, muito boa, com o motivo. Essa resposta complementa a interpretação da satisfação e não tem limite de aceitação nesta versão.
 - **Respostas do I02:** não converter retrospectivamente G03, G07 ou outras respostas do formulário atual para a escala de MU06 ou para a pergunta geral. G03 registra realização declarada, não sucesso independente; G05 registra preferência, não compreensão dos metadados.
@@ -240,12 +240,15 @@ Falhas de análise, recuperação localizada, acesso a resultados parciais, hist
 - [x] Está claro o limite entre contribuição técnica do TCC e camada interativa da disciplina.
 - [x] Dados e processamento simulados foram explicitados.
 - [x] Metas de usabilidade avaliam a interação, sem substituir métricas técnicas do TCC.
-- [x] Normas e princípios estão contextualizados e têm fontes identificadas.
+- [x] Princípios estão organizados em grupos de negócio e de interface, contextualizados e com fontes identificadas.
 - [x] Métricas têm tarefa, público e procedimento de verificação.
-- [x] Eficácia, eficiência, compreensão e satisfação foram consideradas.
-- [x] Há ligação com as avaliações futuras e com os limites da evidência atual.
-- [x] Limites quantitativos confirmados por Pedro em 29/10/2026; calibração prevista na Entrega 12.
-- [x] Pesos de prioridade tratados como condicionais à exigência do docente, sem atribuição nesta versão.
+- [x] Prioridades usam as cinco metas de Nielsen, com pesos que somam 100% e relação com as medidas do projeto.
+- [x] Baixa taxa de erro e memorização têm medida própria, MU07 e MU08.
+- [x] Cada meta tem instrumento de verificação indicado, inclusive a escala de MU06 a incorporar na Entrega 12.
+- [x] O ciclo de Mayhew organiza a iteração, com critérios de avanço, retorno e registro das decisões.
+- [x] Limites de MU01–MU06 confirmados por Pedro em 29/10/2026; calibração prevista na Entrega 12.
+- [ ] Pesos de prioridade e limites de MU07 e MU08 confirmados pela equipe.
+- [ ] Referência aos IDs MU/MQ na matriz central de rastreabilidade.
 
 ## Histórico
 
