@@ -9,7 +9,7 @@ Worker `ihc-prototipo` com arquivos estáticos e um banco D1 para os feedbacks d
 | `/media/*` | [`media/manifest.json`](../assets/06_prototipos/media/manifest.json) e os MP4/JPG que ele referencia |
 | `POST /api/feedback` | [`src/worker.js`](src/worker.js), grava na tabela `feedback` do D1 `ihc-feedback` |
 
-`build.sh` copia os HTML para `public/` antes de cada `dev` e `deploy`, junto com `media/manifest.json` e só os MP4 e JPG listados nele (`src` e `poster` de cada corte). Edite os arquivos em `assets/06_prototipos`, não em `public/`.
+`build.sh` copia os HTML para `public/` antes de cada `dev` e `deploy`, trocando no guia o link relativo `PROTOTIPO_fluxo_highlights.html` por `../`, junto com `media/manifest.json` e só os MP4 e JPG listados nele (`src` e `poster` de cada corte). Edite os arquivos em `assets/06_prototipos`, não em `public/`.
 
 ## Mídia
 
