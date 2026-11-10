@@ -3,7 +3,7 @@
 **Data:** 10/11/2026
 **Branch:** `feedback/entregas-06-07-08`, a partir de `bce19c4`
 **Aplicação:** automação a pedido de Pedro. Os commits e as anotações registram o que mudou nos arquivos. Não confirmam fatos novos, consentimentos nem contribuições de Lucas e Giovanni.
-**Revisão independente:** PENDENTE
+**Revisão independente:** feita sobre `bb5415f` por GPT-6.1 Sol, esforço high (Codex), e Opus 5.5, esforço medium (Claude Agent). Os dois concluíram ISSUES sem defeito funcional. Os reparos estão na seção 8.
 
 Este relatório reúne, item por item, o que cada parecer pediu, onde foi tratado, a evidência no repositório e o que depende de alguém da equipe. Os pareceres anotados são a fonte de cada decisão:
 
@@ -40,7 +40,7 @@ Situações usadas: **aplicada**, **em parte** (uma parte ficou com alguém ou d
 | Pontos positivos preservados | aplicada | `930f673` | I01, I03, protocolo comum e limites mantidos em `docs/07_coleta_dados.md` | Nenhuma |
 | Correção 1: papel de I02 | aplicada | `dc58d6e`, `e84eb25` | "Papel no conjunto" de I02 e matriz de análise; seção 3.2 de `RASTREABILIDADE.md` | Nenhuma |
 | Correção 2: elegibilidade | aplicada na fonte local | `3c49540` | G01 e confirmação de maioridade em `assets/06_prototipos/GUIA_simulacao.html` | Publicar a versão `2026-11-10`; a página on-line segue na `2026-10-21` |
-| Correção 3: protocolo ético no formulário | aplicada na fonte local | `8767d6c`, `7110617` | Seção "Sua participação" do guia; "Prefiro não responder"; "Apagar rascunho"; código de resposta | Canal fixo de contato para quem recebeu o link repassado; publicação |
+| Correção 3: protocolo ético no formulário | em parte; aplicada na fonte local | `8767d6c`, `7110617`, `fbc6452`, `db94a63` | Seção "Sua participação" do guia; "Prefiro não responder"; "Apagar rascunho"; código de resposta | Canal fixo de contato para quem recebeu o link repassado; publicação |
 | Correção 4: reprodutibilidade de I02 | aplicada; piloto pendente | `110cf22` | Procedimento em nove passos de I02 | Confirmar Lucas na exportação e outro integrante na conferência; verificar acesso ao D1; piloto |
 | Correção 5: Parte A individual, cabeçalho e checklist | em parte | `748ad81` | A01–A03 e cabeçalho do documento | A01–A03 são planejamento proposto; cada integrante revisa e assume a sua |
 | Recomendação: sondagem condicional de E07 | aplicada | `930f673` | Roteiro de I01 | Nenhuma |
@@ -105,9 +105,8 @@ Situações usadas: **aplicada**, **em parte** (uma parte ficou com alguém ou d
 | Revalidar as telas da versão 2 com uma ou duas pessoas de fora do desenho | Equipe |
 | Publicar a versão `2026-11-10` do guia e do formulário | Equipe |
 | Pilotos de I01, I02 e I03; coleta | Equipe |
-| Confirmar responsáveis pela exportação e conferência de I02, o canal fixo de contato, o relator e a ferramenta de quadro de I03 | Equipe |
+| Confirmar responsáveis pela exportação e conferência de I02, o canal fixo de contato, o acesso ao D1 restrito aos três integrantes, o relator e a ferramenta de quadro de I03 | Equipe |
 | Explorar C com mais de oito candidatos | Equipe |
-| Revisão independente desta rodada | PENDENTE |
 
 ## 7. Verificação feita nesta rodada
 
@@ -116,3 +115,41 @@ Situações usadas: **aplicada**, **em parte** (uma parte ficou com alguém ou d
 - Cada tabela alterada tem o mesmo número de colunas em todas as linhas.
 - O texto do professor nos três pareceres é igual ao do commit que o registrou; só as citações anotadas mudaram.
 - O HTML de diffs foi gerado fora do repositório, com `.agents/skills/aplicar-feedback-professor/scripts/gerar_diffs.py`, um por parecer e um agregado.
+
+## 8. Revisão independente de `bb5415f`
+
+Dois revisores de famílias diferentes revisaram a branch no commit `bb5415f`:
+
+| Revisor | Modelo e esforço | Veredito | O que executou |
+|---|---|---|---|
+| Codex | GPT-6.1 Sol, high | ISSUES, sem defeito funcional | Chromium no percurso principal (14 de 14), percursos encenados (18 de 18), conclusão natural (5 de 5); formulário com falha, recusa e rascunho; exportação pela CLI e hashes das mídias |
+| Claude Agent | Opus 5.5, medium | ISSUES, sem defeito funcional | Os mesmos scripts Chromium e o formulário; hash e metadados do áudio local; preservação do texto do professor |
+
+Achados e reparos:
+
+| Achado | Reparo | Commit |
+|---|---|---|
+| A tabela de I02 não listava "Prefiro não responder" em G01, ao contrário do formulário | Alternativa acrescentada na tabela | `fbc6452` |
+| O comando de exportação do passo 8 de I02 não rodava: o Wrangler exige `--command` ou `--file` | Comando completo, executado em `site/`, com `SELECT id, criado_em, versao, respostas FROM feedback ORDER BY id`, `--remote --json` e destino `<pasta-privada>`. Sintaxe conferida no `--help` do Wrangler 4.159.0 e consulta conferida contra a migração em SQLite local. Nada foi executado contra produção | `97d9782` |
+| O roteiro 5.3 da Entrega 6 supunha que o formulário grava com o protótipo servido por `python3 -m http.server`, que responde 501 ao envio | Autorrelato na ficha de observação; `npx wrangler dev` com D1 local só para testes; formulário `2026-11-10` para participação remota só após publicação; versões `2026-10-21` e `2026-11-10` separadas. O 501 foi conferido com `curl` | `9c1eadb` |
+| A anotação da Correção 3 da Entrega 7 dizia ✅ com o canal fixo de contato pendente | Anotação passou a 🟨 Tratado em parte | `fe83f19` |
+| A anotação de status da Entrega 8 listava como aberta a referência na matriz, já feita em `90ab599` | Anotação corrigida | `fe83f19` |
+| A seção 6 da Entrega 6 atribuía a Pedro todos os commits dos arquivos da entrega | Exceção para `f47f4b5` e `1a52696`, do modelo da disciplina, de Plinio Thomaz Aquino Junior, conferida com `git log` | `b47af95` |
+| A Entrega 8 dizia que todos os limites da seção 3.2 estavam confirmados | Só MU01–MU06; MU07, MU08 e os pesos seguem como proposta | `97f3f07` |
+| `site/README.md` descrevia um download único de CSV | Painel **Obter seleção**, CSV sem vídeo, um MP4 por lance e links individuais | `eb0c7a7` |
+| I02 espera cerca de três minutos e a revalidação da Entrega 6 espera 30 segundos, sem explicação | Os dois documentos justificam pela modalidade. O roteiro 5.3 usa 30 segundos; I02 usa três minutos. Nenhum resultado foi criado | `a6d24e0` |
+| O checklist da Entrega 7 não trazia canal fixo, acesso ao D1, relator e ferramenta de I03 | Quatro itens abertos acrescentados | `db94a63` |
+| I02 não dizia qual percurso do protótipo usar, e o README das capturas não ligava dois arquivos aos IDs do inventário | I02 usa o **Percurso normal**, e os percursos encenados ficam na revalidação; capturas ligadas a E06-P04L e E06-P04Z | `e103763`, `ebd0a61` |
+| Comentários novos narravam a versão ou a etapa no protótipo, no guia e nos scripts | Comentários retirados; nomes ambíguos renomeados (ver decisão abaixo) | `607fc76` |
+| Anotações dos reparos nos pareceres | Uma linha na tabela de situação de cada parecer e uma nota por item tocado | `fe83f19` |
+
+**Decisão de escopo sobre comentários.** Os revisores divergiram sobre quanto mexer no código para tirar os comentários. A rodada retirou só os comentários novos de narração e renomeou os nomes que dependiam deles: `base` para `displayedHighlights`, `SCEN` para `STAGED_PATHS`, `failPos` para `stagedFailureSecond`, `bgSync`, `BG_MS`, `bgStep` e `bgT` para `syncBackgroundAnalysis`, `BACKGROUND_VIDEO_MS`, `finishNextBackgroundVideo` e `backgroundTimer`, e `spread` para `nudgeOverlappingMarks`. O estado `S.base` manteve o nome, porque deixou de colidir com a função. O comentário de `contraste_trilhas.py` ficou, porque explica a interpolação do `color-mix` que o script reproduz fora do navegador. O `sed` de `site/build.sh` ficou, porque adapta o link entre os dois layouts e já foi verificado. A decisão não pediu arquiteto nem painel extra.
+
+**Verificação dos reparos.**
+
+- Os três scripts Chromium, em cópia temporária apontada para um servidor próprio na porta 18762, passaram depois dos renomes: `percurso_principal.py` 14 de 14, `conclusao_tela3.py` 5 de 5, `percursos_encenados.py` 18 de 18, sem erro de JavaScript na página. O servidor foi encerrado ao fim.
+- `git diff --check bb5415f..HEAD` sem ocorrências.
+- Links relativos, âncoras e número de colunas das tabelas conferidos por script nos arquivos alterados.
+- O texto do professor nos três pareceres continua igual ao dos commits que o registraram.
+
+**Pendências humanas preservadas.** As da seção 6 continuam abertas: áudio, contribuições de Lucas e Giovanni (PENDENTE), A01–A03, pesos e limites de MU07 e MU08, revalidação com participante, publicação da versão `2026-11-10`, pilotos e coleta, responsáveis por I02, canal fixo de contato, acesso ao D1, relator e ferramenta de I03 e volume maior em C.
