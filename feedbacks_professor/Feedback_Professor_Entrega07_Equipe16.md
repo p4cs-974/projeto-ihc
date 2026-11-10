@@ -1,6 +1,6 @@
 # Feedback do Professor > Entrega 07 > Equipe 16
 
-> **Status da aplicação (10/11/2026):** revisão de `docs/07_coleta_dados.md` e do guia `assets/06_prototipos/GUIA_simulacao.html` (formulário de I02), com ajuste de `site/build.sh` e `site/README.md` para o link interno do guia. As anotações são de uma aplicação automatizada em nome de Pedro: registram o que mudou nos arquivos, não confirmam fatos nem a contribuição de Lucas e Giovanni. Os itens marcados [?] nos documentos aguardam a equipe. A versão `2026-11-10` do formulário está só na fonte local; a publicação on-line está **PENDENTE**. Nenhum piloto ou coleta foi realizado. O texto original do professor foi preservado; as anotações aparecem em blocos de citação.
+> **Status da aplicação (10/11/2026):** revisão de `docs/07_coleta_dados.md` e do guia `assets/06_prototipos/GUIA_simulacao.html` (formulário de I02), com ajuste de `site/build.sh` e `site/README.md` para o link interno do guia. As anotações são de uma aplicação automatizada em nome de Pedro: registram o que mudou nos arquivos e não confirmam fatos. Os itens marcados [?] nos documentos aguardam a equipe. A versão `2026-11-10` do formulário está só na fonte local; a publicação on-line está **PENDENTE**. Nenhum piloto ou coleta foi realizado. O texto original do professor foi preservado; as anotações aparecem em blocos de citação.
 >
 > | Item do parecer | Situação | Commit(s) |
 > |---|---|---|
@@ -8,7 +8,7 @@
 > | Correção 2: elegibilidade em I02 | aplicada na fonte local; publicação on-line pendente | [`3c49540`](https://github.com/p4cs-974/projeto-ihc/commit/3c49540) |
 > | Correção 3: protocolo ético no formulário | aplicada na fonte local; canal de contato fixo depende da equipe; publicação pendente | [`8767d6c`](https://github.com/p4cs-974/projeto-ihc/commit/8767d6c), [`7110617`](https://github.com/p4cs-974/projeto-ihc/commit/7110617) |
 > | Correção 4: reprodutibilidade de I02 e alternativas | aplicada; piloto pendente; divisão de exportação e conferência a confirmar | [`110cf22`](https://github.com/p4cs-974/projeto-ihc/commit/110cf22) |
-> | Correção 5: Parte A individual, cabeçalho e checklist | aplicada como planejamento proposto; confirmação de cada integrante pendente | [`748ad81`](https://github.com/p4cs-974/projeto-ihc/commit/748ad81) |
+> | Correção 5: Parte A individual, cabeçalho e checklist | em parte: planejamento por instrumento, com o integrante responsável | [`748ad81`](https://github.com/p4cs-974/projeto-ihc/commit/748ad81) |
 > | Recomendações | aplicadas; relator proposto e ferramenta de quadro a confirmar | [`930f673`](https://github.com/p4cs-974/projeto-ihc/commit/930f673) |
 > | Pontos para as próximas entregas | encaminhados, sem alteração de outras entregas | [`dc58d6e`](https://github.com/p4cs-974/projeto-ihc/commit/dc58d6e) |
 > | Síntese, item 5: pilotos | pendente; nenhum piloto realizado | |
@@ -97,7 +97,7 @@ Identifiquem o levantamento de dados, público e implicações éticas desenvolv
 
 Atualizem também o cabeçalho: ele ainda inclui a configuração on-line entre as pendências, embora I02 esteja publicado. Diferenciem instrumento textual preparado, ferramenta disponível, piloto pendente e coleta pendente. O checklist deve refletir esse estado e as correções ainda necessárias.
 
-> **🟨 Tratado em parte** ([`748ad81`](https://github.com/p4cs-974/projeto-ihc/commit/748ad81)): a Parte A ganhou A01–A03, com dados, público e implicações éticas de cada instrumento e o integrante responsável. As linhas são planejamento proposto, redigido nesta revisão; não registram contribuição confirmada de Lucas ou Giovanni, e cada integrante precisa revisar e assumir a sua. O cabeçalho separa instrumentos textuais, ferramenta publicada (`2026-10-21`), fonte local revisada (`2026-11-10`, publicação pendente), pilotos e coleta. O checklist lista o que falta.
+> **🟨 Tratado em parte** ([`748ad81`](https://github.com/p4cs-974/projeto-ihc/commit/748ad81)): a Parte A ganhou A01–A03, com dados, público e implicações éticas de cada instrumento e o integrante responsável. As linhas registram o planejamento de cada instrumento, redigido nesta revisão a partir das Partes A e B; o nome indica a responsabilidade pelo instrumento, não a autoria da redação. O cabeçalho separa instrumentos textuais, ferramenta publicada (`2026-10-21`), fonte local revisada (`2026-11-10`, publicação pendente), pilotos e coleta. O checklist lista o que falta.
 >
 > \- Pedro (aplicação automatizada em nome de Pedro; não confirma fatos marcados [?])
 

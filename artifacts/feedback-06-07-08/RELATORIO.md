@@ -2,7 +2,7 @@
 
 **Data:** 10/11/2026
 **Branch:** `feedback/entregas-06-07-08`, a partir de `bce19c4`
-**Aplicação:** automação a pedido de Pedro. Os commits e as anotações registram o que mudou nos arquivos. Não confirmam fatos novos, consentimentos nem contribuições de Lucas e Giovanni.
+**Aplicação:** automação a pedido de Pedro. Os commits e as anotações registram o que mudou nos arquivos. Não confirmam fatos novos.
 **Revisão independente:** feita sobre `bb5415f` por GPT-6.1 Sol, esforço high (Codex), e Opus 5.5, esforço medium (Claude Agent). Os dois concluíram ISSUES sem defeito funcional. Os reparos estão na seção 8.
 
 Este relatório reúne, item por item, o que cada parecer pediu, onde foi tratado, a evidência no repositório e o que depende de alguém da equipe. Os pareceres anotados são a fonte de cada decisão:
@@ -11,7 +11,7 @@ Este relatório reúne, item por item, o que cada parecer pediu, onde foi tratad
 - [Parecer da Entrega 7](../../feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md)
 - [Parecer da Entrega 8](../../feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md)
 
-Situações usadas: **aplicada**, **em parte** (uma parte ficou com alguém ou depende de ação externa), **encaminhada** (não pede mudança agora) e **pendente**.
+Situações usadas: **aplicada**, **em parte** (uma parte ficou com alguém, depende de ação externa ou foi tratada no escopo documental definido), **encaminhada** (não pede mudança agora) e **pendente**.
 
 ## 1. Entrega 6, prototipação
 
@@ -22,8 +22,8 @@ Situações usadas: **aplicada**, **em parte** (uma parte ficou com alguém ou d
 | Correção 2: continuidade e obtenção | aplicada | `9c67289` | `assets/06_prototipos/PROTOTIPO_fluxo_highlights.html`, telas 3 e 4 e painel **Obter seleção**; `artifacts/entrega6/verificacao-2026-11-10/percurso_principal.py` | Nenhuma no protótipo; a verificação com pessoa fica na Correção 4 |
 | Correção 3: exceções | aplicada como percurso encenado | `9ed3753` | E06-P03F, E06-P04F e E06-P04Z na seção 3.1; `artifacts/entrega6/verificacao-2026-11-10/percursos_encenados.py` | Nenhuma; nenhum processamento real falha |
 | Correção 4: condução do walkthrough | em parte | `d09b9c3` | Seções 4.3 e 5.3 | Nova verificação com participante não realizada |
-| Correção 5: evidências e acessos | em parte | `d5d9f71`, `fb259aa`, `0dff068` | `artifacts/entrega6/sessao-2026-10-22/README.md`, com o SHA-256 do áudio; link interno no guia e no `README.md` | Áudio não publicado: falta autorização registrada de U01 ou versão com vozes alteradas, decisão de Pedro |
-| Correção 6: participação dos integrantes | em parte | `0d0ac88` | Seção 6 | Contribuições reais de Lucas e Giovanni: PENDENTE, cada um registra a própria |
+| Correção 5: evidências e acessos | em parte | `d5d9f71`, `fb259aa`, `0dff068` | `artifacts/entrega6/sessao-2026-10-22/README.md`, com o SHA-256 do áudio; link interno no guia e no `README.md` | Nenhuma no acompanhamento; os registros disponibilizados são a transcrição e o JSON, e o áudio fica fora do repositório |
+| Correção 6: participação dos integrantes | em parte | `0d0ac88` | Seção 6, com a autoria registrada no Git e as tarefas da Entrega 5 em que as telas se apoiam | Nenhuma no acompanhamento |
 | Recomendação: capturas por versão | aplicada | `576d03b` | `assets/06_prototipos/capturas/README.md`; nota em `artifacts/media-review/README.md` | Nenhuma |
 | Recomendação: termos highlight, corte, seleção e CSV | aplicada | `9c67289`, `d09b9c3`, `dfbe0f5`, `14f6c1d` | Rótulos **Selecionar** e **Obter seleção**; seção 4.1 registra a exposição ao glossário; roteiro 5.3 separa interface de instrução | Nenhuma; o glossário do guia foi mantido de propósito |
 | Recomendação: ordem e objetivos equivalentes nas alternativas | aplicada; volume maior pendente | `d09b9c3`, `b087c06` | Roteiro 5.3; E06-D04 na seção 5.2 | Explorar C com mais de oito candidatos exige cortes novos |
@@ -42,7 +42,7 @@ Situações usadas: **aplicada**, **em parte** (uma parte ficou com alguém ou d
 | Correção 2: elegibilidade | aplicada na fonte local | `3c49540` | G01 e confirmação de maioridade em `assets/06_prototipos/GUIA_simulacao.html` | Publicar a versão `2026-11-10`; a página on-line segue na `2026-10-21` |
 | Correção 3: protocolo ético no formulário | em parte; aplicada na fonte local | `8767d6c`, `7110617`, `fbc6452`, `db94a63` | Seção "Sua participação" do guia; "Prefiro não responder"; "Apagar rascunho"; código de resposta | Canal fixo de contato para quem recebeu o link repassado; publicação |
 | Correção 4: reprodutibilidade de I02 | aplicada; piloto pendente | `110cf22` | Procedimento em nove passos de I02 | Confirmar Lucas na exportação e outro integrante na conferência; verificar acesso ao D1; piloto |
-| Correção 5: Parte A individual, cabeçalho e checklist | em parte | `748ad81` | A01–A03 e cabeçalho do documento | A01–A03 são planejamento proposto; cada integrante revisa e assume a sua |
+| Correção 5: Parte A individual, cabeçalho e checklist | em parte | `748ad81` | A01–A03 e cabeçalho do documento | Nenhuma no acompanhamento; A01–A03 registram o planejamento e o responsável de cada instrumento, não a autoria da redação |
 | Recomendação: sondagem condicional de E07 | aplicada | `930f673` | Roteiro de I01 | Nenhuma |
 | Recomendação: revisão manual como contexto | aplicada | `930f673` | Cartão de abertura do guia | Nenhuma |
 | Recomendação: nome em G08 | aplicada | `930f673` | G08 retirado da fonte local | Retirar o campo `nome` dos registros `2026-10-21` na exportação |
@@ -98,9 +98,6 @@ Situações usadas: **aplicada**, **em parte** (uma parte ficou com alguém ou d
 
 | Pendência | Quem decide ou executa |
 |---|---|
-| Publicar o áudio da sessão de 22/10/2026 ou manter só a transcrição. Exige autorização registrada de U01 ou versão com vozes alteradas | Pedro |
-| Registrar as contribuições reais de Lucas e Giovanni na Entrega 6 | Lucas e Giovanni: PENDENTE |
-| Revisar e assumir A01–A03 da Parte A da Entrega 7 | Cada integrante |
 | Confirmar os pesos de prioridade e os limites de MU07 e MU08 | Equipe |
 | Revalidar as telas da versão 2 com uma ou duas pessoas de fora do desenho | Equipe |
 | Publicar a versão `2026-11-10` do guia e do formulário | Equipe |
@@ -152,4 +149,8 @@ Achados e reparos:
 - Links relativos, âncoras e número de colunas das tabelas conferidos por script nos arquivos alterados.
 - O texto do professor nos três pareceres continua igual ao dos commits que o registraram.
 
-**Pendências humanas preservadas.** As da seção 6 continuam abertas: áudio, contribuições de Lucas e Giovanni (PENDENTE), A01–A03, pesos e limites de MU07 e MU08, revalidação com participante, publicação da versão `2026-11-10`, pilotos e coleta, responsáveis por I02, canal fixo de contato, acesso ao D1, relator e ferramenta de I03 e volume maior em C.
+**Pendências humanas preservadas.** As da seção 6 continuam abertas: pesos e limites de MU07 e MU08, revalidação com participante, publicação da versão `2026-11-10`, pilotos e coleta, responsáveis por I02, canal fixo de contato, acesso ao D1, relator e ferramenta de I03 e volume maior em C.
+
+## 9. Ajuste de escopo do acompanhamento documental
+
+A pedido de Pedro, o acompanhamento deixou de tratar como pendência o registro de contribuições na Entrega 6, a confirmação individual de A01–A03 na Entrega 7 e a publicação do áudio da sessão de 22/10/2026. As melhorias das três entregas foram mantidas. A seção 6 da Entrega 6 registra a autoria no Git e as tarefas da Entrega 5 em que as telas se apoiam. A01–A03 seguem como planejamento por instrumento, com o integrante responsável. A nota da sessão registra que a transcrição e o JSON são os registros disponibilizados, com o áudio fora do repositório e identificado pelo hash. As situações **em parte** dos pareceres foram mantidas, e o texto do professor não mudou.

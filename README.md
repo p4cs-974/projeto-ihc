@@ -10,9 +10,9 @@
 
 05 - Preenchimento concluído; revisão de coerência aplicada em 13/10/2026; modelos hipotéticos a validar
 
-06 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega06_Equipe16.md) em 10/11/2026; protótipo na versão 2 com D01, D02 e D05 aplicadas, sem verificação com participante; áudio da sessão fora do repositório, sem autorização registrada; contribuições de Lucas e Giovanni PENDENTE
+06 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega06_Equipe16.md) em 10/11/2026; protótipo na versão 2 com D01, D02 e D05 aplicadas, sem verificação com participante
 
-07 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md) em 10/11/2026; I02 restrito à experiência de uso do protótipo; formulário `2026-11-10` só na fonte local, publicação PENDENTE; pilotos e coleta pendentes; Parte A individual a confirmar por cada integrante
+07 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md) em 10/11/2026; I02 restrito à experiência de uso do protótipo; formulário `2026-11-10` só na fonte local, publicação PENDENTE; pilotos e coleta pendentes
 
 08 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md) em 10/11/2026; pesos de prioridade, MU07 e MU08 propostos, a confirmar pela equipe; metas são especificação, sem resultados
 

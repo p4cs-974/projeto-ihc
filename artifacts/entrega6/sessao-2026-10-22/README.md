@@ -5,10 +5,10 @@ Sessão de 22/10/2026, conduzida por Pedro com um colega da turma identificado c
 | Arquivo | Procedência e limites |
 |---|---|
 | [Transcrição do áudio](transcricao.txt) | Reconhecimento automático de um áudio de aproximadamente 4min36s fornecido por Pedro em 22/10/2026. Tempos aproximados, falantes sem identificação automática e trechos incertos marcados. O arquivo não equivale a uma gravação da tela nem à conferência do áudio original |
-| Áudio original, fora do repositório | [F] Arquivo M4A, AAC estéreo a 48 kHz, 4min36,12s, criado em 2026-10-22T22:46:18Z, SHA-256 `ade2deaedf63edb31e8e91bc467fed376ba9ea3c181aee1c4544a214e07f8cc0`. Conferido em 10/11/2026 em cópia local de Pedro. Não foi versionado porque contém as vozes de U01 e de Pedro, o repositório é público e não há registro de autorização de U01 para publicar a gravação. [?] A inclusão depende dessa autorização, ou de uma versão com as vozes alteradas que preserve o conteúdo; o hash acima permite verificar que o arquivo incluído é o mesmo que originou a transcrição |
+| Áudio original, fora do repositório | [F] Arquivo M4A, AAC estéreo a 48 kHz, 4min36,12s, criado em 2026-10-22T22:46:18Z, SHA-256 `ade2deaedf63edb31e8e91bc467fed376ba9ea3c181aee1c4544a214e07f8cc0`. Conferido em 10/11/2026 em cópia local de Pedro. O hash identifica o arquivo que originou a transcrição |
 | [Feedback de produção](feedback-producao.json) | Exportação da tabela `feedback` do D1 `ihc-feedback`, consultada em 22/10/2026. Registro 1, guia na versão `2026-10-21`. O campo opcional `nome` foi omitido desta cópia; as demais respostas foram preservadas e o participante recebeu o identificador U01. O registro em produção não foi alterado |
 
-Enquanto o áudio não estiver no repositório, a transcrição é o único registro do diálogo disponível para a disciplina. As citações de tempo na Entrega 6 se referem à transcrição e não foram reconferidas no áudio por quem não teve acesso a ele.
+Os registros disponibilizados da sessão são a transcrição e o JSON do formulário; o áudio fica fora do repositório. A transcrição tem tempos aproximados e não equivale a uma gravação da tela nem a uma verificação independente do áudio. As citações de tempo na Entrega 6 se referem à transcrição.
 
 O formulário registra o autorrelato de U01. A transcrição permite reconhecer comentários e ajuda durante o percurso, sem comprovar cada ação na tela. A marcação de sucesso na tarefa de download não comprova a obtenção de MP4: o diálogo documenta o CSV. Trechos incertos não foram usados para fundamentar os achados.
 
