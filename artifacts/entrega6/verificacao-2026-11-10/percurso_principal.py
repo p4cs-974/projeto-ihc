@@ -1,4 +1,3 @@
-# Percurso real PF02→PF03→PF04 na v2: reprodução real na Tela 3, saída com análise em andamento, segundo plano, obtenção.
 import sys,os,json
 from playwright.sync_api import sync_playwright
 U='http://localhost:8762/PROTOTIPO_fluxo_highlights.html'; OUT=sys.argv[1] if len(sys.argv)>1 else None
@@ -25,7 +24,7 @@ with sync_playwright() as p:
   pg.click('[data-shownew]');
   pg.wait_for_function("A.state==='done'",timeout=60000); pg.wait_for_timeout(300)
   if not pg.is_hidden('#newbar'): pg.click('[data-shownew]')
-  ck('Lote termina em segundo plano e mostra os 8', pg.evaluate("base().length")==8 and 'Análise concluída' in pg.inner_text('#lote'), pg.inner_text('#lote').split('\n')[0])
+  ck('Lote termina em segundo plano e mostra os 8', pg.evaluate("displayedHighlights().length")==8 and 'Análise concluída' in pg.inner_text('#lote'), pg.inner_text('#lote').split('\n')[0])
   if OUT: pg.screenshot(path=OUT+'/E06-P04A_busca_v2.png')
   ck('Obter seleção desabilitado sem seleção', pg.is_disabled('#dl'), pg.inner_text('#dl'))
   pg.click('[data-row=suarez] [data-incl]'); pg.click('[data-row=bravo] [data-incl]')

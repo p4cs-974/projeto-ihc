@@ -1,4 +1,3 @@
-# Percursos encenados da v2: falha localizada (reprodução real até a falha) e vídeo sem lances.
 import sys,json
 from playwright.sync_api import sync_playwright
 U='http://localhost:8762/PROTOTIPO_fluxo_highlights.html'; OUT=sys.argv[1] if len(sys.argv)>1 else None
@@ -9,7 +8,6 @@ def shot(pg,name):
     if OUT: pg.evaluate('scrollTo(0,0)'); pg.mouse.move(5,790); pg.screenshot(path=f'{OUT}/{name}')
 with sync_playwright() as p:
   b=p.chromium.launch(executable_path='/usr/bin/chromium')
-  # 1. falha localizada, assistida na Tela 3
   pg=b.new_page(viewport={'width':1280,'height':800}); errs=[];pg.on('pageerror',lambda e:errs.append(str(e)))
   pg.goto(U); pg.click('#use-mock:not([disabled])'); pg.click('[data-cen=falha]')
   ck('Tela 2 anuncia o percurso encenado', 'interrompida' in pg.inner_text('#enc-n'), pg.inner_text('#enc-n'))
@@ -26,8 +24,8 @@ with sync_playwright() as p:
   if not pg.is_hidden('#newbar'): pg.click('[data-shownew]')
   fb=pg.inner_text('.fail-box')
   ck('Falha explicada com o lance preservado e os outros vídeos', 'O lance encontrado antes da falha continua na base' in fb and 'Os outros 3 vídeos não foram afetados' in fb, fb.replace('\n',' | ')[:160])
-  ck('Lance anterior à falha disponível; posterior ausente', pg.evaluate("base().some(h=>h.id==='vidal')&&!base().some(h=>h.id==='vidal-penalti')"))
-  ck('Lote encerra com 7 lances e 1 falha', pg.evaluate("base().length")==7 and 'Análise encerrada com 1 falha' in pg.inner_text('#lote'), pg.inner_text('#lote').split('\n')[0])
+  ck('Lance anterior à falha disponível; posterior ausente', pg.evaluate("displayedHighlights().some(h=>h.id==='vidal')&&!displayedHighlights().some(h=>h.id==='vidal-penalti')"))
+  ck('Lote encerra com 7 lances e 1 falha', pg.evaluate("displayedHighlights().length")==7 and 'Análise encerrada com 1 falha' in pg.inner_text('#lote'), pg.inner_text('#lote').split('\n')[0])
   shot(pg,'E06-P04F_falha_na_base_v2.png')
   pg.click('[data-askretry]')
   ck('Confirmação diz que só este vídeo é reprocessado', 'Os outros 3 não são reprocessados' in pg.inner_text('.fail-box'))
@@ -36,12 +34,11 @@ with sync_playwright() as p:
   pg.click('[data-askretry]'); pg.click('[data-retry]')
   ck('Nova tentativa coloca só o vídeo na fila', pg.evaluate("V.filter(v=>v.st!=='pronto').map(v=>v.id)")==['bayern-real-2017-1t'])
   pg.wait_for_function("A.state==='done'",timeout=20000); pg.wait_for_timeout(300); pg.click('[data-shownew]')
-  ck('Após a nova tentativa, base com 8 lances e sem falha', pg.evaluate("base().length")==8 and not pg.query_selector('.fail-box'))
+  ck('Após a nova tentativa, base com 8 lances e sem falha', pg.evaluate("displayedHighlights().length")==8 and not pg.query_selector('.fail-box'))
   ck('Sem erros de página (falha)', not errs, '; '.join(errs)); pg.close()
-  # 2. vídeo sem lances e busca sem correspondência
   pg=b.new_page(viewport={'width':1280,'height':800}); errs=[];pg.on('pageerror',lambda e:errs.append(str(e)))
   pg.goto(U+'?tela=4&cenario=vazio'); pg.wait_for_selector('#va-list')
-  ck('Atalho de URL respeita o cenário', pg.evaluate("base().length")==6, str(pg.evaluate("base().length")))
+  ck('Atalho de URL respeita o cenário', pg.evaluate("displayedHighlights().length")==6, str(pg.evaluate("displayedHighlights().length")))
   ck('Lote informa vídeo pronto sem lances', 'Pronto · nenhum lance encontrado' in pg.inner_text('#lote'))
   ck('Lista A informa análise sem lances no tempo', 'nenhum lance encontrado neste tempo' in pg.inner_text('#va-list'))
   pg.fill('#va-q','zzzz'); pg.wait_for_timeout(200)

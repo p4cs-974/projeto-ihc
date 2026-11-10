@@ -1,4 +1,3 @@
-# Conclusão natural na Tela 3 (reprodução real até o fim) e retorno da base ao acompanhamento.
 import sys,json
 from playwright.sync_api import sync_playwright
 U='http://localhost:8762/PROTOTIPO_fluxo_highlights.html'; OUT=sys.argv[1] if len(sys.argv)>1 else None
@@ -19,7 +18,7 @@ with sync_playwright() as p:
   ck('Botão de continuar habilitado', not pg.is_disabled('#t3-next') and pg.inner_text('#t3-next')=='Ver os 8 lances na base →', pg.inner_text('#t3-next'))
   if OUT: pg.screenshot(path=OUT+'/E06-P03_analise_concluida_v2.png')
   pg.click('#t3-next'); pg.wait_for_selector('#t4:not([hidden])')
-  ck('Base completa', pg.evaluate("base().length")==8)
+  ck('Base completa', pg.evaluate("displayedHighlights().length")==8)
   ck('Sem erros de página', not errs, '; '.join(errs))
   b.close()
 print('RESUMO',ok,'/',n)

@@ -15,9 +15,6 @@
   A Tela 4 ("???" no esboço, "Base de dados de highlights") tem 3 variantes, trocadas por
   ?variant=A|B|C ou pelo seletor da Tela 4. Nada é salvo.
   As setas ← → trocam de tela. Atalho de URL: ?tela=1..4
-  Versão 2 (10/11/2026), revisão após o walkthrough de 22/10/2026 (E06-O01/D01 e E06-O04/D05): a Tela 3 mostra a
-  conclusão e um botão para os resultados; a Tela 4 abre os resultados prontos enquanto a análise continua nos
-  outros vídeos, com o estado do lote visível; "Obter seleção" separa a lista CSV dos vídeos MP4.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -231,7 +228,6 @@ h3{margin:0;font-size:16px;font-weight:500}
 .vt svg{flex:none}
 .vt .on{background:#fff;color:var(--text);box-shadow:0 0 0 1px var(--line),0 1px 3px rgba(0,0,0,.06)}
 .toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%);z-index:70;background:var(--text);color:#fff;padding:10px 18px;border-radius:9999px;font-size:13.5px;box-shadow:0 10px 30px rgba(0,0,0,.18);animation:rise .25s;max-width:90vw}
-/* v2: continuidade da análise para a base, estado do lote e obtenção da seleção */
 .t3-top{justify-content:space-between;padding-top:44px}
 .t3-go{display:flex;align-items:center;gap:14px;min-width:0}
 .t3-go .meta{text-align:right}
@@ -354,8 +350,7 @@ const RATE=2; // velocidade dos cortes na Tela 3
 let MF=null, MF_ERR=null, MATCHES=[], TYPES=[];
 let V=[], H=[], HM={};
 const SEL=new Set();
-// percursos encenados: nenhuma falha real acontece; o cenário só muda como a demonstração trata um vídeo
-const SCEN={
+const STAGED_PATHS={
   normal:{name:'Percurso normal'},
   falha:{name:'Falha em um vídeo',src:'bayern-real-2017-1t',note:'A análise do 1º tempo de Bayern 1 x 2 Real Madrid é interrompida no meio do arquivo. Os outros vídeos seguem normalmente.'},
   vazio:{name:'Vídeo sem lances',src:'bayern-real-2017-2t',note:'O 2º tempo de Bayern 1 x 2 Real Madrid termina sem lances encontrados. Os cortes reais desse tempo ficam fora desta demonstração.'},
@@ -381,7 +376,7 @@ function load(){
   V=MF.sources.map((s,i)=>{
     if(!byMatch.has(s.match))byMatch.set(s.match,{name:s.matchName,teams:s.teams,date:s.date});
     return {i,id:s.id,name:s.file.split('/').pop(),m:byMatch.get(s.match),half:s.half,dur:s.durationSeconds,c:COLORS[i%COLORS.length],src:s,prog:0,st:'aguardando',poster:MF.clips.find(c=>c.sourceId===s.id)?.poster,
-      failAt0:S.cen==='falha'&&s.id===SCEN.falha.src?1:null,empty:S.cen==='vazio'&&s.id===SCEN.vazio.src};
+      failAt0:S.cen==='falha'&&s.id===STAGED_PATHS.falha.src?1:null,empty:S.cen==='vazio'&&s.id===STAGED_PATHS.vazio.src};
   });
   MATCHES=[...byMatch.values()];
   TYPES=[...new Set(MF.clips.map(c=>c.type))].map(k=>({k,a:k.slice(0,3).toUpperCase()}));
@@ -392,8 +387,7 @@ function load(){
 const total=()=>V.reduce((a,v)=>a+v.dur,0);
 const off=v=>{let a=0;for(const x of V){if(x===v)return a;a+=x.dur}return a};
 const done=()=>H.filter(h=>h.done);
-// lances exibidos na Tela 4; novos resultados entram só quando a pessoa pede, para não mexer no que ela examina
-const base=()=>H.filter(h=>h.done&&S.base.has(h.id));
+const displayedHighlights=()=>H.filter(h=>h.done&&S.base.has(h.id));
 const when=h=>`${h.v.half}º tempo · jogo <span class="mono">${esc(h.media.matchTime)}</span>`;
 const poster=(h,alt='')=>`<img src="${esc(h.media.poster)}" alt="${esc(alt)}" width="398" height="224">`;
 
@@ -423,8 +417,7 @@ async function pruneCache(){
   const keep=new Set(MF.clips.map(ckey));
   for(const r of await cache.keys())if(!keep.has(r.url))await cache.delete(r);
 }
-// ponto encenado da falha: meio do intervalo entre o último corte lido e o seguinte
-const failPos=(segs,i)=>Math.round(((segs[i-1]?.media.cutEndSeconds??0)+segs[i].media.cutStartSeconds)/2);
+const stagedFailureSecond=(segs,i)=>Math.round(((segs[i-1]?.media.cutEndSeconds??0)+segs[i].media.cutStartSeconds)/2);
 const route=v=>H.filter(h=>h.v===v).sort((a,b)=>a.media.cutStartSeconds-b.media.cutStartSeconds);
 // baixa na ordem em que a Tela 3 vai precisar (rodada de prévias, corte, prévia), dois por vez
 function prefetch(){
@@ -464,7 +457,7 @@ async function play(btn){
   v.play().catch(()=>{});
 }
 new MutationObserver(()=>{if(P.box&&!P.box.isConnected)stopMedia()}).observe($('#t4'),{childList:true,subtree:true});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stopMedia();sync();bgSync()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopMedia();sync();syncBackgroundAnalysis()});
 
 // ---------- simulação da análise: revela as anotações do manifesto ----------
 // Cada prévia percorre um tempo tocando, em RATE×, só os cortes anotados, na ordem do arquivo. O relógio é o
@@ -496,7 +489,7 @@ function lane(v,s){
 function next(l){
   if(l.i>=0)l.played+=l.segs[l.i].media.durationSeconds;
   unload(l);l.i++;l.blob=l.err=null;
-  if(l.v.failAt!=null&&l.i===l.v.failAt){l.ph='done';l.v.fail=failPos(l.segs,l.i);return}
+  if(l.v.failAt!=null&&l.i===l.v.failAt){l.ph='done';l.v.fail=stagedFailureSecond(l.segs,l.i);return}
   const h=l.segs[l.i];
   if(!h){l.ph='done';return}
   l.ph='load';
@@ -533,32 +526,31 @@ function resetAnalysis(){
   V.forEach(v=>{v.prog=0;v.st='aguardando';v.failAt=v.failAt0;v.fail=null;v.pend=false});H.forEach(h=>{h.found=h.done=false});S.confirm=null;
 }
 function startAnalysis(){resetAnalysis();A.state='running';fill();sync()}
-// fora da Tela 3 a análise continua em segundo plano: um vídeo termina a cada BG_MS, sem reproduzir nada
-const BG_MS=6000;let bgT=0;
-function bgSync(){
+const BACKGROUND_VIDEO_MS=6000;let backgroundTimer=0;
+function syncBackgroundAnalysis(){
   const on=A.state==='running'&&S.tela!==3&&!document.hidden;
-  if(on&&!bgT)bgT=setInterval(bgStep,BG_MS);
-  if(!on&&bgT){clearInterval(bgT);bgT=0}
+  if(on&&!backgroundTimer)backgroundTimer=setInterval(finishNextBackgroundVideo,BACKGROUND_VIDEO_MS);
+  if(!on&&backgroundTimer){clearInterval(backgroundTimer);backgroundTimer=0}
 }
-function bgStep(){
+function finishNextBackgroundVideo(){
   const v=A.slots.find(Boolean)?.v||V.find(x=>x.st==='processando')||V.find(x=>x.st==='aguardando');
   if(v)finishVideo(v);
   for(let s=0;s<2;s++)if(!A.slots[s]&&!V.some((x,k)=>k%2===s&&x.st==='processando')){const n=V.find((x,k)=>k%2===s&&x.st==='aguardando');if(n)n.st='processando'}
   if(!V.some(x=>x.st==='aguardando'||x.st==='processando'))A.state='done';
-  bgSync();refresh();
+  syncBackgroundAnalysis();refresh();
 }
 function finishVideo(v){
   A.slots.forEach((l,s)=>{if(l?.v===v)A.slots[s]=null});
   const hs=route(v),cut=v.failAt??hs.length;
   hs.forEach((h,j)=>{if(j<cut)h.found=h.done=true});
-  if(v.failAt!=null){v.fail=failPos(hs,cut);v.prog=v.fail/v.dur;v.st='falhou'}else{v.prog=1;v.st='pronto'}
+  if(v.failAt!=null){v.fail=stagedFailureSecond(hs,cut);v.prog=v.fail/v.dur;v.st='falhou'}else{v.prog=1;v.st='pronto'}
   A.last.forEach(l=>{if(l?.v===v){unload(l);Object.assign(l,{ph:'done',i:cut,err:null})}});
 }
 function retry(id){
   const v=V.find(x=>x.id===id);
   Object.assign(v,{failAt:null,fail:null,pend:false,st:'aguardando',prog:0});S.confirm=null;
   if(A.state==='done')A.state='running';
-  sync();bgSync();refresh();
+  sync();syncBackgroundAnalysis();refresh();
   toast(`Nova tentativa só para ${v.m.name} · ${v.half}º tempo. Os outros vídeos continuam como estão.`);
 }
 function refresh(){
@@ -702,9 +694,9 @@ function VA(root,focus){
   let q='',ty='',half=0,open=focus;
   root.innerHTML=`<div class="va-search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8d8d8d" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="va-q" placeholder="Buscar por lance, jogador, partida, time ou arquivo" autocomplete="off"></div><div class="chips" id="va-chips"></div><div class="va-list" id="va-list"></div>`;
   const chip=(k,label,n,on)=>`<button class="chip${on?' on':''}" data-chip="${k}">${label}${n!==''?`<span>${n}</span>`:''}</button>`;
-  const list=()=>base().filter(h=>(!ty||h.type.k===ty)&&(!half||h.v.half===half)&&(!q||norm(`${h.media.title} ${h.type.k} ${h.media.verifiedAction} ${h.v.m.name} ${h.v.m.teams.join(' ')} ${h.v.name} ${h.v.half}º tempo ${h.media.matchTime} ${tc(h.t)}`).includes(norm(q))));
+  const list=()=>displayedHighlights().filter(h=>(!ty||h.type.k===ty)&&(!half||h.v.half===half)&&(!q||norm(`${h.media.title} ${h.type.k} ${h.media.verifiedAction} ${h.v.m.name} ${h.v.m.teams.join(' ')} ${h.v.name} ${h.v.half}º tempo ${h.media.matchTime} ${tc(h.t)}`).includes(norm(q))));
   const draw=()=>{
-    const all=base();
+    const all=displayedHighlights();
     $('#va-chips').innerHTML=chip('','Todos',all.length,!ty&&!half)+TYPES.map(t=>{const n=all.filter(h=>h.type===t).length;return n?chip('t:'+t.k,t.k,n,ty===t.k):''}).join('')+'<i class="sep"></i>'+[1,2].map(n=>chip('h:'+n,n+'º tempo','',half===n)).join('');
     let html='',lm=null;
     list().forEach(h=>{
@@ -740,9 +732,9 @@ function VA(root,focus){
 // ---------- Variante B: trilhas por partida (mesma linguagem da Tela 3) ----------
 function VB(root,focus){
   const on=new Set(TYPES.map(t=>t.k));let act=focus;
-  const vis=()=>base().filter(h=>on.has(h.type.k));
+  const vis=()=>displayedHighlights().filter(h=>on.has(h.type.k));
   const draw=()=>{
-    const all=base(),L=vis();
+    const all=displayedHighlights(),L=vis();
     let html=`<div class="chips left">${TYPES.map(t=>{const n=all.filter(h=>h.type===t).length;return n?`<button class="chip ${on.has(t.k)?'ck':'off'}" data-ty="${t.k}" aria-pressed="${on.has(t.k)}">${t.k}<span>${n}</span></button>`:''}).join('')}</div><p class="vb-leg">Cada faixa é o arquivo de um tempo da partida, em minutos do arquivo. A etiqueta mostra o tipo do lance e o relógio do jogo. A cor identifica o vídeo de origem; ✓ marca lance selecionado.</p>`;
     MATCHES.forEach(m=>{
       const vs=V.filter(v=>v.m===m);if(!vs.length)return;
@@ -761,8 +753,7 @@ function VB(root,focus){
     root.innerHTML=html;place();
   };
   const pop=(h,L)=>{const i=L.indexOf(h);return `<div class="pop" style="left:${h.t/h.v.dur*100}%"><div class="bar-h"><span class="meta">${i+1} de ${L.length} · ← → para navegar</span><div><button class="ib" data-nav="-1" aria-label="Anterior">←</button><button class="ib" data-nav="1" aria-label="Próximo">→</button><button class="ib" data-close aria-label="Fechar">×</button></div></div>${detail(h,false)}</div>`};
-  // etiquetas próximas ou nas pontas da faixa são deslocadas para não se sobrepor nem sair dela
-  const spread=()=>root.querySelectorAll('.lane-t').forEach(t=>{
+  const nudgeOverlappingMarks=()=>root.querySelectorAll('.lane-t').forEach(t=>{
     const tr=t.getBoundingClientRect();let edge=tr.left+4;
     [...t.querySelectorAll('.bm')].sort((a,b)=>a.getBoundingClientRect().left-b.getBoundingClientRect().left).forEach(m=>{
       const r=m.getBoundingClientRect();let dx=Math.max(0,edge-r.left);
@@ -772,7 +763,7 @@ function VB(root,focus){
     });
   });
   const place=()=>{
-    spread();
+    nudgeOverlappingMarks();
     const p=root.querySelector('.pop');if(!p)return;
     p.style.transform='translateX(-50%)';
     const r=p.getBoundingClientRect(),c=p.closest('.vb-card').getBoundingClientRect();
@@ -802,7 +793,7 @@ function VB(root,focus){
 // ---------- Variante C: mosaico por tipo (fileiras de miniaturas, detalhe em tela cheia) ----------
 function VC(root,focus){
   let open=focus;
-  const groups=()=>TYPES.map(t=>[t,base().filter(h=>h.type===t)]).filter(g=>g[1].length);
+  const groups=()=>TYPES.map(t=>[t,displayedHighlights().filter(h=>h.type===t)]).filter(g=>g[1].length);
   const flat=()=>groups().flatMap(g=>g[1]);
   root.innerHTML=groups().map(([t,hs])=>`<section class="vc-row"><h3>${t.k}<span>${hs.length}</span></h3><div class="vc-strip">${hs.map(h=>`<div class="tile" data-tile="${h.id}" style="--c:${h.v.c}">${poster(h)}<button class="tick-btn${SEL.has(h.id)?' on':''}" data-incl="${h.id}" aria-label="Selecionar lance">✓</button><div class="tile-ov"><b>${esc(h.media.title)}</b> · corte de ${clip(h).dur} s<span>${esc(h.v.m.name)} · ${when(h)}</span></div></div>`).join('')}</div></section>`).join('')+'<div id="vc-m"></div>';
   const modal=()=>{
@@ -842,7 +833,6 @@ const ST={
   processando:(v,n)=>`Em análise${v.prog>0?` · ${Math.floor(v.prog*100)}%`:''}${n?` · ${plural(n,'lance','lances')} até agora`:''}`,
   aguardando:()=>'Na fila',
 };
-// T03 3.3: ler o problema, avaliar a ação e encaminhar só a entrada afetada
 function failBox(v){
   const n=H.filter(h=>h.v===v&&h.done).length,others=V.length-1;
   const act=S.confirm===v.id
@@ -871,7 +861,7 @@ function paintLote(){
 }
 function renderBase(){
   S.base=new Set(done().map(h=>h.id));
-  const hs=base(),nm=new Set(hs.map(h=>h.v.m)).size;
+  const hs=displayedHighlights(),nm=new Set(hs.map(h=>h.v.m)).size;
   $('#t4-sub').innerHTML=`<b>${hs.length}</b> ${hs.length===1?'Highlight':'Highlights'} em <b>${nm}</b> ${nm===1?'Partida':'Partidas'} · cortes reais do SoccerNet em 224p`;
   const fn=VARIANTS[S.variant][1];
   cur=fn($('#vroot'),S.focus);S.focus=null;
@@ -923,8 +913,8 @@ function renderGrid(){
   $('#t2-sub').textContent=V.length?`${V.length} ${V.length===1?'vídeo':'vídeos'} · ${hm(total())} de gravação · as gravações completas não são publicadas, só os cortes`:'Nenhum vídeo';
   $('#grid').innerHTML=V.length?V.map(v=>{const s=v.src.video;return `<article class="vcard" style="--c:${v.c}"><div class="th">${v.poster?`<img src="${esc(v.poster)}" alt="Quadro do ${v.half}º tempo" width="398" height="224">`:''}<span class="dur mono">${tc(v.dur)}</span></div>${started?'':`<button class="rm" data-rm="${v.i}" aria-label="Remover ${esc(v.name)}">×</button>`}<div class="vname"><i class="dot"></i>${mid(v.name)}</div><div class="vmeta">${esc(v.m.name)} · ${v.half}º tempo<br>${s.width}×${s.height} · ${s.fps} fps · ${mb(v.src.sizeBytes)}</div><span class="vstate">${started?v.st[0].toUpperCase()+v.st.slice(1):'Pronto para análise'}</span></article>`}).join(''):'';
   $('#grid').style.display=V.length?'':'none';
-  $('#enc').innerHTML=started?`<span>Percurso encenado: ${SCEN[S.cen].name}</span>`:'<span>Percurso da demonstração:</span>'+Object.entries(SCEN).map(([k,c])=>`<button class="chip${S.cen===k?' on':''}" data-cen="${k}" aria-pressed="${S.cen===k}">${c.name}</button>`).join('');
-  $('#enc-n').textContent=SCEN[S.cen].note||'';
+  $('#enc').innerHTML=started?`<span>Percurso encenado: ${STAGED_PATHS[S.cen].name}</span>`:'<span>Percurso da demonstração:</span>'+Object.entries(STAGED_PATHS).map(([k,c])=>`<button class="chip${S.cen===k?' on':''}" data-cen="${k}" aria-pressed="${S.cen===k}">${c.name}</button>`).join('');
+  $('#enc-n').textContent=STAGED_PATHS[S.cen].note||'';
   $('#start').textContent=started?'Ver análise':'Iniciar';
   $('#start').disabled=!V.length;
 }
@@ -948,7 +938,7 @@ function go(n){
   if(n===4&&A.state==='idle'){finishAll();toast('Atalho da demonstração: a análise foi concluída na hora para abrir a base.')}
   if(n===4&&A.state==='running'&&S.tela===3)toast('A análise continua nos outros vídeos. Os lances deles entram na base quando cada vídeo terminar.');
   if(n!==3)$$('.fly').forEach(e=>e.remove());
-  obtain(false);hlHide(true);S.tela=n;sync();bgSync();
+  obtain(false);hlHide(true);S.tela=n;sync();syncBackgroundAnalysis();
   $$('.screen').forEach((e,i)=>e.hidden=i+1!==n);
   scrollTo(0,0);
   if(n===2)renderGrid();
@@ -984,7 +974,7 @@ document.addEventListener('keydown',e=>{
 
 const Q=new URLSearchParams(location.search);
 if(VARIANTS[Q.get('variant')])S.variant=Q.get('variant');
-if(SCEN[Q.get('cenario')])S.cen=Q.get('cenario');
+if(STAGED_PATHS[Q.get('cenario')])S.cen=Q.get('cenario');
 const want=Math.min(4,Math.max(1,+Q.get('tela')||1));
 go(1);
 loadManifest().then(()=>{if(MF&&want>1)go(want)});
