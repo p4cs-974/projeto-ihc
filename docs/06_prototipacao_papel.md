@@ -285,7 +285,7 @@ O protótipo, o walkthrough acompanhado, as observações e as telas revisadas c
 
 ## 6. Participação da equipe nesta rodada
 
-[F] A tabela usa o histórico do Git dos arquivos da Entrega 6 e os registros deste documento. Todos os commits em `docs/06_prototipacao_papel.md`, `assets/06_prototipos/`, `artifacts/entrega6/` e `artifacts/media-review/` até 22/10/2026 são de Pedro.
+[F] A tabela usa o histórico do Git dos arquivos da Entrega 6 e os registros deste documento. Todos os commits em `docs/06_prototipacao_papel.md`, `assets/06_prototipos/`, `artifacts/entrega6/` e `artifacts/media-review/` até 22/10/2026 são de Pedro, exceto os dois commits do modelo da disciplina, `f47f4b5` (12/08/2026) e `1a52696` (13/08/2026), de Plinio Thomaz Aquino Junior, que criaram e ajustaram o modelo do documento e da pasta de protótipos.
 
 | Integrante | Contribuição registrada na Entrega 6 | Evidência |
 |---|---|---|
