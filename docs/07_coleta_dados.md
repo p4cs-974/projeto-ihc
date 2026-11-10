@@ -1,7 +1,7 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
 **Data:** 25/10/2026\
-**Status:** planejamento e instrumentos textuais preenchidos; configuração em ferramentas on-line, piloto e coleta pendentes\
+**Status:** [F] instrumentos textuais I01, I02 e I03 preparados. Ferramenta disponível: I02, formulário no fim do guia publicado em ihc.p4cs.com.br/guia, na versão `2026-10-21`; a fonte local do guia está na versão `2026-11-10`, e a publicação on-line dessa versão está **PENDENTE**. Ferramentas a preparar: formulário de registro de I01 e quadro/material de I03. Pilotos pendentes nos três instrumentos. Coleta pendente nos três instrumentos; o único registro no banco é o de U01, da Entrega 6, que não faz parte desta coleta.\
 **Responsabilidade:** mapeamento geral da Equipe 16 e instrumentos individuais
 
 | Integrante | Matrícula | Técnica elaborada |
@@ -116,6 +116,16 @@ O responsável acrescentará antes do aceite a descrição específica:
 - **I02:** questionário no fim do guia do protótipo, respondido depois das tarefas da simulação. A seção "Sua participação" do guia, lida antes das tarefas, adapta o texto comum ao formulário: responsáveis (os três integrantes, com acompanhamento do docente), contato por quem enviou o convite e pelo mesmo canal, o que é guardado (respostas, data, versão e código de resposta; sem e-mail, login, IP ou navegador), acesso restrito aos três integrantes, descarte até 90 dias após o fim da disciplina, desistência antes do envio, retirada com o código em até 30 dias, política das perguntas obrigatórias e descarte do rascunho. A plataforma de hospedagem pode manter registros técnicos próprios, que a equipe não publicará nem usará para identificar ninguém. Junto ao botão de envio, o guia repete: “Esta é uma atividade da disciplina de IHC do Centro Universitário FEI. Você pode parar a qualquer momento. Guardamos só as respostas deste formulário, e elas aparecem nos documentos do projeto sem o seu nome.” [?] O contato pelo canal do convite não atende quem recebeu o link repassado por outra pessoa; um canal fixo, como um e-mail institucional da equipe, depende de decisão dos integrantes.
 - **I03:** encontro de aproximadamente 75 minutos com 8 a 12 pessoas, com cartões/notas e sem gravação. Pediremos a todos que preservem o sigilo, mas não podemos garantir confidencialidade por parte dos demais. Você receberá um código para solicitar retirada antes da consolidação da síntese; ideias já combinadas no grupo podem não ser separáveis.
 
+### Contribuições individuais por instrumento (A01–A03)
+
+O mapeamento acima é comum. Cada linha abaixo identifica o levantamento de dados, público e implicações éticas próprio de cada instrumento e indica o integrante responsável por ele. [?] As linhas registram o planejamento proposto para cada instrumento, redigido na revisão de 10/11/2026 a partir das Partes A e B. A contribuição individual só fica confirmada quando cada integrante revisar e assumir sua linha; até lá, o nome indica a responsabilidade pelo instrumento, não a autoria desta redação.
+
+| ID | Integrante | Instrumento | Dados a levantar | Público | Implicações éticas específicas |
+|---|---|---|---|---|---|
+| A01 | Pedro Alexandre Custódio Silva | I01 — Entrevista | Episódios recentes de seleção, critérios de relevância, ferramentas, esforço, erros, passagem de material, espera e retomada; depois, expectativas sobre a aplicação potencial, registradas à parte. Cobre as cinco dimensões | Oito adultos: quatro editores profissionais, dois criadores amadores e dois responsáveis editoriais | Relatos podem envolver terceiros, clientes e material confidencial; conversa individual sem superior presente; áudio só com autorização específica e apagado em até 30 dias; códigos ENT; retirada até a consolidação |
+| A02 | Lucas Roberto Boccia dos Santos | I02 — Questionário | Realização das quatro tarefas da simulação, ajuda recebida, dúvidas, comparação das visualizações, expectativa sobre o CSV/MP4 e perfil declarado. Não levanta a prática atual | Público-alvo de adultos que selecionaram lances de futebol nos últimos seis meses (meta de 20 respostas) e grupo exploratório analisado à parte | Link aberto, sem login ou e-mail; informações do protocolo no próprio guia antes das tarefas; obrigatoriedade com "Prefiro não responder"; rascunho no navegador apagável em equipamento compartilhado; código de resposta para retirada em 30 dias; banco D1 e cópias; registros técnicos da hospedagem |
+| A03 | Giovanni Chahin Morassi | I03 — Brainstorming | Necessidades e desejos ao receber gravações, escolher trechos e continuar o trabalho, com a situação que dá sentido a cada ideia, divergências e indicações de relevância | Uma sessão com 8 a 12 usuários adultos, editores profissionais e criadores amadores, sem chefia direta entre si | Sigilo do grupo não garantido; ninguém precisa falar, votar ou justificar sua experiência; sem gravação; influência de participantes experientes e do moderador; códigos BRA; captura do quadro só depois de desidentificada |
+
 ## Parte B — Ferramentas de coleta
 
 Cada integrante elaborou uma técnica distinta. A entrevista aprofunda práticas e decisões, o brainstorming amplia o conjunto de necessidades e desejos e o questionário registra a experiência de uso do protótipo depois da simulação. Evidências de uso do protótipo e evidências sobre práticas do domínio são analisadas em separado. Não se usarão números de ideias como medida de prevalência nem preferências declaradas como prova de desempenho.
@@ -181,7 +191,7 @@ Cada conclusão deverá citar código e pergunta de origem e indicar se veio de 
 **Elegibilidade e registro:** [F] autodeclarada, sem prova documental, em dois campos gravados com a resposta. A confirmação "Tenho 18 anos ou mais" é obrigatória para enviar; a página informa a restrição de idade logo na abertura. G01 pergunta pela seleção de lances de futebol nos últimos seis meses e separa trabalho de conta própria/hobby. Respostas "Sim, como parte do meu trabalho" e "Sim, por conta própria ou como hobby" formam o grupo do **público-alvo**, analisado também por subgrupo. As demais formam o grupo **exploratório**: o link do guia é aberto e pode chegar a iniciantes, cujas respostas ajudam a encontrar barreiras de interação para quem não conhece o domínio, como ocorreu com U01 na Entrega 6. Conclusões do grupo exploratório ficam separadas e não servem para validar personas, público-alvo ou necessidades profissionais. Quem só supervisiona ou só assiste a futebol também cai no grupo exploratório. Respostas da versão `2026-10-21` do formulário usam as categorias antigas de G01 ("Nunca", "De vez em quando", "Com frequência, por trabalho ou hobby"), que não indicam experiência com futebol; elas são analisadas à parte, sem remapeamento para os grupos atuais.\
 **Duração estimada:** [H] cerca de 25 minutos no total: uns 5 para ler o guia até "Tarefas", uns 15 no protótipo e uns 5 no formulário. A estimativa é da equipe, sem medição, e será conferida no piloto; o guia informa esse total na abertura.\
 **Ferramenta:** formulário próprio na seção “Feedback” do guia do protótipo. As respostas são gravadas no banco D1 `ihc-feedback` do site, com data e versão do formulário. A fonte local ([`GUIA_simulacao.html`](../assets/06_prototipos/GUIA_simulacao.html)) está na versão `2026-11-10`; a página publicada continua na versão `2026-10-21` até nova publicação, que está **PENDENTE**.\
-**Situação da ferramenta:** formulário criado e publicado no fim do guia.
+**Situação da ferramenta:** [F] formulário publicado no fim do guia na versão `2026-10-21`. A versão `2026-11-10`, com as alternativas e informações descritas aqui, está na fonte local e aguarda publicação (**PENDENTE**). Piloto e coleta pendentes.
 
 Link do questionário para preenchimento abaixo, inserido dentro do nosso guia de utilização do protótipo. O questionário está na parte inferior da página:
 
@@ -334,6 +344,8 @@ Os instrumentos deverão reduzir as lacunas que sustentam o recorte de envio, ac
 - [x] Perguntas não pressupõem dashboard, histórico, filtros, relatórios ou auditoria como necessários.
 - [x] Cada dimensão de dados responde a uma dúvida concreta e indica uma decisão possível.
 - [x] Parte A reúne o mapeamento geral das cinco dimensões dos slides e dos perfis/stakeholders para os três instrumentos.
+- [x] Parte A identifica, em A01–A03, o levantamento de dados, público e implicações éticas de cada instrumento e o integrante responsável.
+- [ ] Cada integrante revisar e confirmar sua linha em A01–A03 e a divisão de exportação e conferência de I02.
 - [x] Aspectos éticos são contextualizados, com consentimento, gravação opcional, acesso e descarte.
 - [x] Há uma técnica completa por integrante, com nome e matrícula, e técnicas distintas.
 - [x] Questionário está incluído entre as técnicas.
@@ -342,6 +354,12 @@ Os instrumentos deverão reduzir as lacunas que sustentam o recorte de envio, ac
 - [x] Brainstorming prevê 8 a 12 usuários, geração individual seguida de coletiva e ausência de censura na geração.
 - [x] Perguntas evitam indução, admitem ausência de necessidade e coletam apenas dados pertinentes.
 - [x] Está definido como analisar, triangular e usar os dados no design, preservando limitações.
+- [x] I02 é tratado como questionário de experiência de uso, e suas respostas ficam separadas das evidências sobre práticas do domínio.
+- [x] Formulário de I02 publicado (versão `2026-10-21`).
+- [ ] Publicar on-line a versão `2026-11-10` do guia e do formulário.
+- [ ] Criar o formulário de registro de I01 e preparar o quadro/material de I03.
+- [ ] Realizar os pilotos de I01, I02 e I03 e registrar os ajustes.
+- [ ] Realizar a coleta e a análise.
 
 ## Histórico de revisões
 
