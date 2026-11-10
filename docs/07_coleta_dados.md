@@ -74,7 +74,7 @@ O critério comum é ter 18 anos ou mais e experiência na atividade indicada no
 |---|---|---|
 | Editor profissional de futebol | Ter selecionado ou recortado lances de partidas encerradas, com fluxo manual ou automatizado | Usuário potencial associado a P01; participa de I01, I02 e I03 |
 | Criador amador de futebol | Ter preparado seleções de lances, inclusive com ferramentas simples/mobile, produção própria ou remuneração ocasional | Usuário potencial associado a P03; participa de I01, I02 e I03 |
-| Supervisor, produtor ou editor-chefe | Ter recebido e avaliado seleções de lances | Stakeholder associado a P02, com decisão externa à interface; participa de I01. Quem apenas supervisiona ou assiste a futebol não integra o público de I02/I03 |
+| Supervisor, produtor ou editor-chefe | Ter recebido e avaliado seleções de lances | Stakeholder associado a P02, com decisão externa à interface; participa de I01. Quem apenas supervisiona ou assiste a futebol não integra o público de I02/I03; se responder a I02, entra no grupo exploratório descrito no instrumento |
 
 **Quem usa?** Editores e criadores são usuários potenciais, a confirmar pela investigação. 
 
@@ -177,9 +177,10 @@ Cada conclusão deverá citar código e pergunta de origem e indicar se veio de 
 **Autor:** Lucas Roberto Boccia dos Santos — 22.123.012-1\
 **Objetivo:** registrar, logo após a simulação com o protótipo, como cada pessoa realizou as quatro tarefas, onde não soube o que fazer, qual visualização dos resultados preferiu e o que esperava receber no download, comparando as respostas pelo perfil declarado sem generalizar a amostra para todo o mercado.\
 **Papel no conjunto:** [F] I02 é um questionário de experiência de uso do protótipo. Esta revisão não acrescenta perguntas sobre a prática atual, porque elas teriam de vir antes da exposição ao protótipo e alongariam uma participação assíncrona; essas lacunas ficam com I01 e I03. As respostas de I02 orientam melhorias de interação do protótipo (rótulos, estados, visualizações e saída) e não sustentam, sozinhas, hipóteses sobre frequência, volume, criticidade, passagem de material, adoção, custos ou ganho de tempo.\
-**Público/amostra pretendida:** pelo menos 20 respostas, buscando editores profissionais e criadores amadores. Recrutamento por conveniência em contatos e comunidades de edição/futebol. O formulário não tem triagem; G01 separa quem edita com frequência, de vez em quando ou nunca, e a análise trata esses grupos separadamente. Se a meta não for alcançada, apresentar a quantidade real e o desequilíbrio.\
+**Público/amostra pretendida:** [H] pelo menos 20 respostas do público-alvo: adultos que selecionaram ou recortaram lances de partidas de futebol nos últimos seis meses, por trabalho ou por conta própria. Recrutamento por conveniência em contatos e comunidades de edição/futebol. Se a meta não for alcançada, apresentar a quantidade real e o desequilíbrio entre subgrupos.\
+**Elegibilidade e registro:** [F] autodeclarada, sem prova documental, em dois campos gravados com a resposta. A confirmação "Tenho 18 anos ou mais" é obrigatória para enviar; a página informa a restrição de idade logo na abertura. G01 pergunta pela seleção de lances de futebol nos últimos seis meses e separa trabalho de conta própria/hobby. Respostas "Sim, como parte do meu trabalho" e "Sim, por conta própria ou como hobby" formam o grupo do **público-alvo**, analisado também por subgrupo. As demais formam o grupo **exploratório**: o link do guia é aberto e pode chegar a iniciantes, cujas respostas ajudam a encontrar barreiras de interação para quem não conhece o domínio, como ocorreu com U01 na Entrega 6. Conclusões do grupo exploratório ficam separadas e não servem para validar personas, público-alvo ou necessidades profissionais. Quem só supervisiona ou só assiste a futebol também cai no grupo exploratório. Respostas da versão `2026-10-21` do formulário usam as categorias antigas de G01 ("Nunca", "De vez em quando", "Com frequência, por trabalho ou hobby"), que não indicam experiência com futebol; elas são analisadas à parte, sem remapeamento para os grupos atuais.\
 **Duração estimada:** a conferir; o formulário tem oito perguntas, quatro obrigatórias e quatro opcionais.\
-**Ferramenta:** formulário próprio na seção “Feedback” do guia do protótipo. As respostas são gravadas no banco D1 `ihc-feedback` do site, com data e versão do formulário (2026-10-21).\
+**Ferramenta:** formulário próprio na seção “Feedback” do guia do protótipo. As respostas são gravadas no banco D1 `ihc-feedback` do site, com data e versão do formulário. A fonte local ([`GUIA_simulacao.html`](../assets/06_prototipos/GUIA_simulacao.html)) está na versão `2026-11-10`; a página publicada continua na versão `2026-10-21` até nova publicação, que está **PENDENTE**.\
 **Situação da ferramenta:** formulário criado e publicado no fim do guia.
 
 Link do questionário para preenchimento abaixo, inserido dentro do nosso guia de utilização do protótipo. O questionário está na parte inferior da página:
@@ -190,7 +191,7 @@ https://ihc.p4cs.com.br/guia/
 
 | ID | Pergunta | Campo e alternativas | Obrigatória |
 |---|---|---|---|
-| G01 | Você edita vídeos? | Escolha única: Nunca; De vez em quando; Com frequência, por trabalho ou hobby | Sim |
+| G01 | Nos últimos seis meses, você selecionou ou recortou lances de partidas de futebol para algum vídeo? | Escolha única: Sim, como parte do meu trabalho; Sim, por conta própria ou como hobby; Não, mas edito outros tipos de vídeo; Não edito vídeos | Sim |
 | G02 | Como você fez a simulação? | Escolha única: Sozinho(a); Com alguém da equipe acompanhando | Sim |
 | G03 | Como foi cada tarefa? | Grade com uma linha por tarefa (1. Preparar a análise; 2. Acompanhar a análise; 3. Escolher três lances; 4. Baixar o que escolheu): Consegui; Com dificuldade; Não consegui | Sim |
 | G04 | Teve algum momento em que você não soube o que fazer? | Texto longo | Não |
@@ -198,8 +199,9 @@ https://ihc.p4cs.com.br/guia/
 | G06 | O que você esperava receber quando baixou? | Texto longo | Não |
 | G07 | O que você achou, no geral? | Texto longo | Não |
 | G08 | Nome ou apelido | Texto curto, até 80 caracteres | Não |
+| Idade | Tenho 18 anos ou mais | Caixa de confirmação; sem ela o formulário não é enviado | Sim |
 
-**Análise:** contar G02, G03 e G05 por grupo de G01; agrupar G04, G05 (por quê), G06 e G07 por tema; não publicar G08. Na matriz de análise abaixo, G01–G08 indicam as perguntas do I02.
+**Análise:** contar G02, G03 e G05 separadamente para o público-alvo (e seus subgrupos) e para o grupo exploratório; agrupar G04, G05 (por quê), G06 e G07 por tema; não publicar G08. Na matriz de análise abaixo, G01–G08 indicam as perguntas do I02.
 
 ### Instrumento I03 — Brainstorming de necessidades e desejos dos usuários
 
@@ -322,7 +324,7 @@ Os instrumentos deverão reduzir as lacunas que sustentam o recorte de envio, ac
 - [x] Há uma técnica completa por integrante, com nome e matrícula, e técnicas distintas.
 - [x] Questionário está incluído entre as técnicas.
 - [x] Cada instrumento possui objetivo, público, amostra pretendida, procedimento e conteúdo integral.
-- [x] Questionário informa alternativas, tipos de campo e obrigatoriedade; não tem triagem, e o perfil é separado por G01.
+- [x] Questionário informa alternativas, tipos de campo e obrigatoriedade; maioridade e experiência com lances de futebol são autodeclaradas e registradas, e o grupo exploratório é analisado em separado.
 - [x] Brainstorming prevê 8 a 12 usuários, geração individual seguida de coletiva e ausência de censura na geração.
 - [x] Perguntas evitam indução, admitem ausência de necessidade e coletam apenas dados pertinentes.
 - [x] Está definido como analisar, triangular e usar os dados no design, preservando limitações.

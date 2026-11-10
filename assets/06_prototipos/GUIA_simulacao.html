@@ -142,7 +142,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
 <main>
   <header class="hero">
     <h1>Guia da simulação</h1>
-    <p class="sub">Obrigado por topar. Você vai usar um protótipo por uns 15 minutos e depois contar como foi. Leia este guia até <b>Tarefas</b> antes de abrir o protótipo.</p>
+    <p class="sub">Obrigado por topar. Você vai usar um protótipo por uns 15 minutos e depois contar como foi. Leia este guia até <b>Tarefas</b> antes de abrir o protótipo. A atividade é só para pessoas com 18 anos ou mais.</p>
     <div class="hero-act">
       <a class="btn pri big" href="#projeto">Ler o guia</a>
       <a class="link" href="#feedback">Ir direto para o feedback</a>
@@ -219,11 +219,13 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
 
     <form id="fb" novalidate>
       <fieldset>
-        <legend>Você edita vídeos?</legend>
+        <legend>Nos últimos seis meses, você selecionou ou recortou lances de partidas de futebol para algum vídeo?</legend>
+        <p class="meta">Vale vídeo de trabalho, canal próprio, time amador ou hobby.</p>
         <div class="opts">
-          <label class="opt"><input type="radio" name="perfil" value="nunca" required><span>Nunca</span></label>
-          <label class="opt"><input type="radio" name="perfil" value="as_vezes"><span>De vez em quando</span></label>
-          <label class="opt"><input type="radio" name="perfil" value="frequente"><span>Com frequência, por trabalho ou hobby</span></label>
+          <label class="opt"><input type="radio" name="perfil" value="futebol_trabalho" required><span>Sim, como parte do meu trabalho</span></label>
+          <label class="opt"><input type="radio" name="perfil" value="futebol_conta_propria"><span>Sim, por conta própria ou como hobby</span></label>
+          <label class="opt"><input type="radio" name="perfil" value="edita_outros"><span>Não, mas edito outros tipos de vídeo</span></label>
+          <label class="opt"><input type="radio" name="perfil" value="nao_edita"><span>Não edito vídeos</span></label>
         </div>
       </fieldset>
 
@@ -277,6 +279,13 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
         <input type="text" name="nome" maxlength="80" autocomplete="nickname">
       </fieldset>
 
+      <fieldset>
+        <legend>Idade</legend>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="maioridade" value="sim" required><span>Tenho 18 anos ou mais</span></label>
+        </div>
+      </fieldset>
+
       <label class="hp" aria-hidden="true">Não preencha<input type="text" name="site" tabindex="-1" autocomplete="off"></label>
 
       <p class="consent">Esta é uma atividade da disciplina de IHC do Centro Universitário FEI. Você pode parar a qualquer momento. Guardamos só as respostas deste formulário, e elas aparecem nos documentos do projeto sem o seu nome.</p>
@@ -297,7 +306,7 @@ footer{margin-top:96px;font-size:13px;color:var(--dim);text-align:center}
 
 <script>
 const $=s=>document.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const form=$('#fb'), status=$('#status'), KEY='guia-e06-rascunho', VERSAO='2026-10-21';
+const form=$('#fb'), status=$('#status'), KEY='guia-e06-rascunho', VERSAO='2026-11-10';
 
 const NIVEIS=[['sim','Consegui'],['dificil','Com dificuldade'],['nao','Não consegui']];
 for(const box of $$('[data-q]'))
@@ -308,6 +317,7 @@ function ler(){
   for(const el of form.elements){
     if(!el.name||el.name==='site')continue;
     if(el.type==='radio'){if(el.checked)d[el.name]=el.value}
+    else if(el.type==='checkbox')d[el.name]=el.checked?el.value:'';
     else d[el.name]=el.value.trim();
   }
   return d;
@@ -317,7 +327,7 @@ function restaurar(){
   if(!d)return;
   for(const el of form.elements){
     if(!(el.name in d))continue;
-    if(el.type==='radio')el.checked=el.value===d[el.name];
+    if(el.type==='radio'||el.type==='checkbox')el.checked=el.value===d[el.name];
     else el.value=d[el.name];
   }
 }
