@@ -14,6 +14,7 @@
 > | Síntese, item 5: pilotos | pendente; nenhum piloto realizado | |
 > | Registro da revisão | cabeçalho e histórico do documento | [`d3dddd2`](https://github.com/p4cs-974/projeto-ihc/commit/d3dddd2) |
 > | Consolidação: README e matriz | status com publicação, pilotos e coleta pendentes; I02 registrado como questionário de experiência de uso na matriz, sem conclusões | [`0dff068`](https://github.com/p4cs-974/projeto-ihc/commit/0dff068), [`e84eb25`](https://github.com/p4cs-974/projeto-ihc/commit/e84eb25) |
+> | Revisão independente de `bb5415f` | G01, exportação, percurso normal, prazo de espera e checklist ajustados; canal fixo, acesso ao D1, relator e ferramenta de I03 continuam pendentes | [`fbc6452`](https://github.com/p4cs-974/projeto-ihc/commit/fbc6452), [`97d9782`](https://github.com/p4cs-974/projeto-ihc/commit/97d9782), [`e103763`](https://github.com/p4cs-974/projeto-ihc/commit/e103763), [`a6d24e0`](https://github.com/p4cs-974/projeto-ihc/commit/a6d24e0), [`db94a63`](https://github.com/p4cs-974/projeto-ihc/commit/db94a63) |
 >
 > \- Pedro (aplicação automatizada em nome de Pedro; não confirma fatos marcados [?])
 
@@ -68,7 +69,9 @@ Entretanto, o participante não recebe ali o mesmo esclarecimento previsto no pr
 
 Revisem ainda a compatibilidade entre a promessa geral de poder deixar perguntas sem resposta e a obrigatoriedade de G01, G02, G03 e G05. Expliquem a política adotada e ofereçam alternativas adequadas quando o participante não puder responder. Não basta registrar bons cuidados no planejamento: o procedimento publicado deve colocá-los em prática.
 
-> **✅ Como foi tratado** ([`8767d6c`](https://github.com/p4cs-974/projeto-ihc/commit/8767d6c), [`7110617`](https://github.com/p4cs-974/projeto-ihc/commit/7110617)): o guia tem a seção "Sua participação", antes das tarefas, com responsáveis, contato, o que é guardado, acesso, descarte em 90 dias, desistência, retirada com código em 30 dias, política das perguntas obrigatórias e descarte do rascunho. O aviso junto ao envio foi preservado e aponta para essa seção. G01, G02, G03 e G05 têm "Prefiro não responder"; a maioridade é a única exigência sem alternativa, com justificativa no documento. O botão "Apagar rascunho" limpa o navegador. Cada envio gera um código de resposta. [?] O contato é feito por quem enviou o convite; um canal fixo para quem recebeu o link repassado depende de decisão da equipe.
+> **🟨 Tratado em parte** ([`8767d6c`](https://github.com/p4cs-974/projeto-ihc/commit/8767d6c), [`7110617`](https://github.com/p4cs-974/projeto-ihc/commit/7110617)): o guia tem a seção "Sua participação", antes das tarefas, com responsáveis, contato, o que é guardado, acesso, descarte em 90 dias, desistência, retirada com código em 30 dias, política das perguntas obrigatórias e descarte do rascunho. O aviso junto ao envio foi preservado e aponta para essa seção. G01, G02, G03 e G05 têm "Prefiro não responder"; a maioridade é a única exigência sem alternativa, com justificativa no documento. O botão "Apagar rascunho" limpa o navegador. Cada envio gera um código de resposta. [?] O contato é feito por quem enviou o convite; um canal fixo para quem recebeu o link repassado depende de decisão da equipe.
+>
+> **🟨 Revisão independente** ([`fbc6452`](https://github.com/p4cs-974/projeto-ihc/commit/fbc6452), [`db94a63`](https://github.com/p4cs-974/projeto-ihc/commit/db94a63)): a tabela de I02 lista "Prefiro não responder" em G01, como o formulário. O checklist da entrega tem o canal fixo de contato e a restrição do acesso ao D1 como itens abertos. [?] O canal fixo continua PENDENTE de decisão da equipe.
 >
 > \- Pedro (aplicação automatizada em nome de Pedro; não confirma fatos marcados [?])
 
@@ -81,6 +84,8 @@ G02 distingue aplicação individual de aplicação acompanhada, mas não esclar
 Detalhem, por fim, quem fará a exportação, a retirada de identificadores e a conferência dos registros. A descrição do armazenamento deve contemplar o banco indicado em I02 e eventuais cópias, mantendo coerência com as regras gerais de acesso e descarte.
 
 > **✅ Como foi tratado** ([`110cf22`](https://github.com/p4cs-974/projeto-ihc/commit/110cf22)): I02 tem procedimento padronizado em nove passos: recrutamento, piloto, modalidade, orientação de quem acompanha, registro de ajuda, tarefas não realizadas, encerramento, exportação/desidentificação/conferência e armazenamento/retirada/descarte, incluindo o D1 de produção, o D1 de preview e as cópias. A duração total estimada (cerca de 25 minutos) é [H] e está no guia. G02, G03 e G05 têm alternativas distintas para cada situação citada. [?] O responsável proposto pela exportação é Lucas, com conferência por outro integrante, a confirmar; o acesso ao D1 na Cloudflare precisa ser verificado. O piloto não foi realizado.
+>
+> **✅ Revisão independente** ([`97d9782`](https://github.com/p4cs-974/projeto-ihc/commit/97d9782), [`e103763`](https://github.com/p4cs-974/projeto-ihc/commit/e103763), [`a6d24e0`](https://github.com/p4cs-974/projeto-ihc/commit/a6d24e0)): o passo 8 traz o comando de exportação completo, executado em `site/`, com `--command`, `--remote --json` e destino privado marcado como placeholder; nada foi executado contra produção. O passo 3 mantém o **Percurso normal** e deixa os percursos encenados para a revalidação da Entrega 6. O passo 4 justifica os três minutos de espera diante dos 30 segundos da revalidação.
 >
 > \- Pedro (aplicação automatizada em nome de Pedro; não confirma fatos marcados [?])
 
@@ -119,6 +124,8 @@ Atualizem também o cabeçalho: ele ainda inclui a configuração on-line entre 
 - No brainstorming, nomeiem o responsável pelo registro e definam previamente os recursos de aplicação presencial ou remota. O roteiro está bem estruturado; essas decisões facilitam sua execução por outra equipe.
 
   > **🟨 Tratado em parte** ([`930f673`](https://github.com/p4cs-974/projeto-ihc/commit/930f673)): I03 lista os recursos presenciais e remotos e indica Pedro como relator proposto. [?] O relator e a ferramenta de quadro dependem de confirmação da equipe.
+  >
+  > **🟨 Revisão independente** ([`db94a63`](https://github.com/p4cs-974/projeto-ihc/commit/db94a63)): o checklist da entrega tem a confirmação do relator e da ferramenta de quadro como item aberto.
   >
   > \- Pedro (aplicação automatizada em nome de Pedro; não confirma fatos marcados [?])
 

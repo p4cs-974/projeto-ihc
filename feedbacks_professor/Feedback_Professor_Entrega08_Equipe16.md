@@ -13,6 +13,7 @@
 > | Pontos para as próximas entregas | encaminhados | [`f693bf0`](https://github.com/p4cs-974/projeto-ihc/commit/f693bf0), [`534ceaa`](https://github.com/p4cs-974/projeto-ihc/commit/534ceaa) |
 > | Cabeçalho e histórico | registrados | [`e10a8f8`](https://github.com/p4cs-974/projeto-ihc/commit/e10a8f8) |
 > | Consolidação com a versão 2 do protótipo | plataforma, caminhos de MU01, versões do I02, glossário e estados encenados alinhados; histórico, recarga e maior volume continuam lacunas | [`050a480`](https://github.com/p4cs-974/projeto-ihc/commit/050a480), [`0dff068`](https://github.com/p4cs-974/projeto-ihc/commit/0dff068) |
+> | Revisão independente de `bb5415f` | base de evidências limita a confirmação de Pedro a MU01–MU06; anotação da matriz corrigida | [`97f3f07`](https://github.com/p4cs-974/projeto-ihc/commit/97f3f07) |
 >
 > \- Pedro
 
@@ -91,6 +92,8 @@ Ao reorganizar as prioridades de Nielsen, indiquem também como verificar aprend
 
   > **✅ Como foi tratado** ([`534ceaa`](https://github.com/p4cs-974/projeto-ihc/commit/534ceaa)): a seção 3.2 diz que os limites são critérios definidos pela equipe, não resultados obtidos, e que o piloto da Entrega 12 deve verificar se 100% e 90 s distinguem dificuldades relevantes, registrando alterações antes da avaliação principal. MU07 e MU08 seguem a mesma regra.
   >
+  > **✅ Revisão independente** ([`97f3f07`](https://github.com/p4cs-974/projeto-ihc/commit/97f3f07)): a base de evidências diz que só os limites de MU01–MU06 foram confirmados por Pedro em 29/10/2026; os de MU07 e MU08 e os pesos seguem como proposta.
+  >
   > \- Pedro
 - **Interpretar o tempo com o contexto.** É útil separar espera técnica de esforço de interação, mas mantenham também o tempo total da experiência. Um resultado rápido após descontos não elimina o impacto da espera percebida pelo usuário.
 
@@ -109,7 +112,7 @@ Ao reorganizar as prioridades de Nielsen, indiquem também como verificar aprend
   > \- Pedro
 - **Atualizar status e checklist após as correções.** A confirmação interna dos números encerra uma decisão da equipe, mas não resolve a organização dos princípios, das prioridades e do ciclo. O status “completa” deve acompanhar a revisão desses pontos.
 
-  > **✅ Como foi tratado** ([`534ceaa`](https://github.com/p4cs-974/projeto-ihc/commit/534ceaa), [`e10a8f8`](https://github.com/p4cs-974/projeto-ihc/commit/e10a8f8)): o status passou a 🟨 revisada após o parecer, com pesos, MU07 e MU08 a confirmar. O checklist inclui os novos itens e deixa abertos a confirmação desses valores e a referência na matriz. O cabeçalho e o histórico registram a revisão de 10/11/2026.
+  > **✅ Como foi tratado** ([`534ceaa`](https://github.com/p4cs-974/projeto-ihc/commit/534ceaa), [`e10a8f8`](https://github.com/p4cs-974/projeto-ihc/commit/e10a8f8)): o status passou a 🟨 revisada após o parecer, com pesos, MU07 e MU08 a confirmar. O checklist inclui os novos itens e deixa aberta a confirmação desses valores. A referência na matriz foi feita na consolidação ([`90ab599`](https://github.com/p4cs-974/projeto-ihc/commit/90ab599)). O cabeçalho e o histórico registram a revisão de 10/11/2026.
   >
   > \- Pedro
 

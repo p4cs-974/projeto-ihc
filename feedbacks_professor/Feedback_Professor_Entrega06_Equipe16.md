@@ -14,6 +14,7 @@
 > | Recomendações | Aplicadas: capturas por versão, mapa do fluxo, nota em media-review; termos, ordem e volume de C no roteiro 5.3 | [`576d03b`](https://github.com/p4cs-974/projeto-ihc/commit/576d03b), [`d09b9c3`](https://github.com/p4cs-974/projeto-ihc/commit/d09b9c3) |
 > | Cabeçalho e histórico | Registrados | [`b7cfe44`](https://github.com/p4cs-974/projeto-ihc/commit/b7cfe44) |
 > | Consolidação: guia, documento, README e matriz | Aplicada; verificação com participante, áudio e contribuições de Lucas e Giovanni continuam pendentes | [`fb259aa`](https://github.com/p4cs-974/projeto-ihc/commit/fb259aa), [`14f6c1d`](https://github.com/p4cs-974/projeto-ihc/commit/14f6c1d), [`dfbe0f5`](https://github.com/p4cs-974/projeto-ihc/commit/dfbe0f5), [`0dff068`](https://github.com/p4cs-974/projeto-ihc/commit/0dff068), [`e84eb25`](https://github.com/p4cs-974/projeto-ihc/commit/e84eb25), [`da5ebf5`](https://github.com/p4cs-974/projeto-ihc/commit/da5ebf5) |
+> | Revisão independente de `bb5415f` | Reparos de documentação e do código do protótipo; verificação com participante, áudio e contribuições de Lucas e Giovanni continuam pendentes | [`607fc76`](https://github.com/p4cs-974/projeto-ihc/commit/607fc76), [`ebd0a61`](https://github.com/p4cs-974/projeto-ihc/commit/ebd0a61), [`eb0c7a7`](https://github.com/p4cs-974/projeto-ihc/commit/eb0c7a7), [`9c1eadb`](https://github.com/p4cs-974/projeto-ihc/commit/9c1eadb), [`b47af95`](https://github.com/p4cs-974/projeto-ihc/commit/b47af95), [`a6d24e0`](https://github.com/p4cs-974/projeto-ihc/commit/a6d24e0) |
 >
 > \- Pedro (aplicação por automação a pedido de Pedro; fatos novos não confirmados por ele)
 
@@ -58,6 +59,8 @@ Na obtenção, O04 também merece prioridade. U01 esperava vídeos, enquanto o d
 
 > **✅ Como foi tratado** ([`9c67289`](https://github.com/p4cs-974/projeto-ihc/commit/9c67289)): [F] a tela 3 mostra os lances prontos e **Ver resultados prontos (n) →**, e ao fim **✓ Análise concluída** e **Ver os 8 lances na base →**; as setas passaram a ser apresentadas como atalho. A base abre os resultados prontos enquanto os outros vídeos continuam, com o estado de cada vídeo (E06-P04L) e inclusão dos lances novos por decisão da pessoa. **Obter seleção** separa a lista CSV, que informa não conter vídeo, dos MP4, um por lance, e indica o próximo passo no editor externo. A seleção deixou de ser chamada de CSV. [F] O percurso foi verificado no Chromium local com reprodução real; o andamento fora da tela 3 é encenado.
 >
+> **✅ Revisão independente** ([`eb0c7a7`](https://github.com/p4cs-974/projeto-ihc/commit/eb0c7a7), [`607fc76`](https://github.com/p4cs-974/projeto-ihc/commit/607fc76)): [F] `site/README.md` descreve o painel **Obter seleção**, com a lista CSV sem vídeo, um MP4 por lance e os links individuais quando o navegador bloqueia downloads múltiplos. Os comentários de narração saíram do protótipo, do guia e dos scripts de verificação, e as funções que dependiam deles ganharam nomes descritivos. Os scripts Chromium passaram: 14 de 14, 5 de 5 e 18 de 18.
+>
 > \- Pedro (aplicação por automação a pedido de Pedro; fatos novos não confirmados por ele)
 
 
@@ -86,6 +89,8 @@ Uma nova verificação breve das telas alteradas é recomendável para saber se 
 
 > **🟨 Tratado em parte** ([`d09b9c3`](https://github.com/p4cs-974/projeto-ihc/commit/d09b9c3)): [F] a seção 4.3 registra que a fala de 02:23 a 02:42 e de 03:47 a 03:57 descrevia só o CSV, embora a versão usada oferecesse MP4, e que não se atribui sucesso independente ao download de MP4. A seção 5.3 traz o roteiro de revalidação, com fala de referência sobre as duas saídas, registro do momento da ajuda e do que a pessoa fez antes dela, ordem das alternativas e passos separados para CSV e MP4. [?] A nova verificação com participante não foi realizada e fica com a equipe.
 >
+> **🟨 Revisão independente** ([`9c1eadb`](https://github.com/p4cs-974/projeto-ihc/commit/9c1eadb), [`a6d24e0`](https://github.com/p4cs-974/projeto-ihc/commit/a6d24e0)): [F] o roteiro 5.3 registra que o formulário do guia não grava quando o protótipo é servido por `python3 -m http.server`, que responde 501 ao envio. O autorrelato vai para a ficha de observação; testes de envio usam `npx wrangler dev` com D1 local, e as versões `2026-10-21` e `2026-11-10` do formulário não se misturam. O roteiro justifica os 30 segundos de espera e remete aos três minutos de I02. A nova sessão com participante continua pendente.
+>
 > \- Pedro (aplicação por automação a pedido de Pedro; fatos novos não confirmados por ele)
 
 
@@ -112,6 +117,8 @@ Registrem de forma breve as contribuições efetivas: elaboração do esboço, e
 
 > **🟨 Tratado em parte** ([`0d0ac88`](https://github.com/p4cs-974/projeto-ihc/commit/0d0ac88)): [F] a seção 6 registra as contribuições de Pedro comprovadas pelo Git e pelo documento. [?] Não há registro de Lucas nem de Giovanni nos arquivos da Entrega 6; a seção não atribui tarefas a eles e pede que cada um registre a própria contribuição.
 >
+> **✅ Revisão independente** ([`b47af95`](https://github.com/p4cs-974/projeto-ihc/commit/b47af95)): [F] a seção 6 excetua da autoria de Pedro os commits `f47f4b5` e `1a52696`, de Plinio Thomaz Aquino Junior, que criaram o modelo do documento e da pasta de protótipos. As contribuições de Lucas e Giovanni continuam PENDENTE.
+>
 > \- Pedro (aplicação por automação a pedido de Pedro; fatos novos não confirmados por ele)
 
 
@@ -120,6 +127,8 @@ Registrem de forma breve as contribuições efetivas: elaboração do esboço, e
 Sugiro exportar imagens da versão principal para `assets/06_prototipos/`, identificando as alternativas A, B e C e os estados revisados. O esboço já atende à existência de representação visual, mas suas interrogações na base de resultados registram uma fase anterior. As capturas em `artifacts/media-review/` também documentam uma configuração anterior com quatro lances de uma partida, enquanto a versão descrita na entrega usa oito lances de duas partidas. Identificar data e versão evita confundir evolução técnica com alteração decorrente do walkthrough.
 
 > **✅ Como foi tratado** ([`576d03b`](https://github.com/p4cs-974/projeto-ihc/commit/576d03b)): [F] capturas das alternativas A, B e C e dos estados revisados em `assets/06_prototipos/capturas/`, em pastas com versão e data, com README. O mapa do fluxo foi atualizado para a versão 2. `artifacts/media-review/README.md` ganhou nota de que suas capturas são de 21/10/2026, de uma etapa intermediária com quatro cortes de uma partida. Os scripts de verificação estão em `artifacts/entrega6/verificacao-2026-11-10/`.
+>
+> **✅ Revisão independente** ([`ebd0a61`](https://github.com/p4cs-974/projeto-ihc/commit/ebd0a61)): [F] o README das capturas indica E06-P04L para `E06-P04_resultados_parciais_v2.png` e E06-P04Z para `E06-P04B_video_sem_lances_v2.png`.
 >
 > \- Pedro (aplicação por automação a pedido de Pedro; fatos novos não confirmados por ele)
 
