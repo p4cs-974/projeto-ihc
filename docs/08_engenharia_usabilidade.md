@@ -249,7 +249,7 @@ Os números das entregas indicam a ordem de produção na disciplina. Eles não 
 - [x] O ciclo de Mayhew organiza a iteração, com critérios de avanço, retorno e registro das decisões.
 - [x] Limites de MU01–MU06 confirmados por Pedro em 29/10/2026; calibração prevista na Entrega 12.
 - [ ] Pesos de prioridade e limites de MU07 e MU08 confirmados pela equipe.
-- [ ] Referência aos IDs MU/MQ na matriz central de rastreabilidade.
+- [x] Referência aos IDs MU/MQ na matriz central de rastreabilidade, como especificação, na [seção 3.2](../RASTREABILIDADE.md#32-metas-de-usabilidade-especificadas-na-entrega-8).
 
 ## Histórico
 
