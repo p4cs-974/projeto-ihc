@@ -947,6 +947,7 @@ function go(n){
   if(n===3&&A.state==='idle')startAnalysis();
   if(n===4&&A.state==='idle'){finishAll();toast('Atalho da demonstração: a análise foi concluída na hora para abrir a base.')}
   if(n===4&&A.state==='running'&&S.tela===3)toast('A análise continua nos outros vídeos. Os lances deles entram na base quando cada vídeo terminar.');
+  if(n!==3)$$('.fly').forEach(e=>e.remove());
   obtain(false);hlHide(true);S.tela=n;sync();bgSync();
   $$('.screen').forEach((e,i)=>e.hidden=i+1!==n);
   scrollTo(0,0);

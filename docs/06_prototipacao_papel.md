@@ -42,7 +42,9 @@ Os objetivos desta iteração são:
 | [Esboço original no tldraw](../assets/06_prototipos/esboco_original.tldr) ([imagem](../assets/06_prototipos/esboco_original.png)) | Registro inicial do fluxo, com envio, seleção dos vídeos, acompanhamento da análise e base de highlights ainda em aberto |
 | [Protótipo principal: fluxo de highlights](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) | Versão 2, de 10/11/2026, revisada após o walkthrough. A versão 1, usada na sessão de 22/10/2026, corresponde ao commit `bce19c4` e às capturas da seção 5.1. Quatro telas e três alternativas para a base de resultados |
 | [Exploração anterior em baixa fidelidade](../assets/06_prototipos/PROTOTIPO_baixa_fidelidade_base_highlights.html) | Registro das alternativas anteriores: lista com filtros, galeria por partida, facetas por jogador e mapa das partidas. As facetas fictícias não confirmam a capacidade de identificar jogadores |
-| [Mapa do fluxo documentado](../assets/06_prototipos/prototipo_fluxo_01.svg) | Identificação das quatro telas, transições e limites da demonstração |
+| [Mapa do fluxo documentado](../assets/06_prototipos/prototipo_fluxo_01.svg) | Identificação das quatro telas, dos estados da versão 2, das transições e dos limites da demonstração |
+| [Capturas por versão](../assets/06_prototipos/capturas/README.md) | Imagens da versão 1, usada em 22/10/2026, e da versão 2, de 10/11/2026: alternativas A, B e C e estados revisados, com data e versão no nome da pasta |
+| [Verificação técnica da versão 2](../artifacts/entrega6/verificacao-2026-11-10/README.md) | Scripts que percorrem as telas no Chromium local e seus resultados. Não substituem a verificação com participante |
 | [Guia da simulação](../assets/06_prototipos/GUIA_simulacao.html) | Material enviado a quem participa da simulação: contexto do projeto, fluxo, particularidades da demonstração, tarefas e formulário de feedback. Ver seção 4.1 |
 
 Os artefatos desta entrega estão no repositório e a análise não depende da hospedagem externa usada na sessão de 22/10/2026. Para executar o protótipo, rode:
