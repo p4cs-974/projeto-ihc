@@ -10,11 +10,11 @@
 
 05 - Preenchimento concluído; revisão de coerência aplicada em 13/10/2026; modelos hipotéticos a validar
 
-06 - Concluída nesta iteração em 22/10/2026; protótipo, walkthrough acompanhado e decisões de revisão documentados, com melhorias de interface para a próxima iteração
+06 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega06_Equipe16.md) em 10/11/2026; protótipo na versão 2 com D01, D02 e D05 aplicadas, sem verificação com participante
 
-07 - Completa
+07 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md) em 10/11/2026; I02 restrito à experiência de uso do protótipo; formulário `2026-11-10` só na fonte local, publicação PENDENTE; pilotos e coleta pendentes
 
-08 - Completa
+08 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md) em 10/11/2026; pesos de prioridade, MU07 e MU08 propostos, a confirmar pela equipe; metas são especificação, sem resultados
 
 09 - Completa
 
@@ -129,9 +129,9 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟩 revisão documental; validação pendente |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟩 revisão documental; validação pendente |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟩 preenchida; coerência revisada; validação empírica pendente |
-| 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) · [protótipo publicado](https://ihc.p4cs.com.br) | 1 protótipo integrado por equipe | 🟩 concluída nesta iteração; walkthrough e decisões documentados |
-| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟩 completa  |
-| 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | 🟩 completa |
+| 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) · [protótipo](assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) · [parecer](feedbacks_professor/Feedback_Professor_Entrega06_Equipe16.md) | 1 protótipo integrado por equipe | 🟨 revisada após o parecer; telas da versão 2 sem verificação com participante |
+| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟨 revisada após o parecer; publicação do formulário `2026-11-10`, pilotos e coleta pendentes |
+| 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md) | 1 solução consolidada por equipe | 🟨 revisada após o parecer; pesos, MU07 e MU08 a confirmar |
 | 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | 🟩 completa |
 | 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante | ⬜ |
 | 11 | [Protótipo no Figma](docs/11_figma.md) | 1 protótipo integrado por equipe, cobrindo fluxos modelados | ⬜ |
