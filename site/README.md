@@ -9,7 +9,7 @@ Worker `ihc-prototipo` com arquivos estáticos e um banco D1 para os feedbacks d
 | `/media/*` | [`media/manifest.json`](../assets/06_prototipos/media/manifest.json) e os MP4/JPG que ele referencia |
 | `POST /api/feedback` | [`src/worker.js`](src/worker.js), grava na tabela `feedback` do D1 `ihc-feedback` |
 
-`build.sh` copia os HTML para `public/` antes de cada `dev` e `deploy`, junto com `media/manifest.json` e só os MP4 e JPG listados nele (`src` e `poster` de cada corte). Edite os arquivos em `assets/06_prototipos`, não em `public/`.
+`build.sh` copia os HTML para `public/` antes de cada `dev` e `deploy`, trocando no guia o link relativo `PROTOTIPO_fluxo_highlights.html` por `../`, junto com `media/manifest.json` e só os MP4 e JPG listados nele (`src` e `poster` de cada corte). Edite os arquivos em `assets/06_prototipos`, não em `public/`.
 
 ## Mídia
 
@@ -23,7 +23,7 @@ Em contexto seguro (HTTPS ou `localhost`), os blobs ficam na Cache API do navega
 
 O HTML lê `media/manifest.json` por caminho relativo, então funciona servido de `assets/06_prototipos/` (por exemplo `python3 -m http.server` nessa pasta) e do site publicado. Aberto direto do disco (`file://`), o navegador bloqueia o `fetch` e a primeira tela mostra o erro.
 
-O download da Tela 4 é um CSV com, para cada corte escolhido, partida, tempo, anotação, instante no arquivo, início e fim do corte no arquivo, instante do lance dentro do corte, duração e URL do MP4. Cada lance também tem um link para baixar o próprio MP4.
+Na Tela 4, **Obter seleção (n)** abre um painel com duas saídas separadas. **Baixar lista CSV** gera `cortes_selecionados.csv`, sem vídeo, com uma linha por corte escolhido: partida, tempo, anotação, relógio do jogo, instante no arquivo, início e fim do corte no arquivo, instante do lance dentro do corte, duração e URL do MP4. **Baixar vídeos MP4** pede ao navegador um download por corte, um MP4 por lance, sem juntar os cortes num vídeo único. Se o navegador bloquear downloads múltiplos, o painel lista um link por MP4. O detalhe de cada lance também tem um link para baixar o próprio MP4.
 
 ```sh
 cd site

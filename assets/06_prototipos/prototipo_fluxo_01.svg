@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730" role="img" aria-labelledby="title desc">
   <title id="title">Entrega 6: telas e transições do protótipo de highlights</title>
-  <desc id="desc">A tela inicial oferece quatro tempos de exemplo de duas partidas do SoccerNet. O envio de arquivos próprios não é suportado. Iniciar abre a análise simulada, com duas prévias silenciosas que reproduzem cortes reais e revelam as anotações. As setas do teclado alternam entre análise e base. Três alternativas permitem revisar candidatos em vídeos com controles nativos, selecionar lances, baixar MP4 individuais e exportar CSV. A recuperação localizada permanece pendente. A sessão formativa foi realizada em 22/10/2026 e suas decisões estão documentadas; melhorias de interface seguem para a próxima iteração.</desc>
+  <desc id="desc">A tela inicial oferece quatro tempos de exemplo de duas partidas do SoccerNet. O envio de arquivos próprios não é suportado. Iniciar abre a análise simulada, com duas prévias silenciosas que reproduzem cortes reais e revelam as anotações. O botão Ver resultados prontos abre a base durante a análise, que mostra o estado de cada vídeo; as setas são atalho da demonstração. Três alternativas permitem revisar candidatos em vídeos com controles nativos e selecionar lances. Obter seleção separa a lista CSV dos vídeos MP4. Percursos encenados mostram a falha de um vídeo com nova tentativa localizada ou pendência, e um vídeo sem lances. Versão 2, de 10/11/2026, revisada após a sessão formativa de 22/10/2026 e ainda não verificada com participante.</desc>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" fill="#475569"/></marker>
   </defs>
   <rect width="1120" height="730" fill="#fff"/>
   <g font-family="Arial, sans-serif" fill="#172033">
     <text x="36" y="42" font-size="23" font-weight="700">Fluxo do protótipo principal</text>
-    <text x="36" y="69" font-size="15" fill="#475569">PROTOTIPO_fluxo_highlights.html · clipes reais, análise simulada · documentação de 22/10/2026</text>
+    <text x="36" y="69" font-size="15" fill="#475569">PROTOTIPO_fluxo_highlights.html · clipes reais, análise simulada · versão 2, 10/11/2026</text>
     <g fill="#f8fafc" stroke="#64748b" stroke-width="1.5">
       <rect x="36" y="110" width="472" height="144" rx="12"/>
       <rect x="612" y="110" width="472" height="144" rx="12"/>
@@ -26,15 +26,17 @@
       <text x="58" y="231" fill="#475569">Duas partidas · dois tempos por partida</text>
       <text x="634" y="177">Conferir partida, tempo e duração da fonte</text>
       <text x="634" y="204">Quatro fontes, uma por tempo de jogo</text>
-      <text x="634" y="231" fill="#475569">Remover uma entrada antes de iniciar</text>
+      <text x="634" y="231" fill="#475569">Remover entrada · escolher percurso encenado</text>
       <text x="634" y="412">Duas prévias reais em 2×, sem som</text>
       <text x="634" y="441">Lances revelados na anotação SoccerNet</text>
       <text x="634" y="470">Progresso por vídeo e do lote</text>
-      <text x="634" y="503" fill="#475569">Reiniciar análise afeta o lote inteiro</text>
+      <text x="634" y="499">E06-P03F: falha de um vídeo, os outros seguem</text>
+      <text x="634" y="522" fill="#475569">Reiniciar análise afeta o lote inteiro</text>
       <text x="58" y="412">A: busca · B: trilhas · C: mosaico</text>
-      <text x="58" y="441">E06-P04D: vídeo, origem e player nativo</text>
-      <text x="58" y="470">Incluir ou retirar candidatos da seleção</text>
-      <text x="58" y="503" fill="#475569">E06-P04S: exportar CSV e baixar MP4 individual</text>
+      <text x="58" y="441">E06-P04L: estado de cada vídeo do lote</text>
+      <text x="58" y="470">E06-P04D: vídeo, origem, selecionar lance</text>
+      <text x="58" y="499">E06-P04F: nova tentativa só do vídeo ou pendência</text>
+      <text x="58" y="522" fill="#475569">E06-P04S: lista CSV ou vídeos MP4, separados</text>
     </g>
     <g fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)">
       <path d="M508 166 H612"/>
@@ -46,16 +48,16 @@
       <text x="520" y="151">Escolher</text>
       <text x="861" y="293">Iniciar</text>
       <text x="861" y="316">Retorno: ←</text>
-      <text x="529" y="405">← / →</text>
+      <text x="516" y="405" font-size="12">Ver resultados</text>
       <text x="560" y="449" font-size="13" text-anchor="middle">Ir para o lance</text>
-      <text x="289" y="559">Baixar seleção</text>
+      <text x="289" y="559">Obter seleção</text>
     </g>
     <rect x="36" y="578" width="1048" height="117" rx="12" fill="#fff7ed" stroke="#c29152" stroke-width="1.5"/>
     <text x="58" y="608" font-size="17" font-weight="700">Limites da demonstração</text>
     <g font-size="15" fill="#4b4339">
-      <text x="58" y="634">Abrir a base conclui a análise restante. O CSV contém metadados e links para os MP4.</text>
-      <text x="58" y="657">Edição, montagem e supervisão T02 são externas. Recuperação localizada ainda não está representada.</text>
-      <text x="58" y="680">Sessão realizada em 22/10/2026; decisões documentadas. Melhorias de interface seguem para a próxima iteração.</text>
+      <text x="58" y="634">Análise, falha e vídeo sem lances são encenados. Fora da tela de análise, um vídeo termina a cada 6 s.</text>
+      <text x="58" y="657">O CSV contém metadados e links; os MP4 são um por lance. Edição, montagem e supervisão T02 são externas.</text>
+      <text x="58" y="680">Telas revisadas após a sessão de 22/10/2026; verificação com participante pendente. ← → são atalhos.</text>
     </g>
   </g>
 </svg>
