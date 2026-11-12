@@ -1,5 +1,218 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1697" viewBox="0 0 1200 1697" role="img" aria-labelledby="title desc">
+<title id="title">M01 · Revisar candidatos e obter o material da partida</title>
+<desc id="desc">Diagrama MoLIC M01 da Entrega 10, Equipe 16. Proposta para revisão individual. Cenas, processos e falas identificados por c, p, a, e e f, explicados em docs/10_molic.md.</desc>
+<defs><style>text{font-family:Arial, Helvetica, sans-serif;fill:#1f2a33}.h1{font-size:28px;font-weight:700}.sub{font-size:17px;fill:#425b70}.stitle{font-size:19px;font-weight:700}.sid{fill:#0b5cad}.tag{font-size:16px;font-weight:700;fill:#176559}.dname{font-size:16px;font-weight:700}.dline{font-size:16px}.lbl{font-size:16px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.fid{font-weight:700;fill:#0b5cad}.nid{font-size:17px;font-weight:700;fill:#0b5cad}.note{font-size:16px;font-style:italic;fill:#7a4b0b}.leg{font-size:16px}</style><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker><marker id="arr-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker></defs>
+<rect width="1200" height="1697" fill="#ffffff"/>
+<text x="40" y="44" class="h1" text-anchor="start">M01 · Revisar candidatos e obter o material da partida</text>
+<text x="40" y="72" class="sub" text-anchor="start">Pedro Alexandre Custódio Silva (22.123.049-3) · CI01/T01 · O04–O07 e O08; sai para O10</text>
+<text x="40" y="94" class="sub" text-anchor="start">Proposta para revisão individual · notação: CC8122-Molic Parte A, slides 6–15; Parte B, slides 3–5</text>
+<g id="a1" data-kind="open">
+<circle cx="300" cy="140" r="12" fill="#1f2a33"/>
+<text x="280" y="146" class="nid" text-anchor="end">a1</text>
+</g>
+<g id="a2" data-kind="open">
+<circle cx="640" cy="140" r="12" fill="#1f2a33"/>
+<text x="620" y="146" class="nid" text-anchor="end">a2</text>
+</g>
+<g id="c1" data-kind="scene">
+<rect x="200" y="230" width="540" height="243" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<line x1="200" y1="270" x2="740" y2="270" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="214" y="257" class="stitle"><tspan class="sid">c1</tspan> · Localizar candidatos</text>
+<text x="726" y="257" class="tag" text-anchor="end">O04 · O08</text>
+<text x="214" y="294" class="dname" text-anchor="start">reconhecer alcance {</text>
+<text x="228" y="315" class="dline" text-anchor="start">d: partida S01, tempo S02, tentativa S32 se identificável,</text>
+<text x="249" y="336" class="dline" text-anchor="start">disponibilidade e limites dos resultados S12 }</text>
+<text x="214" y="357" class="dname" text-anchor="start">restringir consulta {</text>
+<text x="228" y="378" class="dline" text-anchor="start">d+u: critérios S22: partida, tempo, tipo de lance S17 }</text>
+<text x="214" y="399" class="dname" text-anchor="start">ver candidatos {</text>
+<text x="228" y="420" class="dline" text-anchor="start">d: lista(candidato S16: tipo S17, relógio S18, tempo S02) }</text>
+<text x="214" y="441" class="dname" text-anchor="start">reconhecer contexto preservado {</text>
+<text x="228" y="462" class="dline" text-anchor="start">d: referência de retomada S29, quantidade selecionada S24 }</text>
+</g>
+<g id="c2" data-kind="scene">
+<rect x="200" y="603" width="540" height="290" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<line x1="200" y1="643" x2="740" y2="643" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="214" y="630" class="stitle"><tspan class="sid">c2</tspan> · Conferir pertinência e contexto</text>
+<text x="726" y="630" class="tag" text-anchor="end">O05 · O06</text>
+<text x="214" y="667" class="dname" text-anchor="start">ver origem {</text>
+<text x="228" y="688" class="dline" text-anchor="start">d: partida S01, tempo S02, vídeo de origem S03 }</text>
+<text x="214" y="709" class="dname" text-anchor="start">ver corte {</text>
+<text x="228" y="730" class="dline" text-anchor="start">d: tipo sugerido S17, relógio do jogo S18, instante no</text>
+<text x="249" y="751" class="dline" text-anchor="start">arquivo S19, intervalo S20, duração do corte S21 }</text>
+<text x="214" y="772" class="dname" text-anchor="start">decidir inclusão {</text>
+<text x="228" y="793" class="dline" text-anchor="start">d+u: candidato S16 na seleção S23 (incluir ou retirar) }</text>
+<text x="214" y="814" class="dname" text-anchor="start">ver vídeo para obtenção {</text>
+<text x="228" y="835" class="dline" text-anchor="start">d: MP4 S27 do corte, tamanho S33 }</text>
+</g>
+<g id="c3" data-kind="scene">
+<rect x="200" y="1023" width="540" height="264" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<line x1="200" y1="1063" x2="740" y2="1063" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="214" y="1050" class="stitle"><tspan class="sid">c3</tspan> · Conferir a seleção e as saídas</text>
+<text x="726" y="1050" class="tag" text-anchor="end">O06 · O07</text>
+<text x="214" y="1087" class="dname" text-anchor="start">ver seleção {</text>
+<text x="228" y="1108" class="dline" text-anchor="start">d: lista(candidato S16 em S23: S01, S02, S17, S18),</text>
+<text x="249" y="1129" class="dline" text-anchor="start">quantidade S24 }</text>
+<text x="214" y="1150" class="dname" text-anchor="start">retirar item {</text>
+<text x="228" y="1171" class="dline" text-anchor="start">d+u: seleção S23 }</text>
+<text x="214" y="1192" class="dname" text-anchor="start">ver tamanho dos arquivos {</text>
+<text x="228" y="1213" class="dline" text-anchor="start">d: tamanho S33 de cada MP4: conhecido, estimado ou indisponível }</text>
+<text x="214" y="1234" class="dname" text-anchor="start">distinguir saídas {</text>
+<text x="228" y="1255" class="dline" text-anchor="start">d: CSV S26 com referências da seleção, exige seleção não vazia;</text>
+<text x="249" y="1276" class="dline" text-anchor="start">MP4 S27 obtido por corte, sem exigir seleção }</text>
+</g>
+<g id="p1" data-kind="process">
+<rect x="952" y="302" width="26" height="26" fill="#1f2a33"/>
+<text x="947" y="348" class="nid" text-anchor="end">p1</text>
+</g>
+<g id="p2" data-kind="process">
+<rect x="952" y="660" width="26" height="26" fill="#1f2a33"/>
+<text x="947" y="706" class="nid" text-anchor="end">p2</text>
+</g>
+<g id="p3" data-kind="process">
+<rect x="952" y="800" width="26" height="26" fill="#1f2a33"/>
+<text x="947" y="846" class="nid" text-anchor="end">p3</text>
+</g>
+<g id="p4" data-kind="process">
+<rect x="952" y="1130" width="26" height="26" fill="#1f2a33"/>
+<text x="947" y="1176" class="nid" text-anchor="end">p4</text>
+</g>
+<g id="e1" data-kind="close">
+<circle cx="480" cy="1377" r="15" fill="#fff" stroke="#1f2a33" stroke-width="2.5"/>
+<circle cx="480" cy="1377" r="8.5" fill="#1f2a33"/>
+<text x="480" y="1417" class="nid" text-anchor="middle">e1</text>
+</g>
+<g id="e2" data-kind="close">
+<circle cx="990" cy="523" r="15" fill="#fff" stroke="#1f2a33" stroke-width="2.5"/>
+<circle cx="990" cy="523" r="8.5" fill="#1f2a33"/>
+<text x="990" y="563" class="nid" text-anchor="middle">e2</text>
+</g>
+<g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="precond: resultados acessíveis (O02) | u: revisar candidatos">
+<polyline points="300,152 300,230" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="312" y="180" class="lbl" text-anchor="start"><tspan class="fid">f1</tspan> · precond: resultados acessíveis (O02)</text>
+<text x="312" y="199" class="lbl" text-anchor="start">u: revisar candidatos</text>
+</g>
+<g id="f2" data-kind="edge" data-from="a2" data-to="c1" data-style="solid" data-label="u: retomar a revisão | após interrupção">
+<polyline points="640,152 640,230" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="652" y="180" class="lbl" text-anchor="start"><tspan class="fid">f2</tspan> · u: retomar a revisão</text>
+<text x="652" y="199" class="lbl" text-anchor="start">após interrupção</text>
+</g>
+<g id="f3" data-kind="edge" data-from="c1" data-to="p1" data-style="solid" data-label="u: aplicar critérios">
+<polyline points="740,315 952,315" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="750" y="307" class="lbl" text-anchor="start"><tspan class="fid">f3</tspan> · u: aplicar critérios</text>
+</g>
+<g id="f4" data-kind="edge" data-from="p1" data-to="c1" data-style="solid" data-label="d: candidatos que | atendem aos critérios; | seleção mantida">
+<polyline points="965,328 965,360 740,360" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="977" y="345" class="lbl" text-anchor="start"><tspan class="fid">f4</tspan> · d: candidatos que</text>
+<text x="977" y="364" class="lbl" text-anchor="start">atendem aos critérios;</text>
+<text x="977" y="383" class="lbl" text-anchor="start">seleção mantida</text>
+</g>
+<g id="f5" data-kind="edge" data-from="p1" data-to="c1" data-style="dashed" data-label="d: nenhum candidato | com estes critérios">
+<polyline points="965,302 965,260 740,260" fill="none" stroke="#1f2a33" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#arr-d)"/>
+<text x="977" y="279" class="lbl" text-anchor="start"><tspan class="fid">f5</tspan> · d: nenhum candidato</text>
+<text x="977" y="298" class="lbl" text-anchor="start">com estes critérios</text>
+</g>
+<g id="f6" data-kind="edge" data-from="c1" data-to="c2" data-style="solid" data-label="u: examinar | candidato">
+<polyline points="300,473 300,603" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="312" y="513" class="lbl" text-anchor="start"><tspan class="fid">f6</tspan> · u: examinar</text>
+<text x="312" y="532" class="lbl" text-anchor="start">candidato</text>
+</g>
+<g id="f7" data-kind="edge" data-from="c2" data-to="c1" data-style="solid" data-label="u: voltar aos | candidatos">
+<polyline points="560,603 560,473" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="572" y="513" class="lbl" text-anchor="start"><tspan class="fid">f7</tspan> · u: voltar aos</text>
+<text x="572" y="532" class="lbl" text-anchor="start">candidatos</text>
+</g>
+<g id="f8" data-kind="edge" data-from="c2" data-to="p2" data-style="solid" data-label="u: reproduzir corte">
+<polyline points="740,673 952,673" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="750" y="665" class="lbl" text-anchor="start"><tspan class="fid">f8</tspan> · u: reproduzir corte</text>
+</g>
+<g id="f9" data-kind="edge" data-from="p2" data-to="c2" data-style="solid" data-label="d: corte em reprodução">
+<polyline points="965,686 965,718 740,718" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="977" y="703" class="lbl" text-anchor="start"><tspan class="fid">f9</tspan> · d: corte em reprodução</text>
+</g>
+<g id="f10" data-kind="edge" data-from="p2" data-to="c2" data-style="dashed" data-label="d: corte não pôde ser | carregado; tentar de novo">
+<polyline points="965,660 965,618 740,618" fill="none" stroke="#1f2a33" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#arr-d)"/>
+<text x="977" y="637" class="lbl" text-anchor="start"><tspan class="fid">f10</tspan> · d: corte não pôde ser</text>
+<text x="977" y="656" class="lbl" text-anchor="start">carregado; tentar de novo</text>
+</g>
+<g id="f11" data-kind="edge" data-from="c2" data-to="p3" data-style="solid" data-label="precond: MP4 acessível | u: baixar MP4">
+<polyline points="740,813 952,813" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="750" y="786" class="lbl" text-anchor="start"><tspan class="fid">f11</tspan> · precond: MP4 acessível</text>
+<text x="750" y="805" class="lbl" text-anchor="start">u: baixar MP4</text>
+</g>
+<g id="f12" data-kind="edge" data-from="p3" data-to="c2" data-style="solid" data-label="d: MP4 disponibilizado; | confira o arquivo salvo">
+<polyline points="965,826 965,858 740,858" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="977" y="843" class="lbl" text-anchor="start"><tspan class="fid">f12</tspan> · d: MP4 disponibilizado;</text>
+<text x="977" y="862" class="lbl" text-anchor="start">confira o arquivo salvo</text>
+</g>
+<g id="f13" data-kind="edge" data-from="p3" data-to="c2" data-style="dashed" data-label="d: falha na obtenção | do MP4 (S28)">
+<polyline points="965,800 965,758 740,758" fill="none" stroke="#1f2a33" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#arr-d)"/>
+<text x="977" y="777" class="lbl" text-anchor="start"><tspan class="fid">f13</tspan> · d: falha na obtenção</text>
+<text x="977" y="796" class="lbl" text-anchor="start">do MP4 (S28)</text>
+</g>
+<g id="f14" data-kind="edge" data-from="c1" data-to="c3" data-style="solid" data-label="u: conferir | seleção">
+<polyline points="200,430 110,430 110,1093 200,1093" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="118" y="513" class="lbl" text-anchor="start"><tspan class="fid">f14</tspan> · u: conferir</text>
+<text x="118" y="532" class="lbl" text-anchor="start">seleção</text>
+</g>
+<g id="f15" data-kind="edge" data-from="c3" data-to="c1" data-style="solid" data-label="u: voltar | à revisão">
+<polyline points="200,1183 40,1183 40,305 200,305" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="48" y="278" class="lbl" text-anchor="start"><tspan class="fid">f15</tspan> · u: voltar</text>
+<text x="48" y="297" class="lbl" text-anchor="start">à revisão</text>
+</g>
+<g id="f16" data-kind="edge" data-from="c3" data-to="c2" data-style="solid" data-label="u: examinar item | selecionado">
+<polyline points="300,1023 300,893" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="312" y="933" class="lbl" text-anchor="start"><tspan class="fid">f16</tspan> · u: examinar item</text>
+<text x="312" y="952" class="lbl" text-anchor="start">selecionado</text>
+</g>
+<g id="f17" data-kind="edge" data-from="c2" data-to="c3" data-style="solid" data-label="u: voltar | à seleção">
+<polyline points="560,893 560,1023" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="572" y="933" class="lbl" text-anchor="start"><tspan class="fid">f17</tspan> · u: voltar</text>
+<text x="572" y="952" class="lbl" text-anchor="start">à seleção</text>
+</g>
+<g id="f18" data-kind="edge" data-from="c3" data-to="p4" data-style="solid" data-label="precond: seleção não vazia | u: baixar CSV">
+<polyline points="740,1143 952,1143" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="750" y="1116" class="lbl" text-anchor="start"><tspan class="fid">f18</tspan> · precond: seleção não vazia</text>
+<text x="750" y="1135" class="lbl" text-anchor="start">u: baixar CSV</text>
+</g>
+<g id="f19" data-kind="edge" data-from="p4" data-to="c3" data-style="solid" data-label="d: CSV disponibilizado | (n itens, sem vídeos); | confira o arquivo salvo">
+<polyline points="965,1156 965,1188 740,1188" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="977" y="1173" class="lbl" text-anchor="start"><tspan class="fid">f19</tspan> · d: CSV disponibilizado</text>
+<text x="977" y="1192" class="lbl" text-anchor="start">(n itens, sem vídeos);</text>
+<text x="977" y="1211" class="lbl" text-anchor="start">confira o arquivo salvo</text>
+</g>
+<g id="f20" data-kind="edge" data-from="c3" data-to="e1" data-style="solid" data-label="u: encerrar com o | material obtido">
+<polyline points="480,1287 480,1362" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="492" y="1317" class="lbl" text-anchor="start"><tspan class="fid">f20</tspan> · u: encerrar com o</text>
+<text x="492" y="1336" class="lbl" text-anchor="start">material obtido</text>
+</g>
+<g id="f21" data-kind="edge" data-from="c1" data-to="e2" data-style="solid" data-label="u: interromper revisão">
+<polyline points="740,445 990,445 990,508" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="770" y="437" class="lbl" text-anchor="start"><tspan class="fid">f21</tspan> · u: interromper revisão</text>
+</g>
+<text x="505" y="1372" class="note" text-anchor="start">Fora do sistema: abrir o CSV e reproduzir os MP4 salvos,</text>
+<text x="505" y="1392" class="note" text-anchor="start">copiar ao servidor e avisar Arnaldo (T02, O09); pendências S30</text>
+<text x="1015" y="518" class="note" text-anchor="start">Fora do sistema:</text>
+<text x="1015" y="538" class="note" text-anchor="start">original, ajuste ou</text>
+<text x="1015" y="558" class="note" text-anchor="start">busca (O10); S30;</text>
+<text x="1015" y="578" class="note" text-anchor="start">retorno por a2</text>
+<g id="legenda" transform="translate(40,1477)">
+<rect x="0" y="0" width="1120" height="190" rx="10" fill="#f6f8fa" stroke="#c9d1d9"/>
+<text x="18" y="30" class="stitle" text-anchor="start">Legenda (notação da disciplina; não é fluxo de telas)</text>
+<circle cx="30" cy="62" r="10" fill="#1f2a33"/>
+<text x="62" y="68" class="leg" text-anchor="start">abertura (A9; B3)</text>
+<circle cx="30" cy="97" r="12" fill="#fff" stroke="#1f2a33" stroke-width="2.5"/><circle cx="30" cy="97" r="7" fill="#1f2a33"/>
+<text x="62" y="103" class="leg" text-anchor="start">encerramento (A9, A10)</text>
+<rect x="19" y="121" width="22" height="22" fill="#1f2a33"/>
+<text x="62" y="143" class="leg" text-anchor="start">processo do sistema; saídas sempre d: (A11)</text>
+<rect x="14" y="152" width="34" height="24" rx="6" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<text x="62" y="174" class="leg" text-anchor="start">cena: tópico, diálogos e signos (A8, A14)</text>
+<line x1="450" y1="62" x2="520" y2="62" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
+<text x="532" y="68" class="leg" text-anchor="start">fala de transição (A6)</text>
+<line x1="450" y1="97" x2="520" y2="97" stroke="#1f2a33" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#arr-d)"/>
+<text x="532" y="103" class="leg" text-anchor="start">ruptura ou recuperação (A11–A13)</text>
+<text x="450" y="138" class="leg" text-anchor="start">u: fala do usuário · d: fala do preposto · d+u: ambos (A8, A14)</text>
+<text x="450" y="170" class="leg" text-anchor="start">precond: condição para a fala (A6) · signos e objetivos: Entrega 9</text>
+<text x="830" y="68" class="note">Itálico marrom: nota fora</text>
+<text x="830" y="90" class="note">da notação (atividade externa)</text>
+</g>
 </svg>
