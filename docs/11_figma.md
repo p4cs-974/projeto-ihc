@@ -1,7 +1,7 @@
 # Entrega 11: protótipo navegável integrado
 
 **Data:** 13/11/2026\
-**Status:** 🟨 protótipo e documentação preparados para revisão da equipe; publicação desta revisão pendente.\
+**Status:** 🟨 protótipo publicado em preview e documentação preparada; revisão final da equipe pendente.\
 **Responsabilidade:** Equipe 16, Pedro Alexandre Custódio Silva, Lucas Roberto Boccia dos Santos e Giovanni Chahin Morassi. Integração conduzida por Pedro com assistência de agentes Codex. A revisão final pelos integrantes permanece pendente.
 
 ## Objetivo e escolha do artefato
@@ -19,7 +19,8 @@ A revisão acrescenta navegação lateral para **Enviar**, **Vídeos**, **Análi
 | Fonte editável da revisão | [PROTOTIPO_fluxo_highlights.html](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) | HTML único, sem etapa de compilação |
 | Dados e mídia dos exemplos | [manifest.json](../assets/06_prototipos/media/manifest.json) | Quatro tempos de duas partidas e oito cortes reais do SoccerNet |
 | Revisão em desenvolvimento | [Servidor via Tailscale](http://100.82.157.113:8730/PROTOTIPO_fluxo_highlights.html) | Acesso restrito à rede Tailscale; não é link público de entrega |
-| Publicação anterior | [ihc.p4cs.com.br](https://ihc.p4cs.com.br/) | Não representa integralmente esta revisão; nenhum novo deploy autorizado |
+| Preview público desta revisão | [ihc-11.p4cs.com.br](https://ihc-11.p4cs.com.br/) | Publicado em 13/11/2026; HTML e mídia conferidos por HTTPS sem autenticação |
+| Publicação anterior | [ihc.p4cs.com.br](https://ihc.p4cs.com.br/) | Mantida na versão anterior |
 
 Para reproduzir a revisão a partir deste checkout:
 
@@ -29,7 +30,7 @@ python3 -m http.server 8730 --bind 0.0.0.0 --directory assets/06_prototipos
 
 Abra `http://localhost:8730/PROTOTIPO_fluxo_highlights.html`. Servir por HTTP é necessário para carregar o manifesto e a mídia. O servidor de desenvolvimento existente permanece disponível para iteração.
 
-A verificação pública em janela anônima desta revisão fica pendente até sua publicação. As capturas abaixo e a fonte versionada registram o estado preparado para revisão.
+O preview público foi publicado pelo ambiente `entrega11` de `site/wrangler.jsonc`, no Worker `ihc-11`, com o D1 `ihc-feedback-preview`. A configuração de produção permanece separada. Foram conferidos por HTTPS sem autenticação o HTML idêntico à fonte, o manifesto, um MP4 idêntico ao arquivo local, o guia e a rejeição de GET na API de feedback. Não houve envio de feedback de teste. As capturas abaixo registram a revisão publicada.
 
 ## Cobertura MoLIC e limites
 
@@ -142,10 +143,10 @@ As capturas são do protótipo após os ajustes aprovados, sem anotações de pr
 - [x] Simulação, mídia real e trabalho externo diferenciados.
 - [x] Ajustes básicos de contraste, foco, teclado e diálogos verificados.
 - [ ] Equipe revisou e aprovou os fluxos e a cobertura parcial dos modelos.
-- [ ] Revisão publicada e link público conferido em janela anônima.
+- [x] Revisão publicada e acesso público por HTTPS conferido sem autenticação.
 - [ ] Downloads e reprodução dos arquivos salvos conferidos na revisão final.
 - [ ] Pendências dos modelos compatibilizadas, sem presumir cobertura completa do MoLIC.
 
 ## Registro de elaboração
 
-Em 13/11/2026, Pedro conduziu a evolução do protótipo original e aprovou as propostas de limpeza antes da implementação. Agentes GPT-6 Astra e GPT-6.1 Sol, pelo harness Codex no T3 Code, auxiliaram a implementação, as verificações e a documentação. As capturas e os registros técnicos não substituem revisão acadêmica dos integrantes, avaliação com participantes ou publicação da revisão.
+Em 13/11/2026, Pedro conduziu a evolução do protótipo original e aprovou as propostas de limpeza antes da implementação. Agentes GPT-6 Astra e GPT-6.1 Sol, pelo harness Codex no T3 Code, auxiliaram a implementação, as verificações e a documentação. As capturas e os registros técnicos não substituem revisão acadêmica dos integrantes, avaliação com participantes.
