@@ -75,7 +75,7 @@ Os responsáveis abaixo são os autores dos modelos de origem, sem atribuir assi
 | M01, c1 e p1; CI01 | O04, T01 | F04, busca em A e filtros em A/B | Localizar por metadados, tipo e tempo. A oferece limpar uma consulta sem resultados. B indica contagens; C agrupa por tipo e não tem busca | Pedro |
 | M01, c2 e p2; CI01 | O05, T01 | F04 → F05 → F04 | Abrir e reproduzir corte, conferir origem, relógio do jogo, posição no arquivo, intervalo e duração. Contexto insuficiente e suspeita de omissão exigem julgamento humano e conferência externa | Pedro |
 | M01, c3, p3 e p4; CI01 | O06/O07, T01 e continuidade em T02 | Seleção em F04/F05 → F06 | CSV exige seleção não vazia; MP4 individual pode ser obtido sem seleção. Não há lista editável exclusiva da seleção nem confirmação de salvamento local | Pedro |
-| M02, c1/c2/c3 e p1–p4; CI02 | O04/O06/O07, T01/T02 | F04, F05 e F06 | Identificação, reprodução e saídas apoiam o preparo para o supervisor. Transferência, aprovação editorial e pedidos de ajuste ocorrem fora do sistema | Lucas |
+| M02, c1/c2/c3 e p1–p4; CI02 | O04/O06/O07, T01/T02 | F04, F05 e F06 | A conferência completa da identificação se distribui entre F04/F05 e o CSV. F06 reúne as saídas, a quantidade e os tamanhos, com cobertura parcial de M02 c1. Transferência, aprovação editorial e pedidos de ajuste ocorrem fora do sistema | Lucas |
 | M03, envio e progresso; CI03 | O01/O02, preparação de T03 | F01 → F02 → F03 → F04 | Entrada própria indisponível; preparação usa exemplos. Progresso, fila e conclusão são simulados, com mídia real | Giovanni |
 | M03, erro e consulta; CI03 | O03/O04/O05/O07, T03 | F02 escolhe cenário; F03/F04 comunicam estado; F05 apresenta o corte | Falha encenada permite nova tentativa localizada ou deixar pendente. Não representa recuperação de um detector real, login, exclusão de resultados ou cancelamento de análise/download desenhados no M03 | Giovanni |
 | M01/M02, retomada; M03, encerramento | O08 | Troca entre telas e A/B/C | Seleção mantida na sessão, sem persistência garantida após recarga. Não há histórico nem registro permanente de pendências | Equipe |
@@ -100,7 +100,7 @@ A seção de preparação da Entrega 10 descreve a demonstração no momento da 
 
 ![F03: acompanhamento com prévias e marcadores dos lances](../assets/11_figma/f03-analise.png)
 
-**Objetivo:** acompanhar a análise e acessar resultados, O02/O03, M03 e T03. Estados incluem fila, processamento, conclusão, falha encenada e conclusão sem lances. Os signos S09–S14 e S32 orientam a leitura do estado, sem comprovar uma execução técnica real. Marcadores são botões de acesso ao lance. A análise usa trechos reais em 2×.
+**Objetivo:** acompanhar a análise e acessar resultados, O02/O03, M03 e T03. Estados incluem fila, processamento, conclusão, falha encenada e conclusão sem lances. Estado, progresso e disponibilidade dos resultados representam S09, S11 e S12; a falha encenada e suas opções de recuperação representam S13 e S14. A interface não apresenta a referência distinguível de tentativa prevista em S32 nem o instante e a condição de atualização da consulta de S10. Essa cobertura parcial não comprova uma execução técnica real. Marcadores são botões de acesso ao lance. A análise usa trechos reais em 2×.
 
 ### F04: base de highlights
 
@@ -159,6 +159,8 @@ Seleção vazia desativa a obtenção da seleção. Os MP4 individuais continuam
 O contraste calculado do texto #62666c varia de 4,84:1 a 5,77:1 nos fundos sólidos usados. Para #686c72, foram calculados 5,28:1 sobre branco e 4,93:1 sobre #f8f7f5. Essas medições não constituem auditoria global de conformidade WCAG.
 
 ## Verificações e limites da evidência
+
+O [registro versionado da conferência final](../assets/11_figma/verificacao_final.md) reúne os percursos, a amostra do CSV, os hashes dos MP4 e os resultados de reprodução, com seus limites.
 
 Em 13/11/2026, a revisão foi exercitada no navegador em desktop, nas larguras de 1280 e 1050 px. Foram verificados exemplos, início da análise, acesso por marcador, A/B/C, busca, filtros, seleção, detalhe, diálogos e navegação com Tab, Shift+Tab, Enter e Escape. Alguns testes partiram de foco programático; não se afirma um percurso completo apenas com teclado desde a abertura.
 
