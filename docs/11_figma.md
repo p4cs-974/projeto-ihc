@@ -1,7 +1,7 @@
 # Entrega 11: protótipo navegável integrado
 
 **Data:** 13/11/2026\
-**Status:** 🟨 protótipo publicado em preview e documentação preparada; revisão final da equipe pendente.\
+**Status:** 🟨 protótipo publicado e conferência técnica final concluída; revisão acadêmica individual da equipe pendente.\
 **Responsabilidade:** Equipe 16, Pedro Alexandre Custódio Silva, Lucas Roberto Boccia dos Santos e Giovanni Chahin Morassi. Integração conduzida por Pedro com assistência de agentes Codex. A revisão final pelos integrantes permanece pendente.
 
 ## Objetivo e escolha do artefato
@@ -128,9 +128,9 @@ O contraste calculado do texto #62666c varia de 4,84:1 a 5,77:1 nos fundos sóli
 
 Em 13/11/2026, a revisão foi exercitada no navegador em desktop, nas larguras de 1280 e 1050 px. Foram verificados exemplos, início da análise, acesso por marcador, A/B/C, busca, filtros, seleção, detalhe, diálogos e navegação com Tab, Shift+Tab, Enter e Escape. Alguns testes partiram de foco programático; não se afirma um percurso completo apenas com teclado desde a abertura.
 
-A mídia da análise e do detalhe avançou durante os testes. Para conferir todos os oito resultados, também foi usado o atalho existente `?tela=4`, que conclui a análise simuladamente. O percurso completo de processamento não foi aguardado nesta rodada. O ramo de movimento reduzido foi exercitado por emulação controlada na aba, sem validar a integração com a preferência do sistema operacional.
+A mídia da análise e do detalhe avançou durante os testes. Para conferir todos os oito resultados, também foi usado o atalho existente `?tela=4`, que conclui a análise simuladamente. Na conferência final, o percurso normal também foi acompanhado até a conclusão natural, sem o atalho: os quatro vídeos ficaram prontos, oito lances foram disponibilizados e o botão de continuidade abriu a base com esses oito itens. O ramo de movimento reduzido foi exercitado por emulação controlada na aba, sem validar a integração com a preferência do sistema operacional.
 
-As capturas são do protótipo após os ajustes aprovados, sem anotações de proposta. Foram conferidos o parse do JavaScript, a ausência de overflow horizontal nos percursos verificados e `git diff --check`. Downloads CSV/MP4 não foram repetidos nesta rodada. Não houve sessão com participantes, teste com leitor de tela, avaliação mobile ou comprovação de metas das Entregas 7 e 8.
+As capturas são do protótipo após os ajustes aprovados, sem anotações de proposta. Foram conferidos o parse do JavaScript, a ausência de overflow horizontal nos percursos verificados e `git diff --check`. Na conferência final do preview publicado, o navegador baixou um CSV com Suárez e Defesa do Barcelona e os dois MP4 correspondentes. Foram conferidos seleção, referências, URLs e tempos do CSV contra o manifesto. Os hashes dos vídeos coincidem com os arquivos de origem, e ambos decodificaram integralmente sem erro. Os arquivos salvos foram abertos por um seletor de arquivos em uma página temporária de teste e reproduzidos até o evento `ended` no navegador, sem buscar novamente a mídia do site. Suárez completou 28 s e 700 quadros; Defesa do Barcelona, 27 s e 675 quadros, sem quadros descartados ou erro do player nos dois casos. Quadros dos arquivos salvos e a captura do player foram inspecionados. Não foi feita avaliação auditiva da qualidade do áudio. Não houve sessão com participantes, teste com leitor de tela, avaliação mobile ou comprovação de metas das Entregas 7 e 8.
 
 ## Checklist e pendências para entrega
 
@@ -144,9 +144,9 @@ As capturas são do protótipo após os ajustes aprovados, sem anotações de pr
 - [x] Ajustes básicos de contraste, foco, teclado e diálogos verificados.
 - [ ] Equipe revisou e aprovou os fluxos e a cobertura parcial dos modelos.
 - [x] Revisão publicada e acesso público por HTTPS conferido sem autenticação.
-- [ ] Downloads e reprodução dos arquivos salvos conferidos na revisão final.
-- [ ] Pendências dos modelos compatibilizadas, sem presumir cobertura completa do MoLIC.
+- [x] CSV e dois MP4 baixados pelo navegador, conferidos e reproduzidos integralmente a partir dos arquivos salvos.
+- [x] Por decisão de Pedro, os MoLIC foram mantidos como estão; a cobertura parcial e as divergências permanecem explícitas, sem declarar compatibilização completa.
 
 ## Registro de elaboração
 
-Em 13/11/2026, Pedro conduziu a evolução do protótipo original e aprovou as propostas de limpeza antes da implementação. Agentes GPT-6 Astra e GPT-6.1 Sol, pelo harness Codex no T3 Code, auxiliaram a implementação, as verificações e a documentação. As capturas e os registros técnicos não substituem revisão acadêmica dos integrantes, avaliação com participantes.
+Em 13/11/2026, Pedro conduziu a evolução do protótipo original e aprovou as propostas de limpeza antes da implementação. Agentes GPT-6 Astra e GPT-6.1 Sol, pelo harness Codex no T3 Code, auxiliaram a implementação, as verificações e a documentação. A conferência final de fluxos e downloads foi realizada por GPT-6.1 Terra com raciocínio high e serviço priority, complementada por GPT-6.1 Sol na conclusão natural da análise e reprodução dos arquivos salvos. Pedro decidiu preservar os modelos MoLIC existentes e suas limitações documentadas. As capturas e os registros técnicos não substituem revisão acadêmica dos integrantes, avaliação com participantes.
