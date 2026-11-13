@@ -4,9 +4,43 @@
 **Status:** 🟨 protótipo publicado e conferência técnica final concluída; revisão acadêmica individual da equipe pendente.\
 **Responsabilidade:** Equipe 16, Pedro Alexandre Custódio Silva, Lucas Roberto Boccia dos Santos e Giovanni Chahin Morassi. Integração conduzida por Pedro com assistência de agentes Codex. A revisão final pelos integrantes permanece pendente.
 
-## Objetivo e escolha do artefato
+## Objetivo da atividade
 
-Materializar os fluxos da [Entrega 10](10_molic.md), com os objetivos e signos da [Entrega 9](09_modelo_conceitual.md). O percurso integrado prepara exemplos, acompanha uma análise simulada, permite revisar candidatos e obter cortes e metadados para edição externa.
+Materializar o modelo de interação em um protótipo navegável, preservando a lógica dos objetivos, tópicos, signos, feedbacks, alternativas e recuperações definidos anteriormente.
+
+## Biblioteca de possibilidades para projetos técnicos
+
+O protótipo deve materializar os fluxos definidos nas entregas anteriores. Dependendo do escopo, podem fazer sentido:
+
+1. **Dashboard:** indicadores, alertas, estado, tendências e atalhos para tarefas frequentes.
+2. **Configuração/parametrização:** escolhas, presets, validação e explicação de opções técnicas.
+3. **Entrada de dados:** upload, conexão, seleção, pré-visualização e validação.
+4. **Processamento:** fila, status, progresso, cancelamento, falha e reexecução.
+5. **Relatório/resultados:** síntese, métricas, gráficos, explicação, exportação e compartilhamento.
+6. **Histórico:** busca, filtros, ordenação, paginação, detalhes e repetição de execução.
+7. **Comparação:** antes/depois, modelo A/B, execução A/B, baseline ou períodos.
+8. **Explicabilidade:** confiança, fatores, evidências, limitações e correção/contestação.
+9. **Administração:** usuários, grupos, perfis, permissões, integrações e políticas.
+10. **CRUDs de domínio:** somente quando criar/consultar/editar/excluir representa tarefa real.
+11. **Auditoria/logs:** histórico de alterações e eventos em linguagem adequada.
+12. **Alertas/ocorrências:** severidade, impacto, ação, responsável e resolução.
+13. **Ajuda/documentação:** apoio contextual a tarefas complexas.
+
+### Estados que não podem ser esquecidos
+
+Quando aplicável, considere: vazio/sem dados; carregamento/processamento; sucesso; erro de entrada; erro de processamento; filtro sem resultados; permissão insuficiente; confirmação de ação destrutiva; cancelamento/desfazer/recuperação; dados desatualizados/conflito.
+
+> Esta lista é repertório de design, **não uma exigência de quantidade de telas**. A rastreabilidade deve explicar por que cada tela existe.
+
+## Link do Figma
+
+**Protótipo:** [ihc-11.p4cs.com.br](https://ihc-11.p4cs.com.br/)\
+**Arquivo editável:** [Pasta do protótipo](../assets/06_prototipos/)\
+**Última verificação de permissão:** 13/11/2026
+
+> Teste o link em janela anônima. O avaliador deve conseguir abrir o protótipo sem solicitar permissão.
+
+## Artefato adotado
 
 A equipe utiliza HTML, CSS e JavaScript como alternativa ao Figma, que é uma sugestão de ferramenta nesta atividade. O artefato evolui o protótipo da Entrega 6, sem criar uma aplicação separada. O nome deste documento e a pasta de imagens foram mantidos para preservar os links do repositório.
 
