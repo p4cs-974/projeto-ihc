@@ -17,6 +17,20 @@
       }
     ]
   },
+  "env": {
+    "entrega11": {
+      "name": "ihc-11",
+      "routes": [{ "pattern": "ihc-11.p4cs.com.br", "custom_domain": true }],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "ihc-feedback-preview",
+          "database_id": "950a9542-4558-4d02-8131-39603c98948f",
+          "migrations_dir": "migrations"
+        }
+      ]
+    }
+  },
   "d1_databases": [
     {
       "binding": "DB",

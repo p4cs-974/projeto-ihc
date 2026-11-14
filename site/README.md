@@ -52,3 +52,15 @@ npx wrangler preview --name real-soccernet-clips
 ```
 
 O comando de preview executa `build.sh` e retorna as URLs da branch e da implantação. Use um nome diferente para outra branch. A publicação de preview é manual; não há workflow de GitHub Actions neste repositório.
+
+## Preview da Entrega 11
+
+O ambiente `entrega11` publica a mesma fonte em [ihc-11.p4cs.com.br](https://ihc-11.p4cs.com.br/), no Worker `ihc-11`. Usa o banco existente `ihc-feedback-preview`, separado do banco de produção. O build inclui o protótipo, o guia e a mídia dos exemplos.
+
+Execute em `site/`:
+
+```sh
+npx wrangler deploy --env entrega11
+```
+
+O comando sem `--env entrega11` continua direcionado à produção em `ihc.p4cs.com.br`.
