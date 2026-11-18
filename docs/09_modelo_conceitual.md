@@ -205,7 +205,7 @@ Prioridades são de projeto, justificadas pelas Entregas 5, 6 e 8; não são fre
 
 | Duplicidade ou conflito | Decisão consolidada | Consequência |
 |---|---|---|
-| Highlights, lances e cortes como sinônimos | Lance é o acontecimento; candidato é a sugestão; corte é o trecho audiovisual | Não tratar classificação como fato editorial; testar vocabulário na coleta |
+| Highlights, lances e cortes como sinônimos | [H] Lance é o acontecimento. Candidato é uma sugestão de lance para revisão. Corte é o trecho audiovisual. Seleção é o conjunto de candidatos que a pessoa escolheu | Não tratar classificação como fato editorial; testar vocabulário na coleta |
 | Selecionado, revisado e aprovado | Seleção é o conjunto escolhido; revisão é atividade humana; decisão editorial é externa | O06 não realiza O09; sem registro persistente de revisão presumido |
 | Tempo com vários significados | Separar etapa da partida, relógio do jogo, posição no arquivo e duração | Reutilizar S02/S18–S21; tratar E06-O06 |
 | Concluído como análise pronta, cobertura total ou arquivo salvo | Separar estado da análise, disponibilidade/limites e obtenção | O02 não comprova O05/O07; zero candidatos não prova ausência de lances |
@@ -292,7 +292,7 @@ Preparar, acompanhar, conferir, selecionar e obter são tópicos de conversa, in
 
 | Questão | Onde verificar | Impacto possível |
 |---|---|---|
-| O público distingue candidato, corte, seleção, relógio do jogo e posição no arquivo? | I01/I02/I03; MQ03/MU02 | Rever falas e S16–S23 |
+| [?] O público distingue lance, candidato, corte e seleção? Distingue relógio do jogo de posição no arquivo? | Pedir que a pessoa explique os termos durante a revisão de um corte e identifique as duas referências de tempo. I01/I02/I03; MQ03/MU02 | Rever falas e S16–S23 |
 | Conclusão da análise e acesso à revisão ficam claros sem ajuda? | E06-D01; MQ02/MU01 | Rever passagem O02 → O04/O05 |
 | CSV e MP4 são obtidos e conferidos separadamente? | E06-D05/D06; MQ04/MU03/MU04 | Rever O07/S23/S26–S28/S33 |
 | Quais estados, limites, preservação e recuperação o backend suporta? | Equipe técnica; H24/H26; T03 | Refinar S05/S08–S15/S32 e O03, sem prometer identificação técnica disponível, retomada, custo ou prazo |
