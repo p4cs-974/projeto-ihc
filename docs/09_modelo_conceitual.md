@@ -10,7 +10,7 @@ Transformar os cenários de problema em propostas de interação para preparar g
 
 ### Base conceitual, autoria e limites
 
-O [CC8122-ProjetoIHC-ModelosConceituais](../slides_plinio/CC8122-ProjetoIHC-ModelosConceituais.pdf.pdf), slides 5–10, 12–16 e 19, fundamenta cenários com ações e respostas, refinamento, conversas organizadas por tópicos e integração dos objetivos. O [CC8122-Esquema-Conceitual_Signos](../slides_plinio/CC8122-Esquema-Conceitual_Signos.pdf), slides 3–7, fundamenta origem, semântica, conteúdo, restrições, padrões e mecanismos de prevenção/recuperação dos signos. Ambos se referem a Barbosa e Silva (2010). O primeiro conjunto remete a um vídeo no Moodle para o mapa de objetivos; esse vídeo não está entre os materiais consultados. O mapa abaixo explicita a organização adotada, sem atribuir ao vídeo uma notação não verificada.
+O [CC8122-ProjetoIHC-ModelosConceituais](../slides_plinio/CC8122-ProjetoIHC-ModelosConceituais.pdf.pdf), slides 5–10, 12–16 e 19, fundamenta cenários com ações e respostas, refinamento, conversas organizadas por tópicos e integração dos objetivos. O [CC8122-Esquema-Conceitual_Signos](../slides_plinio/CC8122-Esquema-Conceitual_Signos.pdf), slides 3–7, fundamenta origem, semântica, conteúdo, restrições, padrões e mecanismos de prevenção/recuperação dos signos. Ambos se referem a Barbosa e Silva (2010). O primeiro conjunto remete a um vídeo no Moodle para o mapa de objetivos; esse vídeo não está entre os materiais consultados. A classificação do mapa segue as definições de objetivo final, instrumental direto e instrumental indireto do [parecer da Entrega 9](../feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md#1-reconstruir-o-mapa-segundo-os-tipos-de-objetivos-da-teoria).
 
 | Base do projeto | Uso nesta entrega | Limite preservado |
 |---|---|---|
@@ -174,35 +174,35 @@ Os recortes foram derivados dos artefatos já atribuídos aos integrantes. São 
 
 | Referência de autoria | Mapa textual do recorte | Integração |
 |---|---|---|
-| Pedro — 22.123.049-3; C01/T01 | O00 → preparação O01/O02 → O04/O05/O06 → O07; O08 transversal; O10 quando necessário | Revisão por P01 compartilhada com P03; seleção não equivale à chancela |
-| Lucas — 22.123.012-1; C02/T02 | O00 → O06/O07 pelo editor → O09 por P02; O10 externo retorna à avaliação O09 | Fronteira após obtenção/transferência externa; não acrescenta uso direto de P02 |
-| Giovanni — 22.123.025-3; C03/T03 | O00 → O01 → O02; O03 se houver falha → O04/O05/O06/O07 com resultados; O08 transversal | Acompanhamento comum a P01/P03; pertinência por atleta é manual |
+| Pedro — 22.123.049-3; C01/T01 | O00 apoiado por O01/O02 e O04–O08; O10 externo quando necessário | Revisão por P01 compartilhada com P03; seleção não equivale à chancela |
+| Lucas — 22.123.012-1; C02/T02 | O06/O07 apoiam O00 para o editor; O09 é a finalidade externa de P02 e pode exigir O10 | Fronteira após obtenção/transferência externa; não acrescenta uso direto de P02 |
+| Giovanni — 22.123.025-3; C03/T03 | O00 apoiado por O01–O08; O03 se houver falha, O08 na retomada ou na saída | Acompanhamento comum a P01/P03; pertinência por atleta é manual |
 
-As setas desses recortes indicam dependências narrativas, não sequência obrigatória nem notação MoLIC. O mapa visual representa **decomposição de objetivos**, com ligações tracejadas para a continuidade externa.
+[H] Os recortes organizam relações entre a finalidade e os objetivos que a apoiam. Uma ligação sólida indica apoio à finalidade. Uma ligação tracejada indica a continuidade fora da interface.
 
 ### Mapa consolidado
 
 ![Mapa consolidado: preparar e acompanhar a análise, revisar e obter material, reconhecer pendências e continuar a edição e a supervisão externamente](../assets/09_modelo_conceitual/mapa_objetivos.svg)
 
-**Fonte editável:** [mapa_objetivos.svg](../assets/09_modelo_conceitual/mapa_objetivos.svg). O00 é o propósito global; os agrupamentos intermediários organizam a leitura. O08 é transversal. O09/O10 permanecem fora da interface. IDs e nomes são compartilhados com o dicionário e as conversas.
+**Fonte editável:** [mapa_objetivos.svg](../assets/09_modelo_conceitual/mapa_objetivos.svg). [H] O00 é a finalidade de P01 e P03. O01 prepara a análise para uso posterior. O02 a O08 apoiam a obtenção durante o uso, inclusive quando a interação é retomada. O09 é a finalidade editorial externa de P02. O10 é continuidade externa de edição e também pode apoiar O09.
 
 ### Dicionário de objetivos
 
 Prioridades são de projeto, justificadas pelas Entregas 5, 6 e 8; não são frequência, criticidade ou preferência medidas com o público.
 
-| ID | Objetivo | Persona(s) | Cenário(s) | Prioridade |
-|---|---|---|---|---|
-| O00 | Obter material de melhores momentos para continuidade editorial externa | P01/P03; P02 destinatária | CI01/CI02/CI03 | Propósito global, H28; benefício a validar |
-| O01 | Preparar gravações para análise | P01/P03 | CI01/CI03 | Essencial, A01; precondição de T03 |
-| O02 | Acompanhar a análise e reconhecer resultados acessíveis | P01/P03 | CI01/CI03 | Essencial, T03; E06-D01/MU01 |
-| O03 | Encaminhar uma falha sem comprometer as demais partidas | P01/P03 | CI03; alternativa comum a CI01 | Alta quando há falha; ações condicionadas ao suporte técnico |
-| O04 | Localizar candidatos pertinentes à revisão | P01/P03 | CI01/CI03 | Essencial, T01; MU05; filtros a validar |
-| O05 | Conferir pertinência e contexto do candidato | P01/P03 | CI01/CI03 | Essencial, T01; MQ03/MU02 |
-| O06 | Definir e conferir a seleção para obtenção | P01/P03 | CI01/CI02/CI03 | Essencial, T01; MU03; não significa chancela |
-| O07 | Obter e conferir cortes e metadados | P01/P03; P02 recebe externamente | CI01/CI02/CI03 | Essencial, A04; E06-D05; MU03/MU04 |
-| O08 | Reconhecer o contexto disponível e as pendências ao retomar ou encerrar | P01/P03 | CI01/CI03 | Alta, H41/T01/T03; sem persistência assegurada |
-| O09 | Avaliar e comunicar a decisão editorial | P02 em conversa com o editor | CI02 | Continuidade externa, T02 |
-| O10 | Conferir o original e ajustar ou montar o material | P01/P03; P02 solicita ajuste | CI01/CI02/CI03 | Continuidade externa conforme necessidade e recursos |
+| ID | Objetivo | Classificação [H] | Persona(s) | Cenário(s) | Prioridade |
+|---|---|---|---|---|---|
+| O00 | Obter material de melhores momentos para continuidade editorial externa | Final na interface. É o motivo de uso para P01/P03 (H28). | P01/P03; P02 destinatária | CI01/CI02/CI03 | Propósito global, H28; benefício a validar |
+| O01 | Preparar gravações para análise | Instrumental indireto. Prepara as gravações para uma análise cujos resultados serão usados em revisão posterior. | P01/P03 | CI01/CI03 | Essencial, A01; precondição de T03 |
+| O02 | Acompanhar a análise e reconhecer resultados acessíveis | Instrumental direto. Permite decidir durante a consulta se já há resultados para revisar. | P01/P03 | CI01/CI03 | Essencial, T03; E06-D01/MU01 |
+| O03 | Encaminhar uma falha sem comprometer as demais partidas | Instrumental direto. Permite agir sobre a falha encontrada durante o acompanhamento. | P01/P03 | CI03; alternativa comum a CI01 | Alta quando há falha; ações condicionadas ao suporte técnico |
+| O04 | Localizar candidatos pertinentes à revisão | Instrumental direto. Restringe o material que será examinado na revisão em curso. | P01/P03 | CI01/CI03 | Essencial, T01; MU05; filtros a validar |
+| O05 | Conferir pertinência e contexto do candidato | Instrumental direto. Sustenta a decisão de incluir ou dispensar o candidato durante a revisão. | P01/P03 | CI01/CI03 | Essencial, T01; MQ03/MU02 |
+| O06 | Definir e conferir a seleção para obtenção | Instrumental direto. Organiza os itens a obter durante a revisão. | P01/P03 | CI01/CI02/CI03 | Essencial, T01; MU03; não significa chancela |
+| O07 | Obter e conferir cortes e metadados | Instrumental direto. Disponibilizar as saídas e conferir os arquivos é como o usuário concretiza O00. | P01/P03; P02 recebe externamente | CI01/CI02/CI03 | Essencial, A04; E06-D05; MU03/MU04 |
+| O08 | Reconhecer o contexto disponível e as pendências ao retomar ou encerrar | Instrumental direto. Ajuda a orientar a interação no momento de retomar ou encerrar. | P01/P03 | CI01/CI03 | Alta, H41/T01/T03; sem persistência assegurada |
+| O09 | Avaliar e comunicar a decisão editorial | Final externo de P02. É a finalidade da supervisão editorial em T02. | P02 em conversa com o editor | CI02 | Continuidade externa, T02 |
+| O10 | Conferir o original e ajustar ou montar o material | Continuidade externa de P01/P03. Atende à produção e, quando há devolução, apoia O09. | P01/P03; P02 solicita ajuste | CI01/CI02/CI03 | Continuidade externa conforme necessidade e recursos |
 
 ### Decisões de consolidação
 
