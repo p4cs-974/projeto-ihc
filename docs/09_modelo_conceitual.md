@@ -275,9 +275,9 @@ Não se modelam confiança, nome de atleta reconhecido, tempo estimado restante,
 
 A metamensagem proposta é: entendemos que você precisa preparar material de partidas encerradas e conservar o controle sobre o que será utilizado. O sistema pode apoiar a localização de candidatos e disponibilizar cortes e referências; você confere pertinência, contexto e arquivos obtidos. O estado conhecido e as limitações precisam ficar claros. O trabalho editorial e as correções continuam nas ferramentas e nos canais externos apropriados. Essa compreensão do público é uma hipótese de design a confrontar com coleta e avaliação.
 
-### Cobertura necessária nos futuros MoLIC
+### Cobertura para os MoLIC
 
-Estes agrupamentos orientam a Entrega 10; não são diagramas já elaborados nem registro de participação individual concluída.
+[F] Os recortes abaixo servem de referência para os diagramas da [Entrega 10](10_molic.md).
 
 | Recorte de conversa | Objetivos/signos necessários | Alternativas e rupturas |
 |---|---|---|
@@ -286,7 +286,7 @@ Estes agrupamentos orientam a Entrega 10; não são diagramas já elaborados nem
 | Localizar, conferir e selecionar, CI01/CI03 | O04–O06/O08; S01–S03/S12/S16–S24/S29/S30/S32 | Consulta vazia, contexto insuficiente, suspeita de omissão, retirada, seleção vazia e retomada sem contexto preservado |
 | Obter material e sair para o trabalho externo, CI01/CI02/CI03 | O07; S23/S24/S26–S28/S33; referências externas S30/S31 | CSV da seleção não vazia, MP4 individual independente da seleção, tamanho conhecido/estimado/indisponível, mídia indisponível, obtenção não confirmada e pendências; saída para O09/O10 |
 
-Preparar, acompanhar, conferir, selecionar e obter são tópicos de conversa, independentemente de sua organização em telas. O MoLIC deverá distinguir falas, processamento, ruptura e encerramento conforme a notação da aula, mantendo os IDs e nomes. A divisão em soluções completas por integrante deve ser revisada pela equipe na Entrega 10.
+[H] Os MoLIC usam estes objetivos e signos para modelar falas de U e D, processos, rupturas e encerramentos. Em CI02, a passagem para T02 é uma condição de saída. A conversa entre editor e supervisor ocorre nos canais externos.
 
 ### Verificações ainda necessárias
 
