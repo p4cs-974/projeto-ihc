@@ -293,8 +293,8 @@ A metamensagem proposta é: entendemos que você precisa preparar material de pa
 | Questão | Onde verificar | Impacto possível |
 |---|---|---|
 | [?] O público distingue lance, candidato, corte e seleção? Distingue relógio do jogo de posição no arquivo? | Pedir que a pessoa explique os termos durante a revisão de um corte e identifique as duas referências de tempo. I01/I02/I03; MQ03/MU02 | Rever falas e S16–S23 |
-| Conclusão da análise e acesso à revisão ficam claros sem ajuda? | E06-D01; MQ02/MU01 | Rever passagem O02 → O04/O05 |
-| CSV e MP4 são obtidos e conferidos separadamente? | E06-D05/D06; MQ04/MU03/MU04 | Rever O07/S23/S26–S28/S33 |
+| [?] A pessoa distingue espera, análise concluída, falha, consulta indisponível e nova tentativa? | Pedir que explique o estado da partida e escolha como continuar sem ajuda do facilitador. E06-D01; MQ02/MU01 | Rever O02/O03 e S08–S15/S32 |
+| [?] A pessoa antecipa o conteúdo do CSV e do MP4 e confirma o que conseguiu obter? | Observar a obtenção e pedir que abra o CSV e reproduza o MP4 salvos. E06-D05/D06; MQ04/MU03/MU04 | Rever O07/S23/S26–S28/S33 |
 | Quais estados, limites, preservação e recuperação o backend suporta? | Equipe técnica; H24/H26; T03 | Refinar S05/S08–S15/S32 e O03, sem prometer identificação técnica disponível, retomada, custo ou prazo |
 | O apoio geral atende ao compilado por atleta e ao espaço disponível? | I01/I03; H36/H37/H38 | Refinar adequação de P03/O05/O10 |
 | O que acompanha o material e como retornam ajustes? | I01/I03 com editor/supervisor; H22/H23/H33/H40 | Refinar O07/O09/O10; uso direto de P02 exige fundamentação |
