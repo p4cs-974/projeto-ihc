@@ -305,10 +305,13 @@ São esclarecimentos do modelo proposto, sem execução de análise real, inclus
 - [x] Narrativas descrevem ações e respostas sem antecipar widgets ou textos finais.
 - [x] Cada CI possui tópicos, falas, signos e alternativas coerentes.
 - [x] Recortes de referência integrados em mapa documental com dicionário de objetivos.
-- [ ] Cada integrante revisou/apresentou seu recorte; a equipe confirmou a consolidação.
+- [ ] Pedro apresentou e revisou CI01, seus objetivos e signos.
+- [ ] Lucas apresentou e revisou CI02, seus objetivos e signos.
+- [ ] Giovanni apresentou e revisou CI03, seus objetivos e signos.
+- [ ] A equipe confirmou a nomenclatura do mapa e dos signos e a fronteira de CI02.
 - [x] Esquema em tabela única; origem conceitual distinta da procedência do valor.
 - [x] PP, PA, AL, RA e CE definidos e associados a situações pertinentes.
-- [x] Objetivos/signos com IDs para reutilização na Entrega 10, ainda não preenchida.
+- [x] Objetivos/signos com IDs usados nos modelos da [Entrega 10](10_molic.md).
 - [x] Filtros apoiam consulta; histórico, dashboard analítico e administração não foram acrescentados sem tarefa fundamentada.
 - [x] Simulação, capacidades propostas e atividades externas explicitadas.
       
