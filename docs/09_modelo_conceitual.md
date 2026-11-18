@@ -224,6 +224,8 @@ Um lote S06 reúne entradas S03, associadas à partida S01 e ao tempo S02, sem p
 
 ### Tabela única de signos
 
+[F] S25 é reservado e não tem definição no esquema. Os demais identificadores mantêm seus significados.
+
 | Grupo | Signo | Origem | Observações/semântica | Tipo de conteúdo | Restrição | Valor padrão | Prevenção | Recuperação |
 |---|---|---|---|---|---|---|---|---|
 | Entrada | S01 — Partida | Domínio; U/S | Identifica o jogo da gravação e dos candidatos | Identificação textual e referência estável | Distinguir partidas; aproveitar dados conhecidos sem inventá-los | Reconhecida, se disponível | PP: identidade junto aos resultados | RA: conferir/corrigir associação se suportado; senão orientar externamente |
