@@ -300,6 +300,8 @@ A metamensagem proposta é: entendemos que você precisa preparar material de pa
 | O que acompanha o material e como retornam ajustes? | I01/I03 com editor/supervisor; H22/H23/H33/H40 | Refinar O07/O09/O10; uso direto de P02 exige fundamentação |
 | Qual contexto deve sobreviver a interrupções? | I01/I03; H41; T01/T03 | Refinar O08/S29/S30; não equivale a adotar histórico permanente |
 
+[F] Na [Entrega 7](07_coleta_dados.md), I02 registra dúvidas e preferências após o uso. I01 e I03 investigam práticas profissionais, critérios de revisão e passagem do material ao supervisor. [H] A avaliação complementa esses relatos com observação da interação e conferência dos arquivos.
+
 ### Ajustes documentais da análise de coerência
 
 Os tickets [AC-083 a AC-085](../analises%20de%20coerencia/05-11-2026-entrega-09.html) foram aplicados com a base já existente: T03 fundamenta S32 e as associações por tentativa; o detalhe e a exportação do protótipo fundamentam a independência do MP4 e a seleção não vazia do CSV; RC09 e sizeBytes no manifesto fundamentam o tamanho individual S33. A numeração dos signos foi mantida. Os novos signos estão agrupados por assunto na mesma tabela.
