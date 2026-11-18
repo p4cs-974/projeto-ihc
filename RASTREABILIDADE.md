@@ -173,6 +173,7 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 | 10/11/2026 | Revisão da Entrega 6: protótipo na versão 2 com D01, continuidade da análise para os resultados prontos e estado do lote; D02, trilhas de B com nomes, relógio do jogo e legenda; D05, painel com CSV e MP4 separados. Falha localizada e vídeo sem lances encenados. D01, D02 e D05 implementadas sem validação humana. O recorte de IHC foi preservado: montagem e chancela continuam externas | [Feedback do professor da Entrega 06](feedbacks_professor/Feedback_Professor_Entrega06_Equipe16.md) | Entrega 6; guia da simulação; seções 3.1 e 4 desta matriz | Pedro, revisão por automação a seu pedido |
 | 10/11/2026 | Revisão da Entrega 7: I02 restrito à experiência de uso do protótipo, sem vínculo com práticas profissionais ou hipóteses do domínio; elegibilidade autodeclarada com grupo exploratório separado; informações éticas no guia antes das tarefas. Formulário `2026-11-10` só na fonte local, publicação PENDENTE. Nenhum piloto ou coleta. O recorte de IHC foi preservado | [Feedback do professor da Entrega 07](feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md) | Entrega 7; guia da simulação; seção 3.2 desta matriz | Pedro, revisão por automação a seu pedido |
 | 10/11/2026 | Revisão da Entrega 8: princípios de negócio e de interface, prioridade pelas cinco metas de Nielsen, ciclo de Mayhew, MU07 e MU08. MQ01–MQ04 e MU01–MU08 referenciadas na seção 3.2 como especificação, sem resultados. Pesos, MU07 e MU08 propostos, a confirmar pela equipe. O recorte de IHC foi preservado | [Feedback do professor da Entrega 08](feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md) | Entrega 8; seção 3.2 desta matriz | Pedro, revisão por automação a seu pedido |
+| 18/11/2026 | [F] O00 é a finalidade na interface. O09 é a finalidade editorial externa de P02. O01–O08 apoiam O00 e O10 continua fora da interface. S33 descreve tamanho individual do MP4. | [Parecer da Entrega 09](feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md) | Entrega 9, mapa e R01–R05 | Pedro, a pedido da equipe |
 
 ## Como usar
 
@@ -185,6 +186,8 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
 
 ## Histórico de atualização da rastreabilidade
+
+- 18/11/2026: [F] R01–R05 alinhadas à classificação dos objetivos e aos signos definidos na Entrega 9. A obtenção prepara a passagem para T02, realizada em canais externos.
 
 - 10/11/2026: consolidados os pareceres das Entregas 6 a 8. A seção 3.1 descreve a versão 2 do protótipo: D01, D02 e D05 implementadas sem validação humana, falha localizada, resultados parciais e vídeo sem lances encenados; mais de oito candidatos, histórico e retomada após recarga continuam sem solução. A seção 3.2 referencia MQ01–MQ04 e MU01–MU08 como especificação, não como resultados. I02 fica restrito à experiência de uso do protótipo. A seção 4 acompanha a versão 2 e três linhas da seção 5 registram as revisões. Sem nova coleta, piloto ou mudança do estado das hipóteses.
 

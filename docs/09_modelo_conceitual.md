@@ -1,6 +1,7 @@
 # Entrega 9 — Modelo conceitual e design centrado na comunicação
 
-**Data:** 05/11/2026\
+**Data:** 05/11/2026 (versão original)\
+**Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md)\
 **Status:** 🟨 preenchimento documental concluído; revisão pelos integrantes e validação dos modelos pendentes\
 **Responsabilidade:** recortes individuais de referência e consolidação do mapa de objetivos e do esquema de signos da Equipe 16.
 
@@ -331,3 +332,4 @@ São esclarecimentos do modelo proposto, sem execução de análise real, inclus
 |---|---|---|
 | 05/11/2026 | Preenchimento de CI01–CI03 e diferenças, conversas, recortes de objetivos, mapa consolidado e tabela S01–S31. Integração de T01/T02/T03, RC02–RC09 e decisões/metas das Entregas 6–8. Hipóteses e fronteiras preservadas, sem nova evidência empírica | Elaboração assistida pelo Codex a pedido da equipe; revisão individual e consolidação pela equipe pendentes |
 | 05/11/2026 | Aplicação documental de AC-083–AC-085: tentativa S32 e associações conhecidas; CSV condicionado à seleção não vazia e MP4 individual independente; tamanho individual S33 com dado conhecido, estimativa fundamentada ou indisponibilidade explícita. Base: T03, comportamento existente do protótipo, RC09 e manifesto. Sem novos procedimentos, implementação ou evidência empírica | Equipe 16; elaboração assistida pelo Codex a pedido da equipe |
+| 18/11/2026 | [F] Classificação dos objetivos, delimitação da conversa de CI02, revisão de CI01–CI03, alinhamento dos signos à matriz e critérios para avaliação. | Pedro, a pedido da equipe. Revisão individual e confirmação coletiva pendentes. |
