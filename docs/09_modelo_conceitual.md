@@ -123,7 +123,7 @@ Em uma tarde de sábado, em sua casa, Jorginho Jr., estudante de 19 anos, prepar
 
 ## 2. Design centrado na comunicação
 
-**Convenção:** U = pessoa que opera a interface; D = preposto do designer/sistema. As falas indicam intenção e conteúdo, não textos finais de interface. E = conversa **externa**, sem transição de sistema implícita. S01–S24 e S26–S33 remetem à tabela única da seção 4; O00–O10, ao mapa da seção 3.
+**Convenção:** U = pessoa que opera a interface; D = preposto do designer/sistema. As falas indicam intenção e conteúdo, não textos finais de interface. S01–S24 e S26–S33 remetem à tabela única da seção 4; O00–O10, ao mapa da seção 3.
 
 ### CI01 — Revisar e obter candidatos com contexto sob pressão de prazo
 
@@ -144,13 +144,12 @@ Em uma tarde de sábado, em sua casa, Jorginho Jr., estudante de 19 anos, prepar
 
 | Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
 |---|---|---|
-| Preparar material > conferir identidade/seleção, O06/O07 | U, editor: Quero obter estes cortes para a supervisão. D: Esta é a seleção, com partidas, tempos e referências. S01/S02/S16/S23/S24 | Referência comum sem declarar aprovação |
-| > obter saídas, O07 | U, editor: Preciso da relação e dos vídeos individuais. D: O CSV corresponde à seleção não vazia; cada MP4 disponível pode ser obtido sem estar selecionado. Informo o tamanho conhecido de cada vídeo ou sua indisponibilidade. A transferência ao destinatário acontece fora daqui. S23/S26–S28/S33 | Delimitar a conversa apoiada pela interface |
-| E: receber e avaliar > conferir contexto, O09 | Editor: Encaminhei estes arquivos; estas dúvidas permanecem. Arnaldo: Quero conferir o gol e a jogada anterior pela mesma referência. S01/S02/S16/S18–S20/S30 | Passagem externa de T01 para T02 |
-| E: solicitar ajuste > voltar à origem, O10 | Arnaldo: Falta a falta anterior; confira o original e devolva o trecho corrigido. Editor: Vou conferir esta gravação e este intervalo. S03/S19/S20/S30/S31 | Localizar problema e ajustar externamente |
-| E: deliberar > liberar, devolver ou adiar, O09 | Arnaldo: Este trecho atende ao critério, ou ainda precisa deste ajuste; esta outra seleção não foi conferida. S30/S31 | Distinguir decisão externa de seleção interna |
+| Localizar material > completar a seleção, O04/O06 | [H] U: Falta um corte para encaminhar. D: Estes são os candidatos encontrados pelos critérios da partida, tempo e tipo. S01/S02/S16/S17/S22/S23 | Permitir que o editor encontre e inclua o item |
+| Preparar material > conferir identidade e seleção, O06/O07 | [H] U: Quero conferir os cortes que vou encaminhar. D: Estes são os itens selecionados, com suas partidas, tempos e referências. S01/S02/S16/S18/S20/S23/S24 | Dar ao editor e ao supervisor referências comuns |
+| Obter material > solicitar arquivos, O07 | [H] U: Quero a relação e os vídeos individuais. D: O CSV contém as referências da seleção. Cada MP4 disponível pode ser obtido por corte. S23/S26/S27/S33 | Distinguir as saídas e suas condições |
+| Encerrar > conferir o material, O07/O08 | [H] U: Terminei de obter os arquivos. D: Estes são os arquivos disponibilizados. Confira se os arquivos salvos abrem. S28/S30 | Reconhecer o que foi obtido e o que ficou pendente |
 
-Não há falas D atribuídas à chancela de Arnaldo. O futuro MoLIC deve representar a conversa do editor até a obtenção e a saída para T02, sem converter a comunicação externa em função de aprovação.
+**Condição de saída para T02.** [H] Fora da interface, o editor confere os arquivos salvos, encaminha o material com as referências de origem e indica pendências. Arnaldo usa essas referências para avaliar a seleção (O09/S31), pedir conferência no original ou ajuste (O10) e comunicar a decisão por chat ou na ilha de edição. A conversa U–D de CI02 se concentra no preparo feito pelo editor porque Arnaldo participa a partir dessa passagem.
 
 ### CI03 — Acompanhar a análise e obter trechos para uma produção amadora
 
