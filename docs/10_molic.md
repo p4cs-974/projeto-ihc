@@ -149,8 +149,11 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 4. [H] Em c4, localiza candidatos pelos critérios. Em c5, confere a prévia e identifica visualmente a participação do atleta. A consulta vazia convida a rever os critérios. Uma falha de mídia devolve a pessoa ao candidato com possibilidade de outra tentativa.
 5. [H] Em c6, confere os arquivos salvos e o que ficou pendente. Encerra com o material conferido (e1) ou com pendência (e3). A montagem ocorre externamente (O10).
 
+[F] Em M03, as falas `u:` saem das aberturas e das cenas. As respostas `d:` saem dos quadrados de processamento. Em p1, a resposta distingue rejeição e aceitação do envio. Em p7, distingue aceitação da nova tentativa, recusa e falta de resposta (S15).
+
 ### Checklist específico de modelagem
 
+- [x] [F] As transições indicam o emissor e as saídas de processos são respostas do preposto.
 - [x] [F] O modelo liga abertura, acompanhamento, resultados, recuperação e saídas.
 - [ ] [?] Giovanni apresentou e revisou o modelo com a equipe.
 

@@ -127,13 +127,14 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="540,266 716,266" class="edge"/>
 <text x="550" y="253" class="label" text-anchor="start">u: enviar e solicitar análise</text>
 </g>
-<g id="f4" data-kind="edge" data-from="p1" data-to="c1" data-style="dashed" data-label="d: corrigir entrada rejeitada">
+<g id="f4" data-kind="edge" data-from="p1" data-to="c1" data-style="dashed" data-label="d: entrada rejeitada | Corrija o problema em S05">
 <polyline points="728,254 728,220 511,220 511,235" class="edge ruptura"/>
-<text x="550" y="210" class="label" text-anchor="start">d: corrigir entrada rejeitada</text>
+<text x="550" y="210" class="label" text-anchor="start">d: entrada rejeitada</text>
+<text x="550" y="230" class="label" text-anchor="start">Corrija o problema em S05</text>
 </g>
-<g id="f5" data-kind="edge" data-from="p1" data-to="c2" data-style="solid" data-label="d: envio aceito">
+<g id="f5" data-kind="edge" data-from="p1" data-to="c2" data-style="solid" data-label="d: pedido aceito · acompanhe a análise">
 <polyline points="728,278 728,423 319,423 319,452" class="edge"/>
-<text x="338" y="410" class="label" text-anchor="start">d: envio aceito</text>
+<text x="338" y="410" class="label" text-anchor="start">d: pedido aceito · acompanhe a análise</text>
 </g>
 <g id="f6" data-kind="edge" data-from="c1" data-to="e0" data-style="solid" data-label="u: adiar o envio">
 <polyline points="540,330 695,330 695,337" class="edge"/>
@@ -143,9 +144,10 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="540,493 716,493" class="edge"/>
 <text x="552" y="483" class="label" text-anchor="start">u: atualizar estado</text>
 </g>
-<g id="f8" data-kind="edge" data-from="p2" data-to="c2" data-style="solid" data-label="d: estado e resultados disponíveis">
+<g id="f8" data-kind="edge" data-from="p2" data-to="c2" data-style="solid" data-label="d: estado atualizado | Veja os resultados acessíveis">
 <polyline points="728,481 728,452 540,452" class="edge"/>
-<text x="746" y="460" class="label" text-anchor="start">d: estado e resultados disponíveis</text>
+<text x="746" y="460" class="label" text-anchor="start">d: estado atualizado</text>
+<text x="746" y="480" class="label" text-anchor="start">Veja os resultados acessíveis</text>
 </g>
 <g id="f9" data-kind="edge" data-from="p2" data-to="c2" data-style="dashed" data-label="d: consulta indisponível | Tente consultar novamente">
 <polyline points="728,505 728,555 540,555" class="edge ruptura"/>
@@ -182,13 +184,15 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="980" y="833" class="label" text-anchor="start">disponível</text>
 <text x="980" y="853" class="label" text-anchor="start">u: tentar novamente</text>
 </g>
-<g id="f18" data-kind="edge" data-from="p7" data-to="c2" data-style="solid" data-label="d: nova tentativa aceita">
+<g id="f18" data-kind="edge" data-from="p7" data-to="c2" data-style="solid" data-label="d: nova tentativa aceita | Referência S32 quando conhecida">
 <polyline points="956,1080 779,1080 779,575 540,575" class="edge"/>
 <text x="788" y="573" class="label" text-anchor="start">d: nova tentativa aceita</text>
+<text x="788" y="593" class="label" text-anchor="start">Referência S32 quando conhecida</text>
 </g>
-<g id="f19" data-kind="edge" data-from="p7" data-to="c3" data-style="dashed" data-label="d: pedido não atendido">
+<g id="f19" data-kind="edge" data-from="p7" data-to="c3" data-style="dashed" data-label="d: pedido recusado ou sem resposta | Confira a condição antes de repetir">
 <polyline points="980,1080 1175,1080 1175,704 1142,704" class="edge ruptura"/>
-<text x="830" y="1121" class="label" text-anchor="start">d: pedido não atendido</text>
+<text x="830" y="1121" class="label" text-anchor="start">d: pedido recusado ou sem resposta</text>
+<text x="830" y="1141" class="label" text-anchor="start">Confira a condição antes de repetir</text>
 </g>
 <g id="f20" data-kind="edge" data-from="c4" data-to="p3" data-style="solid" data-label="u: aplicar critérios">
 <polyline points="540,825 716,825" class="edge"/>
