@@ -175,6 +175,7 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 | 10/11/2026 | Revisão da Entrega 8: princípios de negócio e de interface, prioridade pelas cinco metas de Nielsen, ciclo de Mayhew, MU07 e MU08. MQ01–MQ04 e MU01–MU08 referenciadas na seção 3.2 como especificação, sem resultados. Pesos, MU07 e MU08 propostos, a confirmar pela equipe. O recorte de IHC foi preservado | [Feedback do professor da Entrega 08](feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md) | Entrega 8; seção 3.2 desta matriz | Pedro, revisão por automação a seu pedido |
 | 18/11/2026 | [F] O00 é a finalidade na interface. O09 é a finalidade editorial externa de P02. O01–O08 apoiam O00 e O10 continua fora da interface. S33 descreve tamanho individual do MP4. | [Parecer da Entrega 09](feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md) | Entrega 9, mapa e R01–R05 | Pedro, a pedido da equipe |
 | 18/11/2026 | [F] M03 modela preparo, acompanhamento, nova tentativa condicionada, revisão e obtenção. Autenticação, exclusão de resultados e cancelamento efetivo ficaram fora do modelo por ausência de tarefa e signos no escopo consolidado. Adiar deixa a partida pendente. | [Parecer da Entrega 10](feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md) | M03, CI03, T03 e Entrega 11 | Pedro, a pedido da equipe |
+| 18/11/2026 | [F] O00 termina após a conferência dos arquivos. M03 separa recusa de aceitação desconhecida. A consulta do pedido fica condicionada a identificação e suporte do serviço. F06 exibe o total derivado dos tamanhos individuais. | Revisão independente dos [pareceres das Entregas 9](feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md) e [10](feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md) | M01–M03, S15, S26, S29, F06 | Pedro, a pedido da equipe |
 
 ## Como usar
 
@@ -187,6 +188,8 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
 
 ## Histórico de atualização da rastreabilidade
+
+- 18/11/2026: [F] Revisão independente da Entrega 10. O fechamento de O00 em M01–M03 tem conferência humana dos arquivos. A matriz situa a consulta de pedido sem resposta e a retomada em M03. F06 exibe os tamanhos individuais e o total derivado da seleção.
 
 - 18/11/2026: [F] Revisão independente da Entrega 9. R03 inclui a duração S21 mostrada em M02. R02 e R05 incluem a referência de retomada S29 usada no acompanhamento de M03.
 

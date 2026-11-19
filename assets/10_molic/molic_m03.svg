@@ -65,7 +65,7 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="105" y="519" class="dialog" text-anchor="start">d: estado S09, atualização S10, progresso S11</text>
 <text x="105" y="542" class="dialog" text-anchor="start">d: resultados acessíveis e limites S12</text>
 <text x="105" y="565" class="dialog" text-anchor="start">d: tentativa S32 e contexto disponível S29</text>
-<text x="105" y="588" class="dialog" text-anchor="start">d+u: conferir ou informar partida S01</text>
+<text x="105" y="588" class="dialog" text-anchor="start">d+u: identificar partida S01 e entrada S03</text>
 </g>
 <g id="c3" data-kind="scene">
 <rect x="798" y="630" width="344" height="131" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>

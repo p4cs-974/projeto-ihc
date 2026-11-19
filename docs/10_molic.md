@@ -1,7 +1,7 @@
 # Entrega 10: MoLIC
 
 - **Data:** M01/M02 em 08/11/2026; M03 em 09/11/2026; integração em 12/11/2026 (versão original)
-- **Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md)
+- **Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md) e ajustes após revisão independente
 - **Status:** 🟨 revisão documental dos três modelos concluída. Apresentação e confirmação individual de Pedro, Lucas e Giovanni e consolidação com a equipe pendentes.
 - **Responsabilidade:** uma solução completa por integrante.
 
@@ -163,9 +163,17 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 
 1. [H] Jorginho abre a conversa para preparar uma gravação (a1). Em c1, confere arquivo, partida e tempo. Ao solicitar a análise (p1), recebe a aceitação do pedido ou retorna à entrada para corrigir a rejeição. Pode adiar o envio (e0).
 2. [H] Em c2, consulta o estado da análise (p2). Se houver resultados acessíveis, pode passar à revisão (c4). Se ainda aguarda, pode consultar novamente ou sair com pendência (e2). Na abertura a2, Jorginho confere o contexto disponível (S29). Se ele faltar, identifica a partida e usa as referências de entrada ou tentativa que tiver. Quando não consegue identificar a entrada, deixa a consulta pendente em e2 ou volta ao preparo por a1 com uma gravação identificável.
-3. [H] Se o sistema informar falha, c3 apresenta a entrada afetada e as ações disponíveis. O usuário pode voltar ao preparo para corrigir a entrada, pedir nova tentativa quando suportada ou deixar a partida pendente. Se houver outros resultados acessíveis, pode prosseguir para c4 e consultar outra partida na mesma sessão. O alerta c7 identifica a entrada e a tentativa, quando conhecida, e apresenta as consequências conhecidas (S14, AL). A pessoa pode confirmar ou voltar à falha. O pedido aceito retorna a c2. Uma recusa confirmada volta a c3. Se o pedido fica sem resposta, c8 informa que a aceitação ainda é desconhecida. Em p8, Jorginho consulta o pedido identificável quando o serviço permite. Se confirmar a tentativa, volta a c2. Se confirmar a recusa, volta a c3. Enquanto a situação seguir desconhecida, permanece em c8 ou sai com pendência em e4. A consulta de p8 apenas verifica o pedido.
+3. [H] Se a análise falhar, c3 apresenta a entrada afetada e as ações disponíveis. Jorginho pode corrigir a entrada, pedir nova tentativa quando suportada ou deixar a partida pendente. Se outros resultados estiverem acessíveis, pode passar a c4 e revisar outra partida na mesma sessão.
 4. [H] Em c4, localiza candidatos pelos critérios. Em c5, confere a prévia e identifica visualmente a participação do atleta. Se a consulta vier vazia, pode alterar os critérios ou conferir o que falta em c6 e voltar à consulta por f45. O retorno direto de c6 para c5 exige um corte aberto. Uma falha de mídia devolve a pessoa ao candidato com possibilidade de outra tentativa.
 5. [H] Em c5, Jorginho inclui ou retira candidatos e pode obter cada MP4 acessível (p5). Em c6, confere a seleção e pede o CSV (S26) quando há itens (p6). Abre os arquivos salvos e encerra com o material conferido (e1) ou com pendência (e3). A montagem ocorre externamente (O10).
+
+#### Pedido de nova tentativa
+
+[H] O alerta c7 identifica a entrada, a tentativa quando conhecida e as consequências da repetição (S14, AL). Jorginho pode confirmar ou voltar à falha.
+
+- [H] Se o pedido for aceito, volta ao acompanhamento em c2. Se a recusa estiver confirmada, volta à falha em c3.
+- [H] Se o pedido ficar sem resposta, c8 indica que a aceitação é desconhecida. Jorginho consulta o pedido em p8 quando há referência para identificá-lo e o serviço oferece a consulta. A confirmação da tentativa leva a c2. A confirmação da recusa leva a c3.
+- [H] Enquanto a situação continuar desconhecida, Jorginho pode consultar novamente ou encerrar com pendência em e4. A saída e a consulta deixam o pedido original em aberto.
 
 [F] Em M03, as falas `u:` saem das aberturas e das cenas. As respostas `d:` saem dos quadrados de processamento. Em p1, a resposta distingue rejeição e aceitação do envio. Em p7, há uma fala de saída para cada condição de S15. Em p8, o preposto comunica se foi possível confirmar aceitação ou recusa. Reenvio e nova tentativa ficam disponíveis quando o estado da entrada permite a ação.
 
@@ -216,3 +224,5 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 Em 09/11/2026, Giovanni elaborou o diagrama e exportou o PNG para exibição no GitHub. Os diálogos/signos e esta documentação foram preenchidos com assistência do Codex. [F] O [PNG original](../assets/10_molic/molic_persona3.png) e a [fonte Excalidraw original](../assets/10_molic/objetivos_p03.excalidraw) registram a primeira versão. O diagrama em SVG é a fonte editável do modelo atual.
 
 [F] Em 18/11/2026, Pedro aplicou o parecer aos três modelos a pedido da equipe. A autoria de M01, M02 e M03 corresponde aos responsáveis identificados em cada recorte. [?] A apresentação individual, a confirmação da equipe e a avaliação com usuários seguem pendentes.
+
+[F] Na mesma data, a revisão independente orientou a conferência dos arquivos antes de GCC e os ajustes de recuperação, retomada e rastreabilidade de M03. O teste técnico do CSV local está registrado na [Entrega 11](11_figma.md#verificações-e-limites-da-evidência).

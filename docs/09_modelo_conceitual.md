@@ -1,7 +1,7 @@
 # Entrega 9 — Modelo conceitual e design centrado na comunicação
 
 **Data:** 05/11/2026 (versão original)\
-**Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md)\
+**Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md) e ajustes após revisão independente\
 **Status:** 🟨 preenchimento documental concluído; revisão pelos integrantes e validação dos modelos pendentes\
 **Responsabilidade:** recortes individuais de referência e consolidação do mapa de objetivos e do esquema de signos da Equipe 16.
 
