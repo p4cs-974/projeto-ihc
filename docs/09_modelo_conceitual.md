@@ -24,7 +24,7 @@ O [CC8122-ProjetoIHC-ModelosConceituais](../slides_plinio/CC8122-ProjetoIHC-Mode
 
 **Escopo:** enviar → acompanhar → revisar → baixar. Ajustar cortes, montar, publicar, transferir material ao supervisor e chancelar a seleção continuam externos. Não se introduzem autenticação, administração, reconhecimento automático de atletas, histórico persistente ou parâmetros de IA. A03/histórico, H15/H29/H35, continua em investigação.
 
-**Modelo proposto e demonstração atual:** os cenários descrevem o uso pretendido, incluindo condições ainda não implementadas. O protótipo da Entrega 6 utiliza quatro arquivos de exemplo, um por tempo de duas partidas, oito cortes MP4 e análise simulada; não envia arquivos próprios nem executa o detector. Falhas de análise, recuperação localizada e retomada após recarga permanecem lacunas. A seleção atual se mantém ao alternar visualizações, mas se perde ao recarregar. Essas condições devem ser explicitadas na apresentação da demonstração.
+**Modelo proposto e demonstração atual:** [F] A [demonstração da Entrega 6](06_prototipacao_papel.md) usa quatro tempos de exemplo, oito cortes MP4 e uma análise simulada. O percurso de falha encena uma nova tentativa localizada. A seleção se mantém ao alternar visualizações e se perde ao recarregar. [?] Envio de arquivos próprios, recuperação no serviço real e retomada após recarga dependem de confirmação técnica.
 
 ## 1. Cenários de interação
 
