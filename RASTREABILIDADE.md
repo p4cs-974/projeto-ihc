@@ -188,6 +188,8 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 
 ## Histórico de atualização da rastreabilidade
 
+- 18/11/2026: [F] Revisão independente da Entrega 9. R03 inclui a duração S21 mostrada em M02. R02 e R05 incluem a referência de retomada S29 usada no acompanhamento de M03.
+
 - 18/11/2026: [F] R01–R05 vinculadas a M01–M03 e ao protótipo da Entrega 11. GCO/GCC identificam abertura e conclusão de O00. O registro de escopo da Entrega 10 fundamenta os limites de M03.
 
 - 18/11/2026: [F] R01–R05 alinhadas à classificação dos objetivos e aos signos definidos na Entrega 9. A obtenção prepara a passagem para T02, realizada em canais externos.
