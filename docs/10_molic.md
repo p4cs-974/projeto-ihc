@@ -22,7 +22,7 @@ Objetivos (O00 a O10), signos, cenários e tarefas seguem a [Entrega 9](09_model
 | Abertura | Círculo preto preenchido, seguido da fala que inicia a conversa |
 | Encerramento | Círculo preto com anel externo |
 | GCO | `gco: O00` na fala que abre a conversa para obter material. A retomada abre outra conversa com a mesma finalidade. |
-| GCC | `gcc: O00` na transição que encerra a conversa com o material obtido. |
+| GCC | `gcc: O00` na transição que encerra a conversa depois de a pessoa conferir os arquivos necessários no dispositivo. |
 | Alerta | Cena tracejada em que o preposto apresenta a consequência e a pessoa decide. |
 | Cena | Retângulo arredondado com o tópico no cabeçalho e os diálogos no corpo |
 | Processo do sistema | Quadrado preto, que recebe fala do usuário e responde com fala do preposto |
@@ -31,7 +31,7 @@ Objetivos (O00 a O10), signos, cenários e tarefas seguem a [Entrega 9](09_model
 | precond: | Condição para que a fala esteja disponível |
 | Nota em itálico marrom | Atividade fora do sistema |
 
-[F] As letras a, c, p e e identificam aberturas, cenas, processos e encerramentos. As falas a partir de a1 e a2 abrem O00 (GCO). A chegada a e1 fecha O00 (GCC), após a confirmação da pessoa de que obteve o material necessário. As demais saídas identificam adiamento ou pendência. Na Entrega 9, O01–O08 são objetivos instrumentais identificados nas cenas e precondições. O09 e O10 ocorrem fora da interface. Os mecanismos de prevenção e recuperação seguem a [legenda da Entrega 9](09_modelo_conceitual.md#convenções-e-relações).
+[F] As letras a, c, p e e identificam aberturas, cenas, processos e encerramentos. As falas a partir de a1 e a2 abrem O00 (GCO). A chegada a e1 fecha O00 (GCC), depois de a pessoa confirmar que abriu o CSV e reproduziu os MP4 de que precisa, conforme as saídas solicitadas. As demais saídas identificam adiamento ou pendência. Na Entrega 9, O01–O08 são objetivos instrumentais identificados nas cenas e precondições. O09 e O10 ocorrem fora da interface. Os mecanismos de prevenção e recuperação seguem a [legenda da Entrega 9](09_modelo_conceitual.md#convenções-e-relações).
 
 Em M01 e M02, não há acesso ubíquo, porque nenhum tópico precisa estar disponível a partir de qualquer cena, nem cena de alerta, porque incluir, retirar e baixar são ações reversíveis ou repetíveis.
 
@@ -62,7 +62,7 @@ As cenas são c1 (localizar candidatos), c2 (conferir pertinência e contexto) e
 6. Em c3, confere os itens selecionados, a quantidade e o tamanho de cada MP4.
 7. Com a seleção não vazia, baixa o CSV, com os metadados e o endereço de cada corte, sem os vídeos. O sistema avisa que o arquivo foi disponibilizado e pede que Rafael confira o arquivo salvo.
 8. Para cada vídeo de que precisa, abre o item selecionado, baixa o MP4 e volta à seleção.
-9. [H] Se obteve o material necessário, encerra em e1. Fora do sistema, abre o CSV, reproduz os MP4 salvos, copia os arquivos ao servidor e avisa Arnaldo. Se falta material, pode voltar à revisão ou interromper em e2.
+9. [H] No dispositivo, Rafael abre o CSV e reproduz os MP4 salvos de que precisa. Se a conferência der certo, encerra em e1 e encaminha o material a Arnaldo. Se um arquivo não abrir ou faltar material, tenta obtê-lo novamente, volta à revisão ou interrompe em e2.
 
 #### Alternativas e rupturas
 
@@ -105,7 +105,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 2. Abre um corte em c2 e confere o vídeo de origem, o instante no arquivo e a duração. Se quiser, reproduz o corte.
 3. Baixa o MP4 e volta à seleção, repetindo os passos 2 e 3 para cada corte necessário.
 4. Em c1, baixa o CSV, que leva as mesmas referências dos cortes.
-5. [H] Se obteve o material necessário, encerra em e1. Fora do sistema, confere os arquivos salvos, transfere-os e avisa Arnaldo pelo chat. Se falta material, pode tentar completar a seleção ou encerrar com pendência em e2.
+5. [H] O editor abre o CSV e reproduz os MP4 necessários no dispositivo. Encerra em e1 após conferir os arquivos e só então transfere o material e avisa Arnaldo pelo chat. Se um arquivo não abrir ou faltar material, tenta obtê-lo novamente, completa a seleção ou encerra com pendência em e2.
 
 #### Alternativas e rupturas
 
@@ -129,7 +129,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 - [x] As cenas são tópicos das conversas de CI01 e CI02, não páginas.
 - [x] Falas que saem de cenas são do usuário, e falas que saem de processos são do preposto.
 - [x] Os dois modelos encerram com material obtido (e1) ou com interrupção e pendência (e2).
-- [x] GCO indica a abertura de O00 e GCC, sua conclusão.
+- [x] [F] Em M01 e M02, GCO marca a abertura de O00. A fala com GCC indica que a pessoa conferiu os arquivos antes de encerrar em e1.
 - [x] Toda ruptura tem feedback e caminho de volta ou saída com nota.
 - [x] Os modelos cobrem consulta vazia, contexto insuficiente, omissão, seleção vazia, item faltante, mídia indisponível, tamanho desconhecido e retomada.
 - [x] Objetivos e signos são os da Entrega 9.

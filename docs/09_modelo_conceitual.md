@@ -137,7 +137,7 @@ Em uma tarde de sábado, em sua casa, Jorginho Jr., estudante de 19 anos, prepar
 | Definir a seleção > incluir, retirar e conferir, O06 | U: Quero este candidato; aquele não deve compor o material. D: Estes são os itens selecionados e a quantidade. S23/S24 | Permitir revisão da escolha, sem prometer montagem única |
 | Retomar a revisão > reconhecer contexto, O08 | [H] U: Onde estava e o que falta conferir? D: Estas são as referências e a seleção que ainda estão disponíveis. S23/S29/S30/S32 | Não confundir sessão com persistência garantida |
 | Obter cortes e metadados > distinguir saídas, O07 | [H] U: Preciso dos vídeos e da relação. D: O CSV reúne as referências dos itens selecionados. Baixe cada MP4 disponível por corte. S23/S26/S27/S33 | Tratar a ambiguidade de E06-O04 |
-| > conferir obtenção e encerrar, O07/O08 | [H] U: Abri a relação e os vídeos; ainda faltam estas conferências. D: Os arquivos foram disponibilizados. Confira se os arquivos salvos abrem. S28/S30 | Conferir resultado e reconhecer pendências |
+| > conferir obtenção e encerrar, O07/O08 | [H] D: Os arquivos estão disponíveis. Confira se abrem no seu dispositivo. U: Abri os arquivos necessários ou ainda tenho uma pendência. S28/S30 | Conferir resultado e reconhecer pendências |
 
 ### CI02 — Obter material identificável para a supervisão editorial externa
 
@@ -146,9 +146,9 @@ Em uma tarde de sábado, em sua casa, Jorginho Jr., estudante de 19 anos, prepar
 | Localizar material > completar a seleção, O04/O06 | [H] U: Falta um corte para encaminhar. D: Estes são os candidatos encontrados pelos critérios da partida, tempo e tipo. S01/S02/S16/S17/S22/S23 | Permitir que o editor encontre e inclua o item |
 | Preparar material > conferir identidade e seleção, O06/O07 | [H] U: Quero conferir os cortes que vou encaminhar. D: Estes são os itens selecionados, com suas partidas, tempos e referências. S01/S02/S16/S18/S20/S23/S24 | Dar ao editor e ao supervisor referências comuns |
 | Obter material > solicitar arquivos, O07 | [H] U: Quero a relação e os vídeos individuais. D: O CSV contém as referências da seleção. Cada MP4 disponível pode ser obtido por corte. S23/S26/S27/S33 | Distinguir as saídas e suas condições |
-| Encerrar > conferir o material, O07/O08 | [H] U: Terminei de obter os arquivos. D: Estes são os arquivos disponibilizados. Confira se os arquivos salvos abrem. S28/S30 | Reconhecer o que foi obtido e o que ficou pendente |
+| Encerrar > conferir o material, O07/O08 | [H] D: Estes são os arquivos disponibilizados. Confira se abrem no seu dispositivo. U: Conferi os arquivos necessários ou ainda tenho uma pendência. S28/S30 | Reconhecer o que foi obtido e o que ficou pendente |
 
-**Condição de saída para T02.** [H] Fora da interface, o editor confere os arquivos salvos, encaminha o material com as referências de origem e indica pendências. Arnaldo usa essas referências para avaliar a seleção (O09/S31), pedir conferência no original ou ajuste (O10) e comunicar a decisão por chat ou na ilha de edição. A conversa U–D de CI02 se concentra no preparo feito pelo editor porque Arnaldo participa a partir dessa passagem.
+**Condição de saída para T02.** [H] O editor confere os arquivos no dispositivo antes de encerrar a conversa de obtenção. Depois encaminha o material com as referências de origem e indica pendências no canal externo. Arnaldo usa essas referências para avaliar a seleção (O09/S31), pedir conferência no original ou ajuste (O10) e comunicar a decisão por chat ou na ilha de edição. A conversa U–D de CI02 se concentra no preparo feito pelo editor porque Arnaldo participa a partir dessa passagem.
 
 ### CI03 — Acompanhar a análise e obter trechos para uma produção amadora
 

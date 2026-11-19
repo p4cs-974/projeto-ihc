@@ -53,6 +53,8 @@
 <text x="214" y="1153" class="dname" text-anchor="start">obter metadados e vídeos {</text>
 <text x="228" y="1175" class="dline" text-anchor="start">d: CSV S26 com referências da seleção</text>
 <text x="228" y="1197" class="dline" text-anchor="start">d: MP4 individual S27 e seu tamanho S33 }</text>
+<text x="214" y="1219" class="dname" text-anchor="start">conferir arquivos {</text>
+<text x="228" y="1241" class="dline" text-anchor="start">d: confira os arquivos salvos no dispositivo S28 }</text>
 </g>
 <g id="p1" data-kind="process">
 <rect x="952" y="302" width="26" height="26" fill="#1f2a33"/>
@@ -176,18 +178,18 @@
 <text x="977" y="1192" class="lbl" text-anchor="start">(n itens, sem vídeos);</text>
 <text x="977" y="1211" class="lbl" text-anchor="start">confira o arquivo salvo</text>
 </g>
-<g id="f20" data-kind="edge" data-from="c3" data-to="e1" data-style="solid" data-label="u: encerrar com o | material obtido | gcc: O00 · Obter material" data-goal="O00">
+<g id="f20" data-kind="edge" data-from="c3" data-to="e1" data-style="solid" data-label="u: encerrar após | conferir os arquivos | gcc: O00 · Obter material" data-goal="O00">
 <polyline points="480,1287 480,1362" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
-<text x="492" y="1317" class="lbl" text-anchor="start"><tspan class="fid">f20</tspan> · u: encerrar com o</text>
-<text x="492" y="1336" class="lbl" text-anchor="start">material obtido</text>
+<text x="492" y="1317" class="lbl" text-anchor="start"><tspan class="fid">f20</tspan> · u: encerrar após</text>
+<text x="492" y="1336" class="lbl" text-anchor="start">conferir os arquivos</text>
 <text x="492" y="1355" class="tag" text-anchor="start">gcc: O00 · Obter material</text>
 </g>
 <g id="f21" data-kind="edge" data-from="c1" data-to="e2" data-style="solid" data-label="u: interromper com pendência">
 <polyline points="740,445 990,445 990,508" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
 <text x="770" y="437" class="lbl" text-anchor="start"><tspan class="fid">f21</tspan> · u: interromper com pendência</text>
 </g>
-<text x="505" y="1372" class="note" text-anchor="start">Fora do sistema: abrir o CSV e reproduzir os MP4 salvos,</text>
-<text x="505" y="1392" class="note" text-anchor="start">copiar ao servidor e avisar Arnaldo (T02, O09); pendências S30</text>
+<text x="505" y="1372" class="note" text-anchor="start">Fora do sistema: copiar o material ao servidor</text>
+<text x="505" y="1392" class="note" text-anchor="start">e avisar Arnaldo (T02, O09).</text>
 <text x="1015" y="518" class="note" text-anchor="start">Fora do sistema:</text>
 <text x="1015" y="538" class="note" text-anchor="start">original, ajuste ou</text>
 <text x="1015" y="558" class="note" text-anchor="start">busca (O10); S30;</text>
@@ -196,15 +198,15 @@
 <rect x="0" y="0" width="1120" height="190" rx="10" fill="#f6f8fa" stroke="#c9d1d9"/>
 <text x="18" y="30" class="stitle" text-anchor="start">Legenda MoLIC</text>
 <circle cx="30" cy="62" r="10" fill="#1f2a33"/>
-<text x="62" y="68" class="leg" text-anchor="start">gco: abertura de conversa sobre O00 (B3–B5)</text>
+<text x="62" y="68" class="leg" text-anchor="start">ponto de abertura (A9; B3)</text>
 <circle cx="30" cy="97" r="12" fill="#fff" stroke="#1f2a33" stroke-width="2.5"/><circle cx="30" cy="97" r="7" fill="#1f2a33"/>
-<text x="62" y="103" class="leg" text-anchor="start">gcc: fechamento com conclusão de O00 (B4–B5)</text>
+<text x="62" y="103" class="leg" text-anchor="start">ponto de encerramento (A9, A10)</text>
 <rect x="19" y="121" width="22" height="22" fill="#1f2a33"/>
 <text x="62" y="143" class="leg" text-anchor="start">processo do sistema; saídas sempre d: (A11)</text>
 <rect x="14" y="152" width="34" height="24" rx="6" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
 <text x="62" y="174" class="leg" text-anchor="start">cena: tópico, diálogos e signos (A8, A14)</text>
 <line x1="450" y1="62" x2="520" y2="62" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
-<text x="532" y="68" class="leg" text-anchor="start">fala de transição (A6)</text>
+<text x="532" y="68" class="leg" text-anchor="start">fala de transição (gco/gcc)</text>
 <line x1="450" y1="97" x2="520" y2="97" stroke="#1f2a33" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#arr-d)"/>
 <text x="532" y="103" class="leg" text-anchor="start">ruptura ou recuperação (A11–A13)</text>
 <text x="450" y="138" class="leg" text-anchor="start">u: fala do usuário · d: fala do preposto · d+u: ambos (A8, A14)</text>
