@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1240" viewBox="0 0 1400 1240" role="img" aria-labelledby="title desc">
+<title id="title">Fluxograma do processo da avaliação heurística — Equipe 16</title>
+<desc id="desc">Fluxograma das cinco fases da avaliação heurística (preparação, coleta de dados, interpretação, consolidação e relato dos resultados), destacando a independência dos três avaliadores, os laços iterativos de verificação e o ponto de reunião da equipe.</desc>
+<defs>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif;fill:#152e43}
+    .title{font-size:30px;font-weight:700}
+    .sub{font-size:16px;fill:#425b70}
+    .phase{font-size:15px;font-weight:700;fill:#176559;letter-spacing:0.4px}
+    .phase-team{font-size:15px;font-weight:700;fill:#163d54;letter-spacing:0.4px}
+    .card-title{font-size:19px;font-weight:700;fill:#152e43}
+    .card-sub{font-size:15px;fill:#425b70}
+    .diamond-txt{font-size:16px;font-weight:700;fill:#5c3d0e}
+    .edge-lbl{font-size:14px;font-weight:700;fill:#152e43}
+    .edge-loop{font-size:14px;font-weight:700;fill:#176559}
+    .edge-warn{font-size:14px;font-weight:700;fill:#8a5a14}
+    .pill-txt{font-size:14px;font-weight:700;fill:#ffffff}
+    .note{font-size:14px;fill:#425b70}
+    .note-b{font-size:15px;font-weight:700;fill:#176559}
+    .arrow{fill:none;stroke:#48657a;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .arrow-loop{fill:none;stroke:#176559;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .arrow-warn{fill:none;stroke:#9a6d28;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .arrow-ext{fill:none;stroke:#9a6d28;stroke-width:2.5;stroke-dasharray:8 6;stroke-linecap:round;stroke-linejoin:round}
+  </style>
+  <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0 1 L10 5 L0 9 z" fill="#48657a"/>
+  </marker>
+  <marker id="arr-loop" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0 1 L10 5 L0 9 z" fill="#176559"/>
+  </marker>
+  <marker id="arr-warn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0 1 L10 5 L0 9 z" fill="#9a6d28"/>
+  </marker>
+</defs>
+
+<rect width="1400" height="1240" fill="#f7fafc"/>
+
+<!-- Cabeçalho -->
+<text x="50" y="46" class="title">Fluxograma da avaliação heurística</text>
+<text x="50" y="74" class="sub">Entrega 13 · Equipe 16 · Versão avaliada: ihc-11.p4cs.com.br (commit 7405221) · Base: Barbosa e Silva (2010)</text>
+
+<!-- Legenda -->
+<rect x="936" y="24" width="16" height="16" rx="3" fill="#edf4f8" stroke="#b8ccd9" stroke-width="1.5"/>
+<text x="960" y="37" class="note">Equipe reunida</text>
+<rect x="1096" y="24" width="16" height="16" rx="3" fill="#e4f4ed" stroke="#7db69f" stroke-width="1.5"/>
+<text x="1120" y="37" class="note">Inspeção individual (isolada)</text>
+<polygon points="944,54 953,63 944,72 935,63" fill="#fffaf0" stroke="#c99846" stroke-width="1.5"/>
+<text x="960" y="68" class="note">Decisão / repetição</text>
+<line x1="1104" y1="63" x2="1144" y2="63" class="arrow-ext"/>
+<text x="1154" y="68" class="note">Continuidade (Entrega 14)</text>
+
+<!-- FASE 1: PREPARAÇÃO -->
+<rect x="50" y="102" width="1300" height="148" rx="14" fill="#edf4f8" stroke="#c8d9e6" stroke-width="1.5"/>
+<text x="72" y="128" class="phase-team">FASE 1 · PREPARAÇÃO · EQUIPE REUNIDA (A01, A02, A03)</text>
+
+<rect x="72" y="146" width="388" height="84" rx="12" fill="#ffffff" stroke="#b8ccd9" stroke-width="1.5"/>
+<text x="92" y="176" class="card-title">1. Alinhar domínio e heurísticas</text>
+<text x="92" y="201" class="card-sub">Revisar P01/P03, fluxos M01–M03 e H1–H10.</text>
+
+<line x1="460" y1="188" x2="502" y2="188" class="arrow" marker-end="url(#arr)"/>
+
+<rect x="506" y="146" width="388" height="84" rx="12" fill="#ffffff" stroke="#b8ccd9" stroke-width="1.5"/>
+<text x="526" y="176" class="card-title">2. Fixar versão e escopo</text>
+<text x="526" y="201" class="card-sub">ihc-11.p4cs.com.br (7405221), F01–F06 e QA10.</text>
+
+<line x1="894" y1="188" x2="936" y2="188" class="arrow" marker-end="url(#arr)"/>
+
+<rect x="940" y="146" width="388" height="84" rx="12" fill="#ffffff" stroke="#b8ccd9" stroke-width="1.5"/>
+<text x="960" y="176" class="card-title">3. Abrir fichas individuais</text>
+<text x="960" y="201" class="card-sub">1 cópia do formulário por integrante (sem troca).</text>
+
+<!-- Transição Fase 1 -> Fases 2 e 3 -->
+<line x1="700" y1="250" x2="700" y2="294" class="arrow" marker-end="url(#arr)"/>
+<rect x="526" y="260" width="348" height="24" rx="12" fill="#163d54"/>
+<text x="700" y="277" text-anchor="middle" class="pill-txt">Separação: cada avaliador inspeciona sozinho</text>
+
+<!-- FASES 2 E 3: COLETA E INTERPRETAÇÃO (INDIVIDUAL) -->
+<rect x="50" y="298" width="1300" height="432" rx="14" fill="#e4f4ed" stroke="#7db69f" stroke-width="2"/>
+<text x="72" y="326" class="phase">FASES 2 E 3 · COLETA DE DADOS E INTERPRETAÇÃO · INDIVIDUAL E INDEPENDENTE</text>
+
+<!-- Badges dos 3 avaliadores -->
+<rect x="978" y="308" width="108" height="26" rx="13" fill="#176559"/>
+<text x="1032" y="326" text-anchor="middle" class="pill-txt">A01 · Pedro</text>
+<rect x="1096" y="308" width="108" height="26" rx="13" fill="#176559"/>
+<text x="1150" y="326" text-anchor="middle" class="pill-txt">A02 · Lucas</text>
+<rect x="1214" y="308" width="114" height="26" rx="13" fill="#176559"/>
+<text x="1271" y="326" text-anchor="middle" class="pill-txt">A03 · Giovanni</text>
+
+<!-- Passo 4 -->
+<rect x="72" y="352" width="276" height="96" rx="12" fill="#ffffff" stroke="#8ec0ab" stroke-width="1.5"/>
+<text x="92" y="382" class="card-title">4. Familiarização</text>
+<text x="92" y="406" class="card-sub">Percorrer F01–F06 uma vez</text>
+<text x="92" y="427" class="card-sub">no fluxo normal (passagem 1).</text>
+
+<line x1="348" y1="400" x2="394" y2="400" class="arrow" marker-end="url(#arr)"/>
+
+<!-- Passo 5 -->
+<rect x="398" y="352" width="352" height="96" rx="12" fill="#ffffff" stroke="#8ec0ab" stroke-width="1.5"/>
+<text x="418" y="382" class="card-title">5. Inspecionar tela e estado</text>
+<text x="418" y="406" class="card-sub">Aplicar H1–H10 a cada estado de F01–F06</text>
+<text x="418" y="427" class="card-sub">e à navegação transversal (passagem 2).</text>
+
+<line x1="750" y1="400" x2="796" y2="400" class="arrow" marker-end="url(#arr)"/>
+
+<!-- Decisão 1: Há violação? -->
+<polygon points="894,350 988,400 894,450 800,400" fill="#fffaf0" stroke="#c99846" stroke-width="2"/>
+<text x="894" y="396" text-anchor="middle" class="diamond-txt">Encontrou</text>
+<text x="894" y="416" text-anchor="middle" class="diamond-txt">violação?</text>
+
+<!-- Sim -> Passo 6 -->
+<line x1="988" y1="400" x2="1044" y2="400" class="arrow" marker-end="url(#arr)"/>
+<text x="1016" y="391" text-anchor="middle" class="edge-lbl">Sim</text>
+
+<!-- Passo 6 -->
+<rect x="1048" y="352" width="280" height="96" rx="12" fill="#ffffff" stroke="#8ec0ab" stroke-width="1.5"/>
+<text x="1068" y="382" class="card-title">6. Registrar violação</text>
+<text x="1068" y="406" class="card-sub">Anotar local, ação, efeito e</text>
+<text x="1068" y="427" class="card-sub">salvar captura destacada.</text>
+
+<!-- Passo 6 -> Passo 7 -->
+<line x1="1188" y1="448" x2="1188" y2="500" class="arrow" marker-end="url(#arr)"/>
+
+<!-- Passo 7 (Fase 3: Interpretação) -->
+<rect x="928" y="504" width="400" height="112" rx="12" fill="#ffffff" stroke="#8ec0ab" stroke-width="1.5"/>
+<text x="948" y="532" class="card-title">7. Interpretar e classificar (0–4)</text>
+<text x="948" y="556" class="card-sub">Justificar severidade por frequência, impacto</text>
+<text x="948" y="577" class="card-sub">e persistência; propor recomendação (Modelo 02).</text>
+<text x="948" y="603" class="phase">FASE 3 · INTERPRETAÇÃO</text>
+
+<!-- Não de Decisão 1 -> Decisão 2 -->
+<path d="M894 450 V478 H574 V500" class="arrow" marker-end="url(#arr)"/>
+<text x="876" y="470" text-anchor="end" class="edge-lbl">Não</text>
+
+<!-- Passo 7 -> Decisão 2 -->
+<line x1="928" y1="556" x2="716" y2="556" class="arrow" marker-end="url(#arr)"/>
+
+<!-- Decisão 2: Mais telas, estados ou heurísticas? -->
+<polygon points="574,504 712,556 574,608 436,556" fill="#fffaf0" stroke="#c99846" stroke-width="2"/>
+<text x="574" y="551" text-anchor="middle" class="diamond-txt">Mais telas, estados</text>
+<text x="574" y="571" text-anchor="middle" class="diamond-txt">ou heurísticas?</text>
+
+<!-- Laço iterativo individual (Sim) -->
+<path d="M436 556 H414 V452" class="arrow-loop" marker-end="url(#arr-loop)"/>
+<text x="404" y="508" text-anchor="end" class="edge-loop">Sim</text>
+<text x="404" y="526" text-anchor="end" class="edge-loop">(repetir)</text>
+
+<!-- Nota lateral sobre o laço iterativo -->
+<rect x="72" y="504" width="260" height="148" rx="12" fill="#f3fbf7" stroke="#8ec0ab" stroke-width="1.5"/>
+<text x="90" y="532" class="note-b">Laço iterativo individual</text>
+<text x="90" y="558" class="note">Os passos 5 a 7 repetem-se até</text>
+<text x="90" y="578" class="note">cobrir todos os estados listados</text>
+<text x="90" y="598" class="note">e as dez heurísticas (H1–H10).</text>
+<text x="90" y="624" class="note">Sem discutir achados antes de</text>
+<text x="90" y="642" class="note">encerrar a ficha individual.</text>
+
+<!-- Não de Decisão 2 -> Passo 8 -->
+<line x1="574" y1="608" x2="574" y2="644" class="arrow" marker-end="url(#arr)"/>
+<text x="586" y="631" class="edge-lbl">Não</text>
+
+<!-- Passo 8 -->
+<rect x="358" y="648" width="432" height="66" rx="12" fill="#ffffff" stroke="#8ec0ab" stroke-width="1.5"/>
+<text x="378" y="676" class="card-title">8. Fechar matriz H1–H10 individual</text>
+<text x="378" y="699" class="card-sub">Confirmar cobertura total de A01, A02 e A03.</text>
+
+<!-- Transição Fases 2-3 -> Fase 4 (ponto de reunião) -->
+<line x1="574" y1="730" x2="574" y2="778" class="arrow" marker-end="url(#arr)"/>
+<rect x="380" y="742" width="388" height="24" rx="12" fill="#163d54"/>
+<text x="574" y="759" text-anchor="middle" class="pill-txt">Reunião da equipe: A01 + A02 + A03 concluíram</text>
+
+<!-- FASE 4: CONSOLIDAÇÃO -->
+<rect x="50" y="782" width="1300" height="170" rx="14" fill="#edf4f8" stroke="#c8d9e6" stroke-width="1.5"/>
+<text x="72" y="808" class="phase-team">FASE 4 · CONSOLIDAÇÃO · EQUIPE REUNIDA (A01 + A02 + A03)</text>
+
+<!-- Passo 9 -->
+<rect x="72" y="832" width="336" height="100" rx="12" fill="#ffffff" stroke="#b8ccd9" stroke-width="1.5"/>
+<text x="92" y="862" class="card-title">9. Agrupar duplicatas</text>
+<text x="92" y="886" class="card-sub">Consolidar achados equivalentes em</text>
+<text x="92" y="907" class="card-sub">HC01... preservando Vxx(A0x).</text>
+
+<line x1="408" y1="882" x2="444" y2="882" class="arrow" marker-end="url(#arr)"/>
+
+<!-- Passo 10 -->
+<rect x="448" y="832" width="340" height="100" rx="12" fill="#ffffff" stroke="#b8ccd9" stroke-width="1.5"/>
+<text x="468" y="862" class="card-title">10. Calibrar severidade</text>
+<text x="468" y="886" class="card-sub">Definir grau final, prioridade e</text>
+<text x="468" y="907" class="card-sub">responsável por cada correção.</text>
+
+<line x1="788" y1="882" x2="826" y2="882" class="arrow" marker-end="url(#arr)"/>
+
+<!-- Decisão 3: Divergência exige reconferir? -->
+<polygon points="956,830 1082,882 956,934 830,882" fill="#fffaf0" stroke="#c99846" stroke-width="2"/>
+<text x="956" y="877" text-anchor="middle" class="diamond-txt">Divergência exige</text>
+<text x="956" y="897" text-anchor="middle" class="diamond-txt">reconferir tela?</text>
+
+<!-- Sim -> Reinspecionar -->
+<line x1="1082" y1="882" x2="1126" y2="882" class="arrow-warn" marker-end="url(#arr-warn)"/>
+<text x="1104" y="873" text-anchor="middle" class="edge-warn">Sim</text>
+
+<rect x="1130" y="836" width="198" height="92" rx="12" fill="#ffffff" stroke="#c99846" stroke-width="1.5"/>
+<text x="1148" y="866" class="card-title">Reinspecionar</text>
+<text x="1148" y="890" class="card-sub">Verificar o estado</text>
+<text x="1148" y="910" class="card-sub">no protótipo.</text>
+
+<!-- Loop-back da reinspeção para Passo 10 -->
+<path d="M1229 836 V804 H728 V828" class="arrow-warn" marker-end="url(#arr-warn)"/>
+<text x="978" y="797" text-anchor="middle" class="edge-warn">Retorna à calibração após reconferência</text>
+
+<!-- Não de Decisão 3 -> Fase 5 -->
+<line x1="956" y1="934" x2="956" y2="992" class="arrow" marker-end="url(#arr)"/>
+<text x="970" y="974" class="edge-lbl">Não</text>
+
+<!-- FASE 5: RELATO DOS RESULTADOS -->
+<rect x="50" y="996" width="1300" height="190" rx="14" fill="#edf4f8" stroke="#c8d9e6" stroke-width="1.5"/>
+<text x="72" y="1022" class="phase-team">FASE 5 · RELATO DOS RESULTADOS E CONTINUIDADE · EQUIPE</text>
+
+<!-- Passo 11 -->
+<rect x="72" y="1036" width="388" height="128" rx="12" fill="#ffffff" stroke="#b8ccd9" stroke-width="1.5"/>
+<text x="92" y="1066" class="card-title">11. Relatório consolidado</text>
+<text x="92" y="1091" class="card-sub">Matrizes A01–A03, violações (HC),</text>
+<text x="92" y="1112" class="card-sub">contagens por heurística/severidade,</text>
+<text x="92" y="1133" class="card-sub">padrões recorrentes e plano de melhoria.</text>
+
+<line x1="460" y1="1100" x2="502" y2="1100" class="arrow" marker-end="url(#arr)"/>
+
+<!-- Passo 12 -->
+<rect x="506" y="1036" width="388" height="128" rx="12" fill="#ffffff" stroke="#b8ccd9" stroke-width="1.5"/>
+<text x="526" y="1066" class="card-title">12. Uso das heurísticas (didático)</text>
+<text x="526" y="1091" class="card-sub">Reunir 10 exemplos positivos no</text>
+<text x="526" y="1112" class="card-sub">protótipo (1 por H1–H10) com print</text>
+<text x="526" y="1133" class="card-sub">e justificativa de atendimento.</text>
+
+<line x1="894" y1="1100" x2="936" y2="1100" class="arrow-ext" marker-end="url(#arr-warn)"/>
+
+<!-- Passo 13 (Continuidade) -->
+<rect x="940" y="1036" width="388" height="128" rx="12" fill="#fffaf0" stroke="#d0ac70" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="960" y="1066" class="card-title">13. Correções e Entrega 14</text>
+<text x="960" y="1091" class="card-sub">Decidir correções pré-teste; se mudar</text>
+<text x="960" y="1112" class="card-sub">o protótipo, registrar novo commit e</text>
+<text x="960" y="1133" class="card-sub">seguir ao piloto e à observação.</text>
+
+<!-- Rodapé -->
+<text x="50" y="1216" class="note">Fonte: elaboração da Equipe 16 com base em Barbosa e Silva (2010), Avaliação por Inspeções (slides 8, 15 e 16) e plano DECIDE (Entrega 12).</text>
+</svg>
