@@ -77,7 +77,7 @@ Os responsáveis abaixo são os autores dos modelos de origem, sem atribuir assi
 | M01, c3, p3 e p4; CI01 | O06/O07, T01 e continuidade em T02 | Seleção em F04/F05 → F06 | CSV exige seleção não vazia; MP4 individual pode ser obtido sem seleção. Não há lista editável exclusiva da seleção nem confirmação de salvamento local | Pedro |
 | M02, c1/c2/c3 e p1–p4; CI02 | O04/O06/O07, T01/T02 | F04, F05 e F06 | A conferência completa da identificação se distribui entre F04/F05 e o CSV. F06 reúne as saídas, a quantidade e os tamanhos, com cobertura parcial de M02 c1. Transferência, aprovação editorial e pedidos de ajuste ocorrem fora do sistema | Lucas |
 | M03, envio e progresso; CI03 | O01/O02, preparação de T03 | F01 → F02 → F03 → F04 | Entrada própria indisponível; preparação usa exemplos. Progresso, fila e conclusão são simulados, com mídia real | Giovanni |
-| M03 c1–c6, CI03 | O01–O08, T03 e T01/A04 | F02 escolhe cenário; F03/F04 comunicam estado; F05 apresenta o corte; F06 separa CSV e MP4 | Falha encenada permite nova tentativa localizada ou deixar pendente. Não representa recuperação de um detector real, login, exclusão de resultados ou cancelamento de análise/download desenhados no M03 | [F] Falha encenada permite nova tentativa localizada ou deixar pendente. A análise usa exemplos. Autenticação, exclusão e cancelamento efetivo ficam fora do escopo da simulação e do MoLIC. |
+| M03 c3–c7, CI03 | O03–O08, T03 e T01/A04 | F02 escolhe cenário. F03/F04 comunicam o estado. F05 apresenta o corte. F06 separa CSV e MP4. | [F] A falha encenada permite nova tentativa localizada ou deixar uma partida pendente e revisar as outras. Autenticação, exclusão de resultados e cancelamento efetivo estão fora do escopo do MoLIC e da simulação. | Giovanni |
 | M01/M02, retomada; M03, encerramento | O08 | Troca entre telas e A/B/C | Seleção mantida na sessão, sem persistência garantida após recarga. Não há histórico nem registro permanente de pendências | Equipe |
 
 O09 e O10 continuam externos. A navegação lateral dá acesso às etapas existentes, sem introduzir uma nova tarefa ou alterar o escopo de IHC ou do TCC.
@@ -137,11 +137,12 @@ Seleção vazia desativa a obtenção da seleção. Os MP4 individuais continuam
 | Manifesto em carregamento ou indisponível | Exemplos desativados durante carga; erro textual se o manifesto falhar | Não é validação de arquivo enviado |
 | Lote vazio | Mensagem e caminho para carregar os exemplos | Remoção afeta apenas a demonstração |
 | Fila e processamento | Estado por vídeo, progresso e acesso à análise | Progresso simulado, sem previsão técnica de prazo |
-| Falha em um vídeo | Preserva os outros vídeos; oferece confirmação de nova tentativa ou deixar pendente | Falha e recuperação encenadas; reenvio não implementado |
+| Falha em um vídeo (M03 c3, c7) | [F] Preserva os outros vídeos. Oferece nova tentativa localizada ou saída para revisar os outros. Em **Cancelar**, fecha a confirmação e retorna à falha. | A recuperação é encenada. **Cancelar** desiste da confirmação de uma nova tentativa. |
 | Vídeo sem lances | Conclusão com ausência de candidatos nesse tempo | Não prova ausência de eventos na partida |
 | Consulta sem resultados | Mensagem em A e limpeza dos critérios, preservando a seleção | B e C não têm o mesmo mecanismo de busca |
 | Mídia indisponível | Feedback de falha e nova tentativa do player | Falha real de rede não repetida nesta rodada |
 | Seleção vazia | Obtenção da seleção indisponível; inclusão reversível | MP4 individual independe da seleção |
+| Obtenção de CSV e MP4 | [F] F06 oferece a relação da seleção e os MP4 por corte. A conferência técnica abriu os arquivos salvos. | A pessoa confirma salvamento e reprodução no dispositivo. A interface disponibiliza os arquivos. |
 | Retomada | Contexto mantido enquanto a sessão permanece aberta | Recarga perde a seleção; sem recuperação persistente |
 
 ## Sistema visual e acessibilidade

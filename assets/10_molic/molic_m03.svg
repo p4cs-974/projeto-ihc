@@ -67,7 +67,7 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="812" y="658" class="topic" text-anchor="start">c3 · Encaminhar a falha</text>
 <text x="1128" y="658" class="tag" text-anchor="end">O03</text>
 <text x="813" y="697" class="dialog" text-anchor="start">d: entrada S03, problema S13</text>
-<text x="813" y="720" class="dialog" text-anchor="start">d: tentativa S32, se conhecida</text>
+<text x="813" y="720" class="dialog" text-anchor="start">d: tentativa S32 e resultados S12</text>
 <text x="813" y="743" class="dialog" text-anchor="start">d+u: recuperação disponível S14</text>
 </g>
 <g id="c4" data-kind="scene">
@@ -118,13 +118,13 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="748" y="1054" class="nid" text-anchor="start">p4</text>
 </g>
 <g id="p5" data-kind="process"><rect x="716" y="1143" width="24" height="24" fill="#1f2a33"/>
-<text x="748" y="1160" class="nid" text-anchor="start">p5</text>
+<text x="748" y="1143" class="nid" text-anchor="start">p5</text>
 </g>
 <g id="p7" data-kind="process"><rect x="956" y="1068" width="24" height="24" fill="#1f2a33"/>
 <text x="988" y="1068" class="nid" text-anchor="start">p7</text>
 </g>
 <g id="p6" data-kind="process"><rect x="716" y="1406" width="24" height="24" fill="#1f2a33"/>
-<text x="748" y="1423" class="nid" text-anchor="start">p6</text>
+<text x="748" y="1406" class="nid" text-anchor="start">p6</text>
 </g>
 <g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="u: preparar gravação | gco: O00 · Obter material" data-goal="O00">
 <polyline points="322,163 322,235" class="edge"/>
@@ -143,8 +143,8 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 </g>
 <g id="f4" data-kind="edge" data-from="p1" data-to="c1" data-style="dashed" data-label="d: entrada rejeitada | Corrija o problema em S05">
 <polyline points="728,254 728,220 511,220 511,235" class="edge ruptura"/>
-<text x="550" y="210" class="label" text-anchor="start">d: entrada rejeitada</text>
-<text x="550" y="230" class="label" text-anchor="start">Corrija o problema em S05</text>
+<text x="553" y="189" class="label" text-anchor="start">d: entrada rejeitada</text>
+<text x="553" y="209" class="label" text-anchor="start">Corrija o problema em S05</text>
 </g>
 <g id="f5" data-kind="edge" data-from="p1" data-to="c2" data-style="solid" data-label="d: pedido aceito · acompanhe a análise">
 <polyline points="728,278 728,423 319,423 319,452" class="edge"/>
@@ -163,10 +163,9 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="746" y="460" class="label" text-anchor="start">d: estado atualizado</text>
 <text x="746" y="480" class="label" text-anchor="start">Veja os resultados acessíveis</text>
 </g>
-<g id="f9" data-kind="edge" data-from="p2" data-to="c2" data-style="dashed" data-label="d: consulte novamente | Estado indisponível">
+<g id="f9" data-kind="edge" data-from="p2" data-to="c2" data-style="dashed" data-label="d: estado indisponível">
 <polyline points="728,505 728,555 540,555" class="edge ruptura"/>
-<text x="552" y="544" class="label" text-anchor="start">d: consulte novamente</text>
-<text x="552" y="564" class="label" text-anchor="start">Estado indisponível</text>
+<text x="552" y="544" class="label" text-anchor="start">d: estado indisponível</text>
 </g>
 <g id="f10" data-kind="edge" data-from="p2" data-to="c3" data-style="dashed" data-label="d: falha nesta entrada">
 <polyline points="740,493 973,493 973,630" class="edge ruptura"/>
@@ -186,10 +185,10 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="798,698 666,698" class="edge ruptura"/>
 <text x="675" y="681" class="label" text-anchor="start">u: adiar</text>
 </g>
-<g id="f14" data-kind="edge" data-from="c2" data-to="e2" data-style="solid" data-label="u: deixar partida | pendente">
+<g id="f14" data-kind="edge" data-from="c2" data-to="e2" data-style="solid" data-label="u: deixar esta | partida pendente">
 <polyline points="540,578 653,578 653,685" class="edge"/>
-<text x="665" y="618" class="label" text-anchor="start">u: deixar partida</text>
-<text x="665" y="638" class="label" text-anchor="start">pendente</text>
+<text x="665" y="618" class="label" text-anchor="start">u: deixar esta</text>
+<text x="665" y="638" class="label" text-anchor="start">partida pendente</text>
 </g>
 <g id="f15" data-kind="edge" data-from="c3" data-to="c7" data-style="solid" data-label="precond: nova tentativa | disponível | u: pedir nova tentativa">
 <polyline points="968,761 968,868" class="edge"/>
@@ -219,14 +218,14 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="540,825 716,825" class="edge"/>
 <text x="550" y="813" class="label" text-anchor="start">u: aplicar critérios</text>
 </g>
-<g id="f21" data-kind="edge" data-from="p3" data-to="c4" data-style="solid" data-label="d: candidatos correspondentes">
+<g id="f21" data-kind="edge" data-from="p3" data-to="c4" data-style="solid" data-label="d: candidatos encontrados">
 <polyline points="728,813 728,788 540,788" class="edge"/>
-<text x="550" y="778" class="label" text-anchor="start">d: candidatos correspondentes</text>
+<text x="550" y="778" class="label" text-anchor="start">d: candidatos encontrados</text>
 </g>
 <g id="f22" data-kind="edge" data-from="p3" data-to="c4" data-style="dashed" data-label="d: sem candidatos | Altere os critérios">
 <polyline points="728,837 728,883 540,883" class="edge ruptura"/>
-<text x="550" y="872" class="label" text-anchor="start">d: sem candidatos</text>
-<text x="550" y="892" class="label" text-anchor="start">Altere os critérios</text>
+<text x="550" y="853" class="label" text-anchor="start">d: sem candidatos</text>
+<text x="550" y="873" class="label" text-anchor="start">Altere os critérios</text>
 </g>
 <g id="f23" data-kind="edge" data-from="c4" data-to="c5" data-style="solid" data-label="u: examinar candidato">
 <polyline points="320,900 320,1008" class="edge"/>
@@ -244,10 +243,9 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="728,1037 728,1018 540,1018" class="edge"/>
 <text x="550" y="1007" class="label" text-anchor="start">d: prévia disponível</text>
 </g>
-<g id="f27" data-kind="edge" data-from="p4" data-to="c5" data-style="dashed" data-label="d: falha na prévia | Tente novamente">
+<g id="f27" data-kind="edge" data-from="p4" data-to="c5" data-style="dashed" data-label="d: falha na prévia">
 <polyline points="728,1061 728,1103 540,1103" class="edge ruptura"/>
 <text x="550" y="1092" class="label" text-anchor="start">d: falha na prévia</text>
-<text x="550" y="1112" class="label" text-anchor="start">Tente novamente</text>
 </g>
 <g id="f28" data-kind="edge" data-from="c5" data-to="p5" data-style="solid" data-label="precond: MP4 disponível | u: obter MP4">
 <polyline points="540,1155 716,1155" class="edge"/>
@@ -279,9 +277,9 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="590" y="1377" class="label" text-anchor="start">precond: seleção não vazia</text>
 <text x="590" y="1397" class="label" text-anchor="start">u: obter CSV</text>
 </g>
-<g id="f35" data-kind="edge" data-from="p6" data-to="c6" data-style="solid" data-label="d: CSV disponibilizado">
+<g id="f35" data-kind="edge" data-from="p6" data-to="c6" data-style="solid" data-label="d: CSV disponível">
 <polyline points="728,1430 728,1456 540,1456" class="edge"/>
-<text x="590" y="1447" class="label" text-anchor="start">d: CSV disponibilizado</text>
+<text x="590" y="1447" class="label" text-anchor="start">d: CSV disponível</text>
 </g>
 <g id="f36" data-kind="edge" data-from="p6" data-to="c6" data-style="dashed" data-label="d: falha ao gerar CSV">
 <polyline points="740,1418 756,1418 756,1484 540,1484" class="edge ruptura"/>

@@ -202,27 +202,13 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 
 ### Preparação para prototipagem de M01 e M02
 
-O protótipo é a [demonstração em HTML/JS](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) da Entrega 6. Ela usa quatro tempos de exemplo de duas partidas, oito cortes MP4 e uma análise simulada, sem aceitar arquivos próprios nem executar o detector. A tabela compara o que os modelos pedem com o que a demonstração faz hoje. As propostas ainda não foram implementadas.
-
-| Estado ou feedback | Protótipo atual | Proposta |
-|---|---|---|
-| Resultados e limites (M01 c1) | A tela "Base de highlights" mostra a contagem de lances e partidas | Informar limites conhecidos e a tentativa de análise, sem afirmar cobertura completa |
-| Consulta vazia (M01 c1, M02 c3) | Só a variante A diz "Nenhum lance encontrado" e oferece limpar os filtros. A variante B mostra "0 lances" e a C não filtra | A mesma mensagem em todas as variantes, dizendo que a seleção foi mantida |
-| Detalhe do candidato (c2) | Partida, data, tempo, relógio do jogo, início, fim e duração no arquivo | Mostrar o id que vai no CSV |
-| Reprodução e falha (M01 p2, M02 p1) | Mensagem de carregamento com o tamanho do corte e, na falha, opção de tentar de novo | Manter |
-| Inclusão e retirada | O mesmo botão inclui e retira o item, nas três variantes | Manter |
-| Revisão da seleção (M01 c3, M02 c1) | Sem lista própria. A seleção aparece como marcação nos itens e na contagem do botão do CSV | Lista com os itens selecionados, quantidade e retirada de item |
-| Tamanho do MP4 | Tamanho de cada arquivo no link de download | Manter a informação individual e indicar quando ela estiver indisponível |
-| CSV | Botão desativado com seleção vazia | Manter e lembrar de conferir o arquivo salvo |
-| MP4 | Link direto, disponível sem seleção e sem mensagem da aplicação. O arquivo salvo tem o nome do servidor, sem partida nem tempo | Comunicar a disponibilização e as falhas detectáveis, e avaliar um nome de arquivo identificável |
-| Retomada (a2 e c1) | A seleção se mantém ao trocar de variante ou de tela. Num carregamento novo, ela se perde sem aviso e a demonstração volta à tela de entrada | Informar até onde a seleção é preservada, sem prometer persistência |
-| Encerramento e pendências | Sem suporte, como previsto | Nenhuma tela de aprovação, histórico ou registro de pendências |
-
-Os estados de falha da demonstração não foram testados, e os modelos não passaram por sessão com usuários.
+[F] A [Entrega 11](11_figma.md#estados-alternativas-e-recuperação) registra quais conversas aparecem no protótipo navegável. A busca de A oferece limpeza da consulta vazia. O player informa falha e permite tentar novamente. F06 apresenta as saídas da seleção e a conferência do salvamento cabe à pessoa.
 
 ### Preparação para prototipagem de M03
 
-[H] O protótipo deve comunicar o envio, o estado consultado, o acesso aos resultados e a falha da entrada afetada. Acompanhar, corrigir uma entrada e adiar têm caminhos definidos no diagrama. A indicação de disponibilização do corte precede a conferência humana do arquivo salvo.
+[F] O percurso encenado da Entrega 11 apresenta falha localizada, oferece nova tentativa ou permite deixar o vídeo pendente e revisar os outros. Desistir da confirmação da nova tentativa devolve a pessoa à falha. Em M03, e2 encerra a conversa sobre a partida pendente. Outra consulta pode começar por a2.
+
+[?] O protótipo usa exemplos. Validação de envio real, associação à tentativa e recuperação de um serviço de análise dependem de confirmação técnica.
 
 ## Registro de elaboração
 
