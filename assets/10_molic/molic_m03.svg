@@ -319,10 +319,10 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="444" y="1288" class="label" text-anchor="start">precond: corte aberto</text>
 <text x="444" y="1308" class="label" text-anchor="start">u: voltar ao corte</text>
 </g>
-<g id="f34" data-kind="edge" data-from="c6" data-to="p6" data-style="solid" data-label="precond: seleção não vazia | u: obter CSV">
+<g id="f34" data-kind="edge" data-from="c6" data-to="p6" data-style="solid" data-label="precond: seleção não vazia | u: obter CSV (S26)">
 <polyline points="540,1418 716,1418" class="edge"/>
 <text x="590" y="1377" class="label" text-anchor="start">precond: seleção não vazia</text>
-<text x="590" y="1397" class="label" text-anchor="start">u: obter CSV</text>
+<text x="590" y="1397" class="label" text-anchor="start">u: obter CSV (S26)</text>
 </g>
 <g id="f35" data-kind="edge" data-from="p6" data-to="c6" data-style="solid" data-label="d: CSV disponível">
 <polyline points="728,1430 728,1456 540,1456" class="edge"/>

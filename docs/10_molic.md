@@ -165,7 +165,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 2. [H] Em c2, consulta o estado da análise (p2). Se houver resultados acessíveis, pode passar à revisão (c4). Se ainda aguarda, pode consultar novamente ou sair com pendência (e2). Na abertura a2, Jorginho confere o contexto disponível (S29). Se ele faltar, identifica a partida e usa as referências de entrada ou tentativa que tiver. Quando não consegue identificar a entrada, deixa a consulta pendente em e2 ou volta ao preparo por a1 com uma gravação identificável.
 3. [H] Se o sistema informar falha, c3 apresenta a entrada afetada e as ações disponíveis. O usuário pode voltar ao preparo para corrigir a entrada, pedir nova tentativa quando suportada ou deixar a partida pendente. Se houver outros resultados acessíveis, pode prosseguir para c4 e consultar outra partida na mesma sessão. O alerta c7 identifica a entrada e a tentativa, quando conhecida, e apresenta as consequências conhecidas (S14, AL). A pessoa pode confirmar ou voltar à falha. O pedido aceito retorna a c2. Uma recusa confirmada volta a c3. Se o pedido fica sem resposta, c8 informa que a aceitação ainda é desconhecida. Em p8, Jorginho consulta o pedido identificável quando o serviço permite. Se confirmar a tentativa, volta a c2. Se confirmar a recusa, volta a c3. Enquanto a situação seguir desconhecida, permanece em c8 ou sai com pendência em e4. A consulta de p8 apenas verifica o pedido.
 4. [H] Em c4, localiza candidatos pelos critérios. Em c5, confere a prévia e identifica visualmente a participação do atleta. Se a consulta vier vazia, pode alterar os critérios ou conferir o que falta em c6 e voltar à consulta por f45. O retorno direto de c6 para c5 exige um corte aberto. Uma falha de mídia devolve a pessoa ao candidato com possibilidade de outra tentativa.
-5. [H] Em c5, Jorginho inclui ou retira candidatos e pode obter cada MP4 acessível (p5). Em c6, confere a seleção e pede o CSV quando há itens (p6). Abre os arquivos salvos e encerra com o material conferido (e1) ou com pendência (e3). A montagem ocorre externamente (O10).
+5. [H] Em c5, Jorginho inclui ou retira candidatos e pode obter cada MP4 acessível (p5). Em c6, confere a seleção e pede o CSV (S26) quando há itens (p6). Abre os arquivos salvos e encerra com o material conferido (e1) ou com pendência (e3). A montagem ocorre externamente (O10).
 
 [F] Em M03, as falas `u:` saem das aberturas e das cenas. As respostas `d:` saem dos quadrados de processamento. Em p1, a resposta distingue rejeição e aceitação do envio. Em p7, há uma fala de saída para cada condição de S15. Em p8, o preposto comunica se foi possível confirmar aceitação ou recusa. Reenvio e nova tentativa ficam disponíveis quando o estado da entrada permite a ação.
 
@@ -177,7 +177,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 
 - [x] [F] As transições indicam o emissor e as saídas de processos são respostas do preposto.
 - [x] [F] O modelo liga abertura, acompanhamento, resultados, recuperação e saídas.
-- [x] [F] Os objetivos e signos do modelo correspondem à Entrega 9. A cobertura inclui seleção, CSV, MP4 e conferência humana.
+- [x] [F] Os objetivos e signos usados nas cenas e transições constam do esquema da Entrega 9. Em f34, S26 identifica o CSV associado à seleção.
 - [x] [F] GCO identifica a abertura de O00 em a1/a2. GCC identifica a conclusão em e1.
 - [x] [F] O alerta indica o alvo e a decisão. O retorno do alerta volta à cena da falha.
 - [ ] [?] Giovanni apresentou e revisou o modelo com a equipe.
