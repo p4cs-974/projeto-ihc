@@ -12,8 +12,10 @@ Use uma cópia privada por sessão. Consulte o [roteiro](entrega12_roteiro_obser
 | Sessão inicial, retorno ou piloto | |
 | Data, URL e commit da revisão | |
 | Moderador e observador | |
-| Dispositivo, navegador, tamanho de janela e adaptações | |
-| Aceite conferido e gravação de aba autorizada | |
+| Modalidade, dispositivo, navegador, tamanho de janela e adaptações | |
+| Aceite conferido | |
+| Gravação da aba autorizada | |
+| Uso de trechos no vídeo ilustrativo autorizado | |
 | Exposição anterior e tarefas afetadas | |
 | Data da primeira sessão e intervalo sem uso, no retorno | |
 | Desvios de protocolo | |

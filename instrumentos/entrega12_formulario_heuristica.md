@@ -5,8 +5,9 @@ Faça uma cópia por integrante para a [Entrega 13](../docs/13_avaliacao_heurist
 ## Inspecione o protótipo
 
 1. Percorra o fluxo normal para se familiarizar. Depois aplique as dez heurísticas a todas as telas e estados da tabela.
-2. Registre o contexto, a ação, o efeito e a evidência de cada problema. Atribua severidade de 0 a 4 e justifique pela frequência esperada, pelo impacto e pela persistência. Quando uma heurística ficar sem violação, registre uma boa prática observada e sua evidência.
+2. Registre o contexto, a ação, o efeito e a evidência de cada problema. Atribua severidade de 0 a 4 e justifique pela frequência esperada, pelo impacto e pela persistência.
 3. Conclua a inspeção antes de discutir os achados com os demais. Na consolidação, reúna ocorrências equivalentes e preserve os IDs de origem.
+4. Depois da inspeção, reúna com a equipe dez exemplos didáticos, um por heurística. A mesma heurística pode ter uma violação em um estado e um bom exemplo em outro. Use a seção [Uso das heurísticas](../docs/13_avaliacao_heuristica.md#8-uso-das-heurísticas) da Entrega 13.
 
 | Tela ou percurso | Estados a examinar | Cobertura e evidências |
 |---|---|---|
@@ -23,20 +24,22 @@ Em QA10, confira se a falha identifica o vídeo, distingue o material pronto do 
 
 ## Cobertura H1 a H10
 
-| ID | Heurística | Telas e estados verificados | Violação e IDs | Boa prática, se aplicável |
-|---|---|---|---|---|
-| H1 | Visibilidade do status do sistema | | | |
-| H2 | Compatibilidade entre o sistema e o mundo real | | | |
-| H3 | Controle e liberdade do usuário | | | |
-| H4 | Consistência e padrões | | | |
-| H5 | Prevenção de erros | | | |
-| H6 | Reconhecimento em vez de memorização | | | |
-| H7 | Flexibilidade e eficiência de uso | | | |
-| H8 | Estética e design minimalista | | | |
-| H9 | Reconhecer, diagnosticar e recuperar-se de erros | | | |
-| H10 | Ajuda e documentação | | | |
+| ID | Heurística | Telas e estados verificados | Violação e IDs |
+|---|---|---|---|
+| H1 | Visibilidade do status do sistema | | |
+| H2 | Compatibilidade entre o sistema e o mundo real | | |
+| H3 | Controle e liberdade do usuário | | |
+| H4 | Consistência e padrões | | |
+| H5 | Prevenção de erros | | |
+| H6 | Reconhecimento em vez de memorização | | |
+| H7 | Flexibilidade e eficiência de uso | | |
+| H8 | Estética e design minimalista | | |
+| H9 | Reconhecer, diagnosticar e recuperar-se de erros | | |
+| H10 | Ajuda e documentação | | |
 
 ## Violações observadas
+
+Siga o [Modelo 02 da disciplina](../slides_plinio/Modelo%2002%20Avaliacao%20Heuristica.doc). Inclua uma captura da tela com a região do problema destacada e descreva a violação. Se faltar um elemento, marque onde a ausência afeta a interação.
 
 | ID | Heurística | Tela e estado | Ação e problema observado | Consequência | Evidência | Severidade 0–4 e justificativa | Recomendação |
 |---|---|---|---|---|---|---|---|

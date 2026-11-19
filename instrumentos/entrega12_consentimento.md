@@ -14,17 +14,20 @@ A equipe anota as ações no protótipo, a duração das tarefas, resultados e c
 
 Se você autorizar a gravação, registramos somente a aba do protótipo, sem câmera, áudio ou tela inteira, para conferir as notas depois. Você pode recusar a gravação, pedir para pausá-la ou revogar esse aceite e seguir com as anotações.
 
+Se você também autorizar o uso de trechos, a equipe pode incluir partes da gravação da aba sem dados que identifiquem você em um vídeo sobre o teste e seus resultados. Somente a equipe e o docente da disciplina terão acesso a esse vídeo pelo link no relatório. Você pode participar e aceitar a gravação para as notas mesmo se preferir manter seus trechos fora do vídeo.
+
 ## Quem vê os dados e como pedir retirada
 
 Os três integrantes guardam os registros numa pasta privada da instituição. As anotações usam um código. Os contatos e os aceites ficam separados. Os resultados divulgados incluem sínteses e trechos desidentificados.
 
-Você recebe seu código no fim da sessão. Até 30 dias após sua última sessão, antes da consolidação pública, pode enviar o código pelo canal do convite para pedir a retirada dos seus registros. A equipe apaga as gravações após conferir as anotações, em até 30 dias da sessão. Apaga os contatos após os retornos e descarta os demais registros privados em até 90 dias após o encerramento da disciplina.
+Você recebe seu código no fim da sessão. Até 30 dias após sua última sessão, antes da consolidação pública, pode enviar o código pelo canal do convite para pedir a retirada dos seus registros, incluindo trechos usados no vídeo. A equipe apaga as gravações brutas após conferir as anotações e selecionar eventuais trechos autorizados, em até 30 dias da sessão. Apaga os contatos após os retornos e descarta o vídeo e os demais registros privados em até 90 dias após o encerramento da disciplina.
 
 ## Registre o aceite em arquivo privado
 
 - Participante (código) e data _________________________________________
 - [ ] Tenho 18 anos ou mais, pude tirar dúvidas e concordo em participar.
-- [ ] Autorizo a gravação somente da aba do protótipo, nas condições acima.
+- [ ] Autorizo a gravação somente da aba do protótipo para conferência das anotações.
+- [ ] Autorizo também o uso de trechos desidentificados dessa gravação no vídeo ilustrativo de acesso restrito, nas condições acima.
 - [ ] Prefiro participar com registro escrito.
 
-Registre a decisão de gravação separadamente. Na ausência de autorização explícita, use registro escrito. Documente o aceite por confirmação escrita no canal privado da sessão.
+Documente o aceite por confirmação escrita no canal privado da sessão. Registre separadamente a participação, a gravação e o uso de trechos. A autorização de gravação permite a conferência interna. Incluir trechos no vídeo exige as duas autorizações. Use registro escrito quando a pessoa não autorizar a gravação.
