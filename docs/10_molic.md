@@ -1,25 +1,29 @@
 # Entrega 10: MoLIC
 
-- **Data:** M01/M02 em 08/11/2026; M03 em 09/11/2026; integração em 12/11/2026
-- **Status:** 🟨 em andamento. M01 e M02 elaborados, com revisão individual de Pedro e Lucas pendente; M03 de Giovanni registrado com cobertura parcial e verificações pendentes no seu checklist.
+- **Data:** M01/M02 em 08/11/2026; M03 em 09/11/2026; integração em 12/11/2026 (versão original)
+- **Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md) e ajustes após revisão independente
+- **Status:** 🟨 revisão documental dos três modelos concluída. Apresentação e confirmação individual de Pedro, Lucas e Giovanni e consolidação com a equipe pendentes.
 - **Responsabilidade:** uma solução completa por integrante.
 
 ## Objetivo da atividade
 
 Modelar a interação como uma conversa entre o usuário e o preposto do designer, com os caminhos até cada objetivo, as alternativas e as rupturas. Cada integrante modela um objetivo grande, com abertura, encerramento e cenas detalhadas por tópico, diálogos e signos.
 
-O projeto trata da obtenção de melhores momentos em gravações de futebol. Os modelos não descrevem o detector, e sim a conversa para usar seus resultados: consultar os candidatos sabendo seus limites, conferir o contexto de um corte, decidir a seleção e obter o CSV e os MP4. Ajustar, montar, transferir e publicar o material acontecem fora do sistema e aparecem como notas nos encerramentos. Autenticação, histórico persistente, reconhecimento de atletas e aprovação editorial ficam fora dos modelos M01 e M02. O M03 preserva propostas de login, exclusão e cancelamento que ainda precisam ser compatibilizadas com o escopo da Entrega 9 e com o suporte técnico; sua presença no desenho não altera a decisão de escopo.
+O projeto trata da obtenção de melhores momentos em gravações de futebol. Os modelos não descrevem o detector, e sim a conversa para usar seus resultados: consultar os candidatos sabendo seus limites, conferir o contexto de um corte, decidir a seleção e obter o CSV e os MP4. Ajustar, montar, transferir e publicar o material acontecem fora do sistema e aparecem como notas nos encerramentos. Autenticação, histórico persistente, reconhecimento de atletas e aprovação editorial ficam fora dos modelos M01 e M02. O M03 cobre também o preparo, o acompanhamento e a recuperação de falhas de análise.
 
 Objetivos (O00 a O10), signos, cenários e tarefas seguem a [Entrega 9](09_modelo_conceitual.md).
 
 **Base de notação:** [MoLIC — Parte A](../slides_plinio/CC8122-Molic-ParteA.pdf), slides 5–15, e [Parte B](../slides_plinio/CC8122-Molic-ParteB.pdf), slides 2–5: cenas, falas de transição, acessos ubíquos, abertura/encerramento, processamento, rupturas e detalhamento de diálogos e signos.
 
-### Legenda de M01 e M02
+### Legenda dos três modelos
 
 | Elemento | Representação |
 |---|---|
 | Abertura | Círculo preto preenchido, seguido da fala que inicia a conversa |
 | Encerramento | Círculo preto com anel externo |
+| GCO | `gco: O00` na fala que abre a conversa para obter material. A retomada abre outra conversa com a mesma finalidade. |
+| GCC | `gcc: O00` na transição que encerra a conversa depois de a pessoa conferir os arquivos necessários no dispositivo. |
+| Alerta | Cena tracejada em que o preposto apresenta a consequência e a pessoa decide. |
 | Cena | Retângulo arredondado com o tópico no cabeçalho e os diálogos no corpo |
 | Processo do sistema | Quadrado preto, que recebe fala do usuário e responde com fala do preposto |
 | Seta contínua ou tracejada | Fala de transição, ou ruptura e recuperação |
@@ -27,13 +31,15 @@ Objetivos (O00 a O10), signos, cenários e tarefas seguem a [Entrega 9](09_model
 | precond: | Condição para que a fala esteja disponível |
 | Nota em itálico marrom | Atividade fora do sistema |
 
-Nos diagramas M01 e M02, as letras a, c, p e e identificam aberturas, cenas, processos e encerramentos, numerados dentro de cada modelo. Não há acesso ubíquo, porque nenhum tópico precisa estar disponível a partir de qualquer cena, nem cena de alerta, porque incluir, retirar e baixar são ações reversíveis ou repetíveis.
+[F] As letras a, c, p e e identificam aberturas, cenas, processos e encerramentos. As falas a partir de a1 e a2 abrem O00 (GCO). A chegada a e1 fecha O00 (GCC), depois de a pessoa confirmar que abriu o CSV e reproduziu os MP4 de que precisa, conforme as saídas solicitadas. As demais saídas identificam adiamento ou pendência. Na Entrega 9, O01–O08 são objetivos instrumentais identificados nas cenas e precondições. O09 e O10 ocorrem fora da interface. Os mecanismos de prevenção e recuperação seguem a [legenda da Entrega 9](09_modelo_conceitual.md#convenções-e-relações).
+
+Em M01 e M02, não há acesso ubíquo, porque nenhum tópico precisa estar disponível a partir de qualquer cena, nem cena de alerta, porque incluir, retirar e baixar são ações reversíveis ou repetíveis.
 
 ## M01: Revisar candidatos e obter o material da partida
 
 - **Responsável:** Pedro Alexandre Custódio Silva, RA 22.123.049-3
 - **Cenário e tarefa:** CI01 e T01 (atividade A04), com continuidade em T02
-- **Objetivos:** O04 a O07, e O08 na retomada. O02 é precondição e O10 acontece fora do sistema.
+- **Objetivos:** O00, apoiado por O04 a O07 e por O08 na retomada. O02 é precondição e O10 acontece fora do sistema.
 - **Signos:** S01 a S03, S12, S16 a S24, S26 a S29, S32 e S33. S30 aparece só nas notas externas.
 
 ### Diagrama
@@ -56,7 +62,7 @@ As cenas são c1 (localizar candidatos), c2 (conferir pertinência e contexto) e
 6. Em c3, confere os itens selecionados, a quantidade e o tamanho de cada MP4.
 7. Com a seleção não vazia, baixa o CSV, com os metadados e o endereço de cada corte, sem os vídeos. O sistema avisa que o arquivo foi disponibilizado e pede que Rafael confira o arquivo salvo.
 8. Para cada vídeo de que precisa, abre o item selecionado, baixa o MP4 e volta à seleção.
-9. Encerra com o material obtido. Fora do sistema, abre o CSV, reproduz os MP4 salvos, copia os arquivos para o servidor e avisa Arnaldo. As pendências continuam com ele.
+9. [H] No dispositivo, Rafael abre o CSV e reproduz os MP4 salvos de que precisa. Se a conferência der certo, encerra em e1 e encaminha o material a Arnaldo. Se um arquivo não abrir ou faltar material, tenta obtê-lo novamente, volta à revisão ou interrompe em e2.
 
 #### Alternativas e rupturas
 
@@ -78,10 +84,10 @@ As cenas são c1 (localizar candidatos), c2 (conferir pertinência e contexto) e
 
 - **Responsável:** Lucas Roberto Boccia dos Santos, RA 22.123.012-1
 - **Cenário e tarefa:** CI02, com T02 como continuidade externa e a obtenção de T01 (atividade A04)
-- **Objetivos:** O06 e O07, conduzidos pelo editor, e O04 apenas para localizar um item que falta. O02 é precondição. O09 e O10 são externos.
+- **Objetivos:** O00, apoiado por O06 e O07, por O04 quando falta um item e por O08 na retomada. O02 é precondição. O09 e O10 são externos.
 - **Signos:** S01 a S03, S16 a S24, S26 a S29, S31 e S33
 
-Quem conversa com o sistema é o editor, Rafael. Arnaldo recebe os arquivos e decide fora do sistema, por isso não há cena de aprovação. A seleção costuma vir pronta da revisão de M01, mas M02 se lê sozinho: a cena c3 localiza um item que falta ou que o supervisor pediu, e a cena c2 permite incluí-lo.
+[H] Rafael conversa com o sistema para conferir a seleção e obter as saídas. A passagem para T02 começa quando ele encaminha os arquivos no canal externo. Arnaldo avalia o material e comunica a decisão nesse canal. A seleção costuma vir pronta da revisão de M01, mas M02 se lê sozinho: a cena c3 localiza um item que falta ou que o supervisor pediu, e a cena c2 permite incluí-lo.
 
 ### Diagrama
 
@@ -95,11 +101,11 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 
 #### Caminho principal
 
-1. Com os resultados acessíveis e a seleção montada, o editor começa a preparar o material. Em c1, confere a identificação de cada item (id, partida, tempo, tipo, relógio do jogo e intervalo), a quantidade.
+1. Com os resultados acessíveis e a seleção montada, o editor começa a preparar o material. Em c1, confere a identificação de cada item (id, partida, tempo, tipo, relógio do jogo e intervalo) e a quantidade.
 2. Abre um corte em c2 e confere o vídeo de origem, o instante no arquivo e a duração. Se quiser, reproduz o corte.
 3. Baixa o MP4 e volta à seleção, repetindo os passos 2 e 3 para cada corte necessário.
 4. Em c1, baixa o CSV, que leva as mesmas referências dos cortes.
-5. Encerra com o material obtido. Fora do sistema, confere os arquivos salvos, transfere-os e avisa Arnaldo pelo chat. A decisão editorial é dele.
+5. [H] O editor abre o CSV e reproduz os MP4 necessários no dispositivo. Encerra em e1 após conferir os arquivos e só então transfere o material e avisa Arnaldo pelo chat. Se um arquivo não abrir ou faltar material, tenta obtê-lo novamente, completa a seleção ou encerra com pendência em e2.
 
 #### Alternativas e rupturas
 
@@ -123,150 +129,103 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 - [x] As cenas são tópicos das conversas de CI01 e CI02, não páginas.
 - [x] Falas que saem de cenas são do usuário, e falas que saem de processos são do preposto.
 - [x] Os dois modelos encerram com material obtido (e1) ou com interrupção e pendência (e2).
+- [x] [F] Em M01 e M02, GCO marca a abertura de O00. A fala com GCC indica que a pessoa conferiu os arquivos antes de encerrar em e1.
 - [x] Toda ruptura tem feedback e caminho de volta ou saída com nota.
 - [x] Os modelos cobrem consulta vazia, contexto insuficiente, omissão, seleção vazia, item faltante, mídia indisponível, tamanho desconhecido e retomada.
 - [x] Objetivos e signos são os da Entrega 9.
 - [x] Não há acesso ubíquo, pelo motivo dado na legenda.
 - [x] Os modelos representam a conversa entre usuário e sistema, não o detector nem a sequência de telas.
-- [x] O texto dos diagramas é legível em largura reduzida.
-- [ ] Pedro e Lucas revisaram seus modelos.
+- [x] [F] Diagramas renderizados e conferidos em largura de 900 px.
+- [ ] [?] Pedro apresentou e confirmou o modelo M01.
+- [ ] [?] Lucas apresentou e confirmou o modelo M02.
 
 ## M03 — Enviar vídeos, acompanhar análises e consultar resultados
 
-**Autor(a):** Giovanni Chahin Morassi — 22.123.025-3\
-**Persona de referência:** P03 — Jorginho Jr.\
-**Cenário de interação de origem:** CI03 — Acompanhar a análise e obter trechos para uma produção amadora\
-**Objetivo(s):** O01/O02/O04; cobertura parcial de O03/O05/O07/O08, detalhada na tabela de cobertura abaixo\
-**Tarefa(s) relacionada(s):** T03 — Acompanhar o processamento de partidas em lote e tratar falhas; A01 como preparação e trechos de T01/A04 na consulta e no download\
-**Signos relevantes:** S01–S03 (partida, tempo e arquivo de origem); S05/S06/S08 (validade, conjunto de entradas e envio); S09–S14/S32 (análise, atualização, progresso, resultados, falha, orientação e tentativa); S16–S22 (candidato, tipo, referências temporais, intervalo, duração e consulta); S27/S28/S33 (MP4, obtenção e tamanho); S30 (pendência).
+**Autor(a):** Giovanni Chahin Morassi — 22.123.025-3
+
+**Persona de referência:** P03, Jorginho Jr.
+
+**Cenário de interação de origem:** CI03, acompanhar a análise e obter trechos para uma produção amadora.
+
+**Tarefas relacionadas:** A01 no preparo, T03/A02 no acompanhamento e T01/A04 na revisão e obtenção.
+
+**Objetivo final e instrumentais:** O00, com O01 a O08. O10 ocorre fora da aplicação.
+
+**Signos:** S01–S03, S05, S06, S08–S24, S26–S30, S32 e S33.
 
 ### Diagrama
 
-![MoLIC M03 — envio, acompanhamento, resultados e download, por Giovanni](../assets/10_molic/molic_persona3.png)
+![MoLIC M03. Acompanhar a análise e obter trechos para uma produção amadora](../assets/10_molic/molic_m03.svg)
 
-**Fonte editável:** [arquivo Excalidraw](../assets/10_molic/objetivos_p03.excalidraw). Para ler os signos em tamanho ampliado, [abrir o PNG original](../assets/10_molic/molic_persona3.png).
-
-**Legenda:** círculo preenchido = abertura; círculo duplo = encerramento; retângulo arredondado = cena; retângulo preto = processamento; barra cinza = acesso ubíquo. `u:` identifica fala do usuário; `d:` identifica fala do preposto do designer; `d+u:` indica signo informado e passível de intervenção do usuário. Os diálogos aparecem abaixo do título da cena, com os signos entre chaves. `precond:` condiciona um caminho; `x` e `y` identificam resultado e partida, e `n` representa quantidade ou percentual conforme a fala. As marcações tracejadas devem ser verificadas pelos critérios do checklist; a legenda não pressupõe que todos os usos estejam corretos.
+**Fonte editável:** [molic_m03.svg](../assets/10_molic/molic_m03.svg).
 
 ### Leitura do diagrama
 
-O percurso de envio parte do acesso ubíquo `u: enviar vídeos`. O desenho também apresenta abertura para login, acesso ubíquo aos resultados e saída global. O login está desenhado separadamente, sem transição para o envio; a leitura abaixo descreve os caminhos efetivamente conectados.
+1. [H] Jorginho abre a conversa para preparar uma gravação (a1). Em c1, confere arquivo, partida e tempo. Ao solicitar a análise (p1), recebe a aceitação do pedido ou retorna à entrada para corrigir a rejeição. Pode adiar o envio (e0).
+2. [H] Em c2, consulta o estado da análise (p2). Se houver resultados acessíveis, pode passar à revisão (c4). Se ainda aguarda, pode consultar novamente ou sair com pendência (e2). Na abertura a2, Jorginho confere o contexto disponível (S29). Se ele faltar, identifica a partida e usa as referências de entrada, tentativa ou pedido que tiver. Quando não consegue identificar a entrada, deixa a consulta pendente em e2 ou volta ao preparo por a1 com uma gravação identificável.
+3. [H] Se a análise falhar, c3 apresenta a entrada afetada e as ações disponíveis. Jorginho pode corrigir a entrada, pedir nova tentativa quando suportada ou deixar a partida pendente. Se outros resultados estiverem acessíveis, pode passar a c4 e revisar outra partida na mesma sessão.
+4. [H] Em c4, localiza candidatos pelos critérios. Em c5, confere a prévia e identifica visualmente a participação do atleta. Se a consulta vier vazia, pode alterar os critérios ou conferir o que falta em c6 e voltar à consulta por f45. O retorno direto de c6 para c5 exige um corte aberto. Uma falha de mídia devolve a pessoa ao candidato com possibilidade de outra tentativa.
+5. [H] Em c5, Jorginho inclui ou retira candidatos e pode obter cada MP4 acessível (p5). Em c6, confere a seleção e pede o CSV (S26) quando há itens (p6). Abre os arquivos salvos e encerra com o material conferido (e1) ou com pendência (e3). A montagem ocorre externamente (O10).
 
-#### Caminho principal
+#### Pedido de nova tentativa
 
-1. Em **Fazer upload do(s) vídeo(s) para análise**, o usuário informa os arquivos, confere partida e tempo e recebe informações de validade e estado do envio.
-2. Com `u: iniciar análise`, solicita o processamento. O bloco preto representa a decisão do sistema entre comunicar progresso, apresentar resultados ou informar erro.
-3. Em **Progresso da análise**, consulta partida/tentativa, estado, atualização, disponibilidade dos resultados e percentual quando calculável. O desenho apresenta essa cena como retorno do processamento; não explicita uma fala de nova consulta ou uma ligação dela para os resultados.
-4. Com `d: n resultados encontrados`, o sistema chega a **Visualizar os resultados das análises**. O usuário também pode acessar essa conversa por `u: ver resultados`. Consulta partida, estado, candidatos, tipo, origem, contexto, critérios e limites disponíveis.
-5. Quando há resultado de análise bem-sucedida, solicita `u: ver os detalhes do resultado obtido x`. Em **Visualizar metadados do resultado x**, confere referência, origem, tipo sugerido, prévia, instante, intervalo, duração e tamanho.
-6. O download pode ser solicitado na consulta de resultados ou nos detalhes. Pela consulta, passa por um bloco de processamento; pelos detalhes, a ligação vai diretamente a **Examinar progresso de download**. Nessa cena, confere corte, tamanho, estado conhecido e percentual quando calculável.
-7. A fala `d: download concluído` retorna à consulta de resultados. Esse retorno comunica a conclusão representada no desenho; a conferência do arquivo salvo e de sua reprodução continua necessária fora da aplicação. A saída global `u: sair` leva ao encerramento da conversa.
+[H] O alerta c7 identifica a entrada, a tentativa quando conhecida e as consequências da repetição (S14, AL). Jorginho pode confirmar ou voltar à falha.
 
-#### Alternativas e rupturas
+- [H] Se o pedido for aceito, volta ao acompanhamento em c2. Se a recusa estiver confirmada, volta à falha em c3.
+- [H] Se o pedido ficar sem resposta, c8 indica que a aceitação é desconhecida. Jorginho consulta o pedido em p8 quando há referência para identificá-lo e o serviço oferece a consulta. A confirmação da tentativa leva a c2. A confirmação da recusa leva a c3.
+- [H] Enquanto a situação continuar desconhecida, Jorginho pode consultar novamente ou encerrar com pendência em e4. A saída e a consulta deixam o pedido original em aberto.
+- [H] Se voltar por a2 e reconhecer em c2 um pedido anterior cuja aceitação continua desconhecida, Jorginho passa a c8 pela fala f47. Pode consultar o pedido original em p8 quando tiver a referência e o serviço oferecer a consulta. Quando faltar referência ou suporte, pode manter o pedido pendente em e4.
 
-| Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
-|---|---|---|---|
-| Análise ainda em andamento | Processamento → Progresso da análise | `d: %n concluída`; estado e atualização na cena | O usuário acompanha a situação ou solicita cancelamento. Nova consulta e passagem dessa cena aos resultados não estão ligadas explicitamente. |
-| Falha de processamento | Processamento → Registro do erro | `d: erro no processamento`; descrição, causa e referência da tentativa | A cena comunica orientação e pendência. O desenho não liga uma ação de recuperação, reenvio ou retorno a partir dela. |
-| Consultar erro de uma análise | Visualizar os resultados das análises | Precondição de erro e `u: visualizar erro ocorrido` | Abre Registro do erro, com o mesmo limite de saída descrito acima. |
-| Cancelar análise | Progresso da análise → confirmação à esquerda | `u: cancelar`; identificação da análise e aviso de consequências | A ligação seguinte comunica cancelamento, passa por processamento e retorna ao upload. O título da confirmação é “Confirmar exclusão”, e a fala de confirmação está atribuída a `d:`; essa divergência fica registrada para revisão. |
-| Desistir do download | Examinar progresso de download | `u: cancelar` | Retorna à consulta de resultados. O desenho não apresenta confirmação de cancelamento da transferência pelo serviço. |
-| Excluir resultado | Visualizar os resultados → confirmação à direita | `u: excluir resultado`; identificação do alvo e consequências | `u: confirmar` leva ao processamento; `d: res deleted` retorna à consulta. A exclusão é uma proposta deste desenho, sem semântica definida na Entrega 9. |
-| Desistir da exclusão | Confirmação à direita | `u: cancelar exclusão` | Retorna à consulta sem percorrer o processamento de exclusão. |
-| Encerrar o uso | Acesso ubíquo de saída | `u: sair` | Leva ao ponto de encerramento. Preservação da sessão e continuidade de operações não são especificadas. |
+[F] Em M03, as falas `u:` saem das aberturas e das cenas. As respostas `d:` saem dos quadrados de processamento. Em p1, a resposta distingue rejeição e aceitação do envio. Em p7, há uma fala de saída para cada condição de S15. Em p8, o preposto comunica se foi possível confirmar aceitação ou recusa. Reenvio e nova tentativa ficam disponíveis quando o estado da entrada permite a ação.
 
-Entrada inválida, consulta indisponível, ausência de candidatos e falha de download não possuem caminhos completos específicos neste desenho. “Validade” e “disponibilidade” aparecem nos diálogos, mas não substituem as transições de tratamento dessas situações. Resultado vazio não comprova ausência de lances; percentual só pode ser informado com base confiável.
+[F] O escopo da Entrega 9 sustenta preparar, acompanhar, revisar e obter material. Login, exclusão de resultados e cancelamento do processamento ficam fora do M03. Adiar encerra a conversa com uma pendência. Retirar um item altera a seleção (S23). Na retomada, S29 informa o contexto disponível. A pessoa pode identificar a partida com as referências que tem.
+
+[H] M03 oferece preparo (a1) e retomada (a2) como aberturas. Os tópicos de correção, obtenção e saída são locais a suas cenas e dependem do contexto mostrado. O modelo usa transições locais para esses tópicos.
 
 ### Checklist específico de modelagem
 
-- [ ] Existe **ponto de abertura** coerente com o início do objetivo.
-- [x] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
-- [ ] As transições/falas deixam claro o que o usuário ou o sistema comunica: revisar a confirmação de cancelamento atribuída a `d:` e o retorno sem prefixo.
-- [x] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável: saída global.
-- [ ] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário.
-- [ ] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
-- [ ] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
-- [x] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”: erro, cancelamento e desistência de exclusão.
-- [ ] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
-- [ ] O diagrama é legível em tamanho normal no GitHub.
-- [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
-- [ ] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
-
-Os itens não assinalados permanecem como verificações do modelo: conectar a abertura/login ao percurso principal; completar a saída de Registro do erro e a continuidade do acompanhamento; conferir emissores das falas, tracejados de ruptura e confirmações conforme a notação da aula; fundamentar os acessos ubíquos e as capacidades adicionais; verificar a legibilidade em exibição normal no GitHub. O PNG permite ampliação, mas isso não comprova leitura confortável no tamanho reduzido.
-
-Login, exclusão de resultados e cancelamento efetivo do processamento não estão estabelecidos no esquema da Entrega 9. Permanecem como propostas do diagrama de Giovanni, sujeitas à compatibilização com aquela entrega e ao suporte técnico. “Confirmar exclusão”, à esquerda, é lido aqui pelo caminho de cancelamento ao qual está conectado. O arquivo editável e o PNG foram preservados.
+- [x] [F] As transições indicam o emissor e as saídas de processos são respostas do preposto.
+- [x] [F] O modelo liga abertura, acompanhamento, resultados, recuperação e saídas.
+- [x] [F] Os objetivos e signos usados nas cenas e transições constam do esquema da Entrega 9. Em f34, S26 identifica o CSV associado à seleção.
+- [x] [F] GCO identifica a abertura de O00 em a1/a2. GCC identifica a conclusão em e1.
+- [x] [F] O alerta indica o alvo e a decisão. O retorno do alerta volta à cena da falha.
+- [ ] [?] Giovanni apresentou e revisou o modelo com a equipe.
 
 ## Consolidação da equipe
+
+- [ ] [?] A equipe confirmou a consistência entre os recortes, a Entrega 9 e o protótipo.
 
 ### Cobertura dos objetivos
 
 | Objetivo | MoLIC que cobre | Lacunas/duplicidades | Decisão |
 |---|---|---|---|
-| O00 Obter material para continuidade editorial | M01, M02 e M03, em parte | M03 cobre envio e acompanhamento parcialmente; conclusão do trabalho externo não é comprovada | Propósito global, benefício a validar |
-| O01 a O03 Preparar gravações, acompanhar a análise e encaminhar falhas | M03; O03 parcial | O02 é precondição de M01/M02; no M03 faltam tratamento de entrada, continuidade explícita do progresso e encaminhamento de recuperação | Preservar as lacunas registradas no checklist do M03 |
+| O00 Obter material para continuidade editorial | M01, M02 e M03 | Cada recorte contribui para a mesma finalidade. A verificação de arquivos cabe à pessoa | [H] Benefício a validar |
+| O01 a O03 Preparar gravações, acompanhar a análise e encaminhar falhas | M03 c1–c3, c7 e c8 | O02 é precondição de M01/M02 | [H] O sistema informa o resultado conhecido. A pessoa pode corrigir, pedir nova tentativa, verificar o pedido ou adiar conforme a situação. |
 | O04 Localizar candidatos | M01 c1; M02 c3; M03 consulta de resultados | Sobreposição restrita: M02 só localiza um item que falta, sem julgar pertinência | M02 repete os diálogos de consulta para se ler sozinho; M03 também oferece consulta, sem presumir filtro por atleta |
-| O05 Conferir pertinência e contexto | M01 c2; M03 parcial | M02 confere identificação, não pertinência; M03 oferece prévia e metadados, com lacunas para contexto insuficiente e omissão | Julgamento de pertinência continua humano |
-| O06 Definir e conferir a seleção | M01 c2 e c3; M02 c1, c2 e c3 | M01 monta a seleção e M02 a confere ou completa antes de encaminhar | Cenas parecidas usam os mesmos diálogos; O06 não é representado no M03 |
-| O07 Obter cortes e metadados | M01 c2 e c3; M02 c1 e c2; M03 parcial | A mesma obtenção encerra objetivos diferentes; M03 cobre MP4 individual, sem CSV da seleção | Material para a edição em M01 e para a supervisão em M02; manter explícitos os limites de M03 |
-| O08 Reconhecer contexto ao retomar | M01 e M02, em a2 e c1; M03 parcial | Retomada limitada à sessão; M03 informa tentativa e pendência, sem retomada após recarga | Sem histórico persistente |
+| O05 Conferir pertinência e contexto | M01 c2; M03 c5 | M02 confere identificação, não pertinência; M03 oferece prévia e metadados, com julgamento da participação do atleta pela pessoa | Julgamento de pertinência continua humano |
+| O06 Definir e conferir a seleção | M01 c2/c3; M02 c1/c2/c3; M03 c5/c6 | M01 e M03 montam e conferem a seleção. M02 prepara o envio externo | [H] A seleção define os itens do CSV |
+| O07 Obter cortes e metadados | M01 c2/c3; M02 c1/c2; M03 c5/c6 | Os três distinguem CSV da seleção e MP4 individual | [H] O material prepara edição, supervisão ou montagem amadora |
+| O08 Reconhecer contexto ao retomar | M01 e M02 a2/c1; M03 a2/c2 e c6 | [H] A pessoa confere partida, tentativa e seleção que ainda estiverem acessíveis. Se o contexto faltar, identifica a partida, refaz a consulta ou reconstrói a seleção | [?] Persistência após recarga depende de investigação (H15/H29/H35) |
 | O09 Avaliar a decisão editorial | Nenhum | Decisão de Arnaldo | Fora do sistema, nota em M02; não introduzir aprovação no M03 |
 | O10 Conferir o original e ajustar | Nenhum | Ajuste no vídeo original | Fora do sistema, nota em e2 em M01/M02; M03 também não modela edição/montagem |
 
 
-### Cobertura detalhada do M03
-
-O quadro abaixo detalha o recorte de Giovanni; a cobertura conjunta de M01, M02 e M03 está no quadro anterior. A revisão conjunta permanece pendente. Os IDs internos dos elementos do Excalidraw não substituem os IDs conceituais: a cena “Visualizar metadados” apoia O05/O07, independentemente do nome técnico do elemento.
-
-| Objetivo | MoLIC que cobre | Lacunas/duplicidades | Decisão |
-|---|---|---|---|
-| O00 — Obter material para continuidade externa | M03, apoio parcial | Envio e obtenção de resultado individual; não comprova seleção pertinente nem trabalho externo concluído | Tratar como propósito geral, não como conclusão automática |
-| O01 — Preparar gravações para análise | M03 | Upload, origem e validade presentes; rejeição/correção de entrada sem caminho próprio | Cobertura do percurso principal, com tratamento de entrada a completar |
-| O02 — Acompanhar a análise e reconhecer resultados acessíveis | M03 | Estado, tentativa, atualização e resultados presentes; falta continuidade explícita da cena de progresso | Registrar limite do acompanhamento |
-| O03 — Encaminhar falha sem comprometer outras partidas | M03, parcial | Erro e orientação presentes; recuperação, resposta ao pedido e preservação das demais partidas não estão conectadas | Não declarar recuperação completa |
-| O04 — Localizar candidatos pertinentes à revisão | M03 | Consulta por partida, tempo e tipo; ausência de retorno específico para consulta vazia | Não presumir filtro por atleta |
-| O05 — Conferir pertinência e contexto | M03, parcial | Prévia, origem, tipo e tempos presentes; contexto insuficiente e omissão suspeita sem saída própria | Julgamento continua humano |
-| O06 — Definir e conferir seleção | Não representado | Não há conversa de inclusão/retirada nem conferência da seleção | Exclusão de resultado não equivale a retirar item da seleção |
-| O07 — Obter e conferir cortes e metadados | M03, parcial | Download e metadados em consulta; CSV e conferência do arquivo salvo não são modelados | Interpretar como obtenção individual, sem afirmar exportação de CSV |
-| O08 — Reconhecer contexto e pendências ao retomar/encerrar | M03, parcial | Referência de pendência no erro e saída global; retomada sem conversa própria | Não presumir persistência após recarga |
-| O09 — Avaliar e comunicar decisão editorial | Fora do recorte | T02/P02 permanece externa | Não equiparar download a aprovação |
-| O10 — Conferir original e ajustar/montar | Fora do recorte | Nenhuma conversa de edição detalhada | Manter continuidade nas ferramentas externas |
-
 ### Preparação para prototipagem de M01 e M02
 
-O protótipo é a [demonstração em HTML/JS](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) da Entrega 6. Ela usa quatro tempos de exemplo de duas partidas, oito cortes MP4 e uma análise simulada, sem aceitar arquivos próprios nem executar o detector. A tabela compara o que os modelos pedem com o que a demonstração faz hoje. As propostas ainda não foram implementadas.
+[F] A [Entrega 11](11_figma.md#estados-alternativas-e-recuperação) registra quais conversas aparecem no protótipo navegável. A busca de A oferece limpeza da consulta vazia. O player informa falha e permite tentar novamente. F06 apresenta as saídas da seleção e a conferência do salvamento cabe à pessoa.
 
-| Estado ou feedback | Protótipo atual | Proposta |
-|---|---|---|
-| Resultados e limites (M01 c1) | A tela "Base de highlights" mostra a contagem de lances e partidas | Informar limites conhecidos e a tentativa de análise, sem afirmar cobertura completa |
-| Consulta vazia (M01 c1, M02 c3) | Só a variante A diz "Nenhum lance encontrado" e oferece limpar os filtros. A variante B mostra "0 lances" e a C não filtra | A mesma mensagem em todas as variantes, dizendo que a seleção foi mantida |
-| Detalhe do candidato (c2) | Partida, data, tempo, relógio do jogo, início, fim e duração no arquivo | Mostrar o id que vai no CSV |
-| Reprodução e falha (M01 p2, M02 p1) | Mensagem de carregamento com o tamanho do corte e, na falha, opção de tentar de novo | Manter |
-| Inclusão e retirada | O mesmo botão inclui e retira o item, nas três variantes | Manter |
-| Revisão da seleção (M01 c3, M02 c1) | Sem lista própria. A seleção aparece como marcação nos itens e na contagem do botão do CSV | Lista com os itens selecionados, quantidade e retirada de item |
-| Tamanho do MP4 | Tamanho de cada arquivo no link de download | Manter a informação individual e indicar quando ela estiver indisponível |
-| CSV | Botão desativado com seleção vazia | Manter e lembrar de conferir o arquivo salvo |
-| MP4 | Link direto, disponível sem seleção e sem mensagem da aplicação. O arquivo salvo tem o nome do servidor, sem partida nem tempo | Comunicar a disponibilização e as falhas detectáveis, e avaliar um nome de arquivo identificável |
-| Retomada (a2 e c1) | A seleção se mantém ao trocar de variante ou de tela. Num carregamento novo, ela se perde sem aviso e a demonstração volta à tela de entrada | Informar até onde a seleção é preservada, sem prometer persistência |
-| Encerramento e pendências | Sem suporte, como previsto | Nenhuma tela de aprovação, histórico ou registro de pendências |
+### Preparação para prototipagem de M03
 
-Os estados de falha da demonstração não foram testados, e os modelos não passaram por sessão com usuários.
+[F] O percurso encenado da Entrega 11 apresenta falha localizada, oferece nova tentativa ou permite deixar o vídeo pendente e revisar os outros. Desistir da confirmação da nova tentativa devolve a pessoa à falha. M03 permite ir de c3 a c4 para revisar outras partidas acessíveis na mesma sessão. Se a pessoa encerrar em e2, pode iniciar outra consulta por a2.
 
-### Preparação para o Figma de M03
-
-| Conversa do MoLIC | Estados e informações a representar no Figma |
-|---|---|
-| Enviar vídeos | Arquivos informados, partida/tempo conferidos, validade e estado do envio; ação de iniciar análise |
-| Acompanhar análise | Partida e tentativa identificáveis, estado conhecido, atualização e percentual apenas quando calculável |
-| Consultar resultados | Análises/candidatos disponíveis, origem, tipo, critérios de consulta, prévia e limites dos resultados |
-| Examinar detalhes | Referência do corte, partida/arquivo, tipo sugerido, prévia, instante, intervalo, duração e tamanho |
-| Consultar erro | Partida e tentativa afetadas, descrição, causa conhecida ou desconhecida, orientação e referência da pendência |
-| Confirmar cancelamento | Identificação da análise e consequências; ação de confirmação a compatibilizar com o desenho e o suporte do serviço |
-| Obter resultado | Corte e tamanho, estado conhecido da transferência, progresso quando calculável, desistência e retorno após conclusão |
-| Confirmar exclusão | Resultado/partida afetados, consequências, confirmação e desistência; comportamento ainda a compatibilizar com a Entrega 9 |
-| Acesso e saída | Login e saída global conforme o desenho; autenticação depende de definição de escopo e backend |
-
-Os caminhos de recuperação ainda ausentes devem ser resolvidos no MoLIC antes de serem introduzidos no Figma. Para obter um corte, a indicação de conclusão da aplicação deve ser distinguida da verificação humana de salvamento e reprodução. A exibição dos metadados não significa que um CSV foi gerado ou baixado.
+[?] O protótipo usa exemplos. Validação de envio real, associação à tentativa e recuperação de um serviço de análise dependem de confirmação técnica.
 
 ## Registro de elaboração
 
-Em 09/11/2026, Giovanni elaborou o diagrama e exportou o PNG para exibição no GitHub. Os diálogos/signos e esta documentação foram preenchidos com assistência do Codex. A leitura, a cobertura e o checklist descrevem o artefato disponível, sem declarar validação pelo professor, com usuários ou pelo backend. Os arquivos PNG e Excalidraw são, respectivamente, a visualização e a fonte de edição.
+Em 09/11/2026, Giovanni elaborou o diagrama e exportou o PNG para exibição no GitHub. Os diálogos/signos e esta documentação foram preenchidos com assistência do Codex. [F] O [PNG original](../assets/10_molic/molic_persona3.png) e a [fonte Excalidraw original](../assets/10_molic/objetivos_p03.excalidraw) registram a primeira versão. O diagrama em SVG é a fonte editável do modelo atual.
+
+[F] Em 18/11/2026, Pedro aplicou o parecer aos três modelos a pedido da equipe. A autoria de M01, M02 e M03 corresponde aos responsáveis identificados em cada recorte. [?] A apresentação individual, a confirmação da equipe e a avaliação com usuários seguem pendentes.
+
+[F] Na mesma data, a revisão independente orientou a conferência dos arquivos antes de GCC e os ajustes de recuperação, retomada e rastreabilidade de M03. O teste técnico do CSV local está registrado na [Entrega 11](11_figma.md#verificações-e-limites-da-evidência).
+
+[F] A retomada em M03 inclui f47 para verificar o pedido original após encerrar com pendência em e4.

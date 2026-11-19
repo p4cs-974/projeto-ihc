@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1709" viewBox="0 0 1200 1709" role="img" aria-labelledby="title desc">
 <title id="title">M02 · Obter material identificável para a supervisão editorial externa</title>
 <desc id="desc">Diagrama MoLIC M02 da Entrega 10, Equipe 16. Proposta para revisão individual. Cenas, processos e falas identificados por c, p, a, e e f, explicados em docs/10_molic.md.</desc>
-<defs><style>text{font-family:Arial, Helvetica, sans-serif;fill:#1f2a33}.h1{font-size:28px;font-weight:700}.sub{font-size:17px;fill:#425b70}.stitle{font-size:19px;font-weight:700}.sid{fill:#0b5cad}.tag{font-size:16px;font-weight:700;fill:#176559}.dname{font-size:16px;font-weight:700}.dline{font-size:16px}.lbl{font-size:16px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.fid{font-weight:700;fill:#0b5cad}.nid{font-size:17px;font-weight:700;fill:#0b5cad}.note{font-size:16px;font-style:italic;fill:#7a4b0b}.leg{font-size:16px}</style><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker><marker id="arr-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker></defs>
+<defs><style>text{font-family:Arial, Helvetica, sans-serif;fill:#1f2a33}.h1{font-size:28px;font-weight:700}.sub{font-size:17px;fill:#425b70}.stitle{font-size:19px;font-weight:700}.sid{fill:#0b5cad}.tag{font-size:16px;font-weight:700;fill:#176559}.dname{font-size:18px;font-weight:700}.dline{font-size:18px}.lbl{font-size:16px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.fid{font-weight:700;fill:#0b5cad}.nid{font-size:17px;font-weight:700;fill:#0b5cad}.note{font-size:16px;font-style:italic;fill:#7a4b0b}.leg{font-size:16px}</style><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker><marker id="arr-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker></defs>
 <rect width="1200" height="1709" fill="#ffffff"/>
 <text x="40" y="44" class="h1" text-anchor="start">M02 · Obter material identificável para a supervisão editorial externa</text>
 <text x="40" y="72" class="sub" text-anchor="start">Lucas Roberto Boccia dos Santos (22.123.012-1) · CI02/T02 · O06–O07 pelo editor, O04 para item faltante; sai para O09/O10</text>
@@ -19,49 +19,42 @@
 <line x1="200" y1="270" x2="740" y2="270" stroke="#1f2a33" stroke-width="1.5"/>
 <text x="214" y="257" class="stitle"><tspan class="sid">c1</tspan> · Preparar material para a supervisão</text>
 <text x="726" y="257" class="tag" text-anchor="end">O06 · O07</text>
-<text x="214" y="294" class="dname" text-anchor="start">conferir identificação da seleção {</text>
-<text x="228" y="315" class="dline" text-anchor="start">d: lista(candidato S16: id, partida S01, tempo S02,</text>
-<text x="249" y="336" class="dline" text-anchor="start">tipo S17, relógio S18, intervalo S20),</text>
-<text x="249" y="357" class="dline" text-anchor="start">quantidade S24 }</text>
-<text x="214" y="378" class="dname" text-anchor="start">retirar item {</text>
-<text x="228" y="399" class="dline" text-anchor="start">d+u: seleção S23 }</text>
-<text x="214" y="420" class="dname" text-anchor="start">distinguir saídas {</text>
-<text x="228" y="441" class="dline" text-anchor="start">d: CSV S26 com referências da seleção, exige seleção não vazia;</text>
-<text x="249" y="462" class="dline" text-anchor="start">MP4 S27 obtido por corte, sem exigir seleção }</text>
-<text x="214" y="483" class="dname" text-anchor="start">ver tamanho dos arquivos {</text>
-<text x="228" y="504" class="dline" text-anchor="start">d: tamanho S33 de cada MP4: conhecido, estimado ou indisponível }</text>
-<text x="214" y="525" class="dname" text-anchor="start">reconhecer limites {</text>
-<text x="228" y="546" class="dline" text-anchor="start">d: seleção preservada só nesta sessão S29;</text>
-<text x="249" y="567" class="dline" text-anchor="start">seleção não é aprovação; decisão S31 fica fora do sistema }</text>
+<text x="214" y="294" class="dname" text-anchor="start">conferir a seleção {</text>
+<text x="228" y="316" class="dline" text-anchor="start">d: candidato S16, partida S01, tempo S02 e tipo S17</text>
+<text x="228" y="338" class="dline" text-anchor="start">d: relógio S18, intervalo S20 e quantidade S24</text>
+<text x="228" y="360" class="dline" text-anchor="start">d+u: retirar item S23 }</text>
+<text x="214" y="382" class="dname" text-anchor="start">distinguir saídas {</text>
+<text x="228" y="404" class="dline" text-anchor="start">d: CSV S26 com as referências da seleção</text>
+<text x="228" y="426" class="dline" text-anchor="start">d: MP4 individual S27 e seu tamanho S33 }</text>
+<text x="214" y="448" class="dname" text-anchor="start">retomar a seleção {</text>
+<text x="228" y="470" class="dline" text-anchor="start">d: contexto disponível nesta sessão S29 }</text>
+<text x="214" y="492" class="dname" text-anchor="start">conferir arquivos {</text>
+<text x="228" y="514" class="dline" text-anchor="start">d: confira os arquivos salvos no dispositivo S28 }</text>
 </g>
 <g id="c2" data-kind="scene">
 <rect x="200" y="808" width="540" height="290" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
 <line x1="200" y1="848" x2="740" y2="848" stroke="#1f2a33" stroke-width="1.5"/>
 <text x="214" y="835" class="stitle"><tspan class="sid">c2</tspan> · Conferir corte a encaminhar</text>
 <text x="726" y="835" class="tag" text-anchor="end">O06 · O07</text>
-<text x="214" y="872" class="dname" text-anchor="start">conferir identificação {</text>
-<text x="228" y="893" class="dline" text-anchor="start">d: id do candidato S16, partida S01, tempo S02,</text>
-<text x="249" y="914" class="dline" text-anchor="start">vídeo de origem S03 }</text>
-<text x="214" y="935" class="dname" text-anchor="start">conferir referências temporais {</text>
-<text x="228" y="956" class="dline" text-anchor="start">d: relógio do jogo S18, instante no arquivo S19,</text>
-<text x="249" y="977" class="dline" text-anchor="start">intervalo S20, duração do corte S21 }</text>
-<text x="214" y="998" class="dname" text-anchor="start">decidir inclusão {</text>
-<text x="228" y="1019" class="dline" text-anchor="start">d+u: candidato S16 na seleção S23 (incluir ou retirar) }</text>
-<text x="214" y="1040" class="dname" text-anchor="start">ver vídeo para obtenção {</text>
-<text x="228" y="1061" class="dline" text-anchor="start">d: MP4 S27 do corte, tamanho S33 }</text>
+<text x="214" y="872" class="dname" text-anchor="start">identificar o corte {</text>
+<text x="228" y="894" class="dline" text-anchor="start">d: candidato S16, partida S01, tempo S02, gravação S03 }</text>
+<text x="214" y="916" class="dname" text-anchor="start">conferir as referências {</text>
+<text x="228" y="938" class="dline" text-anchor="start">d: tipo sugerido S17, relógio S18 e posição no arquivo S19</text>
+<text x="228" y="960" class="dline" text-anchor="start">d: intervalo S20 e duração S21 }</text>
+<text x="214" y="982" class="dname" text-anchor="start">decidir inclusão {</text>
+<text x="228" y="1004" class="dline" text-anchor="start">d+u: incluir ou retirar candidato S16 na seleção S23 }</text>
+<text x="214" y="1026" class="dname" text-anchor="start">obter o vídeo {</text>
+<text x="228" y="1048" class="dline" text-anchor="start">d: MP4 S27 e tamanho individual S33 }</text>
 </g>
 <g id="c3" data-kind="scene">
 <rect x="200" y="1228" width="540" height="201" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
 <line x1="200" y1="1268" x2="740" y2="1268" stroke="#1f2a33" stroke-width="1.5"/>
 <text x="214" y="1255" class="stitle"><tspan class="sid">c3</tspan> · Localizar item para a supervisão</text>
 <text x="726" y="1255" class="tag" text-anchor="end">O04 · O06</text>
-<text x="214" y="1292" class="dname" text-anchor="start">restringir consulta {</text>
-<text x="228" y="1313" class="dline" text-anchor="start">d+u: critérios S22: partida S01, tempo S02, tipo de lance S17 }</text>
-<text x="214" y="1334" class="dname" text-anchor="start">ver candidatos {</text>
-<text x="228" y="1355" class="dline" text-anchor="start">d: lista(candidato S16: tipo S17, relógio S18, tempo S02,</text>
-<text x="249" y="1376" class="dline" text-anchor="start">indicação de já estar na seleção S23) }</text>
-<text x="214" y="1397" class="dname" text-anchor="start">reconhecer seleção mantida {</text>
-<text x="228" y="1418" class="dline" text-anchor="start">d: quantidade selecionada S24, inclusive fora da consulta }</text>
+<text x="214" y="1292" class="dname" text-anchor="start">consultar candidatos {</text>
+<text x="228" y="1314" class="dline" text-anchor="start">d+u: critérios S22. d: candidato S16, tipo S17 e relógio S18 }</text>
+<text x="214" y="1336" class="dname" text-anchor="start">conferir a seleção {</text>
+<text x="228" y="1358" class="dline" text-anchor="start">d: itens em S23 e total S24, inclusive fora da consulta }</text>
 </g>
 <g id="p1" data-kind="process">
 <rect x="952" y="865" width="26" height="26" fill="#1f2a33"/>
@@ -89,15 +82,17 @@
 <circle cx="1010" cy="653" r="8.5" fill="#1f2a33"/>
 <text x="1010" y="693" class="nid" text-anchor="middle">e2</text>
 </g>
-<g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="precond: resultados acessíveis (O02) | u: preparar material para a supervisão">
+<g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="precond: resultados acessíveis (O02) | u: preparar material para a supervisão | gco: O00 · Obter material" data-goal="O00">
 <polyline points="300,152 300,230" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
 <text x="312" y="180" class="lbl" text-anchor="start"><tspan class="fid">f1</tspan> · precond: resultados acessíveis (O02)</text>
 <text x="312" y="199" class="lbl" text-anchor="start">u: preparar material para a supervisão</text>
+<text x="312" y="219" class="tag" text-anchor="start">gco: O00 · Obter material</text>
 </g>
-<g id="f2" data-kind="edge" data-from="a2" data-to="c1" data-style="solid" data-label="u: atender pedido do supervisor | (referência, reenvio ou item)">
+<g id="f2" data-kind="edge" data-from="a2" data-to="c1" data-style="solid" data-label="u: atender pedido do supervisor | (referência, reenvio ou item) | gco: O00 · Obter material" data-goal="O00">
 <polyline points="640,152 640,230" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
 <text x="652" y="180" class="lbl" text-anchor="start"><tspan class="fid">f2</tspan> · u: atender pedido do supervisor</text>
 <text x="652" y="199" class="lbl" text-anchor="start">(referência, reenvio ou item)</text>
+<text x="652" y="219" class="tag" text-anchor="start">gco: O00 · Obter material</text>
 </g>
 <g id="f3" data-kind="edge" data-from="c1" data-to="c2" data-style="solid" data-label="u: conferir corte">
 <polyline points="300,578 300,808" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
@@ -177,35 +172,36 @@
 <text x="48" y="278" class="lbl" text-anchor="start"><tspan class="fid">f18</tspan> · u: voltar ao</text>
 <text x="48" y="297" class="lbl" text-anchor="start">material</text>
 </g>
-<g id="f19" data-kind="edge" data-from="c1" data-to="e1" data-style="solid" data-label="u: encerrar com o | material obtido">
+<g id="f19" data-kind="edge" data-from="c1" data-to="e1" data-style="solid" data-label="u: encerrar após | conferir os arquivos | gcc: O00 · Obter material" data-goal="O00">
 <polyline points="740,548 790,548 790,638" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
-<text x="802" y="580" class="lbl" text-anchor="start"><tspan class="fid">f19</tspan> · u: encerrar com o</text>
-<text x="802" y="599" class="lbl" text-anchor="start">material obtido</text>
+<text x="802" y="580" class="lbl" text-anchor="start"><tspan class="fid">f19</tspan> · u: encerrar após</text>
+<text x="802" y="599" class="lbl" text-anchor="start">conferir os arquivos</text>
+<text x="802" y="619" class="tag" text-anchor="start">gcc: O00 · Obter material</text>
 </g>
 <g id="f20" data-kind="edge" data-from="c1" data-to="e2" data-style="solid" data-label="u: encerrar com pendência">
 <polyline points="740,518 1010,518 1010,638" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
 <text x="750" y="510" class="lbl" text-anchor="start"><tspan class="fid">f20</tspan> · u: encerrar com pendência</text>
 </g>
-<text x="752" y="715" class="note" text-anchor="start">Fora do sistema: conferir</text>
-<text x="752" y="735" class="note" text-anchor="start">arquivos salvos, transferir,</text>
-<text x="752" y="755" class="note" text-anchor="start">avisar Arnaldo; S31 em O09</text>
+<text x="752" y="715" class="note" text-anchor="start">Fora do sistema: transferir</text>
+<text x="752" y="735" class="note" text-anchor="start">os arquivos conferidos e</text>
+<text x="752" y="755" class="note" text-anchor="start">avisar Arnaldo (S31, O09).</text>
 <text x="978" y="715" class="note" text-anchor="start">Fora do sistema: pendência</text>
 <text x="978" y="735" class="note" text-anchor="start">ou ajuste no original</text>
 <text x="978" y="755" class="note" text-anchor="start">(O10); novo pedido do</text>
 <text x="978" y="775" class="note" text-anchor="start">supervisor volta por a2</text>
 <g id="legenda" transform="translate(40,1489)">
 <rect x="0" y="0" width="1120" height="190" rx="10" fill="#f6f8fa" stroke="#c9d1d9"/>
-<text x="18" y="30" class="stitle" text-anchor="start">Legenda (notação da disciplina; não é fluxo de telas)</text>
+<text x="18" y="30" class="stitle" text-anchor="start">Legenda MoLIC</text>
 <circle cx="30" cy="62" r="10" fill="#1f2a33"/>
-<text x="62" y="68" class="leg" text-anchor="start">abertura (A9; B3)</text>
+<text x="62" y="68" class="leg" text-anchor="start">ponto de abertura (A9; B3)</text>
 <circle cx="30" cy="97" r="12" fill="#fff" stroke="#1f2a33" stroke-width="2.5"/><circle cx="30" cy="97" r="7" fill="#1f2a33"/>
-<text x="62" y="103" class="leg" text-anchor="start">encerramento (A9, A10)</text>
+<text x="62" y="103" class="leg" text-anchor="start">ponto de encerramento (A9, A10)</text>
 <rect x="19" y="121" width="22" height="22" fill="#1f2a33"/>
 <text x="62" y="143" class="leg" text-anchor="start">processo do sistema; saídas sempre d: (A11)</text>
 <rect x="14" y="152" width="34" height="24" rx="6" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
 <text x="62" y="174" class="leg" text-anchor="start">cena: tópico, diálogos e signos (A8, A14)</text>
 <line x1="450" y1="62" x2="520" y2="62" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
-<text x="532" y="68" class="leg" text-anchor="start">fala de transição (A6)</text>
+<text x="532" y="68" class="leg" text-anchor="start">fala de transição (gco/gcc)</text>
 <line x1="450" y1="97" x2="520" y2="97" stroke="#1f2a33" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#arr-d)"/>
 <text x="532" y="103" class="leg" text-anchor="start">ruptura ou recuperação (A11–A13)</text>
 <text x="450" y="138" class="leg" text-anchor="start">u: fala do usuário · d: fala do preposto · d+u: ambos (A8, A14)</text>

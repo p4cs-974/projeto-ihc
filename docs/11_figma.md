@@ -75,12 +75,12 @@ Os responsáveis abaixo são os autores dos modelos de origem, sem atribuir assi
 | M01, c1 e p1; CI01 | O04, T01 | F04, busca em A e filtros em A/B | Localizar por metadados, tipo e tempo. A oferece limpar uma consulta sem resultados. B indica contagens; C agrupa por tipo e não tem busca | Pedro |
 | M01, c2 e p2; CI01 | O05, T01 | F04 → F05 → F04 | Abrir e reproduzir corte, conferir origem, relógio do jogo, posição no arquivo, intervalo e duração. Contexto insuficiente e suspeita de omissão exigem julgamento humano e conferência externa | Pedro |
 | M01, c3, p3 e p4; CI01 | O06/O07, T01 e continuidade em T02 | Seleção em F04/F05 → F06 | CSV exige seleção não vazia; MP4 individual pode ser obtido sem seleção. Não há lista editável exclusiva da seleção nem confirmação de salvamento local | Pedro |
-| M02, c1/c2/c3 e p1–p4; CI02 | O04/O06/O07, T01/T02 | F04, F05 e F06 | A conferência completa da identificação se distribui entre F04/F05 e o CSV. F06 reúne as saídas, a quantidade e os tamanhos, com cobertura parcial de M02 c1. Transferência, aprovação editorial e pedidos de ajuste ocorrem fora do sistema | Lucas |
+| M02, c1/c2/c3 e p1–p4; CI02 | O04/O06/O07, T01/T02 | F04, F05 e F06 | A conferência completa da identificação se distribui entre F04/F05 e o CSV. F06 reúne as saídas, a quantidade, os tamanhos individuais e a soma dos bytes dos MP4 selecionados, com cobertura parcial de M02 c1. Transferência, aprovação editorial e pedidos de ajuste ocorrem fora do sistema | Lucas |
 | M03, envio e progresso; CI03 | O01/O02, preparação de T03 | F01 → F02 → F03 → F04 | Entrada própria indisponível; preparação usa exemplos. Progresso, fila e conclusão são simulados, com mídia real | Giovanni |
-| M03, erro e consulta; CI03 | O03/O04/O05/O07, T03 | F02 escolhe cenário; F03/F04 comunicam estado; F05 apresenta o corte | Falha encenada permite nova tentativa localizada ou deixar pendente. Não representa recuperação de um detector real, login, exclusão de resultados ou cancelamento de análise/download desenhados no M03 | Giovanni |
+| M03 c3–c8, CI03 | O03–O08, T03 e T01/A04 | F02 escolhe cenário. F03/F04 comunicam o estado. F05 apresenta o corte. F06 separa CSV e MP4. | [F] A falha encenada permite nova tentativa localizada ou deixar uma partida pendente e revisar as outras. [?] A consulta de pedido sem resposta (c8/p8) depende da identificação do pedido e do suporte do serviço de análise. Autenticação, exclusão de resultados e cancelamento efetivo estão fora do escopo do MoLIC e da simulação. | Giovanni |
 | M01/M02, retomada; M03, encerramento | O08 | Troca entre telas e A/B/C | Seleção mantida na sessão, sem persistência garantida após recarga. Não há histórico nem registro permanente de pendências | Equipe |
 
-O09 e O10 continuam externos. A navegação lateral dá acesso às etapas existentes, sem introduzir uma nova tarefa ou alterar o escopo de IHC ou do TCC.
+[F] A seleção define quais candidatos entram no CSV. O MP4 é disponibilizado por corte. A decisão editorial (O09) e o ajuste no original (O10) ocorrem fora da interface. A navegação lateral dá acesso às etapas existentes, sem introduzir uma nova tarefa ou alterar o escopo de IHC ou do TCC.
 
 A seção de preparação da Entrega 10 descreve a demonstração no momento da modelagem. Esta entrega registra o estado posterior. A obtenção agora reúne links e saídas em um diálogo, mas não implementa todas as propostas daquele documento.
 
@@ -126,7 +126,7 @@ Em A, o detalhe expande na lista; em B, abre junto ao marcador; em C, usa diálo
 
 ![F06: diálogo com CSV e arquivos MP4 separados](../assets/11_figma/f06-obtencao.png)
 
-**Objetivo:** obter material para continuidade externa, O07, M01 c3 e M02 c1. Distingue a relação CSV, S26, dos vídeos MP4, S27; informa quantidade e tamanho, S24/S33. O CSV contém referências, tempos e links, sem vídeo incorporado. Cada MP4 é um corte separado. A montagem permanece no editor externo.
+**Objetivo:** obter material para continuidade externa, O07, M01 c3 e M02 c1. Distingue a relação CSV (S26) dos vídeos MP4 (S27). Informa a quantidade (S24) e o tamanho individual (S33). [F] F06 também exibe o total calculado a partir dos tamanhos dos MP4 selecionados no manifesto. O CSV contém referências, tempos e links, sem vídeo incorporado. Cada MP4 é um corte separado. A montagem permanece no editor externo.
 
 Seleção vazia desativa a obtenção da seleção. Os MP4 individuais continuam acessíveis pelo detalhe. O navegador pode solicitar permissão para vários downloads; links individuais continuam disponíveis. Disparar o download não comprova salvamento, reprodução ou espaço disponível, S28.
 
@@ -137,11 +137,12 @@ Seleção vazia desativa a obtenção da seleção. Os MP4 individuais continuam
 | Manifesto em carregamento ou indisponível | Exemplos desativados durante carga; erro textual se o manifesto falhar | Não é validação de arquivo enviado |
 | Lote vazio | Mensagem e caminho para carregar os exemplos | Remoção afeta apenas a demonstração |
 | Fila e processamento | Estado por vídeo, progresso e acesso à análise | Progresso simulado, sem previsão técnica de prazo |
-| Falha em um vídeo | Preserva os outros vídeos; oferece confirmação de nova tentativa ou deixar pendente | Falha e recuperação encenadas; reenvio não implementado |
+| Falha em um vídeo (M03 c3, c7) | [F] Preserva os outros vídeos. Oferece nova tentativa localizada ou saída para revisar os outros. Em **Cancelar**, fecha a confirmação e retorna à falha. | A recuperação é encenada. **Cancelar** desiste da confirmação de uma nova tentativa. |
 | Vídeo sem lances | Conclusão com ausência de candidatos nesse tempo | Não prova ausência de eventos na partida |
 | Consulta sem resultados | Mensagem em A e limpeza dos critérios, preservando a seleção | B e C não têm o mesmo mecanismo de busca |
 | Mídia indisponível | Feedback de falha e nova tentativa do player | Falha real de rede não repetida nesta rodada |
 | Seleção vazia | Obtenção da seleção indisponível; inclusão reversível | MP4 individual independe da seleção |
+| Obtenção de CSV e MP4 | [F] F06 oferece a relação da seleção e os MP4 por corte. A conferência técnica abriu os arquivos salvos. | A pessoa confirma salvamento e reprodução no dispositivo. A interface disponibiliza os arquivos. |
 | Retomada | Contexto mantido enquanto a sessão permanece aberta | Recarga perde a seleção; sem recuperação persistente |
 
 ## Sistema visual e acessibilidade
@@ -168,6 +169,8 @@ A mídia da análise e do detalhe avançou durante os testes. Para conferir todo
 
 As capturas são do protótipo após os ajustes aprovados, sem anotações de proposta. Foram conferidos o parse do JavaScript, a ausência de overflow horizontal nos percursos verificados e `git diff --check`. Na conferência final do preview publicado, o navegador baixou um CSV com Suárez e Defesa do Barcelona e os dois MP4 correspondentes. Foram conferidos seleção, referências, URLs e tempos do CSV contra o manifesto. Os hashes dos vídeos coincidem com os arquivos de origem, e ambos decodificaram integralmente sem erro. Os arquivos salvos foram abertos por um seletor de arquivos em uma página temporária de teste e reproduzidos até o evento `ended` no navegador, sem buscar novamente a mídia do site. Suárez completou 28 s e 700 quadros; Defesa do Barcelona, 27 s e 675 quadros, sem quadros descartados ou erro do player nos dois casos. Quadros dos arquivos salvos e a captura do player foram inspecionados. Não foi feita avaliação auditiva da qualidade do áudio. Não houve sessão com participantes, teste com leitor de tela, avaliação mobile ou comprovação de metas das Entregas 7 e 8.
 
+[F] Na revisão de 18/11/2026, a fonte local do protótipo passou a avisar que o CSV foi enviado ao navegador e a pedir que a pessoa confira o arquivo salvo. Em Chromium local, a seleção de um corte produziu um CSV que abriu com o título, a partida e o endereço do MP4 esperado. A tabela de acesso registra a publicação de 13/11.
+
 ## Checklist e pendências para entrega
 
 - [x] Um protótipo integrado com fonte editável versionada.
@@ -181,7 +184,7 @@ As capturas são do protótipo após os ajustes aprovados, sem anotações de pr
 - [ ] Equipe revisou e aprovou os fluxos e a cobertura parcial dos modelos.
 - [x] Revisão publicada e acesso público por HTTPS conferido sem autenticação.
 - [x] CSV e dois MP4 baixados pelo navegador, conferidos e reproduzidos integralmente a partir dos arquivos salvos.
-- [x] Por decisão de Pedro, os MoLIC foram mantidos como estão; a cobertura parcial e as divergências permanecem explícitas, sem declarar compatibilização completa.
+- [x] [F] Na publicação de 13/11/2026, a equipe registrou a cobertura dos MoLIC disponíveis nessa data. A tabela desta entrega referencia os modelos da revisão de 18/11/2026 e indica a cobertura parcial.
 
 ## Registro de elaboração
 

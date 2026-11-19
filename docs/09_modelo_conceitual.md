@@ -1,6 +1,7 @@
 # Entrega 9 — Modelo conceitual e design centrado na comunicação
 
-**Data:** 05/11/2026\
+**Data:** 05/11/2026 (versão original)\
+**Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md) e ajustes após revisão independente\
 **Status:** 🟨 preenchimento documental concluído; revisão pelos integrantes e validação dos modelos pendentes\
 **Responsabilidade:** recortes individuais de referência e consolidação do mapa de objetivos e do esquema de signos da Equipe 16.
 
@@ -10,7 +11,7 @@ Transformar os cenários de problema em propostas de interação para preparar g
 
 ### Base conceitual, autoria e limites
 
-O [CC8122-ProjetoIHC-ModelosConceituais](../slides_plinio/CC8122-ProjetoIHC-ModelosConceituais.pdf.pdf), slides 5–10, 12–16 e 19, fundamenta cenários com ações e respostas, refinamento, conversas organizadas por tópicos e integração dos objetivos. O [CC8122-Esquema-Conceitual_Signos](../slides_plinio/CC8122-Esquema-Conceitual_Signos.pdf), slides 3–7, fundamenta origem, semântica, conteúdo, restrições, padrões e mecanismos de prevenção/recuperação dos signos. Ambos se referem a Barbosa e Silva (2010). O primeiro conjunto remete a um vídeo no Moodle para o mapa de objetivos; esse vídeo não está entre os materiais consultados. O mapa abaixo explicita a organização adotada, sem atribuir ao vídeo uma notação não verificada.
+O [CC8122-ProjetoIHC-ModelosConceituais](../slides_plinio/CC8122-ProjetoIHC-ModelosConceituais.pdf.pdf), slides 5–10, 12–16 e 19, fundamenta cenários com ações e respostas, refinamento, conversas organizadas por tópicos e integração dos objetivos. O [CC8122-Esquema-Conceitual_Signos](../slides_plinio/CC8122-Esquema-Conceitual_Signos.pdf), slides 3–7, fundamenta origem, semântica, conteúdo, restrições, padrões e mecanismos de prevenção/recuperação dos signos. Ambos se referem a Barbosa e Silva (2010). O primeiro conjunto remete a um vídeo no Moodle para o mapa de objetivos; esse vídeo não está entre os materiais consultados. A classificação do mapa segue as definições de objetivo final, instrumental direto e instrumental indireto do [parecer da Entrega 9](../feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md#1-reconstruir-o-mapa-segundo-os-tipos-de-objetivos-da-teoria).
 
 | Base do projeto | Uso nesta entrega | Limite preservado |
 |---|---|---|
@@ -23,7 +24,7 @@ O [CC8122-ProjetoIHC-ModelosConceituais](../slides_plinio/CC8122-ProjetoIHC-Mode
 
 **Escopo:** enviar → acompanhar → revisar → baixar. Ajustar cortes, montar, publicar, transferir material ao supervisor e chancelar a seleção continuam externos. Não se introduzem autenticação, administração, reconhecimento automático de atletas, histórico persistente ou parâmetros de IA. A03/histórico, H15/H29/H35, continua em investigação.
 
-**Modelo proposto e demonstração atual:** os cenários descrevem o uso pretendido, incluindo condições ainda não implementadas. O protótipo da Entrega 6 utiliza quatro arquivos de exemplo, um por tempo de duas partidas, oito cortes MP4 e análise simulada; não envia arquivos próprios nem executa o detector. Falhas de análise, recuperação localizada e retomada após recarga permanecem lacunas. A seleção atual se mantém ao alternar visualizações, mas se perde ao recarregar. Essas condições devem ser explicitadas na apresentação da demonstração.
+**Modelo proposto e demonstração atual:** [F] A [demonstração da Entrega 6](06_prototipacao_papel.md) usa quatro tempos de exemplo, oito cortes MP4 e uma análise simulada. O percurso de falha encena uma nova tentativa localizada. A seleção se mantém ao alternar visualizações e se perde ao recarregar. [?] Envio de arquivos próprios, recuperação no serviço real e retomada após recarga dependem de confirmação técnica.
 
 ## 1. Cenários de interação
 
@@ -49,13 +50,13 @@ Cada CI reescreve o **cenário refinado** de mesmo número da Entrega 4. O texto
 
 Em um dia de rodada na produtora de conteúdo esportivo, Rafael recebe pelo servidor as gravações integrais de várias partidas já encerradas **e precisa selecionar seus melhores momentos com apoio da análise automática.** Divide com outros dois editores uma sala de edição com pouca luz e trabalha diante de um computador com tela ampla. A seleção de cada partida precisa ficar pronta no mesmo dia, porque Arnaldo, que supervisiona a pós-produção, decide com base nela o que segue para a montagem.
 
-**Antes de solicitar a análise, Rafael informa as gravações e confere a partida, o tempo correspondente e os arquivos reconhecidos. O sistema apresenta o conjunto e informa restrições conhecidas ou problemas de entrada. Rafael retira uma entrada indevida, confere as restantes e solicita o processamento. O sistema distingue a aceitação do envio do início e da conclusão da análise e associa o acompanhamento à referência da tentativa, quando fornecida. Sem essa referência, comunica a limitação, sem presumir qual tentativa produziu um resultado. Durante a espera, Rafael pode continuar outra edição e voltar para consultar o estado de cada entrada, sem interpretar a demora como falha.**
+**[H] Rafael confere a que partida e tempo cada gravação pertence, corrige uma entrada indevida e solicita a análise. A interface informa se o envio foi aceito e se os resultados já estão disponíveis. Enquanto aguarda, Rafael continua outra edição.**
 
-**Quando há resultados acessíveis, o sistema disponibiliza candidatos com tipo de lance, referência temporal, vídeo de origem e trecho para reprodução. Rafael trabalha uma partida por vez, examina a construção e o desfecho das jogadas e inclui na seleção os candidatos que considera pertinentes. A classificação automática é uma sugestão, não uma decisão editorial. Se nenhum candidato lhe servir, pode encerrar a revisão sem seleção e reconhecer a necessidade de busca externa.**
+**[H] Quando há resultados acessíveis, Rafael revisa uma partida por vez. Ele usa as referências e a prévia de cada corte para examinar a construção e o desfecho da jogada. Inclui os candidatos que considera pertinentes. Se nenhum servir, deixa a busca no original pendente.**
 
-**Durante a revisão da última partida, chega pelo chat uma pergunta de Arnaldo sobre um lance de outra partida. Rafael usa a identificação e a referência temporal para localizar o material pedido. Ao voltar, confere a partida, o candidato e os itens selecionados ainda disponíveis na sessão; se o contexto não tiver sido preservado, reconhece que precisa reconstruí-lo. A proposta não presume recuperação após recarga. Ao reproduzir uma finalização, julga que o trecho começa tarde e não mostra a troca de passes. O sistema comunica a origem e os limites existentes, sem oferecer edição detalhada. Rafael confere o original na ferramenta externa, ajusta o corte quando viável e distingue esse arquivo externo dos candidatos gerados pelo sistema. Uma suspeita de omissão exige conferir a gravação; a lista de candidatos não demonstra cobertura completa.**
+**[H] Arnaldo pergunta pelo chat sobre um lance de outra partida. Rafael localiza o trecho pedido e, ao voltar, confere as referências e a seleção que a sessão ainda mostra. Percebe que uma finalização começa tarde e ajusta o corte no vídeo original, em outra ferramenta. Se suspeitar de omissão, volta ao original para conferir.**
 
-**Rafael confere os itens incluídos e solicita a relação em CSV e os vídeos individuais necessários. O sistema explica que o CSV contém metadados e endereços dos itens selecionados e requer seleção não vazia; cada MP4 disponível contém um vídeo e pode ser obtido individualmente sem inclusão na seleção, mesmo que ela esteja vazia. Informa o tamanho de cada MP4 quando houver base, distinguindo valor conhecido, estimativa fundamentada e informação indisponível. Rafael abre a relação salva e reproduz os arquivos obtidos antes de copiá-los para o servidor e avisar Arnaldo pelo chat. Encerra esta etapa distinguindo cortes conferidos, ajustes externos e o que ficou sem revisão. Obter arquivos não significa aprovação editorial nem ausência de lances omitidos.**
+**[H] Rafael confere a seleção, obtém o CSV com as referências e baixa os MP4 de que precisa. Abre os arquivos salvos, copia o material ao servidor e avisa Arnaldo pelo chat. Distingue o que conferiu, os ajustes externos e as pendências ao encaminhar. A decisão editorial cabe a Arnaldo.**
 
 #### Diferenças relevantes de CI01
 
@@ -76,13 +77,11 @@ Em um dia de rodada na produtora de conteúdo esportivo, Rafael recebe pelo serv
 
 Em um dia movimentado de rodada de futebol na redação da emissora esportiva, Arnaldo atua como editor-chefe responsável por supervisionar a produção de conteúdo digital e chancelar a publicação dos melhores momentos. Na área de pós-produção, vários editores trabalham simultaneamente em ilhas de edição, cada um encarregado de uma partida diferente. **O apoio do sistema ocorre na preparação do material pelo editor; Arnaldo continua a receber e avaliar as seleções por ferramentas e canais externos.**
 
-**Após revisar os candidatos, Rafael confere com o sistema a seleção que pretende encaminhar, identificando a partida, o tempo e os cortes incluídos. Solicita o CSV com as referências e baixa os MP4 individuais necessários. O sistema distingue as saídas: o CSV exige seleção não vazia; um MP4 disponível pode ser obtido independentemente dela. Informa o tamanho de cada vídeo quando houver dados, sem afirmar espaço livre suficiente. Não declara que os itens selecionados foram aprovados para publicação. Rafael confere os arquivos salvos, reúne também os cortes ajustados externamente e comunica pelo chat o material disponível e as dúvidas ainda sem decisão. A transferência e esse aviso são realizados fora da aplicação.**
+**[H] Rafael confere com o sistema a partida, o tempo e as referências dos cortes escolhidos. Obtém o CSV da seleção e os MP4 necessários. Abre os arquivos salvos e os encaminha a Arnaldo, com os cortes ajustados externamente e as dúvidas ainda em aberto.**
 
-**Arnaldo prioriza o atendimento e abre os arquivos recebidos nas ferramentas habituais. Usa a identificação e os tempos para discutir a mesma jogada com Rafael. Diante de um corte do gol da vitória que não mostra a falta anterior, avalia que o trecho não permite o julgamento editorial necessário. Pede a Rafael que confira o original e ajuste o recorte externamente. Se a referência não bastar ou o arquivo não abrir, solicita a identificação correta ou o reenvio pelo canal habitual; não recebe garantia automática de contexto ou imparcialidade.**
+**[H] Arnaldo abre o material em suas ferramentas habituais. Ao notar que o corte do gol da vitória omite a falta anterior, usa a referência para pedir a Rafael que confira o original e ajuste o trecho. Se um arquivo não abrir ou faltar identificação, solicita o reenvio pelo mesmo canal.**
 
-**Rafael devolve o trecho corrigido pelo mesmo fluxo externo. Arnaldo o assiste novamente e comunica a decisão de liberar ou solicitar novo ajuste pelo chat ou presencialmente na ilha de edição. A decisão não é registrada como aprovação dentro da interface do projeto. Se a revisão não couber no prazo, reconhece quais seleções continuam pendentes, sem equiparar obtenção ou seleção de arquivos à sua chancela.**
-
-**A narrativa termina com material identificável e decisão externa, ou com uma pendência explícita. A intervenção pretende apoiar a conferência antes da publicação; não afirma que a crise de conteúdo descrita em C02 será necessariamente evitada. Montagem, publicação, eventual retirada e republicação permanecem externas.**
+**[H] Rafael devolve o trecho corrigido. Arnaldo o assiste e comunica pelo chat ou na ilha de edição se libera a seleção ou pede outro ajuste. Se o prazo acabar antes da revisão, indica quais seleções ficaram pendentes.**
 
 #### Diferenças relevantes de CI02
 
@@ -101,15 +100,15 @@ Em um dia movimentado de rodada de futebol na redação da emissora esportiva, A
 **Personas e tarefas:** P03; A01, T03/A02 e aplicação de T01/A04. T03 também se aplica a P01.\
 **Rastreabilidade:** R04/R05; H08/H16/H24/H25/H26/H36/H37/H38; RC02–RC08.
 
-Em uma tarde de sábado, em sua casa, Jorginho Jr., estudante de 19 anos, prepara o próximo vídeo para seu canal esportivo no YouTube. Ele pretende produzir um compilado temático destacando a atuação de uma jovem promessa do futebol em seus três últimos jogos. **Mantém o critério de reconhecer a participação do atleta e compreender a construção e o desfecho da jogada. Usa seu computador modesto e a conexão disponível, mas precisa conferir se tem espaço para a entrada e os arquivos de saída; a análise remota proposta não comprova economia de disco.**
+Em uma tarde de sábado, em sua casa, Jorginho Jr., estudante de 19 anos, prepara o próximo vídeo para seu canal esportivo no YouTube. Ele pretende produzir um compilado temático destacando a atuação de uma jovem promessa do futebol em seus três últimos jogos. **[H] Procura trechos que mostrem a participação do atleta e o contexto da jogada. O espaço no computador limita quantos arquivos ele pode preparar e obter.**
 
-**Jorginho decide trabalhar uma partida por vez. Informa a primeira gravação, confere a origem e solicita a análise. O sistema comunica a aceitação ou a rejeição da entrada e, quando houver processamento aceito, o estado real conhecido. Durante a espera, Jorginho volta aos estudos e consulta a análise quando precisa decidir se já pode revisar os resultados. A proposta não define um canal de aviso nem garante processamento contínuo com a aplicação fechada.**
+**[H] Jorginho trabalha uma partida por vez. Confere a origem da gravação e solicita a análise. Se a entrada for rejeitada, verifica o motivo informado e corrige a entrada quando possível. Enquanto aguarda, volta aos estudos. Depois consulta se já pode revisar a partida.**
 
-**Ao acessar os candidatos disponíveis, reproduz os trechos e identifica visualmente se o atleta participa. O sistema informa o tipo de lance e a origem, sem afirmar reconhecimento automático do jogador. Jorginho inclui os trechos úteis ao compilado e verifica o contexto. Antes de obter os vídeos, consulta o tamanho conhecido de cada arquivo e confere o espaço disponível por seus meios habituais. Se algum tamanho não puder ser informado, reconhece essa limitação; não substitui o valor por zero. O CSV requer seleção não vazia, enquanto um MP4 acessível pode ser obtido individualmente sem seleção. Jorginho baixa os vídeos necessários e a relação dos itens selecionados, quando houver seleção. Confere os arquivos salvos antes de decidir como organizar o espaço. Não interpreta o recebimento dos cortes como garantia de que pode apagar o original: ainda pode precisar dele para conferir omissões e produzir cortes externos.**
+**[H] Jorginho usa as prévias e a origem dos cortes para identificar visualmente a participação do atleta. Seleciona os trechos úteis, consulta o tamanho individual dos MP4 quando disponível e confere o espaço no computador. Obtém os vídeos necessários e, quando tem itens selecionados, o CSV com as referências. Abre os arquivos salvos e conserva o original para conferir possíveis omissões.**
 
-**Na segunda partida, a consulta pode informar uma falha da análise. O sistema identifica a entrada afetada, descreve o problema conhecido e as ações efetivamente suportadas. Se houver entrada corrigível e reenvio disponível, Jorginho corrige o arquivo e confere a resposta ao novo envio. Se houver repetição orientada, confere as consequências conhecidas e decide se confirma nova tentativa. Em ambos os casos, o sistema distingue pedido aceito de análise concluída. Quando a nova tentativa for aceita e sua referência estiver disponível, Jorginho a confere para acompanhar o estado e distinguir os resultados dessa análise dos anteriores. Se a referência ou a associação não estiver disponível, reconhece que essa distinção não pôde ser confirmada; o sistema não presume preservação nem substituição dos resultados anteriores. Se a ação não estiver disponível, a falha persistir ou a causa não for conhecida, Jorginho mantém a partida pendente e conserva a referência para buscar orientação externa. Os resultados das demais partidas devem ser preservados; não se presume recuperação garantida. Se apenas a consulta estiver indisponível, ele reconhece que não sabe o estado da análise, em vez de concluir que ela falhou.**
+**[H] Na segunda partida, a análise falha. O sistema indica qual entrada foi afetada e o que se sabe sobre o problema. Jorginho corrige a entrada ou pede nova tentativa quando há uma ação disponível. Após o pedido, confere se foi aceito e volta a acompanhar a análise. Se o estado estiver indisponível ou não houver recuperação viável, deixa a partida pendente e continua com o material já acessível.**
 
-**Jorginho confere o que obteve da primeira partida, o encaminhamento da segunda e se há recursos e tempo para iniciar a terceira. Os melhores momentos gerais podem não incluir movimentações sem bola e passes que procura. Se os candidatos forem insuficientes, recorre à gravação e à edição externas quando viável, ou adia o compilado. Termina com arquivos conferidos e pendências reconhecidas, sem garantia de seleção temática completa, recuperação de marcações locais ou solução das limitações de hardware.**
+**[H] Jorginho confere o material da primeira partida e decide se tem tempo e espaço para começar a terceira. Se faltarem jogadas importantes do atleta, consulta o original em outra ferramenta ou adia o compilado. Termina distinguindo arquivos conferidos de partidas pendentes.**
 
 #### Diferenças relevantes de CI03
 
@@ -123,7 +122,7 @@ Em uma tarde de sábado, em sua casa, Jorginho Jr., estudante de 19 anos, prepar
 
 ## 2. Design centrado na comunicação
 
-**Convenção:** U = pessoa que opera a interface; D = preposto do designer/sistema. As falas indicam intenção e conteúdo, não textos finais de interface. E = conversa **externa**, sem transição de sistema implícita. S01–S24 e S26–S33 remetem à tabela única da seção 4; O00–O10, ao mapa da seção 3.
+**Convenção:** U = pessoa que opera a interface; D = preposto do designer/sistema. As falas indicam intenção e conteúdo, não textos finais de interface. S01–S24 e S26–S33 remetem à tabela única da seção 4; O00–O10, ao mapa da seção 3.
 
 ### CI01 — Revisar e obter candidatos com contexto sob pressão de prazo
 
@@ -131,39 +130,38 @@ Em uma tarde de sábado, em sua casa, Jorginho Jr., estudante de 19 anos, prepar
 |---|---|---|
 | Preparar gravações > conferir entradas, O01 | U: Quero analisar estas gravações. D: Estas são as partidas, tempos e arquivos reconhecidos; confira o conjunto. S01–S07 | Conferir associação e reconhecer exemplos na demonstração |
 | > corrigir o conjunto, O01 | U: Quero retirar esta entrada e usar a correta. D: Este é o conjunto restante; esta entrada não foi aceita por este motivo conhecido. S03/S05/S06/S08 | Prevenir processamento de entrada indevida e permitir correção |
-| Acompanhar a análise > interpretar estado, O02 | U: Já posso revisar esta partida? D: Esta é a referência da tentativa, quando disponível, seu estado conhecido e os resultados associados; se não puder confirmar a associação, informo essa limitação. Só informo previsão com cálculo confiável. S08–S12/S32 | Distinguir envio, espera, análise e acesso |
+| Acompanhar a análise > interpretar estado, O02 | [H] U: Já posso revisar esta partida? D: Veja o estado da análise e os resultados disponíveis. Identifico a tentativa quando ela for conhecida. S08–S12/S32 | Distinguir envio, espera, análise e acesso |
 | Localizar candidatos > restringir consulta, O04 | U: Quero examinar os lances desta partida e deste tipo. D: Estes são os candidatos correspondentes; a consulta não altera sua seleção. S01/S02/S16/S17/S22 | Distinguir filtro e seleção |
 | Conferir pertinência e contexto > interpretar trecho, O05 | U: Quero entender a jogada e onde ocorreu. D: Eis o corte, o tipo sugerido, a origem e os tempos, com o intervalo disponível. S16–S21 | Distinguir relógio do jogo, posição no arquivo e intervalo |
-| > lidar com contexto insuficiente/omissão, O05/O10 | U: Falta a construção ou suspeito de um lance ausente. D: Estas são a origem e as limitações conhecidas; a correção ocorre externamente. S03/S12/S20/S30 | Preservar julgamento e continuidade externa |
+| > lidar com contexto insuficiente/omissão, O05/O10 | [H] U: Falta a construção ou suspeito de um lance ausente. D: Aqui estão a gravação de origem e as referências para você conferir o original. S03/S12/S20/S30 | Preservar julgamento e continuidade externa |
 | Definir a seleção > incluir, retirar e conferir, O06 | U: Quero este candidato; aquele não deve compor o material. D: Estes são os itens selecionados e a quantidade. S23/S24 | Permitir revisão da escolha, sem prometer montagem única |
-| Retomar a revisão > reconhecer contexto, O08 | U: Onde estava e o que falta conferir? D: Estas são as referências de partida, candidato e tentativa e a seleção ainda disponíveis; o restante precisa ser reconstruído. S23/S29/S30/S32 | Não confundir sessão com persistência garantida |
-| Obter cortes e metadados > distinguir saídas, O07 | U: Preciso dos vídeos e da relação. D: O CSV contém referências dos itens selecionados e exige seleção não vazia. Cada MP4 disponível pode ser obtido individualmente, mesmo sem seleção. Informo o tamanho de cada vídeo quando houver dados; sem base, informo indisponível. Não há montagem única. S23/S26/S27/S33 | Tratar a ambiguidade de E06-O04 |
-| > conferir obtenção e encerrar, O07/O08 | U: Abri a relação e os vídeos; ainda faltam estas conferências. D: Informo o estado conhecido da disponibilização, sem afirmar salvamento local que não posso verificar. S28/S30 | Conferir resultado e reconhecer pendências |
+| Retomar a revisão > reconhecer contexto, O08 | [H] U: Onde estava e o que falta conferir? D: Estas são as referências e a seleção que ainda estão disponíveis. S23/S29/S30/S32 | Não confundir sessão com persistência garantida |
+| Obter cortes e metadados > distinguir saídas, O07 | [H] U: Preciso dos vídeos e da relação. D: O CSV reúne as referências dos itens selecionados. Baixe cada MP4 disponível por corte. S23/S26/S27/S33 | Tratar a ambiguidade de E06-O04 |
+| > conferir obtenção e encerrar, O07/O08 | [H] D: Os arquivos estão disponíveis. Confira se abrem no seu dispositivo. U: Abri os arquivos necessários ou ainda tenho uma pendência. S28/S30 | Conferir resultado e reconhecer pendências |
 
 ### CI02 — Obter material identificável para a supervisão editorial externa
 
 | Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
 |---|---|---|
-| Preparar material > conferir identidade/seleção, O06/O07 | U, editor: Quero obter estes cortes para a supervisão. D: Esta é a seleção, com partidas, tempos e referências. S01/S02/S16/S23/S24 | Referência comum sem declarar aprovação |
-| > obter saídas, O07 | U, editor: Preciso da relação e dos vídeos individuais. D: O CSV corresponde à seleção não vazia; cada MP4 disponível pode ser obtido sem estar selecionado. Informo o tamanho conhecido de cada vídeo ou sua indisponibilidade. A transferência ao destinatário acontece fora daqui. S23/S26–S28/S33 | Delimitar a conversa apoiada pela interface |
-| E: receber e avaliar > conferir contexto, O09 | Editor: Encaminhei estes arquivos; estas dúvidas permanecem. Arnaldo: Quero conferir o gol e a jogada anterior pela mesma referência. S01/S02/S16/S18–S20/S30 | Passagem externa de T01 para T02 |
-| E: solicitar ajuste > voltar à origem, O10 | Arnaldo: Falta a falta anterior; confira o original e devolva o trecho corrigido. Editor: Vou conferir esta gravação e este intervalo. S03/S19/S20/S30/S31 | Localizar problema e ajustar externamente |
-| E: deliberar > liberar, devolver ou adiar, O09 | Arnaldo: Este trecho atende ao critério, ou ainda precisa deste ajuste; esta outra seleção não foi conferida. S30/S31 | Distinguir decisão externa de seleção interna |
+| Localizar material > completar a seleção, O04/O06 | [H] U: Falta um corte para encaminhar. D: Estes são os candidatos encontrados pelos critérios da partida, tempo e tipo. S01/S02/S16/S17/S22/S23 | Permitir que o editor encontre e inclua o item |
+| Preparar material > conferir identidade e seleção, O06/O07 | [H] U: Quero conferir os cortes que vou encaminhar. D: Estes são os itens selecionados, com suas partidas, tempos e referências. S01/S02/S16/S18/S20/S23/S24 | Dar ao editor e ao supervisor referências comuns |
+| Obter material > solicitar arquivos, O07 | [H] U: Quero a relação e os vídeos individuais. D: O CSV contém as referências da seleção. Cada MP4 disponível pode ser obtido por corte. S23/S26/S27/S33 | Distinguir as saídas e suas condições |
+| Encerrar > conferir o material, O07/O08 | [H] D: Estes são os arquivos disponibilizados. Confira se abrem no seu dispositivo. U: Conferi os arquivos necessários ou ainda tenho uma pendência. S28/S30 | Reconhecer o que foi obtido e o que ficou pendente |
 
-Não há falas D atribuídas à chancela de Arnaldo. O futuro MoLIC deve representar a conversa do editor até a obtenção e a saída para T02, sem converter a comunicação externa em função de aprovação.
+**Condição de saída para T02.** [H] O editor confere os arquivos no dispositivo antes de encerrar a conversa de obtenção. Depois encaminha o material com as referências de origem e indica pendências no canal externo. Arnaldo usa essas referências para avaliar a seleção (O09/S31), pedir conferência no original ou ajuste (O10) e comunicar a decisão por chat ou na ilha de edição. A conversa U–D de CI02 se concentra no preparo feito pelo editor porque Arnaldo participa a partir dessa passagem.
 
 ### CI03 — Acompanhar a análise e obter trechos para uma produção amadora
 
 | Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
 |---|---|---|
 | Preparar gravações > conferir uma partida, O01 | U: Quero analisar esta gravação antes da próxima. D: Estas são sua partida, tempo, duração e condições conhecidas de aceitação. S01–S08 | Dar previsibilidade sem exigir conhecimento de IA |
-| Acompanhar a análise > decidir continuidade, O02 | U: Posso revisar ou preciso aguardar? D: Esta é a referência da tentativa, quando disponível, seu estado conhecido e sua atualização; estes resultados estão ou não acessíveis. Associações não confirmadas são informadas como tal. S09–S12/S32 | Decidir durante outras atividades |
-| > consulta sem informação segura, O02 | U: A análise falhou? D: Não consegui consultar o estado; não posso concluir que a execução falhou. S09/S10/S12 | Separar ausência de informação e falha |
-| Encaminhar uma falha > compreender o ocorrido, O03 | U: O que aconteceu e o que foi preservado? D: Este é o problema conhecido, a entrada e a tentativa identificáveis, quando disponíveis, e os resultados cuja associação e disponibilidade consigo confirmar. S12/S13/S32 | Localizar o problema, preservando as demais partidas |
-| > corrigir ou tentar novamente, O03 | U: Quero reenviar a entrada corrigida ou confirmar a repetição orientada. D: Esta ação é suportada nestas condições; estas são as consequências conhecidas e a resposta ao pedido. Se aceito, identifico a nova tentativa quando a referência existir; caso contrário, informo que sua associação ao acompanhamento não foi confirmada. S05/S08/S14/S15/S32 | Decisão informada; conferir aceitação/rejeição |
-| > reconhecer limite de recuperação, O03 | U: Não consigo corrigir agora ou a falha persiste. D: Esta referência e a orientação externa, quando disponível, permitem continuar depois; a partida permanece pendente. S13–S15/S29/S30 | Saída sem repetição ilimitada nem recuperação garantida |
+| Acompanhar a análise > decidir continuidade, O02 | [H] U: Posso revisar ou preciso aguardar? D: Veja quando o estado foi atualizado e quais resultados estão acessíveis. S09–S12/S32 | Decidir durante outras atividades |
+| > consulta sem informação segura, O02 | [H] U: A análise falhou? D: O estado está indisponível. Você pode consultar novamente. S09/S10/S12 | Separar ausência de informação e falha |
+| Encaminhar uma falha > compreender o ocorrido, O03 | [H] U: O que aconteceu e o que foi preservado? D: Esta é a entrada afetada e o que sabemos sobre a falha. S12/S13/S32 | Localizar o problema, preservando as demais partidas |
+| > corrigir ou tentar novamente, O03 | [H] U: Quero reenviar a entrada corrigida ou confirmar a repetição orientada. D: Esta ação está disponível para a entrada afetada. Confira a consequência e se o pedido foi aceito. S05/S08/S14/S15/S32 | Decisão informada; conferir aceitação/rejeição |
+| > reconhecer limite de recuperação, O03 | [H] U: Não consigo corrigir agora ou a falha persiste. D: A partida fica pendente. Consulte a referência e a orientação disponível. S13–S15/S29/S30 | Saída sem repetição ilimitada nem recuperação garantida |
 | Conferir contexto > reconhecer atleta manualmente, O05 | U: Preciso ver se este jogador participa e se a jogada se entende. D: Eis o vídeo, a origem e os tempos; não asseguro identificação do atleta nem cobertura de todos os seus lances. S12/S16–S21 | Manter H36 explícita, sem filtro por jogador |
-| Definir seleção e obter material, O06/O07 | U: Quero somente estes candidatos e suas referências. D: Esta é a seleção para o CSV, que exige ao menos um item. Cada MP4 disponível também pode ser obtido sem seleção; informo o tamanho de cada vídeo quando conhecido, distinguindo estimativas com base disponível. Dados ausentes são informados como indisponíveis; confira o espaço no dispositivo. S23/S24/S26–S28/S33 | Apoiar produção amadora sem impor ferramentas profissionais |
+| Definir seleção e obter material, O06/O07 | [H] U: Quero somente estes candidatos e suas referências. D: O CSV reúne as referências da seleção. Os MP4 disponíveis são individuais. Confira o tamanho informado de cada arquivo. S23/S24/S26–S28/S33 | Apoiar produção amadora sem impor ferramentas profissionais |
 | Retomar ou encerrar > reconhecer pendências, O08 | U: Tenho os arquivos desta partida; a outra está pendente e a terceira não foi iniciada. D: Estas são as referências ainda disponíveis nesta sessão. S29/S30 | Não declarar seleção temática completa |
 
 ## 3. Mapa de objetivos
@@ -174,41 +172,41 @@ Os recortes foram derivados dos artefatos já atribuídos aos integrantes. São 
 
 | Referência de autoria | Mapa textual do recorte | Integração |
 |---|---|---|
-| Pedro — 22.123.049-3; C01/T01 | O00 → preparação O01/O02 → O04/O05/O06 → O07; O08 transversal; O10 quando necessário | Revisão por P01 compartilhada com P03; seleção não equivale à chancela |
-| Lucas — 22.123.012-1; C02/T02 | O00 → O06/O07 pelo editor → O09 por P02; O10 externo retorna à avaliação O09 | Fronteira após obtenção/transferência externa; não acrescenta uso direto de P02 |
-| Giovanni — 22.123.025-3; C03/T03 | O00 → O01 → O02; O03 se houver falha → O04/O05/O06/O07 com resultados; O08 transversal | Acompanhamento comum a P01/P03; pertinência por atleta é manual |
+| Pedro — 22.123.049-3; C01/T01 | O00 apoiado por O01/O02 e O04–O08; O10 externo quando necessário | Revisão por P01 compartilhada com P03; seleção não equivale à chancela |
+| Lucas — 22.123.012-1; C02/T02 | O06/O07 apoiam O00 para o editor; O09 é a finalidade externa de P02 e pode exigir O10 | Fronteira após obtenção/transferência externa; não acrescenta uso direto de P02 |
+| Giovanni — 22.123.025-3; C03/T03 | O00 apoiado por O01–O08; O03 se houver falha, O08 na retomada ou na saída | Acompanhamento comum a P01/P03; pertinência por atleta é manual |
 
-As setas desses recortes indicam dependências narrativas, não sequência obrigatória nem notação MoLIC. O mapa visual representa **decomposição de objetivos**, com ligações tracejadas para a continuidade externa.
+[H] Os recortes organizam relações entre a finalidade e os objetivos que a apoiam. Uma ligação sólida indica apoio à finalidade. Uma ligação tracejada indica a continuidade fora da interface.
 
 ### Mapa consolidado
 
 ![Mapa consolidado: preparar e acompanhar a análise, revisar e obter material, reconhecer pendências e continuar a edição e a supervisão externamente](../assets/09_modelo_conceitual/mapa_objetivos.svg)
 
-**Fonte editável:** [mapa_objetivos.svg](../assets/09_modelo_conceitual/mapa_objetivos.svg). O00 é o propósito global; os agrupamentos intermediários organizam a leitura. O08 é transversal. O09/O10 permanecem fora da interface. IDs e nomes são compartilhados com o dicionário e as conversas.
+**Fonte editável:** [mapa_objetivos.svg](../assets/09_modelo_conceitual/mapa_objetivos.svg). [H] O00 é a finalidade de P01 e P03. O01 prepara a análise para uso posterior. O02 a O08 apoiam a obtenção durante o uso, inclusive quando a interação é retomada. O09 é a finalidade editorial externa de P02. O10 é continuidade externa de edição e também pode apoiar O09.
 
 ### Dicionário de objetivos
 
 Prioridades são de projeto, justificadas pelas Entregas 5, 6 e 8; não são frequência, criticidade ou preferência medidas com o público.
 
-| ID | Objetivo | Persona(s) | Cenário(s) | Prioridade |
-|---|---|---|---|---|
-| O00 | Obter material de melhores momentos para continuidade editorial externa | P01/P03; P02 destinatária | CI01/CI02/CI03 | Propósito global, H28; benefício a validar |
-| O01 | Preparar gravações para análise | P01/P03 | CI01/CI03 | Essencial, A01; precondição de T03 |
-| O02 | Acompanhar a análise e reconhecer resultados acessíveis | P01/P03 | CI01/CI03 | Essencial, T03; E06-D01/MU01 |
-| O03 | Encaminhar uma falha sem comprometer as demais partidas | P01/P03 | CI03; alternativa comum a CI01 | Alta quando há falha; ações condicionadas ao suporte técnico |
-| O04 | Localizar candidatos pertinentes à revisão | P01/P03 | CI01/CI03 | Essencial, T01; MU05; filtros a validar |
-| O05 | Conferir pertinência e contexto do candidato | P01/P03 | CI01/CI03 | Essencial, T01; MQ03/MU02 |
-| O06 | Definir e conferir a seleção para obtenção | P01/P03 | CI01/CI02/CI03 | Essencial, T01; MU03; não significa chancela |
-| O07 | Obter e conferir cortes e metadados | P01/P03; P02 recebe externamente | CI01/CI02/CI03 | Essencial, A04; E06-D05; MU03/MU04 |
-| O08 | Reconhecer o contexto disponível e as pendências ao retomar ou encerrar | P01/P03 | CI01/CI03 | Alta, H41/T01/T03; sem persistência assegurada |
-| O09 | Avaliar e comunicar a decisão editorial | P02 em conversa com o editor | CI02 | Continuidade externa, T02 |
-| O10 | Conferir o original e ajustar ou montar o material | P01/P03; P02 solicita ajuste | CI01/CI02/CI03 | Continuidade externa conforme necessidade e recursos |
+| ID | Objetivo | Classificação [H] | Persona(s) | Cenário(s) | Prioridade |
+|---|---|---|---|---|---|
+| O00 | Obter material de melhores momentos para continuidade editorial externa | Final na interface. É o motivo de uso para P01/P03 (H28). | P01/P03; P02 destinatária | CI01/CI02/CI03 | Propósito global, H28; benefício a validar |
+| O01 | Preparar gravações para análise | Instrumental indireto. Prepara as gravações para uma análise cujos resultados serão usados em revisão posterior. | P01/P03 | CI01/CI03 | Essencial, A01; precondição de T03 |
+| O02 | Acompanhar a análise e reconhecer resultados acessíveis | Instrumental direto. Permite decidir durante a consulta se já há resultados para revisar. | P01/P03 | CI01/CI03 | Essencial, T03; E06-D01/MU01 |
+| O03 | Encaminhar uma falha sem comprometer as demais partidas | Instrumental direto. Permite agir sobre a falha encontrada durante o acompanhamento. | P01/P03 | CI03; alternativa comum a CI01 | Alta quando há falha; ações condicionadas ao suporte técnico |
+| O04 | Localizar candidatos pertinentes à revisão | Instrumental direto. Restringe o material que será examinado na revisão em curso. | P01/P03 | CI01/CI03 e CI02 quando falta um item | Essencial, T01; MU05; filtros a validar |
+| O05 | Conferir pertinência e contexto do candidato | Instrumental direto. Sustenta a decisão de incluir ou dispensar o candidato durante a revisão. | P01/P03 | CI01/CI03 | Essencial, T01; MQ03/MU02 |
+| O06 | Definir e conferir a seleção para obtenção | Instrumental direto. Organiza os itens a obter durante a revisão. | P01/P03 | CI01/CI02/CI03 | Essencial, T01; MU03; não significa chancela |
+| O07 | Obter e conferir cortes e metadados | Instrumental direto. Disponibilizar as saídas e conferir os arquivos é como o usuário concretiza O00. | P01/P03; P02 recebe externamente | CI01/CI02/CI03 | Essencial, A04; E06-D05; MU03/MU04 |
+| O08 | Reconhecer o contexto disponível e as pendências ao retomar ou encerrar | Instrumental direto. Ajuda a orientar a interação no momento de retomar ou encerrar. | P01/P03 | CI01/CI02/CI03 | Alta, H41/T01/T03; sem persistência assegurada |
+| O09 | Avaliar e comunicar a decisão editorial | Final externo de P02. É a finalidade da supervisão editorial em T02. | P02 em conversa com o editor | CI02 | Continuidade externa, T02 |
+| O10 | Conferir o original e ajustar ou montar o material | Continuidade externa de P01/P03. Atende à produção e, quando há devolução, apoia O09. | P01/P03; P02 solicita ajuste | CI01/CI02/CI03 | Continuidade externa conforme necessidade e recursos |
 
 ### Decisões de consolidação
 
 | Duplicidade ou conflito | Decisão consolidada | Consequência |
 |---|---|---|
-| Highlights, lances e cortes como sinônimos | Lance é o acontecimento; candidato é a sugestão; corte é o trecho audiovisual | Não tratar classificação como fato editorial; testar vocabulário na coleta |
+| Highlights, lances e cortes como sinônimos | [H] Lance é o acontecimento. Candidato é uma sugestão de lance para revisão. Corte é o trecho audiovisual. Seleção é o conjunto de candidatos que a pessoa escolheu | Não tratar classificação como fato editorial; testar vocabulário na coleta |
 | Selecionado, revisado e aprovado | Seleção é o conjunto escolhido; revisão é atividade humana; decisão editorial é externa | O06 não realiza O09; sem registro persistente de revisão presumido |
 | Tempo com vários significados | Separar etapa da partida, relógio do jogo, posição no arquivo e duração | Reutilizar S02/S18–S21; tratar E06-O06 |
 | Concluído como análise pronta, cobertura total ou arquivo salvo | Separar estado da análise, disponibilidade/limites e obtenção | O02 não comprova O05/O07; zero candidatos não prova ausência de lances |
@@ -221,11 +219,23 @@ Prioridades são de projeto, justificadas pelas Entregas 5, 6 e 8; não são fre
 
 **Origem** indica onde o conceito faz sentido, conforme os slides: **domínio**, conceitos da atividade; **aplicação**, conceitos introduzidos pelo sistema. A procedência do valor aparece separadamente na mesma coluna: **U**, informado/escolhido pelo usuário; **S**, produzido/derivado pelo sistema; **E**, recebido/decidido externamente. Um conceito do domínio pode ser preenchido automaticamente; domínio não significa digitado pelo usuário.
 
-**PP — prevenção passiva:** explicar linguagem, conteúdo ou condição. **PA — prevenção ativa:** impedir fala inválida. **AL — prevenção apoiada/alerta:** apresentar consequência potencial e pedir decisão informada antes de prosseguir. **RA — recuperação apoiada:** explicar ruptura ocorrida e oferecer continuação pela interface. **CE — captura de erro:** reconhecer que a recuperação exige ação fora da interface e indicar orientação quando disponível. “—” significa ausência de padrão/mecanismo aplicável; informação desconhecida não deve virar zero. Os mecanismos são requisitos propostos, sem afirmar implementação atual.
+[H] A tabela abaixo é a legenda de prevenção e recuperação para esta entrega e para os MoLIC. Um travessão nas células do esquema indica que o mecanismo ou o valor padrão não se aplica. O esquema admite valor indisponível quando faltam dados.
 
-Um lote S06 reúne entradas S03, associadas à partida S01 e ao tempo S02, sem presumir que toda gravação futura terá exatamente um tempo. A tentativa de análise S32 distingue as análises solicitadas para uma entrada; estados S09/S10, disponibilidade S12, falha S13 e resposta S15 devem ser relacionados à tentativa identificável. Uma resposta aceita não demonstra conclusão. Um candidato S16 remete à origem, à tentativa que o produziu quando essa associação for conhecida, aos tempos S18/S19, ao intervalo S20 e ao corte S27. Se a referência da tentativa ou sua associação não for fornecida, o sistema informa a limitação, sem inventá-la nem afirmar se resultados anteriores foram preservados ou substituídos. Essa relação não exige histórico permanente. A seleção S23 reúne candidatos sem duplicação; S24 informa sua quantidade de candidatos. O CSV S26 preserva as referências conhecidas, sem pressupor um novo campo de tentativa já implementado. S33 informa o tamanho de cada MP4. O CSV exige seleção não vazia; obter um MP4 individual acessível não exige seleção. A decisão S31 pertence ao processo externo e não altera automaticamente S23.
+| Sigla | Mecanismo | Uso |
+|---|---|---|
+| PP | Prevenção passiva | Explicar linguagem, conteúdo ou condições. |
+| PA | Prevenção ativa | Impedir uma fala inválida. |
+| AL | Prevenção apoiada por alerta | Informar a consequência e pedir decisão antes de prosseguir. A Parte B marca a fala de alerta com `[SP]`. |
+| RA | Recuperação apoiada | Explicar a ruptura e oferecer um caminho pela interface. A Parte B marca a fala de recuperação com `[SR]`. |
+| CE | Captura de erro | Reconhecer que a recuperação depende de ação externa e oferecer orientação quando disponível. |
+
+[F] As marcações `[SP]` e `[SR]` aparecem no exemplo do [slide 4 da Parte B](../slides_plinio/CC8122-Molic-ParteB.pdf#page=4).
+
+Um lote S06 reúne entradas S03, associadas à partida S01 e ao tempo S02, sem presumir que toda gravação futura terá exatamente um tempo. A tentativa de análise S32 distingue as análises solicitadas para uma entrada; estados S09/S10, disponibilidade S12, falha S13 e resposta S15 devem ser relacionados à tentativa identificável. Uma resposta aceita não demonstra conclusão. Um candidato S16 remete à origem, à tentativa que o produziu quando essa associação for conhecida, aos tempos S18/S19, ao intervalo S20 e ao corte S27. Se a referência da tentativa ou sua associação não for fornecida, o sistema informa a limitação, sem inventá-la nem afirmar se resultados anteriores foram preservados ou substituídos. Essa relação não exige histórico permanente. A seleção S23 reúne candidatos sem duplicação; S24 informa sua quantidade de candidatos. O CSV S26 preserva as referências conhecidas, sem pressupor um novo campo de tentativa já implementado. S33 informa o tamanho de cada MP4. [F] Em F06 da Entrega 11, o total dos MP4 é a soma dos tamanhos dos itens selecionados a partir do manifesto. O esquema define S33 por arquivo individual. O CSV exige seleção não vazia; obter um MP4 individual acessível não exige seleção. A decisão S31 pertence ao processo externo e não altera automaticamente S23. [H] Quando S13 identifica uma falha, S14 informa as ações suportadas e suas consequências conhecidas. O usuário confere em S15 se a ação foi aceita antes de acompanhar a nova tentativa. [?] Preservação dos resultados anteriores, associação entre tentativas e disponibilidade após recarga dependem do serviço e da sessão. S29 descreve o contexto que ainda pode ser reconhecido.
 
 ### Tabela única de signos
+
+[F] S25 é reservado e não tem definição no esquema. Os demais identificadores mantêm seus significados.
 
 | Grupo | Signo | Origem | Observações/semântica | Tipo de conteúdo | Restrição | Valor padrão | Prevenção | Recuperação |
 |---|---|---|---|---|---|---|---|---|
@@ -243,7 +253,7 @@ Um lote S06 reúne entradas S03, associadas à partida S01 e ao tempo S02, sem p
 | Acompanhamento | S12 — Disponibilidade e limites dos resultados | Aplicação; S | Resultados acessíveis e tentativa de origem quando identificável; ausência de candidatos e falhas/partes não analisadas conhecidas | Situação textual e referências | Sem garantia de cobertura; distinguir vazio/falha; conferir preservação | Ainda não verificados/disponíveis | PP: explicar vazio/limites; PA: não oferecer resultado inexistente | RA: nova consulta ou tratar falha; CE: conferir original quando necessário |
 | Recuperação | S13 — Ocorrência de falha | Aplicação; S | Problema conhecido, entrada e tentativa S32 quando identificável; causa desconhecida explícita | Descrição e referência | Sem inferir causa de demora ou travamento de outro software | Nenhuma falha informada | PP: identificar alcance | RA: orientar ação suportada; CE: orientação externa ou pendência sem recuperação interna |
 | Recuperação | S14 — Encaminhamento de recuperação | Aplicação; U/S | Corrigir/reenviar, repetir de forma orientada ou adiar | Escolha condicionada e consequências | Somente ações suportadas; preservar demais entradas; sem inventar custo/prazo | Nenhuma ação confirmada | PP: condições; PA: impedir ação não suportada; AL: confirmar consequências conhecidas da tentativa | RA: rever opção rejeitada; CE: corrigir externamente/buscar orientação |
-| Recuperação | S15 — Resposta ao pedido de recuperação | Aplicação; S | Pedido aceito, rejeitado ou sem resposta; referência da nova tentativa S32 quando fornecida | Situação vinculada à entrada e à tentativa identificável | Aceitação não comprova sucesso; referência ausente não deve ser presumida; falta de resposta não justifica repetição cega | Nenhum pedido realizado | PP: separar pedido e execução | RA: consultar situação ou manter pendência |
+| Recuperação | S15 — Resposta ao pedido de recuperação | Aplicação; S | Pedido aceito, rejeitado ou sem resposta; referência da nova tentativa S32 quando fornecida | Situação vinculada à entrada e à tentativa identificável | Aceitação não comprova sucesso; referência ausente não deve ser presumida; falta de resposta deixa a aceitação desconhecida | Nenhum pedido realizado | PP: separar pedido e execução | RA: verificar o pedido identificável por consulta, quando suportada. Se a aceitação continuar desconhecida, manter pendente. |
 | Recuperação | S32 — Tentativa de análise | Aplicação; S | Referência de uma análise solicitada para a entrada/lote; distingue repetição da tentativa anterior, conforme T03 | Referência fornecida pelo serviço, quando disponível | Relacionar estado, falha, resposta e resultados à tentativa conhecida; não presumir associação ausente nem exigir histórico permanente | Não informada até disponibilização pelo serviço | PP: distinguir pedido, tentativa e resultado; informar referência/associação indisponível | RA: consultar a situação quando suportado; manter a associação não confirmada como pendência, sem repetir por suposição |
 | Revisão | S16 — Candidato a melhor momento | Aplicação; S | Sugestão com corte, origem e tentativa S32 quando identificável; ID liga conversa, vídeo e CSV | Referência e vídeo associado | Unívoco no conjunto, sem confundir resultados de tentativas diferentes; associação desconhecida explícita; detectado não significa relevante/aprovado | Nenhum antes dos resultados | PP: sugestão e referência; PA: não selecionar item inexistente | RA: conferir/selecionar outro; CE: buscar lance ausente externamente |
 | Revisão | S17 — Tipo de lance | Domínio; S | Categoria sugerida: gol, finalização, defesa ou ocorrência disciplinar | Categoria textual | Somente categorias disponíveis; não infere identidade de atleta ou precisão | Informado; senão não informado | PP: sugestão expressa em texto, sem depender só de cor | RA: rever pertinência/retirar da seleção; sem presumir edição da categoria |
@@ -268,9 +278,9 @@ Não se modelam confiança, nome de atleta reconhecido, tempo estimado restante,
 
 A metamensagem proposta é: entendemos que você precisa preparar material de partidas encerradas e conservar o controle sobre o que será utilizado. O sistema pode apoiar a localização de candidatos e disponibilizar cortes e referências; você confere pertinência, contexto e arquivos obtidos. O estado conhecido e as limitações precisam ficar claros. O trabalho editorial e as correções continuam nas ferramentas e nos canais externos apropriados. Essa compreensão do público é uma hipótese de design a confrontar com coleta e avaliação.
 
-### Cobertura necessária nos futuros MoLIC
+### Cobertura para os MoLIC
 
-Estes agrupamentos orientam a Entrega 10; não são diagramas já elaborados nem registro de participação individual concluída.
+[F] Os recortes abaixo servem de referência para os diagramas da [Entrega 10](10_molic.md).
 
 | Recorte de conversa | Objetivos/signos necessários | Alternativas e rupturas |
 |---|---|---|
@@ -279,19 +289,21 @@ Estes agrupamentos orientam a Entrega 10; não são diagramas já elaborados nem
 | Localizar, conferir e selecionar, CI01/CI03 | O04–O06/O08; S01–S03/S12/S16–S24/S29/S30/S32 | Consulta vazia, contexto insuficiente, suspeita de omissão, retirada, seleção vazia e retomada sem contexto preservado |
 | Obter material e sair para o trabalho externo, CI01/CI02/CI03 | O07; S23/S24/S26–S28/S33; referências externas S30/S31 | CSV da seleção não vazia, MP4 individual independente da seleção, tamanho conhecido/estimado/indisponível, mídia indisponível, obtenção não confirmada e pendências; saída para O09/O10 |
 
-Preparar, acompanhar, conferir, selecionar e obter são tópicos de conversa, independentemente de sua organização em telas. O MoLIC deverá distinguir falas, processamento, ruptura e encerramento conforme a notação da aula, mantendo os IDs e nomes. A divisão em soluções completas por integrante deve ser revisada pela equipe na Entrega 10.
+[H] Os MoLIC usam estes objetivos e signos para modelar falas de U e D, processos, rupturas e encerramentos. Em CI02, a passagem para T02 é uma condição de saída. A conversa entre editor e supervisor ocorre nos canais externos.
 
 ### Verificações ainda necessárias
 
 | Questão | Onde verificar | Impacto possível |
 |---|---|---|
-| O público distingue candidato, corte, seleção, relógio do jogo e posição no arquivo? | I01/I02/I03; MQ03/MU02 | Rever falas e S16–S23 |
-| Conclusão da análise e acesso à revisão ficam claros sem ajuda? | E06-D01; MQ02/MU01 | Rever passagem O02 → O04/O05 |
-| CSV e MP4 são obtidos e conferidos separadamente? | E06-D05/D06; MQ04/MU03/MU04 | Rever O07/S23/S26–S28/S33 |
+| [?] O público distingue lance, candidato, corte e seleção? Distingue relógio do jogo de posição no arquivo? | Pedir que a pessoa explique os termos durante a revisão de um corte e identifique as duas referências de tempo. I01/I02/I03; MQ03/MU02 | Rever falas e S16–S23 |
+| [?] A pessoa distingue espera, análise concluída, falha, consulta indisponível e nova tentativa? | Pedir que explique o estado da partida e escolha como continuar sem ajuda do facilitador. E06-D01; MQ02/MU01 | Rever O02/O03 e S08–S15/S32 |
+| [?] A pessoa antecipa o conteúdo do CSV e do MP4 e confirma o que conseguiu obter? | Observar a obtenção e pedir que abra o CSV e reproduza o MP4 salvos. E06-D05/D06; MQ04/MU03/MU04 | Rever O07/S23/S26–S28/S33 |
 | Quais estados, limites, preservação e recuperação o backend suporta? | Equipe técnica; H24/H26; T03 | Refinar S05/S08–S15/S32 e O03, sem prometer identificação técnica disponível, retomada, custo ou prazo |
 | O apoio geral atende ao compilado por atleta e ao espaço disponível? | I01/I03; H36/H37/H38 | Refinar adequação de P03/O05/O10 |
 | O que acompanha o material e como retornam ajustes? | I01/I03 com editor/supervisor; H22/H23/H33/H40 | Refinar O07/O09/O10; uso direto de P02 exige fundamentação |
 | Qual contexto deve sobreviver a interrupções? | I01/I03; H41; T01/T03 | Refinar O08/S29/S30; não equivale a adotar histórico permanente |
+
+[F] Na [Entrega 7](07_coleta_dados.md), I02 registra dúvidas e preferências após o uso. I01 e I03 investigam práticas profissionais, critérios de revisão e passagem do material ao supervisor. [H] A avaliação complementa esses relatos com observação da interação e conferência dos arquivos.
 
 ### Ajustes documentais da análise de coerência
 
@@ -306,10 +318,13 @@ São esclarecimentos do modelo proposto, sem execução de análise real, inclus
 - [x] Narrativas descrevem ações e respostas sem antecipar widgets ou textos finais.
 - [x] Cada CI possui tópicos, falas, signos e alternativas coerentes.
 - [x] Recortes de referência integrados em mapa documental com dicionário de objetivos.
-- [ ] Cada integrante revisou/apresentou seu recorte; a equipe confirmou a consolidação.
+- [ ] Pedro apresentou e revisou CI01, seus objetivos e signos.
+- [ ] Lucas apresentou e revisou CI02, seus objetivos e signos.
+- [ ] Giovanni apresentou e revisou CI03, seus objetivos e signos.
+- [ ] A equipe confirmou a nomenclatura do mapa e dos signos e a fronteira de CI02.
 - [x] Esquema em tabela única; origem conceitual distinta da procedência do valor.
 - [x] PP, PA, AL, RA e CE definidos e associados a situações pertinentes.
-- [x] Objetivos/signos com IDs para reutilização na Entrega 10, ainda não preenchida.
+- [x] Objetivos/signos com IDs usados nos modelos da [Entrega 10](10_molic.md).
 - [x] Filtros apoiam consulta; histórico, dashboard analítico e administração não foram acrescentados sem tarefa fundamentada.
 - [x] Simulação, capacidades propostas e atividades externas explicitadas.
       
@@ -319,3 +334,5 @@ São esclarecimentos do modelo proposto, sem execução de análise real, inclus
 |---|---|---|
 | 05/11/2026 | Preenchimento de CI01–CI03 e diferenças, conversas, recortes de objetivos, mapa consolidado e tabela S01–S31. Integração de T01/T02/T03, RC02–RC09 e decisões/metas das Entregas 6–8. Hipóteses e fronteiras preservadas, sem nova evidência empírica | Elaboração assistida pelo Codex a pedido da equipe; revisão individual e consolidação pela equipe pendentes |
 | 05/11/2026 | Aplicação documental de AC-083–AC-085: tentativa S32 e associações conhecidas; CSV condicionado à seleção não vazia e MP4 individual independente; tamanho individual S33 com dado conhecido, estimativa fundamentada ou indisponibilidade explícita. Base: T03, comportamento existente do protótipo, RC09 e manifesto. Sem novos procedimentos, implementação ou evidência empírica | Equipe 16; elaboração assistida pelo Codex a pedido da equipe |
+| 18/11/2026 | [F] Classificação dos objetivos, delimitação da conversa de CI02, revisão de CI01–CI03, alinhamento dos signos à matriz e critérios para avaliação. | Pedro, a pedido da equipe. Revisão individual e confirmação coletiva pendentes. |
+| 18/11/2026 | [F] Ajustes após revisão independente. Vínculos entre signos e modelos, descrição da falha encenada e correspondência da legenda com os slides. | Pedro, a pedido da equipe. Apresentação individual e confirmação coletiva pendentes. |

@@ -972,7 +972,7 @@ function downloadCSV(){
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob(['﻿'+rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(';')).join('\r\n')],{type:'text/csv;charset=utf-8'}));
   a.download='cortes_selecionados.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
-  toast(`Lista CSV com ${plural(hs.length,'corte','cortes')} baixada. Ela não contém vídeo; os MP4 estão na opção ao lado.`);
+  toast(`Lista CSV com ${plural(hs.length,'corte','cortes')} enviada ao navegador. Confira o arquivo salvo. Os vídeos estão na opção MP4.`);
 }
 
 // ---------- telas 1 e 2 ----------
