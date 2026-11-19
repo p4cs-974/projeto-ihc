@@ -8,7 +8,7 @@
 
 Encontrar problemas de usabilidade por inspeção sistemática da interface com as **10 heurísticas de Nielsen**. Cada avaliador trabalha individualmente primeiro; depois a equipe consolida problemas duplicados e prioridades.
 
-> **Parte de violações:** registre somente problemas reais. Não invente uma violação para “preencher” cada heurística. Para provar que todas foram exercitadas, use a **matriz de cobertura H1–H10**. Para heurísticas sem violação, a disciplina solicita um exemplo didático de boa prática.
+Use a matriz de cobertura para registrar a inspeção das dez heurísticas. Registre as violações observadas e reúna um exemplo positivo por heurística na atividade didática ao final.
 
 ## 1. Heurísticas adotadas
 
@@ -52,6 +52,10 @@ Em TCCs técnicos, observe especialmente se a interface comunica o estado do pro
 | Dispositivo/viewport | {{...}} |
 | Avaliadores | {{nomes}} |
 
+## Processo e fluxograma da avaliação heurística
+
+O relatório da equipe inclui o fluxograma da inspeção. Represente a preparação, a inspeção individual de cada tela e estado com H1–H10, o registro e a interpretação das violações, a reunião de consolidação e o relato final. Mostre no fluxo a repetição das verificações e quando os avaliadores se reúnem.
+
 ## 3. Procedimento individual
 
 Cada avaliador deve:
@@ -80,20 +84,22 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 ### 4. Matriz de cobertura das 10 heurísticas
 
-| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
-|---|---|---|---|---|
-| H1 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H2 | {{...}} | sim/não |  |  |
-| H3 | {{...}} | sim/não |  |  |
-| H4 | {{...}} | sim/não |  |  |
-| H5 | {{...}} | sim/não |  |  |
-| H6 | {{...}} | sim/não |  |  |
-| H7 | {{...}} | sim/não |  |  |
-| H8 | {{...}} | sim/não |  |  |
-| H9 | {{...}} | sim/não |  |  |
-| H10 | {{...}} | sim/não |  |  |
+| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados |
+|---|---|---|---|
+| H1 | {{...}} | sim/não | {{V01...}} |
+| H2 | {{...}} | sim/não | |
+| H3 | {{...}} | sim/não | |
+| H4 | {{...}} | sim/não | |
+| H5 | {{...}} | sim/não | |
+| H6 | {{...}} | sim/não | |
+| H7 | {{...}} | sim/não | |
+| H8 | {{...}} | sim/não | |
+| H9 | {{...}} | sim/não | |
+| H10 | {{...}} | sim/não | |
 
 ### 5. Declaração de violações
+
+Use o [Modelo 02 da disciplina](../slides_plinio/Modelo%2002%20Avaliacao%20Heuristica.doc) para relatar as violações. Destaque na captura de tela a região onde ocorre o problema e descreva a ação, o efeito e a correção sugerida.
 
 | ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
 |---|---|---|---|---|---:|---|---|
@@ -101,15 +107,9 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 **Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
 
-### 6. Boas práticas — heurísticas não violadas (atividade didática)
-
-| Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
-|---|---|---|---|
-| {{H4}} | {{...}} | {{print}} | {{...}} |
-
 > Repita a seção para A02, A03... um avaliador por integrante.
 
-## 7. Consolidação da equipe
+## 6. Consolidação da equipe
 
 Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes devem ser consolidados, preservando quem os encontrou.
 
@@ -117,15 +117,33 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 |---|---|---|---|---:|---|---|
 | HC01 | V01(A01), V04(A02) | H1 | {{...}} | {{...}} | alta | {{...}} |
 
-## 8. Síntese e plano de melhoria
+## 7. Síntese e plano de melhoria
 
 - Quantidade de problemas por heurística e severidade.
 - Problemas críticos/graves que bloqueiam teste ou release.
 - Padrões recorrentes entre telas.
 - Correções que serão feitas antes/para a avaliação com usuários.
 
+## 8. Uso das heurísticas
+
+Reúna dez exemplos didáticos no protótipo, um por heurística. Uma heurística com violação em uma tela também pode ser ilustrada com um caso que a atende em outra tela ou estado.
+
+| Heurística | Tela e estado | Exemplo no protótipo | Evidência | Por que atende |
+|---|---|---|---|---|
+| H1 | | | | |
+| H2 | | | | |
+| H3 | | | | |
+| H4 | | | | |
+| H5 | | | | |
+| H6 | | | | |
+| H7 | | | | |
+| H8 | | | | |
+| H9 | | | | |
+| H10 | | | | |
+
 ## Checklist
 
+- [ ] O fluxograma mostra a inspeção individual, a repetição das verificações e a consolidação da equipe.
 - [ ] Cada integrante fez uma inspeção completa e identificada.
 - [ ] Todas as telas/estados relevantes foram examinados.
 - [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
@@ -136,3 +154,4 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 - [ ] Severidade possui justificativa, não apenas número.
 - [ ] Recomendação resolve a causa ou reduz o impacto.
 - [ ] Achados duplicados foram consolidados ao final.
+- [ ] A seção Uso das heurísticas apresenta dez exemplos positivos com evidência, um por heurística.

@@ -137,7 +137,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md) | soluções individuais + consolidação de objetivos/signos | 🟨 documentada; revisão pelos autores e consolidação coletiva pendentes |
 | 10 | [MoLIC](docs/10_molic.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md) | 1 diagrama completo por integrante | 🟨 diagramas documentados; revisão pelos autores e consolidação coletiva pendentes |
 | 11 | [Protótipo navegável integrado](docs/11_figma.md) | 1 protótipo integrado por equipe, cobrindo fluxos modelados | 🟨 [preview publicado](https://ihc-11.p4cs.com.br/); revisão final da equipe pendente |
-| 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | ⬜ |
+| 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | 🟨 plano e instrumentos preparados; piloto pendente |
 | 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | 1 avaliação completa por integrante, todas as telas/estados e 10 heurísticas | ⬜ |
 | 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | avaliação consolidada; nº de participantes finais = nº de integrantes | ⬜ |
 
