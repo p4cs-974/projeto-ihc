@@ -86,15 +86,17 @@
 <circle cx="990" cy="523" r="8.5" fill="#1f2a33"/>
 <text x="990" y="563" class="nid" text-anchor="middle">e2</text>
 </g>
-<g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="precond: resultados acessíveis (O02) | u: revisar candidatos">
+<g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="precond: resultados acessíveis (O02) | u: revisar candidatos | gco: O00 · Obter material" data-goal="O00">
 <polyline points="300,152 300,230" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
 <text x="312" y="180" class="lbl" text-anchor="start"><tspan class="fid">f1</tspan> · precond: resultados acessíveis (O02)</text>
 <text x="312" y="199" class="lbl" text-anchor="start">u: revisar candidatos</text>
+<text x="312" y="219" class="tag" text-anchor="start">gco: O00 · Obter material</text>
 </g>
-<g id="f2" data-kind="edge" data-from="a2" data-to="c1" data-style="solid" data-label="u: retomar a revisão | após interrupção">
+<g id="f2" data-kind="edge" data-from="a2" data-to="c1" data-style="solid" data-label="u: retomar a revisão | após interrupção | gco: O00 · Obter material" data-goal="O00">
 <polyline points="640,152 640,230" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
 <text x="652" y="180" class="lbl" text-anchor="start"><tspan class="fid">f2</tspan> · u: retomar a revisão</text>
 <text x="652" y="199" class="lbl" text-anchor="start">após interrupção</text>
+<text x="652" y="219" class="tag" text-anchor="start">gco: O00 · Obter material</text>
 </g>
 <g id="f3" data-kind="edge" data-from="c1" data-to="p1" data-style="solid" data-label="u: aplicar critérios">
 <polyline points="740,315 952,315" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
@@ -180,10 +182,11 @@
 <text x="977" y="1192" class="lbl" text-anchor="start">(n itens, sem vídeos);</text>
 <text x="977" y="1211" class="lbl" text-anchor="start">confira o arquivo salvo</text>
 </g>
-<g id="f20" data-kind="edge" data-from="c3" data-to="e1" data-style="solid" data-label="u: encerrar com o | material obtido">
+<g id="f20" data-kind="edge" data-from="c3" data-to="e1" data-style="solid" data-label="u: encerrar com o | material obtido | gcc: O00 · Obter material" data-goal="O00">
 <polyline points="480,1287 480,1362" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
 <text x="492" y="1317" class="lbl" text-anchor="start"><tspan class="fid">f20</tspan> · u: encerrar com o</text>
 <text x="492" y="1336" class="lbl" text-anchor="start">material obtido</text>
+<text x="492" y="1355" class="tag" text-anchor="start">gcc: O00 · Obter material</text>
 </g>
 <g id="f21" data-kind="edge" data-from="c1" data-to="e2" data-style="solid" data-label="u: interromper revisão">
 <polyline points="740,445 990,445 990,508" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
@@ -197,11 +200,11 @@
 <text x="1015" y="578" class="note" text-anchor="start">retorno por a2</text>
 <g id="legenda" transform="translate(40,1477)">
 <rect x="0" y="0" width="1120" height="190" rx="10" fill="#f6f8fa" stroke="#c9d1d9"/>
-<text x="18" y="30" class="stitle" text-anchor="start">Legenda (notação da disciplina; não é fluxo de telas)</text>
+<text x="18" y="30" class="stitle" text-anchor="start">Legenda MoLIC</text>
 <circle cx="30" cy="62" r="10" fill="#1f2a33"/>
-<text x="62" y="68" class="leg" text-anchor="start">abertura (A9; B3)</text>
+<text x="62" y="68" class="leg" text-anchor="start">gco: abertura de conversa sobre O00 (B3–B5)</text>
 <circle cx="30" cy="97" r="12" fill="#fff" stroke="#1f2a33" stroke-width="2.5"/><circle cx="30" cy="97" r="7" fill="#1f2a33"/>
-<text x="62" y="103" class="leg" text-anchor="start">encerramento (A9, A10)</text>
+<text x="62" y="103" class="leg" text-anchor="start">gcc: fechamento com conclusão de O00 (B4–B5)</text>
 <rect x="19" y="121" width="22" height="22" fill="#1f2a33"/>
 <text x="62" y="143" class="leg" text-anchor="start">processo do sistema; saídas sempre d: (A11)</text>
 <rect x="14" y="152" width="34" height="24" rx="6" fill="#fff" stroke="#1f2a33" stroke-width="2"/>

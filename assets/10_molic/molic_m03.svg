@@ -126,14 +126,16 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <g id="p6" data-kind="process"><rect x="716" y="1406" width="24" height="24" fill="#1f2a33"/>
 <text x="748" y="1423" class="nid" text-anchor="start">p6</text>
 </g>
-<g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="u: preparar gravação">
+<g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="u: preparar gravação | gco: O00 · Obter material" data-goal="O00">
 <polyline points="322,163 322,235" class="edge"/>
 <text x="334" y="186" class="label" text-anchor="start">u: preparar gravação</text>
+<text x="334" y="206" class="tag" text-anchor="start">gco: O00 · Obter material</text>
 </g>
-<g id="f2" data-kind="edge" data-from="a2" data-to="c2" data-style="solid" data-label="u: retomar a consulta | Contexto disponível (S29)">
+<g id="f2" data-kind="edge" data-from="a2" data-to="c2" data-style="solid" data-label="u: retomar a consulta | gco: O00 · Obter material | Contexto disponível (S29)" data-goal="O00">
 <polyline points="45,163 45,479 90,479" class="edge"/>
 <text x="56" y="185" class="label" text-anchor="start">u: retomar a consulta</text>
-<text x="56" y="205" class="label" text-anchor="start">Contexto disponível (S29)</text>
+<text x="56" y="205" class="tag" text-anchor="start">gco: O00 · Obter material</text>
+<text x="56" y="225" class="label" text-anchor="start">Contexto disponível (S29)</text>
 </g>
 <g id="f3" data-kind="edge" data-from="c1" data-to="p1" data-style="solid" data-label="u: enviar e solicitar análise">
 <polyline points="540,266 716,266" class="edge"/>
@@ -286,9 +288,10 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="740,1418 756,1418 756,1484 540,1484" class="edge ruptura"/>
 <text x="590" y="1506" class="label" text-anchor="start">d: falha ao gerar CSV</text>
 </g>
-<g id="f37" data-kind="edge" data-from="c6" data-to="e1" data-style="solid" data-label="u: encerrar com arquivos conferidos">
+<g id="f37" data-kind="edge" data-from="c6" data-to="e1" data-style="solid" data-label="u: encerrar com arquivos conferidos | gcc: O00 · Obter material" data-goal="O00">
 <polyline points="197,1494 197,1602" class="edge"/>
 <text x="210" y="1540" class="label" text-anchor="start">u: encerrar com arquivos conferidos</text>
+<text x="210" y="1560" class="tag" text-anchor="start">gcc: O00 · Obter material</text>
 </g>
 <g id="f38" data-kind="edge" data-from="c6" data-to="e3" data-style="solid" data-label="u: encerrar com pendência">
 <polyline points="490,1494 490,1602" class="edge"/>
@@ -301,4 +304,5 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="44" y="1683" class="sub" text-anchor="start">Círculo cheio: abertura · Círculo com anel: encerramento · Quadrado preto: processamento</text>
 <text x="44" y="1712" class="sub" text-anchor="start">u: usuário · d: preposto · d+u: diálogo · S: signo · Seta tracejada: ruptura ou recuperação</text>
 <text x="810" y="1683" class="sub" text-anchor="start">Cena tracejada: alerta antes de confirmar</text>
+<text x="44" y="1740" class="sub" text-anchor="start">gco: abertura relativa ao objetivo · gcc: fechamento com conclusão · Saídas pendentes têm rótulo próprio</text>
 </svg>

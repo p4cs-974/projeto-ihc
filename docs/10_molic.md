@@ -14,12 +14,15 @@ Objetivos (O00 a O10), signos, cenários e tarefas seguem a [Entrega 9](09_model
 
 **Base de notação:** [MoLIC — Parte A](../slides_plinio/CC8122-Molic-ParteA.pdf), slides 5–15, e [Parte B](../slides_plinio/CC8122-Molic-ParteB.pdf), slides 2–5: cenas, falas de transição, acessos ubíquos, abertura/encerramento, processamento, rupturas e detalhamento de diálogos e signos.
 
-### Legenda de M01 e M02
+### Legenda dos três modelos
 
 | Elemento | Representação |
 |---|---|
 | Abertura | Círculo preto preenchido, seguido da fala que inicia a conversa |
 | Encerramento | Círculo preto com anel externo |
+| GCO | `gco: O00` na fala que abre a conversa para obter material. A retomada abre outra conversa com a mesma finalidade. |
+| GCC | `gcc: O00` na transição que encerra a conversa com o material obtido. |
+| Alerta | Cena tracejada em que o preposto apresenta a consequência e a pessoa decide. |
 | Cena | Retângulo arredondado com o tópico no cabeçalho e os diálogos no corpo |
 | Processo do sistema | Quadrado preto, que recebe fala do usuário e responde com fala do preposto |
 | Seta contínua ou tracejada | Fala de transição, ou ruptura e recuperação |
@@ -27,13 +30,15 @@ Objetivos (O00 a O10), signos, cenários e tarefas seguem a [Entrega 9](09_model
 | precond: | Condição para que a fala esteja disponível |
 | Nota em itálico marrom | Atividade fora do sistema |
 
-Nos diagramas M01 e M02, as letras a, c, p e e identificam aberturas, cenas, processos e encerramentos, numerados dentro de cada modelo. Não há acesso ubíquo, porque nenhum tópico precisa estar disponível a partir de qualquer cena, nem cena de alerta, porque incluir, retirar e baixar são ações reversíveis ou repetíveis.
+[F] As letras a, c, p e e identificam aberturas, cenas, processos e encerramentos. As falas a partir de a1 e a2 abrem O00 (GCO). A chegada a e1 fecha O00 (GCC). Na Entrega 9, O01–O08 são objetivos instrumentais identificados nas cenas e precondições. O09 e O10 ocorrem fora da interface. Os mecanismos de prevenção e recuperação seguem a [legenda da Entrega 9](09_modelo_conceitual.md#convenções-e-relações).
+
+Em M01 e M02, não há acesso ubíquo, porque nenhum tópico precisa estar disponível a partir de qualquer cena, nem cena de alerta, porque incluir, retirar e baixar são ações reversíveis ou repetíveis.
 
 ## M01: Revisar candidatos e obter o material da partida
 
 - **Responsável:** Pedro Alexandre Custódio Silva, RA 22.123.049-3
 - **Cenário e tarefa:** CI01 e T01 (atividade A04), com continuidade em T02
-- **Objetivos:** O04 a O07, e O08 na retomada. O02 é precondição e O10 acontece fora do sistema.
+- **Objetivos:** O00, apoiado por O04 a O07 e por O08 na retomada. O02 é precondição e O10 acontece fora do sistema.
 - **Signos:** S01 a S03, S12, S16 a S24, S26 a S29, S32 e S33. S30 aparece só nas notas externas.
 
 ### Diagrama
@@ -78,7 +83,7 @@ As cenas são c1 (localizar candidatos), c2 (conferir pertinência e contexto) e
 
 - **Responsável:** Lucas Roberto Boccia dos Santos, RA 22.123.012-1
 - **Cenário e tarefa:** CI02, com T02 como continuidade externa e a obtenção de T01 (atividade A04)
-- **Objetivos:** O06 e O07, conduzidos pelo editor, e O04 apenas para localizar um item que falta. O02 é precondição. O09 e O10 são externos.
+- **Objetivos:** O00, apoiado por O06 e O07, por O04 quando falta um item e por O08 na retomada. O02 é precondição. O09 e O10 são externos.
 - **Signos:** S01 a S03, S16 a S24, S26 a S29, S31 e S33
 
 Quem conversa com o sistema é o editor, Rafael. Arnaldo recebe os arquivos e decide fora do sistema, por isso não há cena de aprovação. A seleção costuma vir pronta da revisão de M01, mas M02 se lê sozinho: a cena c3 localiza um item que falta ou que o supervisor pediu, e a cena c2 permite incluí-lo.
@@ -123,6 +128,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 - [x] As cenas são tópicos das conversas de CI01 e CI02, não páginas.
 - [x] Falas que saem de cenas são do usuário, e falas que saem de processos são do preposto.
 - [x] Os dois modelos encerram com material obtido (e1) ou com interrupção e pendência (e2).
+- [x] GCO indica a abertura de O00 e GCC, sua conclusão.
 - [x] Toda ruptura tem feedback e caminho de volta ou saída com nota.
 - [x] Os modelos cobrem consulta vazia, contexto insuficiente, omissão, seleção vazia, item faltante, mídia indisponível, tamanho desconhecido e retomada.
 - [x] Objetivos e signos são os da Entrega 9.
@@ -170,6 +176,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 - [x] [F] As transições indicam o emissor e as saídas de processos são respostas do preposto.
 - [x] [F] O modelo liga abertura, acompanhamento, resultados, recuperação e saídas.
 - [x] [F] Os objetivos e signos do modelo correspondem à Entrega 9. A cobertura inclui seleção, CSV, MP4 e conferência humana.
+- [x] [F] GCO identifica a abertura de O00 em a1/a2. GCC identifica a conclusão em e1.
 - [x] [F] O alerta indica o alvo e a decisão. O retorno do alerta volta à cena da falha.
 - [ ] [?] Giovanni apresentou e revisou o modelo com a equipe.
 
