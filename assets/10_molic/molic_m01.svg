@@ -182,9 +182,9 @@
 <text x="492" y="1336" class="lbl" text-anchor="start">material obtido</text>
 <text x="492" y="1355" class="tag" text-anchor="start">gcc: O00 · Obter material</text>
 </g>
-<g id="f21" data-kind="edge" data-from="c1" data-to="e2" data-style="solid" data-label="u: interromper revisão">
+<g id="f21" data-kind="edge" data-from="c1" data-to="e2" data-style="solid" data-label="u: interromper com pendência">
 <polyline points="740,445 990,445 990,508" fill="none" stroke="#1f2a33" stroke-width="2" marker-end="url(#arr)"/>
-<text x="770" y="437" class="lbl" text-anchor="start"><tspan class="fid">f21</tspan> · u: interromper revisão</text>
+<text x="770" y="437" class="lbl" text-anchor="start"><tspan class="fid">f21</tspan> · u: interromper com pendência</text>
 </g>
 <text x="505" y="1372" class="note" text-anchor="start">Fora do sistema: abrir o CSV e reproduzir os MP4 salvos,</text>
 <text x="505" y="1392" class="note" text-anchor="start">copiar ao servidor e avisar Arnaldo (T02, O09); pendências S30</text>

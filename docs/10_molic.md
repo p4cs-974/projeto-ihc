@@ -30,7 +30,7 @@ Objetivos (O00 a O10), signos, cenários e tarefas seguem a [Entrega 9](09_model
 | precond: | Condição para que a fala esteja disponível |
 | Nota em itálico marrom | Atividade fora do sistema |
 
-[F] As letras a, c, p e e identificam aberturas, cenas, processos e encerramentos. As falas a partir de a1 e a2 abrem O00 (GCO). A chegada a e1 fecha O00 (GCC). Na Entrega 9, O01–O08 são objetivos instrumentais identificados nas cenas e precondições. O09 e O10 ocorrem fora da interface. Os mecanismos de prevenção e recuperação seguem a [legenda da Entrega 9](09_modelo_conceitual.md#convenções-e-relações).
+[F] As letras a, c, p e e identificam aberturas, cenas, processos e encerramentos. As falas a partir de a1 e a2 abrem O00 (GCO). A chegada a e1 fecha O00 (GCC), após a confirmação da pessoa de que obteve o material necessário. As demais saídas identificam adiamento ou pendência. Na Entrega 9, O01–O08 são objetivos instrumentais identificados nas cenas e precondições. O09 e O10 ocorrem fora da interface. Os mecanismos de prevenção e recuperação seguem a [legenda da Entrega 9](09_modelo_conceitual.md#convenções-e-relações).
 
 Em M01 e M02, não há acesso ubíquo, porque nenhum tópico precisa estar disponível a partir de qualquer cena, nem cena de alerta, porque incluir, retirar e baixar são ações reversíveis ou repetíveis.
 
@@ -61,7 +61,7 @@ As cenas são c1 (localizar candidatos), c2 (conferir pertinência e contexto) e
 6. Em c3, confere os itens selecionados, a quantidade e o tamanho de cada MP4.
 7. Com a seleção não vazia, baixa o CSV, com os metadados e o endereço de cada corte, sem os vídeos. O sistema avisa que o arquivo foi disponibilizado e pede que Rafael confira o arquivo salvo.
 8. Para cada vídeo de que precisa, abre o item selecionado, baixa o MP4 e volta à seleção.
-9. Encerra com o material obtido. Fora do sistema, abre o CSV, reproduz os MP4 salvos, copia os arquivos para o servidor e avisa Arnaldo. As pendências continuam com ele.
+9. [H] Se obteve o material necessário, encerra em e1. Fora do sistema, abre o CSV, reproduz os MP4 salvos, copia os arquivos ao servidor e avisa Arnaldo. Se falta material, pode voltar à revisão ou interromper em e2.
 
 #### Alternativas e rupturas
 
@@ -104,7 +104,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 2. Abre um corte em c2 e confere o vídeo de origem, o instante no arquivo e a duração. Se quiser, reproduz o corte.
 3. Baixa o MP4 e volta à seleção, repetindo os passos 2 e 3 para cada corte necessário.
 4. Em c1, baixa o CSV, que leva as mesmas referências dos cortes.
-5. Encerra com o material obtido. Fora do sistema, confere os arquivos salvos, transfere-os e avisa Arnaldo pelo chat. A decisão editorial é dele.
+5. [H] Se obteve o material necessário, encerra em e1. Fora do sistema, confere os arquivos salvos, transfere-os e avisa Arnaldo pelo chat. Se falta material, pode tentar completar a seleção ou encerrar com pendência em e2.
 
 #### Alternativas e rupturas
 
