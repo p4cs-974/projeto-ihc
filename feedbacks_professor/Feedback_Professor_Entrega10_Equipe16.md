@@ -52,6 +52,10 @@ A equipe deve revisar cada objetivo modelado e posicionar GCO e GCC de forma coe
 >
 > \- Pedro
 
+> **Após revisão independente** ([`e3abc66`](https://github.com/p4cs-974/projeto-ihc/commit/e3abc667dd4e9292142db0868750d529bd352b06)). [F] A fala com GCC em M01 e M02 confirma a conferência dos arquivos antes de e1. A legenda distingue abertura, encerramento e marcas GCO/GCC na fala.
+>
+> \- Pedro
+
 ### 2. Finalizar estruturalmente o M03
 
 O M03 possui trechos desconectados e becos sem saída. O login começa em um ponto de abertura, mas não conduz ao percurso principal. A cena “Registro do erro” recebe a comunicação da falha, porém não oferece uma fala de recuperação, reenvio, retorno ou encerramento. A cena de progresso não apresenta uma continuidade clara para nova consulta ou para a chegada aos resultados. O acesso de saída também aparece isolado do restante da conversa.
@@ -59,6 +63,10 @@ O M03 possui trechos desconectados e becos sem saída. O login começa em um pon
 Um MoLIC precisa mostrar como a conversa prossegue depois que o sistema comunica uma condição. A equipe deve conectar os percursos e decidir, em cada ruptura, se o usuário pode tentar novamente, corrigir uma entrada, adiar, voltar a uma cena anterior ou encerrar com a pendência explicitada. Apenas registrar o erro não caracteriza tratamento de erro.
 
 > **✅ Como foi tratado** ([`eb8379f`](https://github.com/p4cs-974/projeto-ihc/commit/eb8379fa4ce2732c3a6a36e87da764c3774205c6)). [F] O modelo liga o preparo ao acompanhamento e aos resultados. A falha permite corrigir, pedir nova tentativa ou adiar. O diagrama distingue saída antes do envio, pendência na análise, material obtido e pendência na obtenção.
+>
+> \- Pedro
+
+> **Após revisão independente** ([`579c1b2`](https://github.com/p4cs-974/projeto-ihc/commit/579c1b29ea65e4a5ff47d3810a8d80df9b0c6967) · [`d5d25fa`](https://github.com/p4cs-974/projeto-ihc/commit/d5d25fa3cdde740a1f89517eb8418592e53fc4ea)). [F] M03 distingue recusa confirmada de aceitação desconhecida. c8/p8 permite consultar o pedido identificável ou deixar pendente. A pessoa pode revisar outra partida e voltar à consulta quando nenhum corte estiver aberto.
 >
 > \- Pedro
 
@@ -79,6 +87,10 @@ O M03 introduz login, credenciais, exclusão de resultado e cancelamento efetivo
 O próximo passo não é apenas acrescentar mais caixas. A equipe precisa escolher se as novas capacidades são realmente necessárias e, se forem, justificar a mudança e atualizar cenário, conversa, objetivos, signos e rastreabilidade. Se não forem sustentadas pelo projeto, devem ser retiradas do MoLIC. Os signos do diagrama precisam usar a mesma semântica e os mesmos IDs consolidados na Entrega 9.
 
 > **✅ Como foi tratado** ([`4a1b9e6`](https://github.com/p4cs-974/projeto-ihc/commit/4a1b9e66bebd6d700b0c73625fc4482b3cace418)). [F] M03 usa os objetivos e signos de CI03. Inclui correção de entrada, recuperação condicionada, seleção para CSV, obtenção de MP4, conferência dos arquivos e retomada. Login, exclusão e cancelamento efetivo estão fora do modelo.
+>
+> \- Pedro
+
+> **Após revisão independente** ([`ba6ac92`](https://github.com/p4cs-974/projeto-ihc/commit/ba6ac92dd3b7cf241f17f37741befe1ee71ccae0) · [`d5d25fa`](https://github.com/p4cs-974/projeto-ihc/commit/d5d25fa3cdde740a1f89517eb8418592e53fc4ea)). [F] f34 identifica S26. R02 e R05 incluem c8. A retomada prevê identificar a partida e a entrada quando o contexto anterior faltar.
 >
 > \- Pedro
 
@@ -113,6 +125,10 @@ A equipe deve renomear cada alerta pelo compromisso que o usuário está prestes
   >
   > \- Pedro
 
+  > **Após revisão independente** ([`3d839ca`](https://github.com/p4cs-974/projeto-ihc/commit/3d839ca0252f41bd7bbd0cf1a99782c1b50b714b)). [F] As falas de M03 têm identificadores visíveis no SVG.
+  >
+  > \- Pedro
+
 - Atualizem o status da entrega e os checklists somente depois da revisão pelos responsáveis. O documento ainda declara a atividade “em andamento” e deixa várias verificações sem confirmação.
 
   > **🟨 Tratado em parte** ([`a794201`](https://github.com/p4cs-974/projeto-ihc/commit/a79420121d65e41a2b6088488d397a043caaa40d)). [F] Os checklists registram os pontos conferidos nos artefatos. [?] Pedro, Lucas e Giovanni ainda precisam apresentar e confirmar seus modelos e consolidar a revisão em equipe.
@@ -124,6 +140,10 @@ A equipe deve renomear cada alerta pelo compromisso que o usuário está prestes
 - O protótipo precisa representar estados derivados dos MoLIC, especialmente consulta vazia, falha de mídia, falha de análise, retorno após cancelamento e confirmação de obtenção.
 
   > **🟨 Tratado em parte** ([`a14f442`](https://github.com/p4cs-974/projeto-ihc/commit/a14f442f5c8f64e22609f70880fbac00173c094b)). [F] A Entrega 11 vincula consulta vazia, falha de mídia, falha de análise, desistência da confirmação de nova tentativa e obtenção de arquivos. A conferência dos arquivos salvos é humana. [?] Recuperação real e reenvio dependem da definição técnica.
+  >
+  > \- Pedro
+
+  > **Após revisão independente** ([`62bbbed`](https://github.com/p4cs-974/projeto-ihc/commit/62bbbed7cb172436c05d63d3105149c0499b5852) · [`f32ca4b`](https://github.com/p4cs-974/projeto-ihc/commit/f32ca4ba5fab7f52a34c70d7af0575bea575996c) · [`6be6c4d`](https://github.com/p4cs-974/projeto-ihc/commit/6be6c4d1542b989757b8ff453982fccdaf0945d7)). [F] A fonte local informa que o CSV foi enviado ao navegador e pede conferência do arquivo salvo. A Entrega 11 documenta o total derivado dos MP4 e data a cobertura do preview. [?] A consulta de pedidos sem resposta depende do serviço de análise.
   >
   > \- Pedro
 
