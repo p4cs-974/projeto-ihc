@@ -82,19 +82,19 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <rect x="90" y="1008" width="450" height="217" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
 <path d="M90 1049h450" fill="none" stroke="#1f2a33" stroke-width="1.5"/>
 <text x="104" y="1036" class="topic" text-anchor="start">c5 · Conferir o candidato</text>
-<text x="526" y="1036" class="tag" text-anchor="end">O05 · O07</text>
+<text x="526" y="1036" class="tag" text-anchor="end">O05–O07</text>
 <text x="105" y="1075" class="dialog" text-anchor="start">d: vídeo de origem S03, candidato S16</text>
 <text x="105" y="1098" class="dialog" text-anchor="start">d: relógio do jogo S18 e posição no arquivo S19</text>
 <text x="105" y="1121" class="dialog" text-anchor="start">d: intervalo S20, duração S21 e prévia S27</text>
 <text x="105" y="1144" class="dialog" text-anchor="start">d: tamanho individual S33, quando disponível</text>
-<text x="105" y="1167" class="dialog" text-anchor="start">u: identificar a participação do atleta</text>
+<text x="105" y="1167" class="dialog" text-anchor="start">d+u: incluir ou retirar item da seleção S23</text>
 </g>
 <g id="c6" data-kind="scene">
 <rect x="90" y="1377" width="450" height="117" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
 <path d="M90 1418h450" fill="none" stroke="#1f2a33" stroke-width="1.5"/>
 <text x="104" y="1405" class="topic" text-anchor="start">c6 · Conferir a obtenção</text>
-<text x="526" y="1405" class="tag" text-anchor="end">O07 · O08</text>
-<text x="105" y="1444" class="dialog" text-anchor="start">d: corte disponibilizado S27</text>
+<text x="526" y="1405" class="tag" text-anchor="end">O06–O08</text>
+<text x="105" y="1444" class="dialog" text-anchor="start">d+u: seleção S23, quantidade S24</text>
 <text x="105" y="1467" class="dialog" text-anchor="start">d+u: obtenção S28, arquivos e pendências S30</text>
 </g>
 <g id="p1" data-kind="process"><rect x="716" y="254" width="24" height="24" fill="#1f2a33"/>
@@ -114,6 +114,9 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 </g>
 <g id="p7" data-kind="process"><rect x="956" y="1068" width="24" height="24" fill="#1f2a33"/>
 <text x="988" y="1068" class="nid" text-anchor="start">p7</text>
+</g>
+<g id="p6" data-kind="process"><rect x="716" y="1406" width="24" height="24" fill="#1f2a33"/>
+<text x="748" y="1423" class="nid" text-anchor="start">p6</text>
 </g>
 <g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="u: preparar gravação">
 <polyline points="322,163 322,235" class="edge"/>
@@ -241,9 +244,9 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="740,1155 756,1155 756,1237 504,1237 504,1225" class="edge ruptura"/>
 <text x="550" y="1260" class="label" text-anchor="start">d: falha na obtenção do MP4</text>
 </g>
-<g id="f31" data-kind="edge" data-from="c5" data-to="c6" data-style="solid" data-label="u: conferir arquivo obtido">
+<g id="f31" data-kind="edge" data-from="c5" data-to="c6" data-style="solid" data-label="u: conferir seleção e saídas">
 <polyline points="320,1225 320,1377" class="edge"/>
-<text x="333" y="1336" class="label" text-anchor="start">u: conferir arquivo obtido</text>
+<text x="333" y="1336" class="label" text-anchor="start">u: conferir seleção e saídas</text>
 </g>
 <g id="f32" data-kind="edge" data-from="c4" data-to="c6" data-style="solid" data-label="u: conferir o que falta">
 <polyline points="110,900 73,900 73,1430 90,1430" class="edge"/>
@@ -252,6 +255,19 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <g id="f33" data-kind="edge" data-from="c6" data-to="c5" data-style="solid" data-label="u: voltar ao corte">
 <polyline points="540,1481 580,1481 580,1288 420,1288 420,1225" class="edge"/>
 <text x="591" y="1320" class="label" text-anchor="start">u: voltar ao corte</text>
+</g>
+<g id="f34" data-kind="edge" data-from="c6" data-to="p6" data-style="solid" data-label="precond: seleção não vazia | u: obter CSV">
+<polyline points="540,1418 716,1418" class="edge"/>
+<text x="590" y="1377" class="label" text-anchor="start">precond: seleção não vazia</text>
+<text x="590" y="1397" class="label" text-anchor="start">u: obter CSV</text>
+</g>
+<g id="f35" data-kind="edge" data-from="p6" data-to="c6" data-style="solid" data-label="d: CSV disponibilizado">
+<polyline points="728,1430 728,1456 540,1456" class="edge"/>
+<text x="590" y="1447" class="label" text-anchor="start">d: CSV disponibilizado</text>
+</g>
+<g id="f36" data-kind="edge" data-from="p6" data-to="c6" data-style="dashed" data-label="d: falha ao gerar CSV">
+<polyline points="740,1418 756,1418 756,1484 540,1484" class="edge ruptura"/>
+<text x="590" y="1506" class="label" text-anchor="start">d: falha ao gerar CSV</text>
 </g>
 <g id="f37" data-kind="edge" data-from="c6" data-to="e1" data-style="solid" data-label="u: encerrar com arquivos conferidos">
 <polyline points="197,1494 197,1602" class="edge"/>

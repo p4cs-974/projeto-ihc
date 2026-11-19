@@ -133,7 +133,17 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 
 ## M03 — Enviar vídeos, acompanhar análises e consultar resultados
 
-**Autor(a):** Giovanni Chahin Morassi — 22.123.025-3**Persona de referência:** P03, Jorginho Jr.**Cenário de interação de origem:** CI03, acompanhar a análise e obter trechos para uma produção amadora.**Tarefas relacionadas:** A01 no preparo, T03/A02 no acompanhamento e T01/A04 na revisão e obtenção.
+**Autor(a):** Giovanni Chahin Morassi — 22.123.025-3
+
+**Persona de referência:** P03, Jorginho Jr.
+
+**Cenário de interação de origem:** CI03, acompanhar a análise e obter trechos para uma produção amadora.
+
+**Tarefas relacionadas:** A01 no preparo, T03/A02 no acompanhamento e T01/A04 na revisão e obtenção.
+
+**Objetivo final e instrumentais:** O00, com O01 a O08. O10 ocorre fora da aplicação.
+
+**Signos:** S01–S03, S05, S06, S08–S24, S26–S30, S32 e S33.
 
 ### Diagrama
 
@@ -147,14 +157,17 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 2. [H] Em c2, consulta o estado da análise (p2). Se houver resultados acessíveis, pode passar à revisão (c4). Se ainda aguarda, pode consultar novamente ou sair com pendência (e2). Abertura a2 retoma a consulta ao estado com o contexto disponível.
 3. [H] Se o sistema informar falha, c3 apresenta a entrada afetada e as ações disponíveis. O usuário pode voltar ao preparo para corrigir a entrada, pedir nova tentativa quando suportada ou sair deixando a partida pendente. O pedido aceito retorna ao acompanhamento. Se for recusado ou ficar sem resposta, c3 oferece os próximos passos.
 4. [H] Em c4, localiza candidatos pelos critérios. Em c5, confere a prévia e identifica visualmente a participação do atleta. A consulta vazia convida a rever os critérios. Uma falha de mídia devolve a pessoa ao candidato com possibilidade de outra tentativa.
-5. [H] Em c6, confere os arquivos salvos e o que ficou pendente. Encerra com o material conferido (e1) ou com pendência (e3). A montagem ocorre externamente (O10).
+5. [H] Em c5, Jorginho inclui ou retira candidatos e pode obter cada MP4 acessível (p5). Em c6, confere a seleção e pede o CSV quando há itens (p6). Abre os arquivos salvos e encerra com o material conferido (e1) ou com pendência (e3). A montagem ocorre externamente (O10).
 
 [F] Em M03, as falas `u:` saem das aberturas e das cenas. As respostas `d:` saem dos quadrados de processamento. Em p1, a resposta distingue rejeição e aceitação do envio. Em p7, distingue aceitação da nova tentativa, recusa e falta de resposta (S15).
+
+[F] O escopo da Entrega 9 sustenta preparar, acompanhar, revisar e obter material. Login, exclusão de resultados e cancelamento do processamento ficam fora do M03. Adiar encerra a conversa com uma pendência. Retirar um item altera a seleção (S23). Retomar usa o contexto disponível (S29).
 
 ### Checklist específico de modelagem
 
 - [x] [F] As transições indicam o emissor e as saídas de processos são respostas do preposto.
 - [x] [F] O modelo liga abertura, acompanhamento, resultados, recuperação e saídas.
+- [x] [F] Os objetivos e signos do modelo correspondem à Entrega 9. A cobertura inclui seleção, CSV, MP4 e conferência humana.
 - [ ] [?] Giovanni apresentou e revisou o modelo com a equipe.
 
 ## Consolidação da equipe
@@ -163,13 +176,13 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 
 | Objetivo | MoLIC que cobre | Lacunas/duplicidades | Decisão |
 |---|---|---|---|
-| O00 Obter material para continuidade editorial | M01, M02 e M03, em parte | M03 cobre envio e acompanhamento parcialmente; conclusão do trabalho externo não é comprovada | Propósito global, benefício a validar |
+| O00 Obter material para continuidade editorial | M01, M02 e M03 | Cada recorte contribui para a mesma finalidade. A verificação de arquivos cabe à pessoa | [H] Benefício a validar |
 | O01 a O03 Preparar gravações, acompanhar a análise e encaminhar falhas | M03 c1–c3 | O02 é precondição de M01/M02 | [H] A tela de acompanhamento informa o resultado da consulta. A pessoa corrige, tenta novamente ou adia conforme as ações disponíveis. |
 | O04 Localizar candidatos | M01 c1; M02 c3; M03 consulta de resultados | Sobreposição restrita: M02 só localiza um item que falta, sem julgar pertinência | M02 repete os diálogos de consulta para se ler sozinho; M03 também oferece consulta, sem presumir filtro por atleta |
-| O05 Conferir pertinência e contexto | M01 c2; M03 parcial | M02 confere identificação, não pertinência; M03 oferece prévia e metadados, com julgamento da participação do atleta pela pessoa | Julgamento de pertinência continua humano |
-| O06 Definir e conferir a seleção | M01 c2 e c3; M02 c1, c2 e c3 | M01 monta a seleção e M02 a confere ou completa antes de encaminhar | Cenas parecidas usam os mesmos diálogos; O06 não é representado no M03 |
-| O07 Obter cortes e metadados | M01 c2 e c3; M02 c1 e c2; M03 parcial | A mesma obtenção encerra objetivos diferentes; M03 cobre MP4 individual, sem CSV da seleção | Material para a edição em M01 e para a supervisão em M02; manter explícitos os limites de M03 |
-| O08 Reconhecer contexto ao retomar | M01 e M02, em a2 e c1; M03 parcial | Retomada limitada à sessão; M03 a2 e c2 informam tentativa e contexto da consulta | Sem histórico persistente |
+| O05 Conferir pertinência e contexto | M01 c2; M03 c5 | M02 confere identificação, não pertinência; M03 oferece prévia e metadados, com julgamento da participação do atleta pela pessoa | Julgamento de pertinência continua humano |
+| O06 Definir e conferir a seleção | M01 c2/c3; M02 c1/c2/c3; M03 c5/c6 | M01 e M03 montam e conferem a seleção. M02 prepara o envio externo | [H] A seleção define os itens do CSV |
+| O07 Obter cortes e metadados | M01 c2/c3; M02 c1/c2; M03 c5/c6 | Os três distinguem CSV da seleção e MP4 individual | [H] O material prepara edição, supervisão ou montagem amadora |
+| O08 Reconhecer contexto ao retomar | M01 e M02 a2/c1; M03 a2/c2 e c6 | Retomada limitada à sessão; M03 a2 e c2 informam tentativa e contexto da consulta | Sem histórico persistente |
 | O09 Avaliar a decisão editorial | Nenhum | Decisão de Arnaldo | Fora do sistema, nota em M02; não introduzir aprovação no M03 |
 | O10 Conferir o original e ajustar | Nenhum | Ajuste no vídeo original | Fora do sistema, nota em e2 em M01/M02; M03 também não modela edição/montagem |
 
