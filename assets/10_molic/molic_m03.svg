@@ -64,7 +64,7 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="526" y="480" class="tag" text-anchor="end">O02 · O08</text>
 <text x="105" y="519" class="dialog" text-anchor="start">d: estado S09, atualização S10, progresso S11</text>
 <text x="105" y="542" class="dialog" text-anchor="start">d: resultados acessíveis e limites S12</text>
-<text x="105" y="565" class="dialog" text-anchor="start">d: tentativa S32 e contexto disponível S29</text>
+<text x="105" y="565" class="dialog" text-anchor="start">d: tentativa S32, contexto S29 e resposta S15</text>
 <text x="105" y="588" class="dialog" text-anchor="start">d+u: identificar partida S01 e entrada S03</text>
 </g>
 <g id="c3" data-kind="scene">
@@ -351,6 +351,13 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="341" y="717" class="label" text-anchor="start">precond: outros resultados acessíveis</text>
 <text x="341" y="737" class="label" text-anchor="start"><tspan class="fid">f46</tspan> u: adiar esta partida</text>
 <text x="341" y="757" class="label" text-anchor="start">e revisar outras</text>
+</g>
+<g id="f47" data-kind="edge" data-from="c2" data-to="c8" data-style="dashed" data-label="precond: pedido anterior reconhecido | com aceitação desconhecida | u: verificar pedido anterior">
+<path d="M647 600H659 M762 600H785 M790 692V704 M790 760V772 M790 1074V1086" fill="none" stroke="#fff" stroke-width="7"/>
+<polyline points="522,596 522,600 790,600 790,1230 798,1230" class="edge ruptura"/>
+<text x="333" y="622" class="label" text-anchor="start">precond: pedido anterior reconhecido</text>
+<text x="333" y="642" class="label" text-anchor="start">com aceitação desconhecida</text>
+<text x="333" y="662" class="label" text-anchor="start"><tspan class="fid">f47</tspan> u: verificar pedido anterior</text>
 </g>
 <text x="548" y="378" class="note" text-anchor="start">Saída sem enviar</text>
 <text x="556" y="751" class="note" text-anchor="start">Pendência na análise</text>

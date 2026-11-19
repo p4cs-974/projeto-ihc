@@ -162,7 +162,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 ### Leitura do diagrama
 
 1. [H] Jorginho abre a conversa para preparar uma gravação (a1). Em c1, confere arquivo, partida e tempo. Ao solicitar a análise (p1), recebe a aceitação do pedido ou retorna à entrada para corrigir a rejeição. Pode adiar o envio (e0).
-2. [H] Em c2, consulta o estado da análise (p2). Se houver resultados acessíveis, pode passar à revisão (c4). Se ainda aguarda, pode consultar novamente ou sair com pendência (e2). Na abertura a2, Jorginho confere o contexto disponível (S29). Se ele faltar, identifica a partida e usa as referências de entrada ou tentativa que tiver. Quando não consegue identificar a entrada, deixa a consulta pendente em e2 ou volta ao preparo por a1 com uma gravação identificável.
+2. [H] Em c2, consulta o estado da análise (p2). Se houver resultados acessíveis, pode passar à revisão (c4). Se ainda aguarda, pode consultar novamente ou sair com pendência (e2). Na abertura a2, Jorginho confere o contexto disponível (S29). Se ele faltar, identifica a partida e usa as referências de entrada, tentativa ou pedido que tiver. Quando não consegue identificar a entrada, deixa a consulta pendente em e2 ou volta ao preparo por a1 com uma gravação identificável.
 3. [H] Se a análise falhar, c3 apresenta a entrada afetada e as ações disponíveis. Jorginho pode corrigir a entrada, pedir nova tentativa quando suportada ou deixar a partida pendente. Se outros resultados estiverem acessíveis, pode passar a c4 e revisar outra partida na mesma sessão.
 4. [H] Em c4, localiza candidatos pelos critérios. Em c5, confere a prévia e identifica visualmente a participação do atleta. Se a consulta vier vazia, pode alterar os critérios ou conferir o que falta em c6 e voltar à consulta por f45. O retorno direto de c6 para c5 exige um corte aberto. Uma falha de mídia devolve a pessoa ao candidato com possibilidade de outra tentativa.
 5. [H] Em c5, Jorginho inclui ou retira candidatos e pode obter cada MP4 acessível (p5). Em c6, confere a seleção e pede o CSV (S26) quando há itens (p6). Abre os arquivos salvos e encerra com o material conferido (e1) ou com pendência (e3). A montagem ocorre externamente (O10).
@@ -174,6 +174,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 - [H] Se o pedido for aceito, volta ao acompanhamento em c2. Se a recusa estiver confirmada, volta à falha em c3.
 - [H] Se o pedido ficar sem resposta, c8 indica que a aceitação é desconhecida. Jorginho consulta o pedido em p8 quando há referência para identificá-lo e o serviço oferece a consulta. A confirmação da tentativa leva a c2. A confirmação da recusa leva a c3.
 - [H] Enquanto a situação continuar desconhecida, Jorginho pode consultar novamente ou encerrar com pendência em e4. A saída e a consulta deixam o pedido original em aberto.
+- [H] Se voltar por a2 e reconhecer em c2 um pedido anterior cuja aceitação continua desconhecida, Jorginho passa a c8 pela fala f47. Pode consultar o pedido original em p8 quando tiver a referência e o serviço oferecer a consulta. Quando faltar referência ou suporte, pode manter o pedido pendente em e4.
 
 [F] Em M03, as falas `u:` saem das aberturas e das cenas. As respostas `d:` saem dos quadrados de processamento. Em p1, a resposta distingue rejeição e aceitação do envio. Em p7, há uma fala de saída para cada condição de S15. Em p8, o preposto comunica se foi possível confirmar aceitação ou recusa. Reenvio e nova tentativa ficam disponíveis quando o estado da entrada permite a ação.
 
@@ -226,3 +227,5 @@ Em 09/11/2026, Giovanni elaborou o diagrama e exportou o PNG para exibição no 
 [F] Em 18/11/2026, Pedro aplicou o parecer aos três modelos a pedido da equipe. A autoria de M01, M02 e M03 corresponde aos responsáveis identificados em cada recorte. [?] A apresentação individual, a confirmação da equipe e a avaliação com usuários seguem pendentes.
 
 [F] Na mesma data, a revisão independente orientou a conferência dos arquivos antes de GCC e os ajustes de recuperação, retomada e rastreabilidade de M03. O teste técnico do CSV local está registrado na [Entrega 11](11_figma.md#verificações-e-limites-da-evidência).
+
+[F] A retomada em M03 inclui f47 para verificar o pedido original após encerrar com pendência em e4.
