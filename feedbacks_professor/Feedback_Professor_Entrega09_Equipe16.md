@@ -77,6 +77,10 @@ Sugiro que vocês preservem no cenário apenas as respostas essenciais para o ob
 >
 > \- Pedro
 
+> **Após revisão independente** ([`ca3f4f6`](https://github.com/p4cs-974/projeto-ihc/commit/ca3f4f62e97d3409db9e1e531c55afd599007702)). [F] A descrição da demonstração indica que há falha e nova tentativa localizada encenadas. [?] A recuperação no serviço real permanece em aberto.
+>
+> \- Pedro
+
 ### 4. Corrigir inconsistências entre signos e rastreabilidade
 
 O esquema salta de S24 para S26. Isso não compromete o conteúdo, mas precisa ser explicado como identificador retirado ou reservado para evitar que o leitor procure S25.
@@ -86,6 +90,10 @@ Há uma inconsistência mais importante: `RASTREABILIDADE.md` referencia S34 e a
 Os intervalos compactos, como S16–S30, também podem esconder signos que não se aplicam a determinada relação. Prefiram referências precisas quando a decisão depende de poucos conceitos. A rastreabilidade deve ajudar a conferir o modelo, e não obrigar o leitor a adivinhar quais signos realmente sustentam cada relação.
 
 > **✅ Como foi tratado** ([`85a6b55`](https://github.com/p4cs-974/projeto-ihc/commit/85a6b5535eec8bcc51f1e5caee05650e47915ed3)). [F] S25 está reservado. A matriz aponta para S33, tamanho individual do MP4, e usa referências pertinentes a R01–R05.
+>
+> \- Pedro
+
+> **Após revisão independente** ([`7b92f56`](https://github.com/p4cs-974/projeto-ihc/commit/7b92f561137bd1278234b0d9cda341a12d064f4c)). [F] R03 inclui a duração S21 de M02. R02 e R05 incluem S29 e a retomada O08.
 >
 > \- Pedro
 
@@ -112,6 +120,11 @@ Antes de considerar a entrega encerrada, cada integrante precisa explicar seu ce
   > **✅ Como foi tratado** ([`1b91d96`](https://github.com/p4cs-974/projeto-ihc/commit/1b91d966214abad7b47a3cebe58fa994a9f288de)). [F] A tabela de convenções registra PP, PA, AL, RA e CE como referência para os MoLIC.
   >
   > \- Pedro
+
+  > **Após revisão independente** ([`6a1bd3d`](https://github.com/p4cs-974/projeto-ihc/commit/6a1bd3d9c0616312af3c11afc5daabaf3f49e94b)). [F] A tabela indica a correspondência de AL com `[SP]` e de RA com `[SR]` no exemplo da Parte B.
+  >
+  > \- Pedro
+
 - Confirmem se “candidato”, “lance”, “corte” e “seleção” são compreendidos pelo público. A distinção conceitual está boa, mas continua sendo hipótese até a avaliação.
 
   > **ℹ️ Encaminhamento** ([`7fea226`](https://github.com/p4cs-974/projeto-ihc/commit/7fea226990cbe73377864d837ad469704e2bafcc)). [F] A avaliação prevê pedir que a pessoa explique lance, candidato, corte e seleção durante a revisão. [?] A compreensão pelo público permanece em aberto.
