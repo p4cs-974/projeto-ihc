@@ -54,7 +54,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 
 | ID | Cenário/instrução apresentada | Critério de sucesso | Métricas | Ligação com modelo |
 |---|---|---|---|---|
-| UT01 | {{“Você precisa...” sem dizer o controle}} | {{resultado observável}} | sucesso, tempo, erros, ajudas, satisfação | {{T01/M01/F01}} |
+| UT01 | {{“Você precisa...” sem dizer o controle}} | {{resultado observável}} | sucesso, tempo, erros e ajudas | {{T01/M01/F01}} |
 
 ### Passo 6 — Protocolo do moderador
 
@@ -64,7 +64,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 4. Ler instruções padronizadas.
 5. Observar sem ensinar o caminho; registrar pedidos de ajuda separadamente.
 6. Se usar *think aloud*, explicar e aplicar de forma consistente.
-7. Após cada tarefa, registrar satisfação/SEQ ou escala definida.
+7. Após UT02, UT05 e UT06, aplicar a pergunta de facilidade percebida de 1 a 5 e registrar o motivo, inclusive após falha ou conclusão com ajuda. Usar essas três tarefas no cálculo de MU06. [Questionário pós-tarefa](../instrumentos/entrega12_questionarios.md#pós-tarefa).
 8. Fazer pós-teste/entrevista breve.
 9. Encerrar e explicar uso dos dados.
 
@@ -74,7 +74,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 
 | Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação | Evidência/observação |
 |---|---|---:|---|---:|---|---|---|
-| UT01 | total/parcial/falha | {{n}} | {{...}} | {{n}} | {{mm:ss}} | {{escala}} | {{fala/comportamento}} |
+| UT01 | total/parcial/falha | {{n}} | {{...}} | {{n}} | {{mm:ss}} | não se aplica | {{fala/comportamento}} |
 
 **Link da gravação (se autorizado):** {{...}}  
 **Resposta pós-teste:** {{...}}

@@ -6,3 +6,6 @@ Thumbs.db
 *.swp
 .ref/
 node_modules/
+
+# local Moodle pack (symlink)
+ihc-pack-moodle/
