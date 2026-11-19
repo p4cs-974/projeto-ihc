@@ -195,7 +195,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 | O05 Conferir pertinência e contexto | M01 c2; M03 c5 | M02 confere identificação, não pertinência; M03 oferece prévia e metadados, com julgamento da participação do atleta pela pessoa | Julgamento de pertinência continua humano |
 | O06 Definir e conferir a seleção | M01 c2/c3; M02 c1/c2/c3; M03 c5/c6 | M01 e M03 montam e conferem a seleção. M02 prepara o envio externo | [H] A seleção define os itens do CSV |
 | O07 Obter cortes e metadados | M01 c2/c3; M02 c1/c2; M03 c5/c6 | Os três distinguem CSV da seleção e MP4 individual | [H] O material prepara edição, supervisão ou montagem amadora |
-| O08 Reconhecer contexto ao retomar | M01 e M02 a2/c1; M03 a2/c2 e c6 | Retomada limitada à sessão; M03 a2 e c2 informam tentativa e contexto da consulta | Sem histórico persistente |
+| O08 Reconhecer contexto ao retomar | M01 e M02 a2/c1; M03 a2/c2 e c6 | [H] A pessoa confere partida, tentativa e seleção que ainda estiverem acessíveis. Se o contexto faltar, refaz a consulta ou reconstrói a seleção | [?] Persistência após recarga depende de investigação (H15/H29/H35) |
 | O09 Avaliar a decisão editorial | Nenhum | Decisão de Arnaldo | Fora do sistema, nota em M02; não introduzir aprovação no M03 |
 | O10 Conferir o original e ajustar | Nenhum | Ajuste no vídeo original | Fora do sistema, nota em e2 em M01/M02; M03 também não modela edição/montagem |
 
