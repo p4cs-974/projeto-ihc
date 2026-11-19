@@ -155,7 +155,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 
 1. [H] Jorginho abre a conversa para preparar uma gravação (a1). Em c1, confere arquivo, partida e tempo. Ao solicitar a análise (p1), recebe a aceitação do pedido ou retorna à entrada para corrigir a rejeição. Pode adiar o envio (e0).
 2. [H] Em c2, consulta o estado da análise (p2). Se houver resultados acessíveis, pode passar à revisão (c4). Se ainda aguarda, pode consultar novamente ou sair com pendência (e2). Abertura a2 retoma a consulta ao estado com o contexto disponível.
-3. [H] Se o sistema informar falha, c3 apresenta a entrada afetada e as ações disponíveis. O usuário pode voltar ao preparo para corrigir a entrada, pedir nova tentativa quando suportada ou sair deixando a partida pendente. O pedido aceito retorna ao acompanhamento. Se for recusado ou ficar sem resposta, c3 oferece os próximos passos.
+3. [H] Se o sistema informar falha, c3 apresenta a entrada afetada e as ações disponíveis. O usuário pode voltar ao preparo para corrigir a entrada, pedir nova tentativa quando suportada ou sair deixando a partida pendente. O alerta c7 identifica a entrada e a tentativa, quando conhecida, e apresenta as consequências conhecidas (S14, AL). A pessoa pode confirmar ou voltar à falha. O pedido aceito retorna ao acompanhamento. Se for recusado ou ficar sem resposta, c3 oferece os próximos passos.
 4. [H] Em c4, localiza candidatos pelos critérios. Em c5, confere a prévia e identifica visualmente a participação do atleta. A consulta vazia convida a rever os critérios. Uma falha de mídia devolve a pessoa ao candidato com possibilidade de outra tentativa.
 5. [H] Em c5, Jorginho inclui ou retira candidatos e pode obter cada MP4 acessível (p5). Em c6, confere a seleção e pede o CSV quando há itens (p6). Abre os arquivos salvos e encerra com o material conferido (e1) ou com pendência (e3). A montagem ocorre externamente (O10).
 
@@ -163,11 +163,14 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 
 [F] O escopo da Entrega 9 sustenta preparar, acompanhar, revisar e obter material. Login, exclusão de resultados e cancelamento do processamento ficam fora do M03. Adiar encerra a conversa com uma pendência. Retirar um item altera a seleção (S23). Retomar usa o contexto disponível (S29).
 
+[H] M03 oferece preparo (a1) e retomada (a2) como aberturas. Os tópicos de correção, obtenção e saída são locais a suas cenas e dependem do contexto mostrado. O modelo usa transições locais para esses tópicos.
+
 ### Checklist específico de modelagem
 
 - [x] [F] As transições indicam o emissor e as saídas de processos são respostas do preposto.
 - [x] [F] O modelo liga abertura, acompanhamento, resultados, recuperação e saídas.
 - [x] [F] Os objetivos e signos do modelo correspondem à Entrega 9. A cobertura inclui seleção, CSV, MP4 e conferência humana.
+- [x] [F] O alerta indica o alvo e a decisão. O retorno do alerta volta à cena da falha.
 - [ ] [?] Giovanni apresentou e revisou o modelo com a equipe.
 
 ## Consolidação da equipe

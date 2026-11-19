@@ -97,6 +97,14 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="105" y="1444" class="dialog" text-anchor="start">d+u: seleção S23, quantidade S24</text>
 <text x="105" y="1467" class="dialog" text-anchor="start">d+u: obtenção S28, arquivos e pendências S30</text>
 </g>
+<g id="c7" data-kind="alert">
+<rect x="798" y="868" width="344" height="115" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M798 909h344" fill="none" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="812" y="896" class="topic" text-anchor="start">c7 · Confirmar nova tentativa</text>
+<text x="1128" y="896" class="tag" text-anchor="end">O03</text>
+<text x="813" y="935" class="dialog" text-anchor="start">d: entrada S03 e tentativa S32</text>
+<text x="813" y="958" class="dialog" text-anchor="start">d: consequência conhecida S14</text>
+</g>
 <g id="p1" data-kind="process"><rect x="716" y="254" width="24" height="24" fill="#1f2a33"/>
 <text x="748" y="271" class="nid" text-anchor="start">p1</text>
 </g>
@@ -122,9 +130,10 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="322,163 322,235" class="edge"/>
 <text x="334" y="186" class="label" text-anchor="start">u: preparar gravação</text>
 </g>
-<g id="f2" data-kind="edge" data-from="a2" data-to="c2" data-style="solid" data-label="u: retomar a consulta">
+<g id="f2" data-kind="edge" data-from="a2" data-to="c2" data-style="solid" data-label="u: retomar a consulta | Contexto disponível (S29)">
 <polyline points="45,163 45,479 90,479" class="edge"/>
 <text x="56" y="185" class="label" text-anchor="start">u: retomar a consulta</text>
+<text x="56" y="205" class="label" text-anchor="start">Contexto disponível (S29)</text>
 </g>
 <g id="f3" data-kind="edge" data-from="c1" data-to="p1" data-style="solid" data-label="u: enviar e solicitar análise">
 <polyline points="540,266 716,266" class="edge"/>
@@ -168,9 +177,9 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="333" y="701" class="label" text-anchor="start">u: revisar candidatos</text>
 </g>
 <g id="f12" data-kind="edge" data-from="c3" data-to="c1" data-style="solid" data-label="precond: correção disponível | u: corrigir e reenviar">
-<polyline points="1142,655 1175,655 1175,395 480,395 480,347" class="edge"/>
-<text x="818" y="365" class="label" text-anchor="start">precond: correção disponível</text>
-<text x="818" y="385" class="label" text-anchor="start">u: corrigir e reenviar</text>
+<polyline points="1142,655 1175,655 1175,125 183,125 183,235" class="edge"/>
+<text x="923" y="146" class="label" text-anchor="start">precond: correção disponível</text>
+<text x="923" y="166" class="label" text-anchor="start">u: corrigir e reenviar</text>
 </g>
 <g id="f13" data-kind="edge" data-from="c3" data-to="e2" data-style="dashed" data-label="u: adiar">
 <polyline points="798,698 666,698" class="edge ruptura"/>
@@ -181,21 +190,29 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="665" y="618" class="label" text-anchor="start">u: deixar partida</text>
 <text x="665" y="638" class="label" text-anchor="start">pendente</text>
 </g>
-<g id="f15" data-kind="edge" data-from="c3" data-to="p7" data-style="solid" data-label="precond: nova tentativa | disponível | u: tentar novamente">
-<polyline points="968,761 968,1068" class="edge"/>
-<text x="980" y="813" class="label" text-anchor="start">precond: nova tentativa</text>
-<text x="980" y="833" class="label" text-anchor="start">disponível</text>
-<text x="980" y="853" class="label" text-anchor="start">u: tentar novamente</text>
+<g id="f15" data-kind="edge" data-from="c3" data-to="c7" data-style="solid" data-label="precond: nova tentativa | disponível | u: pedir nova tentativa">
+<polyline points="968,761 968,868" class="edge"/>
+<text x="980" y="775" class="label" text-anchor="start">precond: nova tentativa</text>
+<text x="980" y="795" class="label" text-anchor="start">disponível</text>
+<text x="980" y="815" class="label" text-anchor="start">u: pedir nova tentativa</text>
 </g>
-<g id="f18" data-kind="edge" data-from="p7" data-to="c2" data-style="solid" data-label="d: nova tentativa aceita | Referência S32 quando conhecida">
+<g id="f16" data-kind="edge" data-from="c7" data-to="p7" data-style="solid" data-label="u: confirmar">
+<polyline points="968,983 968,1068" class="edge"/>
+<text x="980" y="1022" class="label" text-anchor="start">u: confirmar</text>
+</g>
+<g id="f17" data-kind="edge" data-from="c7" data-to="c3" data-style="dashed" data-label="u: voltar">
+<polyline points="1142,920 1156,920 1156,729 1142,729" class="edge ruptura"/>
+<text x="1072" y="850" class="label" text-anchor="start">u: voltar</text>
+</g>
+<g id="f18" data-kind="edge" data-from="p7" data-to="c2" data-style="solid" data-label="d: nova tentativa aceita (S15) | Referência S32 quando conhecida">
 <polyline points="956,1080 779,1080 779,575 540,575" class="edge"/>
-<text x="788" y="573" class="label" text-anchor="start">d: nova tentativa aceita</text>
+<text x="788" y="573" class="label" text-anchor="start">d: nova tentativa aceita (S15)</text>
 <text x="788" y="593" class="label" text-anchor="start">Referência S32 quando conhecida</text>
 </g>
-<g id="f19" data-kind="edge" data-from="p7" data-to="c3" data-style="dashed" data-label="d: pedido recusado ou sem resposta | Confira a condição antes de repetir">
+<g id="f19" data-kind="edge" data-from="p7" data-to="c3" data-style="dashed" data-label="d: pedido recusado ou sem resposta (S15) | Confira a condição antes de repetir">
 <polyline points="980,1080 1175,1080 1175,704 1142,704" class="edge ruptura"/>
-<text x="830" y="1121" class="label" text-anchor="start">d: pedido recusado ou sem resposta</text>
-<text x="830" y="1141" class="label" text-anchor="start">Confira a condição antes de repetir</text>
+<text x="805" y="1121" class="label" text-anchor="start">d: pedido recusado ou sem resposta (S15)</text>
+<text x="805" y="1141" class="label" text-anchor="start">Confira a condição antes de repetir</text>
 </g>
 <g id="f20" data-kind="edge" data-from="c4" data-to="p3" data-style="solid" data-label="u: aplicar critérios">
 <polyline points="540,825 716,825" class="edge"/>
@@ -283,4 +300,5 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="503" y="1619" class="note" text-anchor="start">Conferência ou ajuste fica pendente (S30)</text>
 <text x="44" y="1683" class="sub" text-anchor="start">Círculo cheio: abertura · Círculo com anel: encerramento · Quadrado preto: processamento</text>
 <text x="44" y="1712" class="sub" text-anchor="start">u: usuário · d: preposto · d+u: diálogo · S: signo · Seta tracejada: ruptura ou recuperação</text>
+<text x="810" y="1683" class="sub" text-anchor="start">Cena tracejada: alerta antes de confirmar</text>
 </svg>
