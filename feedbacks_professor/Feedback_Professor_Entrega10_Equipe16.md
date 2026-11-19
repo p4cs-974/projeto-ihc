@@ -70,6 +70,10 @@ Um MoLIC precisa mostrar como a conversa prossegue depois que o sistema comunica
 >
 > \- Pedro
 
+> **Retomada do pedido pendente** ([`61da20e`](https://github.com/p4cs-974/projeto-ihc/commit/61da20e60d364698c0dd61ccfad4b232faf6d12b)). [F] A fala f47 liga c2 a c8. Ao voltar por a2, a pessoa pode consultar em p8 o pedido original de aceitação desconhecida quando o identifica e o serviço permite a consulta.
+>
+> \- Pedro
+
 ### 3. Corrigir os emissores das falas no M03
 
 Há transições em que a fala não corresponde ao agente que toma a decisão. No caminho de cancelamento, a confirmação aparece como `d: cancelar processamento`, embora a confirmação de uma decisão de cancelamento deva partir do usuário. Depois do processamento, “processamento cancelado” aparece sem o prefixo `d:`. A resposta `d: res deleted` está em inglês e não mantém a linguagem conceitual usada no restante do projeto.
