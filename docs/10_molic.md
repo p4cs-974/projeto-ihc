@@ -1,7 +1,7 @@
 # Entrega 10: MoLIC
 
 - **Data:** M01/M02 em 08/11/2026; M03 em 09/11/2026; integração em 12/11/2026
-- **Status:** 🟨 em andamento. M01 e M02 elaborados, com revisão individual de Pedro e Lucas pendente; M03 tem percursos documentados. A revisão individual e a consolidação pela equipe estão pendentes.
+- **Status:** 🟨 revisão documental dos três modelos concluída. Apresentação e confirmação individual de Pedro, Lucas e Giovanni e consolidação com a equipe pendentes.
 - **Responsabilidade:** uma solução completa por integrante.
 
 ## Objetivo da atividade
@@ -134,8 +134,9 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 - [x] Objetivos e signos são os da Entrega 9.
 - [x] Não há acesso ubíquo, pelo motivo dado na legenda.
 - [x] Os modelos representam a conversa entre usuário e sistema, não o detector nem a sequência de telas.
-- [x] O texto dos diagramas é legível em largura reduzida.
-- [ ] Pedro e Lucas revisaram seus modelos.
+- [x] [F] Diagramas renderizados e conferidos em largura de 900 px.
+- [ ] [?] Pedro apresentou e confirmou o modelo M01.
+- [ ] [?] Lucas apresentou e confirmou o modelo M02.
 
 ## M03 — Enviar vídeos, acompanhar análises e consultar resultados
 
@@ -181,6 +182,8 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 - [ ] [?] Giovanni apresentou e revisou o modelo com a equipe.
 
 ## Consolidação da equipe
+
+- [ ] [?] A equipe confirmou a consistência entre os recortes, a Entrega 9 e o protótipo.
 
 ### Cobertura dos objetivos
 
