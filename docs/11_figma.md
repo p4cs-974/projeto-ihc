@@ -80,7 +80,7 @@ Os responsáveis abaixo são os autores dos modelos de origem, sem atribuir assi
 | M03 c3–c7, CI03 | O03–O08, T03 e T01/A04 | F02 escolhe cenário. F03/F04 comunicam o estado. F05 apresenta o corte. F06 separa CSV e MP4. | [F] A falha encenada permite nova tentativa localizada ou deixar uma partida pendente e revisar as outras. Autenticação, exclusão de resultados e cancelamento efetivo estão fora do escopo do MoLIC e da simulação. | Giovanni |
 | M01/M02, retomada; M03, encerramento | O08 | Troca entre telas e A/B/C | Seleção mantida na sessão, sem persistência garantida após recarga. Não há histórico nem registro permanente de pendências | Equipe |
 
-O09 e O10 continuam externos. A navegação lateral dá acesso às etapas existentes, sem introduzir uma nova tarefa ou alterar o escopo de IHC ou do TCC.
+[F] A seleção define quais candidatos entram no CSV. O MP4 é disponibilizado por corte. A decisão editorial (O09) e o ajuste no original (O10) ocorrem fora da interface. A navegação lateral dá acesso às etapas existentes, sem introduzir uma nova tarefa ou alterar o escopo de IHC ou do TCC.
 
 A seção de preparação da Entrega 10 descreve a demonstração no momento da modelagem. Esta entrega registra o estado posterior. A obtenção agora reúne links e saídas em um diálogo, mas não implementa todas as propostas daquele documento.
 

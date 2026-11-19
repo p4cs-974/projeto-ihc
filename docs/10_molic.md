@@ -86,7 +86,7 @@ As cenas são c1 (localizar candidatos), c2 (conferir pertinência e contexto) e
 - **Objetivos:** O00, apoiado por O06 e O07, por O04 quando falta um item e por O08 na retomada. O02 é precondição. O09 e O10 são externos.
 - **Signos:** S01 a S03, S16 a S24, S26 a S29, S31 e S33
 
-Quem conversa com o sistema é o editor, Rafael. Arnaldo recebe os arquivos e decide fora do sistema, por isso não há cena de aprovação. A seleção costuma vir pronta da revisão de M01, mas M02 se lê sozinho: a cena c3 localiza um item que falta ou que o supervisor pediu, e a cena c2 permite incluí-lo.
+[H] Rafael conversa com o sistema para conferir a seleção e obter as saídas. A passagem para T02 começa quando ele encaminha os arquivos no canal externo. Arnaldo avalia o material e comunica a decisão nesse canal. A seleção costuma vir pronta da revisão de M01, mas M02 se lê sozinho: a cena c3 localiza um item que falta ou que o supervisor pediu, e a cena c2 permite incluí-lo.
 
 ### Diagrama
 
