@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1697" viewBox="0 0 1200 1697" role="img" aria-labelledby="title desc">
 <title id="title">M01 · Revisar candidatos e obter o material da partida</title>
 <desc id="desc">Diagrama MoLIC M01 da Entrega 10, Equipe 16. Proposta para revisão individual. Cenas, processos e falas identificados por c, p, a, e e f, explicados em docs/10_molic.md.</desc>
-<defs><style>text{font-family:Arial, Helvetica, sans-serif;fill:#1f2a33}.h1{font-size:28px;font-weight:700}.sub{font-size:17px;fill:#425b70}.stitle{font-size:19px;font-weight:700}.sid{fill:#0b5cad}.tag{font-size:16px;font-weight:700;fill:#176559}.dname{font-size:16px;font-weight:700}.dline{font-size:16px}.lbl{font-size:16px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.fid{font-weight:700;fill:#0b5cad}.nid{font-size:17px;font-weight:700;fill:#0b5cad}.note{font-size:16px;font-style:italic;fill:#7a4b0b}.leg{font-size:16px}</style><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker><marker id="arr-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker></defs>
+<defs><style>text{font-family:Arial, Helvetica, sans-serif;fill:#1f2a33}.h1{font-size:28px;font-weight:700}.sub{font-size:17px;fill:#425b70}.stitle{font-size:19px;font-weight:700}.sid{fill:#0b5cad}.tag{font-size:16px;font-weight:700;fill:#176559}.dname{font-size:18px;font-weight:700}.dline{font-size:18px}.lbl{font-size:16px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.fid{font-weight:700;fill:#0b5cad}.nid{font-size:17px;font-weight:700;fill:#0b5cad}.note{font-size:16px;font-style:italic;fill:#7a4b0b}.leg{font-size:16px}</style><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker><marker id="arr-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/></marker></defs>
 <rect width="1200" height="1697" fill="#ffffff"/>
 <text x="40" y="44" class="h1" text-anchor="start">M01 · Revisar candidatos e obter o material da partida</text>
 <text x="40" y="72" class="sub" text-anchor="start">Pedro Alexandre Custódio Silva (22.123.049-3) · CI01/T01 · O04–O07 e O08; sai para O10</text>
@@ -19,46 +19,40 @@
 <line x1="200" y1="270" x2="740" y2="270" stroke="#1f2a33" stroke-width="1.5"/>
 <text x="214" y="257" class="stitle"><tspan class="sid">c1</tspan> · Localizar candidatos</text>
 <text x="726" y="257" class="tag" text-anchor="end">O04 · O08</text>
-<text x="214" y="294" class="dname" text-anchor="start">reconhecer alcance {</text>
-<text x="228" y="315" class="dline" text-anchor="start">d: partida S01, tempo S02, tentativa S32 se identificável,</text>
-<text x="249" y="336" class="dline" text-anchor="start">disponibilidade e limites dos resultados S12 }</text>
-<text x="214" y="357" class="dname" text-anchor="start">restringir consulta {</text>
-<text x="228" y="378" class="dline" text-anchor="start">d+u: critérios S22: partida, tempo, tipo de lance S17 }</text>
-<text x="214" y="399" class="dname" text-anchor="start">ver candidatos {</text>
-<text x="228" y="420" class="dline" text-anchor="start">d: lista(candidato S16: tipo S17, relógio S18, tempo S02) }</text>
-<text x="214" y="441" class="dname" text-anchor="start">reconhecer contexto preservado {</text>
-<text x="228" y="462" class="dline" text-anchor="start">d: referência de retomada S29, quantidade selecionada S24 }</text>
+<text x="214" y="294" class="dname" text-anchor="start">conferir o contexto {</text>
+<text x="228" y="316" class="dline" text-anchor="start">d: partida S01, tempo S02 e tentativa conhecida S32</text>
+<text x="228" y="338" class="dline" text-anchor="start">d: disponibilidade e limites dos resultados S12 }</text>
+<text x="214" y="360" class="dname" text-anchor="start">consultar candidatos {</text>
+<text x="228" y="382" class="dline" text-anchor="start">d+u: critérios S22. d: candidato S16, tipo S17 e relógio S18 }</text>
+<text x="214" y="404" class="dname" text-anchor="start">retomar a revisão {</text>
+<text x="228" y="426" class="dline" text-anchor="start">d: contexto disponível S29 e total selecionado S24 }</text>
 </g>
 <g id="c2" data-kind="scene">
 <rect x="200" y="603" width="540" height="290" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
 <line x1="200" y1="643" x2="740" y2="643" stroke="#1f2a33" stroke-width="1.5"/>
 <text x="214" y="630" class="stitle"><tspan class="sid">c2</tspan> · Conferir pertinência e contexto</text>
 <text x="726" y="630" class="tag" text-anchor="end">O05 · O06</text>
-<text x="214" y="667" class="dname" text-anchor="start">ver origem {</text>
-<text x="228" y="688" class="dline" text-anchor="start">d: partida S01, tempo S02, vídeo de origem S03 }</text>
-<text x="214" y="709" class="dname" text-anchor="start">ver corte {</text>
-<text x="228" y="730" class="dline" text-anchor="start">d: tipo sugerido S17, relógio do jogo S18, instante no</text>
-<text x="249" y="751" class="dline" text-anchor="start">arquivo S19, intervalo S20, duração do corte S21 }</text>
-<text x="214" y="772" class="dname" text-anchor="start">decidir inclusão {</text>
-<text x="228" y="793" class="dline" text-anchor="start">d+u: candidato S16 na seleção S23 (incluir ou retirar) }</text>
-<text x="214" y="814" class="dname" text-anchor="start">ver vídeo para obtenção {</text>
-<text x="228" y="835" class="dline" text-anchor="start">d: MP4 S27 do corte, tamanho S33 }</text>
+<text x="214" y="667" class="dname" text-anchor="start">conferir a origem {</text>
+<text x="228" y="689" class="dline" text-anchor="start">d: partida S01, tempo S02, gravação S03 }</text>
+<text x="214" y="711" class="dname" text-anchor="start">interpretar o corte {</text>
+<text x="228" y="733" class="dline" text-anchor="start">d: tipo S17 e relógio do jogo S18</text>
+<text x="228" y="755" class="dline" text-anchor="start">d: posição no arquivo S19, intervalo S20, duração S21 }</text>
+<text x="214" y="777" class="dname" text-anchor="start">decidir inclusão {</text>
+<text x="228" y="799" class="dline" text-anchor="start">d+u: incluir ou retirar candidato S16 na seleção S23 }</text>
+<text x="214" y="821" class="dname" text-anchor="start">obter o vídeo {</text>
+<text x="228" y="843" class="dline" text-anchor="start">d: MP4 S27 e tamanho individual S33 }</text>
 </g>
 <g id="c3" data-kind="scene">
 <rect x="200" y="1023" width="540" height="264" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
 <line x1="200" y1="1063" x2="740" y2="1063" stroke="#1f2a33" stroke-width="1.5"/>
 <text x="214" y="1050" class="stitle"><tspan class="sid">c3</tspan> · Conferir a seleção e as saídas</text>
 <text x="726" y="1050" class="tag" text-anchor="end">O06 · O07</text>
-<text x="214" y="1087" class="dname" text-anchor="start">ver seleção {</text>
-<text x="228" y="1108" class="dline" text-anchor="start">d: lista(candidato S16 em S23: S01, S02, S17, S18),</text>
-<text x="249" y="1129" class="dline" text-anchor="start">quantidade S24 }</text>
-<text x="214" y="1150" class="dname" text-anchor="start">retirar item {</text>
-<text x="228" y="1171" class="dline" text-anchor="start">d+u: seleção S23 }</text>
-<text x="214" y="1192" class="dname" text-anchor="start">ver tamanho dos arquivos {</text>
-<text x="228" y="1213" class="dline" text-anchor="start">d: tamanho S33 de cada MP4: conhecido, estimado ou indisponível }</text>
-<text x="214" y="1234" class="dname" text-anchor="start">distinguir saídas {</text>
-<text x="228" y="1255" class="dline" text-anchor="start">d: CSV S26 com referências da seleção, exige seleção não vazia;</text>
-<text x="249" y="1276" class="dline" text-anchor="start">MP4 S27 obtido por corte, sem exigir seleção }</text>
+<text x="214" y="1087" class="dname" text-anchor="start">conferir a seleção {</text>
+<text x="228" y="1109" class="dline" text-anchor="start">d: candidatos selecionados S16/S23 e quantidade S24</text>
+<text x="228" y="1131" class="dline" text-anchor="start">d+u: retirar item S23 }</text>
+<text x="214" y="1153" class="dname" text-anchor="start">obter metadados e vídeos {</text>
+<text x="228" y="1175" class="dline" text-anchor="start">d: CSV S26 com referências da seleção</text>
+<text x="228" y="1197" class="dline" text-anchor="start">d: MP4 individual S27 e seu tamanho S33 }</text>
 </g>
 <g id="p1" data-kind="process">
 <rect x="952" y="302" width="26" height="26" fill="#1f2a33"/>
