@@ -16,9 +16,9 @@
 
 08 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md) em 10/11/2026; pesos de prioridade, MU07 e MU08 propostos, a confirmar pela equipe; metas são especificação, sem resultados
 
-09 - Documentada; revisão individual e consolidação coletiva pendentes
+09 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md). Revisão pelos autores e consolidação coletiva pendentes.
 
-10 - Diagramas documentados; revisão pelos autores e consolidação coletiva pendentes
+10 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md). Revisão pelos autores e consolidação coletiva pendentes.
 
 # Projeto de Interação Humano-Computador (IHC)  - Equipe 16
 
@@ -134,8 +134,8 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) · [protótipo](assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) · [parecer](feedbacks_professor/Feedback_Professor_Entrega06_Equipe16.md) | 1 protótipo integrado por equipe | 🟨 revisada após o parecer; telas da versão 2 sem verificação com participante |
 | 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟨 revisada após o parecer; formulário `2026-11-10` publicado; pilotos e coleta pendentes |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md) | 1 solução consolidada por equipe | 🟨 revisada após o parecer; pesos, MU07 e MU08 a confirmar |
-| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | 🟨 documentada; revisão pelos autores e consolidação coletiva pendentes |
-| 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante | 🟨 diagramas documentados; revisão pelos autores e consolidação coletiva pendentes |
+| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md) | soluções individuais + consolidação de objetivos/signos | 🟨 documentada; revisão pelos autores e consolidação coletiva pendentes |
+| 10 | [MoLIC](docs/10_molic.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md) | 1 diagrama completo por integrante | 🟨 diagramas documentados; revisão pelos autores e consolidação coletiva pendentes |
 | 11 | [Protótipo navegável integrado](docs/11_figma.md) | 1 protótipo integrado por equipe, cobrindo fluxos modelados | 🟨 [preview publicado](https://ihc-11.p4cs.com.br/); revisão final da equipe pendente |
 | 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | ⬜ |
 | 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | 1 avaliação completa por integrante, todas as telas/estados e 10 heurísticas | ⬜ |

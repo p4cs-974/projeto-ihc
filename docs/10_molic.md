@@ -1,6 +1,7 @@
 # Entrega 10: MoLIC
 
-- **Data:** M01/M02 em 08/11/2026; M03 em 09/11/2026; integração em 12/11/2026
+- **Data:** M01/M02 em 08/11/2026; M03 em 09/11/2026; integração em 12/11/2026 (versão original)
+- **Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md)
 - **Status:** 🟨 revisão documental dos três modelos concluída. Apresentação e confirmação individual de Pedro, Lucas e Giovanni e consolidação com a equipe pendentes.
 - **Responsabilidade:** uma solução completa por integrante.
 
@@ -100,7 +101,7 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 
 #### Caminho principal
 
-1. Com os resultados acessíveis e a seleção montada, o editor começa a preparar o material. Em c1, confere a identificação de cada item (id, partida, tempo, tipo, relógio do jogo e intervalo), a quantidade.
+1. Com os resultados acessíveis e a seleção montada, o editor começa a preparar o material. Em c1, confere a identificação de cada item (id, partida, tempo, tipo, relógio do jogo e intervalo) e a quantidade.
 2. Abre um corte em c2 e confere o vídeo de origem, o instante no arquivo e a duração. Se quiser, reproduz o corte.
 3. Baixa o MP4 e volta à seleção, repetindo os passos 2 e 3 para cada corte necessário.
 4. Em c1, baixa o CSV, que leva as mesmas referências dos cortes.
@@ -213,3 +214,5 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 ## Registro de elaboração
 
 Em 09/11/2026, Giovanni elaborou o diagrama e exportou o PNG para exibição no GitHub. Os diálogos/signos e esta documentação foram preenchidos com assistência do Codex. [F] O [PNG original](../assets/10_molic/molic_persona3.png) e a [fonte Excalidraw original](../assets/10_molic/objetivos_p03.excalidraw) registram a primeira versão. O diagrama em SVG é a fonte editável do modelo atual.
+
+[F] Em 18/11/2026, Pedro aplicou o parecer aos três modelos a pedido da equipe. A autoria de M01, M02 e M03 corresponde aos responsáveis identificados em cada recorte. [?] A apresentação individual, a confirmação da equipe e a avaliação com usuários seguem pendentes.

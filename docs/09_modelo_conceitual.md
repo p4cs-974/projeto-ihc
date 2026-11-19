@@ -194,11 +194,11 @@ Prioridades são de projeto, justificadas pelas Entregas 5, 6 e 8; não são fre
 | O01 | Preparar gravações para análise | Instrumental indireto. Prepara as gravações para uma análise cujos resultados serão usados em revisão posterior. | P01/P03 | CI01/CI03 | Essencial, A01; precondição de T03 |
 | O02 | Acompanhar a análise e reconhecer resultados acessíveis | Instrumental direto. Permite decidir durante a consulta se já há resultados para revisar. | P01/P03 | CI01/CI03 | Essencial, T03; E06-D01/MU01 |
 | O03 | Encaminhar uma falha sem comprometer as demais partidas | Instrumental direto. Permite agir sobre a falha encontrada durante o acompanhamento. | P01/P03 | CI03; alternativa comum a CI01 | Alta quando há falha; ações condicionadas ao suporte técnico |
-| O04 | Localizar candidatos pertinentes à revisão | Instrumental direto. Restringe o material que será examinado na revisão em curso. | P01/P03 | CI01/CI03 | Essencial, T01; MU05; filtros a validar |
+| O04 | Localizar candidatos pertinentes à revisão | Instrumental direto. Restringe o material que será examinado na revisão em curso. | P01/P03 | CI01/CI03 e CI02 quando falta um item | Essencial, T01; MU05; filtros a validar |
 | O05 | Conferir pertinência e contexto do candidato | Instrumental direto. Sustenta a decisão de incluir ou dispensar o candidato durante a revisão. | P01/P03 | CI01/CI03 | Essencial, T01; MQ03/MU02 |
 | O06 | Definir e conferir a seleção para obtenção | Instrumental direto. Organiza os itens a obter durante a revisão. | P01/P03 | CI01/CI02/CI03 | Essencial, T01; MU03; não significa chancela |
 | O07 | Obter e conferir cortes e metadados | Instrumental direto. Disponibilizar as saídas e conferir os arquivos é como o usuário concretiza O00. | P01/P03; P02 recebe externamente | CI01/CI02/CI03 | Essencial, A04; E06-D05; MU03/MU04 |
-| O08 | Reconhecer o contexto disponível e as pendências ao retomar ou encerrar | Instrumental direto. Ajuda a orientar a interação no momento de retomar ou encerrar. | P01/P03 | CI01/CI03 | Alta, H41/T01/T03; sem persistência assegurada |
+| O08 | Reconhecer o contexto disponível e as pendências ao retomar ou encerrar | Instrumental direto. Ajuda a orientar a interação no momento de retomar ou encerrar. | P01/P03 | CI01/CI02/CI03 | Alta, H41/T01/T03; sem persistência assegurada |
 | O09 | Avaliar e comunicar a decisão editorial | Final externo de P02. É a finalidade da supervisão editorial em T02. | P02 em conversa com o editor | CI02 | Continuidade externa, T02 |
 | O10 | Conferir o original e ajustar ou montar o material | Continuidade externa de P01/P03. Atende à produção e, quando há devolução, apoia O09. | P01/P03; P02 solicita ajuste | CI01/CI02/CI03 | Continuidade externa conforme necessidade e recursos |
 
