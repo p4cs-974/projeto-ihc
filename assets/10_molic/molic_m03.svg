@@ -124,7 +124,7 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="748" y="271" class="nid" text-anchor="start">p1</text>
 </g>
 <g id="p2" data-kind="process"><rect x="716" y="481" width="24" height="24" fill="#1f2a33"/>
-<text x="748" y="481" class="nid" text-anchor="start">p2</text>
+<text x="711" y="517" class="nid" text-anchor="start">p2</text>
 </g>
 <g id="p3" data-kind="process"><rect x="716" y="813" width="24" height="24" fill="#1f2a33"/>
 <text x="748" y="830" class="nid" text-anchor="start">p3</text>
@@ -136,7 +136,7 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="748" y="1143" class="nid" text-anchor="start">p5</text>
 </g>
 <g id="p7" data-kind="process"><rect x="956" y="1068" width="24" height="24" fill="#1f2a33"/>
-<text x="988" y="1068" class="nid" text-anchor="start">p7</text>
+<text x="938" y="1104" class="nid" text-anchor="start">p7</text>
 </g>
 <g id="p8" data-kind="process"><rect x="956" y="1428" width="24" height="24" fill="#1f2a33"/>
 <text x="988" y="1428" class="nid" text-anchor="start">p8</text>
@@ -178,8 +178,8 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 </g>
 <g id="f8" data-kind="edge" data-from="p2" data-to="c2" data-style="solid" data-label="d: estado atualizado | Resultados acessíveis">
 <polyline points="728,481 728,452 540,452" class="edge"/>
-<text x="754" y="460" class="label" text-anchor="start"><tspan class="fid">f8</tspan> d: estado atualizado</text>
-<text x="754" y="480" class="label" text-anchor="start">Resultados acessíveis</text>
+<text x="770" y="460" class="label" text-anchor="start"><tspan class="fid">f8</tspan> d: estado atualizado</text>
+<text x="770" y="480" class="label" text-anchor="start">Resultados acessíveis</text>
 </g>
 <g id="f9" data-kind="edge" data-from="p2" data-to="c2" data-style="dashed" data-label="d: estado indisponível">
 <polyline points="728,505 728,555 540,555" class="edge ruptura"/>
