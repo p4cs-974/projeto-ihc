@@ -65,6 +65,7 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="105" y="519" class="dialog" text-anchor="start">d: estado S09, atualização S10, progresso S11</text>
 <text x="105" y="542" class="dialog" text-anchor="start">d: resultados acessíveis e limites S12</text>
 <text x="105" y="565" class="dialog" text-anchor="start">d: tentativa S32 e contexto disponível S29</text>
+<text x="105" y="588" class="dialog" text-anchor="start">d+u: conferir ou informar partida S01</text>
 </g>
 <g id="c3" data-kind="scene">
 <rect x="798" y="630" width="344" height="131" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
@@ -148,11 +149,10 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <text x="334" y="186" class="label" text-anchor="start">u: preparar gravação</text>
 <text x="334" y="206" class="tag" text-anchor="start">gco: O00 · Obter material</text>
 </g>
-<g id="f2" data-kind="edge" data-from="a2" data-to="c2" data-style="solid" data-label="u: retomar a consulta | gco: O00 · Obter material | Contexto disponível (S29)" data-goal="O00">
+<g id="f2" data-kind="edge" data-from="a2" data-to="c2" data-style="solid" data-label="u: retomar a consulta | gco: O00 · Obter material" data-goal="O00">
 <polyline points="45,163 45,479 90,479" class="edge"/>
 <text x="56" y="185" class="label" text-anchor="start">u: retomar a consulta</text>
 <text x="56" y="205" class="tag" text-anchor="start">gco: O00 · Obter material</text>
-<text x="56" y="225" class="label" text-anchor="start">Contexto disponível (S29)</text>
 </g>
 <g id="f3" data-kind="edge" data-from="c1" data-to="p1" data-style="solid" data-label="u: enviar e solicitar análise">
 <polyline points="540,266 716,266" class="edge"/>
@@ -171,9 +171,10 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="540,330 695,330 695,337" class="edge"/>
 <text x="553" y="319" class="label" text-anchor="start">u: adiar o envio</text>
 </g>
-<g id="f7" data-kind="edge" data-from="c2" data-to="p2" data-style="solid" data-label="u: atualizar estado">
+<g id="f7" data-kind="edge" data-from="c2" data-to="p2" data-style="solid" data-label="precond: entrada identificável | u: atualizar estado">
 <polyline points="540,493 716,493" class="edge"/>
-<text x="552" y="483" class="label" text-anchor="start">u: atualizar estado</text>
+<text x="552" y="462" class="label" text-anchor="start">precond: entrada identificável</text>
+<text x="552" y="482" class="label" text-anchor="start">u: atualizar estado</text>
 </g>
 <g id="f8" data-kind="edge" data-from="p2" data-to="c2" data-style="solid" data-label="d: estado atualizado | Veja os resultados acessíveis">
 <polyline points="728,481 728,452 540,452" class="edge"/>
@@ -313,8 +314,9 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <polyline points="110,900 73,900 73,1430 90,1430" class="edge"/>
 <text x="82" y="1300" class="label" text-anchor="start">u: conferir o que falta</text>
 </g>
-<g id="f33" data-kind="edge" data-from="c6" data-to="c5" data-style="solid" data-label="u: voltar ao corte">
+<g id="f33" data-kind="edge" data-from="c6" data-to="c5" data-style="solid" data-label="precond: corte aberto | u: voltar ao corte">
 <polyline points="430,1377 430,1225" class="edge"/>
+<text x="444" y="1288" class="label" text-anchor="start">precond: corte aberto</text>
 <text x="444" y="1308" class="label" text-anchor="start">u: voltar ao corte</text>
 </g>
 <g id="f34" data-kind="edge" data-from="c6" data-to="p6" data-style="solid" data-label="precond: seleção não vazia | u: obter CSV">
@@ -339,6 +341,16 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
 <g id="f38" data-kind="edge" data-from="c6" data-to="e3" data-style="solid" data-label="u: encerrar com pendência">
 <polyline points="490,1494 490,1602" class="edge"/>
 <text x="503" y="1540" class="label" text-anchor="start">u: encerrar com pendência</text>
+</g>
+<g id="f45" data-kind="edge" data-from="c6" data-to="c4" data-style="solid" data-label="u: voltar à consulta">
+<polyline points="90,1462 41,1462 41,849 90,849" class="edge"/>
+<text x="101" y="1350" class="label" text-anchor="start">u: voltar à consulta</text>
+</g>
+<g id="f46" data-kind="edge" data-from="c3" data-to="c4" data-style="solid" data-label="precond: outros resultados acessíveis | u: deixar pendente e | revisar outras partidas">
+<polyline points="826,761 826,766 502,766 502,788" class="edge"/>
+<text x="341" y="717" class="label" text-anchor="start">precond: outros resultados acessíveis</text>
+<text x="341" y="737" class="label" text-anchor="start">u: deixar pendente e</text>
+<text x="341" y="757" class="label" text-anchor="start">revisar outras partidas</text>
 </g>
 <text x="548" y="378" class="note" text-anchor="start">Saída sem enviar</text>
 <text x="556" y="751" class="note" text-anchor="start">Pendência na análise</text>
