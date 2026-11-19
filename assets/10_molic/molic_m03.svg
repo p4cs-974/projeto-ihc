@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1190" height="1755" viewBox="0 0 1190 1755" role="img" aria-labelledby="title desc">
+<title id="title">M03 · Acompanhar a análise e obter trechos para uma produção amadora</title>
+<desc id="desc">MoLIC de Giovanni para CI03. Segue do preparo da gravação ao acompanhamento, à revisão dos candidatos e à obtenção. Falhas têm caminhos de recuperação e encerramento com pendência.</desc>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#1f2a33}
+.h1{font-size:28px;font-weight:700}.sub{font-size:18px;fill:#425b70}
+.topic{font-size:22px;font-weight:700}.sid{fill:#0b5cad}.tag{font-size:17px;font-weight:700;fill:#176559}
+.dialog{font-size:18px}.label{font-size:17px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}
+.nid{font-size:17px;font-weight:700;fill:#0b5cad}.note{font-size:17px;fill:#7a4b0b}
+.edge{fill:none;stroke:#1f2a33;stroke-width:2;marker-end:url(#arr)}.ruptura{stroke-dasharray:8 6}
+</style>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1f2a33"/></marker>
+</defs>
+<rect width="1190" height="1755" fill="#fff"/>
+<text x="42" y="47" class="h1" text-anchor="start">M03 · Acompanhar a análise e obter trechos para uma produção amadora</text>
+<text x="42" y="77" class="sub" text-anchor="start">Giovanni Chahin Morassi (22.123.025-3) · CI03 · T03 e T01/A04</text>
+<text x="42" y="102" class="sub" text-anchor="start">O01–O08 apoiam a finalidade O00. Montagem e ajuste no original ocorrem fora da interface (O10).</text>
+<g id="a1" data-kind="open">
+<circle cx="322" cy="153" r="10" fill="#1f2a33"/>
+<text x="322" y="136" class="nid" text-anchor="middle">a1</text>
+</g>
+<g id="a2" data-kind="open">
+<circle cx="45" cy="153" r="10" fill="#1f2a33"/>
+<text x="45" y="136" class="nid" text-anchor="middle">a2</text>
+</g>
+<g id="e0" data-kind="close">
+<circle cx="695" cy="350" r="13" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<circle cx="695" cy="350" r="7" fill="#1f2a33"/>
+<text x="695" y="384" class="nid" text-anchor="middle">e0</text>
+</g>
+<g id="e1" data-kind="close">
+<circle cx="197" cy="1615" r="13" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<circle cx="197" cy="1615" r="7" fill="#1f2a33"/>
+<text x="197" y="1649" class="nid" text-anchor="middle">e1</text>
+</g>
+<g id="e2" data-kind="close">
+<circle cx="653" cy="698" r="13" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<circle cx="653" cy="698" r="7" fill="#1f2a33"/>
+<text x="653" y="732" class="nid" text-anchor="middle">e2</text>
+</g>
+<g id="e3" data-kind="close">
+<circle cx="490" cy="1615" r="13" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<circle cx="490" cy="1615" r="7" fill="#1f2a33"/>
+<text x="490" y="1649" class="nid" text-anchor="middle">e3</text>
+</g>
+<g id="c1" data-kind="scene">
+<rect x="90" y="235" width="450" height="112" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<path d="M90 276h450" fill="none" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="104" y="263" class="topic" text-anchor="start">c1 · Preparar a gravação</text>
+<text x="526" y="263" class="tag" text-anchor="end">O01</text>
+<text x="105" y="302" class="dialog" text-anchor="start">d+u: partida S01, tempo S02, gravação S03</text>
+<text x="105" y="325" class="dialog" text-anchor="start">d: condições S05, entradas S06, envio S08</text>
+</g>
+<g id="c2" data-kind="scene">
+<rect x="90" y="452" width="450" height="144" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<path d="M90 493h450" fill="none" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="104" y="480" class="topic" text-anchor="start">c2 · Acompanhar a análise</text>
+<text x="526" y="480" class="tag" text-anchor="end">O02 · O08</text>
+<text x="105" y="519" class="dialog" text-anchor="start">d: estado S09, atualização S10, progresso S11</text>
+<text x="105" y="542" class="dialog" text-anchor="start">d: resultados acessíveis e limites S12</text>
+<text x="105" y="565" class="dialog" text-anchor="start">d: tentativa S32 e contexto disponível S29</text>
+</g>
+<g id="c3" data-kind="scene">
+<rect x="798" y="630" width="344" height="131" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<path d="M798 671h344" fill="none" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="812" y="658" class="topic" text-anchor="start">c3 · Encaminhar a falha</text>
+<text x="1128" y="658" class="tag" text-anchor="end">O03</text>
+<text x="813" y="697" class="dialog" text-anchor="start">d: entrada S03, problema S13</text>
+<text x="813" y="720" class="dialog" text-anchor="start">d: tentativa S32, se conhecida</text>
+<text x="813" y="743" class="dialog" text-anchor="start">d+u: recuperação disponível S14</text>
+</g>
+<g id="c4" data-kind="scene">
+<rect x="90" y="788" width="450" height="112" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<path d="M90 829h450" fill="none" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="104" y="816" class="topic" text-anchor="start">c4 · Localizar candidatos</text>
+<text x="526" y="816" class="tag" text-anchor="end">O04</text>
+<text x="105" y="855" class="dialog" text-anchor="start">d+u: critérios de consulta S22</text>
+<text x="105" y="878" class="dialog" text-anchor="start">d: candidatos S16, tipo sugerido S17</text>
+</g>
+<g id="c5" data-kind="scene">
+<rect x="90" y="1008" width="450" height="217" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<path d="M90 1049h450" fill="none" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="104" y="1036" class="topic" text-anchor="start">c5 · Conferir o candidato</text>
+<text x="526" y="1036" class="tag" text-anchor="end">O05 · O07</text>
+<text x="105" y="1075" class="dialog" text-anchor="start">d: vídeo de origem S03, candidato S16</text>
+<text x="105" y="1098" class="dialog" text-anchor="start">d: relógio do jogo S18 e posição no arquivo S19</text>
+<text x="105" y="1121" class="dialog" text-anchor="start">d: intervalo S20, duração S21 e prévia S27</text>
+<text x="105" y="1144" class="dialog" text-anchor="start">d: tamanho individual S33, quando disponível</text>
+<text x="105" y="1167" class="dialog" text-anchor="start">u: identificar a participação do atleta</text>
+</g>
+<g id="c6" data-kind="scene">
+<rect x="90" y="1377" width="450" height="117" rx="14" fill="#fff" stroke="#1f2a33" stroke-width="2"/>
+<path d="M90 1418h450" fill="none" stroke="#1f2a33" stroke-width="1.5"/>
+<text x="104" y="1405" class="topic" text-anchor="start">c6 · Conferir a obtenção</text>
+<text x="526" y="1405" class="tag" text-anchor="end">O07 · O08</text>
+<text x="105" y="1444" class="dialog" text-anchor="start">d: corte disponibilizado S27</text>
+<text x="105" y="1467" class="dialog" text-anchor="start">d+u: obtenção S28, arquivos e pendências S30</text>
+</g>
+<g id="p1" data-kind="process"><rect x="716" y="254" width="24" height="24" fill="#1f2a33"/>
+<text x="748" y="271" class="nid" text-anchor="start">p1</text>
+</g>
+<g id="p2" data-kind="process"><rect x="716" y="481" width="24" height="24" fill="#1f2a33"/>
+<text x="748" y="481" class="nid" text-anchor="start">p2</text>
+</g>
+<g id="p3" data-kind="process"><rect x="716" y="813" width="24" height="24" fill="#1f2a33"/>
+<text x="748" y="830" class="nid" text-anchor="start">p3</text>
+</g>
+<g id="p4" data-kind="process"><rect x="716" y="1037" width="24" height="24" fill="#1f2a33"/>
+<text x="748" y="1054" class="nid" text-anchor="start">p4</text>
+</g>
+<g id="p5" data-kind="process"><rect x="716" y="1143" width="24" height="24" fill="#1f2a33"/>
+<text x="748" y="1160" class="nid" text-anchor="start">p5</text>
+</g>
+<g id="p7" data-kind="process"><rect x="956" y="1068" width="24" height="24" fill="#1f2a33"/>
+<text x="988" y="1068" class="nid" text-anchor="start">p7</text>
+</g>
+<g id="f1" data-kind="edge" data-from="a1" data-to="c1" data-style="solid" data-label="u: preparar gravação">
+<polyline points="322,163 322,235" class="edge"/>
+<text x="334" y="186" class="label" text-anchor="start">u: preparar gravação</text>
+</g>
+<g id="f2" data-kind="edge" data-from="a2" data-to="c2" data-style="solid" data-label="u: retomar a consulta">
+<polyline points="45,163 45,479 90,479" class="edge"/>
+<text x="56" y="185" class="label" text-anchor="start">u: retomar a consulta</text>
+</g>
+<g id="f3" data-kind="edge" data-from="c1" data-to="p1" data-style="solid" data-label="u: enviar e solicitar análise">
+<polyline points="540,266 716,266" class="edge"/>
+<text x="550" y="253" class="label" text-anchor="start">u: enviar e solicitar análise</text>
+</g>
+<g id="f4" data-kind="edge" data-from="p1" data-to="c1" data-style="dashed" data-label="d: corrigir entrada rejeitada">
+<polyline points="728,254 728,220 511,220 511,235" class="edge ruptura"/>
+<text x="550" y="210" class="label" text-anchor="start">d: corrigir entrada rejeitada</text>
+</g>
+<g id="f5" data-kind="edge" data-from="p1" data-to="c2" data-style="solid" data-label="d: envio aceito">
+<polyline points="728,278 728,423 319,423 319,452" class="edge"/>
+<text x="338" y="410" class="label" text-anchor="start">d: envio aceito</text>
+</g>
+<g id="f6" data-kind="edge" data-from="c1" data-to="e0" data-style="solid" data-label="u: adiar o envio">
+<polyline points="540,330 695,330 695,337" class="edge"/>
+<text x="553" y="319" class="label" text-anchor="start">u: adiar o envio</text>
+</g>
+<g id="f7" data-kind="edge" data-from="c2" data-to="p2" data-style="solid" data-label="u: atualizar estado">
+<polyline points="540,493 716,493" class="edge"/>
+<text x="552" y="483" class="label" text-anchor="start">u: atualizar estado</text>
+</g>
+<g id="f8" data-kind="edge" data-from="p2" data-to="c2" data-style="solid" data-label="d: estado e resultados disponíveis">
+<polyline points="728,481 728,452 540,452" class="edge"/>
+<text x="746" y="460" class="label" text-anchor="start">d: estado e resultados disponíveis</text>
+</g>
+<g id="f9" data-kind="edge" data-from="p2" data-to="c2" data-style="dashed" data-label="d: consulta indisponível | Tente consultar novamente">
+<polyline points="728,505 728,555 540,555" class="edge ruptura"/>
+<text x="552" y="544" class="label" text-anchor="start">d: consulta indisponível</text>
+<text x="552" y="564" class="label" text-anchor="start">Tente consultar novamente</text>
+</g>
+<g id="f10" data-kind="edge" data-from="p2" data-to="c3" data-style="dashed" data-label="d: a análise falhou | Nesta entrada">
+<polyline points="740,493 973,493 973,630" class="edge ruptura"/>
+<text x="984" y="541" class="label" text-anchor="start">d: a análise falhou</text>
+<text x="984" y="561" class="label" text-anchor="start">Nesta entrada</text>
+</g>
+<g id="f11" data-kind="edge" data-from="c2" data-to="c4" data-style="solid" data-label="precond: resultados acessíveis | u: revisar candidatos">
+<polyline points="320,596 320,788" class="edge"/>
+<text x="333" y="681" class="label" text-anchor="start">precond: resultados acessíveis</text>
+<text x="333" y="701" class="label" text-anchor="start">u: revisar candidatos</text>
+</g>
+<g id="f12" data-kind="edge" data-from="c3" data-to="c1" data-style="solid" data-label="precond: correção disponível | u: corrigir e reenviar">
+<polyline points="1142,655 1175,655 1175,395 480,395 480,347" class="edge"/>
+<text x="818" y="365" class="label" text-anchor="start">precond: correção disponível</text>
+<text x="818" y="385" class="label" text-anchor="start">u: corrigir e reenviar</text>
+</g>
+<g id="f13" data-kind="edge" data-from="c3" data-to="e2" data-style="dashed" data-label="u: adiar">
+<polyline points="798,698 666,698" class="edge ruptura"/>
+<text x="675" y="681" class="label" text-anchor="start">u: adiar</text>
+</g>
+<g id="f14" data-kind="edge" data-from="c2" data-to="e2" data-style="solid" data-label="u: deixar partida | pendente">
+<polyline points="540,578 653,578 653,685" class="edge"/>
+<text x="665" y="618" class="label" text-anchor="start">u: deixar partida</text>
+<text x="665" y="638" class="label" text-anchor="start">pendente</text>
+</g>
+<g id="f15" data-kind="edge" data-from="c3" data-to="p7" data-style="solid" data-label="precond: nova tentativa | disponível | u: tentar novamente">
+<polyline points="968,761 968,1068" class="edge"/>
+<text x="980" y="813" class="label" text-anchor="start">precond: nova tentativa</text>
+<text x="980" y="833" class="label" text-anchor="start">disponível</text>
+<text x="980" y="853" class="label" text-anchor="start">u: tentar novamente</text>
+</g>
+<g id="f18" data-kind="edge" data-from="p7" data-to="c2" data-style="solid" data-label="d: nova tentativa aceita">
+<polyline points="956,1080 779,1080 779,575 540,575" class="edge"/>
+<text x="788" y="573" class="label" text-anchor="start">d: nova tentativa aceita</text>
+</g>
+<g id="f19" data-kind="edge" data-from="p7" data-to="c3" data-style="dashed" data-label="d: pedido não atendido">
+<polyline points="980,1080 1175,1080 1175,704 1142,704" class="edge ruptura"/>
+<text x="830" y="1121" class="label" text-anchor="start">d: pedido não atendido</text>
+</g>
+<g id="f20" data-kind="edge" data-from="c4" data-to="p3" data-style="solid" data-label="u: aplicar critérios">
+<polyline points="540,825 716,825" class="edge"/>
+<text x="550" y="813" class="label" text-anchor="start">u: aplicar critérios</text>
+</g>
+<g id="f21" data-kind="edge" data-from="p3" data-to="c4" data-style="solid" data-label="d: candidatos correspondentes">
+<polyline points="728,813 728,788 540,788" class="edge"/>
+<text x="550" y="778" class="label" text-anchor="start">d: candidatos correspondentes</text>
+</g>
+<g id="f22" data-kind="edge" data-from="p3" data-to="c4" data-style="dashed" data-label="d: nenhum candidato | Altere os critérios">
+<polyline points="728,837 728,883 540,883" class="edge ruptura"/>
+<text x="550" y="872" class="label" text-anchor="start">d: nenhum candidato</text>
+<text x="550" y="892" class="label" text-anchor="start">Altere os critérios</text>
+</g>
+<g id="f23" data-kind="edge" data-from="c4" data-to="c5" data-style="solid" data-label="u: examinar candidato">
+<polyline points="320,900 320,1008" class="edge"/>
+<text x="334" y="957" class="label" text-anchor="start">u: examinar candidato</text>
+</g>
+<g id="f24" data-kind="edge" data-from="c5" data-to="c4" data-style="solid" data-label="u: voltar à consulta">
+<polyline points="250,1008 250,900" class="edge"/>
+<text x="100" y="970" class="label" text-anchor="start">u: voltar à consulta</text>
+</g>
+<g id="f25" data-kind="edge" data-from="c5" data-to="p4" data-style="solid" data-label="u: reproduzir corte">
+<polyline points="540,1049 716,1049" class="edge"/>
+<text x="550" y="1037" class="label" text-anchor="start">u: reproduzir corte</text>
+</g>
+<g id="f26" data-kind="edge" data-from="p4" data-to="c5" data-style="solid" data-label="d: prévia disponível">
+<polyline points="728,1037 728,1018 540,1018" class="edge"/>
+<text x="550" y="1007" class="label" text-anchor="start">d: prévia disponível</text>
+</g>
+<g id="f27" data-kind="edge" data-from="p4" data-to="c5" data-style="dashed" data-label="d: falha na prévia | Tente novamente">
+<polyline points="728,1061 728,1103 540,1103" class="edge ruptura"/>
+<text x="550" y="1092" class="label" text-anchor="start">d: falha na prévia</text>
+<text x="550" y="1112" class="label" text-anchor="start">Tente novamente</text>
+</g>
+<g id="f28" data-kind="edge" data-from="c5" data-to="p5" data-style="solid" data-label="precond: MP4 disponível | u: obter MP4">
+<polyline points="540,1155 716,1155" class="edge"/>
+<text x="550" y="1130" class="label" text-anchor="start">precond: MP4 disponível</text>
+<text x="550" y="1150" class="label" text-anchor="start">u: obter MP4</text>
+</g>
+<g id="f29" data-kind="edge" data-from="p5" data-to="c5" data-style="solid" data-label="d: MP4 disponibilizado">
+<polyline points="728,1167 728,1205 540,1205" class="edge"/>
+<text x="550" y="1194" class="label" text-anchor="start">d: MP4 disponibilizado</text>
+</g>
+<g id="f30" data-kind="edge" data-from="p5" data-to="c5" data-style="dashed" data-label="d: falha na obtenção do MP4">
+<polyline points="740,1155 756,1155 756,1237 504,1237 504,1225" class="edge ruptura"/>
+<text x="550" y="1260" class="label" text-anchor="start">d: falha na obtenção do MP4</text>
+</g>
+<g id="f31" data-kind="edge" data-from="c5" data-to="c6" data-style="solid" data-label="u: conferir arquivo obtido">
+<polyline points="320,1225 320,1377" class="edge"/>
+<text x="333" y="1336" class="label" text-anchor="start">u: conferir arquivo obtido</text>
+</g>
+<g id="f32" data-kind="edge" data-from="c4" data-to="c6" data-style="solid" data-label="u: conferir o que falta">
+<polyline points="110,900 73,900 73,1430 90,1430" class="edge"/>
+<text x="82" y="1300" class="label" text-anchor="start">u: conferir o que falta</text>
+</g>
+<g id="f33" data-kind="edge" data-from="c6" data-to="c5" data-style="solid" data-label="u: voltar ao corte">
+<polyline points="540,1481 580,1481 580,1288 420,1288 420,1225" class="edge"/>
+<text x="591" y="1320" class="label" text-anchor="start">u: voltar ao corte</text>
+</g>
+<g id="f37" data-kind="edge" data-from="c6" data-to="e1" data-style="solid" data-label="u: encerrar com arquivos conferidos">
+<polyline points="197,1494 197,1602" class="edge"/>
+<text x="210" y="1540" class="label" text-anchor="start">u: encerrar com arquivos conferidos</text>
+</g>
+<g id="f38" data-kind="edge" data-from="c6" data-to="e3" data-style="solid" data-label="u: encerrar com pendência">
+<polyline points="490,1494 490,1602" class="edge"/>
+<text x="503" y="1540" class="label" text-anchor="start">u: encerrar com pendência</text>
+</g>
+<text x="548" y="378" class="note" text-anchor="start">Saída sem enviar</text>
+<text x="556" y="751" class="note" text-anchor="start">Pendência na análise</text>
+<text x="210" y="1620" class="note" text-anchor="start">Montagem externa (O10)</text>
+<text x="503" y="1619" class="note" text-anchor="start">Conferência ou ajuste fica pendente (S30)</text>
+<text x="44" y="1683" class="sub" text-anchor="start">Círculo cheio: abertura · Círculo com anel: encerramento · Quadrado preto: processamento</text>
+<text x="44" y="1712" class="sub" text-anchor="start">u: usuário · d: preposto · d+u: diálogo · S: signo · Seta tracejada: ruptura ou recuperação</text>
+</svg>
