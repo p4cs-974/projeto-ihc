@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guia operacional das Entregas 13 e 14 · Equipe 16</title>
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:#fafafa;
+  --fg:#171717;
+  --muted:#525252;
+  --panel:#f1f1f1;
+  --border:#c4c4c4;
+  --rule:#d4d4d4;
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#000000;
+    --fg:#ffffff;
+    --muted:#a3a3a3;
+    --panel:#141414;
+    --border:#333333;
+    --rule:#262626;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font:15px/1.55 system-ui,-apple-system,"Liberation Sans",Arial,sans-serif;
+}
+main{
+  max-width:960px;
+  margin:0 auto;
+  padding:28px 24px 48px;
+}
+header{
+  border-bottom:1px solid var(--border);
+  padding-bottom:14px;
+  margin-bottom:18px;
+}
+h1{
+  margin:0 0 6px;
+  font-size:1.6rem;
+  line-height:1.2;
+  letter-spacing:-0.01em;
+}
+h2{
+  margin:24px 0 10px;
+  font-size:1.18rem;
+  line-height:1.3;
+  padding-bottom:4px;
+  border-bottom:1px solid var(--border);
+}
+h3{
+  margin:14px 0 6px;
+  font-size:1rem;
+  line-height:1.35;
+}
+p{margin:0 0 10px;overflow-wrap:break-word}
+li,td{overflow-wrap:break-word}
+th{white-space:nowrap}
+td.nw{white-space:nowrap}
+a{color:inherit;text-underline-offset:3px}
+code{
+  font-family:ui-monospace,"Liberation Mono","DejaVu Sans Mono",monospace;
+  font-size:0.86em;
+  background:var(--panel);
+  padding:1px 4px;
+  overflow-wrap:anywhere;
+}
+.meta{
+  color:var(--muted);
+  font-size:0.88rem;
+  margin:3px 0;
+}
+nav{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  padding:10px 0 12px;
+  margin-bottom:16px;
+  border-bottom:1px solid var(--rule);
+  font-size:0.9rem;
+}
+.summary{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:14px 16px;
+  margin:14px 0 18px;
+}
+.summary p:last-child{margin-bottom:0}
+article{
+  border:1px solid var(--border);
+  padding:14px 16px;
+  margin:14px 0;
+}
+article h3{margin-top:0}
+.tags{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin:4px 0 10px;
+}
+.tag{
+  font-size:0.8rem;
+  color:var(--muted);
+  border:1px solid var(--border);
+  padding:1px 7px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:14px;
+}
+.box{
+  background:var(--panel);
+  border:1px solid var(--rule);
+  padding:11px 13px;
+}
+.box h4{
+  margin:0 0 6px;
+  font-size:0.92rem;
+}
+.scroll{overflow-x:auto;margin:8px 0 14px}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.88rem;
+}
+th,td{
+  text-align:left;
+  vertical-align:top;
+  border-bottom:1px solid var(--rule);
+  padding:7px 8px;
+}
+th{
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+  font-weight:600;
+}
+ul,ol{margin:0 0 8px;padding-left:20px}
+li{margin:4px 0}
+blockquote{
+  border-left:3px solid var(--border);
+  margin:10px 0;
+  padding:6px 12px;
+  color:var(--muted);
+}
+footer{
+  border-top:1px solid var(--border);
+  margin-top:24px;
+  padding-top:10px;
+}
+@media(max-width:600px){
+  main{padding:16px 14px 36px}
+  h1{font-size:1.35rem}
+  article,.summary{padding:12px}
+}
+@media print{
+  @page{
+    size:A4;
+    margin:10mm 11mm 10mm 11mm;
+  }
+  :root{
+    --bg:#ffffff;
+    --fg:#171717;
+    --muted:#525252;
+    --panel:#f5f5f5;
+    --border:#a3a3a3;
+    --rule:#d4d4d4;
+  }
+  body{font-size:8.5pt;line-height:1.34}
+  main{max-width:none;padding:0}
+  nav{display:none}
+  header{margin-bottom:7px;padding-bottom:6px}
+  h1{font-size:13.6pt;margin-bottom:3px}
+  .meta{font-size:7.9pt;margin:1.5px 0}
+  h2{
+    font-size:10.2pt;
+    margin:9px 0 5px;
+    padding-bottom:2.5px;
+    break-after:avoid;
+    page-break-after:avoid;
+  }
+  h3{font-size:9.2pt;margin:7px 0 4px;break-after:avoid;page-break-after:avoid}
+  h4{font-size:8.5pt;margin:0 0 4px;break-after:avoid;page-break-after:avoid}
+  p{margin:0 0 5px}
+  ul,ol{margin:0 0 4px;padding-left:16px}
+  li{margin:2.5px 0}
+  code{font-size:0.81em;padding:0.5px 3px}
+  .summary{padding:7px 10px;margin:7px 0 8px;break-inside:avoid}
+  article{break-inside:avoid;page-break-inside:avoid;padding:9px 11px;margin:8px 0}
+  .box{break-inside:avoid;page-break-inside:avoid;padding:7px 9px}
+  .tags{margin:3px 0 6px}
+  .tag{font-size:7.4pt;padding:1px 6px}
+  .grid{grid-template-columns:1fr 1fr;gap:8px}
+  .scroll{margin:5px 0 7px;overflow:visible}
+  table{font-size:7.9pt}
+  th,td{padding:3.5px 5.5px}
+  tr{break-inside:avoid;page-break-inside:avoid}
+  blockquote{margin:6px 0 0;padding:5px 10px;font-size:8.1pt}
+  a{text-decoration:none}
+  footer{margin-top:10px;padding-top:6px}
+}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Guia operacional das Entregas 13 e 14</h1>
+  <p class="meta">19/11/2026 · Centro Universitário FEI · IHC · Equipe 16 (Pedro, Lucas e Giovanni)</p>
+  <p class="meta">Protótipo congelado: <a href="https://ihc-11.p4cs.com.br/" target="_blank" rel="noopener noreferrer">https://ihc-11.p4cs.com.br/</a> · commit <code>7405221</code> (13/11/2026) · SHA-256 <code>aa6ec94773a783559e352f69ff5507bd3a8af9301c3830b832de879104b6f33c</code></p>
+</header>
+
+<nav aria-label="Seções">
+  <a href="#ordem">Ordem de execução</a>
+  <a href="#pre-requisitos">Pré-requisitos e regras</a>
+  <a href="#individual">Passo a passo individual</a>
+  <a href="#sessao">Protocolo de sessão remota</a>
+  <a href="#fechamento">Finalizar E13 e E14</a>
+</nav>
+
+<section class="summary">
+  <p><strong>Regra de congelamento para rodar E13 e E14 em paralelo.</strong> Os três integrantes usam exatamente a versão publicada hoje em <a href="https://ihc-11.p4cs.com.br/" target="_blank" rel="noopener noreferrer">ihc-11.p4cs.com.br</a> (commit <code>7405221</code>). O commit local <code>62bbbed</code> não está publicado nesse link e fica fora desta rodada. Não publiquem alterações no código antes de concluir as sessões da E14; mudanças no meio exigem repetir o piloto e consolidar versões separadamente conforme <code>docs/12_planejamento_avaliacao.md</code>.</p>
+</section>
+
+<section id="ordem">
+  <h2>1. Ordem de execução</h2>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th style="width:19%">Etapa</th><th style="width:12%">Quando</th><th style="width:45%">O que executar</th><th style="width:24%">Artefatos</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Alinhamento e recrutamento</td>
+          <td class="nw">Agora</td>
+          <td>Confirmar <code>MU07</code>, <code>MU08</code> e pesos da Entrega 8; alinhar com o docente a alternativa de vídeo reencenado; criar pasta institucional privada; convidar <code>U01</code>, <code>U02</code> e <code>U03</code> para garantir 7 dias até <code>UT08</code>.</td>
+          <td><code>docs/08_engenharia_usabilidade.md</code>, <code>artifacts/entrega14/guia_recrutamento_e_agenda.md</code></td>
+        </tr>
+        <tr>
+          <td>2. Inspeções individuais (E13)</td>
+          <td class="nw">Em paralelo</td>
+          <td>Pedro (<code>A01</code>), Lucas (<code>A02</code>) e Giovanni (<code>A03</code>) percorrem <code>F01</code> a <code>F06</code> e navegação transversal com <code>H1</code> a <code>H10</code> sem discutir achados antes de fechar suas fichas.</td>
+          <td><code>artifacts/entrega13/inspecao_A01_pedro.md</code>, <code>A02</code>, <code>A03</code></td>
+        </tr>
+        <tr>
+          <td>3. Piloto interno (E14)</td>
+          <td class="nw">Antes de <code>U01</code></td>
+          <td>Pedro modera, Lucas anota e Giovanni executa em outro computador. Validar sala alternativa, controle remoto, recorte da aba, cronômetro, pré-seleções e concordância de registro.</td>
+          <td><code>artifacts/entrega14/ficha_PIL01_piloto.md</code></td>
+        </tr>
+        <tr>
+          <td>4. Sessões de observação e retorno</td>
+          <td class="nw">Após <code>PIL01</code></td>
+          <td>Conduzir sessões iniciais de 45 min com <code>U01</code>, <code>U02</code> e <code>U03</code> (<code>UT01</code> a <code>UT07</code>) e sessões de retorno de 25 min após pelo menos 7 dias sem uso (<code>UT08</code>).</td>
+          <td>Cópias privadas de <code>instrumentos/entrega12_ficha_observacao.md</code> (fora do Git)</td>
+        </tr>
+        <tr>
+          <td>5. Consolidação e fechamento</td>
+          <td class="nw">Após coletas</td>
+          <td>Reunião de consolidação da E13 (<code>HC*</code> e 10 exemplos positivos), consolidação da E14 (<code>AU*</code>, vídeo restrito e comparação <code>HC*</code> x <code>AU*</code>), rastreabilidade e descarte ético.</td>
+          <td><code>docs/13_avaliacao_heuristica.md</code>, <code>docs/14_observacao_usuario.md</code>, <code>RASTREABILIDADE.md</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="pre-requisitos">
+  <h2>2. Pré-requisitos, papéis e restrições</h2>
+  <div class="grid">
+    <div class="box">
+      <h4>Pendências antes da sessão U01</h4>
+      <ul>
+        <li>Confirmar ou ajustar <code>MU07</code>, <code>MU08</code> e pesos em <code>docs/08_engenharia_usabilidade.md</code>.</li>
+        <li>Alinhar com o professor se uma demonstração reencenada pela equipe (com resultados desidentificados) atende ao vídeo ilustrativo caso nenhum participante autorize trechos da gravação.</li>
+        <li>Criar pasta institucional privada com acesso apenas aos três integrantes para separar contatos e aceites das fichas <code>U01</code> a <code>U03</code> e gravações.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>Divisão de papéis na Entrega 14</h4>
+      <table>
+        <thead>
+          <tr><th>Código</th><th>Perfil</th><th>Modera</th><th>Anota</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="nw"><code>PIL01</code></td><td>Interno (fora da amostra)</td><td class="nw">Pedro</td><td>Lucas (Giovanni executa)</td></tr>
+          <tr><td class="nw"><code>U01</code></td><td><code>P01</code> (editor profissional)</td><td class="nw">Pedro</td><td class="nw">Lucas</td></tr>
+          <tr><td class="nw"><code>U02</code></td><td><code>P01</code> (editor profissional)</td><td class="nw">Lucas</td><td class="nw">Giovanni</td></tr>
+          <tr><td class="nw"><code>U03</code></td><td><code>P03</code> (criador amador)</td><td class="nw">Giovanni</td><td class="nw">Pedro</td></tr>
+        </tbody>
+      </table>
+      <p class="meta">A mesma dupla conduz o retorno <code>UT08</code> após pelo menos 7 dias sem uso.</p>
+    </div>
+  </div>
+
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th style="width:16%">Frente</th><th style="width:45%">Obrigatório fazer</th><th style="width:39%">Proibido fazer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="nw">Entrega 13</td>
+          <td>Cobrir <code>F01</code> a <code>F06</code>, falha <code>QA10</code>, busca vazia, modos A/B/C, teclado e recarga <code>F5</code> com <code>H1</code> a <code>H10</code>. Salvar print destacando cada violação e justificar severidade (<code>0</code> a <code>4</code>) por frequência, impacto e persistência.</td>
+          <td>Ler fichas dos colegas antes de concluir a sua; forçar violações inexistentes; avaliar acurácia do modelo de visão computacional do TCC em vez da interface.</td>
+        </tr>
+        <tr>
+          <td>Recrutamento e E14</td>
+          <td>Usar o convite neutro de <code>artifacts/entrega14/guia_recrutamento_e_agenda.md</code>. Verificar idade (18+) e recorte de lances de futebol nos últimos 6 meses. Relatar eventuais proxies em tabela separada.</td>
+          <td>Enviar <code>GUIA_simulacao.html</code>; explicar controles, relógio do jogo x posição no arquivo ou diferença entre CSV e MP4 antes da sessão.</td>
+        </tr>
+        <tr>
+          <td>Ética e Git</td>
+          <td>Registrar separadamente os 3 aceites (participação, gravação só da aba e uso de trechos no vídeo). Versionar apenas <code>PIL01</code> e sínteses desidentificadas (<code>U01</code> a <code>U03</code>).</td>
+          <td>Commitar nomes reais, contatos, aceites assinados, gravações brutas ou fichas brutas preenchidas de <code>U01</code> a <code>U03</code> no repositório.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="individual">
+  <h2>3. Passo a passo individual</h2>
+
+  <article id="pedro">
+    <h3>Pedro Alexandre Custodio Silva (22.123.049-3)</h3>
+    <div class="tags">
+      <span class="tag">E13: Avaliador A01</span>
+      <span class="tag">E14: Modera PIL01 e U01</span>
+      <span class="tag">E14: Anota U03</span>
+    </div>
+    <div class="grid">
+      <div class="box">
+        <h4>Entrega 13 (inspeção individual)</h4>
+        <ol>
+          <li>Abrir <code>https://ihc-11.p4cs.com.br/</code> no computador e registrar navegador, versão, largura da janela e mouse/teclado em <code>artifacts/entrega13/inspecao_A01_pedro.md</code>.</li>
+          <li>Passagem 1: percorrer <code>F01</code> até <code>F06</code> no fluxo normal para familiarização.</li>
+          <li>Passagem 2: inspecionar todos os estados da tabela da ficha (incluindo falha encenada <code>QA10</code>, vídeo sem lances, busca sem resultado, modos A/B/C, <code>Tab/Esc/setas</code> e <code>F5</code>) aplicando <code>H1</code> a <code>H10</code>.</li>
+          <li>Salvar prints anotados em <code>assets/13_heuristica/a01_v01.png</code>, <code>a01_v02.png</code> e seguintes, com local, ação, consequência, severidade justificada (<code>0</code> a <code>4</code>) e recomendação.</li>
+          <li>Fechar a matriz <code>H1</code> a <code>H10</code> antes de discutir com Lucas e Giovanni.</li>
+        </ol>
+      </div>
+      <div class="box">
+        <h4>Entrega 14 (piloto, recrutamento e observação)</h4>
+        <ol>
+          <li>Recrutar <code>U01</code> (<code>P01</code>) usando o texto neutro e a triagem <code>PRE01</code> a <code>PRE03</code> em <code>artifacts/entrega14/guia_recrutamento_e_agenda.md</code>.</li>
+          <li>Moderar <code>PIL01</code> com Lucas (anotando) e Giovanni (executando em outro computador). Validar sala reserva, controle remoto, recorte só da aba e pré-seleções de <code>UT05</code> e <code>UT08</code> em <code>artifacts/entrega14/ficha_PIL01_piloto.md</code>.</li>
+          <li>Moderar <code>U01</code> (45 min + retorno de 25 min após pelo menos 7 dias sem uso): preparar sala 15 min antes, colher os 3 aceites, ler <code>UT01</code> a <code>UT07</code> literalmente sem ensinar caminhos e aplicar facilidade pós-tarefa em <code>UT02</code>, <code>UT05</code> e <code>UT06</code>.</li>
+          <li>Anotar <code>U03</code> com Giovanni na cópia privada de <code>instrumentos/entrega12_ficha_observacao.md</code> (sessão inicial e retorno <code>UT08</code>).</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article id="lucas">
+    <h3>Lucas Roberto Boccia dos Santos (22.123.012-1)</h3>
+    <div class="tags">
+      <span class="tag">E13: Avaliador A02</span>
+      <span class="tag">E14: Anota PIL01 e U01</span>
+      <span class="tag">E14: Modera U02</span>
+    </div>
+    <div class="grid">
+      <div class="box">
+        <h4>Entrega 13 (inspeção individual)</h4>
+        <ol>
+          <li>Abrir <code>https://ihc-11.p4cs.com.br/</code> no computador e registrar navegador, versão, viewport e meios de interação em <code>artifacts/entrega13/inspecao_A02_lucas.md</code>.</li>
+          <li>Passagem 1: percorrer <code>F01</code> até <code>F06</code> no fluxo normal sem registrar problemas ainda.</li>
+          <li>Passagem 2: verificar todos os estados da ficha (<code>F01</code> a <code>F06</code>, falha <code>QA10</code>, filtros e busca vazia, seleção sincronizada em A/B/C, diálogo <code>F06</code> e teclado/<code>F5</code>) aplicando <code>H1</code> a <code>H10</code>.</li>
+          <li>Salvar prints anotados em <code>assets/13_heuristica/a02_v01.png</code>, <code>a02_v02.png</code> e seguintes, com local, ação, consequência, severidade justificada (<code>0</code> a <code>4</code>) e recomendação.</li>
+          <li>Fechar a matriz <code>H1</code> a <code>H10</code> antes de ler as fichas dos colegas.</li>
+        </ol>
+      </div>
+      <div class="box">
+        <h4>Entrega 14 (piloto, recrutamento e observação)</h4>
+        <ol>
+          <li>Recrutar <code>U02</code> (<code>P01</code>) com o convite neutro de <code>artifacts/entrega14/guia_recrutamento_e_agenda.md</code> e enviar instruções técnicas prévias após agendar.</li>
+          <li>Anotar <code>PIL01</code>: cronometrar tarefas e esperas técnicas, registrar desvios e conferir concordância da classificação das tentativas com Pedro em <code>artifacts/entrega14/ficha_PIL01_piloto.md</code>.</li>
+          <li>Anotar <code>U01</code> com Pedro na cópia privada da ficha (sessão inicial e retorno <code>UT08</code>), conferindo CSV e MP4 salvos contra os gabaritos.</li>
+          <li>Moderar <code>U02</code> (45 min + retorno de 25 min após pelo menos 7 dias sem uso) com Giovanni anotando: preparar sala 15 min antes, colher os 3 aceites, conduzir <code>UT01</code> a <code>UT07</code> (pós-tarefa em <code>UT02</code>, <code>UT05</code> e <code>UT06</code>) e retorno <code>UT08</code>.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article id="giovanni">
+    <h3>Giovanni Chahin Morassi (22.123.025-3)</h3>
+    <div class="tags">
+      <span class="tag">E13: Avaliador A03</span>
+      <span class="tag">E14: Executa PIL01</span>
+      <span class="tag">E14: Modera U03 e anota U02</span>
+      <span class="tag">Rastreabilidade</span>
+    </div>
+    <div class="grid">
+      <div class="box">
+        <h4>Entrega 13 (inspeção individual)</h4>
+        <ol>
+          <li>Abrir <code>https://ihc-11.p4cs.com.br/</code> no computador e preencher os dados da sessão em <code>artifacts/entrega13/inspecao_A03_giovanni.md</code>.</li>
+          <li>Passagem 1: percorrer <code>F01</code> até <code>F06</code> no fluxo normal completo para familiarização.</li>
+          <li>Passagem 2: inspecionar cada tela e estado (fila e progresso em <code>F02</code> a <code>F04</code>, falha encenada <code>QA10</code>, vídeo sem lances, detalhe <code>F05</code>, diálogo <code>F06</code> e navegação transversal) com <code>H1</code> a <code>H10</code>.</li>
+          <li>Salvar prints anotados em <code>assets/13_heuristica/a03_v01.png</code>, <code>a03_v02.png</code> e seguintes, com severidade justificada (<code>0</code> a <code>4</code>) e recomendação concreta.</li>
+          <li>Fechar a matriz <code>H1</code> a <code>H10</code> antes da reunião de consolidação.</li>
+        </ol>
+      </div>
+      <div class="box">
+        <h4>Entrega 14 (piloto, recrutamento, observação e rastreabilidade)</h4>
+        <ol>
+          <li>Recrutar <code>U03</code> (<code>P03</code>, criador amador com recorte de lances de futebol nos últimos 6 meses) com o convite neutro de <code>artifacts/entrega14/guia_recrutamento_e_agenda.md</code>.</li>
+          <li>Executar <code>PIL01</code> como participante piloto em computador separado para testar latência do controle remoto, troca de sala alternativa e clareza dos cenários.</li>
+          <li>Anotar <code>U02</code> com Lucas na cópia privada da ficha (sessão inicial e retorno <code>UT08</code>), conferindo tempos, erros, ajudas e arquivos baixados.</li>
+          <li>Moderar <code>U03</code> (45 min + retorno de 25 min após pelo menos 7 dias sem uso) com Pedro anotando. Coordenar ao final a atualização de <code>RASTREABILIDADE.md</code>.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section id="sessao">
+  <h2>4. Protocolo operacional durante cada sessão remota (U01 a U03)</h2>
+  <div class="grid">
+    <div class="box">
+      <h4>Preparo e condução</h4>
+      <ul>
+        <li><strong>15 min antes:</strong> abrir navegador em perfil limpo, esvaziar pasta de downloads, fechar abas e notificações, testar sala principal, sala alternativa, cronômetro e recorte só da aba.</li>
+        <li><strong>Abertura:</strong> ler a fala padrão de <code>instrumentos/entrega12_roteiro_observacao.md</code>, registrar os 3 aceites separados e aplicar <code>PRE04</code> a <code>PRE06</code>.</li>
+        <li><strong>Entre tarefas:</strong> pausar o compartilhamento ao abrir as URLs iniciais (<code>?tela=2</code>, <code>?tela=4&amp;variant=A</code>) e ao pré-selecionar <code>neymar</code> em <code>UT05</code> e <code>vidal-penalti</code> em <code>UT08</code>.</li>
+        <li><strong>Leitura de UT08:</strong> ler uma parte por vez com a fala neutra de <code>docs/14_observacao_usuario.md</code>, sem falar "CSV" nem os IDs internos.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>Registro, arquivos e contingência</h4>
+      <ul>
+        <li><strong>Sem ensinar caminhos:</strong> se a pessoa pedir ajuda, repetir o cenário literalmente. Intervir apenas em bloqueio, anotando o teor e classificando a tentativa como <em>total com ajuda</em>.</li>
+        <li><strong>Facilidade pós-tarefa (1 a 5 + motivo):</strong> aplicar logo após <code>UT02</code>, <code>UT05</code> e <code>UT06</code>, inclusive após dificuldade ou falha.</li>
+        <li><strong>Conferir CSV e MP4:</strong> pausar a gravação da aba antes de abrir os arquivos salvos no computador de teste.</li>
+        <li><strong>Falha de rede ou sala:</strong> pausar, chamar pelo canal combinado e migrar à sala reserva. Se instável, reagendar. Se houver exposição prévia à tarefa, marcar a tentativa como <em>não avaliável</em> e a retomada como exploratória.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Referência rápida</th><th>Critérios</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Severidade E13 (<code>0</code> a <code>4</code>)</td>
+          <td><code>0</code> não é problema · <code>1</code> cosmético · <code>2</code> menor (baixa prioridade) · <code>3</code> maior (alta prioridade) · <code>4</code> catástrofe (bloqueador). Justificar sempre por frequência, impacto e persistência.</td>
+        </tr>
+        <tr>
+          <td>Classificação E14 por tentativa</td>
+          <td><em>Total independente</em> · <em>Total com ajuda</em> · <em>Parcial</em> · <em>Falha</em> (inclui abandono) · <em>Não avaliável</em> (fator externo). Em tarefas com mais de uma meta (como <code>MQ02</code> e <code>MU01</code> em <code>UT02</code>), registrar cada meta separadamente.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="fechamento">
+  <h2>5. O que fazer depois: finalizar Entregas 13 e 14</h2>
+
+  <article>
+    <h3>5.1 Finalizar a Entrega 13 (<code>docs/13_avaliacao_heuristica.md</code>)</h3>
+    <ol>
+      <li><strong>Reunião de consolidação (os três juntos):</strong> realizar somente depois que <code>A01</code>, <code>A02</code> e <code>A03</code> fecharem suas fichas individuais. Transpor matrizes e tabelas de violações para as seções 4 e 5 de <code>docs/13_avaliacao_heuristica.md</code>.</li>
+      <li><strong>Consolidar duplicatas (Seção 6):</strong> agrupar problemas equivalentes em <code>HC01</code>, <code>HC02</code> e seguintes preservando quem encontrou cada um (por exemplo, <code>V01(A01), V03(A02)</code>). Calibrar severidade final, prioridade e responsável; reinspecionar o estado no protótipo em caso de divergência.</li>
+      <li><strong>Síntese e plano de melhoria (Seção 7):</strong> preencher a tabela de distribuição por heurística x severidade, listar bloqueadores (severidades 3 e 4), padrões recorrentes e decisões de melhoria para a próxima iteração.</li>
+      <li><strong>Uso das heurísticas (Seção 8):</strong> selecionar juntos 10 exemplos positivos no protótipo (um para cada heurística <code>H1</code> a <code>H10</code>), salvar as capturas em <code>assets/13_heuristica/uso_h01.png</code> a <code>uso_h10.png</code> e justificar o atendimento.</li>
+      <li><strong>Fechar status:</strong> revisar o checklist de <code>docs/13_avaliacao_heuristica.md</code> e atualizar o status para concluída no documento e no <code>README.md</code>.</li>
+    </ol>
+  </article>
+
+  <article>
+    <h3>5.2 Finalizar a Entrega 14 (<code>docs/14_observacao_usuario.md</code>)</h3>
+    <ol>
+      <li><strong>Conferência privada, retirada e descarte de brutas:</strong> validar CSVs e MP4s salvos contra os gabaritos, classificar tentativas e calcular tempos ajustados. Atender pedidos de retirada em até 30 dias após a última sessão (antes da consolidação pública, incluindo trechos do vídeo) e apagar gravações brutas em até 30 dias após conferir notas e selecionar trechos autorizados.</li>
+      <li><strong>Consolidar resultados (Seções C e D):</strong> preencher as tabelas desidentificadas de <code>U01</code> a <code>U03</code> e consolidar por tarefa e perfil (<code>P01</code> e <code>P03</code> separados; proxies em tabela à parte), registrando cada meta separadamente (<code>MQ01</code> a <code>MQ04</code>, <code>MU01</code> a <code>MU08</code>, <code>QA10</code>). Registrar ausência de retorno por pessoa; marcar <code>MU08</code> como não avaliada em um perfil apenas se ninguém desse perfil retornar em condição válida (pelo menos 7 dias sem uso).</li>
+      <li><strong>Achados, piloto e teste remoto (Passos 4, 6 e Seção E):</strong> registrar os resultados e ajustes de <code>PIL01</code>, preencher como as recomendações de Felipe Melo funcionaram nas sessões e consolidar os achados <code>AU01</code>, <code>AU02</code> e seguintes com evidência quantitativa e qualitativa, impacto, recomendação e artefatos a revisar.</li>
+      <li><strong>Vídeo ilustrativo restrito:</strong> montar vídeo curto com procedimento, resultados desidentificados e melhorias propostas usando apenas trechos da aba com autorização específica (ou demonstração reencenada aprovada pelo docente e identificada no vídeo). Disponibilizar o link restrito à equipe e ao docente na Seção E.</li>
+      <li><strong>Comparação E13 x E14 (Seção F):</strong> cruzar os achados <code>HC*</code> e <code>AU*</code>, identificando o que só a heurística detectou, o que só usuários revelaram, o que apareceu nos dois métodos e o aprendizado da equipe.</li>
+      <li><strong>Conclusão e status (Seção G):</strong> responder às cinco perguntas da conclusão (metas, recorrências, surpresas, prioridades e limitações da amostra <code>N = 3</code>), revisar o checklist e atualizar o status para concluída em <code>docs/14_observacao_usuario.md</code> e no <code>README.md</code>.</li>
+    </ol>
+  </article>
+
+  <article>
+    <h3>5.3 Fechamento do repositório e descarte ético</h3>
+    <ol>
+      <li><strong>Rastreabilidade:</strong> atualizar <code>RASTREABILIDADE.md</code> vinculando <code>HC*</code> (E13) e <code>AU*</code> (E14) aos requisitos, tarefas, MoLIC e telas.</li>
+      <li><strong>Auditoria final:</strong> revisar <code>CHECKLIST_FINAL.md</code>, verificar todos os links locais e externos em janela anônima, rodar <code>git diff --check</code> e confirmar ausência de dados pessoais ou fichas brutas no Git.</li>
+      <li><strong>Descarte pós-disciplina:</strong> remover contatos após os retornos e apagar o vídeo ilustrativo e todos os registros privados em até 90 dias após o encerramento da disciplina.</li>
+    </ol>
+    <blockquote>Apoio para o fechamento: com as 3 fichas preenchidas da E13 e os registros desidentificados de <code>PIL01</code> e <code>U01</code> a <code>U03</code>, o agente pode gerar os prints anotados, os 10 exemplos positivos, os quadros consolidados, o cruzamento da Seção F e as atualizações de <code>RASTREABILIDADE.md</code> e <code>README.md</code>.</blockquote>
+  </article>
+</section>
+
+<footer>
+  <p class="meta">Equipe 16 · Projeto IHC (Melhores Momentos) · Base documental: <code>docs/12_planejamento_avaliacao.md</code>, <code>docs/13_avaliacao_heuristica.md</code> e <code>docs/14_observacao_usuario.md</code>.</p>
+</footer>
+
+</main>
+</body>
+</html>

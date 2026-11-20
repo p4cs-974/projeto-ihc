@@ -201,17 +201,17 @@ Problemas iguais ou equivalentes encontrados por mais de um avaliador devem ser 
 
 | Heurística | Sev. 0 | Sev. 1 | Sev. 2 | Sev. 3 | Sev. 4 | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| H1 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H3 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H4 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H5 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H6 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H7 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H8 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H9 | 0 | 0 | 0 | 0 | 0 | 0 |
-| H10 | 0 | 0 | 0 | 0 | 0 | 0 |
-| **Total** | **0** | **0** | **0** | **0** | **0** | **0** |
+| H1 | — | — | — | — | — | — |
+| H2 | — | — | — | — | — | — |
+| H3 | — | — | — | — | — | — |
+| H4 | — | — | — | — | — | — |
+| H5 | — | — | — | — | — | — |
+| H6 | — | — | — | — | — | — |
+| H7 | — | — | — | — | — | — |
+| H8 | — | — | — | — | — | — |
+| H9 | — | — | — | — | — | — |
+| H10 | — | — | — | — | — | — |
+| **Total** | **—** | **—** | **—** | **—** | **—** | **—** |
 
 ### Achados prioritários e encaminhamento para a Entrega 14
 
@@ -245,7 +245,7 @@ Reúna dez exemplos didáticos positivos no protótipo, um por heurística, com 
 - [ ] Todas as telas/estados relevantes foram examinados.
 - [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
 - [ ] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
-- [ ] H1–H10 aparecem na matriz de cobertura de cada avaliador.
+- [ ] H1–H10 foram verificadas e preenchidas na matriz de cobertura de cada avaliador.
 - [ ] Parte de violações contém apenas violações, sem “forçar” exemplos.
 - [ ] Todo problema tem print/localização e contexto.
 - [ ] Severidade possui justificativa, não apenas número.
