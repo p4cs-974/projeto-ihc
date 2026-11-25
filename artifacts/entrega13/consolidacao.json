@@ -1,0 +1,717 @@
+{
+  "versao": "7405221",
+  "reinspecao": {
+    "data": "20/11/2026",
+    "navegador": "Chromium 157.0.8103.78",
+    "viewport": "1440×900"
+  },
+  "achados": [
+    {
+      "id": "HC01",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V01"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V05"
+        },
+        {
+          "avaliador": "A03",
+          "violacao": "V01"
+        }
+      ],
+      "heuristica_principal": "H8",
+      "heuristicas_secundarias": [
+        "H2",
+        "H6"
+      ],
+      "tela": "F01",
+      "estado": "Exemplos prontos",
+      "problema": "A área de envio indisponível domina a entrada. O botão que carrega os exemplos fica abaixo, com aparência de link secundário.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro",
+      "observacao_reinspecao": "Na abertura em rede normal, o botão dos quatro exemplos já estava disponível ao observar a entrada. A espera transitória relatada sob resposta retardada é uma condição diferente. Com os exemplos prontos, a caixa de envio indisponível continuou dominando a tela."
+    },
+    {
+      "id": "HC02",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V02"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V03"
+        },
+        {
+          "avaliador": "A03",
+          "violacao": "V02"
+        }
+      ],
+      "heuristica_principal": "H9",
+      "heuristicas_secundarias": [
+        "H2",
+        "H10"
+      ],
+      "tela": "F01",
+      "estado": "Falha ao carregar exemplos",
+      "problema": "O erro ao carregar os exemplos oculta a ação inicial e orienta a executar um servidor local. A página publicada fica sem uma ação de nova tentativa.",
+      "severidade_final": 3,
+      "prioridade": "Alta",
+      "responsavel": "Pedro",
+      "justificativa_severidade": "Uma falha é eventual, mas interrompe todo o percurso quando ocorre. A orientação oferecida pela interface é inaplicável no site publicado. A recuperação depende de reconhecer a necessidade de recarregar e de a requisição voltar a funcionar.",
+      "observacao_reinspecao": "Ao interromper o carregamento da lista de exemplos, a página publicada exibiu a instrução de servidor local e o botão dos exemplos sumiu. Restabelecer a requisição e recarregar a página disponibilizou o botão novamente."
+    },
+    {
+      "id": "HC03",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V04"
+        }
+      ],
+      "heuristica_principal": "H5",
+      "heuristicas_secundarias": [
+        "H1",
+        "H3"
+      ],
+      "tela": "F01",
+      "estado": "Atalhos da barra lateral antes da confirmação do lote",
+      "problema": "Abrir Análise pela barra lateral inicia o processamento dos exemplos sem passar pela conferência do lote. Highlights abre a base já concluída, com um aviso de atalho da demonstração, também sem essa conferência.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro"
+    },
+    {
+      "id": "HC04",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V03"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V01"
+        },
+        {
+          "avaliador": "A03",
+          "violacao": "V03"
+        }
+      ],
+      "heuristica_principal": "H6",
+      "heuristicas_secundarias": [],
+      "tela": "F02",
+      "estado": "Cartões do lote em repouso",
+      "problema": "O botão de remover fica invisível até passar o ponteiro no cartão ou alcançar o controle pelo teclado.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro",
+      "justificativa_severidade": "A descoberta da remoção afeta todos os cartões e pode atrasar a conferência do lote. O controle aparece com o ponteiro ou o foco. A nota 3 de A02 também considera a falta de desfazer, registrada em HC05.",
+      "observacao_reinspecao": "Sem o ponteiro sobre os cartões e sem foco, nenhum × ficou visível. O × apareceu ao passar o ponteiro sobre o cartão ou ao chegar ao botão com Tab. Depois de remover um tempo, a tela passou a listar três vídeos."
+    },
+    {
+      "id": "HC05",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V01"
+        }
+      ],
+      "heuristica_principal": "H3",
+      "heuristicas_secundarias": [],
+      "tela": "F02",
+      "estado": "Após remover um vídeo",
+      "problema": "A remoção não tem desfazer nem reposição individual. Usar os exemplos de novo repõe o lote inteiro.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro",
+      "justificativa_severidade": "A nota 3 de A02 agrupa a remoção que fica oculta e a falta de desfazer. Após uma remoção por engano, ainda é possível repor os exemplos e refazer o lote, com retrabalho limitado a quatro tempos nesta versão.",
+      "observacao_reinspecao": "Após a remoção, a tela ofereceu Adicionar vídeos, que volta à entrada para carregar o lote completo. A tela de lote não ofereceu desfazer nem repor só o item removido."
+    },
+    {
+      "id": "HC06",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V02"
+        }
+      ],
+      "heuristica_principal": "H2",
+      "heuristicas_secundarias": [
+        "H8"
+      ],
+      "tela": "F02",
+      "estado": "Cartões dos quatro tempos",
+      "problema": "Os nomes de arquivo repetidos têm mais destaque que partida e tempo. O usuário precisa ler a linha secundária antes de distinguir cartões de jogos diferentes.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro"
+    },
+    {
+      "id": "HC07",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V04"
+        }
+      ],
+      "heuristica_principal": "H2",
+      "heuristicas_secundarias": [],
+      "tela": "F02",
+      "estado": "Resumo do lote",
+      "problema": "O resumo informa que “só os cortes” são publicados, o que sugere publicação automática. O percurso termina com a obtenção de arquivos para uso externo.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro"
+    },
+    {
+      "id": "HC08",
+      "membros": [
+        {
+          "avaliador": "A03",
+          "violacao": "V11"
+        }
+      ],
+      "heuristica_principal": "H5",
+      "heuristicas_secundarias": [
+        "H1"
+      ],
+      "tela": "F02",
+      "estado": "Cenário de falha após retirar o vídeo afetado",
+      "problema": "O cenário de falha continua selecionado e anuncia a interrupção de um tempo que já saiu do lote.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro"
+    },
+    {
+      "id": "HC09",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V05"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V06"
+        }
+      ],
+      "heuristica_principal": "H6",
+      "heuristicas_secundarias": [
+        "H1"
+      ],
+      "tela": "F03",
+      "estado": "Fila e progresso por vídeo",
+      "problema": "Segmentos identificados por números e cores exigem consultar a dica do ponteiro ou lembrar a ordem do lote para identificar partida e tempo.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Giovanni",
+      "observacao_reinspecao": "Na fila, dois vídeos estavam em processamento e dois aguardavam. Os segmentos mostravam 1 a 4. A dica do segmento 3 identificava Bayern de Munique x Real Madrid e o 1º tempo."
+    },
+    {
+      "id": "HC10",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V06"
+        }
+      ],
+      "heuristica_principal": "H6",
+      "heuristicas_secundarias": [
+        "H7"
+      ],
+      "tela": "F03",
+      "estado": "Trilha de lances revelados",
+      "problema": "Marcadores clicáveis de 5 px têm pouca área de interação e pouca indicação visual de que abrem o lance. A prévia com título só aparece ao passar o ponteiro sobre o marcador.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Giovanni",
+      "observacao_reinspecao": "Na trilha concluída, o marcador de Suárez media 5 px. Ao passar o ponteiro, apareceu uma prévia com título, origem e a ação Ir para o lance."
+    },
+    {
+      "id": "HC11",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V07"
+        },
+        {
+          "avaliador": "A03",
+          "violacao": "V04"
+        }
+      ],
+      "heuristica_principal": "H3",
+      "heuristicas_secundarias": [],
+      "tela": "F03",
+      "estado": "Prévias durante a análise",
+      "problema": "As duas prévias começam em 2× sem controle para pausar ou ocultar os vídeos enquanto o usuário acompanha o progresso.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Giovanni"
+    },
+    {
+      "id": "HC12",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V08"
+        }
+      ],
+      "heuristica_principal": "H5",
+      "heuristicas_secundarias": [
+        "H1"
+      ],
+      "tela": "F03 e F04",
+      "estado": "Reinício com seleção anterior",
+      "problema": "O reinício é imediato, sem confirmação. Durante a nova execução, a base pode mostrar zero lances e manter ativa a obtenção de cortes da execução anterior.",
+      "severidade_final": 3,
+      "prioridade": "Alta",
+      "responsavel": "Giovanni",
+      "observacao_reinspecao": "Com Suárez e Neymar selecionados, Reiniciar análise mudou de estado imediatamente. Na base durante o reinício, apareceram 0 Highlights em 0 Partidas e Obter seleção (2) continuou habilitado."
+    },
+    {
+      "id": "HC13",
+      "membros": [
+        {
+          "avaliador": "A03",
+          "violacao": "V05"
+        }
+      ],
+      "heuristica_principal": "H3",
+      "heuristicas_secundarias": [
+        "H4"
+      ],
+      "tela": "F03",
+      "estado": "Lote concluído sem lances",
+      "problema": "A ação final convida a ver zero lances e fica desabilitada. O resumo da base continua acessível pela barra lateral.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Giovanni"
+    },
+    {
+      "id": "HC14",
+      "membros": [
+        {
+          "avaliador": "A03",
+          "violacao": "V06"
+        }
+      ],
+      "heuristica_principal": "H1",
+      "heuristicas_secundarias": [],
+      "tela": "F04",
+      "estado": "Base após analisar um único vídeo sem lances",
+      "problema": "O cabeçalho informa zero partidas, enquanto o resumo do lote mostra o vídeo concluído e identifica a partida analisada.",
+      "severidade_final": 1,
+      "prioridade": "Se houver tempo",
+      "responsavel": "Giovanni"
+    },
+    {
+      "id": "HC15",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V06"
+        }
+      ],
+      "heuristica_principal": "H1",
+      "heuristicas_secundarias": [],
+      "tela": "F04",
+      "estado": "Lista A com tipo e tempo filtrados",
+      "problema": "O filtro Gol ainda mostra seis após a escolha de 2º tempo. A lista contém três resultados e exige contagem manual.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro"
+    },
+    {
+      "id": "HC16",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V07"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V09"
+        }
+      ],
+      "heuristica_principal": "H4",
+      "heuristicas_secundarias": [
+        "H7",
+        "H6"
+      ],
+      "tela": "F04",
+      "estado": "Troca entre lista A, trilhas B e mosaico C",
+      "problema": "A troca muda os critérios disponíveis. Ao sair da lista A e voltar, os filtros anteriores se perdem e reaparece o conjunto completo sem aviso.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro",
+      "observacao_reinspecao": "Gol e 2º tempo mostraram três linhas em A. B abriu com oito marcadores, inclusive a defesa. Ao retornar a A, a lista voltou a oito resultados, com Todos novamente ativo."
+    },
+    {
+      "id": "HC17",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V09"
+        }
+      ],
+      "heuristica_principal": "H6",
+      "heuristicas_secundarias": [
+        "H4"
+      ],
+      "tela": "F04",
+      "estado": "Alternador de visualizações",
+      "problema": "O alternador mostra três ícones sem nomes visíveis. A pessoa precisa consultar as dicas ou experimentar cada modo para identificá-lo.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Pedro"
+    },
+    {
+      "id": "HC18",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V09"
+        }
+      ],
+      "heuristica_principal": "H9",
+      "heuristicas_secundarias": [
+        "H1"
+      ],
+      "tela": "F04",
+      "estado": "Trilhas B após desmarcar todos os tipos",
+      "problema": "As trilhas ficam sem marcadores e mostram zero lances por partida. Falta explicar que os filtros ocultaram os resultados e oferecer uma ação para restaurá-los.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Giovanni",
+      "observacao_reinspecao": "Em B, após desligar Gol, Defesa e Pênalti, as duas partidas mostraram 0 lances e nenhum marcador. O cabeçalho geral continuou informando oito lances na base. Não apareceu explicação do estado vazio ou ação de restauração."
+    },
+    {
+      "id": "HC19",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V11"
+        }
+      ],
+      "heuristica_principal": "H6",
+      "heuristicas_secundarias": [
+        "H7"
+      ],
+      "tela": "F04",
+      "estado": "Marcadores de lance nas trilhas B",
+      "problema": "Os marcadores mostram tipo e relógio do jogo. O título do lance fica na dica do ponteiro e não aparece na leitura direta da trilha.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Giovanni",
+      "observacao_reinspecao": "O marcador de Suárez mostrou Gol e jogo 10:04. Ao passar o ponteiro, a dica disponibilizou Gol de Luis Suárez e a posição no arquivo."
+    },
+    {
+      "id": "HC20",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V08"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V10"
+        }
+      ],
+      "heuristica_principal": "H7",
+      "heuristicas_secundarias": [
+        "H6",
+        "H10"
+      ],
+      "tela": "F04",
+      "estado": "Faixa de gols no mosaico C",
+      "problema": "A faixa mostra três cartões completos e parte do quarto. Dois gols ficam fora da área visível sem seta, barra perceptível ou instrução de rolagem horizontal.",
+      "severidade_final": 3,
+      "prioridade": "Alta",
+      "responsavel": "Lucas",
+      "justificativa_severidade": "A falta de controle visível pode excluir dois de seis gols da revisão sem que a pessoa perceba. A frequência aumenta ao revisar fileiras largas. Mudar de modo permite acessar esses cortes.",
+      "observacao_reinspecao": "A 1440 × 900, a faixa Gol 6 mostrou três cartões inteiros e um parcial. Os dois gols de Cristiano Ronaldo ficaram fora do viewport. Passar o ponteiro pela faixa não revelou controles de rolagem."
+    },
+    {
+      "id": "HC21",
+      "membros": [
+        {
+          "avaliador": "A03",
+          "violacao": "V07"
+        }
+      ],
+      "heuristica_principal": "H6",
+      "heuristicas_secundarias": [
+        "H4"
+      ],
+      "tela": "F04",
+      "estado": "Miniatura ainda não selecionada no mosaico C",
+      "problema": "O controle de seleção aparece como um círculo vazio. A função fica mais evidente depois de marcar o lance ou abrir o detalhe.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Lucas"
+    },
+    {
+      "id": "HC22",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V09"
+        }
+      ],
+      "heuristica_principal": "H1",
+      "heuristicas_secundarias": [
+        "H4"
+      ],
+      "tela": "F04",
+      "estado": "Confirmação e cancelamento de nova tentativa pelo teclado",
+      "problema": "Abrir ou cancelar a confirmação com Enter remove o foco visível. A pessoa precisa usar Tab para reencontrar o ponto de interação na faixa de falha.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Giovanni",
+      "observacao_reinspecao": "Com Enter em Tentar de novo este vídeo, o foco saiu do botão ao surgir a confirmação. Dois Tabs alcançaram Cancelar. Após Enter em Cancelar, o foco saiu novamente da faixa."
+    },
+    {
+      "id": "HC23",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V12"
+        }
+      ],
+      "heuristica_principal": "H4",
+      "heuristicas_secundarias": [
+        "H3"
+      ],
+      "tela": "F05",
+      "estado": "Detalhe expandido na lista A",
+      "problema": "Na lista, faltam os controles visíveis Anterior, Próximo e Fechar e a dica de teclado que aparecem no detalhe dos outros modos.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Lucas"
+    },
+    {
+      "id": "HC24",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V12"
+        }
+      ],
+      "heuristica_principal": "H8",
+      "heuristicas_secundarias": [
+        "H4"
+      ],
+      "tela": "F05",
+      "estado": "Controles de seleção no detalhe da lista A",
+      "problema": "A linha expandida e o detalhe exibem dois botões Selecionar ao mesmo tempo para o mesmo lance.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Lucas"
+    },
+    {
+      "id": "HC25",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V10"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V13"
+        },
+        {
+          "avaliador": "A03",
+          "violacao": "V08"
+        }
+      ],
+      "heuristica_principal": "H2",
+      "heuristicas_secundarias": [
+        "H4"
+      ],
+      "tela": "F05",
+      "estado": "Anotação no detalhe da defesa do Barcelona",
+      "problema": "A linha temporal mostra a categoria “Shots on target” em inglês, embora o título e o restante do detalhe estejam em português.",
+      "severidade_final": 1,
+      "prioridade": "Se houver tempo",
+      "responsavel": "Lucas",
+      "justificativa_severidade": "O título e a descrição em português permitem entender a defesa e continuar a revisão. A nota 2 de A02 inclui também a dificuldade com os tempos no CSV, registrada em HC26.",
+      "observacao_reinspecao": "O detalhe aberto pela lista e pelo mosaico mostrou Defesa do Barcelona no título e “Shots on target” na anotação. O título e a descrição em português bastaram para identificar a jogada."
+    },
+    {
+      "id": "HC26",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V13"
+        }
+      ],
+      "heuristica_principal": "H2",
+      "heuristicas_secundarias": [
+        "H4"
+      ],
+      "tela": "F06",
+      "estado": "CSV aberto fora do protótipo",
+      "problema": "Os tempos no arquivo são exportados em segundos, enquanto a tela usa minutos e segundos. O CSV também expõe o relógio da anotação original ao lado do relógio do jogo sem explicar a diferença.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Lucas",
+      "observacao_reinspecao": "O CSV da defesa do Barcelona registrou início e fim do corte como 163 e 190 segundos. A tela de detalhe mostrou 2:43 a 3:10. O CSV manteve tanto a referência da anotação original quanto o relógio do jogo."
+    },
+    {
+      "id": "HC27",
+      "membros": [
+        {
+          "avaliador": "A03",
+          "violacao": "V09"
+        }
+      ],
+      "heuristica_principal": "H9",
+      "heuristicas_secundarias": [
+        "H2"
+      ],
+      "tela": "F05",
+      "estado": "Falha do player",
+      "problema": "A mensagem do player mostra “Failed to fetch” junto à ação Tentar de novo.",
+      "severidade_final": 1,
+      "prioridade": "Se houver tempo",
+      "responsavel": "Lucas"
+    },
+    {
+      "id": "HC28",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V11"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V14"
+        }
+      ],
+      "heuristica_principal": "H6",
+      "heuristicas_secundarias": [],
+      "tela": "F06",
+      "estado": "Resumo de MP4 com seleção de jogos diferentes",
+      "problema": "A lista mostra nome de arquivo, título e tamanho, sem partida, tempo ou relógio do jogo para conferir a origem antes do download.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Lucas",
+      "observacao_reinspecao": "Ao obter o corte da defesa do Barcelona, o diálogo mostrou bravo.mp4, Defesa do Barcelona e o tamanho. Partida, tempo e relógio ficaram no detalhe em F05."
+    },
+    {
+      "id": "HC29",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V14"
+        }
+      ],
+      "heuristica_principal": "H3",
+      "heuristicas_secundarias": [],
+      "tela": "F06",
+      "estado": "Ajuste da seleção no diálogo de obtenção",
+      "problema": "Para retirar um item, o usuário precisa fechar o diálogo, localizar o corte na base, desmarcá-lo e abrir o diálogo de novo.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Lucas"
+    },
+    {
+      "id": "HC30",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V12"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V15"
+        },
+        {
+          "avaliador": "A03",
+          "violacao": "V12"
+        }
+      ],
+      "heuristica_principal": "H3",
+      "heuristicas_secundarias": [
+        "H4"
+      ],
+      "tela": "F01 a F04",
+      "estado": "Voltar do navegador após navegação interna",
+      "problema": "O botão Voltar segue o histórico de documentos e pula a última etapa interna. Pode voltar à entrada, sair para outro documento ou manter a etapa atual quando não há entrada anterior.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Giovanni",
+      "justificativa_severidade": "A ação quebra a sequência esperada das etapas. O efeito imediato depende do histórico, e a navegação interna ainda permite retomar. A nota 3 de A02 agrupa também a perda da seleção na recarga, registrada em HC31.",
+      "observacao_reinspecao": "Na sequência Enviar → abertura de Vídeos → Highlights, Voltar abriu Enviar e pulou Vídeos. Em uma aba nova aberta diretamente em Vídeos, a troca interna para Highlights deixou uma única entrada de histórico. Voltar permaneceu em Highlights."
+    },
+    {
+      "id": "HC31",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V13"
+        },
+        {
+          "avaliador": "A02",
+          "violacao": "V15"
+        },
+        {
+          "avaliador": "A03",
+          "violacao": "V10"
+        }
+      ],
+      "heuristica_principal": "H3",
+      "heuristicas_secundarias": [
+        "H5",
+        "H1"
+      ],
+      "tela": "F04",
+      "estado": "Recarga com cortes marcados",
+      "problema": "A recarga conserva o modo de visualização, mas descarta toda a seleção sem aviso ou recuperação.",
+      "severidade_final": 3,
+      "prioridade": "Alta",
+      "responsavel": "Lucas",
+      "justificativa_severidade": "A recarga pode ocorrer durante a revisão e apaga a seleção inteira. Refazer as marcações exige lembrar os lances escolhidos e pode deixar cortes de fora. O modo de visualização preservado faz a tela parecer a mesma.",
+      "observacao_reinspecao": "Suárez continuou marcado ao trocar da lista para o mosaico e Obter seleção mostrou 1. Depois da recarga, o mosaico reapareceu com a seleção zerada, sem aviso."
+    },
+    {
+      "id": "HC32",
+      "membros": [
+        {
+          "avaliador": "A02",
+          "violacao": "V16"
+        }
+      ],
+      "heuristica_principal": "H10",
+      "heuristicas_secundarias": [
+        "H7"
+      ],
+      "tela": "F01 a F06",
+      "estado": "Ajuda transversal e atalhos na lista A",
+      "problema": "A interface não reúne os atalhos das etapas e da lista A em um guia consultável. As explicações sobre os relógios e os formatos CSV e MP4 aparecem só localmente, nas trilhas B e no diálogo de obtenção.",
+      "severidade_final": 1,
+      "prioridade": "Se houver tempo",
+      "responsavel": "Giovanni"
+    },
+    {
+      "id": "HC33",
+      "membros": [
+        {
+          "avaliador": "A01",
+          "violacao": "V11"
+        }
+      ],
+      "heuristica_principal": "H6",
+      "heuristicas_secundarias": [],
+      "tela": "F06",
+      "estado": "MP4 depois de salvo",
+      "problema": "Os nomes dos MP4 salvos, como suarez.mp4 e vidal.mp4, não indicam partida, tempo ou relógio do jogo. Fora da interface, a conferência depende da imagem ou do CSV.",
+      "severidade_final": 2,
+      "prioridade": "Baixa",
+      "responsavel": "Lucas"
+    }
+  ]
+}
