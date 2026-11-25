@@ -1,239 +1,286 @@
 # Entrega 14: avaliação de usabilidade por observação de usuários
 
-**Data:** 19/11/2026 (fluxograma, protocolo, tarefas e materiais operacionais preparados; piloto e coleta pendentes)\
-**Status:** 🟨 em andamento (preparação pronta; piloto `PIL01`, recrutamento, sessões `U01`–`U03`, vídeo ilustrativo e comparação com a Entrega 13 pendentes)\
-**Responsabilidade:** solução consolidada pela Equipe 16 (Pedro Alexandre Custodio Silva, Lucas Roberto Boccia dos Santos e Giovanni Chahin Morassi). O número de participantes finais observados é igual ao número de integrantes (3 participantes externos), com cada integrante moderando uma sessão e observando outra.
+**Data:** preparação em 19/11/2026; sessão em 24/11/2026; fechamento documental em 25/11/2026.\
+**Status:** relatório encerrado para entrega com escopo reduzido: uma sessão exploratória `EXP01`, nove achados e comparação com a inspeção heurística. Requisitos de amostra e medição não atendidos estão declarados abaixo.\
+**Responsabilidade:** solução consolidada da Equipe 16: Pedro Alexandre Custodio Silva, Lucas Roberto Boccia dos Santos e Giovanni Chahin Morassi.
 
 ## Objetivo da atividade
 
-Observar usuários representativos dos perfis `P01` (editor profissional de vídeo esportivo) e `P03` (criador amador) executando tarefas delimitadas no protótipo **Melhores Momentos** para identificar problemas de eficácia, eficiência, compreensão, taxa de erro, memorização e satisfação que não podem ser inferidos apenas por inspeção heurística.
+Relatar uma observação exploratória do uso do protótipo **Melhores Momentos**, identificar dificuldades de interação e comparar os achados com a [inspeção heurística](13_avaliacao_heuristica.md). Os perfis de referência do projeto são `P01` (editor profissional) e `P03` (criador amador); a sessão disponível não verificou o enquadramento do participante nesses perfis.
 
-> **Regra da amostra:** participantes finais são adultos externos à equipe. Integrantes participam somente do teste piloto (`PIL01`) para validar roteiro, ambiente remoto e registro, fora da amostra final.
+### Fechamento da coleta em 25/11/2026
 
-O teste avalia a **interação com o protótipo**, não o desempenho científico do modelo híbrido de visão computacional do TCC. Os vídeos são exemplos do SoccerNet-v2 e o processamento em fila, progresso, falha e ausência de lances é simulado, conforme declarado na [Entrega 12](12_planejamento_avaliacao.md#o-que-está-sendo-avaliado).
+Por decisão de encerramento comunicada pela equipe diante do prazo de entrega, este relatório utiliza **somente a sessão já gravada em 24/11/2026 (`EXP01`, 06:44)**. Não haverá novas sessões, novo vídeo, piloto formal nem retorno nesta entrega. O identificador `EXP01` é preservado para distinguir a exploração guiada do protocolo estruturado originalmente planejado e do `U01` da Entrega 6.
+
+| Previsto no plano original | Realizado e situação final |
+|---|---|
+| Três participantes finais externos, um por integrante | Uma pessoa externa em exploração guiada; **quantidade mínima não atendida**. Não há dispensa do docente registrada. |
+| Piloto `PIL01` e sessões estruturadas `U01`–`U03` | Não executados; roteiro e instrumentos preservados como planejamento. |
+| Tarefas cronometradas, escala 1–5 e conferência de CSV/MP4 | Não aplicadas no formato previsto; sem taxas de sucesso, medianas ou validação quantitativa. |
+| Retorno `UT08` após ≥ 7 dias | Não executado; memorização não avaliada. |
+| Vídeo ilustrativo editado adicional | Não será produzido; o único registro audiovisual é o de `EXP01`, acompanhado deste relatório e das evidências higienizadas. |
+
+O encerramento documental não equivale ao cumprimento integral do protocolo nem à aprovação da redução da amostra pelo professor. As lacunas são limitações desta entrega, não promessas de coleta posterior.
+
+O teste avalia exclusivamente a **interação com o protótipo** (escopo de IHC derivado na [Entrega 1](01_conhecendo_o_problema.md)), não o desempenho científico do modelo híbrido de visão computacional do TCC. Os vídeos são quatro tempos de duas partidas reais do SoccerNet-v2 (`Real Madrid 0 x 4 Barcelona`, 21/11/2015, e `Bayern de Munique 1 x 2 Real Madrid`, 12/04/2017) com oito cortes reais em 224p; o envio de arquivos próprios está indisponível e o processamento em fila, progresso, falha e ausência de lances é simulado, conforme declarado na [Entrega 11](11_figma.md#cobertura-molic-e-limites) e na [Entrega 12](12_planejamento_avaliacao.md#o-que-está-sendo-avaliado).
 
 ## A. Fluxograma do processo
 
-O diagrama abaixo representa o processo completo da avaliação remota por observação, incluindo o planejamento DECIDE, a preparação técnica, o ciclo do piloto (`PIL01`), o recrutamento em paralelo, o consentimento, a condução de `UT01`–`UT07` com tratamento de falhas de conexão e reagendamento, o retorno (`UT08`), a consolidação por perfil, o cruzamento com a [Entrega 13](13_avaliacao_heuristica.md), o vídeo ilustrativo restrito e o descarte ético dos dados.
+O fluxograma representa o percurso efetivamente documentado: planejamento original, sessão exploratória, higienização, análise qualitativa, cruzamento com a inspeção e fechamento com limitações. As etapas planejadas e não realizadas são identificadas separadamente.
 
 ![Fluxograma da avaliação por observação de usuários](../assets/14_testes/fluxograma_avaliacao.svg)
 
-*Figura 1. Fluxograma do processo de avaliação por observação de usuários da Equipe 16, detalhando preparação, piloto iterativo, recrutamento paralelo, sessão remota, contingência para falhas de rede/sala, retorno após sete dias, análise e descarte ético. Fonte: elaboração da equipe com base em Barbosa e Silva (2010), [Teste de Usabilidade por Observação](../slides_plinio/Teste%20Usabilidade%20Observacao%20Usuario.pdf) (slides 5–16), palestra de Felipe Melo e [Entrega 12](12_planejamento_avaliacao.md).*
+*Figura 1. Processo executado e limitações do fechamento em 25/11/2026. Fonte: elaboração da equipe a partir dos registros de `EXP01` e do [plano DECIDE](12_planejamento_avaliacao.md).*
 
 ## B. Procedimento de preparação e execução
 
 ### Passo 1: objetivos e versão avaliada
 
-- **Protótipo avaliado:** [ihc-11.p4cs.com.br](https://ihc-11.p4cs.com.br/), commit `7405221` (arquivo-fonte de `7d52cdd`, publicado em 13/11/2026; SHA-256 conferido do HTML: `aa6ec94773a783559e352f69ff5507bd3a8af9301c3830b832de879104b6f33c`), mesma versão congelada para a [Entrega 13](13_avaliacao_heuristica.md#2-escopo-da-inspeção). Caso alguma correção da Entrega 13 seja aplicada antes da coleta, a equipe registrará o novo commit e repetirá as verificações afetadas no piloto, sem misturar resultados de versões diferentes.
+- **Protótipo avaliado:** [ihc-11.p4cs.com.br](https://ihc-11.p4cs.com.br/), commit `7405221` (arquivo-fonte de `7d52cdd`, publicado em 13/11/2026; SHA-256 conferido do HTML: `aa6ec94773a783559e352f69ff5507bd3a8af9301c3830b832de879104b6f33c`), mesma versão congelada na [Entrega 13](13_avaliacao_heuristica.md#2-escopo-da-inspeção). `[F]` A URL `https://ihc-11.p4cs.com.br/?tela=2` foi confirmada visualmente no canto inferior esquerdo de [frame_033.jpg](../assets/14_testes/frames_video/frame_033.jpg) durante a sessão `EXP01` (vídeo linkado no YouTube, `1890×988 px`, 30 fps, `404,1 s` / `06:44`). As recomendações deste relatório não foram implementadas nesta versão; a avaliação permanece vinculada à versão congelada.
+- **Rastreabilidade às entregas anteriores:**
+  - Problema, escopo e personas: [Entrega 1](01_conhecendo_o_problema.md), [Entrega 2](02_analise_concorrencia.md) (`RC02`–`RC09`), [Entrega 3](03_personas_contexto_jornada.md) (`P01`, `P02` externa, `P03`) e [Entrega 4](04_cenarios_problema.md) (`C01`–`C03`).
+  - Tarefas e modelos de interação: [Entrega 5](05_analise_tarefas.md) (`T01`–`T03`, `A01`–`A04`), [Entrega 9](09_modelo_conceitual.md) (`CI01`–`CI03`, `O00`–`O10`, signos `S01`–`S33`), [Entrega 10](10_molic.md) (`M01`–`M03`) e [Entrega 11](11_figma.md) (`F01`–`F06`).
+  - Evolução do protótipo e pesquisa prévia: [Entrega 6](06_prototipacao_papel.md) (walkthrough de 22/10/2026 na v1, commit `bce19c4`, e decisões `E06-D01`–`D06`) e [Entrega 7](07_coleta_dados.md) (critérios éticos e de recrutamento).
 - **Metas de usabilidade relacionadas ([Entrega 8](08_engenharia_usabilidade.md#3-metas-de-usabilidade)):**
   - Qualitativas: `MQ01` (conferência do lote), `MQ02` (estado e continuidade), `MQ03` (origem, relógio do jogo e posição no arquivo) e `MQ04` (seleção, distinção CSV × MP4 e continuidade externa).
   - Quantitativas confirmadas: `MU01` (acesso independente à base após fim natural), `MU02` (compreensão dos três itens temporais em corte do 2º tempo), `MU03` (CSV correto com os dois IDs), `MU04` (MP4 correto e reproduzido), `MU05` (mediana ajustada ≤ 90 s em `UT03`) e `MU06` (mediana de facilidade percebida ≥ 4 em `UT02`, `UT05` e `UT06`).
-  - Quantitativas propostas (a confirmar pela equipe antes de `U01`): `MU07` (taxa de erro de operação) e `MU08` (memorização no retorno após ≥ 7 dias sem uso).
-- **Pergunta qualitativa de falha:** `QA10` (interpretação da falha encenada e decisão de continuidade em `UT07`).
+  - Quantitativas propostas no planejamento, sem confirmação coletiva registrada e não utilizadas como resultados: `MU07` (taxa de erro de operação) e `MU08` (memorização no retorno após ≥ 7 dias sem uso).
+- **Perguntas de avaliação:** `QA01`–`QA09` (observação) e `QA10` (interpretação da falha encenada e decisão de continuidade em `UT07`), conforme a [Entrega 12](12_planejamento_avaliacao.md#b-perguntas-de-avaliação).
 
 ### Passo 2: participantes
 
-Divisão planejada no [plano DECIDE](12_planejamento_avaliacao.md#c-escopo-e-participantes) e apoio operacional em [guia_recrutamento_e_agenda.md](../artifacts/entrega14/guia_recrutamento_e_agenda.md). Participantes proxy, caso necessários, serão justificados antes da sessão e relatados à parte.
+| ID | Perfil documentado | Participação efetiva | Registro |
+|---|---|---|---|
+| `EXP01` | Pessoa externa à equipe; idade e experiência profissional não verificadas por `PRE01`–`PRE06` | Uma exploração guiada em 24/11/2026, duração 06:44 | Um moderador da equipe; sem segundo observador identificado na fonte. Autoria individual da moderação não confirmada pelo registro. |
 
-| ID | Perfil | Critérios que justificam participação | Integrante responsável | Situação |
-|---|---|---|---|---|
-| U01 | P01 (editor profissional de vídeo esportivo) | Adulto externo (≥ 18 anos) com seleção ou recorte de lances de partidas encerradas nos últimos 6 meses em trabalho profissional | Pedro (modera) · Lucas (anota) | ⬜ recrutamento pendente |
-| U02 | P01 (editor profissional de vídeo esportivo) | Mesmo critério de inclusão para P01 | Lucas (modera) · Giovanni (anota) | ⬜ recrutamento pendente |
-| U03 | P03 (criador amador) | Adulto externo (≥ 18 anos) com seleção ou recorte de lances de partidas encerradas nos últimos 6 meses em produção própria ou amadora | Giovanni (modera) · Pedro (anota) | ⬜ recrutamento pendente |
+`U01`–`U03` eram reservas do [plano original](12_planejamento_avaliacao.md#c-escopo-e-participantes) e não representam participantes observados. Não são incluídos em tabelas de resultados. A amostra efetiva é **uma pessoa**, sem comparação entre perfis nem generalização para editores profissionais.
 
 ### Passo 3: consentimento e privacidade
 
 - **Instrumentos:** [consentimento](../instrumentos/entrega12_consentimento.md) e [ficha privada de observação](../instrumentos/entrega12_ficha_observacao.md).
-- **Autorizações separadas:** registrar separadamente o aceite de participação, a autorização para gravar somente a aba do protótipo (sem câmera, áudio nem tela inteira) para conferência interna e a autorização adicional para incluir trechos desidentificados no vídeo ilustrativo restrito.
-- **Anonimização:** todas as notas, sínteses e relatórios públicos usam apenas os códigos `U01`, `U02` e `U03`, sem nomes de pessoas, empresas, canais ou partidas privadas.
-- **Armazenamento, retirada e descarte:** contatos e aceites ficam em pasta institucional privada, separados das notas e gravações, com acesso restrito aos três integrantes. O participante pode pedir retirada dos registros pelo canal do convite com seu código em até 30 dias após sua última sessão, antes da consolidação pública. Gravações brutas são apagadas em até 30 dias da sessão após conferência das notas; contatos são removidos após os retornos; vídeo ilustrativo e demais registros privados são descartados em até 90 dias após o fim da disciplina.
+- **Autorizações separadas (protocolo):** registrar separadamente o aceite de participação, a autorização para gravar somente a aba do protótipo (sem câmera, áudio nem tela inteira) para conferência interna e a autorização adicional para incluir trechos desidentificados no vídeo ilustrativo restrito.
+- **Anonimização:** todas as notas, sínteses e relatórios públicos usam apenas os códigos `EXP01` e `U01`–`U03`, sem nomes de pessoas, empresas, canais ou partidas privadas.
+- **Armazenamento, retirada e descarte:** contatos e aceites ficam em pasta institucional privada, separados das notas e gravações, com acesso restrito aos três integrantes. O participante pode pedir retirada dos registros pelo canal do convite com seu código em até 30 dias após sua última sessão, antes da consolidação pública. Gravações brutas ficam fora do repositório Git e são apagadas em até 30 dias da sessão após conferência das notas; contatos são removidos após os retornos; vídeo ilustrativo e demais registros privados são descartados em até 90 dias após o fim da disciplina.
 
-### Passo 4: teste piloto (`PIL01`)
+#### Conformidade observada na sessão `EXP01` (24/11/2026)
 
-**Data:** *pendente*\
-**Papéis planejados:** Pedro modera, Lucas anota e Giovanni executa o roteiro em computador separado (`PIL01` fora da amostra).\
-**Ficha do piloto:** [ficha_PIL01_piloto.md](../artifacts/entrega14/ficha_PIL01_piloto.md)\
-**O que será validado:** clareza das instruções neutras, duração da sessão (meta de 45 min), estados iniciais e pré-seleções (`UT05` e `UT08`), controle remoto do navegador e impacto sobre o tempo, troca para sala alternativa, recorte de gravação apenas da aba, cronômetro, gabaritos, conferência de downloads e concordância de classificação entre moderador e observador.\
-**Mudanças após piloto:** *a registrar após a execução de `PIL01`.*
+- `[F]` **Registrado no áudio:** consentimento verbal informal na abertura da sessão para uso da **voz** e da **opinião** (*"Eh, tudo bem usar sua voz, usar sua opinião?"* → *"Com certeza."*), conforme a [transcrição higienizada](../assets/14_testes/transcript.md).
+- `[F]` **Anonimização e higienização aplicadas no repositório (25/11/2026):** o nome próprio pronunciado duas vezes no áudio foi integralmente substituído pelo código `EXP01` neste relatório e em [transcript.md](../assets/14_testes/transcript.md). O quadro correspondente ao instante `~06:30` (que capturou uma notificação pessoal externa do sistema operacional) foi removido de [`assets/14_testes/frames_video/`](../assets/14_testes/frames_video/), restando 39 quadros limpos da interface do protótipo. A gravação original não integra o repositório e permanece referenciada apenas como vídeo linkado no YouTube.
+- `[?]` **Limites de comprovação ética no fechamento:** não constam nos registros disponíveis (1) confirmação escrita do [termo de consentimento](../instrumentos/entrega12_consentimento.md) separando participação, gravação e compartilhamento audiovisual; (2) comprovação de que `EXP01` recebeu seu código e prazo de retirada de 30 dias; (3) verificação do controle de acesso ao vídeo externo e do cumprimento dos prazos de descarte. Essas condições não são declaradas cumpridas por esta revisão documental.
+
+### Passo 4: piloto e tarefas previstas
+
+O piloto formal `PIL01` **não foi executado**. A [ficha original](../artifacts/entrega14/ficha_PIL01_piloto.md) permanece arquivada como instrumento não aplicado. A exploração `EXP01` não foi reclassificada como piloto concluído ou sessão estruturada.
 
 ### Passo 5: tarefas
 
-Os cenários abaixo reproduzem a [seção D da Entrega 12](12_planejamento_avaliacao.md#d-lista-de-tarefas-de-avaliação). Preparos privados e gabaritos ficam restritos à equipe em [entrega12_roteiro_observacao.md](../instrumentos/entrega12_roteiro_observacao.md#estados-iniciais-e-gabaritos).
-
-| ID | Cenário neutro apresentado ao participante | Critério de sucesso | Métricas | Ligação com modelo e metas |
-|---|---|---|---|---|
-| UT01 | "Você vai preparar um resumo de duas partidas. Confira quais partidas e tempos estão disponíveis e deixe de fora o segundo tempo de Bayern de Munique contra Real Madrid. Mostre onde conferiu o que ficou no lote e avise antes de iniciar a análise." | Identifica as duas partidas e os quatro tempos na interface e deixa três entradas no lote, removendo apenas `bayern-real-2017-2t`. Limite: 3 min. | Sucesso, erros, ajudas e tempo | A01, O01, M03, F01–F02 · MQ01, MU07 |
-| UT02 | "Agora você recebeu o lote completo. Coloque os vídeos para análise. Enquanto acompanha, diga quais estão esperando, quais estão em andamento e quando terminaram. Quando tudo estiver pronto, abra o material disponível para revisão." | Abre a base de oito candidatos pela primeira vez após a conclusão natural (`MU01`). Registrar separadamente a distinção entre espera, andamento e conclusão (`MQ02`). Limite: 6 min. | Sucesso, compreensão de estados, erros, ajudas, tempo e facilidade (1–5) | T03 → T01, O02/O04, M03, F02–F04 · MQ02, MU01, MU06 |
-| UT03 | "Encontre e abra o gol que ocorreu por volta de 52 minutos de jogo, no segundo tempo de Real Madrid contra Barcelona." | Abre o detalhe de `iniesta` (52:17). Meta de mediana ajustada: ≤ 90 s. Limite: 4 min. | Sucesso, tempo total, esperas técnicas, tempo ajustado, erros e ajudas | T01, O04, M01, F04–F05 · MU05 |
-| UT04 | "Uma colega precisa localizar na gravação o lance aberto. Diga de qual partida e tempo ele veio. Explique o que os tempos mostrados dizem sobre o jogo e sobre onde achar o trecho no arquivo. Você precisaria rever a gravação antes de usar o lance? Por quê?" | Identifica Real Madrid × Barcelona, 2º tempo, e distingue 47:55 no relógio do jogo do intervalo 2:43 a 3:10 no arquivo desse tempo; justifica necessidade de rever o original. Limite: 3 min. | Acerto independente dos 3 itens, justificativa de contexto e ajudas | T01, O05, M01, F05 · MQ03, MU02 |
-| UT05 | "A relação para a edição já tem o gol de Neymar. A pauta mudou. Deixe na relação somente o gol de Suárez e o gol de Vidal. Salve no computador a relação final que você enviaria à produção, com as referências para localizar os trechos. Explique o que o arquivo contém e o que aconteceu com o corte de Neymar." | Retira `neymar`, inclui `suarez` e `vidal`, salva CSV contendo exatamente esses dois IDs com origens corretas e explica que a retirada afeta só a seleção e que o CSV contém referências e links. Limite: 5 min. | Sucesso, conferência do CSV, compreensão, erros, ajudas, tempo e facilidade (1–5) | T01/A04 → T02, O06/O07, M01/M02, F04–F06 · MQ04, MU03, MU06, MU07 |
-| UT06 | "Seu resumo vai incluir o gol de Cristiano Ronaldo aos 76 minutos de jogo, no segundo tempo de Bayern de Munique contra Real Madrid. Salve o vídeo desse lance e abra o arquivo no computador." | Salva `ronaldo-2.mp4` e confirma reprodução local; explica separadamente o conteúdo do vídeo e onde continuaria montagem e aprovação. Limite: 4 min. | Sucesso, conferência e reprodução do MP4, compreensão, erros, ajudas, tempo e facilidade (1–5) | T01/A04 → T02, O07, M01/M02, F05–F06 · MQ04, MU04, MU06, MU07 |
-| UT07 | "Parte do lote já está disponível, mas uma gravação ficou incompleta. Descubra qual foi e o que isso significa para os demais vídeos. Decida como prosseguir com a revisão sem recomeçar o lote inteiro." | Identifica o 1º tempo de Bayern × Real Madrid como incompleto, reconhece os demais resultados disponíveis e deixa pendente ou solicita nova tentativa apenas desse vídeo. Limite: 5 min. | Interpretação qualitativa, ação escolhida, preservação dos demais vídeos e ajudas | T03, O03, M03, F03/F04 · QA10 |
-| UT08 | "Você voltou para preparar o material de outra rodada. Primeiro, coloque o lote completo para análise e, depois de concluído, abra o material para revisão. Em seguida, encontre e abra o gol de Cristiano Ronaldo por volta de 46 minutos de jogo, no segundo tempo de Bayern de Munique contra Real Madrid. Por fim, na relação que já contém o pênalti perdido de Vidal, deixe somente a defesa do Barcelona e o gol de Iniesta. Salve a relação final de referências e explique o que ficou no arquivo." *(Ler uma parte por vez com o estado inicial previsto.)* | Cumpre as três partes de forma independente: abre a base após fim natural, abre `ronaldo-1` e salva CSV com `bravo` e `iniesta` sem `vidal-penalti`, com origens corretas e compreensão do conteúdo. Limites: 6 min, 4 min e 5 min. | Sucesso nas 3 partes, tempo de localização, conferência do CSV, erros e ajudas | Retorno T03 → T01, O02/O04/O06/O07, M03/M01, F02–F06 · MU08 |
+Os oito cenários, critérios de sucesso e gabaritos definidos antes da sessão estão preservados na [Entrega 12, seção D](12_planejamento_avaliacao.md#d-lista-de-tarefas-de-avaliação) e no [roteiro](../instrumentos/entrega12_roteiro_observacao.md). Não foram lidos literalmente nem cronometrados em `EXP01`. A tabela da seção C relaciona o que foi observado a cada tarefa e identifica o que não foi executado.
 
 ### Passo 6: protocolo do moderador
 
-O roteiro completo de fala e preparo está em [entrega12_roteiro_observacao.md](../instrumentos/entrega12_roteiro_observacao.md). Em todas as sessões:
+O protocolo previa instruções neutras, consentimento separado, pré-teste, observação sem ensinar o caminho, conferência dos arquivos e escala pós-tarefa. A execução foi uma conversa guiada. A auditoria abaixo preserva os desvios como limites da evidência, sem reconstituir retrospectivamente tempos ou sucessos independentes.
 
-1. Receber o participante, apresentar moderador e observador e explicar que a interface está em avaliação, não a pessoa.
-2. Apresentar o [termo de consentimento](../instrumentos/entrega12_consentimento.md) e registrar separadamente participação, gravação da aba e uso de trechos no vídeo.
-3. Aplicar o pré-teste mínimo ([entrega12_questionarios.md](../instrumentos/entrega12_questionarios.md#pré-teste)), sem revelar navegação, significado dos tempos ou diferença entre CSV e MP4.
-4. Ler cada cenário neutro literalmente e aguardar confirmação de entendimento antes de iniciar o cronômetro.
-5. Observar sem ensinar o caminho; registrar pedidos de ajuda e intervenções separadamente.
-6. Acolher comentários em voz alta de forma opcional e consistente, sem interromper nem induzir respostas durante a tarefa.
-7. Após `UT02`, `UT05` e `UT06`, aplicar a pergunta de facilidade percebida (escala 1 a 5) e registrar o motivo, inclusive após falha ou ajuda.
-8. Conferir os arquivos baixados com a gravação pausada, aplicar as perguntas pós-teste e retomar dúvidas anotadas.
-9. Encerrar, informar código e prazo de retirada (30 dias), convidar para o retorno após ≥ 7 dias sem uso e salvar as fichas pseudonimizadas na pasta privada.
+#### Auditoria de aderência ao protocolo na sessão exploratória `EXP01` (24/11/2026)
+
+| Etapa do protocolo | Aderência em `EXP01` | Evidência no áudio e nos quadros |
+|---|---|---|
+| 1. Explicar que a interface é avaliada, não a pessoa | Não aplicada no áudio | O moderador explicou o propósito do produto e pediu para *"testar, dar uma brincada e trazer opiniões"*. |
+| 2. Consentimento separado (participação, gravação da aba, vídeo) | Parcial | Autorização verbal informal apenas para voz e opinião; sem registro verbal sobre gravação de tela ou vídeo ilustrativo. |
+| 3. Pré-teste (`PRE01`–`PRE06`) | Não aplicada | Não há coleta de idade, experiência recente ou perfil (`P01`/`P03`) na sessão. |
+| 4. Leitura literal de cenários neutros (`UT01`–`UT07`) | Não aplicada | Formato aberto sem tarefas delimitadas; `EXP01` perguntou *"E aí, meu objetivo seria o quê?"* ([frame_001.jpg](../assets/14_testes/frames_video/frame_001.jpg)). |
+| 5. Observar sem ensinar o caminho nem induzir opinião | Desvio relevante | O moderador explicou exemplos/demos, apresentou metadados/CSV, apontou o alternador de visualizações, pediu para clicar e abrir `F05` ([frame_037.jpg](../assets/14_testes/frames_video/frame_037.jpg)), apresentou filtros e emitiu juízo pessoal (*"A tela de análise é a minha favorita"*). |
+| 6. *Think aloud* consistente | Informal (funcional) | Embora sem instrução formal, `EXP01` verbalizou expectativas, dúvidas e elogios espontaneamente ao longo de toda a sessão. |
+| 7. Escala pós-tarefa de facilidade (1–5) em `UT02`, `UT05`, `UT06` | Não aplicada | Sem notas numéricas para `MU06` nesta sessão. |
+| 8. Conferência de arquivos locais + pós-teste estruturado | Parcial | `F06` foi aberto duas vezes ([frame_019.jpg](../assets/14_testes/frames_video/frame_019.jpg), [frame_027.jpg](../assets/14_testes/frames_video/frame_027.jpg)), mas não houve conferência de CSV nem reprodução local de MP4; feedback geral foi colhido de forma conversacional. |
+| 9. Encerramento com código, retirada (30 dias) e retorno | Parcial | Encerramento cordial breve (*"Beleza. Então é isso. Obrigadão"*), sem leitura de código, prazo de retirada ou convite de retorno no áudio. |
 
 ### Recomendações de Felipe Melo adotadas
 
-Recomendações de testes remotos extraídas da palestra de Felipe Melo e incorporadas ao [roteiro de observação](../instrumentos/entrega12_roteiro_observacao.md#preparar-a-sessão) (avaliação do funcionamento real pendente da execução do piloto e das sessões):
+Recomendações de testes remotos extraídas da palestra de Felipe Melo e incorporadas ao [roteiro de observação](../instrumentos/entrega12_roteiro_observacao.md#preparar-a-sessão), confrontadas com o observado na sessão exploratória `EXP01` (24/11/2026):
 
-| Recomendação adotada no protocolo | Onde está operacionalizada | Como funcionou no piloto e nas sessões |
+| Recomendação adotada no protocolo | Onde está operacionalizada | Evidência efetiva em `EXP01` |
 |---|---|---|
-| Enviar instruções técnicas prévias antes da sessão | Convite em [guia_recrutamento_e_agenda.md](../artifacts/entrega14/guia_recrutamento_e_agenda.md) e roteiro | *Pendente de execução* |
-| Abrir e testar a sala, conexão e equipamentos 15 min antes | Passo de preparo em `entrega12_roteiro_observacao.md` | *Pendente de execução* |
-| Usar ambiente limpo (perfil temporário, sem notificações, pasta vazia) | Passo 2 do preparo em `entrega12_roteiro_observacao.md` | *Pendente de execução* |
-| Manter sala virtual alternativa e canal de contato para contingência | Passo 1 e regra de falha em `entrega12_roteiro_observacao.md` | *Pendente de execução* |
-| Testar compartilhamento da janela, controle remoto e recorte de gravação no piloto | [ficha_PIL01_piloto.md](../artifacts/entrega14/ficha_PIL01_piloto.md) | *Pendente de execução* |
-| Pausar compartilhamento ao preparar o estado inicial entre tarefas | Passo 4 do preparo em `entrega12_roteiro_observacao.md` | *Pendente de execução* |
-| Definir regra prévia para interrupções externas e reagendamento | Regra de tentativa não avaliável em `entrega12_roteiro_observacao.md` | *Pendente de execução* |
+| Enviar instruções técnicas prévias antes da sessão | Convite em [guia_recrutamento_e_agenda.md](../artifacts/entrega14/guia_recrutamento_e_agenda.md) e roteiro | Não documentado na sessão `EXP01`; envio prévio não comprovado. |
+| Abrir e testar a sala, conexão e equipamentos 15 min antes | Passo de preparo em `entrega12_roteiro_observacao.md` | Em `EXP01`, o protótipo iniciou já carregado em `F01` (`1890×988 px`) com áudio inteligível e sem quedas durante `06:44`; preparo prévio de 15 min não constou em ficha. |
+| Usar ambiente limpo (perfil temporário, sem notificações, pasta vazia) | Passo 2 do preparo em `entrega12_roteiro_observacao.md` | **Não atendida integralmente em `EXP01`:** por volta de `~06:30`, uma notificação externa de navegador/mensageiro web surgiu no canto inferior direito da captura (quadro posteriormente removido por privacidade), comprovando risco de distração e exposição de dados pessoais. O quadro com a notificação foi excluído das evidências públicas; o preparo do ambiente é uma lição para outra rodada. |
+| Manter sala virtual alternativa e canal de contato para contingência | Passo 1 e regra de falha em `entrega12_roteiro_observacao.md` | Não precisou ser acionada em `EXP01` (sem falha de conexão); troca de sala não testada. |
+| Testar compartilhamento da janela, controle remoto e recorte de gravação no piloto | [ficha_PIL01_piloto.md](../artifacts/entrega14/ficha_PIL01_piloto.md) | Em `EXP01`, a captura recortou a área da página (`1890×988 px`) sem câmera nem barra de abas, mas gravou áudio com nome próprio e capturou uma notificação do sistema sobreposta à janela. O recorte não atendeu integralmente ao protocolo planejado. |
+| Pausar compartilhamento ao preparar o estado inicial entre tarefas | Passo 4 do preparo em `entrega12_roteiro_observacao.md` | Não exercitada em `EXP01` (navegação contínua sem preparo de `UT01`–`UT08`); não validada nesta rodada. |
+| Definir regra prévia para interrupções externas e reagendamento | Regra de tentativa não avaliável em `entrega12_roteiro_observacao.md` | Não houve queda de rede ou interrupção externa de conexão em `EXP01`; contingência não precisou ser aplicada. |
 
 ## C. Resultados por participante
 
-*Pendente: preencher após a conclusão das sessões com `U01`, `U02` e `U03`, usando apenas dados desidentificados.*
+### EXP01: única sessão exploratória (24/11/2026)
 
-### U01: P01 (editor profissional de vídeo esportivo)
+**Data e metadados da sessão:** `24/11/2026` às `14:59` · duração total `06:44` (`404,1 s`) · resolução `1890×988 px` (30 fps) · URL confirmada `https://ihc-11.p4cs.com.br/` (commit `7405221`, [frame_033.jpg](../assets/14_testes/frames_video/frame_033.jpg)) · registro audiovisual mantido como **vídeo linkado no YouTube**.\
+**Moderação e registro:** 1 moderador da Equipe 16 (sem segundo observador identificado no áudio; autoria individual não confirmada na fonte) · fontes analisadas: [transcript.md](../assets/14_testes/transcript.md) (transcrição higienizada) e 39 quadros limpos extraídos em grade aproximada de ~10 s ([`frames_video/`](../assets/14_testes/frames_video/)).
 
-**Moderação e registro:** Pedro (modera) · Lucas (anota) · *sessão pendente*
+#### Linha do tempo da sessão `EXP01` (cruzamento de áudio e quadros)
 
-| Tarefa | Grau de sucesso | Erros | Tipos de erro ou dificuldade | Ajudas | Tempo (total / ajustado) | Satisfação (1–5) | Evidência e observação |
-|---|---|---:|---|---:|---|---|---|
-| UT01 | *Pendente* | | | | | não se aplica | |
-| UT02 | *Pendente* | | | | | *Pendente* | |
-| UT03 | *Pendente* | | | | | não se aplica | |
-| UT04 | *Pendente* | | | | | não se aplica | |
-| UT05 | *Pendente* | | | | | *Pendente* | |
-| UT06 | *Pendente* | | | | | *Pendente* | |
-| UT07 | *Pendente* | | | | | não se aplica | |
-| UT08 (retorno) | *Pendente* | | | | | não se aplica | |
+> *Nota metodológica:* os intervalos abaixo são aproximações derivadas da grade de quadros distribuídos ao longo de `06:44` (~10 s por quadro) cruzada com a transcrição higienizada do áudio. Não representam tempos cronometrados de tarefas padronizadas (`UT01`–`UT08`).
 
-**Registro da sessão:** *pendente (anotações privadas / gravação autorizada)*\
-**Resposta pós-teste:** *pendente*
+| Intervalo aprox. | Quadros | Tela / estado | Comportamento observado, interações e evidências no áudio |
+|---|---|---|---|
+| `~00:00–01:10` | [frame_001.jpg](../assets/14_testes/frames_video/frame_001.jpg)–[frame_007.jpg](../assets/14_testes/frames_video/frame_007.jpg) | `F01` (`Enviar`) | Moderador contextualiza o sistema e colhe consentimento verbal (voz e opinião). Diante da caixa central desabilitada *"Envio de vídeos indisponível nesta demonstração"*, `EXP01` pergunta *"E aí, meu objetivo seria o quê?"*. Rola a página para alcançar o link secundário `ou use os 4 tempos de exemplo · 2 partidas do SoccerNet` e clica ([frame_007.jpg](../assets/14_testes/frames_video/frame_007.jpg)). |
+| `~01:20–02:10` | [frame_008.jpg](../assets/14_testes/frames_video/frame_008.jpg)–[frame_013.jpg](../assets/14_testes/frames_video/frame_013.jpg) | `F02` (`Vídeos selecionados`) | Confere os 4 cartões (`1_224p.mkv` e `2_224p.mkv` repetidos para as duas partidas) e confirma se os exemplos simulam upload prévio (*"é como se eu tivesse subido esses caras aqui"*). Ao passar o ponteiro sobre o 1º cartão ([frame_008.jpg](../assets/14_testes/frames_video/frame_008.jpg)), o botão `×` oculto aparece. Lê os percursos `Percurso normal`, `Falha em um vídeo` e `Vídeo sem lances` ([frame_012.jpg](../assets/14_testes/frames_video/frame_012.jpg)) com esclarecimento do moderador e clica em `Iniciar` com `Percurso normal` ([frame_013.jpg](../assets/14_testes/frames_video/frame_013.jpg)). |
+| `~02:20–02:30` | [frame_014.jpg](../assets/14_testes/frames_video/frame_014.jpg)–[frame_015.jpg](../assets/14_testes/frames_video/frame_015.jpg) | `F03` (`Análise`) | Acompanha o início da simulação (2% → 13%, `2 processando · 2 aguardando`). Ao surgir `2 lances prontos` e ativar `Ver resultados prontos (2) →` ([frame_015.jpg](../assets/14_testes/frames_video/frame_015.jpg)), nota imediatamente (*"Ele tá apontando que tem dois lances prontos"*) e clica **antes da conclusão natural**. |
+| `~02:40–03:20` | [frame_016.jpg](../assets/14_testes/frames_video/frame_016.jpg)–[frame_020.jpg](../assets/14_testes/frames_video/frame_020.jpg) | `F04-A` → `F06` | Chega à base com 2 lances (`Gol de Luis Suárez`, `Defesa do Barcelona`); o aviso escuro temporário *"A análise continua nos outros vídeos..."* cobre quase toda a 1ª linha ([frame_016.jpg](../assets/14_testes/frames_video/frame_016.jpg)). Marca `Gol de Luis Suárez` (`✓ Selecionado`, [frame_017.jpg](../assets/14_testes/frames_video/frame_017.jpg)) e clica em `Obter seleção (1)` ([frame_018.jpg](../assets/14_testes/frames_video/frame_018.jpg)). Em `F06` ([frame_019.jpg](../assets/14_testes/frames_video/frame_019.jpg)), entende o download do corte (`suarez.mp4`) e ouve do moderador a explicação sobre `Lista dos cortes · CSV` (*timestamps*/metadados). Não realiza nem confere download em disco. |
+| `~03:30–04:10` | [frame_021.jpg](../assets/14_testes/frames_video/frame_021.jpg)–[frame_025.jpg](../assets/14_testes/frames_video/frame_025.jpg) | `F04-A` → `F02` → `F03` → `F04-A` | Ao fechar `F06`, o painel indica `✓ Análise concluída · 4 de 4 vídeos prontos`, mas a lista segue mostrando `2 Highlights em 1 Partida` sob o botão `Mostrar 6 lances novos na lista` ([frame_021.jpg](../assets/14_testes/frames_video/frame_021.jpg)), não clicado. `EXP01` navega pela barra lateral para `Vídeos` ([frame_022.jpg](../assets/14_testes/frames_video/frame_022.jpg)) e `Análise` ([frame_023.jpg](../assets/14_testes/frames_video/frame_023.jpg)–[frame_024.jpg](../assets/14_testes/frames_video/frame_024.jpg)), vendo os `8 lances prontos`; moderador elogia a tela (*"é a minha favorita"*). De volta a `Highlights` ([frame_025.jpg](../assets/14_testes/frames_video/frame_025.jpg)), todos os 8 lances aparecem com `Gol de Luis Suárez` preservado como selecionado. |
+| `~04:20–04:30` | [frame_026.jpg](../assets/14_testes/frames_video/frame_026.jpg)–[frame_027.jpg](../assets/14_testes/frames_video/frame_027.jpg) | `F04-C` (`Mosaico`) → `F06` | Sob indicação do moderador (*"você pode clicar aqui também para ter outro tipo de visualização"*), alterna para `Mosaico C` ([frame_026.jpg](../assets/14_testes/frames_video/frame_026.jpg)). Compara o formato de faixas horizontais por categoria a plataformas de *streaming* (*"mais próximo do que a gente tem nos streams"*). Seleciona `Gol de Cristiano Ronaldo` e abre `Obter 2 lances selecionados` (`suarez.mp4` + `ronaldo-1.mp4`, `3,9 MB`, [frame_027.jpg](../assets/14_testes/frames_video/frame_027.jpg)). |
+| `~04:40–05:50` | [frame_028.jpg](../assets/14_testes/frames_video/frame_028.jpg)–[frame_035.jpg](../assets/14_testes/frames_video/frame_035.jpg) | `F01` → `F02` → `F03` → `F02` → `F03` | Elogia fluxo, cores e clareza. Ao recarregar os exemplos em `F01`/`F02` e iniciar nova análise, estranha o reset dos highlights anteriores ([frame_028.jpg](../assets/14_testes/frames_video/frame_028.jpg)–[frame_032.jpg](../assets/14_testes/frames_video/frame_032.jpg)); moderador esclarece o comportamento simulado. Em [frame_030.jpg](../assets/14_testes/frames_video/frame_030.jpg), passa o cursor sobre o segmento `3` para ver `Bayern de Munique 1 x 2 Real Madrid · 1º tempo`. Ao voltar a `Vídeos` durante a análise ([frame_033.jpg](../assets/14_testes/frames_video/frame_033.jpg)) e passar o cursor em `Reiniciar análise` ([frame_034.jpg](../assets/14_testes/frames_video/frame_034.jpg)), **identifica espontaneamente a falta de botão para cancelar/parar um vídeo enviado por engano** (*"não consigo stopar a análise para ele"*). |
+| `~06:00–06:44` | [frame_036.jpg](../assets/14_testes/frames_video/frame_036.jpg)–[frame_038.jpg](../assets/14_testes/frames_video/frame_038.jpg), [frame_040.jpg](../assets/14_testes/frames_video/frame_040.jpg) | `F04-B` → `F04-A`/`F05` → Filtros | Visualiza `Trilhas B` ([frame_036.jpg](../assets/14_testes/frames_video/frame_036.jpg)) e elogia fortemente a linha do tempo (*"Essa visualização é muito boa por tempo aqui. Da hora que você consegue ver o timeline"*), passando o ponteiro no seletor de ícones sem rótulo. Só após pedido direto do moderador (*"Volta aqui nessa daqui. Clica aqui também"*) expande o detalhe `F05` em Lista A ([frame_037.jpg](../assets/14_testes/frames_video/frame_037.jpg): `Gol de Luis Suárez`; [frame_038.jpg](../assets/14_testes/frames_video/frame_038.jpg): `Gol de Neymar`), descobrindo os dados extras e o link `Baixar este vídeo, MP4 (2,1 MB)` e comentando que abrir um fecha o outro. Por fim, o moderador demonstra os filtros (`Gol 2` → `Todos 3` em [frame_040.jpg](../assets/14_testes/frames_video/frame_040.jpg)), enquanto `Mostrar 5 lances novos na lista` permanece sem ser acionado mesmo com `4 de 4 vídeos prontos`. |
 
-### U02: P01 (editor profissional de vídeo esportivo)
-
-**Moderação e registro:** Lucas (modera) · Giovanni (anota) · *sessão pendente*
+#### Mapeamento de `EXP01` sobre o conjunto de tarefas `UT01`–`UT08`
 
 | Tarefa | Grau de sucesso | Erros | Tipos de erro ou dificuldade | Ajudas | Tempo (total / ajustado) | Satisfação (1–5) | Evidência e observação |
 |---|---|---:|---|---:|---|---|---|
-| UT01 | *Pendente* | | | | | não se aplica | |
-| UT02 | *Pendente* | | | | | *Pendente* | |
-| UT03 | *Pendente* | | | | | não se aplica | |
-| UT04 | *Pendente* | | | | | não se aplica | |
-| UT05 | *Pendente* | | | | | *Pendente* | |
-| UT06 | *Pendente* | | | | | *Pendente* | |
-| UT07 | *Pendente* | | | | | não se aplica | |
-| UT08 (retorno) | *Pendente* | | | | | não se aplica | |
+| `UT01` | Não avaliável (cenário não aplicado; fluxo parcial com orientação) | — | Dúvida inicial sobre o objetivo em `F01` e necessidade de confirmar que os 4 vídeos simulavam upload; remoção de `bayern-real-2017-2t` não foi solicitada | ≥ 2 (explicação do upload simulado e dos 4 exemplos) | Não cronometrado (`~00:00–02:10` no fluxo livre) | não se aplica | Viu os 4 cartões em [frame_008.jpg](../assets/14_testes/frames_video/frame_008.jpg)–[frame_013.jpg](../assets/14_testes/frames_video/frame_013.jpg); botão `×` só apareceu no hover do 1º cartão. |
+| `UT02` | Não avaliável para `MU01` (acesso antecipado + condução guiada) | — | Acessou `Ver resultados prontos (2) →` em 13% ([frame_015.jpg](../assets/14_testes/frames_video/frame_015.jpg)) antes da conclusão natural; ao concluir o lote em segundo plano, não acionou `Mostrar 6 lances novos na lista` ([frame_021.jpg](../assets/14_testes/frames_video/frame_021.jpg)) | ≥ 1 (explicação sobre percursos de demo e sobre a tela de análise) | Não cronometrado (`~02:10–04:10` no fluxo livre) | Não aplicada no áudio *(qualitativo positivo)* | Entendeu progresso em tempo real (2 → 8 lances) e elogiou o feedback, mas o critério estrito de `MU01` (primeiro acesso apenas após conclusão natural) não foi testado sob cenário neutro. |
+| `UT03` | Não executada | — | — | — | Não executada | não se aplica | Busca cronometrada por `iniesta` (52:17) não foi solicitada na sessão. |
+| `UT04` | Não executada | — | — | — | Não executada | não se aplica | Interpretação dos 3 itens temporais em `bravo` (2º tempo, `47:55` vs. `2:43–3:10`) não foi perguntada. |
+| `UT05` | Não avaliável para `MU03` (cenário não aplicado; sem conferência de CSV) | — | Não descobriu `Lista dos cortes · CSV` autonomamente; o moderador apresentou e explicou os metadados/timestamps ([frame_019.jpg](../assets/14_testes/frames_video/frame_019.jpg)) | ≥ 1 (explicação do moderador sobre metadados/CSV) | Não cronometrado | Não aplicada no áudio | Selecionou `Gol de Luis Suárez` e `Gol de Cristiano Ronaldo` e abriu `F06` ([frame_027.jpg](../assets/14_testes/frames_video/frame_027.jpg)), mas não executou retirada de `neymar` nem salvou/conferiu `cortes_selecionados.csv`. |
+| `UT06` | Não avaliável para `MU04` (cenário não aplicado; sem reprodução local de MP4) | — | Compreendeu o download do corte via `Obter seleção`, mas **não descobriu sozinho** que clicar na linha expande `F05` e oferece `Baixar este vídeo, MP4 (2,1 MB)` ([frame_037.jpg](../assets/14_testes/frames_video/frame_037.jpg)) | ≥ 1 (moderador pediu para clicar na linha e abrir o detalhe) | Não cronometrado | Não aplicada no áudio | Não foi solicitado `ronaldo-2.mp4` nem confirmada reprodução local ou explicação formal sobre montagem/aprovação externa. |
+| `UT07` | Não executada | — | Leu os rótulos `Falha em um vídeo` e `Vídeo sem lances` em `F02` ([frame_012.jpg](../assets/14_testes/frames_video/frame_012.jpg)), mas rodou apenas `Percurso normal` | — | Não executada | não se aplica | Cenário de falha encenada (`QA10`) não foi exercitado; em contrapartida, `EXP01` levantou espontaneamente falha de controle ao não conseguir cancelar análise em andamento (`AU01`). |
+| `UT08` (retorno) | Não executada | — | — | — | Não executada | não se aplica | Retorno após ≥ 7 dias não realizado nesta entrega. |
 
-**Registro da sessão:** *pendente (anotações privadas / gravação autorizada)*\
-**Resposta pós-teste:** *pendente*
-
-### U03: P03 (criador amador)
-
-**Moderação e registro:** Giovanni (modera) · Pedro (anota) · *sessão pendente*
-
-| Tarefa | Grau de sucesso | Erros | Tipos de erro ou dificuldade | Ajudas | Tempo (total / ajustado) | Satisfação (1–5) | Evidência e observação |
-|---|---|---:|---|---:|---|---|---|
-| UT01 | *Pendente* | | | | | não se aplica | |
-| UT02 | *Pendente* | | | | | *Pendente* | |
-| UT03 | *Pendente* | | | | | não se aplica | |
-| UT04 | *Pendente* | | | | | não se aplica | |
-| UT05 | *Pendente* | | | | | *Pendente* | |
-| UT06 | *Pendente* | | | | | *Pendente* | |
-| UT07 | *Pendente* | | | | | não se aplica | |
-| UT08 (retorno) | *Pendente* | | | | | não se aplica | |
-
-**Registro da sessão:** *pendente (anotações privadas / gravação autorizada)*\
-**Resposta pós-teste:** *pendente*
+**Registro da sessão:** vídeo linkado no YouTube (`24/11/2026`, `06:44`), [transcrição higienizada](../assets/14_testes/transcript.md) e 39 quadros limpos em [`assets/14_testes/frames_video/`](../assets/14_testes/frames_video/).\
+**Resposta pós-teste (informal, integrada à conversa):** nota numérica geral (1–5) não foi solicitada. Qualitativamente, `EXP01` avaliou positivamente a clareza do fluxo (*"gostei do fluxo de tela. Sim. Bem claro, fácil de navegar"*), a estética (*"as cores também, bacana"*, *"bonitinho, bem legal a interface"*), a proposta dos exemplos, o feedback em tempo real, o `Mosaico C` (comparado a *streams*) e especialmente a visualização em `Trilhas B` (*"Essa visualização é muito boa por tempo aqui. Da hora que você consegue ver o timeline"*). Apontou como principal necessidade de melhoria um **botão para cancelar/parar uma análise em andamento** caso um vídeo tenha sido enviado por engano, e concordou com a necessidade de melhorar a indicação visual de que cada item da lista abre mais detalhes e download direto.
 
 ## D. Consolidação por tarefa e perfil
 
-*Pendente: preencher após a coleta.* Em `n/N`, registrar sucessos independentes sobre tentativas avaliáveis (incluindo ajuda, parcial, falha e abandono no denominador). Quando uma tarefa verifica mais de uma meta (como `MQ02` e `MU01` em `UT02`, ou `MQ04` e `MU03`/`MU04` em `UT05`/`UT06`), registrar cada meta separadamente, conforme o [plano de análise da Entrega 12](12_planejamento_avaliacao.md#f-plano-de-análise). Para `P03`, a tentativa única planejada fornece uma observação por tarefa; quando houver tempo ou nota, a mediana coincide com esse valor e será identificada como observação única. Eventuais participantes proxy entram em tabela separada.
+Não há tentativas estruturadas avaliáveis de `P01` ou `P03`. Portanto, não se calculam percentuais de sucesso, medianas de tempo ou satisfação. Ausência de medição não significa taxa de sucesso de 0% nem meta atingida. A tabela por tarefa de `EXP01` na seção C é o registro individual efetivo.
 
-| Tarefa | Perfil | Sucesso independente (n/N e %) | Tempo típico (bruto / ajustado) | Erros recorrentes | Satisfação (mediana) | Metas atendidas? (por meta) | Problemas prioritários |
-|---|---|---:|---|---|---|---|---|
-| UT01 | P01 | *Pendente* | | | não se aplica | MQ01: *pendente* · MU07: *pendente* | |
-| UT01 | P03 | *Pendente* | | | não se aplica | MQ01: *pendente* · MU07: *pendente* | |
-| UT02 | P01 | *Pendente* | | | *Pendente* | MQ02: *pendente* · MU01: *pendente* · MU06: *pendente* | |
-| UT02 | P03 | *Pendente* | | | *Pendente* | MQ02: *pendente* · MU01: *pendente* · MU06: *pendente* | |
-| UT03 | P01 | *Pendente* | | | não se aplica | MU05: *pendente* | |
-| UT03 | P03 | *Pendente* | | | não se aplica | MU05: *pendente* | |
-| UT04 | P01 | *Pendente* | | | não se aplica | MQ03: *pendente* · MU02: *pendente* | |
-| UT04 | P03 | *Pendente* | | | não se aplica | MQ03: *pendente* · MU02: *pendente* | |
-| UT05 | P01 | *Pendente* | | | *Pendente* | MQ04: *pendente* · MU03: *pendente* · MU06: *pendente* · MU07: *pendente* | |
-| UT05 | P03 | *Pendente* | | | *Pendente* | MQ04: *pendente* · MU03: *pendente* · MU06: *pendente* · MU07: *pendente* | |
-| UT06 | P01 | *Pendente* | | | *Pendente* | MQ04: *pendente* · MU04: *pendente* · MU06: *pendente* · MU07: *pendente* | |
-| UT06 | P03 | *Pendente* | | | *Pendente* | MQ04: *pendente* · MU04: *pendente* · MU06: *pendente* · MU07: *pendente* | |
-| UT07 | P01 | *Pendente* | | | não se aplica | QA10: qualitativa | |
-| UT07 | P03 | *Pendente* | | | não se aplica | QA10: qualitativa | |
-| UT08 | P01 | *Pendente* | | | não se aplica | MU08: *pendente* | |
-| UT08 | P03 | *Pendente* | | | não se aplica | MU08: *pendente* | |
+| Metas | Situação final | Motivo |
+|---|---|---|
+| `MQ01`–`MQ04` | Indícios qualitativos, sem verificação formal por perfil | Exploração guiada e perfil não verificado. |
+| `MU01`–`MU02` | Não avaliadas | Sem cenário neutro e sem respostas independentes aos três itens temporais. |
+| `MU03`–`MU04` | Não avaliadas | Sem conferência de CSV salvo ou reprodução de MP4 em disco. |
+| `MU05` | Não avaliada | Sem cronometragem de localização padronizada. |
+| `MU06` | Não avaliada | Escala pós-tarefa 1–5 não aplicada; elogios são evidência qualitativa. |
+| `MU07`–`MU08` | Propostas não avaliadas | Sem classificação padronizada de erros ou retorno após sete dias. |
+| `QA10` | Não avaliada por observação | Estado de falha encenada não exercitado em `EXP01`; a inspeção oferece evidências próprias. |
+
+### Síntese exploratória de `EXP01` (sessão guiada)
+
+| Fluxo observado | Autonomia em `EXP01` | Sinal qualitativo para as metas | Achados associados |
+|---|---|---|---|
+| Entrada e conferência do lote (`F01`–`F02`) | Parcial (com esclarecimento do moderador) | Alerta para `MQ01`: dependeu de explicação sobre exemplos e cenários; hierarquia de `F01` exige rolagem até o link dos exemplos. | `AU07` |
+| Análise em tempo real e transição à base (`F03` → `F04`) | Concluído com acesso antecipado | Alerta para `MQ02`/`MU01`: clicou em `Ver resultados prontos (2) →` em 13%, não acionou `Mostrar n lances novos na lista` após conclusão e identificou ausência de cancelar análise. | `AU01`, `AU04`, `AU05`, `AU08` |
+| Visualizações alternativas (`F04-B` Trilhas e `F04-C` Mosaico) | Conduzido pelo moderador (baixa descoberta inicial) | Alerta para `O04`/`MU05` na descoberta, mas **alta aprovação qualitativa** após descoberta (`Trilhas B` elogiada pela linha do tempo; `Mosaico C` associado a *streams*). | `AU03` |
+| Expansão do detalhe e metadados (`F04-A` → `F05`) | **Não descoberto autonomamente** | Alerta crítico para `MQ03`/`MU02`/`O05`: `EXP01` não percebeu que as linhas da Lista A abrem o detalhe com player, tempos no arquivo e download direto de MP4. | `AU02`, `AU06`, `AU09` |
+| Seleção, diálogo `Obter seleção` e filtros (`F04` → `F06`) | Seleção autônoma; CSV e filtros apresentados pelo moderador | Sinal misto para `MQ04`/`MU03`–`MU04`: compreendeu prontamente seleção + download de MP4 após abrir `F06`, mas dependeu de explicação para entender o CSV e não conferiu arquivos em disco. | `AU03` |
 
 ## E. Achados e recomendações
 
-*Pendente: consolidar após análise das fichas de `U01`–`U03`.*
+Os nove achados abaixo (`AU01`–`AU09`) consolidam as evidências diretas da sessão exploratória `EXP01` (vídeo linkado no YouTube, [transcript.md](../assets/14_testes/transcript.md) e quadros limpos em [`assets/14_testes/frames_video/`](../assets/14_testes/frames_video/)) na versão congelada `7405221`.
 
 | ID | Achado | Evidência (quantitativa e qualitativa) | Impacto | Recomendação | Artefatos a revisar |
 |---|---|---|---|---|---|
-| *Pendente* | *A preencher após coleta* | | | | |
+| `AU01` | **Ausência de controle para cancelar/parar uma análise em andamento ou remover vídeo enviado por engano** | `1/1` sessão exploratória (`EXP01`, descoberta espontânea). `EXP01` relatou: *"se eu lancei um vídeo que não era para subir, aí eu quero tirar e ele já tá em análise, eu não consigo stopar a análise para ele"*. Em [frame_033.jpg](../assets/14_testes/frames_video/frame_033.jpg) (`F02`), os cartões em `Processando`/`Aguardando` não oferecem remoção; em [frame_034.jpg](../assets/14_testes/frames_video/frame_034.jpg) (`F03`), só existe `Reiniciar análise`. O moderador validou: *"tem que ter esse botão de cancelar. Isso realmente bem pontuado."* | **Alto / Crítico** (viola controle e liberdade do usuário; em gravações reais de ~45 min, impede abortar erro de upload sem recomeçar o lote inteiro) | Incluir ação explícita **"Cancelar análise"** (individual por vídeo em fila/processamento e para o lote) com confirmação simples (`AL`) e remoção segura preservando os demais vídeos. | Protótipo (`F02`, `F03`), [Entrega 10](10_molic.md#m03--enviar-vídeos-acompanhar-análises-e-consultar-resultados) (`M03`, hoje fora de escopo), [Entrega 9](09_modelo_conceitual.md#4-esquema-conceitual-de-signos) (`S06`, `S09`, `S14`, `O02`/`O03`) e [RASTREABILIDADE.md](../RASTREABILIDADE.md) |
+| `AU02` | **Baixa descobribilidade (*affordance*) de que os itens da Lista A são clicáveis para expandir o detalhe (`F05`) e baixar o MP4 diretamente** | `1/1` sessão exploratória (`EXP01`, falha de descoberta independente). Durante toda a exploração inicial de `F04-A` ([frame_016.jpg](../assets/14_testes/frames_video/frame_016.jpg)–[frame_025.jpg](../assets/14_testes/frames_video/frame_025.jpg)), `EXP01` clicou apenas em `+ Selecionar` e `Obter seleção`. Só viu player, intervalo no arquivo e `Baixar este vídeo, MP4 (2,1 MB)` após indicação direta do moderador ([frame_037.jpg](../assets/14_testes/frames_video/frame_037.jpg): *"Volta aqui nessa daqui. Clica aqui também"*). `EXP01` sugeriu: *"talvez melhorar o entendimento que você também consegue abrir aqui."* | **Alto** (impede o usuário de alcançar `F05` para conferir contexto e tempos em `O05`/`MQ03`/`MU02` ou baixar MP4 individual em `MU04`) | Adicionar *signifiers* explícitos de expansão em cada linha da Lista A (ícone *chevron*, rótulo/botão `"Ver detalhe"` e estado *hover* contrastado) e sinalizar reprodução sobre a miniatura. | Protótipo (`F04-A`, `F05`), [Entrega 11](11_figma.md#sistema-visual-e-acessibilidade) e [Entrega 8](08_engenharia_usabilidade.md#22-princípios-direcionados-à-interface) (`PI02`, `PI04`) |
+| `AU03` | **Baixa descobribilidade do alternador de visualizações (`A`/`B`/`C`), da exportação de metadados (`CSV`) e dos filtros por categoria** | `1/1` sessão exploratória (`EXP01`). Nenhum dos três recursos foi acionado autonomamente; todos precisaram ser apontados pelo moderador ([frame_019.jpg](../assets/14_testes/frames_video/frame_019.jpg), [frame_026.jpg](../assets/14_testes/frames_video/frame_026.jpg), [frame_036.jpg](../assets/14_testes/frames_video/frame_036.jpg), [frame_040.jpg](../assets/14_testes/frames_video/frame_040.jpg)). O alternador exibe três ícones sem texto visível (tooltip apenas no hover em [frame_036.jpg](../assets/14_testes/frames_video/frame_036.jpg)). Após conhecer `Trilhas B`, `EXP01` a elogiou fortemente (*"Essa visualização é muito boa por tempo aqui"*). | **Médio-Alto** (funcionalidades de alto valor para localização e edição externa passam despercebidas no primeiro contato, afetando `O04`/`O07`/`MU05`/`MQ04`) | Rotular o alternador de modos (`Lista`, `Trilhas`, `Mosaico`), reforçar a explicação visual da utilidade do CSV (*timestamps* para editor externo) em `F06` e ampliar o destaque dos filtros em `F04`. | Protótipo (`F04`, `F06`), [Entrega 11](11_figma.md#catálogo-de-telas-e-estados) e [Entrega 9](09_modelo_conceitual.md#4-esquema-conceitual-de-signos) (`S22`, `S26`, `S27`) |
+| `AU04` | **Ambiguidade sobre reset e persistência de highlights ao iniciar nova análise** | `1/1` sessão exploratória (`EXP01`). Ao retornar a `F01`/`F02` e iniciar nova execução ([frame_028.jpg](../assets/14_testes/frames_video/frame_028.jpg)–[frame_032.jpg](../assets/14_testes/frames_video/frame_032.jpg)), o status anterior foi zerado; `EXP01` estranhou momentaneamente (*"Ah, esse highlight aqui já é pronto, né? Ah, tá, entendi. É aquela tela lá que a gente viu"*), exigindo explicação do moderador sobre reset da simulação versus preservação esperada. | **Médio** (gera insegurança sobre perda de resultados anteriores e dúvida sobre qual lote está ativo em `O08`/`S29`/`S32`) | Exigir confirmação antes de reiniciar análise já concluída ou com seleção ativa, exibir cabeçalho identificando o lote/execução corrente e separar claramente resultados anteriores de nova execução. | Protótipo (`F02`, `F03`, `F04`), [Entrega 10](10_molic.md#m03--enviar-vídeos-acompanhar-análises-e-consultar-resultados) (`M03`), [Entrega 9](09_modelo_conceitual.md#4-esquema-conceitual-de-signos) (`S29`, `S32`) |
+| `AU05` | **Botão discreto `Mostrar n lances novos na lista` passa despercebido e mantém a lista desatualizada após conclusão da análise** | `1/1` sessão exploratória (`EXP01`, observado em dois ciclos distintos). Após acesso antecipado à base, mesmo com o banner exibindo `✓ Análise concluída · 4 de 4 vídeos prontos`, a lista permaneceu mostrando `2 Highlights em 1 Partida` sob `Mostrar 6 lances novos na lista` ([frame_021.jpg](../assets/14_testes/frames_video/frame_021.jpg)) e, no 2º ciclo, `3 Highlights em 1 Partida` sob `Mostrar 5 lances novos na lista` enquanto `EXP01` filtrava a lista ([frame_040.jpg](../assets/14_testes/frames_video/frame_040.jpg)). | **Médio-Alto** (risco real de omissão involuntária: o usuário pode revisar e baixar achando que há apenas 2 ou 3 lances prontos quando 8 já foram detectados — dor central de `P01`/`H01`) | Destacar visualmente o controle de atualização (alto contraste + contagem explícita *"Exibindo 2 de 8 lances prontos"*) ou atualizar automaticamente a lista quando nenhum detalhe estiver expandido. | Protótipo (`F04`), [Entrega 8](08_engenharia_usabilidade.md#3-metas-de-usabilidade) (`MQ02`, `MU01`) e [Entrega 9](09_modelo_conceitual.md#4-esquema-conceitual-de-signos) (`S09`, `S12`) |
+| `AU06` | **Acordeão estrito na Lista A fecha o detalhe aberto ao abrir outro lance** | `1/1` sessão exploratória (`EXP01`). Ao clicar em `Gol de Neymar` ([frame_038.jpg](../assets/14_testes/frames_video/frame_038.jpg)), o painel de `Gol de Luis Suárez` ([frame_037.jpg](../assets/14_testes/frames_video/frame_037.jpg)) recolheu automaticamente. `EXP01` comentou: *"só talvez abrir mais de um também, não sei se é necessário isso. Tem que quando abrir um, fecha os outros."* | **Baixo** (pode dificultar comparação rápida de tempos e metadados entre dois lances próximos em `F04-A`) | Avaliar permitir múltiplos detalhes expandidos simultaneamente (com botão explícito `Fechar` em cada painel) ou adicionar controles `Anterior`/`Próximo` consistentes com `B` e `C`. | Protótipo (`F04-A`, `F05`) |
+| `AU07` | **Dependência de explicação inicial para entender a entrada da demonstração (`F01`), os 4 exemplos e os percursos encenados (`F02`)** | `1/1` sessão exploratória (`EXP01`). Em `F01` ([frame_001.jpg](../assets/14_testes/frames_video/frame_001.jpg)–[frame_007.jpg](../assets/14_testes/frames_video/frame_007.jpg)), a área central desabilitada dominou a tela e exigiu rolagem até o link secundário; `EXP01` perguntou qual era o objetivo e precisou confirmar em `F02` ([frame_008.jpg](../assets/14_testes/frames_video/frame_008.jpg)–[frame_012.jpg](../assets/14_testes/frames_video/frame_012.jpg)) que os 4 vídeos simulavam upload próprio e que `Falha em um vídeo` / `Vídeo sem lances` eram opções de demonstração. | **Médio** (atrasa o início do percurso no primeiro uso; mistura limitações da demonstração com a hierarquia da interface) | Promover `"Usar os 4 tempos de exemplo"` a botão primário em `F01`, rebaixar o aviso de upload indisponível para texto de apoio e separar visualmente o seletor de cenários de teste do fluxo principal em `F02`. | Protótipo (`F01`, `F02`), [Entrega 9](09_modelo_conceitual.md#4-esquema-conceitual-de-signos) (`S07`) e [Entrega 11](11_figma.md#catálogo-de-telas-e-estados) |
+| `AU08` | **Aviso transitório escuro sobrepõe o primeiro lance da lista ao entrar em `F04` durante a análise** | Evidência visual direta nos quadros: ao abrir `F04` durante a análise ([frame_016.jpg](../assets/14_testes/frames_video/frame_016.jpg)), o aviso escuro *"A análise continua nos outros vídeos..."* cobriu quase integralmente a linha de `Gol de Luis Suárez`. | **Baixo** (prejudica a leitura momentânea do primeiro candidato na transição `F03` → `F04`, sem bloquear a tarefa) | Posicionar avisos transitórios em área sem sobreposição sobre os cards da lista (ex.: canto inferior ou faixa inline). | Protótipo (`F04`) |
+| `AU09` | **Termos técnicos em inglês expostos na régua temporal do detalhe `F05`** | Evidência visual direta nos quadros abertos por `EXP01` ([frame_037.jpg](../assets/14_testes/frames_video/frame_037.jpg), [frame_038.jpg](../assets/14_testes/frames_video/frame_038.jpg)): a régua temporal exibiu `anotação "Goal"` em inglês (sem verbalização espontânea do participante). | **Baixo** (quebra a consistência linguística em português, convergindo com `HC25`) | Traduzir todas as categorias de anotação exibidas na interface para português (`"Gol"`, `"Finalização no alvo"`, `"Pênalti"`). | Protótipo (`F05`) e [Entrega 8](08_engenharia_usabilidade.md#22-princípios-direcionados-à-interface) (`PI04`) |
+
+### Pontos positivos e sinais de valor percebido observados em `EXP01`
+
+- **Clareza do fluxo e estética:** `EXP01` elogiou espontaneamente a organização entre etapas e o visual (*"gostei do fluxo de tela. Sim. Bem claro, fácil de navegar"*, *"as cores também, bacana"*, *"bonitinho, bem legal a interface"*).
+- **Visualização em linha do tempo (`Trilhas B`):** altamente valorizada após apresentação ([frame_036.jpg](../assets/14_testes/frames_video/frame_036.jpg) — *"Essa visualização é muito boa por tempo aqui. Da hora que você consegue ver o timeline, né?"*).
+- **Familiaridade do `Mosaico C`:** prontamente associado a interfaces de plataformas de vídeo (*"mais próximo do que a gente tem nos streams"*, [frame_026.jpg](../assets/14_testes/frames_video/frame_026.jpg)), corroborando positivamente a heurística H2 (compatibilidade com o mundo real).
+- **Feedback em tempo real (`F03`):** acompanhamento progressivo das prévias e contagem crescente de lances (`2` → `8`) considerado interessante e informativo.
+- **Utilidade dupla de exportação:** rápida compreensão conceitual da vantagem de baixar cortes MP4 prontos ou apenas metadados/*timestamps* em CSV após explicação.
 
 ### Vídeo ilustrativo do teste e dos resultados
 
-O vídeo apresentará o procedimento do teste remoto, os resultados desidentificados e as melhorias propostas, com acesso restrito à equipe e ao docente. Incluirá somente trechos da aba com autorização específica de uso no vídeo; na ausência de trechos autorizados, usará demonstração reencenada pela equipe mediante aprovação prévia do docente e identificação explícita no vídeo.
+O **único vídeo desta entrega** é o registro da sessão `EXP01` de 24/11/2026 (06:44). A linha do tempo da seção C permite localizar os comportamentos e a seção F compara os resultados com a inspeção. Não há promessa de nova gravação, reencenação ou montagem adicional.
 
-**Link do vídeo ilustrativo:** *pendente (link de acesso restrito à equipe e ao docente)*
+**Acesso ao vídeo:** [Assistir à sessão exploratória EXP01 no YouTube](https://youtu.be/AxZfRabCQ-E) — único vídeo fornecido pela equipe para a entrega final, em 25/11/2026. A transcrição e os quadros higienizados permanecem disponíveis no repositório como evidências locais. A ferramenta de consulta não conseguiu carregar a página no fechamento; isso não permite concluir se o vídeo está disponível, privado ou indisponível para o docente.
+
+**Autorização e privacidade:** o áudio registra aceite verbal para voz e opinião. Não há confirmação específica de compartilhamento audiovisual nem verificação da configuração de acesso na documentação disponível; o fornecimento do link não substitui essas comprovações. A gravação contém nome próprio e notificação pessoal que foram removidos da transcrição e dos quadros publicados no repositório; não se afirma que o vídeo externo foi editado. O arquivo bruto não integra o Git. Permanecem os limites de uso, retirada e descarte previstos no plano.
 
 ## F. Comparação com a avaliação heurística
 
-*Pendente: cruzar os achados `AU*` desta entrega com os achados consolidados `HC*` da [Entrega 13](13_avaliacao_heuristica.md#6-consolidação-da-equipe), preservando os IDs e a versão avaliada.*
+A tabela abaixo cruza os **9 achados da observação (`AU01`–`AU09`)** com os **33 achados consolidados (`HC01`–`HC33`)** da [Entrega 13](13_avaliacao_heuristica.md#6-consolidação-da-equipe), ambos produzidos sobre a mesma versão congelada ([ihc-11.p4cs.com.br](https://ihc-11.p4cs.com.br/), commit `7405221`).
 
 | Problema | IDs (HC / AU) | Detectado na heurística? | Detectado por usuários? | O que aprendemos |
 |---|---|---|---|---|
-| *Pendente* | | sim / não | sim / não | *A preencher após conclusão das Entregas 13 e 14* |
+| **Ausência de controle para cancelar/parar análise em andamento** (ou retirar vídeo enviado por engano) | — / `AU01` | não | **sim** (espontâneo em `EXP01`) | **Principal achado exclusivo da observação.** Nenhum dos 3 avaliadores na Entrega 13 apontou a falta de cancelamento — inclusive o recurso fora deixado fora de escopo no `MoLIC M03`. O participante levantou espontaneamente a hipótese de enviar um vídeo errado e expressou a expectativa de uma saída de emergência (`H3`). |
+| **Baixa descobribilidade de que linhas da Lista A expandem `F05`** (e trazem download individual de MP4) | — / `AU02` | não | **sim** (`EXP01` não abriu sozinho) | A inspeção examinou o detalhe *depois* de aberto (`HC23`, `HC24`, `HC25`), mas não antecipou o ponto cego de entrada: quem não conhece o protótipo pode usar apenas `+ Selecionar` e jamais perceber que o item é clicável. |
+| **Botão `Mostrar n lances novos na lista` ignorado após acesso antecipado** | — / `AU05` | não | **sim** (`EXP01`, 2 ciclos) | Solução criada na v2 para evitar saltos na lista acabou escondendo 5 a 6 lances recém-concluídos ([frame_021.jpg](../assets/14_testes/frames_video/frame_021.jpg), [frame_040.jpg](../assets/14_testes/frames_video/frame_040.jpg)). Decisões de design razoáveis na teoria precisam ser validadas no uso real. |
+| **Acordeão estrito na Lista A** (abrir um lance fecha o anterior) | — / `AU06` | não | **sim** (`EXP01`) | Pequeno atrito de comparação revelado na exploração real de dois lances seguidos ([frame_037.jpg](../assets/14_testes/frames_video/frame_037.jpg)–[frame_038.jpg](../assets/14_testes/frames_video/frame_038.jpg)); impacto baixo, mas merece avaliação junto a `HC23`. |
+| **Aviso escuro transitório sobrepondo o 1º item da lista em `F04`** | — / `AU08` | não | **sim** (visível em `frame_016`) | Ocorreu exatamente na transição de acesso antecipado de `F03` para `F04`, prejudicando momentaneamente a leitura de `Gol de Luis Suárez`. |
+| **Área de envio indisponível domina `F01` e ofusca o botão de exemplos** | `HC01` / `AU07` | **sim** (`A01`, `A02`, `A03`) | **sim** (`EXP01`) | Convergência total: a hierarquia invertida prevista pelos três avaliadores causou hesitação imediata no início da sessão (`EXP01` perguntou qual era o objetivo e precisou rolar a tela até o link). |
+| **Alternador de visualizações (`A`/`B`/`C`) com ícones sem rótulo e baixa descoberta de recursos em `F04`/`F06`** | `HC17` / `AU03` | **sim** (`A02`) | **sim** (`EXP01`) | Nesta sessão, evidenciou dificuldade de descoberta dos ícones sem rótulo: `EXP01` não descobriu `Trilhas B` nem `Mosaico C` por conta própria, embora tenham sido os modos mais elogiados após indicação do moderador. |
+| **Reinício da análise sem confirmação e ambiguidade sobre resultados anteriores** | `HC12` (sev. 3) / `AU04` | **sim** (`A02`) | **sim** (`EXP01`) | A heurística já classificara `HC12` com severidade 3 (seleção antiga contraditória); a observação confirmou que o reset imediato confunde o usuário quanto à persistência das análises anteriores. |
+| **Termos técnicos em inglês no detalhe `F05`** (`"Goal"`, `"Shots on target"`) | `HC25` / `AU09` | **sim** (`A01`, `A02`, `A03`) | parcial (visível nos quadros, sem verbalização) | Os termos em inglês apareceram nos quadros de `EXP01` ([frame_037.jpg](../assets/14_testes/frames_video/frame_037.jpg)–[frame_038.jpg](../assets/14_testes/frames_video/frame_038.jpg)), mostrando a presença da inconsistência de linguagem nesta sessão, sem verbalização espontânea do participante. |
+| **Problemas estruturais visíveis nos quadros de `EXP01`, mas não verbalizados nem testados sob cenário crítico** (`×` oculto em `F02`, `1_224p.mkv` repetido, barra numérica `1`–`4` em `F03`, carrossel sem setas e círculo vazio no `Mosaico C`, falta de `Anterior`/`Próximo`/`Fechar` e `+ Selecionar` duplicado em `F05`, resumo de MP4 sem partida/minuto em `F06`) | `HC04`, `HC06`, `HC09`, `HC20` (sev. 3), `HC21`, `HC23`, `HC24`, `HC28` / — | **sim** | não verbalizado (parcialmente visível) | `EXP01` chegou a passar o mouse sobre o segmento `3` ([frame_030.jpg](../assets/14_testes/frames_video/frame_030.jpg)) para ler o nome do jogo (`HC09`) e encontrou o `×` apenas no hover do 1º cartão ([frame_008.jpg](../assets/14_testes/frames_video/frame_008.jpg), `HC04`), mas não realizou `UT01` (remoção), `UT03` (localização em grande volume) nem conferência de origem no editor (`UT05`/`UT06`). Isso reforça que a sessão exploratória não substitui as tarefas estruturadas. |
+| **Estados de exceção, teclado, histórico do navegador, recarga e arquivo CSV/MP4 salvo** (falha de manifesto `HC02` sev. 3, perda de seleção ao recarregar `HC31` sev. 3, Voltar do navegador `HC30`, falha encenada/foco `HC08`/`HC22`, vídeo sem lances `HC13`/`HC14`, filtros perdidos `HC15`/`HC16`/`HC18`, CSV em segundos `HC26`, nomes de MP4 salvos `HC33`, demais `HC03`, `HC05`, `HC07`, `HC10`, `HC11`, `HC19`, `HC27`, `HC29`, `HC32`) | `HC02`, `HC03`, `HC05`, `HC07`, `HC08`, `HC10`, `HC11`, `HC13`–`HC16`, `HC18`, `HC19`, `HC22`, `HC26`, `HC27`, `HC29`–`HC33` / — | **sim** | não (não exercitados em `EXP01`) | A inspeção heurística oferece cobertura sistemática de bordas, falhas e acessibilidade (como `HC02` e `HC31`, ambos de severidade 3) que dificilmente emergem em uma sessão exploratória curta de `06:44`. Esses pontos não foram testados por observação nesta entrega e permanecem como recomendações fundamentadas pela inspeção. |
 
 ## G. Conclusão
 
-*Pendente: responder após consolidação das seções C a F.*
+1. **Quais metas de usabilidade (`MQ01`–`MQ04`, `MU01`–`MU08`) foram atingidas, não atingidas ou não avaliadas por perfil?**
+   - **Para `P01` e `P03`:** todas as metas quantitativas (`MU01`–`MU08`) e as verificações formais de `MQ01`–`MQ04` e `QA10` permanecem **não avaliadas (`0/0`)**, pois a única sessão executada (`EXP01`) foi exploratória guiada, sem confirmação de perfil (`PRE01`–`PRE06`), cenários padronizados cronometrados, conferência de arquivos CSV/MP4 em disco nem aplicação da escala de facilidade percebida (1–5).
+   - **Indícios qualitativos preliminares da sessão exploratória `EXP01`:** há sinais positivos de compreensão global do fluxo, estética e utilidade da linha do tempo (`Trilhas B`) e do `Mosaico C`; porém surgiram **sinais concretos de risco** para `MQ01` (hesitação inicial em `F01`/`F02`), `MQ02`/`MU01` (acesso antecipado em 13% e botão `Mostrar n lances novos na lista` ignorado após conclusão), `MQ03`/`MU02` (baixa descobribilidade da expansão `F05`) e `MQ04`/`MU03`–`MU04` (dependência de explicação para entender o CSV e descobrir o download direto no detalhe).
 
-1. Quais metas de usabilidade (`MQ01`–`MQ04`, `MU01`–`MU08`) foram atingidas, não atingidas ou não avaliadas por perfil?
-2. Quais problemas foram recorrentes e em quais perfis e tarefas ocorreram?
-3. O que surpreendeu a equipe na comparação entre inspeção heurística e uso real?
-4. Quais mudanças são prioritárias no protótipo e nos modelos (`MoLIC`, signos, rastreabilidade)?
-5. Que limitações da amostra exploratória (`N = 3`, conveniência, simulação, conjunto de oito cortes e eventuais proxies) impedem generalizações amplas?
+2. **Quais problemas foram recorrentes e em quais perfis e tarefas ocorreram?**
+   - Como há apenas uma sessão exploratória registrada (`EXP01`, perfil não verificado), ainda não é possível afirmar recorrência entre participantes ou diferenças entre `P01` e `P03`.
+   - Contudo, dentro da própria sessão `EXP01`, repetiu-se o padrão de **baixa descobribilidade de controles secundários** (`AU02` na expansão de `F05`, `AU03` no alternador de modos/CSV/filtros e `AU05` no botão de atualizar novos lances, ocorrido em dois ciclos), além do achado crítico espontâneo de **falta de cancelamento de análise em andamento (`AU01`)**, cujo impacto potencial se relaciona tanto a `P01` (lotes de várias partidas sob prazo em `C01`/`T03`) quanto `P03` (uso doméstico com hardware e tempo limitados em `C03`/`T03`).
+
+3. **O que surpreendeu a equipe na comparação entre inspeção heurística e uso real?**
+   - **Primeiro:** o problema mais importante trazido por `EXP01` — **não poder cancelar/parar a análise de um vídeo enviado por engano (`AU01`)** — não fora detectado por nenhum dos três avaliadores na Entrega 13 e havia sido mantido fora do escopo do `MoLIC M03`.
+   - **Segundo:** a equipe assumiu como óbvio que as linhas da Lista A abriam o detalhe `F05`, mas `EXP01` atravessou quase toda a sessão sem clicar nelas (`AU02`), evidenciando o viés de familiaridade de quem projetou a interface.
+   - **Terceiro:** o recurso mais elogiado por `EXP01` foi a visualização em linha do tempo (`Trilhas B`), seguida pela familiaridade do `Mosaico C` com *streams* — justamente controles ocultos atrás de ícones sem rótulo (`HC17`/`AU03`).
+   - **Quarto:** o mecanismo `Mostrar n lances novos na lista` (`AU05`), introduzido na versão 2 para evitar reposicionamentos bruscos durante a revisão, teve o efeito colateral de manter o usuário vendo apenas 2 ou 3 lances depois que todos os 8 já estavam prontos.
+
+4. **Quais mudanças são prioritárias no protótipo e nos modelos (`MoLIC`, signos, rastreabilidade)?**
+   Combinando os achados de severidade 3 da [Entrega 13](13_avaliacao_heuristica.md#achados-prioritários-e-encaminhamento) (`HC02`, `HC12`, `HC20`, `HC31`) com os achados empíricos desta entrega (`AU01`–`AU09`), a ordem recomendada para uma próxima iteração é a seguinte. As mudanças não foram implementadas nem reavaliadas nesta entrega:
+   1. **Controle de processo e recuperação (`AU01`, `HC12`/`AU04`, `HC31`, `HC02`):** adicionar cancelamento de análise por vídeo/lote com confirmação (atualizando `MoLIC M03`, signos `S06`/`S09`/`S14` e [RASTREABILIDADE.md](../RASTREABILIDADE.md)), exigir confirmação antes de reiniciar análise concluída/com seleção, preservar seleção em sessão contra recarga e substituir a mensagem técnica de erro do manifesto por botão `"Tentar novamente"`.
+   2. **Descobribilidade e revisão de lances (`AU02`, `AU05`, `HC20`, `HC23`, `HC24`):** explicitar visualmente que cada linha da Lista A expande `F05` (chevron/botão `"Ver detalhe"`), dar destaque primário ou atualização clara para novos lances prontos na base, corrigir a navegação horizontal no `Mosaico C` e alinhar controles de `F05` em A (`Anterior`/`Próximo`/`Fechar`, eliminando `+ Selecionar` duplicado).
+   3. **Clareza de navegação, entrada e exportação (`AU03`/`HC17`, `AU07`/`HC01`, `HC04`, `HC06`, `HC28`, `AU08`, `AU09`/`HC25`):** rotular o alternador de modos (`Lista`, `Trilhas`, `Mosaico`), promover o botão de exemplos em `F01`, manter `Remover` visível em `F02`, destacar partida e tempo acima de `1_224p.mkv`, enriquecer o resumo de MP4 em `F06`, reposicionar toasts sem cobrir itens da lista e traduzir `"Goal"`/`"Shots on target"`.
+   4. **Continuidade fora desta entrega:** em uma nova rodada, validar o roteiro e recrutar participantes dos perfis-alvo antes de medir desempenho. Este relatório não agenda nem promete essa rodada.
+
+5. **Que limitações da amostra exploratória e do registro impedem generalizações amplas?**
+   - **Amostra reduzida (1 sessão exploratória; nenhuma das 3 sessões estruturadas previstas):** a coleta foi encerrada com `EXP01` por restrição de prazo; os perfis-alvo `P01` e `P03` não possuem tentativas estruturadas avaliáveis (`0/0`), e o perfil real de `EXP01` não foi verificado por `PRE01`–`PRE06`. A quantidade exigida não foi atendida; não se presume dispensa do docente.
+   - **Condução guiada e viés do moderador:** em `EXP01`, a ausência de roteiro neutro e as intervenções frequentes do moderador (incluindo apontamento de controles e expressão de preferência pessoal) impedem classificar os fluxos como sucesso independente e impossibilitam o cálculo de `MU01`–`MU08`.
+   - **Ausência de métricas quantitativas e conferência de saída:** não houve cronometragem formal por tarefa (`UT03`), aplicação da escala pós-tarefa 1–5 (`MU06`), abertura de CSV/MP4 em disco (`MU03`/`MU04`), execução de falha encenada (`UT07`) nem retorno após sete dias (`UT08`).
+   - **Limites do registro e do protótipo:** a linha do tempo de `EXP01` apoia-se em transcrição higienizada e 39 quadros limpos em grade aproximada de ~10 s extraídos do vídeo linkado no YouTube; além disso, o protótipo simula o processamento sobre apenas quatro tempos e oito cortes reais do SoccerNet-v2, sem upload de arquivos próprios nem volume típico de uma rodada profissional.
 
 ## Checklist
 
-- [ ] Número de participantes finais atende ao enunciado.
-- [ ] Participantes são representativos do público e não são membros da equipe.
-- [ ] Se foram usados participantes proxy, a justificativa e a limitação estão explícitas.
-- [ ] O teste avalia a interação; não confunde usabilidade do protótipo com desempenho técnico do TCC.
-- [ ] Tarefas administrativas/analíticas usadas no teste são rastreáveis a objetivos e cenários.
-- [ ] Há consentimento e anonimização.
-- [ ] Foi realizado teste piloto.
-- [x] O fluxograma representa o piloto, a observação, a análise e o relato.
-- [ ] O relatório registra as recomendações de teste remoto adotadas e como funcionaram nas sessões.
-- [x] Tarefas têm critérios de sucesso definidos antes do teste.
-- [ ] Moderadores não ensinaram o caminho durante a tarefa.
-- [ ] Resultados estão separados por usuário e por tarefa.
-- [ ] Foram registrados sucesso, erros, ajudas, tempo e satisfação quando aplicáveis.
-- [ ] Conclusão combina evidência quantitativa e qualitativa.
-- [ ] Achados geram recomendações e atualização da rastreabilidade.
-- [ ] O vídeo ilustrativo tem link de acesso restrito no relatório. Os trechos de sessões incluídos têm autorização específica.
+No fechamento, `[x]` indica evidência atendida; `[ ]` identifica requisito não atendido ou sem comprovação. Itens abertos são limitações registradas desta entrega, não atividades agendadas.
+
+- [ ] Número mínimo de participantes atendido: uma pessoa observada, ante três sessões estruturadas previstas.
+- [ ] Representatividade de `P01`/`P03` comprovada: pré-teste não aplicado.
+- [x] Amostra efetiva e ausência de validação por perfil explicitadas.
+- [x] Avaliação de interação distinguida da avaliação técnica do TCC.
+- [x] Procedimento planejado e execução efetiva apresentados separadamente.
+- [x] Consentimento verbal para voz/opinião e higienização das evidências locais registrados.
+- [ ] Consentimento separado e compartilhamento audiovisual comprovados integralmente na documentação disponível.
+- [ ] Piloto formal executado: não realizado.
+- [x] Fluxograma representa a execução e identifica etapas não realizadas.
+- [x] Recomendações de teste remoto confrontadas com o que ocorreu.
+- [ ] Moderação sem ensinar o caminho: houve orientação e viés, declarados no relatório.
+- [x] Resultados da única sessão organizados por fluxo/tarefa, sem participantes fictícios.
+- [ ] Tempos por tarefa, escala de satisfação e saídas em disco verificados: não coletados.
+- [x] Metas sem medição marcadas como não avaliadas, sem percentuais artificiais.
+- [x] Nove achados vinculados a evidências, recomendações e rastreabilidade.
+- [x] Melhorias propostas distinguidas de alterações implementadas e reavaliadas.
+- [x] URL do único vídeo fornecida pela equipe e incluída no relatório.
+- [ ] Reprodução e permissão de acesso ao vídeo verificadas independentemente: a ferramenta não carregou a página; autorização específica não documentada.
+
+## Histórico de fechamento
+
+- **25/11/2026:** encerramento documental com a única sessão disponível, por restrição de prazo informada pela equipe. Removidas tabelas vazias de participantes não observados e promessas de coleta, retorno e vídeo adicional. Preservados `EXP01`, `AU01`–`AU09`, evidências higienizadas, protocolo original e requisitos não atendidos. Não houve nova coleta nem aprovação docente inferida.
+- **25/11/2026, inclusão do vídeo:** incorporado o endereço de `EXP01` fornecido pela equipe para o envio final. A autorização específica e as permissões de acesso não foram presumidas a partir da URL.
 
 ## Referências
 
 - BARBOSA, Simone Diniz Junqueira; SILVA, Bruno Santana da. *Interação Humano-Computador*. Rio de Janeiro: Elsevier, 2010. (Referenciada em [BIBLIOGRAFIA.md](../BIBLIOGRAFIA.md).)
 - Slides da disciplina: [Teste de Usabilidade por Observação do Usuário](../slides_plinio/Teste%20Usabilidade%20Observacao%20Usuario.pdf) (slides 2–16) e [Planejamento da Avaliação de IHC](../slides_plinio/Planejamento%20Avaliacao%20IHC.pdf).
 - MELO, Felipe. *Palestra sobre testes de usabilidade remotos*. Referenciada no [plano DECIDE](12_planejamento_avaliacao.md#a-método-decide).
-- Artefatos do projeto: [Entrega 8 — metas de usabilidade](08_engenharia_usabilidade.md#3-metas-de-usabilidade), [Entrega 11 — protótipo navegável](11_figma.md), [Entrega 12 — plano DECIDE](12_planejamento_avaliacao.md), [Entrega 13 — avaliação heurística](13_avaliacao_heuristica.md) e [instrumentos da Entrega 12](../instrumentos/README.md).
+- Evidências primárias desta entrega: [vídeo da sessão exploratória EXP01](https://youtu.be/AxZfRabCQ-E), [transcrição higienizada da sessão EXP01](../assets/14_testes/transcript.md), [39 quadros limpos extraídos](../assets/14_testes/frames_video/) e [fluxograma da avaliação](../assets/14_testes/fluxograma_avaliacao.svg).
+- Artefatos do projeto: [Entrega 1](01_conhecendo_o_problema.md), [Entrega 3](03_personas_contexto_jornada.md), [Entrega 5](05_analise_tarefas.md), [Entrega 6](06_prototipacao_papel.md), [Entrega 8 — metas de usabilidade](08_engenharia_usabilidade.md#3-metas-de-usabilidade), [Entrega 9 — modelo conceitual](09_modelo_conceitual.md), [Entrega 10 — MoLIC](10_molic.md), [Entrega 11 — protótipo navegável](11_figma.md), [Entrega 12 — plano DECIDE](12_planejamento_avaliacao.md), [Entrega 13 — avaliação heurística](13_avaliacao_heuristica.md), [instrumentos da Entrega 12](../instrumentos/README.md) e [matriz de rastreabilidade](../RASTREABILIDADE.md).

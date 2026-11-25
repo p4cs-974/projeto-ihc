@@ -1,5 +1,7 @@
 # Guia operacional: recrutamento, agenda e pendências da Entrega 14
 
+> **Encerramento em 25/11/2026:** material do planejamento original, arquivado sem execução integral. A entrega utiliza somente `EXP01`; não haverá piloto formal, novas sessões ou retorno nesta rodada. Campos vazios e caixas desmarcadas não são resultados nem tarefas agendadas. Consulte o [relatório final](../../docs/14_observacao_usuario.md).
+
 Este arquivo reúne os passos operacionais que a equipe pode executar em paralelo à [Entrega 13](../../docs/13_avaliacao_heuristica.md) sem comprometer o protocolo ético da [Entrega 12](../../docs/12_planejamento_avaliacao.md).
 
 ## Regra de privacidade no repositório

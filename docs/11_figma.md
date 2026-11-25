@@ -1,8 +1,14 @@
 # Entrega 11: protótipo navegável integrado
 
 **Data:** 13/11/2026\
-**Status:** 🟨 protótipo publicado e conferência técnica final concluída; revisão acadêmica individual da equipe pendente.\
-**Responsabilidade:** Equipe 16, Pedro Alexandre Custódio Silva, Lucas Roberto Boccia dos Santos e Giovanni Chahin Morassi. Integração conduzida por Pedro com assistência de agentes Codex. A revisão final pelos integrantes permanece pendente.
+**Status:** protótipo publicado e documentado para entrega; limites e recomendações das avaliações explicitados.\
+**Responsabilidade:** Equipe 16, Pedro Alexandre Custódio Silva, Lucas Roberto Boccia dos Santos e Giovanni Chahin Morassi. Integração conduzida por Pedro com assistência de agentes Codex. Não há registro de aceite individual pelos integrantes.
+
+## Fechamento documental — 25/11/2026
+
+A versão publicada no commit `7405221` é a referência comum das Entregas 13 e 14. A revisão local posterior, descrita neste documento, não foi confundida com a versão observada. A inspeção consolidou 33 achados e a única sessão exploratória acrescentou nove achados de observação. As recomendações não são apresentadas como correções implementadas ou reavaliadas. O aceite acadêmico individual da equipe não está registrado; sua ausência é preservada como limitação documental, sem alegar aprovação em nome dos integrantes.
+
+Os procedimentos das seções originais preservam o planejamento da época. Atividades não realizadas ficam fora desta entrega, e os itens de checklist sem evidência permanecem desmarcados.
 
 ## Objetivo da atividade
 
@@ -171,7 +177,7 @@ As capturas são do protótipo após os ajustes aprovados, sem anotações de pr
 
 [F] Na revisão de 18/11/2026, a fonte local do protótipo passou a avisar que o CSV foi enviado ao navegador e a pedir que a pessoa confira o arquivo salvo. Em Chromium local, a seleção de um corte produziu um CSV que abriu com o título, a partida e o endereço do MP4 esperado. A tabela de acesso registra a publicação de 13/11.
 
-## Checklist e pendências para entrega
+## Checklist no fechamento da entrega
 
 - [x] Um protótipo integrado com fonte editável versionada.
 - [x] Capturas representativas no repositório.

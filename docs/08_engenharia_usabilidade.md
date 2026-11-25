@@ -2,8 +2,14 @@
 
 **Data:** 28/10/2026 (versão original)
 **Revisão:** 10/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md)
-**Status:** 🟨 revisada após o parecer; pesos de prioridade, MU07 e MU08 propostos, a confirmar pela equipe
+**Status:** especificação encerrada; MU01–MU06 definidas e não avaliadas; pesos e MU07/MU08 preservados como propostas.
 **Responsabilidade:** 1 solução consolidada por equipe, Equipe 16
+
+## Fechamento documental — 25/11/2026
+
+Os critérios `MU01`–`MU06` são especificações confirmadas anteriormente, sem medição válida na única sessão exploratória da Entrega 14. Os pesos de prioridade e `MU07`/`MU08` permanecem propostas de uma próxima iteração, sem confirmação coletiva registrada. Sua confirmação e calibração não serão reconstruídas depois da coleta. Não se declara meta atingida nem redução de esforço ou de erros a partir de `EXP01`. O plano de avaliação está documentado na Entrega 12 e o resultado efetivo na Entrega 14.
+
+Os procedimentos das seções originais preservam o planejamento da época. Atividades não realizadas ficam fora desta entrega, e os itens de checklist sem evidência permanecem desmarcados.
 
 ## Objetivo da atividade
 
@@ -176,7 +182,7 @@ A confirmação dos critérios de MU01–MU06 é uma decisão da equipe, não re
 
 ### 3.4 Cobertura das metas pelos instrumentos
 
-[F] O I02 publicado no guia, versão `2026-10-21`, registra perfil de edição, G01, forma de realização, G02, realização declarada por tarefa, G03, momentos de dúvida, G04, preferência de visualização, G05, expectativa de download, G06, impressão geral em texto livre, G07, e nome opcional, G08. A fonte local, versão `2026-11-10`, retira G08 e revisa as alternativas de G01, G02, G03 e G05, conforme a [Entrega 7](07_coleta_dados.md); sua publicação está **PENDENTE**. Nenhuma das versões mede sozinha as metas desta entrega, embora possa trazer informações úteis. As verificações abaixo serão preparadas no protocolo da Entrega 12, sem execução nesta entrega.
+[F] O I02 publicado no guia, versão `2026-10-21`, registra perfil de edição, G01, forma de realização, G02, realização declarada por tarefa, G03, momentos de dúvida, G04, preferência de visualização, G05, expectativa de download, G06, impressão geral em texto livre, G07, e nome opcional, G08. A versão `2026-11-10` retira G08 e revisa as alternativas de G01, G02, G03 e G05, conforme a [Entrega 7](07_coleta_dados.md); sua publicação foi conferida em 18/11/2026, conforme o registro daquela entrega. Nenhuma das versões mede sozinha as metas desta entrega, embora possa trazer informações úteis. As verificações abaixo serão preparadas no protocolo da Entrega 12, sem execução nesta entrega.
 
 | Meta de Nielsen | Medidas | Instrumento necessário | O que o I02 atual oferece | Lacuna a resolver na Entrega 12 |
 |---|---|---|---|---|
