@@ -9,3 +9,6 @@ node_modules/
 
 # local Moodle pack (symlink)
 ihc-pack-moodle/
+
+# raw session recordings (kept outside Git per Entrega 12 privacy rules)
+assets/14_testes/*.mp4

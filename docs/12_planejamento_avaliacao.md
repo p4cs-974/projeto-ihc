@@ -1,8 +1,19 @@
 # Entrega 12 — Planejamento da avaliação de usabilidade (DECIDE)
 
 **Data:** 18/11/2026\
-**Status:** 🟨 plano e instrumentos preparados. Piloto pendente.\
+**Status:** planejamento documentado; execução encerrada com escopo reduzido e desvios registrados na Entrega 14.\
 **Responsabilidade:** 1 solução por equipe. Equipe 16, Pedro Alexandre Custódio Silva, Lucas Roberto Boccia dos Santos e Giovanni Chahin Morassi.
+
+
+## Registro final de execução — 25/11/2026
+
+O plano abaixo preserva os critérios e procedimentos definidos antes da avaliação. **Não é uma declaração de que todas as etapas foram executadas.** A inspeção heurística foi concluída por três avaliadores (Entrega 13). A observação encerrou-se com **uma sessão exploratória guiada `EXP01` e um único vídeo**, por restrição de prazo informada pela equipe; ver o [relatório final da Entrega 14](14_observacao_usuario.md).
+
+Não foram realizados `PIL01`, as três sessões estruturadas `U01`–`U03` nem o retorno `UT08`. `MU01`–`MU08` não possuem medição válida nesta rodada. Pesos e `MU07`/`MU08` permanecem propostas históricas, sem confirmação coletiva registrada; não serão adotados retrospectivamente para classificar o desempenho observado. As referências a recrutamento, piloto, retornos e vídeo editado nas seções seguintes descrevem o **planejamento original não executado integralmente**, sem compromisso de novas sessões nesta entrega e sem dispensa docente presumida.
+
+O aceite verbal para voz/opinião e a higienização local estão documentados. Autorizações específicas e configuração de acesso ao registro audiovisual só podem ser afirmadas a partir da confirmação da equipe; a revisão documental não as substitui.
+
+**Registro audiovisual entregue:** [único vídeo da sessão EXP01](https://youtu.be/AxZfRabCQ-E), endereço fornecido pela equipe no fechamento de 25/11/2026. Os resultados e limites dessa execução estão na Entrega 14; o vídeo editado adicional previsto no plano original não foi produzido.
 
 ## Objetivo da atividade
 
@@ -51,7 +62,7 @@ A revisão publicada em 13/11/2026 usa quatro tempos de duas partidas do SoccerN
 | Nº de participantes | Três sessões principais individuais, uma por integrante, conforme o [modelo da Entrega 14](14_observacao_usuario.md). Recrutar dois participantes P01 e um P03. A amostra é exploratória. O plano de execução do Moodle cita 5 a 10 como faixa usual. |
 | Ambiente | Sessão remota individual em sala virtual institucional. Enviar instruções técnicas antes da sessão e preparar a sala com 15 min de antecedência. Validar no piloto o controle remoto do navegador e o efeito sobre o tempo. Reservar 45 min para a primeira sessão e 25 min para o retorno. |
 | Dispositivo | Computador de teste da equipe com navegador capaz de reproduzir MP4, mouse ou teclado, internet e pasta temporária para downloads. A pessoa controla o navegador durante as tarefas. O moderador verifica os arquivos locais conforme o roteiro. |
-| Protótipo/versão | Usar a [publicação da Entrega 11](https://ihc-11.p4cs.com.br/) e a [fonte da revisão](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html), registradas no commit `7405221`. Registrar URL, data e commit efetivos em cada sessão. Se a inspeção motivar uma correção antes da observação, registrar o que mudou, repetir o piloto afetado e fixar a nova versão. Consolidar cada versão separadamente. |
+| Protótipo/versão | Usar a [publicação da Entrega 11](https://ihc-11.p4cs.com.br/), congelada no commit `7405221` (arquivo-fonte de `7d52cdd`, SHA-256 `aa6ec94773a783559e352f69ff5507bd3a8af9301c3830b832de879104b6f33c`). A revisão local posterior em [PROTOTIPO_fluxo_highlights.html](../assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) (commit `62bbbed`, 18/11/2026) não está publicada nesse link e fica fora da rodada. Registrar URL, data e commit efetivos em cada sessão. Se a inspeção motivar uma correção antes da observação, registrar o que mudou, repetir o piloto afetado e fixar a nova versão. Consolidar cada versão separadamente. |
 | Teste piloto | Após consolidar a inspeção e antes da primeira sessão oficial, Pedro modera, Lucas anota e Giovanni executa o roteiro em um computador separado. Validar instruções sem atalhos, estados iniciais, duração, captura de tela autorizada, sala alternativa, cronômetro, gabaritos, downloads, recuperação e aplicação das categorias de sucesso por dois integrantes. Use o código PIL01. O piloto fica fora da amostra. |
 | Recrutamento | Convidar por contatos e comunidades de edição e futebol. Confirmar idade, atividade recente, perfil e disponibilidade para a sessão inicial e o retorno. Registrar exposição prévia ao guia ou ao protótipo. |
 | Contingência | Se faltar um dos perfis, priorizar outra pessoa elegível do outro perfil. Se for necessário recorrer a um proxy, usar adulto externo com experiência recente em seleção ou edição de vídeo em domínio próximo. Registrar a lacuna e o motivo antes da sessão. Reportar os proxies à parte. Marcar metas sem tentativas avaliáveis de um perfil como não avaliadas. |
@@ -131,7 +142,7 @@ A ficha usa U01–U03. Contatos de agendamento e aceites ficam em pasta instituc
 - [x] Tarefas vêm de objetivos/cenários relevantes.
 - [x] Critérios de sucesso foram definidos antes da coleta.
 - [ ] Questões práticas e éticas estão resolvidas.
-- [ ] Instrumentos estão prontos antes da Entrega 13/14.
+- [x] Instrumentos estão prontos para uso (redigidos antes da Entrega 13 e utilizados na inspeção; roteiro de observação não validado em `PIL01`, não executado nesta entrega).
 - [x] Plano diz como dados serão analisados e apresentados.
 
-A equipe preparou os cinco instrumentos. Para concluir as duas verificações pendentes, é preciso confirmar agenda, participantes e configuração de gravação, alinhar o vídeo e a alternativa de reencenação com o docente e validar o roteiro e a contingência remota no piloto. A confirmação de MU07, MU08 e dos pesos também está pendente.
+A equipe preparou os cinco instrumentos e aplicou o formulário heurístico na Entrega 13. A observação foi encerrada com escopo reduzido, conforme o registro final no início deste documento. O item prático/ético permanece desmarcado porque a execução não comprovou todas as condições previstas. Não há piloto, coleta adicional ou reencenação agendados para esta entrega.

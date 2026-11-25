@@ -1,162 +1,75 @@
-# Entregas em andamento
+# Melhores Momentos — Projeto de IHC da Equipe 16
 
-01 - Completa
-
-02 - Completa; pendências de C06/C07 dispensadas pelo professor em sala
-
-03 - Revisão documental do feedback concluída em 14/10/2026; proto-personas a validar
-
-04 - Revisão documental do feedback concluída em 14/10/2026; cenários hipotéticos a validar
-
-05 - Preenchimento concluído; revisão de coerência aplicada em 13/10/2026; modelos hipotéticos a validar
-
-06 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega06_Equipe16.md) em 10/11/2026; protótipo na versão 2 com D01, D02 e D05 aplicadas, sem verificação com participante
-
-07 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md) em 10/11/2026; I02 restrito à experiência de uso do protótipo; formulário `2026-11-10` publicado; pilotos e coleta pendentes
-
-08 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md) em 10/11/2026; pesos de prioridade, MU07 e MU08 propostos, a confirmar pela equipe; metas são especificação, sem resultados
-
-09 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md). Revisão pelos autores e consolidação coletiva pendentes.
-
-10 - Revisada após o [parecer do professor](feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md). Revisão pelos autores e consolidação coletiva pendentes.
-
-# Projeto de Interação Humano-Computador (IHC)  - Equipe 16
-
-> **Template acadêmico para documentação do projeto no GitHub.**  
-> Substitua todo texto entre `{{...}}`, remova exemplos que não se aplicam e mantenha evidências no próprio repositório sempre que possível.
-
-## Princípio do projeto da disciplina
-
-A disciplina utiliza **preferencialmente o tema do TCC em andamento** como domínio para exercitar os métodos de Interação Humano-Computador.
-
-Isso vale também quando o TCC é predominantemente técnico e **não previa o desenvolvimento de uma interface**.
-
-- Se o TCC **já prevê interface**, ela pode ser o objeto principal das atividades de IHC.
-- Se o TCC **não prevê interface**, a equipe deverá derivar um **escopo de IHC** a partir da contribuição técnica: quem poderia utilizar ou se beneficiar do resultado, o que essa pessoa precisaria fazer, em qual contexto e que interação seria necessária.
-- A interface criada na disciplina **não se torna automaticamente uma obrigação do TCC**. Ela pode ser um protótipo de aprendizagem, uma extensão conceitual ou uma demonstração de aplicação potencial. Sua incorporação ao TCC depende de decisão da equipe e do orientador.
-
-Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do TCC](GUIA_ESCOPO_IHC.md).
+**Entrega final documental: 25/11/2026.** O repositório reúne a definição do problema, os modelos de interação, o protótipo e as avaliações de uma interface para preparar material de melhores momentos de partidas de futebol. A observação de uso foi encerrada com **uma sessão exploratória e um único vídeo**. As limitações e os requisitos não atendidos estão registrados na [Entrega 14](docs/14_observacao_usuario.md) e no [checklist final](CHECKLIST_FINAL.md).
 
 ## Identificação
 
-**Título do projeto de IHC:** Identificação de melhores momentos em partidas de futebol utilizando sistemas híbridos de visão computacional
+**Projeto/TCC de origem:** Identificação de melhores momentos em partidas de futebol utilizando sistemas híbridos de visão computacional\
+**Orientador:** Murillo Freitas Bouzon\
+**Disciplina:** Interação Humano-Computador · Centro Universitário FEI · 2026 / 8º semestre
 
-**TCC/projeto de origem:** Identificação de melhores momentos em partidas de futebol utilizando sistemas híbridos de visão computacional
-**Orientador(a):** Murillo Freitas Bouzon  
-**Disciplina:** Interação Humano-Computador  
-**Instituição:** Centro Universitário FEI  
-**Semestre:** 2026 / 8o semestre
+| Integrante | Matrícula | GitHub | Recorte de referência |
+|---|---|---|---|
+| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | Envio e revisão de material; P01/T01 |
+| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Supervisão editorial externa; P02/T02 |
+| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Acompanhamento e tratamento de falhas; P03/T03 |
 
-### Equipe
+## Problema, público e escopo
 
-| Nome completo | Matrícula | GitHub | Responsabilidade principal |
-|---|---:|---|---|
-| Pedro Alexandre Custodio Silva | 22.123.049-3 | [p4cs-974](https://github.com/p4cs-974) | Envio de partidas para processamento (A01) |
-| Lucas Roberto Boccia dos Santos | 22.123.012-1 | [uniflusantos](https://github.com/uniflusantos) | Revisão, seleção e download de resultados (A04) |
-| Giovanni Chahin Morassi | 22.123.025-3 | [giovanni1351](https://github.com/giovanni1351) | Acompanhamento e histórico de processamento (A02/A03) e manutenção da matriz de rastreabilidade |
+O projeto parte da hipótese de que editores esportivos gastam esforço ao assistir a gravações, localizar lances e organizar cortes para edição. O público de referência inclui o editor profissional (P01) e o criador amador (P03); o supervisor editorial (P02) recebe e aprova material por canais externos. Essas caracterizações são modelos de projeto, sem validação empírica suficiente para generalizar rotinas ou ganhos de produtividade. A [Entrega 1](docs/01_conhecendo_o_problema.md) distingue fatos, hipóteses e lacunas.
 
-## Relação entre TCC e projeto de IHC
+O TCC investiga um sistema híbrido de visão computacional que recebe partidas e produz cortes e metadados. O TCC previa backend; a interface foi derivada para a disciplina de IHC como **protótipo demonstrativo de aplicação potencial**, sem se tornar obrigação formal do TCC.
 
-| Item | Descrição |
-|---|---|
-| Tema central do TCC | Identificação de melhores momentos em partidas de futebol utilizando sistemas híbridos de visão computacional |
-| Resultado técnico esperado do TCC | Sistema híbrido de visão computacional (algoritmo, modelo de IA/LLM, análise de dataset, benchmark e backend) que recebe vídeos de partidas e produz cortes de melhores momentos com metadados |
-| O TCC já previa interface? | não — previa apenas o sistema de backend; a interface surgiu para a disciplina de IHC |
-| Capacidade técnica que pode gerar valor para pessoas | Identificação automática de melhores momentos e geração dos respectivos cortes de vídeo e metadados, reduzindo o trabalho manual de edição |
-| Usuário principal adotado em IHC | Editor de vídeo esportivo, responsável por obter material de melhores momentos (H27) |
-| Objetivo principal desse usuário | Obter, com menor esforço manual, cortes e metadados de melhores momentos de partidas gravadas para continuar a edição ou publicação em ferramentas externas (H28) |
-| Interface/recorte explorado na disciplina | Interface para enviar vídeos gravados, acompanhar o processamento, consultar os resultados e baixar cortes e metadados — sem edição detalhada nem publicação |
-| Relação com o escopo formal do TCC | protótipo demonstrativo de aplicação potencial |
+O objetivo de interação é preparar o lote, acompanhar o processamento, revisar candidatos e obter vídeos MP4 e referências CSV para continuar o trabalho em ferramentas externas. Montagem, chancela e publicação permanecem fora da interface.
 
-> **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
+## Acesso ao protótipo e às evidências
 
-## Resumo do projeto pela perspectiva do usuário
+- [Protótipo publicado e avaliado](https://ihc-11.p4cs.com.br/) — commit `7405221`, referência comum das Entregas 13 e 14.
+- [Documentação do protótipo, telas e limites](docs/11_figma.md) — distingue a versão publicada da revisão local posterior.
+- [Vídeo da única sessão exploratória EXP01](https://youtu.be/AxZfRabCQ-E) — 24/11/2026, duração 06:44; [relatório, achados e limites de uso](docs/14_observacao_usuario.md#vídeo-ilustrativo-do-teste-e-dos-resultados).
+- [Transcrição higienizada](assets/14_testes/transcript.md) e [39 quadros da interface](assets/14_testes/frames_video/) — evidências locais da observação, sem o arquivo audiovisual bruto.
+- [Inspeções individuais e consolidação heurística](docs/13_avaliacao_heuristica.md) — três avaliadores, dez heurísticas e 33 achados consolidados.
 
-Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolhido, o que precisa alcançar, qual problema enfrenta ou qual atividade precisa executar, em qual contexto e como a contribuição do TCC se relaciona com essa situação.
+O protótipo usa quatro tempos de duas partidas do SoccerNet-v2 e oito cortes reais em 224p. Upload próprio está indisponível; fila, progresso, falha e ausência de lances são simulados. A demonstração não comprova precisão ou desempenho do detector. As avaliações dizem respeito à interação com essa versão.
 
-Evite começar pela tecnologia.
+## Entregas e situação no fechamento
 
-Um editor de vídeo esportivo precisa produzir compilações de melhores momentos de partidas de futebol na pós-produção, após o encerramento do jogo. Atualmente esse trabalho é manual: ele assiste à gravação integral, identifica lances, define os cortes e organiza o material — processo lento, sujeito a cansaço e interpretação, com risco de omitir lances importantes. O TCC investiga um sistema híbrido de visão computacional que detecta e classifica automaticamente os melhores momentos. Para fins da disciplina de IHC, será explorada uma interface que permita ao editor enviar os vídeos gravados, acompanhar o processamento e obter os cortes e metadados para dar continuidade à edição em ferramentas externas.
+“Documentada” indica que o artefato está apresentado; não equivale a validação empírica ou aprovação do docente. Atividades não realizadas são limitações desta entrega, sem previsão de novas gravações ou coleta neste fechamento.
 
-> **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
+| # | Entrega | Situação final documentada |
+|---:|---|---|
+| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | Preenchida; hipóteses e lacunas identificadas. |
+| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | Preenchida; pendências de C06/C07 dispensadas pelo professor em sala, conforme registro anterior. |
+| 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | Revisão documental concluída; proto-personas sem validação empírica suficiente. |
+| 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | Revisão documental concluída; cenários hipotéticos. |
+| 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | Três tarefas documentadas e coerência revisada; modelos hipotéticos. |
+| 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | Walkthrough da v1 registrado; v2 revisada, sem verificação específica com participante. |
+| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | Instrumentos e protocolo documentados; pilotos e pesquisa I01–I03 não executados. |
+| 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | Metas especificadas; sem resultados quantitativos. Pesos e MU07/MU08 permanecem propostas. |
+| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | Documentação consolidada; aceite individual dos autores não registrado. |
+| 10 | [MoLIC](docs/10_molic.md) | Três modelos documentados; aceite individual não registrado. |
+| 11 | [Protótipo navegável integrado](docs/11_figma.md) | Publicado e documentado; cobertura parcial e limites explícitos. |
+| 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | Plano e cinco instrumentos documentados; execução reduzida registrada como desvio. |
+| 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | Três inspeções, H1–H10, 33 achados e consolidação concluídos. |
+| 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | Relatório encerrado com uma exploração guiada (EXP01), nove achados e comparação com a inspeção; amostra mínima e métricas estruturadas não atendidas. |
 
-Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
+## Conclusões do projeto
 
-## Por que pensar em interface mesmo em TCCs técnicos?
+A disciplina permitiu transformar uma contribuição técnica do TCC em um percurso de interação rastreável: preparar gravações, acompanhar a análise, revisar os candidatos e obter material para edição externa. Personas, cenários, tarefas, objetivos, signos e MoLIC fundamentaram as telas, com os vínculos preservados na [matriz de rastreabilidade](RASTREABILIDADE.md).
 
-Algoritmos, modelos, APIs, análises de datasets e componentes de infraestrutura podem não exigir interface como resultado acadêmico do TCC. Porém, quando essas contribuições são transferidas para uma situação real, normalmente existem pessoas que:
+A inspeção de três avaliadores consolidou **33 problemas (HC01–HC33)**, dos quais quatro receberam severidade 3: falha na entrada dos exemplos, reinício com seleção de execução anterior, navegação incompleta no mosaico e perda de seleção ao recarregar. A única observação exploratória gerou **nove achados (AU01–AU09)**, incluindo a expectativa espontânea de cancelar uma análise e dificuldades para descobrir detalhes, modos de visualização e novos lances disponíveis. Esses métodos trouxeram evidências complementares sobre a interface; a sessão guiada não mede recorrência entre usuários nem sucesso independente.
 
-- configuram parâmetros;
-- fornecem ou selecionam dados;
-- iniciam ou acompanham processamento;
-- interpretam resultados;
-- comparam alternativas;
-- tomam decisões;
-- administram usuários e permissões;
-- consultam histórico;
-- geram relatórios;
-- investigam erros;
-- auditam mudanças.
+O participante elogiou o fluxo, a estética e as visualizações em linha do tempo e mosaico, especialmente após sua apresentação pelo moderador. Esses sinais de valor percebido orientam a evolução do protótipo, mas não comprovam eficácia, produtividade ou satisfação por escala. **MU01–MU08 não foram avaliadas quantitativamente.** Não houve a pesquisa de necessidades I01–I03, as três sessões estruturadas previstas, o piloto formal ou o retorno de memorização; o perfil profissional do participante não foi verificado. A quantidade mínima de observação não foi atendida e não há dispensa docente registrada.
 
-Essas atividades fornecem um campo legítimo para exercitar IHC.
-
-Possibilidades de interface incluem **dashboards, telas administrativas, configuração, relatórios, histórico com filtros, comparação de resultados, visualização de dados, acompanhamento de processamento, gestão de perfis e permissões, CRUDs justificados pelo domínio, alertas, auditoria e ajuda contextual**. Nenhuma dessas telas é obrigatória por si só: deve existir uma tarefa e um objetivo de usuário que a justifique.
-
-## Relação com apresentação e potencial de aplicação
-
-A reflexão sobre usuários ajuda a equipe a explicar o projeto para públicos externos, inclusive em eventos como a **INOVA**. Em vez de comunicar apenas a técnica implementada, a equipe pode apresentar:
-
-**problema humano → contribuição computacional → forma de uso → impacto potencial**.
-
-O protótipo de IHC pode, portanto, funcionar como uma demonstração do potencial de mercado, transferência tecnológica ou impacto extensionista do tema do TCC, sem necessariamente integrar a implementação final do trabalho de conclusão.
-
-## Como usar este repositório
-
-1. Leia o [Guia de uso e apresentação](GUIA_DE_USO.md).
-2. Leia o [Guia de definição de escopo de IHC](GUIA_ESCOPO_IHC.md), especialmente se o TCC não previa interface.
-3. Preencha as entregas na ordem em que forem trabalhadas na disciplina.
-4. Em toda entrega individual, **identifique o autor**.
-5. Salve imagens, diagramas e evidências em [`assets/`](assets/README.md).
-6. Mantenha a [Matriz de rastreabilidade](RASTREABILIDADE.md) atualizada.
-7. Na Entrega 1, diferencie **[F] fatos**, **[H] hipóteses** e **[?] lacunas de conhecimento**.
-8. Antes de cada entrega, revise o checklist do arquivo e o [Checklist final](CHECKLIST_FINAL.md).
-9. Sempre que uma evidência posterior contrariar uma hipótese inicial, **revise o projeto**. IHC é um processo iterativo.
-
-## Entregas
-
-| # | Entrega | Quantidade mínima / responsabilidade | Status |
-|---:|---|---|---|
-| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟩 completa  |
-| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟩 completa  |
-| 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟩 revisão documental; validação pendente |
-| 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟩 revisão documental; validação pendente |
-| 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟩 preenchida; coerência revisada; validação empírica pendente |
-| 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) · [protótipo](assets/06_prototipos/PROTOTIPO_fluxo_highlights.html) · [parecer](feedbacks_professor/Feedback_Professor_Entrega06_Equipe16.md) | 1 protótipo integrado por equipe | 🟨 revisada após o parecer; telas da versão 2 sem verificação com participante |
-| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟨 revisada após o parecer; formulário `2026-11-10` publicado; pilotos e coleta pendentes |
-| 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega08_Equipe16.md) | 1 solução consolidada por equipe | 🟨 revisada após o parecer; pesos, MU07 e MU08 a confirmar |
-| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md) | soluções individuais + consolidação de objetivos/signos | 🟨 documentada; revisão pelos autores e consolidação coletiva pendentes |
-| 10 | [MoLIC](docs/10_molic.md) · [parecer](feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md) | 1 diagrama completo por integrante | 🟨 diagramas documentados; revisão pelos autores e consolidação coletiva pendentes |
-| 11 | [Protótipo navegável integrado](docs/11_figma.md) | 1 protótipo integrado por equipe, cobrindo fluxos modelados | 🟨 [preview publicado](https://ihc-11.p4cs.com.br/); revisão final da equipe pendente |
-| 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | 🟨 plano e instrumentos preparados; piloto pendente |
-| 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | 1 avaliação completa por integrante, todas as telas/estados e 10 heurísticas | 🟩 inspeções, consolidação e exemplos preenchidos; pedido nativo de múltiplos downloads não observado |
-| 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | avaliação consolidada; nº de participantes finais = nº de integrantes | 🟨 fluxograma, protocolo, ficha do piloto e guia de recrutamento prontos; piloto, coleta e comparação com a 13 pendentes |
-
-> Se o docente definir quantidade diferente para a turma/semestre, a orientação da disciplina prevalece.
-
-## Visão de continuidade
-
-O projeto deve formar uma cadeia de evidências:
-
-**tema/contribuição do TCC → possível aplicação → usuários/stakeholders → objetivos → problema/contexto → alternativas → necessidades → personas → cenários → tarefas → modelo conceitual → MoLIC → protótipo → planejamento → inspeção → teste com usuários → melhorias**.
-
-Uma entrega não deve “reiniciar” o projeto. Se o escopo de IHC foi criado para um DBA, por exemplo, as personas, tarefas, MoLIC, protótipo e avaliação devem permanecer coerentes com esse perfil, salvo quando novas evidências justificarem a revisão.
+As recomendações prioritárias são tornar as ações mais visíveis, melhorar a recuperação de erros e a continuidade dos resultados, esclarecer as saídas CSV/MP4 e reconsiderar cancelamento e persistência de seleção. **São propostas para uma próxima iteração**, com necessidade de revisar modelos e reavaliar as mudanças. Não foram implementadas nem validadas como parte deste fechamento. O resultado entregue é um protótipo acadêmico acompanhado de modelos, evidências e limites explícitos, sem afirmação de validação do produto ou do detector do TCC.
 
 ## Documentos de apoio
 
+- [Checklist final e requisitos não atendidos](CHECKLIST_FINAL.md)
+- [Matriz de rastreabilidade](RASTREABILIDADE.md)
 - [Guia de uso e apresentação](GUIA_DE_USO.md)
 - [Guia para definir o escopo de IHC a partir do TCC](GUIA_ESCOPO_IHC.md)
-- [Matriz de rastreabilidade](RASTREABILIDADE.md)
-- [Checklist final](CHECKLIST_FINAL.md)
 - [Bibliografia de IHC](BIBLIOGRAFIA.md)
-- [Orientações de contribuição no GitHub](CONTRIBUTING.md)
+- [Orientações de contribuição](CONTRIBUTING.md)
 - [Instrumentos reutilizáveis](instrumentos/README.md)
+- [Evidências e organização dos assets](assets/README.md)

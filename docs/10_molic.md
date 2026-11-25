@@ -2,8 +2,14 @@
 
 - **Data:** M01/M02 em 08/11/2026; M03 em 09/11/2026; integração em 12/11/2026 (versão original)
 - **Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega10_Equipe16.md) e ajustes após revisão independente
-- **Status:** 🟨 revisão documental dos três modelos concluída. Apresentação e confirmação individual de Pedro, Lucas e Giovanni e consolidação com a equipe pendentes.
+- **Status:** três modelos documentados para entrega; confirmação individual não registrada; melhorias pós-avaliação propostas.
 - **Responsabilidade:** uma solução completa por integrante.
+
+## Fechamento documental — 25/11/2026
+
+`M01`–`M03` são entregues na revisão documental já registrada, com cobertura e limites vinculados ao protótipo. Não há registro de apresentação/aceite individual dos autores; os itens correspondentes ficam desmarcados como limitações de comprovação. A solicitação de cancelamento em `AU01` é evidência para reconsiderar `M03` em uma próxima iteração. Cancelamento efetivo não foi incorporado ao modelo nem implementado no protótipo desta entrega; o achado e seus vínculos estão registrados na Entrega 14 e na rastreabilidade.
+
+Os procedimentos das seções originais preservam o planejamento da época. Atividades não realizadas ficam fora desta entrega, e os itens de checklist sem evidência permanecem desmarcados.
 
 ## Objetivo da atividade
 
@@ -208,7 +214,6 @@ As cenas são c1 (preparar material para a supervisão), c2 (conferir corte a en
 | O08 Reconhecer contexto ao retomar | M01 e M02 a2/c1; M03 a2/c2 e c6 | [H] A pessoa confere partida, tentativa e seleção que ainda estiverem acessíveis. Se o contexto faltar, identifica a partida, refaz a consulta ou reconstrói a seleção | [?] Persistência após recarga depende de investigação (H15/H29/H35) |
 | O09 Avaliar a decisão editorial | Nenhum | Decisão de Arnaldo | Fora do sistema, nota em M02; não introduzir aprovação no M03 |
 | O10 Conferir o original e ajustar | Nenhum | Ajuste no vídeo original | Fora do sistema, nota em e2 em M01/M02; M03 também não modela edição/montagem |
-
 
 ### Preparação para prototipagem de M01 e M02
 

@@ -1,6 +1,8 @@
 # Ficha do teste piloto — PIL01 (interno, fora da amostra)
 
-**Status:** ⬜ pendente\
+> **Encerramento em 25/11/2026:** material do planejamento original, arquivado sem execução integral. A entrega utiliza somente `EXP01`; não haverá piloto formal, novas sessões ou retorno nesta rodada. Campos vazios e caixas desmarcadas não são resultados nem tarefas agendadas. Consulte o [relatório final](../../docs/14_observacao_usuario.md).
+
+**Status:** não executado nesta entrega; ficha preservada como instrumento\
 **Regra metodológica:** o piloto usa integrantes da Equipe 16 para validar o roteiro, o ambiente remoto e a concordância de registro. `PIL01` não entra nos cálculos da amostra final (`U01`–`U03`).
 
 ## Dados do piloto

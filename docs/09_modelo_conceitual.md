@@ -2,8 +2,14 @@
 
 **Data:** 05/11/2026 (versão original)\
 **Revisão:** 18/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega09_Equipe16.md) e ajustes após revisão independente\
-**Status:** 🟨 preenchimento documental concluído; revisão pelos integrantes e validação dos modelos pendentes\
+**Status:** documentação consolidada para entrega; confirmação individual e validação empírica não registradas.\
 **Responsabilidade:** recortes individuais de referência e consolidação do mapa de objetivos e do esquema de signos da Equipe 16.
+
+## Fechamento documental — 25/11/2026
+
+O mapa de objetivos e os signos são entregues na revisão documental de 18/11/2026, com `O00` como finalidade da interface e montagem, chancela e publicação externas. A cadeia documental está vinculada às Entregas 10–14 e à matriz de rastreabilidade. Não há registro de apresentação/aceite individual dos três autores; as caixas correspondentes permanecem desmarcadas como ausência de comprovação, sem promessa de reunião posterior nesta entrega. `EXP01` fornece indícios de dificuldades de compreensão, sem validar o modelo conceitual dos perfis-alvo.
+
+Os procedimentos das seções originais preservam o planejamento da época. Atividades não realizadas ficam fora desta entrega, e os itens de checklist sem evidência permanecem desmarcados.
 
 ## Objetivo da atividade
 
@@ -20,7 +26,6 @@ O [CC8122-ProjetoIHC-ModelosConceituais](../slides_plinio/CC8122-ProjetoIHC-Mode
 | [Entrega 2](02_analise_concorrencia.md) | RC02–RC09: entrada, estados, contexto, controle humano, linguagem, filtros e obtenção | Formatos, limites, recuperação e medidas de confiança dependem de investigação/viabilidade |
 | [Entrega 6](06_prototipacao_papel.md#5-decisões-após-a-simulação) | E06-D01/D02/D05/D06: continuidade, legibilidade, saídas e interpretação temporal | A sessão de U01 teve ajuda; não valida o público profissional nem a obtenção independente de MP4 |
 | [Entregas 7](07_coleta_dados.md) e [8](08_engenharia_usabilidade.md) | Questões de pesquisa e metas MQ01–MQ04/MU01–MU06 | Planejamento e critérios de aceitação não são resultados de avaliação |
-
 
 **Escopo:** enviar → acompanhar → revisar → baixar. Ajustar cortes, montar, publicar, transferir material ao supervisor e chancelar a seleção continuam externos. Não se introduzem autenticação, administração, reconhecimento automático de atletas, histórico persistente ou parâmetros de IA. A03/histórico, H15/H29/H35, continua em investigação.
 

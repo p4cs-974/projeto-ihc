@@ -2,6 +2,8 @@
 
 **Autor:** Pedro Alexandre Custodio Silva — 22.123.049-3\
 **Data da inspeção:** 20/11/2026\
+**Versão avaliada:** `https://ihc-11.p4cs.com.br/` · commit `7405221`\
+**Ambiente de inspeção:** computador desktop · meios de interação: mouse e teclado (`Tab`, `Enter`, setas, `Esc`, `/`) · navegador/versão e largura exata da janela: `[?] não registrados na rodada individual de 20/11/2026` (reinspeção consolidada em `Chromium 157.0.8103.78`, `1440×900`)\
 **Status:** ✅ concluída\
 
 > **Regra de independência:** conclua esta ficha antes de ler as fichas de A02 e A03 ou discutir achados com a equipe. Avalie apenas a interface do protótipo, não a acurácia do modelo de visão computacional do TCC.

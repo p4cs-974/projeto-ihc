@@ -2,7 +2,7 @@
 
 **Data:** 25/10/2026 (versão original)\
 **Revisão:** 10/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega07_Equipe16.md)\
-**Status:** [F] instrumentos textuais I01, I02 e I03 preparados. Ferramenta disponível: I02, formulário na versão `2026-11-10` no fim do [guia público](https://ihc.p4cs.com.br/guia/). Ferramentas a preparar: formulário de registro de I01 e quadro/material de I03. Pilotos pendentes nos três instrumentos. Coleta pendente nos três instrumentos; o único registro no banco é o de U01, da Entrega 6, que não faz parte desta coleta.\
+**Status:** instrumentos e protocolo documentados; coleta I01–I03 não executada nesta entrega, registrada como limitação.\
 **Responsabilidade:** mapeamento geral da Equipe 16 e instrumentos individuais
 
 | Integrante | Matrícula | Técnica elaborada |
@@ -10,6 +10,12 @@
 | Pedro Alexandre Custódio Silva | 22.123.049-3 | I01 — Entrevista semiestruturada |
 | Lucas Roberto Boccia dos Santos | 22.123.012-1 | I02 — Questionário |
 | Giovanni Chahin Morassi | 22.123.025-3 | I03 — Brainstorming de necessidades e desejos dos usuários |
+
+## Fechamento documental — 25/11/2026
+
+A entrega é encerrada documentalmente com os três instrumentos especificados e I02 publicado na versão `2026-11-10`, conforme a conferência já registrada em 18/11. Não foram executados os pilotos nem a coleta I01–I03; não há análise empírica desses instrumentos. Os quantitativos de recrutamento nas seções seguintes pertencem ao plano original, não a atividades prometidas para este fechamento. O walkthrough da Entrega 6 e `EXP01` da Entrega 14 não substituem essa pesquisa de necessidades. As hipóteses sobre público, rotina, produtividade e contexto profissional permanecem abertas. Contas e controles de acesso não verificados continuam identificados como tal.
+
+Os procedimentos das seções originais preservam o planejamento da época. Atividades não realizadas ficam fora desta entrega, e os itens de checklist sem evidência permanecem desmarcados.
 
 ## Objetivo da atividade
 
